@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/wrangler/config-schema.json",
-  "name": "your-five-web",
+  "name": "your-five",
   "compatibility_date": "2026-07-15",
   "assets": {
     "directory": "./dist",
