@@ -1,10 +1,12 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { AppHeader } from "../components/AppHeader";
 
 const LAST_UPDATED = "July 15, 2026";
 const REPOSITORY_URL = "https://github.com/tutur787/Your-Five";
 const ISSUES_URL = `${REPOSITORY_URL}/issues/new`;
 const PROFILE_URL = "https://github.com/tutur787";
+
+export type InfoTopic = "about" | "privacy" | "terms" | "contact";
 
 function InfoPage({
   eyebrow,
@@ -281,5 +283,72 @@ export function ContactPage() {
         personal information, or details that would make a security issue easier to exploit.
       </p>
     </InfoPage>
+  );
+}
+
+const INFO_CONTENT: Record<InfoTopic, () => JSX.Element> = {
+  about: AboutPage,
+  privacy: PrivacyPage,
+  terms: TermsPage,
+  contact: ContactPage,
+};
+
+const INFO_LABELS: Record<InfoTopic, string> = {
+  about: "About Your Five",
+  privacy: "Privacy Policy",
+  terms: "Terms of Use",
+  contact: "Contact",
+};
+
+export function InfoModal({ topic, onClose }: { topic: InfoTopic | null; onClose: () => void }) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!topic) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    const focusFrame = window.requestAnimationFrame(() => closeButtonRef.current?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      window.cancelAnimationFrame(focusFrame);
+      previouslyFocused?.focus();
+    };
+  }, [onClose, topic]);
+
+  if (!topic) return null;
+
+  const Content = INFO_CONTENT[topic];
+  return (
+    <div className="modal-backdrop info-modal-backdrop" onClick={onClose}>
+      <section
+        className="modal info-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label={INFO_LABELS[topic]}
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button
+          ref={closeButtonRef}
+          className="icon-button modal-close info-modal-close"
+          onClick={onClose}
+          aria-label="Close"
+          title="Close"
+        >
+          &times;
+        </button>
+        <div className="info-modal-scroll">
+          <Content />
+        </div>
+      </section>
+    </div>
   );
 }
