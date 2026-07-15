@@ -6,9 +6,10 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/socket.io": {
-        target: "http://localhost:4000",
+      "^/(rooms|room|matchmaking|health)": {
+        target: "http://localhost:8787",
         ws: true,
+        changeOrigin: true,
       },
     },
   },

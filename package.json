@@ -4,17 +4,19 @@
   "version": "1.0.0",
   "workspaces": [
     "shared",
-    "server",
+    "worker",
     "client"
   ],
   "scripts": {
-    "dev:server": "npm run dev -w server",
+    "dev:worker": "npm run dev -w worker",
     "dev:client": "npm run dev -w client",
-    "start": "npm run start -w server",
+    "deploy:worker": "npm run deploy -w worker",
+    "test:cloudflare": "npm run test:integration -w worker",
     "test:engine": "tsx shared/src/engine.test.ts"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.2",
+    "@types/node": "^22.9.0"
   }
 }

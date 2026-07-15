@@ -1,13 +1,25 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
 import { useOnlineMatch } from "../hooks/useOnlineMatch";
 import { Draft } from "./Draft";
+import { getStoredRoomToken, storeRoomToken } from "../utils/socket";
 
 export function RoomPage() {
   const { code = "" } = useParams();
-  const { state, seat, seatsFilled, error, opponentLeft, dispatch, startDraft } = useOnlineMatch(code);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const queryToken = searchParams.get("token");
+  const token = queryToken ?? getStoredRoomToken(code);
+  const { state, seat, seatsFilled, error, opponentLeft, roomKind, dispatch, startDraft } = useOnlineMatch(code, token);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!queryToken) return;
+    storeRoomToken(code, queryToken);
+    const next = new URLSearchParams(searchParams);
+    next.delete("token");
+    setSearchParams(next, { replace: true });
+  }, [code, queryToken, searchParams, setSearchParams]);
 
   const roomLink = `${window.location.origin}/room/${code}`;
 
@@ -20,10 +32,10 @@ export function RoomPage() {
   const header = (
     <>
       <AppHeader
-        eyebrow="PRIVATE ROOM"
+        eyebrow={roomKind === "matched" ? "ONLINE MATCH" : "PRIVATE ROOM"}
         title={code}
         detail={seat ? `You are Team ${seat}` : "Connecting"}
-        actions={<button className="secondary-button" onClick={copyLink}>{copied ? "Copied" : "Copy invite"}</button>}
+        actions={roomKind === "private" ? <button className="secondary-button" onClick={copyLink}>{copied ? "Copied" : "Copy invite"}</button> : undefined}
       />
       {opponentLeft && <div className="error-banner">Your opponent disconnected.</div>}
     </>

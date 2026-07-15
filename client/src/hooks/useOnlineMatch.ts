@@ -1,73 +1,72 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Socket } from "socket.io-client";
-import { MatchAction, MatchState, SeatId } from "@fiveaside/shared";
-import { createSocket } from "../utils/socket";
+import { MatchAction, MatchState, RoomKind, SeatId, SeatsFilled } from "@fiveaside/shared";
+import { RoomSocket, storeRoomToken } from "../utils/socket";
 
-interface JoinAck {
-  ok: boolean;
-  error?: string;
-  seat?: SeatId;
-  code?: string;
-  state?: MatchState | null;
-  full?: boolean;
-}
-
-interface SimpleAck {
-  ok: boolean;
-  error?: string;
-}
-
-export function useOnlineMatch(code: string) {
-  const socketRef = useRef<Socket | null>(null);
+export function useOnlineMatch(code: string, token: string | null = null) {
+  const socketRef = useRef<RoomSocket | null>(null);
   const [state, setState] = useState<MatchState | null>(null);
   const [seat, setSeat] = useState<SeatId | null>(null);
-  const [seatsFilled, setSeatsFilled] = useState({ A: false, B: false });
+  const [seatsFilled, setSeatsFilled] = useState<SeatsFilled>({ A: false, B: false });
   const [error, setError] = useState<string | null>(null);
   const [opponentLeft, setOpponentLeft] = useState(false);
+  const [roomKind, setRoomKind] = useState<RoomKind | null>(null);
 
   useEffect(() => {
     if (!code) return;
-    const socket = createSocket();
+    setState(null);
+    setSeat(null);
+    setSeatsFilled({ A: false, B: false });
+    setError(null);
+    setOpponentLeft(false);
+    setRoomKind(null);
+
+    let manualClose = false;
+    const socket = new RoomSocket(code, token, {
+      onMessage: (message) => {
+        switch (message.type) {
+          case "joined":
+            storeRoomToken(code, message.token);
+            setSeat(message.seat);
+            setRoomKind(message.roomKind);
+            setState(message.state);
+            setSeatsFilled(message.seatsFilled);
+            if (message.seatsFilled.A && message.seatsFilled.B) setOpponentLeft(false);
+            break;
+          case "state":
+            setState(message.state);
+            break;
+          case "roomUpdate":
+            setSeatsFilled(message.seatsFilled);
+            if (message.seatsFilled.A && message.seatsFilled.B) setOpponentLeft(false);
+            break;
+          case "opponentLeft":
+            setOpponentLeft(true);
+            break;
+          case "error":
+            setError(message.error);
+            break;
+        }
+      },
+      onClose: () => {
+        if (!manualClose) setError("Disconnected from the server.");
+      },
+    });
     socketRef.current = socket;
 
-    socket.on("connect", () => {
-      socket.emit("joinRoom", { code }, (ack: JoinAck) => {
-        if (!ack.ok) {
-          setError(ack.error ?? "Could not join room.");
-          return;
-        }
-        setSeat(ack.seat ?? null);
-        setState(ack.state ?? null);
-        if (ack.full) setSeatsFilled({ A: true, B: true });
-      });
-    });
-
-    socket.on("state", (s: MatchState) => setState(s));
-    socket.on("roomUpdate", (payload: { seatsFilled: { A: boolean; B: boolean } }) => {
-      setSeatsFilled(payload.seatsFilled);
-    });
-    socket.on("opponentLeft", () => setOpponentLeft(true));
-    socket.on("connect_error", () => setError("Couldn't reach the server."));
-
     return () => {
-      socket.disconnect();
+      manualClose = true;
+      socket.close();
+      socketRef.current = null;
     };
-  }, [code]);
+  }, [code, token]);
 
-  const dispatch = useCallback(
-    (action: MatchAction) => {
-      socketRef.current?.emit("action", { code, action }, (ack: SimpleAck) => {
-        setError(ack.ok ? null : ack.error ?? "Invalid action");
-      });
-    },
-    [code]
-  );
+  const dispatch = useCallback((action: MatchAction) => {
+    socketRef.current?.action(action).catch((err: Error) => setError(err.message));
+  }, []);
 
   const startDraft = useCallback(() => {
-    socketRef.current?.emit("startDraft", { code }, (ack: SimpleAck) => {
-      if (!ack.ok) setError(ack.error ?? "Could not start draft.");
-    });
-  }, [code]);
+    socketRef.current?.startDraft().catch((err: Error) => setError(err.message));
+  }, []);
 
-  return { state, seat, seatsFilled, error, opponentLeft, dispatch, startDraft };
+  return { state, seat, seatsFilled, error, opponentLeft, roomKind, dispatch, startDraft };
 }

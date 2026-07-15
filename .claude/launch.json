@@ -8,10 +8,10 @@
       "port": 5173
     },
     {
-      "name": "server",
+      "name": "worker",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "-w", "server"],
-      "port": 4000
+      "runtimeArgs": ["run", "dev", "-w", "worker"],
+      "port": 8787
     }
   ]
 }

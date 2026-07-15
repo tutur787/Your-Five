@@ -1,0 +1,19 @@
+{
+  "name": "@fiveaside/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test:integration": "node scripts/integration-test.mjs"
+  },
+  "dependencies": {
+    "@fiveaside/shared": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260715.1",
+    "typescript": "^5.6.3",
+    "wrangler": "^4.110.0"
+  }
+}
