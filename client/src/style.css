@@ -1377,6 +1377,216 @@ input[type="text"] {
   background: var(--accent);
 }
 
+.site-footer {
+  width: min(100%, 920px);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin: 38px auto 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  color: #747b82;
+  font-size: 10px;
+}
+
+.site-footer-mark {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.site-footer-mark > span {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #72492d;
+  border-radius: 50%;
+  color: var(--accent-2);
+  font-family: "Arial Narrow", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.site-footer-mark small {
+  overflow: hidden;
+  font-size: 9px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.site-footer-nav a,
+.info-document a {
+  color: var(--muted);
+  text-decoration-color: #545b63;
+  text-underline-offset: 3px;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+.site-footer-nav a {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer-nav a:hover,
+.info-document a:hover {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+}
+
+.site-footer-note {
+  justify-self: end;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.info-page {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.info-document {
+  border-top: 3px solid var(--accent);
+}
+
+.info-lede {
+  max-width: 710px;
+  margin: 0;
+  padding: 34px 0 38px;
+  color: var(--text);
+  font-family: "Arial Narrow", "Roboto Condensed", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 18px;
+  padding: 26px 0 30px;
+  border-top: 1px solid var(--border);
+}
+
+.info-section-number {
+  color: #666d74;
+  font-family: "Arial Narrow", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.info-section h2 {
+  margin: -3px 0 10px;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.info-section p,
+.info-section li,
+.contact-caution {
+  color: #b5bbc1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.info-section p {
+  margin: 0;
+}
+
+.info-section p + p,
+.info-section ul + p {
+  margin-top: 12px;
+}
+
+.info-section ul {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding-left: 19px;
+}
+
+.info-section li::marker {
+  color: var(--accent);
+}
+
+.info-section code {
+  color: var(--accent-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.info-muted {
+  color: #858c93 !important;
+  font-size: 12px !important;
+}
+
+.contact-directory {
+  border-top: 1px solid var(--border);
+}
+
+.contact-row {
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 140ms ease;
+}
+
+.contact-row:hover {
+  background: #121518;
+}
+
+.contact-row > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-row strong {
+  font-family: "Arial Narrow", "Roboto Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.contact-row small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.contact-row > span:last-child {
+  color: var(--accent);
+  font-size: 20px;
+  transition: transform 140ms ease;
+}
+
+.contact-row:hover > span:last-child {
+  transform: translateX(5px);
+}
+
+.contact-caution {
+  margin: 22px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid #69472e;
+  color: #8d949b;
+  font-size: 12px;
+}
+
 .game-page {
   width: 100%;
 }
@@ -2180,6 +2390,47 @@ input[type="text"] {
 
   .home-footer {
     flex-wrap: wrap;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .site-footer-mark small {
+    display: none;
+  }
+
+  .site-footer-nav {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .site-footer-mark {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .site-footer-note {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .info-lede {
+    padding: 26px 0 30px;
+    font-size: 22px;
+  }
+
+  .info-section,
+  .contact-row {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .info-section {
+    padding: 22px 0 25px;
   }
 
   .app-header {

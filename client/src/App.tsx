@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { SiteFooter } from "./components/SiteFooter";
 import { DailyDraft } from "./pages/DailyDraft";
+import { AboutPage, ContactPage, PrivacyPage, TermsPage } from "./pages/InfoPages";
 import { Landing } from "./pages/Landing";
 import { LocalDraft } from "./pages/LocalDraft";
 import { OnlineLanding } from "./pages/OnlineLanding";
@@ -16,12 +18,19 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/daily" element={<DailyDraft />} />
-      <Route path="/local" element={<LocalDraft />} />
-      <Route path="/online" element={<OnlineLanding />} />
-      <Route path="/room/:code" element={<RoomPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/daily" element={<DailyDraft />} />
+        <Route path="/local" element={<LocalDraft />} />
+        <Route path="/online" element={<OnlineLanding />} />
+        <Route path="/room/:code" element={<RoomPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <SiteFooter />
+    </>
   );
 }
