@@ -41,8 +41,8 @@ function matchWithPool(players: PlayerCard[]): MatchState {
   return {
     pool: [...players],
     teams: {
-      A: { seat: "A", budget: 20, roster: [], skipUsed: false },
-      B: { seat: "B", budget: 20, roster: [], skipUsed: false },
+      A: { seat: "A", budget: 20, roster: [], skipUsed: false, paidSkipUsed: false, catchUpSkipUsed: false },
+      B: { seat: "B", budget: 20, roster: [], skipUsed: false, paidSkipUsed: false, catchUpSkipUsed: false },
     },
     turn: "A",
     phase: "onTheClock",
@@ -162,11 +162,26 @@ function giveAllToA(players: PlayerCard[]): MatchState {
 // --- Scenario 5: budget safeguard rejects overbidding ---
 {
   let state = createMatch();
-  // remainingSlots=5, reserve=4, maxAffordable = 20-4=16, so 17 should fail
-  const res = applyAction(state, { type: "openBid", seat: "A", startBid: 17 });
+  // remainingSlots=5, so maxAffordable = 20-5=15.
+  const res = applyAction(state, { type: "openBid", seat: "A", startBid: 16 });
   assert(res.ok === false, "S5: bid exceeding reserve-adjusted max is rejected");
-  const res2 = applyAction(state, { type: "openBid", seat: "A", startBid: 16 });
+  const res2 = applyAction(state, { type: "openBid", seat: "A", startBid: 15 });
   assert(res2.ok === true, "S5: bid exactly at max allowed succeeds");
+
+  const paidSkip = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  paidSkip.teams.A.skipUsed = true;
+  const paidRes = applyAction(paidSkip, { type: "buySkip", seat: "A" });
+  assert(
+    paidRes.ok && paidRes.state.phase === "skipOffer" && paidRes.state.teams.A.budget === 19,
+    "S5b: after the free skip, a team may buy one extra skip for $1"
+  );
+  assert(paidRes.state.teams.A.paidSkipUsed === true, "S5b: the paid skip is marked as consumed");
+
+  const noSpareBudget = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  noSpareBudget.teams.A.skipUsed = true;
+  noSpareBudget.teams.A.budget = 6;
+  const blockedPaidRes = applyAction(noSpareBudget, { type: "buySkip", seat: "A" });
+  assert(blockedPaidRes.ok === false, "S5b: a paid skip cannot spend money reserved for open roster spots");
 }
 
 // --- Scenario 6: full draft completes when both rosters hit 5, regardless of position duplicates ---
@@ -183,12 +198,14 @@ function giveAllToA(players: PlayerCard[]): MatchState {
       state = must(state, { type: "acceptBid", seat: state.auction!.turn });
     } else if (state.phase === "skipOffer") {
       state = must(state, { type: "respondToSkip", seat: state.skipOffer!.respondingSeat, accept: true });
+    } else if (state.phase === "catchUp") {
+      state = must(state, { type: "takeForOne", seat: state.turn });
     }
   }
   assert(state.teams.A.roster.length === 5 && state.teams.B.roster.length === 5, "S6: both rosters reach 5 players");
 }
 
-// --- Scenario 7: once a team hits 5/5, the rest of the draft auto-fills to the other team ---
+// --- Scenario 7: once a team hits 5/5, the other team keeps its free skip and may buy one more ---
 {
   let state = createMatch();
   let guard = 0;
@@ -205,9 +222,40 @@ function giveAllToA(players: PlayerCard[]): MatchState {
     }
   }
   assert(state.teams.A.roster.length === 5, "S7: Team A reached 5/5 by winning every contested round");
-  assert(state.phase === "complete", "S7: draft auto-completes the moment A is full");
-  assert(state.teams.B.roster.length === 5, "S7: B was auto-filled to 5/5 with no bidding once A was done");
-  assert(state.teams.B.roster.every((p) => p.price === 1), "S7: every auto-filled pick cost B just $1");
+  assert(state.phase === "catchUp" && state.turn === "B", "S7: B enters the $1 catch-up phase when A is full");
+
+  const paidCatchUp = JSON.parse(JSON.stringify(state)) as MatchState;
+  paidCatchUp.teams.B.skipUsed = true; // The free skip was spent before the endgame.
+  const paidCatchUpResult = applyAction(paidCatchUp, { type: "buySkip", seat: "B" });
+  assert(
+    paidCatchUpResult.ok &&
+      paidCatchUpResult.state.phase === "catchUp" &&
+      paidCatchUpResult.state.teams.B.catchUpSkipUsed,
+    "S7: if the free skip was already spent, B may use the $1 skip as its single catch-up skip"
+  );
+  assert(
+    applyAction(paidCatchUpResult.state, { type: "buySkip", seat: "B" }).ok === false,
+    "S7: a paid catch-up skip cannot be used twice"
+  );
+
+  const freeSkippedId = state.pool[0].id;
+  state = must(state, { type: "useSkip", seat: "B" });
+  assert(
+    state.phase === "catchUp" && state.teams.B.roster.every((pick) => pick.player.id !== freeSkippedId),
+    "S7: B's saved free skip removes one catch-up card instead of offering it to the full team"
+  );
+
+  assert(
+    applyAction(state, { type: "buySkip", seat: "B" }).ok === false,
+    "S7: after using the free catch-up skip, B cannot also buy a second endgame skip"
+  );
+
+  while (state.phase !== "complete") {
+    if (state.phase !== "catchUp") throw new Error(`Unexpected S7 phase: ${state.phase}`);
+    state = must(state, { type: "takeForOne", seat: "B" });
+  }
+  assert(state.teams.B.roster.length === 5, "S7: B fills every remaining roster spot through catch-up choices");
+  assert(state.teams.B.roster.every((p) => p.price === 1), "S7: every accepted catch-up player costs B $1");
   const scoreA = teamScore(state.teams.A);
   const scoreB = teamScore(state.teams.B);
   const expectedWinner = scoreA === scoreB ? "tie" : scoreA > scoreB ? "A" : "B";
@@ -318,6 +366,8 @@ function giveAllToA(players: PlayerCard[]): MatchState {
       state = must(state, { type: "acceptBid", seat: state.auction!.turn });
     } else if (state.phase === "skipOffer") {
       state = must(state, { type: "respondToSkip", seat: state.skipOffer!.respondingSeat, accept: true });
+    } else if (state.phase === "catchUp") {
+      state = must(state, { type: "takeForOne", seat: state.turn });
     }
   }
   for (const seat of ["A", "B"] as const) {

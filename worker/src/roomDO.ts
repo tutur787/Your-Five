@@ -285,6 +285,8 @@ function isRoomClientMessage(value: unknown): value is RoomClientMessage {
       return typeof action.amount === "number" && Number.isInteger(action.amount);
     case "acceptBid":
     case "useSkip":
+    case "buySkip":
+    case "takeForOne":
       return true;
     case "respondToSkip":
       return typeof action.accept === "boolean";

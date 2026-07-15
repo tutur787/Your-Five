@@ -89,7 +89,14 @@ export function buildPool(rng: Rng = Math.random): PlayerCard[] {
 }
 
 function freshTeam(seat: SeatId): TeamState {
-  return { seat, budget: STARTING_BUDGET, roster: [], skipUsed: false };
+  return {
+    seat,
+    budget: STARTING_BUDGET,
+    roster: [],
+    skipUsed: false,
+    paidSkipUsed: false,
+    catchUpSkipUsed: false,
+  };
 }
 
 /** Which seat is expected to act next, or null if no action is currently expected. */
@@ -97,6 +104,7 @@ export function actingSeat(state: MatchState): SeatId | null {
   if (state.phase === "onTheClock") return state.turn;
   if (state.phase === "bidding") return state.auction?.turn ?? null;
   if (state.phase === "skipOffer") return state.skipOffer?.respondingSeat ?? null;
+  if (state.phase === "catchUp") return state.turn;
   if (state.phase === "placing") return state.pendingPlacement?.seat ?? null;
   return null;
 }
@@ -145,14 +153,6 @@ export function wrongPositionCount(team: TeamState): number {
 
 export function wrongPositionPenalty(team: TeamState): number {
   return team.roster.reduce((sum, pick) => sum + positionPenaltyForSlot(pick.player, pick.slot), 0);
-}
-
-/**
- * Auto-fill only runs after the competitive portion of the draft is over. It follows the same
- * placement preference the UI offers: open listed positions first, then any open slot.
- */
-function chooseSlotForNewPick(team: TeamState, player: PlayerCard): Position {
-  return availablePlacementSlots(team, player)[0] ?? player.position;
 }
 
 /** Raw sum of ppg+rpg+apg across a team's roster — real, unadjusted numbers, exactly what's shown in the UI. */
@@ -362,11 +362,24 @@ export function createMatch(rng: Rng = Math.random): MatchState {
   };
 }
 
-/** Highest a team may bid/offer while still leaving $1 per remaining roster slot. */
+/** Highest bid allowed after reserving $1 for every currently empty roster slot. */
 export function maxAffordable(team: TeamState): number {
   const remainingSlots = ROSTER_SIZE - team.roster.length;
   if (remainingSlots <= 0) return 0;
-  return team.budget - (remainingSlots - 1);
+  return Math.max(0, team.budget - remainingSlots);
+}
+
+/** A paid skip preserves every $1 roster slot and, before catch-up, at least $1 of bidding room. */
+export function canBuySkip(team: TeamState, inCatchUp = false): boolean {
+  const remainingSlots = ROSTER_SIZE - team.roster.length;
+  const requiredAfterPurchase = remainingSlots + (inCatchUp ? 0 : 1);
+  return (
+    team.skipUsed &&
+    !team.paidSkipUsed &&
+    (!inCatchUp || !team.catchUpSkipUsed) &&
+    remainingSlots > 0 &&
+    team.budget - 1 >= requiredAfterPurchase
+  );
 }
 
 function clone(state: MatchState): MatchState {
@@ -374,8 +387,18 @@ function clone(state: MatchState): MatchState {
     ...state,
     pool: [...state.pool],
     teams: {
-      A: { ...state.teams.A, roster: [...state.teams.A.roster] },
-      B: { ...state.teams.B, roster: [...state.teams.B.roster] },
+      A: {
+        ...state.teams.A,
+        roster: [...state.teams.A.roster],
+        paidSkipUsed: Boolean(state.teams.A.paidSkipUsed),
+        catchUpSkipUsed: Boolean(state.teams.A.catchUpSkipUsed),
+      },
+      B: {
+        ...state.teams.B,
+        roster: [...state.teams.B.roster],
+        paidSkipUsed: Boolean(state.teams.B.paidSkipUsed),
+        catchUpSkipUsed: Boolean(state.teams.B.catchUpSkipUsed),
+      },
     },
     auction: state.auction ? { ...state.auction } : null,
     skipOffer: state.skipOffer ? { ...state.skipOffer } : null,
@@ -395,8 +418,15 @@ function nextActor(state: MatchState, actedFirst: SeatId): SeatId {
   return actedFirst;
 }
 
-function beginPlacement(state: MatchState, seat: SeatId, player: PlayerCard, price: number, actedFirst: SeatId): void {
-  state.pendingPlacement = { player, price, seat, actedFirst };
+function beginPlacement(
+  state: MatchState,
+  seat: SeatId,
+  player: PlayerCard,
+  price: number,
+  actedFirst: SeatId,
+  catchUp = false
+): void {
+  state.pendingPlacement = { player, price, seat, actedFirst, catchUp };
   state.auction = null;
   state.skipOffer = null;
   state.phase = "placing";
@@ -415,10 +445,10 @@ function finish(state: MatchState): void {
 }
 
 /**
- * Once a team's roster is full, there's no one left to bid against, so the rest of the pool
- * just goes straight to the other team at $1 each until they're full too (or the pool runs dry).
+ * Once one roster is full, bidding ends. The trailing team sees each remaining card and may take
+ * it for $1, use its saved free skip, or buy its one additional skip.
  */
-function autoFillIfOneTeamFull(state: MatchState): void {
+function beginCatchUpIfOneTeamFull(state: MatchState): void {
   const fullSeat: SeatId | null =
     state.teams.A.roster.length >= ROSTER_SIZE ? "A" : state.teams.B.roster.length >= ROSTER_SIZE ? "B" : null;
   if (!fullSeat) return;
@@ -426,21 +456,11 @@ function autoFillIfOneTeamFull(state: MatchState): void {
   const receiving = other(fullSeat);
   const team = state.teams[receiving];
   if (team.roster.length < ROSTER_SIZE) {
-    state.log.push(`Seat ${fullSeat}'s roster is full — the rest of the draft goes to seat ${receiving}.`);
-  }
-  while (team.roster.length < ROSTER_SIZE && state.pool.length > 0) {
-    const player = state.pool.shift() as PlayerCard;
-    team.roster.push({ player, price: 1, slot: chooseSlotForNewPick(team, player) });
-    team.budget -= 1;
-    state.log.push(`${player.name} (${player.position}) auto-awarded to seat ${receiving} for $1.`);
-  }
-
-  if (team.roster.length >= ROSTER_SIZE) {
-    finish(state);
-  } else {
-    // Pool ran dry before the receiving team filled up — nothing more can happen.
-    state.phase = "onTheClock";
+    state.phase = "catchUp";
     state.turn = receiving;
+    state.auction = null;
+    state.skipOffer = null;
+    state.log.push(`Seat ${fullSeat}'s roster is full — seat ${receiving} now drafts the remaining $1 cards.`);
   }
 }
 
@@ -449,7 +469,7 @@ function checkComplete(state: MatchState): void {
   if (state.teams.A.roster.length >= ROSTER_SIZE && state.teams.B.roster.length >= ROSTER_SIZE) {
     finish(state);
   } else {
-    autoFillIfOneTeamFull(state);
+    beginCatchUpIfOneTeamFull(state);
   }
 }
 
@@ -511,15 +531,69 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
     }
 
     case "useSkip": {
-      if (next.phase !== "onTheClock") return fail(state, "No player is up for bidding right now.");
+      if (next.phase !== "onTheClock" && next.phase !== "catchUp") {
+        return fail(state, "No player is available to skip right now.");
+      }
       if (action.seat !== next.turn) return fail(state, "It's not your turn.");
       if (next.teams[action.seat].skipUsed) return fail(state, "You've already used your skip.");
+      if (next.phase === "catchUp" && next.teams[action.seat].catchUpSkipUsed) {
+        return fail(state, "You can only skip one card during catch-up.");
+      }
       if (next.pool.length === 0) return fail(state, "No players left in the pool.");
       const player = next.pool.shift() as PlayerCard;
       next.teams[action.seat].skipUsed = true;
+      if (next.phase === "catchUp") {
+        next.teams[action.seat].catchUpSkipUsed = true;
+        next.log.push(`Seat ${action.seat} uses their free skip — ${player.name} is removed from the draft.`);
+        return { ok: true, state: next };
+      }
       next.skipOffer = { player, skippedBy: action.seat, respondingSeat: other(action.seat) };
       next.phase = "skipOffer";
       next.log.push(`Seat ${action.seat} uses their skip. ${player.name} is offered to seat ${other(action.seat)} for $1.`);
+      return { ok: true, state: next };
+    }
+
+    case "buySkip": {
+      if (next.phase !== "onTheClock" && next.phase !== "catchUp") {
+        return fail(state, "No player is available to skip right now.");
+      }
+      if (action.seat !== next.turn) return fail(state, "It's not your turn.");
+      const team = next.teams[action.seat];
+      if (!team.skipUsed) return fail(state, "Use your free skip before buying another one.");
+      if (team.paidSkipUsed) return fail(state, "You've already bought your extra skip.");
+      if (next.phase === "catchUp" && team.catchUpSkipUsed) {
+        return fail(state, "You can only skip one card during catch-up.");
+      }
+      if (!canBuySkip(team, next.phase === "catchUp")) {
+        return fail(state, "You need to preserve your roster reserve and at least $1 of bidding room.");
+      }
+      if (next.pool.length === 0) return fail(state, "No players left in the pool.");
+
+      const player = next.pool.shift() as PlayerCard;
+      team.budget -= 1;
+      team.paidSkipUsed = true;
+      if (next.phase === "catchUp") {
+        team.catchUpSkipUsed = true;
+        next.log.push(`Seat ${action.seat} buys an extra skip for $1 — ${player.name} is removed from the draft.`);
+        return { ok: true, state: next };
+      }
+      next.skipOffer = { player, skippedBy: action.seat, respondingSeat: other(action.seat) };
+      next.phase = "skipOffer";
+      next.log.push(
+        `Seat ${action.seat} buys an extra skip for $1. ${player.name} is offered to seat ${other(action.seat)} for $1.`
+      );
+      return { ok: true, state: next };
+    }
+
+    case "takeForOne": {
+      if (next.phase !== "catchUp") return fail(state, "The draft is not in the $1 catch-up phase.");
+      if (action.seat !== next.turn) return fail(state, "It's not your turn.");
+      const team = next.teams[action.seat];
+      if (team.roster.length >= ROSTER_SIZE) return fail(state, "Your roster is already full.");
+      if (next.pool.length === 0) return fail(state, "No players left in the pool.");
+      const player = next.pool.shift() as PlayerCard;
+      next.log.push(`Seat ${action.seat} takes ${player.name} for $1.`);
+      beginPlacement(next, action.seat, player, 1, action.seat, true);
       return { ok: true, state: next };
     }
 
@@ -558,10 +632,15 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       team.roster.push({ player: pending.player, price: pending.price, slot: action.slot });
       team.budget -= pending.price;
       next.log.push(`${pending.player.name} placed at ${action.slot} for seat ${action.seat}.`);
-      next.turn = nextActor(next, pending.actedFirst);
       next.pendingPlacement = null;
-      next.phase = "onTheClock";
-      checkComplete(next);
+      if (pending.catchUp && team.roster.length < ROSTER_SIZE) {
+        next.turn = action.seat;
+        next.phase = "catchUp";
+      } else {
+        next.turn = nextActor(next, pending.actedFirst);
+        next.phase = "onTheClock";
+        checkComplete(next);
+      }
       return { ok: true, state: next };
     }
 

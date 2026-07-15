@@ -1,5 +1,6 @@
 import { PointerEvent as ReactPointerEvent, useState } from "react";
 import {
+  canBuySkip,
   chemistryPairs,
   Position,
   positionPenaltyForSlot,
@@ -18,6 +19,7 @@ interface Props {
   isActing: boolean;
   editable?: boolean;
   onChangeSlot?: (playerId: string, slot: Position) => void;
+  inCatchUp?: boolean;
 }
 
 /** playerId -> names of real-life teammates also on this roster, for the chemistry badge + tooltip. */
@@ -34,7 +36,14 @@ export function chemistryPartnersByPlayerId(team: TeamState): Map<string, string
   return partners;
 }
 
-export function TeamPanel({ team, label, isActing, editable, onChangeSlot }: Props) {
+export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false }: Props) {
+  const skipLabel = !team.skipUsed
+    ? "FREE SKIP READY"
+    : !team.paidSkipUsed && canBuySkip(team, inCatchUp)
+      ? "$1 SKIP AVAILABLE"
+      : "SKIPS USED";
+  const skipAvailable = (!inCatchUp || !team.catchUpSkipUsed) && (!team.skipUsed || canBuySkip(team, inCatchUp));
+
   return (
     <div className={`team-panel${isActing ? " acting" : ""}`}>
       <div className="team-panel-header">
@@ -48,8 +57,8 @@ export function TeamPanel({ team, label, isActing, editable, onChangeSlot }: Pro
         </div>
       </div>
       <div className="team-utility-row">
-        <span className={`skip-tag${team.skipUsed ? "" : " available"}`}>
-          {team.skipUsed ? "SKIP USED" : "SKIP READY"}
+        <span className={`skip-tag${skipAvailable ? " available" : ""}`}>
+          {skipLabel}
         </span>
         <span className="lineup-label">STARTING FIVE</span>
       </div>

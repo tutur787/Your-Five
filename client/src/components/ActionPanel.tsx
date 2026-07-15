@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import { availablePlacementSlots, MatchAction, MatchState, maxAffordable, PlayerCard, SeatId, validSlotsFor } from "@fiveaside/shared";
+import {
+  availablePlacementSlots,
+  canBuySkip,
+  MatchAction,
+  MatchState,
+  maxAffordable,
+  PlayerCard,
+  SeatId,
+  validSlotsFor,
+} from "@fiveaside/shared";
 import { formatPosition } from "../utils/position";
 
 interface Props {
@@ -99,6 +108,10 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
 
   if (state.phase === "onTheClock") {
     return <RevealPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} />;
+  }
+
+  if (state.phase === "catchUp") {
+    return <CatchUpPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} />;
   }
 
   if (state.phase === "bidding" && state.auction) {
@@ -281,7 +294,8 @@ function RevealPanel({
 }) {
   const player = state.pool[0];
   const team = state.teams[seat];
-  const skipAvailable = !team.skipUsed;
+  const freeSkipAvailable = !team.skipUsed;
+  const paidSkipAvailable = canBuySkip(team);
   const cap = maxAffordable(team);
   const [bid, setBid] = useState(1);
 
@@ -350,14 +364,88 @@ function RevealPanel({
           </div>
         </div>
         <div className="action-row">
-          <button
-            className="danger"
-            disabled={!skipAvailable}
-            title={skipAvailable ? "Use your one-time skip" : "You've already used your skip"}
-            onClick={() => dispatch({ type: "useSkip", seat })}
-          >
-            Skip card
+          {freeSkipAvailable ? (
+            <button className="danger" onClick={() => dispatch({ type: "useSkip", seat })}>
+              Use free skip
+            </button>
+          ) : (
+            <button
+              className="danger"
+              disabled={!paidSkipAvailable}
+              title={
+                team.paidSkipUsed
+                  ? "You've already bought your extra skip"
+                  : paidSkipAvailable
+                    ? "Buy your one additional skip"
+                    : "You need to reserve $1 for every open roster spot"
+              }
+              onClick={() => dispatch({ type: "buySkip", seat })}
+            >
+              {team.paidSkipUsed ? "Extra skip used" : "Buy skip · $1"}
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CatchUpPanel({
+  state,
+  seat,
+  dispatch,
+  seatLabel,
+}: {
+  state: MatchState;
+  seat: SeatId;
+  dispatch: (action: MatchAction) => void;
+  seatLabel: (seat: SeatId) => string;
+}) {
+  const player = state.pool[0];
+  const team = state.teams[seat];
+  if (!player) {
+    return (
+      <section className="action-stage">
+        <div className="waiting">No players left in the pool.</div>
+      </section>
+    );
+  }
+
+  const freeSkipAvailable = !team.catchUpSkipUsed && !team.skipUsed;
+  const paidSkipAvailable = canBuySkip(team, true);
+
+  return (
+    <section className="action-stage reveal-stage">
+      <div className="reveal-box">
+        <div className="action-stage-top">
+          <div>
+            <div className="page-eyebrow">FILL YOUR FIVE</div>
+            <strong className="acting-name">{seatLabel(seat)}</strong>
+          </div>
+          <Countdown resetKey={`catch-up-${player.id}`} />
+        </div>
+        <div className="auction-context">The other five is complete. Add this card for $1 or use a remaining skip.</div>
+        <PlayerSpotlight player={player} />
+        <StatLine player={player} />
+        <div className="price-block"><span>ROSTER PRICE</span><strong>$1</strong></div>
+        <div className="action-row">
+          <button className="success" onClick={() => dispatch({ type: "takeForOne", seat })}>
+            Add for $1
           </button>
+          {freeSkipAvailable ? (
+            <button className="danger" onClick={() => dispatch({ type: "useSkip", seat })}>
+              Use free skip
+            </button>
+          ) : !team.catchUpSkipUsed && !team.paidSkipUsed ? (
+            <button
+              className="danger"
+              disabled={!paidSkipAvailable}
+              title={paidSkipAvailable ? "Buy your one additional skip" : "Not enough cap after reserving $1 per open spot"}
+              onClick={() => dispatch({ type: "buySkip", seat })}
+            >
+              Buy skip · $1
+            </button>
+          ) : null}
         </div>
       </div>
     </section>

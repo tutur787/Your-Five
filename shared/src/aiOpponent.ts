@@ -1,4 +1,4 @@
-import { availablePlacementSlots, maxAffordable, playerCompositeValue } from "./gameEngine";
+import { availablePlacementSlots, canBuySkip, maxAffordable, playerCompositeValue } from "./gameEngine";
 import { areTeammates, PLAYER_DATABASE } from "./players";
 import { MatchAction, MatchState, PlayerCard, ROSTER_SIZE, SeatId, TeamState } from "./types";
 
@@ -47,7 +47,21 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId): MatchAction {
     if (!team.skipUsed && weakPlayer && remainingSlots > 1) {
       return { type: "useSkip", seat: aiSeat };
     }
+    if (team.skipUsed && canBuySkip(team) && weakPlayer && remainingSlots > 1) {
+      return { type: "buySkip", seat: aiSeat };
+    }
     return { type: "openBid", seat: aiSeat, startBid: suggestBid(value, budgetCap, remainingSlots) };
+  }
+
+  if (state.phase === "catchUp") {
+    const player = state.pool[0];
+    if (!player) throw new Error("AI asked to catch up with an empty pool");
+    const weakPlayer = playerValueForAi(team, player) < WEAK_PLAYER_THRESHOLD;
+    if (!team.catchUpSkipUsed && !team.skipUsed && weakPlayer && remainingSlots > 1) {
+      return { type: "useSkip", seat: aiSeat };
+    }
+    if (canBuySkip(team, true) && weakPlayer && remainingSlots > 1) return { type: "buySkip", seat: aiSeat };
+    return { type: "takeForOne", seat: aiSeat };
   }
 
   if (state.phase === "bidding" && state.auction) {

@@ -56,12 +56,17 @@ export interface TeamState {
   budget: number;
   roster: RosterPick[];
   skipUsed: boolean;
+  /** Each team may purchase one additional skip for $1 after using its free skip. */
+  paidSkipUsed: boolean;
+  /** At most one free-or-paid skip may be used after either roster reaches five. */
+  catchUpSkipUsed: boolean;
 }
 
 export type DraftPhase =
   | "onTheClock" // a random player has been revealed; current seat must open a bid or skip
   | "bidding" // an active auction is in progress on the revealed player
   | "skipOffer" // a skip was used, the other seat must accept-for-$1 or pass
+  | "catchUp" // one roster is full; the other seat takes $1 cards or spends its remaining skips
   | "placing" // a won player is waiting to be assigned to an open lineup slot
   | "complete"; // both rosters full
 
@@ -86,6 +91,8 @@ export interface PendingPlacement {
   price: number;
   seat: SeatId;
   actedFirst: SeatId;
+  /** Returns to the one-player catch-up flow after placement instead of starting another auction. */
+  catchUp: boolean;
 }
 
 export const ROSTER_SIZE = 5;
@@ -109,6 +116,8 @@ export type MatchAction =
   | { type: "raiseBid"; seat: SeatId; amount: number }
   | { type: "acceptBid"; seat: SeatId }
   | { type: "useSkip"; seat: SeatId }
+  | { type: "buySkip"; seat: SeatId }
+  | { type: "takeForOne"; seat: SeatId }
   | { type: "respondToSkip"; seat: SeatId; accept: boolean }
   | { type: "placePick"; seat: SeatId; slot: Position }
   | { type: "setSlot"; seat: SeatId; playerId: string; slot: Position };
