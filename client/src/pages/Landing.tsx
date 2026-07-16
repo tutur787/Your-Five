@@ -3,6 +3,7 @@ import { BrandLockup } from "../components/AppHeader";
 import { OnboardingModal, useOnboarding } from "../components/OnboardingModal";
 import { SportSwitch } from "../components/SportSwitch";
 import { useSport } from "../hooks/useSport";
+import { ProgressButton } from "../components/ProgressModal";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -15,7 +16,10 @@ export function Landing() {
       <header className="home-header">
         <BrandLockup />
         <SportSwitch />
-        <button className="text-button" onClick={onboarding.show}>Rules</button>
+        <div className="home-header-tools">
+          <ProgressButton />
+          <button className="text-button" onClick={onboarding.show}>Rules</button>
+        </div>
       </header>
 
       <section className="home-intro">

@@ -1,10 +1,8 @@
 import { useCallback, useState } from "react";
-import { applyAction, createMatch, MatchAction, MatchState } from "@fiveaside/shared";
-import { useSport } from "./useSport";
+import { applyAction, createMatchWithRuntime, MatchAction, MatchState, SportRuntime } from "@fiveaside/shared/core";
 
-export function useLocalMatch() {
-  const { sport } = useSport();
-  const [state, setState] = useState<MatchState>(() => createMatch(sport));
+export function useLocalMatch(runtime: SportRuntime) {
+  const [state, setState] = useState<MatchState>(() => createMatchWithRuntime(runtime));
   const [error, setError] = useState<string | null>(null);
 
   const dispatch = useCallback((action: MatchAction) => {
@@ -20,9 +18,9 @@ export function useLocalMatch() {
   }, []);
 
   const reset = useCallback(() => {
-    setState(createMatch(sport));
+    setState(createMatchWithRuntime(runtime));
     setError(null);
-  }, [sport]);
+  }, [runtime]);
 
   return { state, dispatch, error, reset };
 }

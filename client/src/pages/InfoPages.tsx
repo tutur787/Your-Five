@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from "react";
+import { createContext, ReactNode, useContext, useEffect, useRef } from "react";
 import { AppHeader } from "../components/AppHeader";
 
 const LAST_UPDATED = "July 16, 2026";
@@ -7,6 +7,8 @@ const ISSUES_URL = `${REPOSITORY_URL}/issues/new`;
 const PROFILE_URL = "https://github.com/tutur787";
 
 export type InfoTopic = "about" | "privacy" | "terms" | "contact";
+
+const InfoModalContext = createContext(false);
 
 function InfoPage({
   eyebrow,
@@ -19,6 +21,8 @@ function InfoPage({
   intro: string;
   children: ReactNode;
 }) {
+  const inModal = useContext(InfoModalContext);
+
   useEffect(() => {
     const previousTitle = document.title;
     document.title = `${title} | Your Five`;
@@ -29,7 +33,7 @@ function InfoPage({
 
   return (
     <div className="game-page info-page">
-      <AppHeader eyebrow={eyebrow} title={title} detail={`Last updated ${LAST_UPDATED}`} />
+      {!inModal && <AppHeader eyebrow={eyebrow} title={title} detail={`Last updated ${LAST_UPDATED}`} />}
       <article className="info-document">
         <p className="info-lede">{intro}</p>
         {children}
@@ -110,6 +114,8 @@ export function PrivacyPage() {
             <li>your selected basketball or soccer mode preference;</li>
             <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
+            <li>your optional online nickname, recent draft history, streaks, mode records, and challenge results;</li>
+            <li>a random anonymous client identifier used to apply basic room-creation and matchmaking rate limits; and</li>
             <li>a temporary private-room seat token in session storage so you can reconnect during that browser session.</li>
           </ul>
           <p>You can remove this information using your browser's site-data controls.</p>
@@ -121,7 +127,8 @@ export function PrivacyPage() {
           <h2>Online matches</h2>
           <p>
             Online play sends room identifiers, random seat tokens, draft actions, and game state to the Your Five
-            Cloudflare Worker. Room information is used only to coordinate the match. Inactive room data is scheduled
+            Cloudflare Worker. If you choose a nickname, it is shared with the other player and retained only with that room.
+            Room information is used only to coordinate the match. Inactive room data is scheduled
             for deletion approximately one hour after all players disconnect.
           </p>
           <p>
@@ -205,6 +212,7 @@ export function TermsPage() {
           <ul>
             <li>interfere with matchmaking, rooms, other players, or service availability;</li>
             <li>use bots, automation, or exploits to gain an unfair advantage or create excessive traffic;</li>
+            <li>use an abusive, threatening, discriminatory, impersonating, or otherwise inappropriate online nickname;</li>
             <li>attempt to access another player's private room token or non-public service data;</li>
             <li>use the service for unlawful, abusive, fraudulent, or infringing activity; or</li>
             <li>misrepresent an affiliation between Your Five and any league, team, player, or company.</li>
@@ -309,7 +317,7 @@ const INFO_CONTENT: Record<InfoTopic, () => JSX.Element> = {
 };
 
 const INFO_LABELS: Record<InfoTopic, string> = {
-  about: "About Your Five",
+  about: "About",
   privacy: "Privacy Policy",
   terms: "Terms of Use",
   contact: "Contact",
@@ -351,6 +359,9 @@ export function InfoModal({ topic, onClose }: { topic: InfoTopic | null; onClose
         aria-label={INFO_LABELS[topic]}
         onClick={(event) => event.stopPropagation()}
       >
+        <header className="info-modal-header">
+          <h2>{INFO_LABELS[topic]}</h2>
+        </header>
         <button
           ref={closeButtonRef}
           className="icon-button modal-close info-modal-close"
@@ -361,7 +372,9 @@ export function InfoModal({ topic, onClose }: { topic: InfoTopic | null; onClose
           &times;
         </button>
         <div className="info-modal-scroll">
-          <Content />
+          <InfoModalContext.Provider value>
+            <Content />
+          </InfoModalContext.Provider>
         </div>
       </section>
     </div>

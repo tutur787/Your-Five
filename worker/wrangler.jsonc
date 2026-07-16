@@ -10,6 +10,22 @@
       { "name": "MATCHMAKING", "class_name": "MatchmakingDO" }
     ]
   },
+  "ratelimits": [
+    {
+      "name": "ROOM_CREATE_LIMITER",
+      "namespace_id": "51001",
+      "simple": { "limit": 10, "period": 60 }
+    },
+    {
+      "name": "MATCHMAKING_LIMITER",
+      "namespace_id": "51002",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
   "migrations": [
     {
       "tag": "v1",

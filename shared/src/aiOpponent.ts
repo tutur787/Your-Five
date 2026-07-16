@@ -10,8 +10,6 @@ import {
   teamScore,
   validSlotsFor,
 } from "./gameEngine";
-import { PLAYER_DATABASE } from "./players";
-import { SOCCER_PLAYER_DATABASE } from "./soccerPlayers";
 import {
   AiDecisionContext,
   AiDifficulty,
@@ -74,8 +72,8 @@ function primaryRole(player: PlayerCard): string {
   return player.sport === "soccer" ? player.role : player.position;
 }
 
-function databaseFor(sport: Sport): PlayerCard[] {
-  return sport === "soccer" ? SOCCER_PLAYER_DATABASE : PLAYER_DATABASE;
+function databaseFor(sport: Sport, context: AiDecisionContext): PlayerCard[] {
+  return (context.candidateDatabase ?? []).filter((player): player is PlayerCard => player.sport === sport);
 }
 
 function roleCaps(sport: Sport): Record<string, number> {
@@ -145,8 +143,8 @@ function marginalLineupValue(team: TeamState, sport: Sport, player: PlayerCard):
   return { score: after.score - before.score, slot: added?.slot ?? slotsForSport(sport)[0] };
 }
 
-function publicAlternatives(sport: Sport, seenPlayerIds: readonly string[]): WeightedCandidate[] {
-  const database = databaseFor(sport);
+function publicAlternatives(sport: Sport, seenPlayerIds: readonly string[], context: AiDecisionContext): WeightedCandidate[] {
+  const database = databaseFor(sport, context);
   const seen = new Set(seenPlayerIds);
   const caps = roleCaps(sport);
   const seenByRole: Record<string, number> = {};
@@ -244,7 +242,7 @@ export function evaluateAiPlayer(
   const opponent = state.teams[other(aiSeat)];
   const profile = AI_DIFFICULTY_PROFILES[context.difficulty];
   const seen = Array.from(new Set([...context.seenPlayerIds, player.id]));
-  const alternatives = publicAlternatives(sport, seen);
+  const alternatives = publicAlternatives(sport, seen, context);
   const openValidSlots = aiOpenValidSlots(team, sport, player);
   const fillsOpenPosition = openValidSlots.length > 0;
   const neededAlternatives = alternatives.filter((candidate) => aiOpenValidSlots(team, sport, candidate.player).length > 0);

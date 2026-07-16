@@ -2,6 +2,7 @@ import type {
   LineupSlot,
   RosterPick,
   SoccerPlayerCard,
+  SoccerHonors,
   SoccerRole,
   SoccerSlot,
   TeamState,
@@ -16,7 +17,60 @@ export const SOCCER_POSITION_MISMATCH: Record<SoccerRole, Record<SoccerRole, num
 
 export const SOCCER_CHEMISTRY_PER_PAIR = 4;
 export const SOCCER_CHEMISTRY_CAP = 12;
-export const SOCCER_HONORS_CAP = 15;
+export const SOCCER_HONORS_CAP = 20;
+export const SOCCER_HONOR_POINTS = {
+  champion: 3,
+  majorIndividual: 5,
+  topScorer: 2,
+  positionalAward: 2,
+  youngPlayer: 1,
+} as const;
+
+export interface SoccerHonorDetail {
+  label: string;
+  points: number;
+}
+
+export function soccerMajorIndividualLabels(honors: SoccerHonors | undefined): string[] {
+  if (!honors) return [];
+  return [
+    honors.bestPlayer ? honors.bestPlayerLabel ?? "UEFA best-player award" : null,
+    honors.ballonDor ? honors.ballonDorLabel ?? "Ballon d'Or" : null,
+  ].filter((label): label is string => Boolean(label));
+}
+
+export function soccerHonorDetails(honors: SoccerHonors | undefined): SoccerHonorDetail[] {
+  if (!honors) return [];
+  const details: SoccerHonorDetail[] = [];
+  if (honors.champion) {
+    details.push({ label: honors.championLabel ?? "UEFA competition winner", points: SOCCER_HONOR_POINTS.champion });
+  }
+  soccerMajorIndividualLabels(honors).forEach((label, index) => {
+    details.push({ label, points: index === 0 ? SOCCER_HONOR_POINTS.majorIndividual : 0 });
+  });
+
+  const legacyLabel = honors.topScorerOrKeeperLabel ?? "UEFA top-scorer or goalkeeper award";
+  const legacyIsGoalkeeper = honors.topScorerOrKeeper && /goalkeeper/i.test(legacyLabel);
+  const topScorerLabel = honors.topScorer
+    ? honors.topScorerLabel ?? "UEFA Champions League top scorer"
+    : honors.topScorerOrKeeper && !legacyIsGoalkeeper ? legacyLabel : null;
+  const positionalLabel = honors.positionalAward
+    ? honors.positionalAwardLabel ?? "UEFA Champions League positional award"
+    : legacyIsGoalkeeper ? legacyLabel : null;
+  if (topScorerLabel) details.push({ label: topScorerLabel, points: SOCCER_HONOR_POINTS.topScorer });
+  if (positionalLabel) details.push({ label: positionalLabel, points: SOCCER_HONOR_POINTS.positionalAward });
+  if (honors.youngPlayer) {
+    details.push({
+      label: honors.youngPlayerLabel ?? "UEFA Champions League Young Player of the Season",
+      points: SOCCER_HONOR_POINTS.youngPlayer,
+    });
+  }
+  return details;
+}
+
+export function soccerHonorPoints(honors: SoccerHonors | undefined): number {
+  return soccerHonorDetails(honors).reduce((sum, honor) => sum + honor.points, 0);
+}
 
 export function soccerRoleForSlot(slot: LineupSlot): SoccerRole | null {
   if (slot === "GK") return "GK";
@@ -105,6 +159,7 @@ export interface SoccerScoreComponents {
   performance: { attack: number; creation: number; control: number; defense: number; goalkeeping: number; total: number };
   teamSuccess: number;
   honors: number;
+  honorsUncapped: number;
   fit: SoccerFitAssessment;
   chemistry: { pairs: SoccerChemistryPair[]; bonus: number };
   mismatches: Array<{ pick: RosterPick; penalty: number }>;
@@ -126,11 +181,8 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
     { attack: 0, creation: 0, control: 0, defense: 0, goalkeeping: 0, total: 0 }
   );
   const teamSuccess = picks.reduce((sum, pick) => sum + pick.player.teamSuccess, 0);
-  const honors = Math.min(
-    SOCCER_HONORS_CAP,
-    picks.reduce((sum, pick) => sum + (pick.player.honors?.champion ? 3 : 0) +
-      (pick.player.honors?.bestPlayer ? 3 : 0) + (pick.player.honors?.topScorerOrKeeper ? 2 : 0), 0)
-  );
+  const honorsUncapped = picks.reduce((sum, pick) => sum + soccerHonorPoints(pick.player.honors), 0);
+  const honors = Math.min(SOCCER_HONORS_CAP, honorsUncapped);
   const fit = soccerFitAssessment(team);
   const pairs = soccerChemistryPairs(team);
   const chemistry = { pairs, bonus: Math.min(SOCCER_CHEMISTRY_CAP, pairs.length * SOCCER_CHEMISTRY_PER_PAIR) };
@@ -139,11 +191,9 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
     .filter(({ penalty }) => penalty > 0);
   const wrongPositionPenalty = mismatches.reduce((sum, mismatch) => sum + mismatch.penalty, 0);
   const total = performance.total + teamSuccess + honors + fit.total + chemistry.bonus - wrongPositionPenalty;
-  return { performance, teamSuccess, honors, fit, chemistry, mismatches, wrongPositionPenalty, total };
+  return { performance, teamSuccess, honors, honorsUncapped, fit, chemistry, mismatches, wrongPositionPenalty, total };
 }
 
 export function soccerPlayerCompositeValue(player: SoccerPlayerCard): number {
-  const honors = (player.honors?.champion ? 3 : 0) + (player.honors?.bestPlayer ? 3 : 0) +
-    (player.honors?.topScorerOrKeeper ? 2 : 0);
-  return player.performance.roleScore + player.teamSuccess + honors;
+  return player.performance.roleScore + player.teamSuccess + soccerHonorPoints(player.honors);
 }

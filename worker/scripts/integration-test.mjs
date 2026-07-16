@@ -43,6 +43,10 @@ class TestSocket {
     this.ws.send(JSON.stringify(message));
   }
 
+  discard(predicate) {
+    this.messages = this.messages.filter((message) => !predicate(message));
+  }
+
   async close() {
     if (this.ws.readyState === WebSocket.CLOSED) return;
     const closed = new Promise((resolve) => this.ws.addEventListener("close", resolve, { once: true }));
@@ -133,25 +137,124 @@ async function testMatchmaking(sport = "basketball") {
   await expectRejectedRoom(matchA.code);
 
   const a = await connectRoom(matchA.code, matchA.token);
+  assert.equal(a.joined.state, null, "A random match must wait for the second room socket");
+  assert.equal(a.joined.metadata.turnDeadlineAt, null);
   const b = await connectRoom(matchB.code, matchB.token);
   assert.equal(a.joined.seat, "A");
   assert.equal(b.joined.seat, "B");
   assert.equal(a.joined.roomKind, "matched");
   assert.equal(a.joined.sport, sport);
-  assert.ok(a.joined.state);
-  assert.equal(a.joined.state.sport, sport);
+  assert.ok(b.joined.state);
+  assert.equal(b.joined.state.sport, sport);
+  assert.ok(b.joined.metadata.turnDeadlineAt > b.joined.metadata.serverNow);
 
-  a.socket.send({ type: "action", id: "malformed" });
-  const invalidAck = await a.socket.waitFor((message) => message.type === "ack" && message.id === "malformed");
+  const initial = await a.socket.waitFor((message) => message.type === "state" && message.state.matchId === b.joined.state.matchId);
+  assert.equal(initial.state.sport, sport);
+
+  // A valid token replaces a stale socket for the same seat without creating a disconnect grace period.
+  const replacement = await connectRoom(matchA.code, matchA.token);
+  assert.equal(replacement.joined.seat, "A");
+  assert.equal(replacement.joined.state.matchId, initial.state.matchId);
+  assert.equal(replacement.joined.metadata.reconnectingSeat, null);
+
+  await replacement.socket.close();
+  const left = await b.socket.waitFor((message) => message.type === "opponentLeft" && message.seat === "A");
+  assert.ok(left.reconnectDeadlineAt > Date.now(), "a disconnected seat receives a grace deadline");
+  const reconnected = await connectRoom(matchA.code, matchA.token);
+  assert.equal(reconnected.joined.seat, "A");
+  assert.equal(reconnected.joined.state.matchId, initial.state.matchId);
+  assert.equal(reconnected.joined.metadata.reconnectingSeat, null);
+  assert.ok(reconnected.joined.metadata.turnDeadlineAt > reconnected.joined.metadata.serverNow);
+
+  reconnected.socket.send({ type: "setNickname", id: "nickname-valid", nickname: "  Arthur  A  " });
+  const nicknameAck = await reconnected.socket.waitFor((message) => message.type === "ack" && message.id === "nickname-valid");
+  assert.equal(nicknameAck.ok, true);
+  const named = await b.socket.waitFor((message) => message.type === "roomUpdate" && message.metadata?.seatNames?.A === "Arthur A");
+  assert.equal(named.metadata.seatNames.A, "Arthur A");
+
+  reconnected.socket.send({ type: "setNickname", id: "nickname-invalid", nickname: "x" });
+  const invalidNickname = await reconnected.socket.waitFor((message) => message.type === "ack" && message.id === "nickname-invalid");
+  assert.equal(invalidNickname.ok, false);
+
+  reconnected.socket.send({ type: "action", id: "malformed" });
+  const invalidAck = await reconnected.socket.waitFor((message) => message.type === "ack" && message.id === "malformed");
   assert.equal(invalidAck.ok, false);
 
-  const actingSeat = a.joined.state.turn;
-  const actor = actingSeat === "A" ? a.socket : b.socket;
+  const actingSeat = reconnected.joined.state.turn;
+  const actor = actingSeat === "A" ? reconnected.socket : b.socket;
   actor.send({ type: "action", id: "valid", action: { type: "openBid", seat: actingSeat, startBid: 1 } });
   const validAck = await actor.waitFor((message) => message.type === "ack" && message.id === "valid");
   assert.equal(validAck.ok, true);
 
-  await Promise.all([a.socket.close(), b.socket.close()]);
+  if (sport === "basketball") {
+    const sockets = { A: reconnected.socket, B: b.socket };
+    let state = await actor.waitFor((message) => message.type === "state" && message.state.phase === "bidding").then((message) => message.state);
+    state = await finishDraft(sockets, state);
+    const finishedMatchId = state.matchId;
+
+    sockets.A.send({ type: "setRematchReady", id: "rematch-a", ready: true });
+    assert.equal((await sockets.A.waitFor((message) => message.type === "ack" && message.id === "rematch-a")).ok, true);
+    await sockets.B.waitFor((message) => message.type === "roomUpdate" && message.metadata?.rematchReady?.A === true);
+
+    sockets.B.send({ type: "setRematchReady", id: "rematch-b", ready: true });
+    assert.equal((await sockets.B.waitFor((message) => message.type === "ack" && message.id === "rematch-b")).ok, true);
+    const rematch = await sockets.B.waitFor((message) => message.type === "state" && message.state.matchId !== finishedMatchId);
+    assert.equal(rematch.state.sport, sport);
+    assert.equal(rematch.state.phase, "onTheClock");
+    assert.equal(rematch.metadata.seatNames.A, "Arthur A");
+    assert.equal(rematch.metadata.rematchReady.A, false);
+    assert.equal(rematch.metadata.rematchReady.B, false);
+  }
+
+  await Promise.all([a.socket.close(), reconnected.socket.close(), b.socket.close()]);
+}
+
+function listedSlots(player) {
+  if (player.sport === "basketball") {
+    return [player.position, player.secondaryPosition, player.tertiaryPosition].filter(Boolean);
+  }
+  const roles = [player.role, player.secondaryRole, player.tertiaryRole].filter(Boolean);
+  return roles.flatMap((role) => role === "DEF" ? ["DEF_L", "DEF_R"] : [role]);
+}
+
+function firstPlacementSlot(state) {
+  const pending = state.pendingPlacement;
+  const occupied = new Set(state.teams[pending.seat].roster.map((pick) => pick.slot));
+  const all = state.sport === "soccer" ? ["GK", "DEF_L", "DEF_R", "MID", "ATT"] : ["PG", "SG", "SF", "PF", "C"];
+  return listedSlots(pending.player).find((slot) => !occupied.has(slot)) ?? all.find((slot) => !occupied.has(slot));
+}
+
+async function sendAction(sockets, state, action) {
+  const socket = sockets[action.seat];
+  const id = `drive-${state.log.length}-${action.type}`;
+  socket.discard((message) => message.type === "state" && message.state.matchId === state.matchId && message.state.log.length <= state.log.length);
+  socket.send({ type: "action", id, action });
+  const ack = await socket.waitFor((message) => message.type === "ack" && message.id === id);
+  assert.equal(ack.ok, true, ack.error ?? `Expected ${action.type} to succeed`);
+  const updated = await socket.waitFor(
+    (message) => message.type === "state" && message.state.matchId === state.matchId && message.state.log.length > state.log.length
+  );
+  return updated.state;
+}
+
+async function finishDraft(sockets, initialState) {
+  let state = initialState;
+  let guard = 0;
+  while (state.phase !== "complete") {
+    if (++guard > 80) throw new Error(`Draft driver did not complete; stopped in ${state.phase}.`);
+    if (state.phase === "onTheClock") {
+      state = await sendAction(sockets, state, { type: "openBid", seat: state.turn, startBid: 1 });
+    } else if (state.phase === "bidding") {
+      state = await sendAction(sockets, state, { type: "acceptBid", seat: state.auction.turn });
+    } else if (state.phase === "placing") {
+      state = await sendAction(sockets, state, { type: "placePick", seat: state.pendingPlacement.seat, slot: firstPlacementSlot(state) });
+    } else if (state.phase === "catchUp") {
+      state = await sendAction(sockets, state, { type: "takeForOne", seat: state.turn });
+    } else if (state.phase === "skipOffer") {
+      state = await sendAction(sockets, state, { type: "respondToSkip", seat: state.skipOffer.respondingSeat, accept: false });
+    }
+  }
+  return state;
 }
 
 async function testIsolatedQueues() {
@@ -188,10 +291,31 @@ async function testInvalidSport() {
   assert.equal((await legacy.json()).sport, "basketball");
 }
 
+async function testRateLimits() {
+  const roomClient = crypto.randomUUID();
+  for (let attempt = 0; attempt < 10; attempt++) {
+    const response = await fetch(`${HTTP_BASE}/rooms/new`, { headers: { "X-Your-Five-Client": roomClient } });
+    assert.equal(response.status, 200, `room creation attempt ${attempt + 1} should be allowed`);
+  }
+  const blockedRoom = await fetch(`${HTTP_BASE}/rooms/new`, { headers: { "X-Your-Five-Client": roomClient } });
+  assert.equal(blockedRoom.status, 429);
+  assert.equal(blockedRoom.headers.get("Retry-After"), "60");
+
+  const matchmakingClient = crypto.randomUUID();
+  for (let attempt = 0; attempt < 30; attempt++) {
+    const response = await fetch(`${HTTP_BASE}/matchmaking?client=${matchmakingClient}`);
+    assert.equal(response.status, 426, `matchmaking attempt ${attempt + 1} should reach the WebSocket handler`);
+  }
+  const blockedMatchmaking = await fetch(`${HTTP_BASE}/matchmaking?client=${matchmakingClient}`);
+  assert.equal(blockedMatchmaking.status, 429);
+  assert.equal(blockedMatchmaking.headers.get("Retry-After"), "60");
+}
+
 await testPrivateRoom("basketball");
 await testPrivateRoom("soccer");
 await testMatchmaking("basketball");
 await testMatchmaking("soccer");
 await testIsolatedQueues();
 await testInvalidSport();
+await testRateLimits();
 console.log(`Cloudflare integration checks passed against ${HTTP_BASE}`);

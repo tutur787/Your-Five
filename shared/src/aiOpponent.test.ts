@@ -7,7 +7,8 @@ import {
   decideAiAction,
   evaluateAiPlayer,
 } from "./aiOpponent";
-import { actingSeat, applyAction, createMatch, playerCompositeValue } from "./gameEngine";
+import { actingSeat, applyAction, playerCompositeValue } from "./gameEngine";
+import { createMatch } from "./gameFactory";
 import { dailyRng } from "./dailySeed";
 import { PLAYER_DATABASE } from "./players";
 import { SOCCER_PLAYER_DATABASE } from "./soccerPlayers";
@@ -20,7 +21,7 @@ function assert(condition: unknown, message: string) {
 }
 
 function context(difficulty: AiDifficulty, seed: string, seen: Iterable<string>): AiDecisionContext {
-  return { difficulty, sessionSeed: seed, seenPlayerIds: [...seen] };
+  return { difficulty, sessionSeed: seed, seenPlayerIds: [...seen], candidateDatabase: [...PLAYER_DATABASE, ...SOCCER_PLAYER_DATABASE] };
 }
 
 function stateWithPool(players: PlayerCard[]): MatchState {

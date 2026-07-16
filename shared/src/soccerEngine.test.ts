@@ -1,14 +1,13 @@
 import {
   applyAction,
   availablePlacementSlots,
-  buildPool,
-  createMatch,
   positionPenaltyForSlot,
   validSlotsFor,
 } from "./gameEngine";
+import { buildPool, createMatch } from "./gameFactory";
 import { decideAiAction } from "./aiOpponent";
 import { SOCCER_PLAYER_DATABASE, SOCCER_SOURCE_REVISION } from "./soccerPlayers";
-import { soccerScoreComponents } from "./soccerScoring";
+import { soccerHonorDetails, soccerHonorPoints, soccerScoreComponents } from "./soccerScoring";
 import type { AiDecisionContext, MatchState, SoccerPlayerCard, TeamState } from "./types";
 
 let failures = 0;
@@ -25,6 +24,15 @@ assert(new Set(SOCCER_PLAYER_DATABASE.map((player) => player.id)).size === 298, 
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.sourceRevision === SOCCER_SOURCE_REVISION), "every card uses the pinned source revision");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes > 0 && player.stats.appearances > 0), "every card has verified UEFA playing time");
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.stats).every(Number.isFinite)), "every sourced metric is finite");
+
+const benzema2022 = SOCCER_PLAYER_DATABASE.find((player) => player.edition === "UCL2022" && player.name.includes("Benzema"))!;
+assert(soccerHonorPoints(benzema2022.honors) === 10, "Benzema's 2021/22 card includes winner, major individual, and top-scorer categories");
+assert(soccerHonorDetails(benzema2022.honors).filter((honor) => honor.label.includes("Player of the Season") || honor.label.includes("Ballon")).length === 2, "overlapping major individual awards are both displayed");
+assert(soccerHonorDetails(benzema2022.honors).some((honor) => honor.label.includes("15 goals")), "top-scorer honors include the verified goal total");
+const raphinha2025 = SOCCER_PLAYER_DATABASE.find((player) => player.edition === "UCL2025" && player.name.includes("Raphinha"))!;
+assert(raphinha2025.honors?.topScorer === true && raphinha2025.honors.topScorerLabel?.includes("joint"), "joint Champions League top scorers are labeled explicitly");
+assert(soccerHonorPoints({ topScorerOrKeeper: true, topScorerOrKeeperLabel: "UEFA Champions League top scorer" }) === 2, "legacy top-scorer honors retain their value");
+assert(soccerHonorPoints({ topScorerOrKeeper: true, topScorerOrKeeperLabel: "UEFA Champions League Goalkeeper of the Season" }) === 2, "legacy goalkeeper honors retain their value");
 
 const defender = byRole("DEF");
 assert(validSlotsFor(defender).includes("DEF_L") && validSlotsFor(defender).includes("DEF_R"), "a defender is valid in both defender slots");
@@ -59,6 +67,14 @@ chemistryTeam.roster = chemistryCards.map((player, index) => ({ player, price: 1
 assert(soccerScoreComponents(chemistryTeam).chemistry.bonus === 12, "chemistry is capped at 12");
 assert(Number.isFinite(soccerScoreComponents(chemistryTeam).total), "soccer scoring is deterministic and finite");
 
+const decoratedTeam = emptyTeam();
+decoratedTeam.roster = [...SOCCER_PLAYER_DATABASE]
+  .sort((a, b) => soccerHonorPoints(b.honors) - soccerHonorPoints(a.honors))
+  .slice(0, 5)
+  .map((player, index) => ({ player, price: 1, slot: ["GK", "DEF_L", "DEF_R", "MID", "ATT"][index] as any }));
+const decoratedScore = soccerScoreComponents(decoratedTeam);
+assert(decoratedScore.honors === 20 && decoratedScore.honorsUncapped > 20, "soccer lineup honors are capped at 20");
+
 let aiState = createMatch("soccer", () => 0.314);
 const aiSeenPlayerIds = new Set<string>();
 let guard = 0;
@@ -71,6 +87,7 @@ while (aiState.phase !== "complete" && guard++ < 300) {
     difficulty: "competitive",
     sessionSeed: "soccer-engine-simulation",
     seenPlayerIds: [...aiSeenPlayerIds],
+    candidateDatabase: SOCCER_PLAYER_DATABASE,
   };
   const result = applyAction(aiState, decideAiAction(aiState, seat, context));
   if (!result.ok) { failures++; console.error(`FAIL: AI action rejected: ${result.error}`); break; }

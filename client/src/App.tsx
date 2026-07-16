@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { SiteFooter } from "./components/SiteFooter";
-import { AiLanding } from "./pages/AiLanding";
-import { DailyDraft } from "./pages/DailyDraft";
 import { AboutPage, ContactPage, PrivacyPage, TermsPage } from "./pages/InfoPages";
-import { Landing } from "./pages/Landing";
-import { LocalDraft } from "./pages/LocalDraft";
-import { OnlineLanding } from "./pages/OnlineLanding";
-import { QuickAiDraft } from "./pages/QuickAiDraft";
-import { RoomPage } from "./pages/RoomPage";
 import { SportProvider } from "./hooks/useSport";
+
+const Landing = lazy(() => import("./pages/Landing").then((module) => ({ default: module.Landing })));
+const AiLanding = lazy(() => import("./pages/AiLanding").then((module) => ({ default: module.AiLanding })));
+const DailyDraft = lazy(() => import("./pages/DailyDraft").then((module) => ({ default: module.DailyDraft })));
+const LocalDraft = lazy(() => import("./pages/LocalDraft").then((module) => ({ default: module.LocalDraft })));
+const OnlineLanding = lazy(() => import("./pages/OnlineLanding").then((module) => ({ default: module.OnlineLanding })));
+const QuickAiDraft = lazy(() => import("./pages/QuickAiDraft").then((module) => ({ default: module.QuickAiDraft })));
+const RoomPage = lazy(() => import("./pages/RoomPage").then((module) => ({ default: module.RoomPage })));
+const ChallengeDraft = lazy(() => import("./pages/ChallengeDraft").then((module) => ({ default: module.ChallengeDraft })));
 
 export default function App() {
   const location = useLocation();
@@ -22,6 +24,7 @@ export default function App() {
 
   return (
     <SportProvider>
+      <Suspense fallback={<div className="route-loading"><span className="search-pulse" /> Loading Your Five</div>}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/ai" element={<AiLanding />} />
@@ -30,11 +33,13 @@ export default function App() {
         <Route path="/local" element={<LocalDraft />} />
         <Route path="/online" element={<OnlineLanding />} />
         <Route path="/room/:code" element={<RoomPage />} />
+        <Route path="/challenge/:sport/:version/:seed" element={<ChallengeDraft />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      </Suspense>
       <SiteFooter />
     </SportProvider>
   );

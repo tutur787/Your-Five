@@ -1,4 +1,5 @@
-import { LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared";
+import { ReactNode } from "react";
+import { LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared/core";
 import { ShareCard } from "../components/ShareCard";
 import { ScoreBreakdown } from "../components/ScoreBreakdown";
 import { LineupCourt } from "../components/TeamPanel";
@@ -11,9 +12,10 @@ interface Props {
   editableSeat?: SeatId | "local" | null;
   onChangeSlot?: (seat: SeatId, playerId: string, slot: LineupSlot) => void;
   subtitle?: string;
+  extraActions?: ReactNode;
 }
 
-export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlot, subtitle }: Props) {
+export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlot, subtitle, extraActions }: Props) {
   const seats: SeatId[] = ["A", "B"];
   const scoreA = teamScore(state.teams.A, state.sport);
   const scoreB = teamScore(state.teams.B, state.sport);
@@ -23,7 +25,11 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
     <section className="results-shell">
       <div className="results-header">
         <div className="page-eyebrow">FINAL SCORE</div>
-        <h2>{winner ? `${winner} ${subjectVerb(winner, "win", "wins")} the ${state.sport === "soccer" ? "match" : "game"}.` : "Dead even."}</h2>
+        <h2>{state.completionReason === "forfeit"
+          ? `${winner} ${subjectVerb(winner ?? "", "win", "wins")} by forfeit.`
+          : winner
+            ? `${winner} ${subjectVerb(winner, "win", "wins")} the ${state.sport === "soccer" ? "match" : "game"}.`
+            : "Dead even."}</h2>
         <div className="final-scoreline">
           <span>{seatLabel("A")} <strong>{scoreA.toFixed(1)}</strong></span>
           <span className="score-divider">&ndash;</span>
@@ -49,7 +55,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
                 onChangeSlot={onChangeSlot ? (playerId, slot) => onChangeSlot(seat, playerId, slot) : undefined}
               />
               <p className="spent-line">Spent ${spent} of $20</p>
-              <ShareCard state={state} seat={seat} label={seatLabel(seat)} subtitle={subtitle} />
+              {state.completionReason !== "forfeit" && <ShareCard state={state} seat={seat} label={seatLabel(seat)} subtitle={subtitle} />}
             </article>
           );
         })}
@@ -61,6 +67,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
           </button>
         </div>
       )}
+      {extraActions}
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { Rng } from "./gameEngine";
+import type { Rng } from "./gameEngine";
 
 /** Deterministic PRNG (mulberry32) — the same numeric seed always produces the same sequence. */
 export function mulberry32(seed: number): Rng {
@@ -12,13 +12,18 @@ export function mulberry32(seed: number): Rng {
   };
 }
 
-function hashString(str: string): number {
+export function hashString(str: string): number {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     hash = (hash << 5) - hash + str.charCodeAt(i);
     hash |= 0;
   }
   return hash;
+}
+
+/** A deterministic RNG for any stable string, including challenge and online pool seeds. */
+export function seededRng(seed: string): Rng {
+  return mulberry32(hashString(seed));
 }
 
 /** Today's date as YYYY-MM-DD in UTC, so everyone gets the same daily challenge regardless of local timezone. */
@@ -28,5 +33,5 @@ export function todayUtcDateString(date: Date = new Date()): string {
 
 /** A seeded RNG derived from a date string (defaults to today, UTC) — same date always produces the same reveal order. */
 export function dailyRng(dateString: string = todayUtcDateString()): Rng {
-  return mulberry32(hashString(dateString));
+  return seededRng(dateString);
 }

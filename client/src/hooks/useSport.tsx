@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import type { Sport } from "@fiveaside/shared";
+import type { Sport } from "@fiveaside/shared/core";
 
 const STORAGE_KEY = "your-five:selected-sport";
 

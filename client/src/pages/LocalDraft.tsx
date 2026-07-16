@@ -1,9 +1,21 @@
 import { AppHeader } from "../components/AppHeader";
 import { useLocalMatch } from "../hooks/useLocalMatch";
+import { useRecordProgress } from "../hooks/useRecordProgress";
+import { RuntimeLoading, useSportRuntime } from "../hooks/useSportRuntime";
+import { useSport } from "../hooks/useSport";
+import type { SportRuntime } from "@fiveaside/shared/core";
 import { Draft } from "./Draft";
 
 export function LocalDraft() {
-  const { state, dispatch, error, reset } = useLocalMatch();
+  const { sport } = useSport();
+  const runtime = useSportRuntime(sport);
+  if (!runtime) return <RuntimeLoading />;
+  return <ActiveLocalDraft runtime={runtime} />;
+}
+
+function ActiveLocalDraft({ runtime }: { runtime: SportRuntime }) {
+  const { state, dispatch, error, reset } = useLocalMatch(runtime);
+  useRecordProgress(state, "local", null);
   return (
     <div className="game-page">
       <AppHeader

@@ -1,9 +1,19 @@
 import { AppHeader } from "../components/AppHeader";
 import { useDailyMatch } from "../hooks/useDailyMatch";
 import { Draft } from "./Draft";
+import { RuntimeLoading, useSportRuntime } from "../hooks/useSportRuntime";
+import { useSport } from "../hooks/useSport";
+import type { SportRuntime } from "@fiveaside/shared/core";
 
 export function DailyDraft() {
-  const { state, dispatch, error, humanSeat, today, bestScore, alreadyPlayedToday } = useDailyMatch();
+  const { sport } = useSport();
+  const runtime = useSportRuntime(sport);
+  if (!runtime) return <RuntimeLoading />;
+  return <ActiveDailyDraft runtime={runtime} />;
+}
+
+function ActiveDailyDraft({ runtime }: { runtime: SportRuntime }) {
+  const { state, dispatch, error, humanSeat, today, bestScore, alreadyPlayedToday } = useDailyMatch(runtime);
   return (
     <div className="game-page">
       <AppHeader

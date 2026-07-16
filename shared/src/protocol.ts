@@ -8,6 +8,16 @@ export interface SeatsFilled {
 
 export type RoomKind = "private" | "matched";
 
+export interface RoomMetadata {
+  seatsFilled: SeatsFilled;
+  seatNames: Partial<Record<SeatId, string>>;
+  rematchReady: SeatsFilled;
+  serverNow: number;
+  turnDeadlineAt: number | null;
+  reconnectingSeat: SeatId | null;
+  reconnectDeadlineAt: number | null;
+}
+
 // --- /room/:code messages ---
 
 /** Sent by the client over the room WebSocket. Every message carries a client-generated `id` so the
@@ -15,14 +25,17 @@ export type RoomKind = "private" | "matched";
  * built-in ack mechanism the way Socket.IO did). */
 export type RoomClientMessage =
   | { id: string; type: "startDraft" }
+  | { id: string; type: "setNickname"; nickname: string }
+  | { id: string; type: "setRematchReady"; ready: boolean }
   | { id: string; type: "action"; action: MatchAction };
 
 /** Sent by the server over the room WebSocket. */
 export type RoomServerMessage =
-  | { type: "joined"; seat: SeatId; token: string; sport: Sport; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled }
-  | { type: "state"; state: MatchState }
-  | { type: "roomUpdate"; seatsFilled: SeatsFilled }
-  | { type: "opponentLeft"; seat: SeatId }
+  | { type: "joined"; seat: SeatId; token: string; sport: Sport; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled; metadata?: RoomMetadata }
+  | { type: "state"; state: MatchState; metadata?: RoomMetadata }
+  | { type: "roomUpdate"; seatsFilled: SeatsFilled; metadata?: RoomMetadata }
+  | { type: "opponentLeft"; seat: SeatId; reconnectDeadlineAt?: number | null }
+  | { type: "matchCancelled"; reason: "opponent_no_show" }
   | { type: "ack"; id: string; ok: boolean; error?: string }
   | { type: "error"; error: string };
 

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { AiDifficulty } from "@fiveaside/shared";
+import { AiDifficulty } from "@fiveaside/shared/core";
 import { loadAiDifficulty, saveAiDifficulty } from "../utils/aiStorage";
 
 export function useAiDifficulty() {

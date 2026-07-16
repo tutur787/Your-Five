@@ -8,9 +8,7 @@ import {
   actingSeat,
   applyAction,
   availablePlacementSlots,
-  buildPool,
   chemistryPairs,
-  createMatch,
   fitAssessment,
   HIGH_USAGE_PPG_THRESHOLD,
   MAX_ALPHA_SCORERS_BEFORE_PENALTY,
@@ -26,13 +24,15 @@ import {
   wrongPositionCount,
   wrongPositionPenalty,
 } from "./gameEngine";
+import { buildPool, createMatch } from "./gameFactory";
 import { decideAiAction } from "./aiOpponent";
 import { dailyRng } from "./dailySeed";
+import { BASKETBALL_RUNTIME } from "./basketballRuntime";
 import { PLAYER_DATABASE } from "./players";
 import { AiDecisionContext, BasketballPlayerCard, MatchState, PlayerCard, POSITIONS } from "./types";
 
 function findPlayer(id: string): BasketballPlayerCard {
-  const player = PLAYER_DATABASE.find((p) => p.id === id);
+  const player = BASKETBALL_RUNTIME.database.find((p) => p.id === id && p.sport === "basketball") as BasketballPlayerCard | undefined;
   if (!player) throw new Error(`Test setup error: no player with id ${id}`);
   return player;
 }
@@ -484,6 +484,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
         difficulty: "competitive",
         sessionSeed: `engine-simulation-${game}`,
         seenPlayerIds: [...seenPlayerIds],
+        candidateDatabase: BASKETBALL_RUNTIME.database,
       };
       const action = decideAiAction(state, seat, context);
       const res = applyAction(state, action);

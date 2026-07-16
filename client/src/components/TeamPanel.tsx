@@ -1,4 +1,4 @@
-import { PointerEvent as ReactPointerEvent, useState } from "react";
+import { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent, useEffect, useRef, useState } from "react";
 import {
   canBuySkip,
   chemistryPairs,
@@ -12,7 +12,7 @@ import {
   slotsForSport,
   TeamState,
   validSlotsFor,
-} from "@fiveaside/shared";
+} from "@fiveaside/shared/core";
 import { formatPosition } from "../utils/position";
 import { ScoreBreakdown } from "./ScoreBreakdown";
 
@@ -94,8 +94,23 @@ export function LineupCourt({
     origin: LineupSlot;
     validSlots: LineupSlot[];
   } | null>(null);
+  const [selectedPlayer, setSelectedPlayer] = useState<{
+    id: string;
+    name: string;
+    origin: LineupSlot;
+    validSlots: LineupSlot[];
+  } | null>(null);
   const [dragPoint, setDragPoint] = useState({ x: 0, y: 0 });
   const [hoveredSlot, setHoveredSlot] = useState<LineupSlot | null>(null);
+  const dragStartRef = useRef({ x: 0, y: 0, moved: false });
+  const suppressClickRef = useRef(false);
+
+  useEffect(() => {
+    if (!selectedPlayer) return;
+    const cancel = (event: KeyboardEvent) => event.key === "Escape" && setSelectedPlayer(null);
+    document.addEventListener("keydown", cancel);
+    return () => document.removeEventListener("keydown", cancel);
+  }, [selectedPlayer]);
 
   const positionAtPoint = (x: number, y: number): LineupSlot | null => {
     const target = document
@@ -111,6 +126,7 @@ export function LineupCourt({
     const player = team.roster.find((rosterPick) => rosterPick.player.id === playerId)?.player;
     if (!player) return;
     setDraggedPlayer({ id: playerId, name, origin, validSlots: validSlotsFor(player) });
+    dragStartRef.current = { x: event.clientX, y: event.clientY, moved: false };
     setDragPoint({ x: event.clientX, y: event.clientY });
     setHoveredSlot(origin);
   };
@@ -118,6 +134,9 @@ export function LineupCourt({
   const moveDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!draggedPlayer) return;
     event.preventDefault();
+    if (Math.hypot(event.clientX - dragStartRef.current.x, event.clientY - dragStartRef.current.y) > 5) {
+      dragStartRef.current.moved = true;
+    }
     setDragPoint({ x: event.clientX, y: event.clientY });
     setHoveredSlot(positionAtPoint(event.clientX, event.clientY));
   };
@@ -125,8 +144,9 @@ export function LineupCourt({
   const endDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!draggedPlayer) return;
     const destination = positionAtPoint(event.clientX, event.clientY);
-    if (destination && destination !== draggedPlayer.origin) {
+    if (dragStartRef.current.moved && destination && destination !== draggedPlayer.origin) {
       onChangeSlot?.(draggedPlayer.id, destination);
+      suppressClickRef.current = true;
     }
     setDraggedPlayer(null);
     setHoveredSlot(null);
@@ -136,10 +156,40 @@ export function LineupCourt({
     setDraggedPlayer(null);
     setHoveredSlot(null);
   };
+  const choosePlayer = (playerId: string, name: string, origin: LineupSlot) => {
+    if (!editable || !onChangeSlot) return;
+    if (suppressClickRef.current) {
+      suppressClickRef.current = false;
+      return;
+    }
+    if (selectedPlayer && selectedPlayer.id !== playerId) {
+      onChangeSlot(selectedPlayer.id, origin);
+      setSelectedPlayer(null);
+      return;
+    }
+    const player = team.roster.find((pick) => pick.player.id === playerId)?.player;
+    if (!player) return;
+    setSelectedPlayer((current) => current?.id === playerId ? null : { id: playerId, name, origin, validSlots: validSlotsFor(player) });
+  };
+  const chooseSlot = (slot: LineupSlot) => {
+    if (!selectedPlayer || slot === selectedPlayer.origin) return;
+    onChangeSlot?.(selectedPlayer.id, slot);
+    setSelectedPlayer(null);
+  };
+  const activateWithKeyboard = (event: ReactKeyboardEvent, action: () => void) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    action();
+  };
   const slotLabel = (slot: LineupSlot) => slot === "DEF_L" ? "DEF-L" : slot === "DEF_R" ? "DEF-R" : slot;
+  const movingPlayer = draggedPlayer ?? selectedPlayer;
 
   return (
-    <div className={`lineup-court${sport === "soccer" ? " soccer-pitch" : ""}${draggedPlayer ? " is-dragging" : ""}`} aria-label={`${sport === "soccer" ? "Football" : "Basketball"} starting five lineup`}>
+    <div
+      className={`lineup-court${sport === "soccer" ? " soccer-pitch" : ""}${movingPlayer ? " is-dragging" : ""}`}
+      aria-label={`${sport === "soccer" ? "Football" : "Basketball"} starting five lineup`}
+      onClick={(event) => { if (event.target === event.currentTarget) setSelectedPlayer(null); }}
+    >
       {sport === "soccer" ? (
         <svg className="court-markings pitch-markings" viewBox="0 0 640 760" preserveAspectRatio="none" aria-hidden="true">
           <rect className="pitch-boundary" x="8" y="8" width="624" height="744" />
@@ -166,8 +216,8 @@ export function LineupCourt({
         const bondedWith = pick ? partners.get(pick.player.id) : undefined;
         const penalty = pick ? positionPenaltyForSlot(pick.player, pick.slot) : 0;
         const wrongPosition = penalty > 0;
-        const dropState = draggedPlayer
-          ? draggedPlayer.validSlots.includes(pos)
+        const dropState = movingPlayer
+          ? movingPlayer.validSlots.includes(pos)
             ? " drop-valid"
             : " drop-invalid"
           : "";
@@ -176,20 +226,27 @@ export function LineupCourt({
             className={`court-slot court-slot-${pos}${pick ? " has-player" : ""}${wrongPosition ? " wrong-position" : ""}${dropState}${hoveredSlot === pos ? " drop-hovered" : ""}`}
             key={pos}
             data-court-position={pos}
+            onClick={() => { if (!pick) chooseSlot(pos); }}
+            onKeyDown={(event) => { if (!pick && selectedPlayer) activateWithKeyboard(event, () => chooseSlot(pos)); }}
+            role={!pick && selectedPlayer ? "button" : undefined}
+            tabIndex={!pick && selectedPlayer ? 0 : undefined}
+            aria-label={!pick && selectedPlayer ? `Move ${selectedPlayer.name} to ${slotLabel(pos)}` : undefined}
           >
             <div className="court-position-target" aria-hidden="true">
               <span>{slotLabel(pos)}</span>
             </div>
             {pick ? (
               <div
-                className={`court-player-card${draggedPlayer?.id === pick.player.id ? " dragging-source" : ""}${editable && onChangeSlot ? " draggable" : ""}`}
+                className={`court-player-card${draggedPlayer?.id === pick.player.id ? " dragging-source" : ""}${selectedPlayer?.id === pick.player.id ? " selected-source" : ""}${editable && onChangeSlot ? " draggable" : ""}`}
                 onPointerDown={(event) => beginDrag(event, pick.player.id, pick.player.name, pick.slot)}
                 onPointerMove={moveDrag}
                 onPointerUp={endDrag}
                 onPointerCancel={cancelDrag}
+                onClick={(event) => { event.stopPropagation(); choosePlayer(pick.player.id, pick.player.name, pick.slot); }}
+                onKeyDown={(event) => activateWithKeyboard(event, () => choosePlayer(pick.player.id, pick.player.name, pick.slot))}
                 role={editable && onChangeSlot ? "button" : undefined}
                 tabIndex={editable && onChangeSlot ? 0 : undefined}
-                aria-label={editable && onChangeSlot ? `Drag ${pick.player.name} to change position` : undefined}
+                aria-label={editable && onChangeSlot ? `${selectedPlayer ? "Move selected player to" : "Select"} ${pick.player.name} at ${slotLabel(pos)}` : undefined}
               >
                 <div className="court-slot-label">{slotLabel(pos)}</div>
                 <div className="court-player-main">

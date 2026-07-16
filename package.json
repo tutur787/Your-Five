@@ -13,8 +13,10 @@
     "deploy:worker": "npm run deploy -w worker",
     "test:cloudflare": "npm run test:integration -w worker",
     "test:engine": "tsx shared/src/engine.test.ts",
+    "test:reliability": "tsx shared/src/reliability.test.ts",
     "test:ai": "tsx shared/src/aiOpponent.test.ts",
     "test:ai-storage": "tsx client/src/utils/aiStorage.test.ts",
+    "test:progress": "tsx client/src/utils/progressStorage.test.ts",
     "test:soccer": "tsx shared/src/soccerEngine.test.ts",
     "data:soccer": "node scripts/generate-soccer-data.mjs",
     "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify"

@@ -1,6 +1,6 @@
 {
   "source": "UEFA.com official selections and UEFA public match statistics",
-  "revision": "uefa-v2-bb46883d839d",
+  "revision": "uefa-v2-dc200f41245f",
   "apiVersions": {
     "competition": "v2",
     "match": "v5",
@@ -352,7 +352,8 @@
         "68666",
         "68667"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cosmin-contra-toty2001",
@@ -384,7 +385,8 @@
         "68690",
         "68691"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sami-hyypia-toty2001",
@@ -419,7 +421,8 @@
         "68626",
         "68628"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "patrik-andersson-toty2001",
@@ -452,7 +455,8 @@
         "68626",
         "68629"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "bixente-lizarazu-toty2001",
@@ -488,7 +492,8 @@
         "68615",
         "68617"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-beckham-toty2001",
@@ -519,7 +524,8 @@
         "68233",
         "68615"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "patrick-vieira-toty2001",
@@ -552,7 +558,8 @@
         "68651",
         "68652"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "zinedine-zidane-toty2001",
@@ -575,7 +582,8 @@
         "68638",
         "68641"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kily-gonzalez-toty2001",
@@ -606,7 +614,8 @@
         "68510",
         "68511"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thierry-henry-toty2001",
@@ -639,7 +648,8 @@
         "68651",
         "68652"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-trezeguet-toty2001",
@@ -666,7 +676,8 @@
         "68650",
         "68652"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "rustu-recber-toty2002",
@@ -690,7 +701,8 @@
         "70306",
         "70307"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "carles-puyol-toty2002",
@@ -725,7 +737,8 @@
         "70427",
         "70430"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-nesta-toty2002",
@@ -750,7 +763,8 @@
         "70144",
         "70453"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristian-chivu-toty2002",
@@ -776,7 +790,8 @@
         "70110",
         "70440"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "roberto-carlos-toty2002",
@@ -812,7 +827,8 @@
         "70451",
         "70454"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "clarence-seedorf-toty2002",
@@ -847,7 +863,8 @@
         "70451",
         "70453"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "michael-ballack-toty2002",
@@ -881,7 +898,8 @@
         "70144",
         "70145"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "zinedine-zidane-toty2002",
@@ -915,7 +933,10 @@
         "70451",
         "70454"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/"
+      ]
     },
     {
       "id": "damien-duff-toty2002",
@@ -938,7 +959,8 @@
         "70348",
         "70349"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thierry-henry-toty2002",
@@ -970,7 +992,8 @@
         "70439",
         "70442"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ronaldo-toty2002",
@@ -997,7 +1020,10 @@
         "70098",
         "70454"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "gianluigi-buffon-toty2003",
@@ -1029,7 +1055,10 @@
         "73360",
         "73362"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/"
+      ]
     },
     {
       "id": "paulo-ferreira-toty2003",
@@ -1062,7 +1091,8 @@
         "73388",
         "73389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-nesta-toty2003",
@@ -1096,7 +1126,8 @@
         "73408",
         "73410"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "paolo-maldini-toty2003",
@@ -1132,7 +1163,8 @@
         "73410",
         "73411"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "roberto-carlos-toty2003",
@@ -1165,7 +1197,8 @@
         "73387",
         "73389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luis-figo-toty2003",
@@ -1199,7 +1232,8 @@
         "73387",
         "73389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-beckham-toty2003",
@@ -1229,7 +1263,8 @@
         "73386",
         "73387"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "zinedine-zidane-toty2003",
@@ -1263,7 +1298,8 @@
         "73387",
         "73389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "pavel-nedved-toty2003",
@@ -1295,7 +1331,10 @@
         "73360",
         "73362"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "thierry-henry-toty2003",
@@ -1325,7 +1364,8 @@
         "73340",
         "73342"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ruud-van-nistelrooy-toty2003",
@@ -1354,7 +1394,10 @@
         "73374",
         "73378"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "gianluigi-buffon-toty2004",
@@ -1381,7 +1424,8 @@
         "79486",
         "79488"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cafu-toty2004",
@@ -1410,7 +1454,8 @@
         "79522",
         "79524"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ricardo-carvalho-toty2004",
@@ -1442,7 +1487,8 @@
         "79548",
         "79551"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-nesta-toty2004",
@@ -1470,7 +1516,8 @@
         "79524",
         "79527"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ashley-cole-toty2004",
@@ -1499,7 +1546,8 @@
         "79513",
         "79515"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2004",
@@ -1526,7 +1574,8 @@
         "79501",
         "79502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "maniche-toty2004",
@@ -1561,7 +1610,8 @@
         "79549",
         "79551"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ronaldinho-toty2004",
@@ -1590,7 +1640,8 @@
         "79522",
         "79525"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "pavel-nedved-toty2004",
@@ -1617,7 +1668,8 @@
         "79486",
         "79488"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thierry-henry-toty2004",
@@ -1647,7 +1699,8 @@
         "79513",
         "79515"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andriy-shevchenko-toty2004",
@@ -1676,7 +1729,10 @@
         "79522",
         "79527"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "petr-cech-toty2005",
@@ -1707,7 +1763,10 @@
         "81768",
         "81784"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/"
+      ]
     },
     {
       "id": "cafu-toty2005",
@@ -1737,7 +1796,8 @@
         "81716",
         "81733"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "john-terry-toty2005",
@@ -1769,7 +1829,8 @@
         "81768",
         "81784"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "carles-puyol-toty2005",
@@ -1797,7 +1858,8 @@
         "81761",
         "81776"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "paolo-maldini-toty2005",
@@ -1830,7 +1892,8 @@
         "81764",
         "81780"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luis-garcia-toty2005",
@@ -1863,7 +1926,8 @@
         "81752",
         "81784"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "steven-gerrard-toty2005",
@@ -1893,7 +1957,10 @@
         "81769",
         "81784"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/"
+      ]
     },
     {
       "id": "ronaldinho-toty2005",
@@ -1920,7 +1987,10 @@
         "81744",
         "81761"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "pavel-nedved-toty2005",
@@ -1948,7 +2018,8 @@
         "81740",
         "81757"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "samuel-eto-o-toty2005",
@@ -1974,7 +2045,8 @@
         "81728",
         "81744"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andriy-shevchenko-toty2005",
@@ -2005,7 +2077,8 @@
         "81764",
         "81780"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gianluigi-buffon-toty2006",
@@ -2029,7 +2102,8 @@
         "84030",
         "84031"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gianluca-zambrotta-toty2006",
@@ -2058,7 +2132,8 @@
         "84808",
         "84824"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "fabio-cannavaro-toty2006",
@@ -2088,7 +2163,10 @@
         "84799",
         "84816"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "carles-puyol-toty2006",
@@ -2121,7 +2199,8 @@
         "84808",
         "84824"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "philipp-lahm-toty2006",
@@ -2147,7 +2226,8 @@
         "84794",
         "84826"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "steven-gerrard-toty2006",
@@ -2173,7 +2253,8 @@
         "84795",
         "84812"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cesc-fabregas-toty2006",
@@ -2206,7 +2287,8 @@
         "84820",
         "84835"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kaka-toty2006",
@@ -2238,7 +2320,8 @@
         "84822",
         "84838"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ronaldinho-toty2006",
@@ -2272,7 +2355,10 @@
         "84808",
         "84824"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/"
+      ]
     },
     {
       "id": "thierry-henry-toty2006",
@@ -2303,7 +2389,8 @@
         "84803",
         "84820"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "samuel-eto-o-toty2006",
@@ -2333,7 +2420,8 @@
         "84744",
         "84760"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2007",
@@ -2361,7 +2449,8 @@
         "301227",
         "301251"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "dani-alves-toty2007",
@@ -2397,7 +2486,8 @@
         "301237",
         "301246"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-nesta-toty2007",
@@ -2428,7 +2518,8 @@
         "301222",
         "301229"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "john-terry-toty2007",
@@ -2457,7 +2548,8 @@
         "301225",
         "301249"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "eric-abidal-toty2007",
@@ -2485,7 +2577,8 @@
         "301208",
         "301232"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2007",
@@ -2516,7 +2609,8 @@
         "301209",
         "301234"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "steven-gerrard-toty2007",
@@ -2548,7 +2642,8 @@
         "301224",
         "301247"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kaka-toty2007",
@@ -2582,7 +2677,12 @@
         "301229",
         "301253"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "clarence-seedorf-toty2007",
@@ -2616,7 +2716,8 @@
         "301229",
         "301253"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "zlatan-ibrahimovic-toty2007",
@@ -2643,7 +2744,8 @@
         "301211",
         "301236"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "didier-drogba-toty2007",
@@ -2673,7 +2775,8 @@
         "301218",
         "301225"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2008",
@@ -2700,7 +2803,8 @@
         "302744",
         "302768"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2008",
@@ -2727,7 +2831,8 @@
         "302768",
         "302776"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "john-terry-toty2008",
@@ -2759,7 +2864,8 @@
         "302753",
         "302777"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "carles-puyol-toty2008",
@@ -2788,7 +2894,8 @@
         "302726",
         "302750"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "philipp-lahm-toty2008",
@@ -2820,7 +2927,8 @@
         "302763",
         "302772"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2008",
@@ -2851,7 +2959,12 @@
         "302738",
         "302761"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "xavi-hernandez-toty2008",
@@ -2882,7 +2995,8 @@
         "302750",
         "302758"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cesc-fabregas-toty2008",
@@ -2911,7 +3025,8 @@
         "302741",
         "302766"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "franck-ribery-toty2008",
@@ -2942,7 +3057,8 @@
         "302763",
         "302772"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2008",
@@ -2971,7 +3087,8 @@
         "302750",
         "302758"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "fernando-torres-toty2008",
@@ -3000,7 +3117,8 @@
         "302711",
         "302760"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2009",
@@ -3028,7 +3146,8 @@
         "2000432",
         "2000457"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "dani-alves-toty2009",
@@ -3061,7 +3180,8 @@
         "2000447",
         "2001219"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "john-terry-toty2009",
@@ -3092,7 +3212,8 @@
         "2000434",
         "2000458"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "carles-puyol-toty2009",
@@ -3123,7 +3244,8 @@
         "2000447",
         "2001219"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "patrice-evra-toty2009",
@@ -3155,7 +3277,8 @@
         "2000423",
         "2000430"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2009",
@@ -3187,7 +3310,8 @@
         "2000432",
         "2000457"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "xavi-hernandez-toty2009",
@@ -3221,7 +3345,8 @@
         "2000447",
         "2001219"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kaka-toty2009",
@@ -3246,7 +3371,8 @@
         "2000424",
         "2000432"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2009",
@@ -3278,7 +3404,8 @@
         "2000438",
         "2000447"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2009",
@@ -3311,7 +3438,12 @@
         "2000447",
         "2001219"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefasupercup/news/0250-0c50f41f3c36-73a920d50345-1000--uefa-club-football-awards/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "zlatan-ibrahimovic-toty2009",
@@ -3340,7 +3472,8 @@
         "2000447",
         "2001219"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2010",
@@ -3367,7 +3500,8 @@
         "2002870",
         "2002893"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "maicon-toty2010",
@@ -3399,7 +3533,8 @@
         "2002849",
         "2002873"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gerard-pique-toty2010",
@@ -3430,7 +3565,8 @@
         "2002887",
         "2002911"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "carles-puyol-toty2010",
@@ -3459,7 +3595,8 @@
         "2002880",
         "2002887"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ashley-cole-toty2010",
@@ -3482,7 +3619,8 @@
         "2002859",
         "2002867"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2010",
@@ -3510,7 +3648,8 @@
         "2002893",
         "2002901"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "xavi-hernandez-toty2010",
@@ -3540,7 +3679,8 @@
         "2002880",
         "2002887"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "wesley-sneijder-toty2010",
@@ -3573,7 +3713,8 @@
         "2002873",
         "2002881"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2010",
@@ -3601,7 +3742,8 @@
         "2002880",
         "2002887"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2010",
@@ -3633,7 +3775,11 @@
         "2002887",
         "2002911"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "david-villa-toty2010",
@@ -3665,7 +3811,8 @@
         "2002880",
         "2002887"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2011",
@@ -3695,7 +3842,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "dani-alves-toty2011",
@@ -3727,7 +3875,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gerard-pique-toty2011",
@@ -3754,7 +3903,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thiago-silva-toty2011",
@@ -3781,7 +3931,8 @@
         "2007647",
         "2007656"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marcelo-toty2011",
@@ -3809,7 +3960,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "arjen-robben-toty2011",
@@ -3833,7 +3985,8 @@
         "2007585",
         "2007634"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "xavi-hernandez-toty2011",
@@ -3865,7 +4018,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2011",
@@ -3893,7 +4047,8 @@
         "2007732",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gareth-bale-toty2011",
@@ -3917,7 +4072,8 @@
         "2007730",
         "2007736"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2011",
@@ -3950,7 +4106,12 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "cristiano-ronaldo-toty2011",
@@ -3980,7 +4141,8 @@
         "2007742",
         "2007745"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/"
+      "sourceSelectionUrl": "https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/",
+      "sourceHonorUrls": []
     },
     {
       "id": "iker-casillas-toty2012",
@@ -4011,7 +4173,8 @@
         "2009551",
         "2009559"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2012",
@@ -4041,7 +4204,8 @@
         "2009551",
         "2009559"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gerard-pique-toty2012",
@@ -4069,7 +4233,8 @@
         "2009564",
         "2009572"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "philipp-lahm-toty2012",
@@ -4101,7 +4266,8 @@
         "2009539",
         "2009563"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thiago-silva-toty2012",
@@ -4130,7 +4296,8 @@
         "2009553",
         "2009577"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2012",
@@ -4160,7 +4327,10 @@
         "2009541",
         "2009564"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/"
+      ]
     },
     {
       "id": "xavi-hernandez-toty2012",
@@ -4190,7 +4360,8 @@
         "2009541",
         "2009564"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andrea-pirlo-toty2012",
@@ -4216,7 +4387,8 @@
         "2009561",
         "2009568"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "mesut-ozil-toty2012",
@@ -4245,7 +4417,8 @@
         "2009527",
         "2009551"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2012",
@@ -4277,7 +4450,11 @@
         "2009564",
         "2009572"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "cristiano-ronaldo-toty2012",
@@ -4309,7 +4486,8 @@
         "2009559",
         "2009583"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0250-0c5100ad548d-c35327ed8d68-1000--team-of-2012-reflect-on-a-brilliant-year/",
+      "sourceHonorUrls": []
     },
     {
       "id": "manuel-neuer-toty2013",
@@ -4343,7 +4521,8 @@
         "2011853",
         "2012139"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "philipp-lahm-toty2013",
@@ -4377,7 +4556,8 @@
         "2011853",
         "2012139"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thiago-silva-toty2013",
@@ -4403,7 +4583,8 @@
         "2011819",
         "2011828"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2013",
@@ -4432,7 +4613,8 @@
         "2011817",
         "2011825"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-alaba-toty2013",
@@ -4466,7 +4648,8 @@
         "2011853",
         "2012139"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gareth-bale-toty2013",
@@ -4496,7 +4679,8 @@
         "2011825",
         "2011850"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marco-reus-toty2013",
@@ -4529,7 +4713,8 @@
         "2011834",
         "2011841"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "mesut-ozil-toty2013",
@@ -4562,7 +4747,8 @@
         "2011833",
         "2011842"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "franck-ribery-toty2013",
@@ -4594,7 +4780,10 @@
         "2011853",
         "2012139"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/"
+      ]
     },
     {
       "id": "zlatan-ibrahimovic-toty2013",
@@ -4622,7 +4811,8 @@
         "2011819",
         "2011828"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2013",
@@ -4653,7 +4843,11 @@
         "2011817",
         "2011850"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/023f-0e97fa2b15aa-d4da4a768519-1000--team-of-the-year-2013/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "manuel-neuer-toty2014",
@@ -4685,7 +4879,8 @@
         "2014380",
         "2014388"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2014",
@@ -4717,7 +4912,8 @@
         "2014366",
         "2014374"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "philipp-lahm-toty2014",
@@ -4747,7 +4943,8 @@
         "2014348",
         "2014356"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-alaba-toty2014",
@@ -4777,7 +4974,8 @@
         "2014348",
         "2014356"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "diego-godin-toty2014",
@@ -4810,7 +5008,8 @@
         "2014371",
         "2014396"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "arjen-robben-toty2014",
@@ -4841,7 +5040,8 @@
         "2014380",
         "2014388"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "angel-di-maria-toty2014",
@@ -4866,7 +5066,8 @@
         "2011881",
         "2011883"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "toni-kroos-toty2014",
@@ -4900,7 +5101,8 @@
         "2014374",
         "2014398"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2014",
@@ -4933,7 +5135,12 @@
         "2014374",
         "2014398"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "lionel-messi-toty2014",
@@ -4963,7 +5170,8 @@
         "2014381",
         "2014389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "zlatan-ibrahimovic-toty2014",
@@ -4989,7 +5197,8 @@
         "2014382",
         "2014389"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/021d-0e8eedd79b33-cc7486c8ad97-1000--uefa-com-team-of-the-year-2014-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "manuel-neuer-toty2015",
@@ -5020,7 +5229,8 @@
         "2015723",
         "2015732"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "dani-alves-toty2015",
@@ -5051,7 +5261,8 @@
         "2015730",
         "2015790"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2015",
@@ -5078,7 +5289,8 @@
         "2015706",
         "2015714"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gerard-pique-toty2015",
@@ -5110,7 +5322,8 @@
         "2015730",
         "2015790"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-alaba-toty2015",
@@ -5136,7 +5349,8 @@
         "2015699",
         "2015723"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "paul-pogba-toty2015",
@@ -5166,7 +5380,8 @@
         "2015743",
         "2015752"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2015",
@@ -5197,7 +5412,8 @@
         "2015721",
         "2015790"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "james-rodriguez-toty2015",
@@ -5222,7 +5438,8 @@
         "2014430",
         "2015746"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2015",
@@ -5254,7 +5471,10 @@
         "2015738",
         "2015746"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "lionel-messi-toty2015",
@@ -5285,7 +5505,12 @@
         "2015753",
         "2015790"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "neymar-toty2015",
@@ -5317,7 +5542,10 @@
         "2015721",
         "2015730"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0253-0d809ae6dd3b-3da0ae473003-1000--uefa-com-users-team-of-the-year-2015/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "gianluigi-buffon-toty2016",
@@ -5344,7 +5572,8 @@
         "2019345",
         "2019353"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2016",
@@ -5376,7 +5605,8 @@
         "2019348",
         "2019372"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gerard-pique-toty2016",
@@ -5403,7 +5633,8 @@
         "2019327",
         "2019358"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "jerome-boateng-toty2016",
@@ -5428,7 +5659,8 @@
         "2019337",
         "2019360"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "leonardo-bonucci-toty2016",
@@ -5455,7 +5687,8 @@
         "2019345",
         "2019353"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andres-iniesta-toty2016",
@@ -5483,7 +5716,8 @@
         "2019327",
         "2019366"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "toni-kroos-toty2016",
@@ -5515,7 +5749,8 @@
         "2019341",
         "2019372"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luka-modric-toty2016",
@@ -5547,7 +5782,8 @@
         "2019348",
         "2019372"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2016",
@@ -5576,7 +5812,8 @@
         "2019358",
         "2019366"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2016",
@@ -5608,7 +5845,12 @@
         "2019348",
         "2019372"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "antoine-griezmann-toty2016",
@@ -5641,7 +5883,8 @@
         "2019361",
         "2019368"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0235-0f8e481d872a-1b711c0724ab-1000--uefa-com-team-of-the-year-2016-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gianluigi-buffon-toty2017",
@@ -5673,7 +5916,10 @@
         "2021641",
         "2021665"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/023c-0e9c93367b5f-6e0561d03889-1000--gianluigi-buffon-named-ucl-goalkeeper-of-the-season/"
+      ]
     },
     {
       "id": "dani-alves-toty2017",
@@ -5707,7 +5953,8 @@
         "2021662",
         "2021669"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2017",
@@ -5740,7 +5987,10 @@
         "2021681",
         "2022539"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0253-0d8217b17e39-8255d1a1708a-1000--buffon-ramos-modric-and-ronaldo-win-positional-awards/"
+      ]
     },
     {
       "id": "giorgio-chiellini-toty2017",
@@ -5769,7 +6019,8 @@
         "2021633",
         "2021641"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marcelo-toty2017",
@@ -5801,7 +6052,8 @@
         "2021657",
         "2022539"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kevin-de-bruyne-toty2017",
@@ -5828,7 +6080,8 @@
         "2021645",
         "2021653"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "toni-kroos-toty2017",
@@ -5861,7 +6114,8 @@
         "2021657",
         "2022539"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luka-modric-toty2017",
@@ -5894,7 +6148,10 @@
         "2021657",
         "2022539"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0253-0d8217b17e39-8255d1a1708a-1000--buffon-ramos-modric-and-ronaldo-win-positional-awards/"
+      ]
     },
     {
       "id": "eden-hazard-toty2017",
@@ -5920,7 +6177,8 @@
         "2021663",
         "2021671"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2017",
@@ -5950,7 +6208,8 @@
         "2021665",
         "2021673"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2017",
@@ -5984,7 +6243,13 @@
         "2021681",
         "2022539"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0241-0f8e5b4862dd-a0840957facc-1000--uefa-com-fans-team-of-the-year-2017-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://www.uefa.com/uefachampionsleague/news/0253-0d8217b17e39-8255d1a1708a-1000--buffon-ramos-modric-and-ronaldo-win-positional-awards/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "marc-andre-ter-stegen-toty2018",
@@ -6013,7 +6278,8 @@
         "2025104",
         "2025127"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-ramos-toty2018",
@@ -6044,7 +6310,10 @@
         "2025114",
         "2025121"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/news-media/news/0248-0f8e632e3872-4a03015cc96d-1000--pernille-harder-and-luka-modric-win-uefa-player-of-the-year-awards/"
+      ]
     },
     {
       "id": "virgil-van-dijk-toty2018",
@@ -6077,7 +6346,8 @@
         "2025129",
         "2025137"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "raphael-varane-toty2018",
@@ -6108,7 +6378,8 @@
         "2025073",
         "2025121"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marcelo-toty2018",
@@ -6140,7 +6411,8 @@
         "2025121",
         "2025145"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "n-golo-kante-toty2018",
@@ -6164,7 +6436,8 @@
         "2025171",
         "2025207"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luka-modric-toty2018",
@@ -6195,7 +6468,12 @@
         "2025090",
         "2025121"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/news-media/news/0248-0f8e632e3872-4a03015cc96d-1000--pernille-harder-and-luka-modric-win-uefa-player-of-the-year-awards/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "eden-hazard-toty2018",
@@ -6219,7 +6497,8 @@
         "2025184",
         "2025243"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kylian-mbappe-toty2018",
@@ -6247,7 +6526,8 @@
         "2025129",
         "2025138"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2018",
@@ -6280,7 +6560,11 @@
         "2025124",
         "2025147"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://www.uefa.com/news-media/news/0248-0f8e632e3872-4a03015cc96d-1000--pernille-harder-and-luka-modric-win-uefa-player-of-the-year-awards/"
+      ]
     },
     {
       "id": "lionel-messi-toty2018",
@@ -6308,7 +6592,8 @@
         "2025127",
         "2025135"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/024d-0f8e670cc903-b7bbd348c2e3-1000--uefa-com-fans-team-of-the-year-2018-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alisson-becker-toty2019",
@@ -6339,7 +6624,10 @@
         "2027157",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99ddf91387-ab770f0011fc-1000--alisson-becker-champions-league-goalkeeper-of-the-season/"
+      ]
     },
     {
       "id": "trent-alexander-arnold-toty2019",
@@ -6371,7 +6659,8 @@
         "2027156",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "virgil-van-dijk-toty2019",
@@ -6405,7 +6694,11 @@
         "2027157",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0e99d68ce583-a9362a08b3eb-1000--who-has-won-the-uefa-men-s-player-of-the-year-award/",
+        "https://www.uefa.com/uefaeuropaleague/news/0254-0e99e1e83f55-704bd90eeab5-1000--eden-hazard-named-europa-league-player-of-the-season/"
+      ]
     },
     {
       "id": "matthijs-de-ligt-toty2019",
@@ -6437,7 +6730,8 @@
         "2027158",
         "2027159"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andy-robertson-toty2019",
@@ -6470,7 +6764,8 @@
         "2027157",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kevin-de-bruyne-toty2019",
@@ -6497,7 +6792,8 @@
         "2027151",
         "2027153"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "frenkie-de-jong-toty2019",
@@ -6531,7 +6827,10 @@
         "2027158",
         "2027159"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefaeuropaleague/news/0254-0e99e1e83f55-704bd90eeab5-1000--eden-hazard-named-europa-league-player-of-the-season/"
+      ]
     },
     {
       "id": "lionel-messi-toty2019",
@@ -6562,7 +6861,12 @@
         "2027157",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://www.uefa.com/uefaeuropaleague/news/0254-0e99e1e83f55-704bd90eeab5-1000--eden-hazard-named-europa-league-player-of-the-season/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "robert-lewandowski-toty2019",
@@ -6589,7 +6893,8 @@
         "2027075",
         "2027099"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "cristiano-ronaldo-toty2019",
@@ -6619,7 +6924,8 @@
         "2027149",
         "2027155"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sadio-mane-toty2019",
@@ -6653,7 +6959,8 @@
         "2027157",
         "2027160"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0259-0f8e74392448-058890f751e5-1000--uefa-com-fans-team-of-the-year-2019-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "manuel-neuer-toty2020",
@@ -6684,7 +6991,10 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0262-1081c44e5dd8-5362b6f7f741-1000--manuel-neuer-champions-league-goalkeeper-of-the-season/"
+      ]
     },
     {
       "id": "joshua-kimmich-toty2020",
@@ -6713,7 +7023,10 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0265-113a7215fcd9-2afc8d8b5eaa-1000--roll-of-honour-2020/"
+      ]
     },
     {
       "id": "sergio-ramos-toty2020",
@@ -6737,7 +7050,8 @@
         "2029417",
         "2029456"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "virgil-van-dijk-toty2020",
@@ -6760,7 +7074,8 @@
         "2027125",
         "2027135"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alphonso-davies-toty2020",
@@ -6788,7 +7103,8 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thiago-alcantara-toty2020",
@@ -6813,7 +7129,8 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kevin-de-bruyne-toty2020",
@@ -6838,7 +7155,10 @@
         "2029419",
         "2030144"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0265-113a7215fcd9-2afc8d8b5eaa-1000--roll-of-honour-2020/"
+      ]
     },
     {
       "id": "cristiano-ronaldo-toty2020",
@@ -6864,7 +7184,8 @@
         "2029443",
         "2029466"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-toty2020",
@@ -6891,7 +7212,8 @@
         "2029466",
         "2030146"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "neymar-toty2020",
@@ -6921,7 +7243,8 @@
         "2030148",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": []
     },
     {
       "id": "robert-lewandowski-toty2020",
@@ -6951,7 +7274,11 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/"
+      "sourceSelectionUrl": "https://www.uefa.com/news-media/news/0265-1160a803540f-283794ce2b95-1000--uefa-com-fans-teams-of-the-year-2020-announced/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0265-113a7215fcd9-2afc8d8b5eaa-1000--roll-of-honour-2020/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "thibaut-courtois-ucl2021",
@@ -6984,7 +7311,8 @@
         "2029495",
         "2029496"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ederson-ucl2021",
@@ -7018,7 +7346,8 @@
         "2029498",
         "2030144"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "edouard-mendy-ucl2021",
@@ -7050,7 +7379,10 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/026c-1317b1d16759-056f2e78eadd-1000--goalkeeper-of-the-season-mendy/"
+      ]
     },
     {
       "id": "cesar-azpilicueta-ucl2021",
@@ -7081,7 +7413,8 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ruben-dias-ucl2021",
@@ -7112,7 +7445,10 @@
         "2029497",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0270-1416c2af1371-a3c983f42d4e-1000--roll-of-honour-2021/"
+      ]
     },
     {
       "id": "marquinhos-ucl2021",
@@ -7145,7 +7481,8 @@
         "2030148",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "antonio-rudiger-ucl2021",
@@ -7176,7 +7513,8 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ben-chilwell-ucl2021",
@@ -7206,7 +7544,8 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "david-alaba-ucl2021",
@@ -7239,7 +7578,8 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "jorginho-ucl2021",
@@ -7271,7 +7611,10 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/news-media/news/026c-1317c5d44053-673457b2aa24-1000--jorginho-wins-uefa-men-s-player-of-the-year-award/"
+      ]
     },
     {
       "id": "mason-mount-ucl2021",
@@ -7303,7 +7646,8 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "n-golo-kante-ucl2021",
@@ -7337,7 +7681,10 @@
         "2029496",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0270-1416c2af1371-a3c983f42d4e-1000--roll-of-honour-2021/"
+      ]
     },
     {
       "id": "kevin-de-bruyne-ucl2021",
@@ -7367,7 +7714,8 @@
         "2029498",
         "2030144"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ilkay-gundogan-ucl2021",
@@ -7401,7 +7749,8 @@
         "2029498",
         "2030144"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luka-modric-ucl2021",
@@ -7434,7 +7783,8 @@
         "2029495",
         "2029496"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "sergio-oliveira-ucl2021",
@@ -7462,7 +7812,8 @@
         "2029482",
         "2029493"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "phil-foden-ucl2021",
@@ -7496,7 +7847,8 @@
         "2029497",
         "2029498"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "erling-haaland-ucl2021",
@@ -7524,7 +7876,11 @@
         "2029486",
         "2029492"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://www.uefa.com/uefachampionsleague/news/0270-1416c2af1371-a3c983f42d4e-1000--roll-of-honour-2021/"
+      ]
     },
     {
       "id": "kylian-mbappe-ucl2021",
@@ -7557,7 +7913,8 @@
         "2030148",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "robert-lewandowski-ucl2021",
@@ -7587,7 +7944,8 @@
         "2030149",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "karim-benzema-ucl2021",
@@ -7618,7 +7976,8 @@
         "2029495",
         "2029496"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "neymar-ucl2021",
@@ -7650,7 +8009,8 @@
         "2030148",
         "2030150"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lionel-messi-ucl2021",
@@ -7678,7 +8038,8 @@
         "2029483",
         "2030146"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "thibaut-courtois-ucl2022",
@@ -7711,7 +8072,8 @@
         "2034662",
         "2034663"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "trent-alexander-arnold-ucl2022",
@@ -7740,7 +8102,8 @@
         "2034661",
         "2034664"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "antonio-rudiger-ucl2022",
@@ -7769,7 +8132,8 @@
         "2034653",
         "2034659"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "virgil-van-dijk-ucl2022",
@@ -7799,7 +8163,8 @@
         "2034661",
         "2034664"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "andy-robertson-ucl2022",
@@ -7829,7 +8194,8 @@
         "2034661",
         "2034664"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kevin-de-bruyne-ucl2022",
@@ -7859,7 +8225,8 @@
         "2034662",
         "2034663"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "fabinho-ucl2022",
@@ -7892,7 +8259,8 @@
         "2034661",
         "2034664"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "luka-modric-ucl2022",
@@ -7925,7 +8293,8 @@
         "2034662",
         "2034663"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kylian-mbappe-ucl2022",
@@ -7953,7 +8322,8 @@
         "2033899",
         "2033905"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "karim-benzema-ucl2022",
@@ -7985,7 +8355,12 @@
         "2034662",
         "2034663"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593cb29ee-c04434a97ebb-1000--ousmane-dembele-named-2024-25-/",
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "vinicius-junior-ucl2022",
@@ -8018,7 +8393,10 @@
         "2034662",
         "2034663"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0275-154650014aef-02a394f30379-1000--2021-22-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593e81763-a1312db28c5a-1000--desire-doue-named-2024-25-uefa-champions-league-young-player-of-the-season/"
+      ]
     },
     {
       "id": "thibaut-courtois-ucl2023",
@@ -8048,7 +8426,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kyle-walker-ucl2023",
@@ -8073,7 +8452,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ruben-dias-ucl2023",
@@ -8105,7 +8485,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-bastoni-ucl2023",
@@ -8137,7 +8518,8 @@
         "2037798",
         "2037799"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "federico-dimarco-ucl2023",
@@ -8168,7 +8550,8 @@
         "2037798",
         "2037799"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "john-stones-ucl2023",
@@ -8196,7 +8579,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "kevin-de-bruyne-ucl2023",
@@ -8226,7 +8610,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "rodri-ucl2023",
@@ -8258,7 +8643,10 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593cb29ee-c04434a97ebb-1000--ousmane-dembele-named-2024-25-/"
+      ]
     },
     {
       "id": "bernardo-silva-ucl2023",
@@ -8291,7 +8679,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "erling-haaland-ucl2023",
@@ -8322,7 +8711,10 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "vinicius-junior-ucl2023",
@@ -8354,7 +8746,8 @@
         "2037797",
         "2037800"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/0282-183b47300272-09e23ed6220b-1000--2022-23-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gregor-kobel-ucl2024",
@@ -8386,7 +8779,8 @@
         "2040501",
         "2040502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "dani-carvajal-ucl2024",
@@ -8416,7 +8810,8 @@
         "2040496",
         "2040503"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "antonio-rudiger-ucl2024",
@@ -8448,7 +8843,8 @@
         "2040500",
         "2040503"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "mats-hummels-ucl2024",
@@ -8481,7 +8877,8 @@
         "2040501",
         "2040502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "ian-maatsen-ucl2024",
@@ -8508,7 +8905,8 @@
         "2040501",
         "2040502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marcel-sabitzer-ucl2024",
@@ -8540,7 +8938,8 @@
         "2040501",
         "2040502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "vitinha-ucl2024",
@@ -8572,7 +8971,8 @@
         "2040501",
         "2040502"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "jude-bellingham-ucl2024",
@@ -8603,7 +9003,10 @@
         "2040500",
         "2040503"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593e81763-a1312db28c5a-1000--desire-doue-named-2024-25-uefa-champions-league-young-player-of-the-season/"
+      ]
     },
     {
       "id": "phil-foden-ucl2024",
@@ -8631,7 +9034,8 @@
         "2040494",
         "2040496"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "harry-kane-ucl2024",
@@ -8663,7 +9067,10 @@
         "2040500",
         "2040503"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "vinicius-junior-ucl2024",
@@ -8693,7 +9100,10 @@
         "2040500",
         "2040503"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/028e-1b0b073031ef-cb7193efc2dc-1000--2023-24-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593cb29ee-c04434a97ebb-1000--ousmane-dembele-named-2024-25-/"
+      ]
     },
     {
       "id": "gianluigi-donnarumma-ucl2025",
@@ -8728,7 +9138,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "achraf-hakimi-ucl2025",
@@ -8765,7 +9176,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marquinhos-ucl2025",
@@ -8801,7 +9213,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "alessandro-bastoni-ucl2025",
@@ -8835,7 +9248,8 @@
         "2044856",
         "2044859"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "nuno-mendes-ucl2025",
@@ -8871,7 +9285,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "vitinha-ucl2025",
@@ -8908,7 +9323,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "declan-rice-ucl2025",
@@ -8941,7 +9357,8 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "lamine-yamal-ucl2025",
@@ -8974,7 +9391,8 @@
         "2044856",
         "2044859"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "desire-doue-ucl2025",
@@ -9010,7 +9428,10 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593e81763-a1312db28c5a-1000--desire-doue-named-2024-25-uefa-champions-league-young-player-of-the-season/"
+      ]
     },
     {
       "id": "ousmane-dembele-ucl2025",
@@ -9045,7 +9466,11 @@
         "2044857",
         "2044858"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/029a-1de593cb29ee-c04434a97ebb-1000--ousmane-dembele-named-2024-25-/",
+        "https://ballondor.com/all-rankings"
+      ]
     },
     {
       "id": "raphinha-ucl2025",
@@ -9079,7 +9504,10 @@
         "2044856",
         "2044859"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/029a-1de594e11846-742ee836b971-1000--2024-25-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/0257-0e910cf2494a-5185150de9d4-1000--champions-league-all-time-top-scorers/"
+      ]
     },
     {
       "id": "david-raya-ucl2026",
@@ -9113,7 +9541,8 @@
         "2048071",
         "2048074"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marcos-llorente-ucl2026",
@@ -9147,7 +9576,8 @@
         "2048071",
         "2048074"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "marquinhos-ucl2026",
@@ -9182,7 +9612,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "gabriel-ucl2026",
@@ -9214,7 +9645,8 @@
         "2048071",
         "2048074"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "nuno-mendes-ucl2026",
@@ -9251,7 +9683,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "michael-olise-ucl2026",
@@ -9284,7 +9717,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "declan-rice-ucl2026",
@@ -9317,7 +9751,8 @@
         "2048071",
         "2048074"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "vitinha-ucl2026",
@@ -9354,7 +9789,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "khvicha-kvaratskhelia-ucl2026",
@@ -9390,7 +9826,10 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": [
+        "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7bf915e-f9e703cf0108-1000--khvicha-kvaratskhelia-named-2025-26-uefa-champions-league-/"
+      ]
     },
     {
       "id": "ousmane-dembele-ucl2026",
@@ -9423,7 +9862,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     },
     {
       "id": "harry-kane-ucl2026",
@@ -9456,7 +9896,8 @@
         "2048072",
         "2048073"
       ],
-      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/"
+      "sourceSelectionUrl": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7d33d69-be4f6ab11b0a-1000--2025-26-uefa-champions-league-team-of-the-season/",
+      "sourceHonorUrls": []
     }
   ]
 }

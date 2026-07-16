@@ -7,6 +7,8 @@ export interface AiDecisionContext {
   sessionSeed: string;
   /** Cards whose identities have already been shown to both players. */
   seenPlayerIds: readonly string[];
+  /** Public sport database supplied by the selected runtime; never the hidden match pool. */
+  candidateDatabase?: readonly PlayerCard[];
 }
 
 export type Position = "PG" | "SG" | "SF" | "PF" | "C";
@@ -58,6 +60,8 @@ export interface BasketballPlayerCard {
   teamWinPct?: number;
   /** Multiplier applied only to the *scoring* formula (never to the real stats shown in the UI) to offset pace/scoring differences between eras. Defaults to 1 (no adjustment) when absent. */
   eraFactor?: number;
+  /** IDs of real-life teammates within this match pool, attached when the pool is built. */
+  chemistryWith?: string[];
 }
 
 export interface SoccerStats {
@@ -85,8 +89,22 @@ export interface SoccerPerformance {
 
 export interface SoccerHonors {
   champion?: boolean;
+  /** Human-readable competition(s) won in this card's exact scoring window. */
+  championLabel?: string;
+  /** UEFA's top overall player award for this card's exact year or season. */
   bestPlayer?: boolean;
+  bestPlayerLabel?: string;
+  ballonDor?: boolean;
+  ballonDorLabel?: string;
+  topScorer?: boolean;
+  topScorerLabel?: string;
+  positionalAward?: boolean;
+  positionalAwardLabel?: string;
+  youngPlayer?: boolean;
+  youngPlayerLabel?: string;
+  /** Legacy combined field retained for persisted rooms generated before the honor expansion. */
   topScorerOrKeeper?: boolean;
+  topScorerOrKeeperLabel?: string;
 }
 
 export interface SoccerPlayerCard {
@@ -177,6 +195,12 @@ export const STARTING_BUDGET = 20;
 
 export interface MatchState {
   sport: Sport;
+  /** Stable identity used to record a completed match exactly once on a device. */
+  matchId?: string;
+  /** Seed that reproduces the initial reveal pool for shareable challenges. */
+  poolSeed?: string;
+  /** Version of the sport database/pool rules used with poolSeed. */
+  poolVersion?: string;
   pool: PlayerCard[]; // remaining players yet to be revealed, in reveal order
   teams: Record<SeatId, TeamState>;
   turn: SeatId; // whose turn it is to act first on the next revealed player
@@ -187,6 +211,9 @@ export interface MatchState {
   log: string[];
   /** Set once phase becomes "complete": whichever team has the higher combined stat total, or "tie". */
   winner: SeatId | "tie" | null;
+  /** Missing on legacy completed rooms, where it is treated as a normal score result. */
+  completionReason?: "score" | "forfeit";
+  forfeitedSeat?: SeatId;
 }
 
 export type MatchAction =

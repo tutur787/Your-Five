@@ -1,4 +1,4 @@
-import { AiDifficulty, MatchState, SeatId, Sport, teamScore } from "@fiveaside/shared";
+import { AiDifficulty, MatchState, SeatId, Sport, teamScore } from "@fiveaside/shared/core";
 
 export interface AiRecord {
   wins: number;

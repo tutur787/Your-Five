@@ -5,10 +5,13 @@ import {
   positionPenaltyForSlot,
   rawStatTotal,
   scoreComponents,
+  soccerHonorDetails,
+  soccerMajorIndividualLabels,
+  soccerHonorPoints,
   soccerScoreComponents,
   Sport,
   TeamState,
-} from "@fiveaside/shared";
+} from "@fiveaside/shared/core";
 
 interface Props {
   team: TeamState;
@@ -159,6 +162,9 @@ export function ScoreBreakdown({ team, defaultOpen, sport }: Props) {
 
 function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultOpen?: boolean }) {
   const components = soccerScoreComponents(team);
+  const honoredPicks = team.roster.filter(
+    (pick) => pick.player.sport === "soccer" && soccerHonorPoints(pick.player.honors) > 0
+  );
   const categories = [
     ["Attack", components.performance.attack],
     ["Creation", components.performance.creation],
@@ -175,7 +181,29 @@ function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultO
         ))}
         <div className="breakdown-row"><span>Role-weighted performance</span><span>{components.performance.total.toFixed(1)}</span></div>
         <div className="breakdown-row"><span>Team success</span><span>{components.teamSuccess >= 0 ? "+" : ""}{components.teamSuccess.toFixed(1)}</span></div>
-        <div className="breakdown-row"><span>Verified honors</span><span>+{components.honors.toFixed(1)}</span></div>
+        {honoredPicks.length > 0 ? (
+          <>
+            <div className="breakdown-heading">
+              Honors (+{components.honors.toFixed(1)}{components.honorsUncapped > components.honors ? `, capped from +${components.honorsUncapped.toFixed(1)}` : ""})
+            </div>
+            <ul className="breakdown-list">
+              {honoredPicks.map((pick) => {
+                if (pick.player.sport !== "soccer") return null;
+                const multipleMajorAwards = soccerMajorIndividualLabels(pick.player.honors).length > 1;
+                return (
+                  <li key={pick.player.id}>
+                    <span>{pick.player.name}</span>
+                    <span>
+                      {soccerHonorDetails(pick.player.honors).map((honor) => `1x ${honor.label}`).join(", ")} (+{soccerHonorPoints(pick.player.honors).toFixed(1)}{multipleMajorAwards ? "; major awards share one +5" : ""})
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        ) : (
+          <div className="breakdown-row"><span>Honors</span><span>+0.0</span></div>
+        )}
         <div className="breakdown-heading" style={{ color: components.fit.total >= 0 ? "var(--good)" : "var(--bad)" }}>
           Tactical fit ({components.fit.total >= 0 ? "+" : ""}{components.fit.total.toFixed(1)})
         </div>

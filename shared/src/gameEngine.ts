@@ -1,5 +1,3 @@
-import { areTeammates, PLAYER_DATABASE } from "./players";
-import { SOCCER_PLAYER_DATABASE } from "./soccerPlayers";
 import {
   soccerPlayerCompositeValue,
   soccerPositionPenalty,
@@ -39,7 +37,7 @@ function other(seat: SeatId): SeatId {
 /** A source of randomness in [0, 1) — defaults to Math.random, but accepts a seeded PRNG for deterministic pools (e.g. Daily Draft). */
 export type Rng = () => number;
 
-function shuffle<T>(items: T[], rng: Rng = Math.random): T[] {
+export function shuffle<T>(items: readonly T[], rng: Rng = Math.random): T[] {
   const arr = [...items];
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
@@ -66,8 +64,8 @@ export const MIN_ELIGIBLE_PER_POSITION_IN_POOL = 2;
  *    has enough of every position for both teams to field a legal lineup.
  * Everything is shuffled so reveal order still differs every match.
  */
-function buildBasketballPool(rng: Rng = Math.random): BasketballPlayerCard[] {
-  const shuffled = shuffle(PLAYER_DATABASE, rng);
+export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[], rng: Rng = Math.random): BasketballPlayerCard[] {
+  const shuffled = shuffle(database, rng);
   const chosen = new Set<string>();
   const primaryCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
   const eligibleCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
@@ -105,8 +103,8 @@ function buildBasketballPool(rng: Rng = Math.random): BasketballPlayerCard[] {
 export const SOCCER_MAX_PRIMARY_IN_POOL: Record<SoccerRole, number> = { GK: 3, DEF: 6, MID: 4, ATT: 5 };
 export const SOCCER_MIN_ELIGIBLE_IN_POOL: Record<SoccerRole, number> = { GK: 2, DEF: 4, MID: 2, ATT: 2 };
 
-function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
-  const shuffled = shuffle(SOCCER_PLAYER_DATABASE, rng);
+export function buildSoccerPoolFrom(database: readonly SoccerPlayerCard[], rng: Rng = Math.random): SoccerPlayerCard[] {
+  const shuffled = shuffle(database, rng);
   const chosen = new Set<string>();
   const chosenPlayers = new Set<string>();
   const primaryCount: Record<SoccerRole, number> = { GK: 0, DEF: 0, MID: 0, ATT: 0 };
@@ -140,16 +138,6 @@ function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
   }
 
   return [...shuffle(core, rng), ...shuffle(rest, rng)];
-}
-
-export function buildPool(rng?: Rng): BasketballPlayerCard[];
-export function buildPool(sport: "basketball", rng?: Rng): BasketballPlayerCard[];
-export function buildPool(sport: "soccer", rng?: Rng): SoccerPlayerCard[];
-export function buildPool(sport: Sport, rng?: Rng): PlayerCard[];
-export function buildPool(sportOrRng: Sport | Rng = "basketball", maybeRng: Rng = Math.random): PlayerCard[] {
-  const sport = typeof sportOrRng === "function" ? "basketball" : sportOrRng;
-  const rng = typeof sportOrRng === "function" ? sportOrRng : maybeRng;
-  return sport === "soccer" ? buildSoccerPool(rng) : buildBasketballPool(rng);
 }
 
 function freshTeam(seat: SeatId): TeamState {
@@ -359,7 +347,7 @@ export function chemistryPairs(team: TeamState): ChemistryPair[] {
     for (let j = i + 1; j < team.roster.length; j++) {
       const a = team.roster[i];
       const b = team.roster[j];
-      if (a.player.sport === "basketball" && b.player.sport === "basketball" && areTeammates(a.player.name, b.player.name)) {
+      if (a.player.sport === "basketball" && b.player.sport === "basketball" && a.player.chemistryWith?.includes(b.player.id)) {
         pairs.push({ a, b });
       }
     }
@@ -435,14 +423,15 @@ export function playerCompositeValue(player: PlayerCard): number {
   );
 }
 
-export function createMatch(rng?: Rng): MatchState;
-export function createMatch(sport: Sport, rng?: Rng): MatchState;
-export function createMatch(sportOrRng: Sport | Rng = "basketball", maybeRng: Rng = Math.random): MatchState {
-  const sport = typeof sportOrRng === "function" ? "basketball" : sportOrRng;
-  const rng = typeof sportOrRng === "function" ? sportOrRng : maybeRng;
+export function createMatchFromPool(
+  sport: Sport,
+  pool: PlayerCard[],
+  metadata: { matchId?: string; poolSeed?: string; poolVersion?: string } = {}
+): MatchState {
   return {
     sport,
-    pool: buildPool(sport, rng),
+    ...metadata,
+    pool,
     teams: { A: freshTeam("A"), B: freshTeam("B") },
     turn: "A",
     phase: "onTheClock",
@@ -545,6 +534,8 @@ function beginPlacement(
 
 function finish(state: MatchState): void {
   state.phase = "complete";
+  state.completionReason = "score";
+  state.forfeitedSeat = undefined;
   const scoreA = teamScore(state.teams.A, state.sport);
   const scoreB = teamScore(state.teams.B, state.sport);
   state.winner = scoreA === scoreB ? "tie" : scoreA > scoreB ? "A" : "B";
@@ -553,6 +544,35 @@ function finish(state: MatchState): void {
       state.winner === "tie" ? "It's a tie!" : `Seat ${state.winner} wins!`
     }`
   );
+}
+
+/** Completes a persisted online match without pretending partial lineups produced the result. */
+export function completeByForfeit(state: MatchState, forfeitedSeat: SeatId): MatchState {
+  const next = clone(state);
+  next.phase = "complete";
+  next.auction = null;
+  next.skipOffer = null;
+  next.pendingPlacement = null;
+  next.winner = other(forfeitedSeat);
+  next.completionReason = "forfeit";
+  next.forfeitedSeat = forfeitedSeat;
+  next.log.push(`Seat ${forfeitedSeat} did not reconnect. Seat ${other(forfeitedSeat)} wins by forfeit.`);
+  return next;
+}
+
+/** Deterministic conservative action used only when an online turn reaches its server deadline. */
+export function timeoutActionFor(state: MatchState): MatchAction | null {
+  const seat = actingSeat(state);
+  if (!seat) return null;
+  if (state.phase === "onTheClock") return { type: "openBid", seat, startBid: 1 };
+  if (state.phase === "bidding") return { type: "acceptBid", seat };
+  if (state.phase === "skipOffer") return { type: "respondToSkip", seat, accept: false };
+  if (state.phase === "catchUp") return { type: "takeForOne", seat };
+  if (state.phase === "placing" && state.pendingPlacement) {
+    const slot = availablePlacementSlots(state.teams[seat], state.pendingPlacement.player)[0];
+    return slot ? { type: "placePick", seat, slot } : null;
+  }
+  return null;
 }
 
 /**

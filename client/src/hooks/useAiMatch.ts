@@ -6,28 +6,28 @@ import {
   aiThinkingDelay,
   applyAction,
   applyAiLineupOptimization,
-  createMatch,
-  dailyRng,
+  createMatchWithRuntime,
   decideAiAction,
   MatchAction,
   MatchState,
   PlayerCard,
   SeatId,
   todayUtcDateString,
-} from "@fiveaside/shared";
+  SportRuntime,
+} from "@fiveaside/shared/core";
 import {
   AiRecord,
-  loadAiRecord,
   loadDailyBestScore,
   loadDailyCompleted,
-  recordAiResult,
   saveDailyResult,
 } from "../utils/aiStorage";
+import { progressRecordFor } from "../utils/progressStorage";
+import { recordCompletedMatch } from "../utils/progressRecorder";
 import { useSport } from "./useSport";
 
 export const HUMAN_SEAT: SeatId = "A";
 export const AI_SEAT: SeatId = "B";
-export type AiMatchMode = "daily" | "quick";
+export type AiMatchMode = "daily" | "quick" | "challenge";
 
 function shownPlayer(state: MatchState): PlayerCard | null {
   return state.auction?.player ?? state.skipOffer?.player ?? state.pendingPlacement?.player ?? state.pool[0] ?? null;
@@ -40,25 +40,45 @@ function quickSeed(sport: string, difficulty: AiDifficulty): string {
   return `quick:${sport}:${difficulty}:${randomPart}`;
 }
 
-export function useAiMatch({ mode, difficulty }: { mode: AiMatchMode; difficulty: AiDifficulty }) {
-  const { sport } = useSport();
+export function useAiMatch({
+  mode,
+  difficulty,
+  sportOverride,
+  challengeSeed,
+  targetScore,
+  runtime,
+}: {
+  mode: AiMatchMode;
+  difficulty: AiDifficulty;
+  sportOverride?: "basketball" | "soccer";
+  challengeSeed?: string;
+  targetScore?: number;
+  runtime: SportRuntime;
+}) {
+  const selected = useSport();
+  const sport = sportOverride ?? selected.sport;
   const today = todayUtcDateString();
   const completedAtMount = useRef<MatchState | null | undefined>(undefined);
   if (completedAtMount.current === undefined) {
     completedAtMount.current = mode === "daily" ? loadDailyCompleted(sport, today) : null;
   }
 
-  const [state, setState] = useState<MatchState>(() =>
-    completedAtMount.current ?? (mode === "daily" ? createMatch(sport, dailyRng(`${today}:${sport}`)) : createMatch(sport))
-  );
+  const makeInitialMatch = () => {
+    if (mode === "daily") return createMatchWithRuntime(runtime, `daily:${today}:${sport}`, `daily:${today}:${sport}`);
+    if (mode === "challenge" && challengeSeed) return createMatchWithRuntime(runtime, challengeSeed);
+    return createMatchWithRuntime(runtime);
+  };
+  const [state, setState] = useState<MatchState>(() => completedAtMount.current ?? makeInitialMatch());
   const [error, setError] = useState<string | null>(null);
   const [bestScore, setBestScore] = useState<number | null>(() => loadDailyBestScore(sport));
-  const [record, setRecord] = useState<AiRecord>(() => loadAiRecord(sport, difficulty));
+  const [record, setRecord] = useState<AiRecord>(() => progressRecordFor(sport, `ai-${difficulty}`));
   const sessionSeedRef = useRef("");
   if (!sessionSeedRef.current) {
     sessionSeedRef.current = mode === "daily"
       ? `daily:${today}:${sport}:competitive`
-      : quickSeed(sport, difficulty);
+      : mode === "challenge"
+        ? `challenge:${challengeSeed}:${sport}:competitive`
+        : quickSeed(sport, difficulty);
   }
   const seenPlayerIdsRef = useRef<Set<string>>(new Set());
   const resultSavedRef = useRef(mode === "daily" && completedAtMount.current !== null);
@@ -73,7 +93,8 @@ export function useAiMatch({ mode, difficulty }: { mode: AiMatchMode; difficulty
     difficulty,
     sessionSeed: sessionSeedRef.current,
     seenPlayerIds: [...seenPlayerIdsRef.current],
-  }), [difficulty]);
+    candidateDatabase: runtime.database,
+  }), [difficulty, runtime]);
 
   const dispatch = useCallback((action: MatchAction) => {
     setState((previous) => {
@@ -111,19 +132,27 @@ export function useAiMatch({ mode, difficulty }: { mode: AiMatchMode; difficulty
     resultSavedRef.current = true;
     if (mode === "daily") {
       setBestScore(saveDailyResult(sport, today, state, HUMAN_SEAT));
+      recordCompletedMatch(state, "daily", HUMAN_SEAT);
+    } else if (mode === "quick") {
+      recordCompletedMatch(state, `ai-${difficulty}`, HUMAN_SEAT);
+      setRecord(progressRecordFor(sport, `ai-${difficulty}`));
     } else {
-      setRecord(recordAiResult(sport, difficulty, state.winner, HUMAN_SEAT));
+      recordCompletedMatch(state, "challenge", HUMAN_SEAT, { targetScore });
     }
-  }, [state, mode, sport, today, difficulty]);
+  }, [state, mode, sport, today, difficulty, targetScore]);
 
   const reset = useCallback(() => {
-    if (mode !== "quick") return;
-    sessionSeedRef.current = quickSeed(sport, difficulty);
+    if (mode === "daily") return;
+    sessionSeedRef.current = mode === "challenge"
+      ? `challenge:${challengeSeed}:${sport}:competitive:${crypto.randomUUID()}`
+      : quickSeed(sport, difficulty);
     seenPlayerIdsRef.current = new Set();
     resultSavedRef.current = false;
     setError(null);
-    setState(createMatch(sport));
-  }, [mode, sport, difficulty]);
+    setState(mode === "challenge" && challengeSeed
+      ? createMatchWithRuntime(runtime, challengeSeed)
+      : createMatchWithRuntime(runtime));
+  }, [mode, sport, difficulty, challengeSeed, runtime]);
 
   return {
     state,

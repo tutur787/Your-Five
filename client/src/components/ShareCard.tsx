@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MatchState, SeatId, slotsForSport, teamScore } from "@fiveaside/shared";
+import { MatchState, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
 
 interface Props {
   state: MatchState;
@@ -84,7 +84,7 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
 
 export function ShareCard({ state, seat, label, subtitle }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [status, setStatus] = useState<"idle" | "shared" | "downloaded" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "shared" | "downloaded" | "copied" | "error">("idle");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -102,14 +102,38 @@ export function ShareCard({ state, seat, label, subtitle }: Props) {
         return;
       }
       const file = new File([blob], "your-five-result.png", { type: "image/png" });
+      const score = teamScore(state.teams[seat], state.sport);
+      const challengeUrl = state.poolSeed && state.poolVersion
+        ? `${window.location.origin}/challenge/${state.sport}/${encodeURIComponent(state.poolVersion)}/${encodeURIComponent(state.poolSeed)}?target=${score.toFixed(1)}`
+        : null;
+      const shareText = challengeUrl
+        ? `I scored ${score.toFixed(1)} in Your Five. Can you beat my five?`
+        : `My ${state.sport} lineup on Your Five.`;
       const nav = navigator as Navigator & { canShare?: (data: { files: File[] }) => boolean };
       if (nav.share && nav.canShare?.({ files: [file] })) {
         try {
-          await nav.share({ files: [file], title: "My lineup on Your Five" });
+          await nav.share({ files: [file], title: "My lineup on Your Five", text: shareText, url: challengeUrl ?? undefined });
           setStatus("shared");
           return;
         } catch {
-          // user cancelled or share failed — fall back to download
+          // Fall through to a link share or clipboard/download fallback.
+        }
+      }
+      if (nav.share && challengeUrl) {
+        try {
+          await nav.share({ title: "Can you beat my five?", text: shareText, url: challengeUrl });
+          setStatus("shared");
+          return;
+        } catch {
+          // Fall through to clipboard/download.
+        }
+      }
+      if (challengeUrl) {
+        try {
+          await navigator.clipboard.writeText(`${shareText} ${challengeUrl}`);
+          setStatus("copied");
+        } catch {
+          setStatus("downloaded");
         }
       }
       const url = URL.createObjectURL(blob);
@@ -118,7 +142,7 @@ export function ShareCard({ state, seat, label, subtitle }: Props) {
       a.download = "your-five-result.png";
       a.click();
       URL.revokeObjectURL(url);
-      setStatus("downloaded");
+      if (!challengeUrl) setStatus("downloaded");
     }, "image/png");
   };
 
@@ -132,7 +156,13 @@ export function ShareCard({ state, seat, label, subtitle }: Props) {
         aria-label={`${label}'s draft result card`}
       />
       <button className="primary" onClick={handleShare}>
-        {status === "shared" ? "Shared!" : status === "downloaded" ? "Downloaded — share it!" : `Share ${label}'s team`}
+        {status === "shared"
+          ? "Shared!"
+          : status === "copied"
+            ? "Challenge copied"
+            : status === "downloaded"
+              ? "Downloaded — share it!"
+              : `Share ${label}'s team`}
       </button>
     </div>
   );

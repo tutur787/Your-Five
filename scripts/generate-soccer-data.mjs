@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SOCCER_SELECTION_ALIASES, SOCCER_SELECTION_EDITIONS } from "./soccer-selections.mjs";
+import { SOCCER_OFFICIAL_HONORS } from "./soccer-honors.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CACHE = join(ROOT, ".cache", "soccer-data", "uefa");
@@ -16,7 +17,7 @@ const API_BASE = {
   matchStats: "https://matchstats.uefa.com/v2",
 };
 const SOURCE_REVISION = `uefa-v2-${createHash("sha256")
-  .update(JSON.stringify(SOCCER_SELECTION_EDITIONS))
+  .update(JSON.stringify([SOCCER_SELECTION_EDITIONS, SOCCER_OFFICIAL_HONORS]))
   .digest("hex")
   .slice(0, 12)}`;
 const PAGE_SIZE = 500;
@@ -218,6 +219,61 @@ function teamName(row) {
   return row.team?.translations?.displayName?.EN ?? row.team?.translations?.name?.EN ?? `Team ${row.teamId}`;
 }
 
+function competitionHonorName(match) {
+  const name = match.competition?.translations?.name?.EN ?? match.competition?.metaData?.name ?? "UEFA competition";
+  return name
+    .replace("UEFA Champions League", "Champions League")
+    .replace("UEFA Europa League", "Europa League")
+    .replace("UEFA Europa Conference League", "Conference League");
+}
+
+function officialHonorsForCard(card) {
+  const awards = SOCCER_OFFICIAL_HONORS.filter(
+    (award) => award.edition === card.edition.key && award.player === card.entry.name
+  );
+  const honors = {};
+  for (const award of awards) {
+    if (award.kind === "bestPlayer") {
+      honors.bestPlayer = true;
+      honors.bestPlayerLabel = award.label;
+    } else if (award.kind === "ballonDor") {
+      honors.ballonDor = true;
+      honors.ballonDorLabel = award.label;
+    } else if (award.kind === "topScorer") {
+      honors.topScorer = true;
+      honors.topScorerLabel = award.label;
+    } else if (award.kind === "positionalAward") {
+      honors.positionalAward = true;
+      honors.positionalAwardLabel = award.label;
+    } else if (award.kind === "youngPlayer") {
+      honors.youngPlayer = true;
+      honors.youngPlayerLabel = award.label;
+    }
+  }
+  return {
+    honors: Object.keys(honors).length ? honors : undefined,
+    sourceHonorUrls: [...new Set(awards.map((award) => award.sourceUrl))],
+  };
+}
+
+function verifyOfficialHonorLedger() {
+  const seen = new Set();
+  for (const award of SOCCER_OFFICIAL_HONORS) {
+    const edition = SOCCER_SELECTION_EDITIONS.find((candidate) => candidate.key === award.edition);
+    if (!edition) throw new Error(`Honor ledger references unknown edition ${award.edition}.`);
+    if (!edition.entries.some((entry) => entry.name === award.player)) {
+      throw new Error(`Honor ledger references ${award.player}, who is not selected in ${award.edition}.`);
+    }
+    const key = `${award.edition}:${award.player}:${award.kind}`;
+    if (seen.has(key)) throw new Error(`Honor ledger contains duplicate ${award.kind} entry for ${award.player} in ${award.edition}.`);
+    seen.add(key);
+    const officialSource = award.sourceUrl.startsWith("https://www.uefa.com/") || award.sourceUrl.startsWith("https://ballondor.com/");
+    if (!award.label || !officialSource) {
+      throw new Error(`Honor ledger has incomplete official provenance for ${award.player} in ${award.edition}.`);
+    }
+  }
+}
+
 function aggregateCard(card, matchData) {
   const aggregate = {
     minutes: 0,
@@ -234,7 +290,6 @@ function aggregateCard(card, matchData) {
     saves: 0,
     teamAppearances: new Map(),
     matchIds: [],
-    champion: false,
     playerIds: new Set(card.sourcePlayerIds),
   };
 
@@ -274,14 +329,19 @@ function aggregateCard(card, matchData) {
     });
     aggregate.matchIds.push(String(match.id));
 
-    const final = String(match.round?.metaData?.type ?? "").includes("FINAL");
-    if (final && score.for > score.against) aggregate.champion = true;
   }
 
   if (aggregate.appearances <= 0 || aggregate.minutes <= 0) {
     throw new Error(`${card.edition.key}: ${card.entry.name} has no tracked appearances in the selected window.`);
   }
   const teamRows = [...aggregate.teamAppearances.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]));
+  const representedTeamIds = new Set(teamRows.map(([teamId]) => teamId));
+  const winningCompetitions = new Set();
+  for (const { match } of matchData) {
+    const final = match.round?.metaData?.type === "FINAL" || match.round?.mode === "FINAL";
+    const winnerTeamId = String(match.winner?.match?.team?.id ?? "");
+    if (final && representedTeamIds.has(winnerTeamId)) winningCompetitions.add(competitionHonorName(match));
+  }
   const attempts = aggregate.shotsOnTarget + aggregate.shotsOffTarget;
   const stats = {
     minutes: round(aggregate.minutes, 1),
@@ -305,7 +365,10 @@ function aggregateCard(card, matchData) {
     sourcePlayerIds: [...aggregate.playerIds],
     sourceTeamIds: teamRows.map(([teamId]) => teamId),
     sourceMatchIds: [...new Set(aggregate.matchIds)].sort((a, b) => Number(a) - Number(b)),
-    honors: aggregate.champion ? { champion: true } : undefined,
+    honors: winningCompetitions.size ? {
+      champion: true,
+      championLabel: `${[...winningCompetitions].sort().join(" + ")} winner`,
+    } : undefined,
   };
 }
 
@@ -358,6 +421,7 @@ function assignTeamSuccess(players) {
 }
 
 async function build() {
+  verifyOfficialHonorLedger();
   const apiKey = await discoverApiKey();
   const resolvedCards = [];
   for (const edition of SOCCER_SELECTION_EDITIONS) {
@@ -396,6 +460,8 @@ async function build() {
 
   const players = cardsWithMatches.map((card) => {
     const aggregate = aggregateCard(card, card.matches.map((match) => matchRows.get(String(match.id))));
+    const officialAwards = officialHonorsForCard(card);
+    const honors = { ...(aggregate.honors ?? {}), ...(officialAwards.honors ?? {}) };
     const id = `${slug(card.canonicalName)}-${card.edition.key.toLowerCase()}`;
     return {
       sport: "soccer",
@@ -413,11 +479,12 @@ async function build() {
       stats: aggregate.stats,
       performance: null,
       teamSuccess: 0,
-      ...(aggregate.honors ? { honors: aggregate.honors } : {}),
+      ...(Object.keys(honors).length ? { honors } : {}),
       sourcePositionLabels: [`UEFA selection: ${card.entry.role}`],
       sourceRevision: SOURCE_REVISION,
       sourceMatchIds: aggregate.sourceMatchIds,
       sourceSelectionUrl: card.edition.sourceUrl,
+      sourceHonorUrls: officialAwards.sourceHonorUrls,
     };
   });
   if (new Set(players.map((player) => player.id)).size !== players.length) throw new Error("Generated duplicate soccer card IDs.");
@@ -425,9 +492,9 @@ async function build() {
   for (const player of players) player.performance = performanceFor(player, players);
 
   const manifestPlayers = players.map(({
-    id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl,
-  }) => ({ id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl }));
-  const outputPlayers = players.map(({ sourceMatchIds: _matches, sourceSelectionUrl: _selection, ...player }) => player);
+    id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls,
+  }) => ({ id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls }));
+  const outputPlayers = players.map(({ sourceMatchIds: _matches, sourceSelectionUrl: _selection, sourceHonorUrls: _honors, ...player }) => player);
   const manifest = {
     source: "UEFA.com official selections and UEFA public match statistics",
     revision: SOURCE_REVISION,
@@ -444,6 +511,7 @@ async function build() {
 }
 
 async function verifyCommitted() {
+  verifyOfficialHonorLedger();
   const source = await readFile(OUTPUT, "utf8");
   const playersMatch = source.match(/SOCCER_PLAYER_DATABASE: SoccerPlayerCard\[\] = ([\s\S]*);\s*$/);
   if (!playersMatch) throw new Error("Generated soccer data file has an invalid shape.");
@@ -457,6 +525,19 @@ async function verifyCommitted() {
   for (const edition of SOCCER_SELECTION_EDITIONS) {
     const cards = players.filter((player) => player.edition === edition.key);
     if (cards.length !== edition.entries.length) throw new Error(`${edition.key}: expected ${edition.entries.length} cards, found ${cards.length}.`);
+    edition.entries.forEach((entry, index) => {
+      const expected = officialHonorsForCard({ edition, entry });
+      const actual = cards[index].honors;
+      if (expected.honors?.bestPlayer && (!actual?.bestPlayer || actual.bestPlayerLabel !== expected.honors.bestPlayerLabel)) {
+        throw new Error(`${edition.key}: ${entry.name} is missing its verified best-player honor.`);
+      }
+      for (const kind of ["ballonDor", "topScorer", "positionalAward", "youngPlayer"]) {
+        const label = `${kind}Label`;
+        if (expected.honors?.[kind] && (!actual?.[kind] || actual[label] !== expected.honors[label])) {
+          throw new Error(`${edition.key}: ${entry.name} is missing its verified ${kind} honor.`);
+        }
+      }
+    });
   }
   for (const player of players) {
     const provenance = manifestById.get(player.id);
@@ -465,6 +546,8 @@ async function verifyCommitted() {
     if (![...Object.values(player.stats), ...Object.values(player.performance), player.teamSuccess].every(Number.isFinite)) throw new Error(`${player.id} contains a non-finite value.`);
     if (player.stats.minutes <= 0 || player.stats.appearances <= 0) throw new Error(`${player.id} has no verified playing time.`);
     if (player.sourcePositionLabels.length !== 1 || player.sourcePositionLabels[0] !== `UEFA selection: ${player.role}`) throw new Error(`${player.id} does not use its official selection role.`);
+    if (player.honors?.champion && !player.honors.championLabel) throw new Error(`${player.id} has an unlabeled championship honor.`);
+    if ((player.honors?.bestPlayer || player.honors?.ballonDor || player.honors?.topScorer || player.honors?.positionalAward || player.honors?.youngPlayer) && provenance.sourceHonorUrls.length === 0) throw new Error(`${player.id} has an award without official provenance.`);
   }
   console.log("Soccer data verified offline: 26 official UEFA selections, 298 finite cards, canonical IDs, roles, teams, and match provenance.");
 }

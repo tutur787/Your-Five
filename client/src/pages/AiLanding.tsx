@@ -1,10 +1,10 @@
-import { AiDifficulty } from "@fiveaside/shared";
+import { AiDifficulty, todayUtcDateString } from "@fiveaside/shared/core";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
 import { useAiDifficulty } from "../hooks/useAiDifficulty";
 import { useSport } from "../hooks/useSport";
-import { loadAiRecord, loadDailyBestScore, loadDailyCompleted } from "../utils/aiStorage";
-import { todayUtcDateString } from "@fiveaside/shared";
+import { loadDailyBestScore, loadDailyCompleted } from "../utils/aiStorage";
+import { progressRecordFor } from "../utils/progressStorage";
 
 const DIFFICULTIES: AiDifficulty[] = ["casual", "competitive", "expert"];
 
@@ -39,7 +39,7 @@ export function AiLanding() {
         </div>
         <div className="ai-difficulty-control" role="group" aria-label="AI difficulty">
           {DIFFICULTIES.map((option) => {
-            const record = loadAiRecord(sport, option);
+            const record = progressRecordFor(sport, `ai-${option}`);
             return (
               <button
                 type="button"

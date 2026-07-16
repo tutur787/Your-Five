@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { actingSeat as computeActingSeat, LineupSlot, MatchAction, MatchState, SeatId } from "@fiveaside/shared";
+import { actingSeat as computeActingSeat, LineupSlot, MatchAction, MatchState, SeatId } from "@fiveaside/shared/core";
 import { seatLabel, TeamPanel } from "../components/TeamPanel";
 import { ActionPanel } from "../components/ActionPanel";
 import { Results } from "./Results";
@@ -13,9 +13,11 @@ interface Props {
   onRematch?: () => void;
   headerExtra?: ReactNode;
   resultsSubtitle?: string;
+  turnDeadlineAt?: number | null;
+  resultsExtra?: ReactNode;
 }
 
-export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, headerExtra, resultsSubtitle }: Props) {
+export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, headerExtra, resultsSubtitle, turnDeadlineAt, resultsExtra }: Props) {
   const acting = computeActingSeat(state);
   const canAct = mySeat === "local" ? acting !== null : acting === mySeat;
   const label = (seat: SeatId) => seatLabel(seat, seatNames);
@@ -29,7 +31,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
       {error && <div className="error-banner">{error}</div>}
 
       {state.phase !== "complete" && (
-        <ActionPanel state={state} dispatch={dispatch} canAct={canAct} actingSeat={acting} seatLabel={label} />
+        <ActionPanel state={state} dispatch={dispatch} canAct={canAct} actingSeat={acting} seatLabel={label} turnDeadlineAt={turnDeadlineAt} />
       )}
 
       <div className="scoreboard">
@@ -61,6 +63,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           editableSeat={mySeat}
           onChangeSlot={(seat, playerId, slot) => dispatch({ type: "setSlot", seat, playerId, slot })}
           subtitle={resultsSubtitle}
+          extraActions={resultsExtra}
         />
       )}
 

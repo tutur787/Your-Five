@@ -9,7 +9,7 @@ import {
   PlayerCard,
   SeatId,
   validSlotsFor,
-} from "@fiveaside/shared";
+} from "@fiveaside/shared/core";
 import { formatPosition } from "../utils/position";
 import { subjectVerb } from "../utils/grammar";
 
@@ -19,6 +19,7 @@ interface Props {
   canAct: boolean;
   actingSeat: SeatId | null;
   seatLabel: (seat: SeatId) => string;
+  turnDeadlineAt?: number | null;
 }
 
 const TIMER_SECONDS = 15;
@@ -76,16 +77,21 @@ const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
  * restarts cleanly every time), so it stays perfectly smooth regardless of React's render cadence;
  * the numeric label underneath is the only piece driven by the per-second JS interval.
  */
-function Countdown({ resetKey, seconds = TIMER_SECONDS }: { resetKey: string; seconds?: number }) {
-  const [remaining, setRemaining] = useState(seconds);
+function Countdown({ resetKey, seconds = TIMER_SECONDS, deadlineAt }: { resetKey: string; seconds?: number; deadlineAt?: number | null }) {
+  const calculateRemaining = () => deadlineAt === undefined || deadlineAt === null
+    ? seconds
+    : Math.max(0, Math.ceil((deadlineAt - Date.now()) / 1000));
+  const [remaining, setRemaining] = useState(calculateRemaining);
 
   useEffect(() => {
-    setRemaining(seconds);
+    setRemaining(calculateRemaining());
     const interval = setInterval(() => {
-      setRemaining((r) => Math.max(0, r - 1));
+      setRemaining(deadlineAt === undefined || deadlineAt === null
+        ? (r) => Math.max(0, r - 1)
+        : calculateRemaining());
     }, 1000);
     return () => clearInterval(interval);
-  }, [resetKey, seconds]);
+  }, [resetKey, seconds, deadlineAt]);
 
   const urgent = remaining <= 5;
 
@@ -100,7 +106,7 @@ function Countdown({ resetKey, seconds = TIMER_SECONDS }: { resetKey: string; se
           r={RING_RADIUS}
           style={{
             strokeDasharray: RING_CIRCUMFERENCE,
-            animationDuration: `${seconds}s`,
+            animationDuration: `${deadlineAt ? Math.max(0.1, (deadlineAt - Date.now()) / 1000) : seconds}s`,
           }}
         />
       </svg>
@@ -109,7 +115,7 @@ function Countdown({ resetKey, seconds = TIMER_SECONDS }: { resetKey: string; se
   );
 }
 
-export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: Props) {
+export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel, turnDeadlineAt }: Props) {
   if (state.phase === "complete") return null;
 
   if (!canAct || !actingSeat) {
@@ -123,11 +129,11 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
   }
 
   if (state.phase === "onTheClock") {
-    return <RevealPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} />;
+    return <RevealPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} turnDeadlineAt={turnDeadlineAt} />;
   }
 
   if (state.phase === "catchUp") {
-    return <CatchUpPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} />;
+    return <CatchUpPanel state={state} seat={actingSeat} dispatch={dispatch} seatLabel={seatLabel} turnDeadlineAt={turnDeadlineAt} />;
   }
 
   if (state.phase === "bidding" && state.auction) {
@@ -139,7 +145,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
         <div className="auction-box">
           <div className="action-stage-top">
             <div className="auction-eyebrow"><span className="live-dot" /> LIVE AUCTION</div>
-            <Countdown resetKey={`bid-${auction.player.id}-${auction.currentBid}`} />
+            <Countdown resetKey={`bid-${auction.player.id}-${auction.currentBid}`} deadlineAt={turnDeadlineAt} />
           </div>
           <div className="auction-context">
             <span className="standing-bidder-tag">{standingBidder}</span> {subjectVerb(standingBidder, "are", "is")} bidding on{" "}
@@ -172,7 +178,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
         <div className="skip-box">
           <div className="action-stage-top">
             <div className="auction-eyebrow neutral">SKIP OFFER</div>
-            <Countdown resetKey={`skip-${offer.player.id}`} />
+            <Countdown resetKey={`skip-${offer.player.id}`} deadlineAt={turnDeadlineAt} />
           </div>
           <div className="auction-context">{seatLabel(offer.skippedBy)} passed. Your call.</div>
           <PlayerSpotlight player={offer.player} />
@@ -304,11 +310,13 @@ function RevealPanel({
   seat,
   dispatch,
   seatLabel,
+  turnDeadlineAt,
 }: {
   state: MatchState;
   seat: SeatId;
   dispatch: (action: MatchAction) => void;
   seatLabel: (seat: SeatId) => string;
+  turnDeadlineAt?: number | null;
 }) {
   const player = state.pool[0];
   const team = state.teams[seat];
@@ -341,7 +349,7 @@ function RevealPanel({
             <div className="page-eyebrow">ON THE CLOCK</div>
             <strong className="acting-name">{seatLabel(seat)}</strong>
           </div>
-          <Countdown resetKey={`reveal-${player.id}`} />
+          <Countdown resetKey={`reveal-${player.id}`} deadlineAt={turnDeadlineAt} />
         </div>
         <PlayerSpotlight player={player} />
         <StatLine player={player} />
@@ -414,11 +422,13 @@ function CatchUpPanel({
   seat,
   dispatch,
   seatLabel,
+  turnDeadlineAt,
 }: {
   state: MatchState;
   seat: SeatId;
   dispatch: (action: MatchAction) => void;
   seatLabel: (seat: SeatId) => string;
+  turnDeadlineAt?: number | null;
 }) {
   const player = state.pool[0];
   const team = state.teams[seat];
@@ -442,7 +452,7 @@ function CatchUpPanel({
             <div className="page-eyebrow">FILL YOUR FIVE</div>
             <strong className="acting-name">{seatLabel(seat)}</strong>
           </div>
-          <Countdown resetKey={`catch-up-${player.id}`} />
+          <Countdown resetKey={`catch-up-${player.id}`} deadlineAt={turnDeadlineAt} />
         </div>
         <div className="auction-context">The other lineup is full. Add this card for $1 or use a remaining skip.</div>
         <PlayerSpotlight player={player} />

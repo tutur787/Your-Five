@@ -1620,7 +1620,7 @@ input[type="text"] {
   padding: 28px;
 }
 
-.info-modal {
+.modal.info-modal {
   position: relative;
   width: min(900px, 100%);
   max-width: 900px;
@@ -1641,6 +1641,22 @@ input[type="text"] {
   background: #14171a;
 }
 
+.info-modal-header {
+  flex: 0 0 auto;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 20px 84px 20px 34px;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-modal-header h2 {
+  margin: 0;
+  font-family: "Arial Narrow", "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+}
+
 .info-modal-scroll {
   min-height: 0;
   overflow-y: auto;
@@ -1650,14 +1666,6 @@ input[type="text"] {
 
 .info-modal .info-page {
   max-width: none;
-}
-
-.info-modal .app-header {
-  padding-right: 58px;
-}
-
-.info-modal .app-header-brand > .icon-button {
-  display: none;
 }
 
 .info-section p {
@@ -2576,8 +2584,13 @@ input[type="text"] {
     right: 13px;
   }
 
-  .info-modal .app-header {
-    padding-right: 48px;
+  .info-modal-header {
+    min-height: 68px;
+    padding: 16px 68px 16px 18px;
+  }
+
+  .info-modal-header h2 {
+    font-size: 25px;
   }
 
   .site-footer-mark small {
@@ -2876,7 +2889,11 @@ input[type="text"] {
   gap: 18px;
 }
 
-.home-header > .text-button {
+.home-header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
   justify-self: end;
 }
 
@@ -2965,13 +2982,39 @@ html[data-sport="soccer"] .standing-bidder-tag {
 @media (max-width: 760px) {
   .home-header {
     grid-template-columns: 1fr auto;
+    gap: 14px;
+    padding-bottom: 10px;
+  }
+
+  .home-header .brand-lockup {
+    min-width: 0;
+  }
+
+  .home-header .brand-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+  }
+
+  .home-header .brand-name {
+    font-size: 20px;
+  }
+
+  .home-header .brand-edition {
+    display: none;
+  }
+
+  .home-header-tools {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 12px;
   }
 
   .home-header .sport-switch {
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
-    margin-bottom: 10px;
+    margin: 4px 0 0;
   }
 
   .app-header-actions .sport-switch {
@@ -3020,4 +3063,223 @@ html[data-sport="soccer"] .standing-bidder-tag {
 
   .soccer-pitch .court-slot-DEF_L { left: 25%; }
   .soccer-pitch .court-slot-DEF_R { left: 75%; }
+}
+
+/* Retention release: online identity, records, rematches, and accessible lineup moves. */
+.online-identity {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 260px);
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.online-identity label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.online-nickname-error {
+  grid-column: 2;
+  max-width: 320px;
+  color: var(--bad);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.online-identity input[aria-invalid="true"] {
+  border-color: var(--bad);
+}
+
+.online-result-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.challenge-expired {
+  min-height: 280px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-align: center;
+}
+
+.challenge-won {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.court-player-card.selected-source {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.court-slot[role="button"]:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+.progress-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.progress-modal {
+  position: relative;
+  width: min(900px, calc(100vw - 28px));
+  max-width: 900px;
+  height: min(760px, calc(100dvh - 28px));
+  padding: 0;
+  overflow: hidden;
+}
+
+.progress-modal > header {
+  padding: 26px 72px 20px 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.progress-modal > header h2 {
+  margin: 4px 0 0;
+  font-size: 30px;
+}
+
+.progress-modal-scroll {
+  height: calc(100% - 94px);
+  overflow-y: auto;
+  padding: 24px 26px 30px;
+}
+
+.progress-sports {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.progress-sport {
+  border-top: 3px solid var(--accent);
+  background: var(--panel-alt);
+  padding: 18px;
+}
+
+.sport-soccer .progress-sport {
+  border-top-color: var(--soccer-accent, #35b36f);
+}
+
+.progress-sport h3,
+.progress-history h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.progress-summary > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.progress-summary strong {
+  font-size: 21px;
+}
+
+.progress-summary small,
+.progress-history-row small {
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.progress-modes {
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.progress-modes > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.progress-modes strong {
+  color: var(--text);
+}
+
+.progress-history {
+  margin-top: 26px;
+}
+
+.progress-history-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  border-top: 1px solid var(--border);
+}
+
+.progress-history-row > span:nth-child(2),
+.progress-history-row > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.progress-history-row > span:last-child {
+  align-items: flex-end;
+  font-weight: 800;
+}
+
+.history-result {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.history-result.win { color: var(--good); }
+.history-result.loss { color: var(--bad); }
+
+@media (max-width: 700px) {
+  .online-identity {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-modal {
+    width: calc(100vw - 16px);
+    height: calc(100dvh - 16px);
+  }
+
+  .progress-modal-scroll {
+    padding: 18px 14px 24px;
+  }
+
+  .progress-sports {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-history-row {
+    grid-template-columns: 52px 1fr auto;
+    gap: 8px;
+  }
 }
