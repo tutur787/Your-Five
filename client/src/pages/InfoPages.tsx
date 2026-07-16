@@ -43,7 +43,7 @@ export function AboutPage() {
     <InfoPage
       eyebrow="THE PROJECT"
       title="About Your Five"
-      intro="Your Five is an independent basketball drafting game built around a simple question: what lineup would you create with a hard cap and another GM bidding against you?"
+      intro="Your Five is an independent basketball and football drafting game built around a simple question: what lineup would you create with a hard cap and another GM bidding against you?"
     >
       <section className="info-section">
         <span className="info-section-number">01</span>
@@ -76,9 +76,13 @@ export function AboutPage() {
             <code> nba_api</code> client. Position references were checked against Wikipedia, and the classic-team
             pool references listings published by 2K Ratings.
           </p>
+          <div className="statsbomb-attribution">
+            <img src="/statsbomb-logo.ico" alt="StatsBomb" />
+            <p>Football event and lineup data is sourced from StatsBomb Open Data at the pinned revision documented in the project database. Player names, positions, minutes, and performance metrics are generated from those source files.</p>
+          </div>
           <p className="info-muted">
             Your Five is an independent fan-made project. It is not affiliated with, endorsed by, or sponsored
-            by the NBA, WNBA, their teams, players, Take-Two Interactive, 2K, Wikipedia, or Sports Reference.
+            by the NBA, WNBA, FIFA, UEFA, CAF, any football association, league, club, national team, their players, Take-Two Interactive, 2K, StatsBomb, Wikipedia, or Sports Reference.
             No league or team logos are used.
           </p>
         </div>
@@ -101,6 +105,8 @@ export function PrivacyPage() {
           <p>Your browser may store:</p>
           <ul>
             <li>whether you have already seen the rules introduction;</li>
+            <li>your selected basketball or soccer mode preference;</li>
+            <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
             <li>a temporary private-room seat token in session storage so you can reconnect during that browser session.</li>
           </ul>

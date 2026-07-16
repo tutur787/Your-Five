@@ -2,11 +2,14 @@ import { PointerEvent as ReactPointerEvent, useState } from "react";
 import {
   canBuySkip,
   chemistryPairs,
-  Position,
+  LineupSlot,
+  nextSkipPrice,
   positionPenaltyForSlot,
-  POSITIONS,
   ROSTER_SIZE,
   SeatId,
+  soccerChemistryPairs,
+  Sport,
+  slotsForSport,
   TeamState,
   validSlotsFor,
 } from "@fiveaside/shared";
@@ -18,14 +21,16 @@ interface Props {
   label: string;
   isActing: boolean;
   editable?: boolean;
-  onChangeSlot?: (playerId: string, slot: Position) => void;
+  onChangeSlot?: (playerId: string, slot: LineupSlot) => void;
   inCatchUp?: boolean;
+  sport: Sport;
 }
 
 /** playerId -> names of real-life teammates also on this roster, for the chemistry badge + tooltip. */
-export function chemistryPartnersByPlayerId(team: TeamState): Map<string, string[]> {
+export function chemistryPartnersByPlayerId(team: TeamState, sport: Sport): Map<string, string[]> {
   const partners = new Map<string, string[]>();
-  for (const pair of chemistryPairs(team)) {
+  const pairs = sport === "soccer" ? soccerChemistryPairs(team) : chemistryPairs(team);
+  for (const pair of pairs) {
     const aId = pair.a.player.id;
     const bId = pair.b.player.id;
     if (!partners.has(aId)) partners.set(aId, []);
@@ -36,13 +41,15 @@ export function chemistryPartnersByPlayerId(team: TeamState): Map<string, string
   return partners;
 }
 
-export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false }: Props) {
-  const skipLabel = !team.skipUsed
+export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false, sport }: Props) {
+  const skipPrice = inCatchUp && team.catchUpSkipUsed ? null : nextSkipPrice(team);
+  const paidSkipAvailable = canBuySkip(team, inCatchUp);
+  const skipLabel = skipPrice === 0
     ? "FREE SKIP READY"
-    : !team.paidSkipUsed && canBuySkip(team, inCatchUp)
-      ? "$1 SKIP AVAILABLE"
-      : "SKIPS USED";
-  const skipAvailable = (!inCatchUp || !team.catchUpSkipUsed) && (!team.skipUsed || canBuySkip(team, inCatchUp));
+    : skipPrice === null
+      ? "SKIPS USED"
+      : `$${skipPrice} SKIP ${paidSkipAvailable ? "AVAILABLE" : "LOCKED"}`;
+  const skipAvailable = skipPrice === 0 || paidSkipAvailable;
 
   return (
     <div className={`team-panel${isActing ? " acting" : ""}`}>
@@ -62,39 +69,42 @@ export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCat
         </span>
         <span className="lineup-label">STARTING FIVE</span>
       </div>
-      <LineupCourt team={team} editable={editable} onChangeSlot={onChangeSlot} />
-      {team.roster.length > 0 && <ScoreBreakdown team={team} />}
+      <LineupCourt team={team} sport={sport} editable={editable} onChangeSlot={onChangeSlot} />
+      {team.roster.length > 0 && <ScoreBreakdown team={team} sport={sport} />}
     </div>
   );
 }
 
 export function LineupCourt({
   team,
+  sport,
   editable,
   onChangeSlot,
 }: {
   team: TeamState;
+  sport: Sport;
   editable?: boolean;
-  onChangeSlot?: (playerId: string, slot: Position) => void;
+  onChangeSlot?: (playerId: string, slot: LineupSlot) => void;
 }) {
-  const partners = chemistryPartnersByPlayerId(team);
+  const partners = chemistryPartnersByPlayerId(team, sport);
+  const slots = slotsForSport(sport);
   const [draggedPlayer, setDraggedPlayer] = useState<{
     id: string;
     name: string;
-    origin: Position;
-    validSlots: Position[];
+    origin: LineupSlot;
+    validSlots: LineupSlot[];
   } | null>(null);
   const [dragPoint, setDragPoint] = useState({ x: 0, y: 0 });
-  const [hoveredSlot, setHoveredSlot] = useState<Position | null>(null);
+  const [hoveredSlot, setHoveredSlot] = useState<LineupSlot | null>(null);
 
-  const positionAtPoint = (x: number, y: number): Position | null => {
+  const positionAtPoint = (x: number, y: number): LineupSlot | null => {
     const target = document
       .elementsFromPoint(x, y)
       .find((element) => element instanceof HTMLElement && element.dataset.courtPosition);
-    return target instanceof HTMLElement ? (target.dataset.courtPosition as Position) : null;
+    return target instanceof HTMLElement ? (target.dataset.courtPosition as LineupSlot) : null;
   };
 
-  const beginDrag = (event: ReactPointerEvent<HTMLDivElement>, playerId: string, name: string, origin: Position) => {
+  const beginDrag = (event: ReactPointerEvent<HTMLDivElement>, playerId: string, name: string, origin: LineupSlot) => {
     if (!editable || !onChangeSlot || event.button !== 0) return;
     event.preventDefault();
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -126,18 +136,32 @@ export function LineupCourt({
     setDraggedPlayer(null);
     setHoveredSlot(null);
   };
+  const slotLabel = (slot: LineupSlot) => slot === "DEF_L" ? "DEF-L" : slot === "DEF_R" ? "DEF-R" : slot;
 
   return (
-    <div className={`lineup-court${draggedPlayer ? " is-dragging" : ""}`} aria-label="Starting five lineup">
-      <svg className="court-markings" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
-        <rect className="court-boundary" x="4" y="4" width="992" height="552" rx="10" />
-        <path className="court-three-point" d="M92 4 L92 105 C102 365 270 480 500 480 C730 480 898 365 908 105 L908 4" />
-        <rect className="court-key" x="360" y="4" width="280" height="280" />
-        <circle className="court-free-throw" cx="500" cy="284" r="90" />
-        <line className="court-backboard" x1="454" y1="22" x2="546" y2="22" />
-        <circle className="court-rim" cx="500" cy="46" r="13" />
-      </svg>
-      {POSITIONS.map((pos) => {
+    <div className={`lineup-court${sport === "soccer" ? " soccer-pitch" : ""}${draggedPlayer ? " is-dragging" : ""}`} aria-label={`${sport === "soccer" ? "Football" : "Basketball"} starting five lineup`}>
+      {sport === "soccer" ? (
+        <svg className="court-markings pitch-markings" viewBox="0 0 640 760" preserveAspectRatio="none" aria-hidden="true">
+          <rect className="pitch-boundary" x="8" y="8" width="624" height="744" />
+          <line className="pitch-line" x1="8" y1="380" x2="632" y2="380" />
+          <circle className="pitch-line" cx="320" cy="380" r="78" />
+          <circle className="pitch-dot" cx="320" cy="380" r="4" />
+          <rect className="pitch-line" x="150" y="8" width="340" height="120" />
+          <rect className="pitch-line" x="235" y="8" width="170" height="50" />
+          <rect className="pitch-line" x="150" y="632" width="340" height="120" />
+          <rect className="pitch-line" x="235" y="702" width="170" height="50" />
+        </svg>
+      ) : (
+        <svg className="court-markings" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
+          <rect className="court-boundary" x="4" y="4" width="992" height="552" rx="10" />
+          <path className="court-three-point" d="M92 4 L92 105 C102 365 270 480 500 480 C730 480 898 365 908 105 L908 4" />
+          <rect className="court-key" x="360" y="4" width="280" height="280" />
+          <circle className="court-free-throw" cx="500" cy="284" r="90" />
+          <line className="court-backboard" x1="454" y1="22" x2="546" y2="22" />
+          <circle className="court-rim" cx="500" cy="46" r="13" />
+        </svg>
+      )}
+      {slots.map((pos) => {
         const pick = team.roster.find((p) => p.slot === pos);
         const bondedWith = pick ? partners.get(pick.player.id) : undefined;
         const penalty = pick ? positionPenaltyForSlot(pick.player, pick.slot) : 0;
@@ -154,7 +178,7 @@ export function LineupCourt({
             data-court-position={pos}
           >
             <div className="court-position-target" aria-hidden="true">
-              <span>{pos}</span>
+              <span>{slotLabel(pos)}</span>
             </div>
             {pick ? (
               <div
@@ -167,12 +191,12 @@ export function LineupCourt({
                 tabIndex={editable && onChangeSlot ? 0 : undefined}
                 aria-label={editable && onChangeSlot ? `Drag ${pick.player.name} to change position` : undefined}
               >
-                <div className="court-slot-label">{pos}</div>
+                <div className="court-slot-label">{slotLabel(pos)}</div>
                 <div className="court-player-main">
                   <span className="court-player-name">
                     {pick.player.name}
                     {bondedWith && (
-                      <span className="chemistry-flame" title={`Real NBA teammates with ${bondedWith.join(", ")}`}>
+                      <span className="chemistry-flame" title={`${sport === "soccer" ? "Same-edition teammates" : "Real NBA teammates"} with ${bondedWith.join(", ")}`}>
                         LINK
                       </span>
                     )}

@@ -1,12 +1,18 @@
 import { ReactNode } from "react";
+import { FaBasketball, FaFutbol } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { SportSwitch } from "./SportSwitch";
+import { useSport } from "../hooks/useSport";
 
 export function BrandLockup({ compact = false }: { compact?: boolean }) {
+  const { sport } = useSport();
   return (
-    <div className={`brand-lockup${compact ? " compact" : ""}`} aria-label="Your Five, the $20 all-time basketball draft">
-      <img className="brand-logo" src="/favicon.svg" alt="" aria-hidden="true" />
+    <div className={`brand-lockup${compact ? " compact" : ""}`} aria-label={`Your Five, the $20 all-time ${sport === "soccer" ? "football" : "basketball"} draft`}>
+      <span className={`brand-logo sport-brand-logo ${sport}`} aria-hidden="true">
+        {sport === "soccer" ? <FaFutbol /> : <FaBasketball />}
+      </span>
       <span className="brand-name">YOUR FIVE</span>
-      {!compact && <span className="brand-edition">$20 ALL-TIME DRAFT</span>}
+      {!compact && <span className="brand-edition">$20 ALL-TIME {sport === "soccer" ? "FOOTBALL" : "BASKETBALL"} DRAFT</span>}
     </div>
   );
 }
@@ -16,11 +22,13 @@ export function AppHeader({
   title,
   detail,
   actions,
+  sportLocked = true,
 }: {
   eyebrow?: string;
   title: string;
   detail?: ReactNode;
   actions?: ReactNode;
+  sportLocked?: boolean;
 }) {
   const navigate = useNavigate();
 
@@ -37,7 +45,7 @@ export function AppHeader({
         <h1>{title}</h1>
         {detail && <div className="page-detail">{detail}</div>}
       </div>
-      <div className="app-header-actions">{actions}</div>
+      <div className="app-header-actions"><SportSwitch disabled={sportLocked} />{actions}</div>
     </header>
   );
 }

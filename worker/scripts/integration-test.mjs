@@ -47,7 +47,7 @@ class TestSocket {
     if (this.ws.readyState === WebSocket.CLOSED) return;
     const closed = new Promise((resolve) => this.ws.addEventListener("close", resolve, { once: true }));
     this.ws.close();
-    await closed;
+    await Promise.race([closed, new Promise((resolve) => setTimeout(resolve, 250))]);
   }
 }
 
@@ -75,23 +75,26 @@ async function expectRejectedRoom(code, token = null) {
   });
 }
 
-async function createPrivateRoom() {
-  const response = await fetch(`${HTTP_BASE}/rooms/new`);
+async function createPrivateRoom(sport = "basketball") {
+  const response = await fetch(`${HTTP_BASE}/rooms/new?sport=${sport}`);
   assert.equal(response.status, 200);
   const room = await response.json();
   assert.match(room.code, /^[A-HJ-NP-Z2-9]{6}$/);
   assert.equal(typeof room.token, "string");
   assert.ok(room.token.length > 0);
+  assert.equal(room.sport, sport);
   return room;
 }
 
-async function testPrivateRoom() {
-  const room = await createPrivateRoom();
+async function testPrivateRoom(sport = "basketball") {
+  const room = await createPrivateRoom(sport);
   const a = await connectRoom(room.code, room.token);
   const b = await connectRoom(room.code);
   assert.equal(a.joined.seat, "A");
   assert.equal(b.joined.seat, "B");
   assert.equal(a.joined.roomKind, "private");
+  assert.equal(a.joined.sport, sport);
+  assert.equal(b.joined.sport, sport);
   assert.notEqual(a.joined.token, b.joined.token);
 
   await expectRejectedRoom(room.code);
@@ -102,18 +105,20 @@ async function testPrivateRoom() {
   const aAgain = await connectRoom(room.code, a.joined.token);
   assert.equal(bAgain.joined.seat, "B");
   assert.equal(aAgain.joined.seat, "A");
+  assert.equal(aAgain.joined.sport, sport);
 
   aAgain.socket.send({ type: "startDraft", id: "private-start" });
   const ack = await aAgain.socket.waitFor((message) => message.type === "ack" && message.id === "private-start");
   assert.equal(ack.ok, true);
-  await aAgain.socket.waitFor((message) => message.type === "state");
+  const started = await aAgain.socket.waitFor((message) => message.type === "state");
+  assert.equal(started.state.sport, sport);
   await Promise.all([aAgain.socket.close(), bAgain.socket.close()]);
 }
 
-async function testMatchmaking() {
-  const first = new TestSocket("/matchmaking");
+async function testMatchmaking(sport = "basketball") {
+  const first = new TestSocket(`/matchmaking?sport=${sport}`);
   await first.waitFor((message) => message.type === "waiting");
-  const second = new TestSocket("/matchmaking");
+  const second = new TestSocket(`/matchmaking?sport=${sport}`);
   const [matchA, matchB] = await Promise.all([
     first.waitFor((message) => message.type === "matchFound"),
     second.waitFor((message) => message.type === "matchFound"),
@@ -123,6 +128,8 @@ async function testMatchmaking() {
   assert.equal(matchA.seat, "A");
   assert.equal(matchB.seat, "B");
   assert.notEqual(matchA.token, matchB.token);
+  assert.equal(matchA.sport, sport);
+  assert.equal(matchB.sport, sport);
   await expectRejectedRoom(matchA.code);
 
   const a = await connectRoom(matchA.code, matchA.token);
@@ -130,7 +137,9 @@ async function testMatchmaking() {
   assert.equal(a.joined.seat, "A");
   assert.equal(b.joined.seat, "B");
   assert.equal(a.joined.roomKind, "matched");
+  assert.equal(a.joined.sport, sport);
   assert.ok(a.joined.state);
+  assert.equal(a.joined.state.sport, sport);
 
   a.socket.send({ type: "action", id: "malformed" });
   const invalidAck = await a.socket.waitFor((message) => message.type === "ack" && message.id === "malformed");
@@ -145,6 +154,44 @@ async function testMatchmaking() {
   await Promise.all([a.socket.close(), b.socket.close()]);
 }
 
-await testPrivateRoom();
-await testMatchmaking();
+async function testIsolatedQueues() {
+  const soccerFirst = new TestSocket("/matchmaking?sport=soccer");
+  const basketballFirst = new TestSocket("/matchmaking?sport=basketball");
+  await Promise.all([
+    soccerFirst.waitFor((message) => message.type === "waiting"),
+    basketballFirst.waitFor((message) => message.type === "waiting"),
+  ]);
+
+  const soccerSecond = new TestSocket("/matchmaking?sport=soccer");
+  const [soccerA, soccerB] = await Promise.all([
+    soccerFirst.waitFor((message) => message.type === "matchFound"),
+    soccerSecond.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(soccerA.sport, "soccer");
+  assert.equal(soccerB.sport, "soccer");
+
+  const basketballSecond = new TestSocket("/matchmaking?sport=basketball");
+  const [basketballA, basketballB] = await Promise.all([
+    basketballFirst.waitFor((message) => message.type === "matchFound"),
+    basketballSecond.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(basketballA.sport, "basketball");
+  assert.equal(basketballB.sport, "basketball");
+  await Promise.all([soccerFirst.close(), soccerSecond.close(), basketballFirst.close(), basketballSecond.close()]);
+}
+
+async function testInvalidSport() {
+  const response = await fetch(`${HTTP_BASE}/rooms/new?sport=tennis`);
+  assert.equal(response.status, 400);
+  const legacy = await fetch(`${HTTP_BASE}/rooms/new`);
+  assert.equal(legacy.status, 200);
+  assert.equal((await legacy.json()).sport, "basketball");
+}
+
+await testPrivateRoom("basketball");
+await testPrivateRoom("soccer");
+await testMatchmaking("basketball");
+await testMatchmaking("soccer");
+await testIsolatedQueues();
+await testInvalidSport();
 console.log(`Cloudflare integration checks passed against ${HTTP_BASE}`);

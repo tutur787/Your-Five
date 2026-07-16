@@ -1,15 +1,19 @@
 import {
   accoladePoints,
+  BasketballPlayerCard,
   PlayerAccolades,
   positionPenaltyForSlot,
   rawStatTotal,
   scoreComponents,
+  soccerScoreComponents,
+  Sport,
   TeamState,
 } from "@fiveaside/shared";
 
 interface Props {
   team: TeamState;
   defaultOpen?: boolean;
+  sport: Sport;
 }
 
 function formatAccolades(a: PlayerAccolades): string {
@@ -23,10 +27,14 @@ function formatAccolades(a: PlayerAccolades): string {
 }
 
 /** Collapsible "why is my score what it is" breakdown — every ingredient behind the final score. */
-export function ScoreBreakdown({ team, defaultOpen }: Props) {
+export function ScoreBreakdown({ team, defaultOpen, sport }: Props) {
+  if (sport === "soccer") return <SoccerScoreBreakdown team={team} defaultOpen={defaultOpen} />;
   const raw = rawStatTotal(team);
   const components = scoreComponents(team);
-  const accoladedPicks = team.roster.filter((p) => p.player.accolades && accoladePoints(p.player.accolades) > 0);
+  const accoladedPicks = team.roster.filter(
+    (p): p is typeof p & { player: BasketballPlayerCard } =>
+      p.player.sport === "basketball" && Boolean(p.player.accolades) && accoladePoints(p.player.accolades) > 0
+  );
   const wrongPicks = team.roster
     .map((pick) => ({ pick, penalty: positionPenaltyForSlot(pick.player, pick.slot) }))
     .filter(({ penalty }) => penalty > 0);
@@ -144,6 +152,47 @@ export function ScoreBreakdown({ team, defaultOpen }: Props) {
           <span>Final score</span>
           <span>{components.total.toFixed(1)}</span>
         </div>
+      </div>
+    </details>
+  );
+}
+
+function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultOpen?: boolean }) {
+  const components = soccerScoreComponents(team);
+  const categories = [
+    ["Attack", components.performance.attack],
+    ["Creation", components.performance.creation],
+    ["Progression", components.performance.progression],
+    ["Defense", components.performance.defense],
+    ["Goalkeeping", components.performance.goalkeeping],
+  ] as const;
+  return (
+    <details className="score-breakdown-details" open={defaultOpen}>
+      <summary>Score details ({components.total.toFixed(1)})</summary>
+      <div className="score-breakdown-body">
+        {categories.map(([label, value]) => (
+          <div className="breakdown-row" key={label}><span>{label} category total</span><span>{value.toFixed(1)}</span></div>
+        ))}
+        <div className="breakdown-row"><span>Role-weighted performance</span><span>{components.performance.total.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Team success</span><span>{components.teamSuccess >= 0 ? "+" : ""}{components.teamSuccess.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Verified honors</span><span>+{components.honors.toFixed(1)}</span></div>
+        <div className="breakdown-heading" style={{ color: components.fit.total >= 0 ? "var(--good)" : "var(--bad)" }}>
+          Tactical fit ({components.fit.total >= 0 ? "+" : ""}{components.fit.total.toFixed(1)})
+        </div>
+        <ul className="breakdown-list">
+          <li><span>Creator / ball winner / scorer</span><span>+{components.fit.creatorBonus + components.fit.ballWinnerBonus + components.fit.scorerBonus}</span></li>
+          <li><span>Progression</span><span>+{components.fit.progressionBonus}</span></li>
+          {components.fit.stackingPenalty > 0 && <li><span>Attack-heavy redundancy</span><span>&minus;{components.fit.stackingPenalty}</span></li>}
+        </ul>
+        {components.chemistry.pairs.length > 0 && (
+          <><div className="breakdown-heading">Same-edition chemistry (+{components.chemistry.bonus})</div>
+          <ul className="breakdown-list">{components.chemistry.pairs.map((pair) => <li key={`${pair.a.player.id}-${pair.b.player.id}`}><span>{pair.a.player.name} + {pair.b.player.name}</span><span>teammates</span></li>)}</ul></>
+        )}
+        {components.mismatches.length > 0 ? (
+          <><div className="breakdown-heading" style={{ color: "var(--bad)" }}>Position mismatches (&minus;{components.wrongPositionPenalty})</div>
+          <ul className="breakdown-list">{components.mismatches.map(({ pick, penalty }) => <li key={pick.player.id}><span>{pick.player.name} at {pick.slot}</span><span>&minus;{penalty}</span></li>)}</ul></>
+        ) : <div className="breakdown-heading" style={{ color: "var(--good)" }}>Everyone is in a sourced role</div>}
+        <div className="breakdown-row breakdown-total"><span>Final score</span><span>{components.total.toFixed(1)}</span></div>
       </div>
     </details>
   );

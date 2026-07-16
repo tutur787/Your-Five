@@ -12,7 +12,12 @@
     "dev:client": "npm run dev -w client",
     "deploy:worker": "npm run deploy -w worker",
     "test:cloudflare": "npm run test:integration -w worker",
-    "test:engine": "tsx shared/src/engine.test.ts"
+    "test:engine": "tsx shared/src/engine.test.ts",
+    "test:ai": "tsx shared/src/aiOpponent.test.ts",
+    "test:ai-storage": "tsx client/src/utils/aiStorage.test.ts",
+    "test:soccer": "tsx shared/src/soccerEngine.test.ts",
+    "data:soccer": "node scripts/generate-soccer-data.mjs",
+    "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

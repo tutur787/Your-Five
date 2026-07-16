@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MatchState, POSITIONS, SeatId, teamScore } from "@fiveaside/shared";
+import { MatchState, SeatId, slotsForSport, teamScore } from "@fiveaside/shared";
 
 interface Props {
   state: MatchState;
@@ -23,7 +23,7 @@ const COLORS = {
 
 function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, label: string, subtitle?: string) {
   const team = state.teams[seat];
-  const score = teamScore(team);
+  const score = teamScore(team, state.sport);
 
   ctx.clearRect(0, 0, CARD_WIDTH, CARD_HEIGHT);
   ctx.fillStyle = COLORS.bg;
@@ -31,7 +31,7 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
 
   ctx.fillStyle = COLORS.text;
   ctx.font = "bold 30px -apple-system, Helvetica, Arial, sans-serif";
-  ctx.fillText("YOUR FIVE / $20 DRAFT", 36, 60);
+  ctx.fillText(`YOUR FIVE / $20 ${state.sport === "soccer" ? "FOOTBALL" : "BASKETBALL"} DRAFT`, 36, 60);
 
   if (subtitle) {
     ctx.fillStyle = COLORS.muted;
@@ -52,7 +52,7 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
   ctx.fillText("combined score", 36, scoreY + 26);
 
   let y = scoreY + 80;
-  for (const pos of POSITIONS) {
+  for (const pos of slotsForSport(state.sport)) {
     const pick = team.roster.find((p) => p.slot === pos);
 
     ctx.fillStyle = COLORS.panel;

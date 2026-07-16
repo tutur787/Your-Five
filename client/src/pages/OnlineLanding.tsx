@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
 import { connectMatchmaking, createRoomCode } from "../utils/socket";
+import { useSport } from "../hooks/useSport";
 
 export function OnlineLanding() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ export function OnlineLanding() {
   const [creating, setCreating] = useState(false);
   const [matchmaking, setMatchmaking] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { sport } = useSport();
 
   useEffect(() => {
     return () => {
@@ -21,7 +23,7 @@ export function OnlineLanding() {
     setCreating(true);
     setError(null);
     try {
-      const { code, token } = await createRoomCode();
+      const { code, token } = await createRoomCode(sport);
       navigate(`/room/${code}?token=${encodeURIComponent(token)}`);
     } catch {
       setError("Could not reach the server.");
@@ -35,7 +37,7 @@ export function OnlineLanding() {
     setMatchmaking(true);
 
     matchSocketRef.current?.close();
-    const socket = connectMatchmaking((message) => {
+    const socket = connectMatchmaking(sport, (message) => {
       if (message.type === "matchFound") {
         matchSocketRef.current = null;
         navigate(`/room/${message.code}?token=${encodeURIComponent(message.token)}`);
@@ -69,7 +71,7 @@ export function OnlineLanding() {
 
   return (
     <div className="game-page online-page">
-      <AppHeader eyebrow="MATCHMAKING" title="Play online" detail="Choose your matchup" />
+      <AppHeader eyebrow="MATCHMAKING" title="Play online" detail={`Choose your ${sport === "soccer" ? "football" : "basketball"} matchup`} sportLocked={creating || matchmaking} />
       <section className="online-options">
         <button className="online-option primary-option" disabled={creating || matchmaking} onClick={findRandomOpponent}>
           <span className="option-index">01</span>

@@ -9,6 +9,9 @@ import {
   RoomServerMessage,
   SeatId,
   SeatsFilled,
+  skipCount,
+  SOCCER_SLOTS,
+  Sport,
 } from "@fiveaside/shared";
 import { Env } from "./env";
 import { generateClaimToken } from "./ids";
@@ -32,15 +35,17 @@ export class RoomDO extends DurableObject<Env> {
   private state: MatchState | null = null;
   private claimTokens: Partial<Record<SeatId, string>> | null = null;
   private roomKind: RoomKind | null = null;
+  private sport: Sport = "basketball";
 
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
     // The constructor reruns on every wake (cold start AND every hibernation resume), so this is
     // the one guaranteed rehydration point — kept intentionally minimal per Cloudflare's guidance.
     ctx.blockConcurrencyWhile(async () => {
-      this.state = (await ctx.storage.get<MatchState>("state")) ?? null;
+      this.state = normalizeLegacyState((await ctx.storage.get<MatchState>("state")) ?? null);
       this.claimTokens = (await ctx.storage.get<Partial<Record<SeatId, string>>>("claimTokens")) ?? null;
       this.roomKind = (await ctx.storage.get<RoomKind>("roomKind")) ?? null;
+      this.sport = (await ctx.storage.get<Sport>("sport")) ?? this.state?.sport ?? "basketball";
 
       // Preserve rooms created by an earlier Worker version during a rolling deployment.
       if (!this.roomKind && (this.state || this.claimTokens)) {
@@ -51,12 +56,14 @@ export class RoomDO extends DurableObject<Env> {
   }
 
   /** Reserves a new private room and permanently assigns its creator to seat A. */
-  async reservePrivateRoom(tokenA: string): Promise<boolean> {
+  async reservePrivateRoom(tokenA: string, sport: Sport = "basketball"): Promise<boolean> {
     if (this.roomKind || this.state || this.claimTokens) return false;
     this.roomKind = "private";
     this.claimTokens = { A: tokenA };
+    this.sport = sport;
     await this.ctx.storage.put("roomKind", this.roomKind);
     await this.ctx.storage.put("claimTokens", this.claimTokens);
+    await this.ctx.storage.put("sport", this.sport);
     await this.touchAlarm();
     return true;
   }
@@ -64,14 +71,16 @@ export class RoomDO extends DurableObject<Env> {
   /** Called via RPC by MatchmakingDO once it's paired two waiting players, before either of their
    * `matchFound` messages goes out — guarantees this room's state exists by the time either client's
    * reconnect-to-`/room/:code` attempt can possibly arrive. */
-  async initMatchedRoom(tokenA: string, tokenB: string): Promise<boolean> {
+  async initMatchedRoom(tokenA: string, tokenB: string, sport: Sport = "basketball"): Promise<boolean> {
     if (this.roomKind || this.state || this.claimTokens) return false;
-    this.state = createMatch();
+    this.sport = sport;
+    this.state = createMatch(sport);
     this.claimTokens = { A: tokenA, B: tokenB };
     this.roomKind = "matched";
     await this.ctx.storage.put("state", this.state);
     await this.ctx.storage.put("claimTokens", this.claimTokens);
     await this.ctx.storage.put("roomKind", this.roomKind);
+    await this.ctx.storage.put("sport", this.sport);
     await this.touchAlarm();
     return true;
   }
@@ -102,6 +111,7 @@ export class RoomDO extends DurableObject<Env> {
       type: "joined",
       seat,
       token: claimToken,
+      sport: this.sport,
       roomKind: this.roomKind,
       state: this.state,
       seatsFilled,
@@ -141,7 +151,7 @@ export class RoomDO extends DurableObject<Env> {
         this.sendAck(ws, parsed.id, false, "Waiting for both players to join.");
         return;
       }
-      this.state = createMatch();
+      this.state = createMatch(this.sport);
       await this.ctx.storage.put("state", this.state);
       this.sendAck(ws, parsed.id, true);
       this.broadcast({ type: "state", state: this.state });
@@ -187,6 +197,7 @@ export class RoomDO extends DurableObject<Env> {
     this.state = null;
     this.claimTokens = null;
     this.roomKind = null;
+    this.sport = "basketball";
   }
 
   private async handleDisconnect(ws: WebSocket): Promise<void> {
@@ -291,14 +302,47 @@ function isRoomClientMessage(value: unknown): value is RoomClientMessage {
     case "respondToSkip":
       return typeof action.accept === "boolean";
     case "placePick":
-      return typeof action.slot === "string" && POSITIONS.includes(action.slot as (typeof POSITIONS)[number]);
+      return typeof action.slot === "string" && [...POSITIONS, ...SOCCER_SLOTS].includes(action.slot as never);
     case "setSlot":
       return (
         typeof action.playerId === "string" &&
         typeof action.slot === "string" &&
-        POSITIONS.includes(action.slot as (typeof POSITIONS)[number])
+        [...POSITIONS, ...SOCCER_SLOTS].includes(action.slot as never)
       );
     default:
       return false;
   }
+}
+
+function normalizeLegacyState(state: MatchState | null): MatchState | null {
+  if (!state) return null;
+  const sport = state.sport ?? "basketball";
+  const normalizePlayer = <T extends { sport?: Sport }>(player: T): T => {
+    if (player.sport) return player;
+    return { ...player, sport: "basketball" };
+  };
+  return {
+    ...state,
+    sport,
+    pool: state.pool.map(normalizePlayer),
+    teams: {
+      A: {
+        ...state.teams.A,
+        skipsUsed: skipCount(state.teams.A),
+        skipUsed: undefined,
+        paidSkipUsed: undefined,
+        roster: state.teams.A.roster.map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
+      },
+      B: {
+        ...state.teams.B,
+        skipsUsed: skipCount(state.teams.B),
+        skipUsed: undefined,
+        paidSkipUsed: undefined,
+        roster: state.teams.B.roster.map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
+      },
+    },
+    auction: state.auction ? { ...state.auction, player: normalizePlayer(state.auction.player) } : null,
+    skipOffer: state.skipOffer ? { ...state.skipOffer, player: normalizePlayer(state.skipOffer.player) } : null,
+    pendingPlacement: state.pendingPlacement ? { ...state.pendingPlacement, player: normalizePlayer(state.pendingPlacement.player) } : null,
+  } as MatchState;
 }

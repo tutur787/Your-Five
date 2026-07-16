@@ -1,6 +1,15 @@
 import { areTeammates, PLAYER_DATABASE } from "./players";
+import { SOCCER_PLAYER_DATABASE } from "./soccerPlayers";
+import {
+  soccerPlayerCompositeValue,
+  soccerPositionPenalty,
+  soccerScoreComponents,
+  soccerSlotsForPlayer,
+} from "./soccerScoring";
 import {
   ActionResult,
+  BasketballPlayerCard,
+  LineupSlot,
   MatchAction,
   MatchState,
   PlayerAccolades,
@@ -10,6 +19,11 @@ import {
   RosterPick,
   ROSTER_SIZE,
   SeatId,
+  SOCCER_SLOTS,
+  SoccerPlayerCard,
+  SoccerRole,
+  SoccerSlot,
+  Sport,
   STARTING_BUDGET,
   TeamState,
 } from "./types";
@@ -52,18 +66,18 @@ export const MIN_ELIGIBLE_PER_POSITION_IN_POOL = 2;
  *    has enough of every position for both teams to field a legal lineup.
  * Everything is shuffled so reveal order still differs every match.
  */
-export function buildPool(rng: Rng = Math.random): PlayerCard[] {
+function buildBasketballPool(rng: Rng = Math.random): BasketballPlayerCard[] {
   const shuffled = shuffle(PLAYER_DATABASE, rng);
   const chosen = new Set<string>();
   const primaryCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
   const eligibleCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
-  const core: PlayerCard[] = []; // the min-coverage players, revealed first
-  const rest: PlayerCard[] = []; // random filler for variety
+  const core: BasketballPlayerCard[] = []; // the min-coverage players, revealed first
+  const rest: BasketballPlayerCard[] = []; // random filler for variety
 
-  const take = (player: PlayerCard, bucket: PlayerCard[]) => {
+  const take = (player: BasketballPlayerCard, bucket: BasketballPlayerCard[]) => {
     chosen.add(player.id);
     primaryCount[player.position]++;
-    for (const pos of validSlotsFor(player)) eligibleCount[pos]++;
+    for (const pos of validSlotsFor(player)) eligibleCount[pos as Position]++;
     bucket.push(player);
   };
 
@@ -88,13 +102,60 @@ export function buildPool(rng: Rng = Math.random): PlayerCard[] {
   return [...shuffle(core, rng), ...shuffle(rest, rng)];
 }
 
+export const SOCCER_MAX_PRIMARY_IN_POOL: Record<SoccerRole, number> = { GK: 3, DEF: 6, MID: 4, ATT: 5 };
+export const SOCCER_MIN_ELIGIBLE_IN_POOL: Record<SoccerRole, number> = { GK: 2, DEF: 4, MID: 2, ATT: 2 };
+
+function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
+  const shuffled = shuffle(SOCCER_PLAYER_DATABASE, rng);
+  const chosen = new Set<string>();
+  const primaryCount: Record<SoccerRole, number> = { GK: 0, DEF: 0, MID: 0, ATT: 0 };
+  const eligibleCount: Record<SoccerRole, number> = { GK: 0, DEF: 0, MID: 0, ATT: 0 };
+  const core: SoccerPlayerCard[] = [];
+  const rest: SoccerPlayerCard[] = [];
+
+  const rolesFor = (player: SoccerPlayerCard): SoccerRole[] =>
+    [player.role, player.secondaryRole, player.tertiaryRole].filter((role): role is SoccerRole => Boolean(role));
+  const take = (player: SoccerPlayerCard, bucket: SoccerPlayerCard[]) => {
+    chosen.add(player.id);
+    primaryCount[player.role]++;
+    for (const role of rolesFor(player)) eligibleCount[role]++;
+    bucket.push(player);
+  };
+
+  for (const role of ["GK", "DEF", "MID", "ATT"] as const) {
+    for (const player of shuffled) {
+      if (eligibleCount[role] >= SOCCER_MIN_ELIGIBLE_IN_POOL[role]) break;
+      if (chosen.has(player.id) || !rolesFor(player).includes(role)) continue;
+      if (primaryCount[player.role] >= SOCCER_MAX_PRIMARY_IN_POOL[player.role]) continue;
+      take(player, core);
+    }
+  }
+
+  for (const player of shuffled) {
+    if (chosen.has(player.id)) continue;
+    if (primaryCount[player.role] >= SOCCER_MAX_PRIMARY_IN_POOL[player.role]) continue;
+    take(player, rest);
+  }
+
+  return [...shuffle(core, rng), ...shuffle(rest, rng)];
+}
+
+export function buildPool(rng?: Rng): BasketballPlayerCard[];
+export function buildPool(sport: "basketball", rng?: Rng): BasketballPlayerCard[];
+export function buildPool(sport: "soccer", rng?: Rng): SoccerPlayerCard[];
+export function buildPool(sport: Sport, rng?: Rng): PlayerCard[];
+export function buildPool(sportOrRng: Sport | Rng = "basketball", maybeRng: Rng = Math.random): PlayerCard[] {
+  const sport = typeof sportOrRng === "function" ? "basketball" : sportOrRng;
+  const rng = typeof sportOrRng === "function" ? sportOrRng : maybeRng;
+  return sport === "soccer" ? buildSoccerPool(rng) : buildBasketballPool(rng);
+}
+
 function freshTeam(seat: SeatId): TeamState {
   return {
     seat,
     budget: STARTING_BUDGET,
     roster: [],
-    skipUsed: false,
-    paidSkipUsed: false,
+    skipsUsed: 0,
     catchUpSkipUsed: false,
   };
 }
@@ -115,31 +176,42 @@ export const POSITION_MISMATCH_PENALTY_BY_DISTANCE: Record<number, number> = { 1
 const POSITION_INDEX: Record<Position, number> = { PG: 0, SG: 1, SF: 2, PF: 3, C: 4 };
 
 /** The positions a player may legitimately fill: their primary, plus secondary/tertiary if they have them. */
-export function validSlotsFor(player: PlayerCard): Position[] {
-  return [player.position, player.secondaryPosition, player.tertiaryPosition].filter(
-    (p): p is Position => Boolean(p)
-  );
+export function slotsForSport(sport: Sport): LineupSlot[] {
+  return sport === "soccer" ? SOCCER_SLOTS : POSITIONS;
 }
 
-export function emptySlotsFor(team: TeamState): Position[] {
+export function validSlotsFor(player: PlayerCard): LineupSlot[] {
+  if (player.sport === "soccer") return soccerSlotsForPlayer(player);
+  return [player.position, player.secondaryPosition, player.tertiaryPosition].filter((p): p is Position => Boolean(p));
+}
+
+function teamSport(team: TeamState): Sport {
+  return team.roster.find(Boolean)?.player.sport ?? "basketball";
+}
+
+export function emptySlotsFor(team: TeamState, sport: Sport = teamSport(team)): LineupSlot[] {
   const occupied = new Set(team.roster.map((pick) => pick.slot));
-  return POSITIONS.filter((pos) => !occupied.has(pos));
+  return slotsForSport(sport).filter((slot) => !occupied.has(slot));
 }
 
 /**
  * Initial placement is stricter than later lineup tinkering: use an open real listed position when
  * one exists; if every listed position is already occupied, any open slot is fair game.
  */
-export function availablePlacementSlots(team: TeamState, player: PlayerCard): Position[] {
-  const openSlots = emptySlotsFor(team);
+export function availablePlacementSlots(team: TeamState, player: PlayerCard): LineupSlot[] {
+  const openSlots = emptySlotsFor(team, player.sport);
   const openListedSlots = validSlotsFor(player).filter((pos) => openSlots.includes(pos));
   return openListedSlots.length > 0 ? openListedSlots : openSlots;
 }
 
-export function positionPenaltyForSlot(player: PlayerCard, slot: Position): number {
+export function positionPenaltyForSlot(player: PlayerCard, slot: LineupSlot): number {
+  if (player.sport === "soccer") return soccerPositionPenalty(player, slot);
+  if (!POSITIONS.includes(slot as Position)) return PENALTY_PER_WRONG_POSITION;
   const validSlots = validSlotsFor(player);
   if (validSlots.includes(slot)) return 0;
-  const distance = Math.min(...validSlots.map((pos) => Math.abs(POSITION_INDEX[pos] - POSITION_INDEX[slot])));
+  const distance = Math.min(
+    ...validSlots.map((pos) => Math.abs(POSITION_INDEX[pos as Position] - POSITION_INDEX[slot as Position]))
+  );
   return POSITION_MISMATCH_PENALTY_BY_DISTANCE[distance] ?? PENALTY_PER_WRONG_POSITION;
 }
 
@@ -157,7 +229,10 @@ export function wrongPositionPenalty(team: TeamState): number {
 
 /** Raw sum of ppg+rpg+apg across a team's roster — real, unadjusted numbers, exactly what's shown in the UI. */
 export function rawStatTotal(team: TeamState): number {
-  return team.roster.reduce((sum, pick) => sum + pick.player.stats.ppg + pick.player.stats.rpg + pick.player.stats.apg, 0);
+  return team.roster.reduce((sum, pick) => {
+    if (pick.player.sport === "soccer") return sum + pick.player.performance.roleScore;
+    return sum + pick.player.stats.ppg + pick.player.stats.rpg + pick.player.stats.apg;
+  }, 0);
 }
 
 /** Points awarded per accolade when folding them into the score. */
@@ -177,7 +252,10 @@ export function accoladePoints(accolades: PlayerAccolades | undefined): number {
 
 /** Bonus points from real accolades earned across a team's roster. */
 export function accoladesBonus(team: TeamState): number {
-  return team.roster.reduce((sum, pick) => sum + accoladePoints(pick.player.accolades), 0);
+  return team.roster.reduce(
+    (sum, pick) => sum + (pick.player.sport === "basketball" ? accoladePoints(pick.player.accolades) : 0),
+    0
+  );
 }
 
 // --- Era-adjusted stat/defense/plus-minus/team-success value ---
@@ -200,25 +278,25 @@ function eraAdjusted(stat: number, factor: number | undefined): number {
   return stat * (factor ?? 1);
 }
 
-function playerOffenseValue(player: PlayerCard): number {
+function playerOffenseValue(player: BasketballPlayerCard): number {
   const { ppg, rpg, apg } = player.stats;
   return eraAdjusted(ppg + rpg + apg, player.eraFactor);
 }
 
-function playerDefenseBoxValue(player: PlayerCard): number {
+function playerDefenseBoxValue(player: BasketballPlayerCard): number {
   return eraAdjusted((player.stats.spg ?? 0) + (player.stats.bpg ?? 0), player.eraFactor);
 }
 
-function playerDefRatingValue(player: PlayerCard): number {
+function playerDefRatingValue(player: BasketballPlayerCard): number {
   if (player.stats.defRtgVsAvg === undefined) return 0;
   return clamp(player.stats.defRtgVsAvg * DEF_RATING_WEIGHT, -DEF_RATING_CAP, DEF_RATING_CAP);
 }
 
-function playerPlusMinusValue(player: PlayerCard): number {
+function playerPlusMinusValue(player: BasketballPlayerCard): number {
   return (player.stats.plusMinus ?? 0) * PLUS_MINUS_WEIGHT;
 }
 
-function playerTeamSuccessValue(player: PlayerCard): number {
+function playerTeamSuccessValue(player: BasketballPlayerCard): number {
   if (player.teamWinPct === undefined) return 0;
   return (player.teamWinPct - 0.5) * WIN_PCT_WEIGHT;
 }
@@ -246,15 +324,18 @@ export interface FitAssessment {
 }
 
 export function fitAssessment(team: TeamState): FitAssessment {
-  const alphaScorers = team.roster.filter(
-    (pick) => eraAdjusted(pick.player.stats.ppg, pick.player.eraFactor) >= HIGH_USAGE_PPG_THRESHOLD
+  const players = team.roster
+    .map((pick) => pick.player)
+    .filter((player): player is BasketballPlayerCard => player.sport === "basketball");
+  const alphaScorers = players.filter(
+    (player) => eraAdjusted(player.stats.ppg, player.eraFactor) >= HIGH_USAGE_PPG_THRESHOLD
   ).length;
   const stackingPenalty = Math.max(0, alphaScorers - MAX_ALPHA_SCORERS_BEFORE_PENALTY) * STACKING_PENALTY_PER_EXTRA_ALPHA;
-  const hasPlaymaking = team.roster.some(
-    (pick) => eraAdjusted(pick.player.stats.apg, pick.player.eraFactor) >= PLAYMAKER_APG_THRESHOLD
+  const hasPlaymaking = players.some(
+    (player) => eraAdjusted(player.stats.apg, player.eraFactor) >= PLAYMAKER_APG_THRESHOLD
   );
-  const hasRimProtection = team.roster.some(
-    (pick) => eraAdjusted(pick.player.stats.bpg ?? 0, pick.player.eraFactor) >= RIM_PROTECTOR_BPG_THRESHOLD
+  const hasRimProtection = players.some(
+    (player) => eraAdjusted(player.stats.bpg ?? 0, player.eraFactor) >= RIM_PROTECTOR_BPG_THRESHOLD
   );
   const balanceBonus = (hasPlaymaking ? PLAYMAKING_BONUS : 0) + (hasRimProtection ? RIM_PROTECTION_BONUS : 0);
   return { alphaScorers, stackingPenalty, hasPlaymaking, hasRimProtection, balanceBonus, total: balanceBonus - stackingPenalty };
@@ -276,7 +357,9 @@ export function chemistryPairs(team: TeamState): ChemistryPair[] {
     for (let j = i + 1; j < team.roster.length; j++) {
       const a = team.roster[i];
       const b = team.roster[j];
-      if (areTeammates(a.player.name, b.player.name)) pairs.push({ a, b });
+      if (a.player.sport === "basketball" && b.player.sport === "basketball" && areTeammates(a.player.name, b.player.name)) {
+        pairs.push({ a, b });
+      }
     }
   }
   return pairs;
@@ -307,6 +390,7 @@ export function scoreComponents(team: TeamState): ScoreComponents {
   let plusMinus = 0;
   let teamSuccess = 0;
   for (const pick of team.roster) {
+    if (pick.player.sport !== "basketball") continue;
     offense += playerOffenseValue(pick.player);
     defenseBox += playerDefenseBoxValue(pick.player);
     defRating += playerDefRatingValue(pick.player);
@@ -327,8 +411,8 @@ export function scoreComponents(team: TeamState): ScoreComponents {
  * success, real accolades, and lineup fit/chemistry bonuses, minus a penalty for every pick that
  * isn't in one of their valid positions.
  */
-export function teamScore(team: TeamState): number {
-  return scoreComponents(team).total;
+export function teamScore(team: TeamState, sport: Sport = teamSport(team)): number {
+  return sport === "soccer" ? soccerScoreComponents(team).total : scoreComponents(team).total;
 }
 
 /**
@@ -338,6 +422,7 @@ export function teamScore(team: TeamState): number {
  * since those depend on who else is already drafted.
  */
 export function playerCompositeValue(player: PlayerCard): number {
+  if (player.sport === "soccer") return soccerPlayerCompositeValue(player);
   return (
     playerOffenseValue(player) +
     playerDefenseBoxValue(player) +
@@ -348,55 +433,79 @@ export function playerCompositeValue(player: PlayerCard): number {
   );
 }
 
-export function createMatch(rng: Rng = Math.random): MatchState {
+export function createMatch(rng?: Rng): MatchState;
+export function createMatch(sport: Sport, rng?: Rng): MatchState;
+export function createMatch(sportOrRng: Sport | Rng = "basketball", maybeRng: Rng = Math.random): MatchState {
+  const sport = typeof sportOrRng === "function" ? "basketball" : sportOrRng;
+  const rng = typeof sportOrRng === "function" ? sportOrRng : maybeRng;
   return {
-    pool: buildPool(rng),
+    sport,
+    pool: buildPool(sport, rng),
     teams: { A: freshTeam("A"), B: freshTeam("B") },
     turn: "A",
     phase: "onTheClock",
     auction: null,
     skipOffer: null,
     pendingPlacement: null,
-    log: ["Draft started. A random player is up — seat A is on the clock."],
+    log: [`${sport === "soccer" ? "Football" : "Basketball"} draft started. A random player is up — seat A is on the clock.`],
     winner: null,
   };
 }
 
-/** Highest bid allowed after reserving $1 for every currently empty roster slot. */
+/** Highest bid allowed after reserving $1 for every other empty roster slot. */
 export function maxAffordable(team: TeamState): number {
   const remainingSlots = ROSTER_SIZE - team.roster.length;
   if (remainingSlots <= 0) return 0;
-  return Math.max(0, team.budget - remainingSlots);
+  return Math.max(0, team.budget - remainingSlots + 1);
+}
+
+export const SKIP_PRICES = [0, 1, 5, 10] as const;
+
+/** Normalizes new and legacy team state to the number of skips already consumed. */
+export function skipCount(team: TeamState): number {
+  if (Number.isInteger(team.skipsUsed)) return clamp(team.skipsUsed, 0, SKIP_PRICES.length);
+  return clamp((team.skipUsed ? 1 : 0) + (team.paidSkipUsed ? 1 : 0), 0, SKIP_PRICES.length);
+}
+
+/** Price of the team's next skip, or null after the full ladder has been consumed. */
+export function nextSkipPrice(team: TeamState): number | null {
+  return SKIP_PRICES[skipCount(team)] ?? null;
 }
 
 /** A paid skip preserves every $1 roster slot and, before catch-up, at least $1 of bidding room. */
 export function canBuySkip(team: TeamState, inCatchUp = false): boolean {
   const remainingSlots = ROSTER_SIZE - team.roster.length;
+  const price = nextSkipPrice(team);
   const requiredAfterPurchase = remainingSlots + (inCatchUp ? 0 : 1);
   return (
-    team.skipUsed &&
-    !team.paidSkipUsed &&
+    price !== null &&
+    price > 0 &&
     (!inCatchUp || !team.catchUpSkipUsed) &&
     remainingSlots > 0 &&
-    team.budget - 1 >= requiredAfterPurchase
+    team.budget - price >= requiredAfterPurchase
   );
 }
 
 function clone(state: MatchState): MatchState {
   return {
     ...state,
+    sport: state.sport ?? "basketball",
     pool: [...state.pool],
     teams: {
       A: {
         ...state.teams.A,
         roster: [...state.teams.A.roster],
-        paidSkipUsed: Boolean(state.teams.A.paidSkipUsed),
+        skipsUsed: skipCount(state.teams.A),
+        skipUsed: undefined,
+        paidSkipUsed: undefined,
         catchUpSkipUsed: Boolean(state.teams.A.catchUpSkipUsed),
       },
       B: {
         ...state.teams.B,
         roster: [...state.teams.B.roster],
-        paidSkipUsed: Boolean(state.teams.B.paidSkipUsed),
+        skipsUsed: skipCount(state.teams.B),
+        skipUsed: undefined,
+        paidSkipUsed: undefined,
         catchUpSkipUsed: Boolean(state.teams.B.catchUpSkipUsed),
       },
     },
@@ -434,8 +543,8 @@ function beginPlacement(
 
 function finish(state: MatchState): void {
   state.phase = "complete";
-  const scoreA = teamScore(state.teams.A);
-  const scoreB = teamScore(state.teams.B);
+  const scoreA = teamScore(state.teams.A, state.sport);
+  const scoreB = teamScore(state.teams.B, state.sport);
   state.winner = scoreA === scoreB ? "tie" : scoreA > scoreB ? "A" : "B";
   state.log.push(
     `Draft complete. Team A: ${scoreA.toFixed(1)} combined stat total, Team B: ${scoreB.toFixed(1)}. ${
@@ -446,7 +555,7 @@ function finish(state: MatchState): void {
 
 /**
  * Once one roster is full, bidding ends. The trailing team sees each remaining card and may take
- * it for $1, use its saved free skip, or buy its one additional skip.
+ * it for $1 or use one remaining skip at its current ladder price.
  */
 function beginCatchUpIfOneTeamFull(state: MatchState): void {
   const fullSeat: SeatId | null =
@@ -497,7 +606,8 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
         turn: other(action.seat),
       };
       next.phase = "bidding";
-      next.log.push(`${player.name} (${player.position}) is up. Seat ${action.seat} opens at $${action.startBid}.`);
+      const role = player.sport === "soccer" ? player.role : player.position;
+      next.log.push(`${player.name} (${role}) is up. Seat ${action.seat} opens at $${action.startBid}.`);
       return { ok: true, state: next };
     }
 
@@ -535,15 +645,16 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
         return fail(state, "No player is available to skip right now.");
       }
       if (action.seat !== next.turn) return fail(state, "It's not your turn.");
-      if (next.teams[action.seat].skipUsed) return fail(state, "You've already used your skip.");
-      if (next.phase === "catchUp" && next.teams[action.seat].catchUpSkipUsed) {
+      const team = next.teams[action.seat];
+      if (nextSkipPrice(team) !== 0) return fail(state, "Your free skip has already been used.");
+      if (next.phase === "catchUp" && team.catchUpSkipUsed) {
         return fail(state, "You can only skip one card during catch-up.");
       }
       if (next.pool.length === 0) return fail(state, "No players left in the pool.");
       const player = next.pool.shift() as PlayerCard;
-      next.teams[action.seat].skipUsed = true;
+      team.skipsUsed = skipCount(team) + 1;
       if (next.phase === "catchUp") {
-        next.teams[action.seat].catchUpSkipUsed = true;
+        team.catchUpSkipUsed = true;
         next.log.push(`Seat ${action.seat} uses their free skip — ${player.name} is removed from the draft.`);
         return { ok: true, state: next };
       }
@@ -559,8 +670,9 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       }
       if (action.seat !== next.turn) return fail(state, "It's not your turn.");
       const team = next.teams[action.seat];
-      if (!team.skipUsed) return fail(state, "Use your free skip before buying another one.");
-      if (team.paidSkipUsed) return fail(state, "You've already bought your extra skip.");
+      const price = nextSkipPrice(team);
+      if (price === 0) return fail(state, "Use your free skip before buying another one.");
+      if (price === null) return fail(state, "You've used every available skip.");
       if (next.phase === "catchUp" && team.catchUpSkipUsed) {
         return fail(state, "You can only skip one card during catch-up.");
       }
@@ -570,17 +682,17 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       if (next.pool.length === 0) return fail(state, "No players left in the pool.");
 
       const player = next.pool.shift() as PlayerCard;
-      team.budget -= 1;
-      team.paidSkipUsed = true;
+      team.budget -= price;
+      team.skipsUsed = skipCount(team) + 1;
       if (next.phase === "catchUp") {
         team.catchUpSkipUsed = true;
-        next.log.push(`Seat ${action.seat} buys an extra skip for $1 — ${player.name} is removed from the draft.`);
+        next.log.push(`Seat ${action.seat} buys a skip for $${price} — ${player.name} is removed from the draft.`);
         return { ok: true, state: next };
       }
       next.skipOffer = { player, skippedBy: action.seat, respondingSeat: other(action.seat) };
       next.phase = "skipOffer";
       next.log.push(
-        `Seat ${action.seat} buys an extra skip for $1. ${player.name} is offered to seat ${other(action.seat)} for $1.`
+        `Seat ${action.seat} buys a skip for $${price}. ${player.name} is offered to seat ${other(action.seat)} for $1.`
       );
       return { ok: true, state: next };
     }
@@ -622,7 +734,7 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       if (next.phase !== "placing" || !next.pendingPlacement) return fail(state, "No player is waiting to be placed.");
       const pending = next.pendingPlacement;
       if (action.seat !== pending.seat) return fail(state, "This player belongs to the other team.");
-      if (!POSITIONS.includes(action.slot)) return fail(state, "Unknown position slot.");
+      if (!slotsForSport(next.sport).includes(action.slot)) return fail(state, "Unknown position slot.");
 
       const team = next.teams[action.seat];
       const allowedSlots = availablePlacementSlots(team, pending.player);
@@ -648,7 +760,7 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       const team = next.teams[action.seat];
       const pick = team.roster.find((p) => p.player.id === action.playerId);
       if (!pick) return fail(state, "That player isn't on your roster.");
-      if (!POSITIONS.includes(action.slot)) return fail(state, "Unknown position slot.");
+      if (!slotsForSport(next.sport).includes(action.slot)) return fail(state, "Unknown position slot.");
       if (action.slot === pick.slot) return { ok: true, state: next };
 
       const occupant = team.roster.find((p) => p.slot === action.slot && p.player.id !== action.playerId);
@@ -658,6 +770,11 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
         if (occupant && p.player.id === occupant.player.id) return { ...p, slot: oldSlot };
         return p;
       });
+      if (next.phase === "complete") {
+        const scoreA = teamScore(next.teams.A, next.sport);
+        const scoreB = teamScore(next.teams.B, next.sport);
+        next.winner = scoreA === scoreB ? "tie" : scoreA > scoreB ? "A" : "B";
+      }
       return { ok: true, state: next };
     }
 

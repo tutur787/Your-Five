@@ -1,4 +1,4 @@
-import type { PlayerCard, Position } from "./types";
+import type { BasketballPlayerCard, Position } from "./types";
 
 // [name, position, era, ppg, rpg, apg, secondaryPosition?, tertiaryPosition?]
 // Real single-season stats for NBA 2K's "Classic Teams" rosters (2kratings.com/classic-teams):
@@ -985,13 +985,14 @@ const REALISM: Record<string, RealismRow> = {
   "antonio-daniels-2006-07": { spg: 0.5, bpg: 0.1, plusMinus: -0.3, defRtgVsAvg: -4.2, teamWinPct: 0.5, eraFactor: 1.04 },
 };
 
-export const PLAYER_DATABASE: PlayerCard[] = raw.map(([name, position, era, ppg, rpg, apg, secondaryPosition, tertiaryPosition]) => {
+export const PLAYER_DATABASE: BasketballPlayerCard[] = raw.map(([name, position, era, ppg, rpg, apg, secondaryPosition, tertiaryPosition]) => {
   const id = `${name}-${era}`
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
   const realism = REALISM[id];
   return {
+    sport: "basketball" as const,
     id,
     name,
     position,

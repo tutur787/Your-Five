@@ -1,4 +1,4 @@
-import { MatchAction, MatchState, SeatId } from "./types";
+import { MatchAction, MatchState, SeatId, Sport } from "./types";
 
 /** Whether both seats in a room currently have a connected player. */
 export interface SeatsFilled {
@@ -19,7 +19,7 @@ export type RoomClientMessage =
 
 /** Sent by the server over the room WebSocket. */
 export type RoomServerMessage =
-  | { type: "joined"; seat: SeatId; token: string; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled }
+  | { type: "joined"; seat: SeatId; token: string; sport: Sport; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled }
   | { type: "state"; state: MatchState }
   | { type: "roomUpdate"; seatsFilled: SeatsFilled }
   | { type: "opponentLeft"; seat: SeatId }
@@ -33,5 +33,5 @@ export type RoomServerMessage =
 /** Sent by the server over the matchmaking WebSocket. */
 export type MatchmakingServerMessage =
   | { type: "waiting" }
-  | { type: "matchFound"; code: string; seat: SeatId; token: string }
+  | { type: "matchFound"; code: string; seat: SeatId; token: string; sport: Sport }
   | { type: "error"; error: string };

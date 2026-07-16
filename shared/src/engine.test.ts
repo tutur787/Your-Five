@@ -16,6 +16,7 @@ import {
   MAX_ALPHA_SCORERS_BEFORE_PENALTY,
   MAX_PER_POSITION_IN_POOL,
   MIN_ELIGIBLE_PER_POSITION_IN_POOL,
+  nextSkipPrice,
   PENALTY_PER_WRONG_POSITION,
   positionPenaltyForSlot,
   scoreComponents,
@@ -28,9 +29,9 @@ import {
 import { decideAiAction } from "./aiOpponent";
 import { dailyRng } from "./dailySeed";
 import { PLAYER_DATABASE } from "./players";
-import { MatchState, PlayerCard, POSITIONS } from "./types";
+import { AiDecisionContext, BasketballPlayerCard, MatchState, PlayerCard, POSITIONS } from "./types";
 
-function findPlayer(id: string): PlayerCard {
+function findPlayer(id: string): BasketballPlayerCard {
   const player = PLAYER_DATABASE.find((p) => p.id === id);
   if (!player) throw new Error(`Test setup error: no player with id ${id}`);
   return player;
@@ -39,10 +40,11 @@ function findPlayer(id: string): PlayerCard {
 /** A hand-built match with a specific, known reveal order (bypasses the random pool for determinism). */
 function matchWithPool(players: PlayerCard[]): MatchState {
   return {
+    sport: "basketball",
     pool: [...players],
     teams: {
-      A: { seat: "A", budget: 20, roster: [], skipUsed: false, paidSkipUsed: false, catchUpSkipUsed: false },
-      B: { seat: "B", budget: 20, roster: [], skipUsed: false, paidSkipUsed: false, catchUpSkipUsed: false },
+      A: { seat: "A", budget: 20, roster: [], skipsUsed: 0, catchUpSkipUsed: false },
+      B: { seat: "B", budget: 20, roster: [], skipsUsed: 0, catchUpSkipUsed: false },
     },
     turn: "A",
     phase: "onTheClock",
@@ -121,7 +123,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
 {
   let state = createMatch();
   state = must(state, { type: "useSkip", seat: "A" });
-  assert(state.phase === "skipOffer" && state.teams.A.skipUsed, "S2: skip offer created, A's skip consumed");
+  assert(state.phase === "skipOffer" && state.teams.A.skipsUsed === 1, "S2: skip offer created, A's free skip consumed");
   const offeredId = state.skipOffer!.player.id;
   state = must(state, { type: "respondToSkip", seat: "B", accept: true });
   assert(
@@ -138,7 +140,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   state = must(state, { type: "useSkip", seat: "A" });
   state = must(state, { type: "respondToSkip", seat: "B", accept: false });
   assert(state.teams.A.roster.length === 0 && state.teams.B.roster.length === 0, "S3: neither team gets the player");
-  assert(state.teams.B.skipUsed === false, "S3: passing on someone else's skip offer does NOT consume B's own skip");
+  assert(state.teams.B.skipsUsed === 0, "S3: passing on someone else's skip offer does NOT consume B's own skip");
   assert(state.pool.length === poolSizeBefore - 1, "S3: player permanently removed from pool");
   assert(state.turn === "B", "S3: turn passes to B after the round resolves");
 }
@@ -156,29 +158,55 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   assert(state.skipOffer!.respondingSeat === "B", "S4: skip offer now goes to B");
   const declineRes = applyAction(state, { type: "respondToSkip", seat: "B", accept: false });
   assert(declineRes.ok === true, "S4: B can freely pass even though B already used their own skip earlier");
-  assert(declineRes.state.teams.B.skipUsed === true, "S4: B's skipUsed stays true from their earlier use, unaffected by passing");
+  assert(declineRes.state.teams.B.skipsUsed === 1, "S4: B's skip count stays unchanged after passing");
 }
 
 // --- Scenario 5: budget safeguard rejects overbidding ---
 {
   let state = createMatch();
-  // remainingSlots=5, so maxAffordable = 20-5=15.
-  const res = applyAction(state, { type: "openBid", seat: "A", startBid: 16 });
+  // The current player fills one of five open slots, so only four future $1 slots are reserved.
+  const res = applyAction(state, { type: "openBid", seat: "A", startBid: 17 });
   assert(res.ok === false, "S5: bid exceeding reserve-adjusted max is rejected");
-  const res2 = applyAction(state, { type: "openBid", seat: "A", startBid: 15 });
+  const res2 = applyAction(state, { type: "openBid", seat: "A", startBid: 16 });
   assert(res2.ok === true, "S5: bid exactly at max allowed succeeds");
 
-  const paidSkip = matchWithPool([findPlayer("allen-iverson-2000-01")]);
-  paidSkip.teams.A.skipUsed = true;
-  const paidRes = applyAction(paidSkip, { type: "buySkip", seat: "A" });
+  const oneDollarSkip = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  oneDollarSkip.teams.A.skipsUsed = 1;
+  const paidRes = applyAction(oneDollarSkip, { type: "buySkip", seat: "A" });
   assert(
-    paidRes.ok && paidRes.state.phase === "skipOffer" && paidRes.state.teams.A.budget === 19,
-    "S5b: after the free skip, a team may buy one extra skip for $1"
+    paidRes.ok && paidRes.state.phase === "skipOffer" && paidRes.state.teams.A.budget === 19 && paidRes.state.teams.A.skipsUsed === 2,
+    "S5b: the second skip costs $1"
   );
-  assert(paidRes.state.teams.A.paidSkipUsed === true, "S5b: the paid skip is marked as consumed");
+
+  const fiveDollarSkip = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  fiveDollarSkip.teams.A.skipsUsed = 2;
+  const fiveDollarResult = applyAction(fiveDollarSkip, { type: "buySkip", seat: "A" });
+  assert(
+    fiveDollarResult.ok && fiveDollarResult.state.teams.A.budget === 15 && fiveDollarResult.state.teams.A.skipsUsed === 3,
+    "S5b: the third skip costs $5"
+  );
+
+  const tenDollarSkip = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  tenDollarSkip.teams.A.skipsUsed = 3;
+  tenDollarSkip.teams.A.budget = 14;
+  tenDollarSkip.teams.A.roster = PLAYER_DATABASE.slice(0, 4).map((player, index) => ({
+    player,
+    price: 1,
+    slot: POSITIONS[index]!,
+  }));
+  const tenDollarResult = applyAction(tenDollarSkip, { type: "buySkip", seat: "A" });
+  assert(
+    tenDollarResult.ok && tenDollarResult.state.teams.A.budget === 4 && tenDollarResult.state.teams.A.skipsUsed === 4,
+    "S5b: the fourth skip costs $10 when the roster reserve remains intact"
+  );
+  assert(nextSkipPrice(tenDollarResult.state.teams.A) === null, "S5b: no fifth skip is available");
+
+  const exhaustedSkips = matchWithPool([findPlayer("allen-iverson-2000-01")]);
+  exhaustedSkips.teams.A.skipsUsed = 4;
+  assert(applyAction(exhaustedSkips, { type: "buySkip", seat: "A" }).ok === false, "S5b: a fifth skip is rejected");
 
   const noSpareBudget = matchWithPool([findPlayer("allen-iverson-2000-01")]);
-  noSpareBudget.teams.A.skipUsed = true;
+  noSpareBudget.teams.A.skipsUsed = 1;
   noSpareBudget.teams.A.budget = 6;
   const blockedPaidRes = applyAction(noSpareBudget, { type: "buySkip", seat: "A" });
   assert(blockedPaidRes.ok === false, "S5b: a paid skip cannot spend money reserved for open roster spots");
@@ -205,7 +233,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   assert(state.teams.A.roster.length === 5 && state.teams.B.roster.length === 5, "S6: both rosters reach 5 players");
 }
 
-// --- Scenario 7: once a team hits 5/5, the other team keeps its free skip and may buy one more ---
+// --- Scenario 7: once a team hits 5/5, the other team may use only its next ladder skip ---
 {
   let state = createMatch();
   let guard = 0;
@@ -225,7 +253,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   assert(state.phase === "catchUp" && state.turn === "B", "S7: B enters the $1 catch-up phase when A is full");
 
   const paidCatchUp = JSON.parse(JSON.stringify(state)) as MatchState;
-  paidCatchUp.teams.B.skipUsed = true; // The free skip was spent before the endgame.
+  paidCatchUp.teams.B.skipsUsed = 1; // The free skip was spent before the endgame.
   const paidCatchUpResult = applyAction(paidCatchUp, { type: "buySkip", seat: "B" });
   assert(
     paidCatchUpResult.ok &&
@@ -443,13 +471,21 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   let illegalActionFound = false;
   for (let game = 0; game < totalGames && !illegalActionFound; game++) {
     let state = createMatch();
+    const seenPlayerIds = new Set<string>();
     let guard = 0;
     while (state.phase !== "complete") {
       guard++;
       if (guard > 300) throw new Error(`AI-vs-AI draft #${game} did not complete in a reasonable number of actions`);
       const seat = actingSeat(state);
       if (!seat) throw new Error(`No acting seat but phase is ${state.phase} (game #${game})`);
-      const action = decideAiAction(state, seat);
+      const shown = state.auction?.player ?? state.skipOffer?.player ?? state.pendingPlacement?.player ?? state.pool[0];
+      if (shown) seenPlayerIds.add(shown.id);
+      const context: AiDecisionContext = {
+        difficulty: "competitive",
+        sessionSeed: `engine-simulation-${game}`,
+        seenPlayerIds: [...seenPlayerIds],
+      };
+      const action = decideAiAction(state, seat, context);
       const res = applyAction(state, action);
       if (!res.ok) {
         assert(false, `S13: AI produced an illegal action in game #${game}: ${JSON.stringify(action)} -> ${res.error}`);
@@ -478,7 +514,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   let state = matchWithPool([mikan]);
   state = must(state, { type: "openBid", seat: "A", startBid: 1 });
   state = must(state, { type: "acceptBid", seat: "B" });
-  const drafted = state.teams.A.roster[0].player;
+  const drafted = state.teams.A.roster[0].player as BasketballPlayerCard;
   assert(
     drafted.stats.ppg === mikan.stats.ppg && drafted.stats.rpg === mikan.stats.rpg && drafted.stats.apg === mikan.stats.apg,
     "S14: the displayed stats on the drafted card are the real, unadjusted numbers"

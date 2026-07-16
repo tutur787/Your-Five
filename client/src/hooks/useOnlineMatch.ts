@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MatchAction, MatchState, RoomKind, SeatId, SeatsFilled } from "@fiveaside/shared";
 import { RoomSocket, storeRoomToken } from "../utils/socket";
+import { useSport } from "./useSport";
 
 export function useOnlineMatch(code: string, token: string | null = null) {
+  const { setSport } = useSport();
   const socketRef = useRef<RoomSocket | null>(null);
   const [state, setState] = useState<MatchState | null>(null);
   const [seat, setSeat] = useState<SeatId | null>(null);
@@ -25,6 +27,7 @@ export function useOnlineMatch(code: string, token: string | null = null) {
       onMessage: (message) => {
         switch (message.type) {
           case "joined":
+            setSport(message.sport);
             storeRoomToken(code, message.token);
             setSeat(message.seat);
             setRoomKind(message.roomKind);
@@ -58,7 +61,7 @@ export function useOnlineMatch(code: string, token: string | null = null) {
       socket.close();
       socketRef.current = null;
     };
-  }, [code, token]);
+  }, [code, token, setSport]);
 
   const dispatch = useCallback((action: MatchAction) => {
     socketRef.current?.action(action).catch((err: Error) => setError(err.message));

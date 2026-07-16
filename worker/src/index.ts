@@ -2,6 +2,7 @@ import { Env } from "./env";
 import { generateClaimToken, generateRoomCode } from "./ids";
 import { MatchmakingDO } from "./matchmakingDO";
 import { RoomDO } from "./roomDO";
+import type { Sport } from "@fiveaside/shared";
 
 // wrangler.jsonc's durable_objects.bindings reference these class names, so the module that's
 // `main` must re-export both classes even though nothing in this file calls them directly.
@@ -25,6 +26,11 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
+function requestedSport(url: URL): Sport | null {
+  const value = url.searchParams.get("sport") ?? "basketball";
+  return value === "basketball" || value === "soccer" ? value : null;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -41,17 +47,21 @@ export default {
     if (url.pathname === "/rooms/new") {
       if (request.method !== "GET") return new Response("Method not allowed.", { status: 405, headers: CORS_HEADERS });
 
+      const sport = requestedSport(url);
+      if (!sport) return json({ error: "Invalid sport." }, 400);
       const token = generateClaimToken();
       for (let attempt = 0; attempt < ROOM_ALLOCATION_ATTEMPTS; attempt += 1) {
         const code = generateRoomCode();
-        const reserved = await env.ROOMS.getByName(code).reservePrivateRoom(token);
-        if (reserved) return json({ code, token });
+        const reserved = await env.ROOMS.getByName(code).reservePrivateRoom(token, sport);
+        if (reserved) return json({ code, token, sport });
       }
       return json({ error: "Could not allocate a room. Please try again." }, 503);
     }
 
     if (url.pathname === "/matchmaking") {
-      const stub = env.MATCHMAKING.getByName("global");
+      const sport = requestedSport(url);
+      if (!sport) return json({ error: "Invalid sport." }, 400);
+      const stub = env.MATCHMAKING.getByName(sport);
       return stub.fetch(request);
     }
 

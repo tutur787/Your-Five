@@ -1,5 +1,22 @@
+export type Sport = "basketball" | "soccer";
+
+export type AiDifficulty = "casual" | "competitive" | "expert";
+
+export interface AiDecisionContext {
+  difficulty: AiDifficulty;
+  sessionSeed: string;
+  /** Cards whose identities have already been shown to both players. */
+  seenPlayerIds: readonly string[];
+}
+
 export type Position = "PG" | "SG" | "SF" | "PF" | "C";
 export const POSITIONS: Position[] = ["PG", "SG", "SF", "PF", "C"];
+
+export type SoccerRole = "GK" | "DEF" | "MID" | "ATT";
+export const SOCCER_ROLES: SoccerRole[] = ["GK", "DEF", "MID", "ATT"];
+export type SoccerSlot = "GK" | "DEF_L" | "DEF_R" | "MID" | "ATT";
+export const SOCCER_SLOTS: SoccerSlot[] = ["GK", "DEF_L", "DEF_R", "MID", "ATT"];
+export type LineupSlot = Position | SoccerSlot;
 
 export interface PlayerStats {
   ppg: number;
@@ -24,7 +41,8 @@ export interface PlayerAccolades {
   allDefense?: number;
 }
 
-export interface PlayerCard {
+export interface BasketballPlayerCard {
+  sport: "basketball";
   id: string;
   name: string;
   position: Position;
@@ -42,23 +60,82 @@ export interface PlayerCard {
   eraFactor?: number;
 }
 
+export interface SoccerStats {
+  minutes: number;
+  nonPenaltyGoalsPer90: number;
+  xgPer90: number;
+  assistsPer90: number;
+  xaPer90: number;
+  completedDribblesPer90: number;
+  progressiveActionsPer90: number;
+  passCompletionPct: number;
+  recoveriesPer90: number;
+  tacklesWonPer90: number;
+  interceptionsPer90: number;
+  duelWinPct: number;
+  pressureRegainsPer90: number;
+  savePct: number;
+  xgPreventedPer90: number;
+  claimsPer90: number;
+  sweeperActionsPer90: number;
+}
+
+export interface SoccerPerformance {
+  attack: number;
+  creation: number;
+  progression: number;
+  defense: number;
+  goalkeeping: number;
+  roleScore: number;
+}
+
+export interface SoccerHonors {
+  champion?: boolean;
+  bestPlayer?: boolean;
+  topScorerOrKeeper?: boolean;
+}
+
+export interface SoccerPlayerCard {
+  sport: "soccer";
+  id: string;
+  sourcePlayerId: number;
+  name: string;
+  role: SoccerRole;
+  secondaryRole?: SoccerRole;
+  tertiaryRole?: SoccerRole;
+  era: string;
+  team: string;
+  edition: string;
+  editionKind: "club" | "tournament";
+  stats: SoccerStats;
+  performance: SoccerPerformance;
+  teamSuccess: number;
+  honors?: SoccerHonors;
+  sourcePositionLabels: string[];
+  sourceRevision: string;
+}
+
+export type PlayerCard = BasketballPlayerCard | SoccerPlayerCard;
+
 export type SeatId = "A" | "B";
 
 export interface RosterPick {
   player: PlayerCard;
   price: number;
   /** Position slot the GM has assigned this player to. */
-  slot: Position;
+  slot: LineupSlot;
 }
 
 export interface TeamState {
   seat: SeatId;
   budget: number;
   roster: RosterPick[];
-  skipUsed: boolean;
-  /** Each team may purchase one additional skip for $1 after using its free skip. */
-  paidSkipUsed: boolean;
-  /** At most one free-or-paid skip may be used after either roster reaches five. */
+  /** Number consumed from the free, $1, $5, $10 skip ladder. */
+  skipsUsed: number;
+  /** Legacy fields accepted while persisted rooms migrate to skipsUsed. */
+  skipUsed?: boolean;
+  paidSkipUsed?: boolean;
+  /** At most one skip at its current ladder price may be used after either roster reaches five. */
   catchUpSkipUsed: boolean;
 }
 
@@ -99,6 +176,7 @@ export const ROSTER_SIZE = 5;
 export const STARTING_BUDGET = 20;
 
 export interface MatchState {
+  sport: Sport;
   pool: PlayerCard[]; // remaining players yet to be revealed, in reveal order
   teams: Record<SeatId, TeamState>;
   turn: SeatId; // whose turn it is to act first on the next revealed player
@@ -119,8 +197,8 @@ export type MatchAction =
   | { type: "buySkip"; seat: SeatId }
   | { type: "takeForOne"; seat: SeatId }
   | { type: "respondToSkip"; seat: SeatId; accept: boolean }
-  | { type: "placePick"; seat: SeatId; slot: Position }
-  | { type: "setSlot"; seat: SeatId; playerId: string; slot: Position };
+  | { type: "placePick"; seat: SeatId; slot: LineupSlot }
+  | { type: "setSlot"; seat: SeatId; playerId: string; slot: LineupSlot };
 
 export interface ActionResult {
   ok: boolean;

@@ -5,6 +5,7 @@ import {
   MatchAction,
   MatchState,
   maxAffordable,
+  nextSkipPrice,
   PlayerCard,
   SeatId,
   validSlotsFor,
@@ -22,6 +23,20 @@ interface Props {
 const TIMER_SECONDS = 15;
 
 function StatLine({ player }: { player: PlayerCard }) {
+  if (player.sport === "soccer") {
+    const { stats } = player;
+    const byRole = {
+      GK: [["SAVE%", stats.savePct], ["XGP/90", stats.xgPreventedPer90], ["CLAIMS", stats.claimsPer90], ["SWEEP", stats.sweeperActionsPer90], ["PASS%", stats.passCompletionPct]],
+      DEF: [["TKL/90", stats.tacklesWonPer90], ["INT/90", stats.interceptionsPer90], ["DUEL%", stats.duelWinPct], ["PROG", stats.progressiveActionsPer90], ["REGAIN", stats.pressureRegainsPer90]],
+      MID: [["AST/90", stats.assistsPer90], ["xA/90", stats.xaPer90], ["PROG", stats.progressiveActionsPer90], ["REC/90", stats.recoveriesPer90], ["PASS%", stats.passCompletionPct]],
+      ATT: [["NPG/90", stats.nonPenaltyGoalsPer90], ["xG/90", stats.xgPer90], ["AST/90", stats.assistsPer90], ["xA/90", stats.xaPer90], ["DRB/90", stats.completedDribblesPer90]],
+    } as const;
+    return (
+      <div className="player-stat-grid soccer-stats">
+        {byRole[player.role].map(([label, value]) => <span className="player-stat" key={label}><strong>{value.toFixed(label.includes("%") ? 1 : 2)}</strong><small>{label}</small></span>)}
+      </div>
+    );
+  }
   const { ppg, rpg, apg, spg, bpg } = player.stats;
   const stats: Array<[string, number]> = [
     ["PPG", ppg],
@@ -215,7 +230,7 @@ function PlacementPanel({
               className={listedSlots.includes(slot) ? "primary position-choice" : "position-choice"}
               onClick={() => dispatch({ type: "placePick", seat, slot })}
             >
-              {slot}
+              {slot === "DEF_L" ? "DEF-L" : slot === "DEF_R" ? "DEF-R" : slot}
             </button>
           ))}
         </div>
@@ -294,7 +309,8 @@ function RevealPanel({
 }) {
   const player = state.pool[0];
   const team = state.teams[seat];
-  const freeSkipAvailable = !team.skipUsed;
+  const skipPrice = nextSkipPrice(team);
+  const freeSkipAvailable = skipPrice === 0;
   const paidSkipAvailable = canBuySkip(team);
   const cap = maxAffordable(team);
   const [bid, setBid] = useState(1);
@@ -371,17 +387,17 @@ function RevealPanel({
           ) : (
             <button
               className="danger"
-              disabled={!paidSkipAvailable}
+              disabled={skipPrice === null || !paidSkipAvailable}
               title={
-                team.paidSkipUsed
-                  ? "You've already bought your extra skip"
+                skipPrice === null
+                  ? "You've used every available skip"
                   : paidSkipAvailable
-                    ? "Buy your one additional skip"
+                    ? `Buy your next skip for $${skipPrice}`
                     : "You need to reserve $1 for every open roster spot"
               }
               onClick={() => dispatch({ type: "buySkip", seat })}
             >
-              {team.paidSkipUsed ? "Extra skip used" : "Buy skip · $1"}
+              {skipPrice === null ? "All skips used" : `Buy skip · $${skipPrice}`}
             </button>
           )}
         </div>
@@ -411,7 +427,8 @@ function CatchUpPanel({
     );
   }
 
-  const freeSkipAvailable = !team.catchUpSkipUsed && !team.skipUsed;
+  const skipPrice = team.catchUpSkipUsed ? null : nextSkipPrice(team);
+  const freeSkipAvailable = skipPrice === 0;
   const paidSkipAvailable = canBuySkip(team, true);
 
   return (
@@ -436,14 +453,14 @@ function CatchUpPanel({
             <button className="danger" onClick={() => dispatch({ type: "useSkip", seat })}>
               Use free skip
             </button>
-          ) : !team.catchUpSkipUsed && !team.paidSkipUsed ? (
+          ) : skipPrice !== null ? (
             <button
               className="danger"
               disabled={!paidSkipAvailable}
-              title={paidSkipAvailable ? "Buy your one additional skip" : "Not enough cap after reserving $1 per open spot"}
+              title={paidSkipAvailable ? `Buy your next skip for $${skipPrice}` : "Not enough cap after reserving $1 per open spot"}
               onClick={() => dispatch({ type: "buySkip", seat })}
             >
-              Buy skip · $1
+              Buy skip · ${skipPrice}
             </button>
           ) : null}
         </div>

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { actingSeat as computeActingSeat, MatchAction, MatchState, Position, SeatId } from "@fiveaside/shared";
+import { actingSeat as computeActingSeat, LineupSlot, MatchAction, MatchState, SeatId } from "@fiveaside/shared";
 import { seatLabel, TeamPanel } from "../components/TeamPanel";
 import { ActionPanel } from "../components/ActionPanel";
 import { Results } from "./Results";
@@ -20,11 +20,11 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
   const canAct = mySeat === "local" ? acting !== null : acting === mySeat;
   const label = (seat: SeatId) => seatLabel(seat, seatNames);
   const canEdit = (seat: SeatId) => mySeat === "local" || mySeat === seat;
-  const changeSlot = (seat: SeatId) => (playerId: string, slot: Position) =>
+  const changeSlot = (seat: SeatId) => (playerId: string, slot: LineupSlot) =>
     dispatch({ type: "setSlot", seat, playerId, slot });
 
   return (
-    <div className="draft-workspace">
+    <div className={`draft-workspace sport-${state.sport}`}>
       {headerExtra}
       {error && <div className="error-banner">{error}</div>}
 
@@ -40,6 +40,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           editable={canEdit("A")}
           onChangeSlot={changeSlot("A")}
           inCatchUp={state.phase === "catchUp" && state.turn === "A"}
+          sport={state.sport}
         />
         <TeamPanel
           team={state.teams.B}
@@ -48,6 +49,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           editable={canEdit("B")}
           onChangeSlot={changeSlot("B")}
           inCatchUp={state.phase === "catchUp" && state.turn === "B"}
+          sport={state.sport}
         />
       </div>
 

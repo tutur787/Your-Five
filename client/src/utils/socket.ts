@@ -1,4 +1,4 @@
-import { MatchAction, MatchmakingServerMessage, RoomServerMessage } from "@fiveaside/shared";
+import { MatchAction, MatchmakingServerMessage, RoomServerMessage, Sport } from "@fiveaside/shared";
 
 const ACK_TIMEOUT_MS = 7000;
 const ROOM_CODE_PATTERN = /^[A-HJ-NP-Z2-9]{6}$/;
@@ -19,8 +19,8 @@ function socketUrl(path: string): string {
 }
 
 /** Reserves a private room and returns the creator's durable seat token. */
-export async function createRoomCode(): Promise<{ code: string; token: string }> {
-  const res = await fetch(`${httpBase()}/rooms/new`);
+export async function createRoomCode(sport: Sport): Promise<{ code: string; token: string; sport: Sport }> {
+  const res = await fetch(`${httpBase()}/rooms/new?sport=${sport}`);
   if (!res.ok) throw new Error("Could not reach the server.");
   const data: unknown = await res.json();
   if (
@@ -35,7 +35,7 @@ export async function createRoomCode(): Promise<{ code: string; token: string }>
   ) {
     throw new Error("The server returned an invalid room.");
   }
-  return { code: data.code, token: data.token };
+  return { code: data.code, token: data.token, sport };
 }
 
 export function getStoredRoomToken(code: string): string | null {
@@ -137,8 +137,8 @@ export class RoomSocket {
 
 /** Connects to the shared matchmaking queue. This protocol needs no client->server payloads:
  * connecting IS "find a match," and closing the socket IS "cancel matchmaking." */
-export function connectMatchmaking(onMessage: (message: MatchmakingServerMessage) => void): WebSocket {
-  const ws = new WebSocket(socketUrl("/matchmaking"));
+export function connectMatchmaking(sport: Sport, onMessage: (message: MatchmakingServerMessage) => void): WebSocket {
+  const ws = new WebSocket(socketUrl(`/matchmaking?sport=${sport}`));
   ws.addEventListener("message", (event) => {
     try {
       onMessage(JSON.parse(event.data));

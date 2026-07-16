@@ -5,4 +5,5 @@ dist/
 *.tsbuildinfo
 .DS_Store
 .wrangler/
+.cache/soccer-data/
 deployment.txt

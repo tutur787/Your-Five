@@ -1,4 +1,4 @@
-import { MatchState, Position, SeatId, teamScore } from "@fiveaside/shared";
+import { LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared";
 import { ShareCard } from "../components/ShareCard";
 import { ScoreBreakdown } from "../components/ScoreBreakdown";
 import { LineupCourt } from "../components/TeamPanel";
@@ -8,20 +8,20 @@ interface Props {
   seatLabel: (seat: SeatId) => string;
   onRematch?: () => void;
   editableSeat?: SeatId | "local" | null;
-  onChangeSlot?: (seat: SeatId, playerId: string, slot: Position) => void;
+  onChangeSlot?: (seat: SeatId, playerId: string, slot: LineupSlot) => void;
   subtitle?: string;
 }
 
 export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlot, subtitle }: Props) {
   const seats: SeatId[] = ["A", "B"];
-  const scoreA = teamScore(state.teams.A);
-  const scoreB = teamScore(state.teams.B);
+  const scoreA = teamScore(state.teams.A, state.sport);
+  const scoreB = teamScore(state.teams.B, state.sport);
 
   return (
     <section className="results-shell">
       <div className="results-header">
         <div className="page-eyebrow">FINAL SCORE</div>
-        <h2>{state.winner === "tie" ? "Dead even." : `${seatLabel(state.winner === "A" ? "A" : "B")} takes it.`}</h2>
+        <h2>{state.winner === "tie" ? "Dead even." : `${seatLabel(state.winner === "A" ? "A" : "B")} takes the ${state.sport === "soccer" ? "match" : "game"}.`}</h2>
         <div className="final-scoreline">
           <span>{seatLabel("A")} <strong>{scoreA.toFixed(1)}</strong></span>
           <span className="score-divider">&ndash;</span>
@@ -39,9 +39,10 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
                 <h3>{seatLabel(seat)}</h3>
                 <span>${team.budget} left</span>
               </div>
-              <ScoreBreakdown team={team} defaultOpen />
+              <ScoreBreakdown team={team} sport={state.sport} defaultOpen />
               <LineupCourt
                 team={team}
+                sport={state.sport}
                 editable={editable}
                 onChangeSlot={onChangeSlot ? (playerId, slot) => onChangeSlot(seat, playerId, slot) : undefined}
               />

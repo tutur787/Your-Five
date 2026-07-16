@@ -1,5 +1,5 @@
 import { DurableObject } from "cloudflare:workers";
-import { MatchmakingServerMessage } from "@fiveaside/shared";
+import { MatchmakingServerMessage, Sport } from "@fiveaside/shared";
 import { Env } from "./env";
 import { generateClaimToken, generateRoomCode } from "./ids";
 
@@ -19,6 +19,9 @@ export class MatchmakingDO extends DurableObject<Env> {
     if (request.headers.get("Upgrade")?.toLowerCase() !== "websocket") {
       return new Response("Expected a WebSocket upgrade request.", { status: 426 });
     }
+    const requested = new URL(request.url).searchParams.get("sport") ?? "basketball";
+    if (requested !== "basketball" && requested !== "soccer") return new Response("Invalid sport.", { status: 400 });
+    const sport: Sport = requested;
 
     const pair = new WebSocketPair();
     const [client, server] = [pair[0], pair[1]];
@@ -37,7 +40,7 @@ export class MatchmakingDO extends DurableObject<Env> {
       waiting.serializeAttachment({ status: "matched" } satisfies WaitAttachment);
       this.ctx.acceptWebSocket(server);
       server.serializeAttachment({ status: "matched" } satisfies WaitAttachment);
-      await this.pair(waiting, server);
+      await this.pair(waiting, server, sport);
     } else {
       this.ctx.acceptWebSocket(server);
       server.serializeAttachment({ status: "waiting" } satisfies WaitAttachment);
@@ -59,14 +62,14 @@ export class MatchmakingDO extends DurableObject<Env> {
     // Same as close — no explicit cleanup needed.
   }
 
-  private async pair(a: WebSocket, b: WebSocket): Promise<void> {
+  private async pair(a: WebSocket, b: WebSocket, sport: Sport): Promise<void> {
     const tokenA = generateClaimToken();
     const tokenB = generateClaimToken();
     let code: string | null = null;
 
     for (let attempt = 0; attempt < ROOM_ALLOCATION_ATTEMPTS; attempt += 1) {
       const candidate = generateRoomCode();
-      if (await this.env.ROOMS.getByName(candidate).initMatchedRoom(tokenA, tokenB)) {
+      if (await this.env.ROOMS.getByName(candidate).initMatchedRoom(tokenA, tokenB, sport)) {
         code = candidate;
         break;
       }
@@ -91,8 +94,8 @@ export class MatchmakingDO extends DurableObject<Env> {
       return;
     }
 
-    this.send(a, { type: "matchFound", code, seat: "A", token: tokenA });
-    this.send(b, { type: "matchFound", code, seat: "B", token: tokenB });
+    this.send(a, { type: "matchFound", code, seat: "A", token: tokenA, sport });
+    this.send(b, { type: "matchFound", code, seat: "B", token: tokenB, sport });
 
     this.closeSoon(a);
     this.closeSoon(b);
