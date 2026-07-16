@@ -20,10 +20,10 @@ function assert(condition: boolean, message: string) {
 const byRole = (role: SoccerPlayerCard["role"]) => SOCCER_PLAYER_DATABASE.find((player) => player.role === role)!;
 const emptyTeam = (): TeamState => ({ seat: "A", budget: 20, roster: [], skipsUsed: 0, catchUpSkipUsed: false });
 
-assert(SOCCER_PLAYER_DATABASE.length === 60, "database contains exactly 60 cards");
-assert(new Set(SOCCER_PLAYER_DATABASE.map((player) => player.id)).size === 60, "all soccer card IDs are unique");
+assert(SOCCER_PLAYER_DATABASE.length === 298, "database contains all 298 official UEFA selection cards");
+assert(new Set(SOCCER_PLAYER_DATABASE.map((player) => player.id)).size === 298, "all soccer card IDs are unique");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.sourceRevision === SOCCER_SOURCE_REVISION), "every card uses the pinned source revision");
-assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes >= (player.editionKind === "club" ? 900 : 180)), "every card meets its minutes floor");
+assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes > 0 && player.stats.appearances > 0), "every card has verified UEFA playing time");
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.stats).every(Number.isFinite)), "every sourced metric is finite");
 
 const defender = byRole("DEF");
@@ -47,8 +47,13 @@ for (const player of pool) {
   for (const role of roles) eligibility[role!]++;
 }
 assert(eligibility.GK >= 2 && eligibility.DEF >= 4 && eligibility.MID >= 2 && eligibility.ATT >= 2, "pool guarantees minimum role coverage");
+assert(new Set(pool.map((player) => player.sourceIdentity)).size === pool.length, "a pool never contains two editions of the same player");
 
-const chemistryCards = SOCCER_PLAYER_DATABASE.filter((player) => player.edition === "SA15" && player.team === "Juventus").slice(0, 5);
+const teammateGroups = new Map<string, SoccerPlayerCard[]>();
+for (const player of SOCCER_PLAYER_DATABASE.filter((card) => card.edition === "TOTY2011")) {
+  for (const teamId of player.sourceTeamIds) teammateGroups.set(teamId, [...(teammateGroups.get(teamId) ?? []), player]);
+}
+const chemistryCards = [...teammateGroups.values()].sort((a, b) => b.length - a.length)[0].slice(0, 5);
 const chemistryTeam = emptyTeam();
 chemistryTeam.roster = chemistryCards.map((player, index) => ({ player, price: 1, slot: ["GK", "DEF_L", "DEF_R", "MID", "ATT"][index] as any }));
 assert(soccerScoreComponents(chemistryTeam).chemistry.bonus === 12, "chemistry is capped at 12");

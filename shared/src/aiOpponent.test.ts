@@ -1,5 +1,6 @@
 import {
   AI_DIFFICULTY_PROFILES,
+  aiOpenValidSlots,
   aiThinkingDelay,
   applyAiLineupOptimization,
   bestAiLineup,
@@ -57,6 +58,53 @@ const weakAction = decideAiAction(weakState, "A", weakContext);
 assert(weakEvaluation.percentile < AI_DIFFICULTY_PROFILES.competitive.skipPercentile, "the weakest card falls below the competitive skip threshold");
 assert(weakAction.type === "useSkip", "the AI spends its free skip on a bottom-tier public option");
 
+const purePointGuards = PLAYER_DATABASE.filter(
+  (player) => player.position === "PG" && !player.secondaryPosition && !player.tertiaryPosition
+);
+const ownedPointGuard = purePointGuards[0];
+const offeredPointGuard = purePointGuards.find((player) => player.id !== ownedPointGuard.id)!;
+const positionDisciplinedState = stateWithPool([offeredPointGuard, ...hiddenA]);
+positionDisciplinedState.teams.A.roster = [{ player: ownedPointGuard, price: 2, slot: "PG" }];
+positionDisciplinedState.teams.A.budget = 18;
+const positionContext = context("expert", "position-discipline", [offeredPointGuard.id]);
+const positionEvaluation = evaluateAiPlayer(positionDisciplinedState, "A", offeredPointGuard, positionContext);
+assert(!positionEvaluation.fillsOpenPosition, "a point guard is not treated as a need after the AI fills point guard");
+assert(positionEvaluation.reservationBid === 0, "an unnecessary position has no AI reservation bid");
+assert(aiOpenValidSlots(positionDisciplinedState.teams.A, "basketball", offeredPointGuard).length === 0, "position need uses the optimized open lineup slots");
+assert(decideAiAction(positionDisciplinedState, "A", positionContext).type === "useSkip", "the AI uses its free skip instead of opening on an unnecessary position");
+
+const comboGuard = PLAYER_DATABASE.find(
+  (player) => player.position === "PG" && (player.secondaryPosition === "SG" || player.tertiaryPosition === "SG")
+)!;
+assert(
+  aiOpenValidSlots(positionDisciplinedState.teams.A, "basketball", comboGuard).includes("SG"),
+  "a multi-position player remains useful when another eligible slot is open"
+);
+const flexibleIncumbentTeam: TeamState = {
+  ...positionDisciplinedState.teams.A,
+  roster: [{ player: comboGuard, price: 2, slot: "PG" }],
+};
+assert(
+  aiOpenValidSlots(flexibleIncumbentTeam, "basketball", offeredPointGuard).includes("PG"),
+  "the AI can move a flexible incumbent to pursue a needed player at the incumbent's current slot"
+);
+
+const paidSkipState = stateWithPool([offeredPointGuard, ...hiddenA]);
+paidSkipState.teams.A = { ...positionDisciplinedState.teams.A, skipsUsed: 1 };
+assert(decideAiAction(paidSkipState, "A", positionContext).type === "buySkip", "the AI may pay $1 to avoid an unnecessary position");
+paidSkipState.teams.A.skipsUsed = 2;
+const expensiveSkipAction = decideAiAction(paidSkipState, "A", positionContext);
+assert(
+  expensiveSkipAction.type === "buySkip",
+  "the AI pays the configured $5 skip rather than bidding on an unnecessary position"
+);
+paidSkipState.teams.A.budget = 8;
+const unaffordableSkipAction = decideAiAction(paidSkipState, "A", positionContext);
+assert(
+  unaffordableSkipAction.type === "openBid" && unaffordableSkipAction.startBid === 1,
+  "an unaffordable skip falls back to the legal $1 opening floor"
+);
+
 let auctionState = stateWithPool([strongest, ...hiddenA]);
 const opened = applyAction(auctionState, { type: "openBid", seat: "A", startBid: 1 });
 if (!opened.ok) throw new Error(opened.error);
@@ -67,6 +115,44 @@ assert(raiseAction.type === "raiseBid", "expert AI contests an elite card at a $
 if (raiseAction.type === "raiseBid") {
   assert([2, 3, 5].includes(raiseAction.amount), "the first response is a $1, $2, or round-number jump");
 }
+
+let noNeedAuction = stateWithPool([offeredPointGuard, ...hiddenA]);
+noNeedAuction.teams.B.roster = [{ player: ownedPointGuard, price: 2, slot: "PG" }];
+noNeedAuction.teams.B.budget = 18;
+const openedNoNeedAuction = applyAction(noNeedAuction, { type: "openBid", seat: "A", startBid: 1 });
+if (!openedNoNeedAuction.ok) throw new Error(openedNoNeedAuction.error);
+noNeedAuction = openedNoNeedAuction.state;
+assert(
+  decideAiAction(noNeedAuction, "B", positionContext).type === "acceptBid",
+  "the AI lets its opponent take a player at an already-filled position instead of denial bidding"
+);
+
+let skippedNoNeedState = stateWithPool([offeredPointGuard, ...hiddenA]);
+skippedNoNeedState.teams.B.roster = [{ player: ownedPointGuard, price: 2, slot: "PG" }];
+skippedNoNeedState.teams.B.budget = 18;
+const offeredAfterSkip = applyAction(skippedNoNeedState, { type: "useSkip", seat: "A" });
+if (!offeredAfterSkip.ok) throw new Error(offeredAfterSkip.error);
+skippedNoNeedState = offeredAfterSkip.state;
+const declinedSkipOffer = decideAiAction(skippedNoNeedState, "B", positionContext);
+assert(
+  declinedSkipOffer.type === "respondToSkip" && !declinedSkipOffer.accept,
+  "the AI declines a skipped player whose position it has already filled"
+);
+
+const soccerDefenders = SOCCER_PLAYER_DATABASE.filter((player) => player.role === "DEF").slice(0, 3);
+const soccerPositionState = stateWithPool([
+  soccerDefenders[2],
+  ...SOCCER_PLAYER_DATABASE.filter((player) => player.id !== soccerDefenders[2].id).slice(0, 5),
+]);
+soccerPositionState.teams.A.roster = [
+  { player: soccerDefenders[0], price: 2, slot: "DEF_L" },
+  { player: soccerDefenders[1], price: 2, slot: "DEF_R" },
+];
+soccerPositionState.teams.A.budget = 16;
+const soccerPositionContext = context("expert", "soccer-position-discipline", [soccerDefenders[2].id]);
+const soccerPositionEvaluation = evaluateAiPlayer(soccerPositionState, "A", soccerDefenders[2], soccerPositionContext);
+assert(!soccerPositionEvaluation.fillsOpenPosition, "a defender is unnecessary after both soccer defender slots are filled");
+assert(decideAiAction(soccerPositionState, "A", soccerPositionContext).type === "useSkip", "soccer AI skips an unnecessary defender");
 
 const curry = PLAYER_DATABASE.find((player) => player.name === "Stephen Curry" && player.era === "2015-16")!;
 const shaq = PLAYER_DATABASE.find((player) => player.name === "Shaquille O'Neal" && player.era === "2000-01")!;

@@ -62,28 +62,22 @@ export interface BasketballPlayerCard {
 
 export interface SoccerStats {
   minutes: number;
-  nonPenaltyGoalsPer90: number;
-  xgPer90: number;
+  appearances: number;
+  goalsPer90: number;
   assistsPer90: number;
-  xaPer90: number;
-  completedDribblesPer90: number;
-  progressiveActionsPer90: number;
-  passCompletionPct: number;
-  recoveriesPer90: number;
-  tacklesWonPer90: number;
-  interceptionsPer90: number;
-  duelWinPct: number;
-  pressureRegainsPer90: number;
+  shotsOnTargetPer90: number;
+  shotAccuracyPct: number;
+  cleanSheetPct: number;
+  goalsConcededPerMatch: number;
   savePct: number;
-  xgPreventedPer90: number;
-  claimsPer90: number;
-  sweeperActionsPer90: number;
+  pointsPerMatch: number;
+  goalDifferencePerMatch: number;
 }
 
 export interface SoccerPerformance {
   attack: number;
   creation: number;
-  progression: number;
+  control: number;
   defense: number;
   goalkeeping: number;
   roleScore: number;
@@ -98,15 +92,21 @@ export interface SoccerHonors {
 export interface SoccerPlayerCard {
   sport: "soccer";
   id: string;
-  sourcePlayerId: number;
+  sourcePlayerId: string;
+  /** All UEFA provider IDs verified as the same canonical player record. */
+  sourcePlayerIds: string[];
+  /** Stable canonical-name and birth-date identity used to prevent duplicate eras in one pool. */
+  sourceIdentity: string;
   name: string;
   role: SoccerRole;
   secondaryRole?: SoccerRole;
   tertiaryRole?: SoccerRole;
   era: string;
   team: string;
+  /** Official UEFA team IDs represented by this card during its scoring window. */
+  sourceTeamIds: string[];
   edition: string;
-  editionKind: "club" | "tournament";
+  editionKind: "calendar" | "season";
   stats: SoccerStats;
   performance: SoccerPerformance;
   teamSuccess: number;

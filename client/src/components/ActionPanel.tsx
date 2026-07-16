@@ -11,6 +11,7 @@ import {
   validSlotsFor,
 } from "@fiveaside/shared";
 import { formatPosition } from "../utils/position";
+import { subjectVerb } from "../utils/grammar";
 
 interface Props {
   state: MatchState;
@@ -26,10 +27,10 @@ function StatLine({ player }: { player: PlayerCard }) {
   if (player.sport === "soccer") {
     const { stats } = player;
     const byRole = {
-      GK: [["SAVE%", stats.savePct], ["XGP/90", stats.xgPreventedPer90], ["CLAIMS", stats.claimsPer90], ["SWEEP", stats.sweeperActionsPer90], ["PASS%", stats.passCompletionPct]],
-      DEF: [["TKL/90", stats.tacklesWonPer90], ["INT/90", stats.interceptionsPer90], ["DUEL%", stats.duelWinPct], ["PROG", stats.progressiveActionsPer90], ["REGAIN", stats.pressureRegainsPer90]],
-      MID: [["AST/90", stats.assistsPer90], ["xA/90", stats.xaPer90], ["PROG", stats.progressiveActionsPer90], ["REC/90", stats.recoveriesPer90], ["PASS%", stats.passCompletionPct]],
-      ATT: [["NPG/90", stats.nonPenaltyGoalsPer90], ["xG/90", stats.xgPer90], ["AST/90", stats.assistsPer90], ["xA/90", stats.xaPer90], ["DRB/90", stats.completedDribblesPer90]],
+      GK: [["SAVE%", stats.savePct], ["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch], ["PPM", stats.pointsPerMatch], ["APPS", stats.appearances]],
+      DEF: [["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch], ["PPM", stats.pointsPerMatch], ["G/90", stats.goalsPer90], ["A/90", stats.assistsPer90]],
+      MID: [["A/90", stats.assistsPer90], ["G/90", stats.goalsPer90], ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["PPM", stats.pointsPerMatch]],
+      ATT: [["G/90", stats.goalsPer90], ["A/90", stats.assistsPer90], ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["PPM", stats.pointsPerMatch]],
     } as const;
     return (
       <div className="player-stat-grid soccer-stats">
@@ -60,7 +61,7 @@ function PlayerSpotlight({ player }: { player: PlayerCard }) {
       <span className="player-position-badge">{formatPosition(player)}</span>
       <div className="player-nameplate">
         <h2>{player.name}</h2>
-        <span>{player.era} EDITION</span>
+        <span>{player.era}</span>
       </div>
     </div>
   );
@@ -132,6 +133,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
   if (state.phase === "bidding" && state.auction) {
     const auction = state.auction;
     const cap = maxAffordable(state.teams[actingSeat]);
+    const standingBidder = seatLabel(auction.standingBidder);
     return (
       <section className="action-stage live-stage">
         <div className="auction-box">
@@ -140,7 +142,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel }: 
             <Countdown resetKey={`bid-${auction.player.id}-${auction.currentBid}`} />
           </div>
           <div className="auction-context">
-            <span className="standing-bidder-tag">{seatLabel(auction.standingBidder)}</span> is offering to buy{" "}
+            <span className="standing-bidder-tag">{standingBidder}</span> {subjectVerb(standingBidder, "are", "is")} bidding on{" "}
             <strong>{auction.player.name}</strong>
           </div>
           <PlayerSpotlight player={auction.player} />
@@ -212,12 +214,13 @@ function PlacementPanel({
   const slots = availablePlacementSlots(team, pending.player);
   const listedSlots = validSlotsFor(pending.player);
   const listedOpen = slots.some((slot) => listedSlots.includes(slot));
+  const winner = seatLabel(seat);
 
   return (
     <section className="action-stage">
       <div className="placement-box">
         <div className="action-stage-top"><div className="auction-eyebrow neutral">ROSTER MOVE</div></div>
-        <div className="auction-context">{seatLabel(seat)} wins the card for ${pending.price}</div>
+        <div className="auction-context">{winner} {subjectVerb(winner, "win", "wins")} the card for ${pending.price}</div>
         <PlayerSpotlight player={pending.player} />
         <StatLine player={pending.player} />
         <div className="placement-copy">
@@ -441,7 +444,7 @@ function CatchUpPanel({
           </div>
           <Countdown resetKey={`catch-up-${player.id}`} />
         </div>
-        <div className="auction-context">The other five is complete. Add this card for $1 or use a remaining skip.</div>
+        <div className="auction-context">The other lineup is full. Add this card for $1 or use a remaining skip.</div>
         <PlayerSpotlight player={player} />
         <StatLine player={player} />
         <div className="price-block"><span>ROSTER PRICE</span><strong>$1</strong></div>

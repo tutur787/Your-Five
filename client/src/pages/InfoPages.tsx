@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef } from "react";
 import { AppHeader } from "../components/AppHeader";
 
-const LAST_UPDATED = "July 15, 2026";
+const LAST_UPDATED = "July 16, 2026";
 const REPOSITORY_URL = "https://github.com/tutur787/Your-Five";
 const ISSUES_URL = `${REPOSITORY_URL}/issues/new`;
 const PROFILE_URL = "https://github.com/tutur787";
@@ -62,7 +62,7 @@ export function AboutPage() {
           <h2>Design principles</h2>
           <p>
             The project is designed to be quick to understand, competitive without being pay-to-win, and
-            respectful of basketball history. The court and scoring system are game mechanics, not claims
+            respectful of basketball and football history. The court, pitch, and scoring systems are game mechanics, not claims
             about how any real team or player would perform.
           </p>
         </div>
@@ -76,13 +76,15 @@ export function AboutPage() {
             <code> nba_api</code> client. Position references were checked against Wikipedia, and the classic-team
             pool references listings published by 2K Ratings.
           </p>
-          <div className="statsbomb-attribution">
-            <img src="/statsbomb-logo.ico" alt="StatsBomb" />
-            <p>Football event and lineup data is sourced from StatsBomb Open Data at the pinned revision documented in the project database. Player names, positions, minutes, and performance metrics are generated from those source files.</p>
-          </div>
+          <p>
+            Football cards use the official <a href="https://www.uefa.com/news/01f9-0e7b894d6108-cf92003088c7-1000--uefa-com-users-team-of-the-year-2011-revealed/" target="_blank" rel="noreferrer">UEFA.com Fans' Teams of the Year</a> from 2001 through 2020,
+            followed by <a href="https://www.uefa.com/uefachampionsleague/news/0269-12688c451cdd-b6efcb4ce948-1000--squad-of-the-season/" target="_blank" rel="noreferrer">UEFA Technical Observer selections</a> from the 2020/21 Champions League onward.
+            Roles come directly from those selections. Card statistics are generated from the corresponding
+            UEFA club-competition match records, with the source selection and match IDs retained in the project database.
+          </p>
           <p className="info-muted">
             Your Five is an independent fan-made project. It is not affiliated with, endorsed by, or sponsored
-            by the NBA, WNBA, FIFA, UEFA, CAF, any football association, league, club, national team, their players, Take-Two Interactive, 2K, StatsBomb, Wikipedia, or Sports Reference.
+            by the NBA, WNBA, FIFA, UEFA, CAF, any football association, league, club, national team, their players, Take-Two Interactive, 2K, Wikipedia, or Sports Reference.
             No league or team logos are used.
           </p>
         </div>
@@ -145,9 +147,16 @@ export function PrivacyPage() {
         <div>
           <h2>Advertising and sharing</h2>
           <p>
-            Your Five does not currently run third-party advertising or third-party analytics, and does not sell
-            personal information. If advertising, analytics, accounts, or payments are introduced, this policy will
-            be updated before those services are enabled and any legally required consent controls will be provided.
+            Your Five uses Google AdSense to verify the site and, after approval, display advertising. Google and its
+            advertising partners may use cookies or similar technologies and process information such as IP address,
+            device and browser details, viewed pages, and ad interactions to provide, measure, and personalize ads,
+            depending on your region and consent choices. Learn more in Google's
+            {" "}<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noreferrer">Advertising Policies</a>
+            {" "}and <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>.
+          </p>
+          <p>
+            Your Five does not sell personal information and does not currently use third-party analytics. Where
+            required, advertising consent choices will be presented before personalized advertising is enabled.
           </p>
         </div>
       </section>
@@ -208,7 +217,7 @@ export function TermsPage() {
           <h2>Ownership and third-party references</h2>
           <p>
             The Your Five name, original interface, game presentation, and original software are owned by their
-            respective project owner or contributors. Basketball player names, historical facts, company names,
+            respective project owner or contributors. Player names, historical facts, company names,
             league names, and other third-party references remain associated with their respective owners. Their use
             does not imply sponsorship or endorsement.
           </p>

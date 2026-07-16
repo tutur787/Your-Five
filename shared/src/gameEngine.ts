@@ -108,6 +108,7 @@ export const SOCCER_MIN_ELIGIBLE_IN_POOL: Record<SoccerRole, number> = { GK: 2, 
 function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
   const shuffled = shuffle(SOCCER_PLAYER_DATABASE, rng);
   const chosen = new Set<string>();
+  const chosenPlayers = new Set<string>();
   const primaryCount: Record<SoccerRole, number> = { GK: 0, DEF: 0, MID: 0, ATT: 0 };
   const eligibleCount: Record<SoccerRole, number> = { GK: 0, DEF: 0, MID: 0, ATT: 0 };
   const core: SoccerPlayerCard[] = [];
@@ -117,6 +118,7 @@ function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
     [player.role, player.secondaryRole, player.tertiaryRole].filter((role): role is SoccerRole => Boolean(role));
   const take = (player: SoccerPlayerCard, bucket: SoccerPlayerCard[]) => {
     chosen.add(player.id);
+    chosenPlayers.add(player.sourceIdentity);
     primaryCount[player.role]++;
     for (const role of rolesFor(player)) eligibleCount[role]++;
     bucket.push(player);
@@ -125,14 +127,14 @@ function buildSoccerPool(rng: Rng = Math.random): SoccerPlayerCard[] {
   for (const role of ["GK", "DEF", "MID", "ATT"] as const) {
     for (const player of shuffled) {
       if (eligibleCount[role] >= SOCCER_MIN_ELIGIBLE_IN_POOL[role]) break;
-      if (chosen.has(player.id) || !rolesFor(player).includes(role)) continue;
+      if (chosen.has(player.id) || chosenPlayers.has(player.sourceIdentity) || !rolesFor(player).includes(role)) continue;
       if (primaryCount[player.role] >= SOCCER_MAX_PRIMARY_IN_POOL[player.role]) continue;
       take(player, core);
     }
   }
 
   for (const player of shuffled) {
-    if (chosen.has(player.id)) continue;
+    if (chosen.has(player.id) || chosenPlayers.has(player.sourceIdentity)) continue;
     if (primaryCount[player.role] >= SOCCER_MAX_PRIMARY_IN_POOL[player.role]) continue;
     take(player, rest);
   }

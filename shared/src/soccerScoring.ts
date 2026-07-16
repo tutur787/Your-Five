@@ -60,7 +60,8 @@ export function soccerChemistryPairs(team: TeamState): SoccerChemistryPair[] {
   const pairs: SoccerChemistryPair[] = [];
   for (let i = 0; i < picks.length; i++) {
     for (let j = i + 1; j < picks.length; j++) {
-      if (picks[i].player.edition === picks[j].player.edition && picks[i].player.team === picks[j].player.team) {
+      const sharedTeam = picks[i].player.sourceTeamIds.some((teamId) => picks[j].player.sourceTeamIds.includes(teamId));
+      if (picks[i].player.edition === picks[j].player.edition && sharedTeam) {
         pairs.push({ a: picks[i], b: picks[j] });
       }
     }
@@ -72,7 +73,7 @@ export interface SoccerFitAssessment {
   creatorBonus: number;
   ballWinnerBonus: number;
   scorerBonus: number;
-  progressionBonus: number;
+  controlBonus: number;
   attackDominantPlayers: number;
   stackingPenalty: number;
   total: number;
@@ -85,23 +86,23 @@ export function soccerFitAssessment(team: TeamState): SoccerFitAssessment {
   const creatorBonus = players.some((player) => player.performance.creation >= 14) ? 3 : 0;
   const ballWinnerBonus = players.some((player) => player.performance.defense >= 14) ? 3 : 0;
   const scorerBonus = players.some((player) => player.performance.attack >= 14) ? 3 : 0;
-  const progressionBonus = players.some((player) => player.performance.progression >= 14) ? 2 : 0;
+  const controlBonus = players.some((player) => player.performance.control >= 14) ? 2 : 0;
   const attackDominantPlayers = players.filter(
     (player) => player.role !== "GK" && player.performance.attack >= 14 && player.performance.attack === Math.max(
       player.performance.attack,
       player.performance.creation,
-      player.performance.progression,
+      player.performance.control,
       player.performance.defense,
       player.performance.goalkeeping
     )
   ).length;
   const stackingPenalty = Math.max(0, attackDominantPlayers - 2) * 4;
-  const total = Math.max(-12, Math.min(11, creatorBonus + ballWinnerBonus + scorerBonus + progressionBonus - stackingPenalty));
-  return { creatorBonus, ballWinnerBonus, scorerBonus, progressionBonus, attackDominantPlayers, stackingPenalty, total };
+  const total = Math.max(-12, Math.min(11, creatorBonus + ballWinnerBonus + scorerBonus + controlBonus - stackingPenalty));
+  return { creatorBonus, ballWinnerBonus, scorerBonus, controlBonus, attackDominantPlayers, stackingPenalty, total };
 }
 
 export interface SoccerScoreComponents {
-  performance: { attack: number; creation: number; progression: number; defense: number; goalkeeping: number; total: number };
+  performance: { attack: number; creation: number; control: number; defense: number; goalkeeping: number; total: number };
   teamSuccess: number;
   honors: number;
   fit: SoccerFitAssessment;
@@ -117,12 +118,12 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
     (sum, pick) => ({
       attack: sum.attack + pick.player.performance.attack,
       creation: sum.creation + pick.player.performance.creation,
-      progression: sum.progression + pick.player.performance.progression,
+      control: sum.control + pick.player.performance.control,
       defense: sum.defense + pick.player.performance.defense,
       goalkeeping: sum.goalkeeping + pick.player.performance.goalkeeping,
       total: sum.total + pick.player.performance.roleScore,
     }),
-    { attack: 0, creation: 0, progression: 0, defense: 0, goalkeeping: 0, total: 0 }
+    { attack: 0, creation: 0, control: 0, defense: 0, goalkeeping: 0, total: 0 }
   );
   const teamSuccess = picks.reduce((sum, pick) => sum + pick.player.teamSuccess, 0);
   const honors = Math.min(

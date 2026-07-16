@@ -2,6 +2,7 @@ import { LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared";
 import { ShareCard } from "../components/ShareCard";
 import { ScoreBreakdown } from "../components/ScoreBreakdown";
 import { LineupCourt } from "../components/TeamPanel";
+import { subjectVerb } from "../utils/grammar";
 
 interface Props {
   state: MatchState;
@@ -16,12 +17,13 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
   const seats: SeatId[] = ["A", "B"];
   const scoreA = teamScore(state.teams.A, state.sport);
   const scoreB = teamScore(state.teams.B, state.sport);
+  const winner = state.winner === "tie" ? null : seatLabel(state.winner === "A" ? "A" : "B");
 
   return (
     <section className="results-shell">
       <div className="results-header">
         <div className="page-eyebrow">FINAL SCORE</div>
-        <h2>{state.winner === "tie" ? "Dead even." : `${seatLabel(state.winner === "A" ? "A" : "B")} takes the ${state.sport === "soccer" ? "match" : "game"}.`}</h2>
+        <h2>{winner ? `${winner} ${subjectVerb(winner, "win", "wins")} the ${state.sport === "soccer" ? "match" : "game"}.` : "Dead even."}</h2>
         <div className="final-scoreline">
           <span>{seatLabel("A")} <strong>{scoreA.toFixed(1)}</strong></span>
           <span className="score-divider">&ndash;</span>

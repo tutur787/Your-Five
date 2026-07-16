@@ -162,7 +162,7 @@ function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultO
   const categories = [
     ["Attack", components.performance.attack],
     ["Creation", components.performance.creation],
-    ["Progression", components.performance.progression],
+    ["Control", components.performance.control],
     ["Defense", components.performance.defense],
     ["Goalkeeping", components.performance.goalkeeping],
   ] as const;
@@ -181,7 +181,7 @@ function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultO
         </div>
         <ul className="breakdown-list">
           <li><span>Creator / ball winner / scorer</span><span>+{components.fit.creatorBonus + components.fit.ballWinnerBonus + components.fit.scorerBonus}</span></li>
-          <li><span>Progression</span><span>+{components.fit.progressionBonus}</span></li>
+          <li><span>Control</span><span>+{components.fit.controlBonus}</span></li>
           {components.fit.stackingPenalty > 0 && <li><span>Attack-heavy redundancy</span><span>&minus;{components.fit.stackingPenalty}</span></li>}
         </ul>
         {components.chemistry.pairs.length > 0 && (

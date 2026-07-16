@@ -2962,27 +2962,6 @@ html[data-sport="soccer"] .standing-bidder-tag {
   color: #a7bbb0;
 }
 
-.statsbomb-attribution {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  align-items: center;
-  gap: 14px;
-  margin: 18px 0;
-  padding: 14px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.statsbomb-attribution img {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
-}
-
-.statsbomb-attribution p {
-  margin: 0;
-}
-
 @media (max-width: 760px) {
   .home-header {
     grid-template-columns: 1fr auto;

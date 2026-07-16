@@ -50,6 +50,8 @@ interface LineupResult {
 }
 
 export interface AiPlayerEvaluation {
+  fillsOpenPosition: boolean;
+  openValidSlots: LineupSlot[];
   marginalScore: number;
   alternativeMedianScore: number;
   alternativeSpread: number;
@@ -196,6 +198,40 @@ function evaluationValues(team: TeamState, sport: Sport, alternatives: WeightedC
   return alternatives.map(({ player, weight }) => ({ value: marginalLineupValue(team, sport, player).score, weight, player }));
 }
 
+function minimumPositionMismatches(picks: RosterPick[], availableSlots: LineupSlot[]): number {
+  if (picks.length === 0) return 0;
+  let minimum = Number.POSITIVE_INFINITY;
+
+  const assign = (index: number, remaining: LineupSlot[], mismatches: number) => {
+    if (mismatches >= minimum) return;
+    if (index === picks.length) {
+      minimum = mismatches;
+      return;
+    }
+    const valid = new Set(validSlotsFor(picks[index].player));
+    for (let slotIndex = 0; slotIndex < remaining.length; slotIndex++) {
+      assign(
+        index + 1,
+        [...remaining.slice(0, slotIndex), ...remaining.slice(slotIndex + 1)],
+        mismatches + (valid.has(remaining[slotIndex]) ? 0 : 1)
+      );
+    }
+  };
+
+  assign(0, availableSlots, 0);
+  return minimum;
+}
+
+/** Returns natural slots the card can fill without creating an extra roster mismatch. */
+export function aiOpenValidSlots(team: TeamState, sport: Sport, player: PlayerCard): LineupSlot[] {
+  const slots = slotsForSport(sport);
+  const currentMismatches = minimumPositionMismatches(team.roster, slots);
+  return validSlotsFor(player).filter((candidateSlot) => {
+    const remaining = slots.filter((slot) => slot !== candidateSlot);
+    return minimumPositionMismatches(team.roster, remaining) <= currentMismatches;
+  });
+}
+
 /** Public-information valuation. This deliberately never reads unrevealed entries from MatchState.pool. */
 export function evaluateAiPlayer(
   state: MatchState,
@@ -209,7 +245,10 @@ export function evaluateAiPlayer(
   const profile = AI_DIFFICULTY_PROFILES[context.difficulty];
   const seen = Array.from(new Set([...context.seenPlayerIds, player.id]));
   const alternatives = publicAlternatives(sport, seen);
-  const ownValues = evaluationValues(team, sport, alternatives);
+  const openValidSlots = aiOpenValidSlots(team, sport, player);
+  const fillsOpenPosition = openValidSlots.length > 0;
+  const neededAlternatives = alternatives.filter((candidate) => aiOpenValidSlots(team, sport, candidate.player).length > 0);
+  const ownValues = evaluationValues(team, sport, neededAlternatives.length > 0 ? neededAlternatives : alternatives);
   const current = marginalLineupValue(team, sport, player);
   const percentile = weightedPercentile(current.score, ownValues);
   const median = weightedMedian(ownValues);
@@ -237,9 +276,13 @@ export function evaluateAiPlayer(
   const needPremium = 1.5 * scarcity * (0.35 + stage * 0.65);
   const denial = profile.denialPremium * clamp((opponentPercentile - 0.7) / 0.3, 0, 1);
   const preference = 1 + (stableRandom(`${context.sessionSeed}|taste|${aiSeat}|${player.id}|${lineupSignature(team)}`) * 2 - 1) * profile.preferenceVariation;
-  const reservationBid = clamp(Math.round((fairShare * qualityMultiplier + needPremium + denial) * preference), 1, Math.max(1, budgetCap));
+  const reservationBid = fillsOpenPosition
+    ? clamp(Math.round((fairShare * qualityMultiplier + needPremium + denial) * preference), 1, Math.max(1, budgetCap))
+    : 0;
 
   return {
+    fillsOpenPosition,
+    openValidSlots,
     marginalScore: current.score,
     alternativeMedianScore: median,
     alternativeSpread: Math.max(1, spread),
@@ -273,6 +316,7 @@ function skipImprovementInDollars(evaluation: AiPlayerEvaluation, fairShare: num
 }
 
 function shouldUseFreeSkip(evaluation: AiPlayerEvaluation, profile: DifficultyProfile, remainingSlots: number): boolean {
+  if (!evaluation.fillsOpenPosition) return true;
   return remainingSlots > 1 && evaluation.possibleAlternatives >= remainingSlots && evaluation.percentile < profile.skipPercentile;
 }
 
@@ -357,6 +401,12 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId, context: AiDec
     if (!player) throw new Error("AI asked to act with an empty pool");
     const evaluation = evaluateAiPlayer(state, aiSeat, player, context);
     const skipPrice = nextSkipPrice(team);
+    if (!evaluation.fillsOpenPosition) {
+      if (skipPrice === 0) return { type: "useSkip", seat: aiSeat };
+      if (skipPrice !== null && canBuySkip(team)) return { type: "buySkip", seat: aiSeat };
+      // The auction protocol has no free pass. If a skip is unaffordable, open at the floor and concede any raise.
+      return { type: "openBid", seat: aiSeat, startBid: 1 };
+    }
     if (skipPrice === 0 && (budgetCap < 1 || shouldUseFreeSkip(evaluation, profile, remainingSlots))) {
       return { type: "useSkip", seat: aiSeat };
     }
@@ -379,6 +429,11 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId, context: AiDec
     if (!player) throw new Error("AI asked to catch up with an empty pool");
     const evaluation = evaluateAiPlayer(state, aiSeat, player, context);
     const skipPrice = nextSkipPrice(team);
+    if (!evaluation.fillsOpenPosition) {
+      if (!team.catchUpSkipUsed && skipPrice === 0) return { type: "useSkip", seat: aiSeat };
+      if (!team.catchUpSkipUsed && skipPrice !== null && canBuySkip(team, true)) return { type: "buySkip", seat: aiSeat };
+      return { type: "takeForOne", seat: aiSeat };
+    }
     if (!team.catchUpSkipUsed && skipPrice === 0 && shouldUseFreeSkip(evaluation, profile, remainingSlots)) {
       return { type: "useSkip", seat: aiSeat };
     }
@@ -394,6 +449,7 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId, context: AiDec
 
   if (state.phase === "bidding" && state.auction) {
     const evaluation = evaluateAiPlayer(state, aiSeat, state.auction.player, context);
+    if (!evaluation.fillsOpenPosition) return { type: "acceptBid", seat: aiSeat };
     const nextBid = state.auction.currentBid + 1;
     if (nextBid > evaluation.reservationBid || nextBid > budgetCap) {
       return { type: "acceptBid", seat: aiSeat };
@@ -411,7 +467,9 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId, context: AiDec
 
   if (state.phase === "skipOffer" && state.skipOffer) {
     const evaluation = evaluateAiPlayer(state, aiSeat, state.skipOffer.player, context);
-    const accept = remainingSlots <= 1 || evaluation.scarcity >= 0.5 || (evaluation.marginalScore > 0 && evaluation.percentile >= 0.1);
+    const accept = evaluation.fillsOpenPosition && (
+      remainingSlots <= 1 || evaluation.scarcity >= 0.5 || (evaluation.marginalScore > 0 && evaluation.percentile >= 0.1)
+    );
     return { type: "respondToSkip", seat: aiSeat, accept };
   }
 
