@@ -471,7 +471,6 @@ export function canBuySkip(team: TeamState, inCatchUp = false): boolean {
   return (
     price !== null &&
     price > 0 &&
-    (!inCatchUp || !team.catchUpSkipUsed) &&
     remainingSlots > 0 &&
     team.budget - price >= requiredAfterPurchase
   );
@@ -577,7 +576,7 @@ export function timeoutActionFor(state: MatchState): MatchAction | null {
 
 /**
  * Once one roster is full, bidding ends. The trailing team sees each remaining card and may take
- * it for $1 or use one remaining skip at its current ladder price.
+ * it for $1 or use any remaining skips at their current ladder prices.
  */
 function beginCatchUpIfOneTeamFull(state: MatchState): void {
   const fullSeat: SeatId | null =
@@ -669,14 +668,10 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       if (action.seat !== next.turn) return fail(state, "It's not your turn.");
       const team = next.teams[action.seat];
       if (nextSkipPrice(team) !== 0) return fail(state, "Your free skip has already been used.");
-      if (next.phase === "catchUp" && team.catchUpSkipUsed) {
-        return fail(state, "You can only skip one card during catch-up.");
-      }
       if (next.pool.length === 0) return fail(state, "No players left in the pool.");
       const player = next.pool.shift() as PlayerCard;
       team.skipsUsed = skipCount(team) + 1;
       if (next.phase === "catchUp") {
-        team.catchUpSkipUsed = true;
         next.log.push(`Seat ${action.seat} uses their free skip — ${player.name} is removed from the draft.`);
         return { ok: true, state: next };
       }
@@ -695,11 +690,13 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       const price = nextSkipPrice(team);
       if (price === 0) return fail(state, "Use your free skip before buying another one.");
       if (price === null) return fail(state, "You've used every available skip.");
-      if (next.phase === "catchUp" && team.catchUpSkipUsed) {
-        return fail(state, "You can only skip one card during catch-up.");
-      }
       if (!canBuySkip(team, next.phase === "catchUp")) {
-        return fail(state, "You need to preserve your roster reserve and at least $1 of bidding room.");
+        return fail(
+          state,
+          next.phase === "catchUp"
+            ? "You need to preserve $1 for every open roster spot."
+            : "You need to preserve your roster reserve and at least $1 of bidding room."
+        );
       }
       if (next.pool.length === 0) return fail(state, "No players left in the pool.");
 
@@ -707,7 +704,6 @@ export function applyAction(state: MatchState, action: MatchAction): ActionResul
       team.budget -= price;
       team.skipsUsed = skipCount(team) + 1;
       if (next.phase === "catchUp") {
-        team.catchUpSkipUsed = true;
         next.log.push(`Seat ${action.seat} buys a skip for $${price} — ${player.name} is removed from the draft.`);
         return { ok: true, state: next };
       }

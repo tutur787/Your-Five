@@ -17,6 +17,7 @@ export const SOCCER_POSITION_MISMATCH: Record<SoccerRole, Record<SoccerRole, num
 
 export const SOCCER_CHEMISTRY_PER_PAIR = 2;
 export const SOCCER_CHEMISTRY_CAP = 6;
+export const SOCCER_HONORS_CAP = 20;
 export const SOCCER_HONOR_POINTS = {
   champion: 3,
   majorIndividual: 5,
@@ -140,13 +141,15 @@ export function soccerFitAssessment(team: TeamState): SoccerFitAssessment {
     (player) => (player.role === "MID" || player.role === "ATT") && player.performance.creation >= 12
   ) ? 1 : 0;
   const defensiveAnchorBonus = players.some(
-    (player) => player.role === "DEF" && player.performance.defense >= 12
+    (player) => player.role === "DEF" &&
+      Math.max(player.performance.defense, soccerPlayerQuality(player)) >= 12
   ) ? 1 : 0;
   const scorerBonus = players.some(
     (player) => player.role === "ATT" && player.performance.attack >= 12
   ) ? 1 : 0;
   const goalkeeperBonus = players.some(
-    (player) => player.role === "GK" && player.performance.goalkeeping >= 12
+    (player) => player.role === "GK" &&
+      Math.max(player.performance.goalkeeping, soccerPlayerQuality(player)) >= 12
   ) ? 1 : 0;
   const attackDominantPlayers = players.filter(
     (player) => (player.role === "MID" || player.role === "ATT") &&
@@ -169,6 +172,15 @@ export interface SoccerScoreComponents {
   total: number;
 }
 
+/** Normalize cards persisted by the pre-explicit-honors formula. */
+export function soccerPlayerQuality(player: SoccerPlayerCard): number {
+  const achievementScore = player.performance.achievementScore;
+  if (achievementScore !== undefined) {
+    return Math.max(0, Math.min(20, (player.performance.roleScore - achievementScore * 0.15) / 0.85));
+  }
+  return player.performance.roleScore;
+}
+
 export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
   const picks = team.roster.filter((pick): pick is RosterPick & { player: SoccerPlayerCard } => pick.player.sport === "soccer");
   const performance = picks.reduce(
@@ -178,13 +190,13 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
       control: sum.control + pick.player.performance.control,
       defense: sum.defense + pick.player.performance.defense,
       goalkeeping: sum.goalkeeping + pick.player.performance.goalkeeping,
-      total: sum.total + pick.player.performance.roleScore,
+      total: sum.total + soccerPlayerQuality(pick.player),
     }),
     { attack: 0, creation: 0, control: 0, defense: 0, goalkeeping: 0, total: 0 }
   );
   const teamSuccess = picks.reduce((sum, pick) => sum + pick.player.teamSuccess, 0);
   const honorsUncapped = picks.reduce((sum, pick) => sum + soccerHonorPoints(pick.player.honors), 0);
-  const honors = honorsUncapped;
+  const honors = Math.min(SOCCER_HONORS_CAP, honorsUncapped);
   const fit = soccerFitAssessment(team);
   const pairs = soccerChemistryPairs(team);
   const chemistry = { pairs, bonus: Math.min(SOCCER_CHEMISTRY_CAP, pairs.length * SOCCER_CHEMISTRY_PER_PAIR) };
@@ -192,10 +204,10 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
     .map((pick) => ({ pick, penalty: soccerPositionPenalty(pick.player, pick.slot) }))
     .filter(({ penalty }) => penalty > 0);
   const wrongPositionPenalty = mismatches.reduce((sum, mismatch) => sum + mismatch.penalty, 0);
-  const total = performance.total + fit.total + chemistry.bonus - wrongPositionPenalty;
+  const total = performance.total + teamSuccess + honors + fit.total + chemistry.bonus - wrongPositionPenalty;
   return { performance, teamSuccess, honors, honorsUncapped, fit, chemistry, mismatches, wrongPositionPenalty, total };
 }
 
 export function soccerPlayerCompositeValue(player: SoccerPlayerCard): number {
-  return player.performance.roleScore;
+  return soccerPlayerQuality(player) + player.teamSuccess + soccerHonorPoints(player.honors);
 }

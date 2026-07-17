@@ -42,7 +42,7 @@ export function chemistryPartnersByPlayerId(team: TeamState, sport: Sport): Map<
 }
 
 export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false, sport }: Props) {
-  const skipPrice = inCatchUp && team.catchUpSkipUsed ? null : nextSkipPrice(team);
+  const skipPrice = nextSkipPrice(team);
   const paidSkipAvailable = canBuySkip(team, inCatchUp);
   const skipLabel = skipPrice === 0
     ? "FREE SKIP READY"

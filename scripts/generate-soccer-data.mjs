@@ -338,6 +338,7 @@ function aggregateCard(card, matchData) {
     goalsAgainst: 0,
     points: 0,
     shotsFacedOnTarget: 0,
+    shotsFacedTrackedMinutes: 0,
     saves: 0,
     teamAppearances: new Map(),
     matchIds: [],
@@ -359,9 +360,11 @@ function aggregateCard(card, matchData) {
     const teamId = String(row.teamId);
     const score = scoreForTeam(match, teamId);
     if (!score) throw new Error(`${card.edition.key}: could not determine ${card.entry.name}'s team score in match ${match.id}.`);
-    const opponentShots = rows
+    const opponentShotValues = rows
       .filter((candidate) => String(candidate.teamId) !== teamId)
-      .reduce((sum, candidate) => sum + statValue(candidate, "attempts_on_target"), 0);
+      .map((candidate) => statMaybe(candidate, "attempts_on_target"))
+      .filter((value) => value !== null);
+    const opponentShots = opponentShotValues.reduce((sum, value) => sum + value, 0);
 
     aggregate.minutes += minutes;
     aggregate.appearances += appearances || 1;
@@ -373,8 +376,11 @@ function aggregateCard(card, matchData) {
     aggregate.goalsFor += score.for;
     aggregate.goalsAgainst += score.against;
     aggregate.points += score.for > score.against ? 3 : score.for === score.against ? 1 : 0;
-    aggregate.shotsFacedOnTarget += opponentShots;
-    aggregate.saves += Math.max(0, opponentShots - score.against);
+    if (opponentShotValues.length > 0) {
+      aggregate.shotsFacedOnTarget += opponentShots;
+      aggregate.shotsFacedTrackedMinutes += minutes;
+      aggregate.saves += Math.max(0, opponentShots - score.against);
+    }
     aggregate.teamAppearances.set(teamId, {
       name: teamName(row),
       count: (aggregate.teamAppearances.get(teamId)?.count ?? 0) + 1,
@@ -396,6 +402,7 @@ function aggregateCard(card, matchData) {
     if (final && representedTeamIds.has(winnerTeamId)) winningCompetitions.add(competitionHonorName(match));
   }
   const attempts = aggregate.shotsOnTarget + aggregate.shotsOffTarget;
+  const savePctCoverage = aggregate.shotsFacedTrackedMinutes / aggregate.minutes;
   const stats = {
     minutes: round(aggregate.minutes, 1),
     appearances: round(aggregate.appearances, 0),
@@ -405,7 +412,9 @@ function aggregateCard(card, matchData) {
     shotAccuracyPct: round(attempts ? aggregate.shotsOnTarget / attempts * 100 : 0, 1),
     cleanSheetPct: round(aggregate.cleanSheets / aggregate.appearances * 100, 1),
     goalsConcededPerMatch: round(aggregate.goalsAgainst / aggregate.appearances),
-    savePct: round(aggregate.shotsFacedOnTarget ? aggregate.saves / aggregate.shotsFacedOnTarget * 100 : 0, 1),
+    ...(card.entry.role === "GK" && savePctCoverage >= OPTIONAL_METRIC_COVERAGE && aggregate.shotsFacedOnTarget > 0
+      ? { savePct: round(aggregate.saves / aggregate.shotsFacedOnTarget * 100, 1) }
+      : {}),
     pointsPerMatch: round(aggregate.points / aggregate.appearances),
     goalDifferencePerMatch: round((aggregate.goalsFor - aggregate.goalsAgainst) / aggregate.appearances),
     ...deriveAdvancedStats(aggregate.playerRows, aggregate.minutes),
@@ -436,20 +445,19 @@ function percentile(value, values) {
 const ROLE_METRICS = {
   GK: [
     { keys: ["savePct"], weight: 0.45, category: "goalkeeping" },
-    { keys: ["goalsConcededPerMatch"], weight: 0.2, category: "goalkeeping", inverse: true },
-    { keys: ["cleanSheetPct"], weight: 0.15, category: "defense" },
-    { keys: ["claimsPer90"], weight: 0.1, category: "goalkeeping" },
-    { keys: ["passCompletionPct"], weight: 0.1, category: "control" },
+    { keys: ["goalsConcededPerMatch"], weight: 0.1, category: "goalkeeping", inverse: true },
+    { keys: ["cleanSheetPct"], weight: 0.1, category: "defense" },
+    { keys: ["claimsPer90"], weight: 0.15, category: "goalkeeping" },
+    { keys: ["passCompletionPct"], weight: 0.2, category: "control" },
   ],
   DEF: [
-    { keys: ["tacklesWonPer90"], weight: 0.2, category: "defense" },
-    { keys: ["recoveriesPer90"], weight: 0.2, category: "defense" },
-    { keys: ["clearancesPer90"], weight: 0.15, category: "defense" },
+    { keys: ["tacklesWonPer90"], weight: 0.25, category: "defense" },
+    { keys: ["recoveriesPer90"], weight: 0.25, category: "defense" },
+    { keys: ["clearancesPer90"], weight: 0.1, category: "defense" },
     { keys: ["passCompletionPct"], weight: 0.1, category: "control" },
-    { keys: ["progressiveDeliveriesPer90"], weight: 0.1, category: "control" },
-    { keys: ["cleanSheetPct"], weight: 0.1, category: "defense" },
-    { keys: ["goalsConcededPerMatch"], weight: 0.1, category: "defense", inverse: true },
-    { keys: ["assistsPer90"], weight: 0.05, category: "creation" },
+    { keys: ["progressiveDeliveriesPer90"], weight: 0.15, category: "control" },
+    { keys: ["assistsPer90"], weight: 0.075, category: "creation" },
+    { keys: ["goalsPer90"], weight: 0.075, category: "attack" },
   ],
   MID: [
     { keys: ["assistsPer90"], weight: 0.2, category: "creation" },
@@ -461,14 +469,18 @@ const ROLE_METRICS = {
     { keys: ["shotsOnTargetPer90"], weight: 0.1, category: "attack" },
   ],
   ATT: [
-    { keys: ["goalsPer90"], weight: 0.3, category: "attack" },
-    { keys: ["shotsOnTargetPer90"], weight: 0.2, category: "attack" },
+    { keys: ["nonPenaltyGoalsPer90", "goalsPer90"], weight: 0.35, category: "attack" },
+    { keys: ["shotsOnTargetPer90"], weight: 0.15, category: "attack" },
     { keys: ["assistsPer90"], weight: 0.2, category: "creation" },
     { keys: ["dribblesPer90"], weight: 0.15, category: "attack" },
     { keys: ["shotAccuracyPct"], weight: 0.1, category: "attack" },
     { keys: ["progressiveDeliveriesPer90"], weight: 0.05, category: "control" },
   ],
 };
+
+// Goalkeeper outcomes come from far fewer independent actions and are more
+// sensitive to team defense than outfield event totals in the same match window.
+const ROLE_SAMPLE_RELIABILITY = { GK: 0.7, DEF: 1, MID: 1, ATT: 1 };
 
 function metricValue(player, metric) {
   for (const key of metric.keys) {
@@ -486,33 +498,19 @@ function scoredMetric(player, peers, metric) {
   return (metric.inverse ? 1 - rank : rank) * 20;
 }
 
-function honorPoints(honors) {
-  if (!honors) return 0;
-  let points = honors.champion ? 3 : 0;
-  if (honors.bestPlayer || honors.ballonDor) points += 5;
-  if (honors.topScorer || (honors.topScorerOrKeeper && !/goalkeeper/i.test(honors.topScorerOrKeeperLabel ?? ""))) points += 2;
-  if (honors.positionalAward || (honors.topScorerOrKeeper && /goalkeeper/i.test(honors.topScorerOrKeeperLabel ?? ""))) points += 2;
-  if (honors.youngPlayer) points += 1;
-  return points;
-}
-
 function createPedigreeIndex(players) {
   const identities = new Map();
   for (const player of players) {
-    const identity = identities.get(player.sourceIdentity) ?? { roles: new Set(), selections: 0, majorEditions: new Set() };
+    const identity = identities.get(player.sourceIdentity) ?? { roles: new Set(), selections: 0 };
     identity.roles.add(player.role);
     identity.selections += 1;
-    if (player.honors?.bestPlayer || player.honors?.ballonDor) identity.majorEditions.add(player.edition);
     identities.set(player.sourceIdentity, identity);
   }
   return new Map(players.map((player) => {
     const identity = identities.get(player.sourceIdentity);
     const peers = [...identities.values()].filter((candidate) => candidate.roles.has(player.role));
     const selectionRank = percentile(identity.selections, peers.map((candidate) => candidate.selections));
-    const majorRank = percentile(identity.majorEditions.size, peers.map((candidate) => candidate.majorEditions.size));
-    const selectionScore = 8 + selectionRank * 12;
-    const majorScore = 8 + majorRank * 12;
-    return [player.id, selectionScore * 0.8 + majorScore * 0.2];
+    return [player.id, 8 + selectionRank * 12];
   }));
 }
 
@@ -536,25 +534,30 @@ function performanceFor(player, players, pedigreeIndex) {
   const windowAlignment = player.editionKind === "calendar" ? 0.65 : 1;
   // A UEFA club campaign is still a small sample. Preserve at least 20% verified
   // selection pedigree even when every modern match metric is available.
-  const dataConfidence = Math.min(0.8, minutesReliability * (0.35 + 0.65 * availableWeight) * windowAlignment);
+  const baseDataConfidence = Math.min(
+    0.8,
+    minutesReliability * (0.35 + 0.65 * availableWeight) * windowAlignment
+  );
+  const dataConfidence = baseDataConfidence * ROLE_SAMPLE_RELIABILITY[player.role];
   const pedigreeScore = pedigreeIndex.get(player.id);
   const adjustedPerformance = observedScore * dataConfidence + pedigreeScore * (1 - dataConfidence);
-  const achievementScore = 10 + Math.min(10, honorPoints(player.honors) / 12 * 10);
   return {
     ...values,
     observedScore: round(observedScore, 2),
     pedigreeScore: round(pedigreeScore, 2),
     dataConfidence: round(dataConfidence, 3),
-    achievementScore: round(achievementScore, 2),
-    roleScore: round(Math.max(0, Math.min(20, adjustedPerformance * 0.85 + achievementScore * 0.15)), 2),
+    roleScore: round(Math.max(0, Math.min(20, adjustedPerformance)), 2),
   };
 }
 
 function assignTeamSuccess(players) {
-  const values = players.map((player) => player.stats.pointsPerMatch);
+  const pointsValues = players.map((player) => player.stats.pointsPerMatch);
+  const goalDifferenceValues = players.map((player) => player.stats.goalDifferencePerMatch);
   for (const player of players) {
     const reliability = Math.min(1, player.stats.minutes / 720);
-    player.teamSuccess = round((percentile(player.stats.pointsPerMatch, values) * 2 - 1) * reliability, 2);
+    const teamRank = percentile(player.stats.pointsPerMatch, pointsValues) * 0.7
+      + percentile(player.stats.goalDifferencePerMatch, goalDifferenceValues) * 0.3;
+    player.teamSuccess = round((teamRank * 2 - 1) * reliability, 2);
   }
 }
 
@@ -678,13 +681,23 @@ async function recalculateCommitted() {
       if (!rowsByMatch.has(matchId)) {
         rowsByMatch.set(matchId, JSON.parse(await readFile(join(CACHE, "match-stats", `${matchId}.json`), "utf8")));
       }
-      const row = rowsByMatch.get(matchId).find((candidate) => player.sourcePlayerIds.includes(String(candidate.playerId)));
+      const rows = rowsByMatch.get(matchId);
+      const row = rows.find((candidate) => player.sourcePlayerIds.includes(String(candidate.playerId)));
       if (!row) continue;
       const minutes = statValue(row, "minutes_played_official");
-      if (minutes > 0) playerRows.push({ row, minutes });
+      if (minutes > 0) playerRows.push({ row, minutes, rows });
     }
     for (const key of advancedKeys) delete player.stats[key];
     Object.assign(player.stats, deriveAdvancedStats(playerRows, player.stats.minutes));
+    if (player.role === "GK") {
+      const trackedMinutes = playerRows.reduce((sum, { row, rows, minutes }) => {
+        const hasOpponentShots = rows
+          .filter((candidate) => String(candidate.teamId) !== String(row.teamId))
+          .some((candidate) => statMaybe(candidate, "attempts_on_target") !== null);
+        return sum + (hasOpponentShots ? minutes : 0);
+      }, 0);
+      if (trackedMinutes / player.stats.minutes < OPTIONAL_METRIC_COVERAGE) delete player.stats.savePct;
+    } else delete player.stats.savePct;
   }
   assignTeamSuccess(players);
   assignPerformance(players);
@@ -726,7 +739,7 @@ async function verifyCommitted() {
     if (!provenance || provenance.sourceMatchIds.length === 0 || !provenance.sourceSelectionUrl) throw new Error(`${player.id} has incomplete provenance.`);
     if (player.sourceRevision !== SOURCE_REVISION || !player.sourcePlayerId || player.sourcePlayerIds.length === 0 || !player.sourceIdentity || player.sourceTeamIds.length === 0) throw new Error(`${player.id} is missing a canonical UEFA identity.`);
     if (![...Object.values(player.stats), ...Object.values(player.performance), player.teamSuccess].every(Number.isFinite)) throw new Error(`${player.id} contains a non-finite value.`);
-    for (const field of ["observedScore", "pedigreeScore", "dataConfidence", "achievementScore", "roleScore"]) {
+    for (const field of ["observedScore", "pedigreeScore", "dataConfidence", "roleScore"]) {
       if (!Number.isFinite(player.performance[field])) throw new Error(`${player.id} is missing generated ${field}.`);
     }
     if (player.performance.dataConfidence < 0 || player.performance.dataConfidence > 0.8 || player.performance.roleScore < 0 || player.performance.roleScore > 20) {

@@ -233,7 +233,7 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   assert(state.teams.A.roster.length === 5 && state.teams.B.roster.length === 5, "S6: both rosters reach 5 players");
 }
 
-// --- Scenario 7: once a team hits 5/5, the other team may use only its next ladder skip ---
+// --- Scenario 7: once a team hits 5/5, the other team may use every affordable remaining ladder skip ---
 {
   let state = createMatch();
   let guard = 0;
@@ -254,16 +254,35 @@ function giveAllToA(players: PlayerCard[]): MatchState {
 
   const paidCatchUp = JSON.parse(JSON.stringify(state)) as MatchState;
   paidCatchUp.teams.B.skipsUsed = 1; // The free skip was spent before the endgame.
-  const paidCatchUpResult = applyAction(paidCatchUp, { type: "buySkip", seat: "B" });
+  const oneDollarCatchUp = must(paidCatchUp, { type: "buySkip", seat: "B" });
   assert(
-    paidCatchUpResult.ok &&
-      paidCatchUpResult.state.phase === "catchUp" &&
-      paidCatchUpResult.state.teams.B.catchUpSkipUsed,
-    "S7: if the free skip was already spent, B may use the $1 skip as its single catch-up skip"
+    oneDollarCatchUp.phase === "catchUp" &&
+      oneDollarCatchUp.teams.B.skipsUsed === 2 &&
+      oneDollarCatchUp.teams.B.budget === 19,
+    "S7: if the free skip was already spent, B may buy the $1 catch-up skip"
+  );
+  const fiveDollarCatchUp = must(oneDollarCatchUp, { type: "buySkip", seat: "B" });
+  assert(
+    fiveDollarCatchUp.phase === "catchUp" &&
+      fiveDollarCatchUp.teams.B.skipsUsed === 3 &&
+      fiveDollarCatchUp.teams.B.budget === 14,
+    "S7: B may continue to the $5 catch-up skip"
   );
   assert(
-    applyAction(paidCatchUpResult.state, { type: "buySkip", seat: "B" }).ok === false,
-    "S7: a paid catch-up skip cannot be used twice"
+    applyAction(fiveDollarCatchUp, { type: "buySkip", seat: "B" }).ok === false,
+    "S7: the $10 catch-up skip is blocked when it would spend B's $1-per-slot reserve"
+  );
+
+  const tenDollarCatchUp = JSON.parse(JSON.stringify(state)) as MatchState;
+  tenDollarCatchUp.teams.B.roster = tenDollarCatchUp.teams.A.roster.slice(0, 4);
+  tenDollarCatchUp.teams.B.skipsUsed = 3;
+  tenDollarCatchUp.teams.B.budget = 14;
+  const finalLadderSkip = must(tenDollarCatchUp, { type: "buySkip", seat: "B" });
+  assert(
+    finalLadderSkip.phase === "catchUp" &&
+      finalLadderSkip.teams.B.skipsUsed === 4 &&
+      finalLadderSkip.teams.B.budget === 4,
+    "S7: B may buy the $10 catch-up skip when the final roster-slot reserve remains"
   );
 
   const freeSkippedId = state.pool[0].id;
@@ -273,10 +292,10 @@ function giveAllToA(players: PlayerCard[]): MatchState {
     "S7: B's saved free skip removes one catch-up card instead of offering it to the full team"
   );
 
-  assert(
-    applyAction(state, { type: "buySkip", seat: "B" }).ok === false,
-    "S7: after using the free catch-up skip, B cannot also buy a second endgame skip"
-  );
+  state = must(state, { type: "buySkip", seat: "B" });
+  assert(state.teams.B.skipsUsed === 2 && state.teams.B.budget === 19, "S7: B can buy the $1 skip after using the free skip");
+  state = must(state, { type: "buySkip", seat: "B" });
+  assert(state.teams.B.skipsUsed === 3 && state.teams.B.budget === 14, "S7: B can then buy the $5 skip during catch-up");
 
   while (state.phase !== "complete") {
     if (state.phase !== "catchUp") throw new Error(`Unexpected S7 phase: ${state.phase}`);

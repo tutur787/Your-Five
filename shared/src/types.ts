@@ -75,7 +75,8 @@ export interface SoccerStats {
   shotAccuracyPct: number;
   cleanSheetPct: number;
   goalsConcededPerMatch: number;
-  savePct: number;
+  /** Omitted when UEFA shot-on-target tracking covers less than 70% of the card window. */
+  savePct?: number;
   pointsPerMatch: number;
   goalDifferencePerMatch: number;
   /** Optional UEFA metrics are emitted only when at least 70% of this card's minutes tracked them. */
@@ -97,11 +98,11 @@ export interface SoccerPerformance {
   goalkeeping: number;
   /** Edition-only, role-weighted performance before sparse-data adjustment. */
   observedScore?: number;
-  /** Verified UEFA selection and major-award career prior for this role. */
+  /** Verified repeat UEFA-selection career prior for this role. Awards are scored separately. */
   pedigreeScore?: number;
   /** How much of the adjusted performance comes from the observed edition, from 0 to 1. */
   dataConfidence?: number;
-  /** Baseline-inclusive achievement rating folded into this card's quality. */
+  /** Legacy rating used by rooms created before honors became an explicit score component. */
   achievementScore?: number;
   /** Final per-card quality used by lineup scoring. */
   roleScore: number;
@@ -173,7 +174,7 @@ export interface TeamState {
   /** Legacy fields accepted while persisted rooms migrate to skipsUsed. */
   skipUsed?: boolean;
   paidSkipUsed?: boolean;
-  /** At most one skip at its current ladder price may be used after either roster reaches five. */
+  /** Legacy catch-up flag retained while persisted rooms migrate to the full skip ladder. */
   catchUpSkipUsed: boolean;
 }
 

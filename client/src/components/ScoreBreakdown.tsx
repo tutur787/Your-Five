@@ -9,6 +9,7 @@ import {
   SoccerPlayerCard,
   soccerHonorDetails,
   soccerHonorPoints,
+  soccerPlayerQuality,
   soccerScoreComponents,
   Sport,
   TeamState,
@@ -172,7 +173,7 @@ function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultO
     <details className="score-breakdown-details" open={defaultOpen}>
       <summary>Score details ({components.total.toFixed(1)})</summary>
       <div className="score-breakdown-body">
-        <div className="breakdown-heading">Card quality</div>
+        <div className="breakdown-heading">Role-adjusted card quality</div>
         <ul className="breakdown-list">
           {soccerPicks.map((pick) => {
             const performance = pick.player.performance;
@@ -187,20 +188,28 @@ function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultO
                     </small>
                   )}
                 </span>
-                <strong>{performance.roleScore.toFixed(1)}</strong>
+                <strong>{soccerPlayerQuality(pick.player).toFixed(1)}</strong>
               </li>
             );
           })}
         </ul>
         <div className="breakdown-row"><span>Five card-quality ratings</span><span>{components.performance.total.toFixed(1)}</span></div>
+        <div className="breakdown-row">
+          <span>Team success in the scoring window</span>
+          <span>{components.teamSuccess >= 0 ? "+" : ""}{components.teamSuccess.toFixed(1)}</span>
+        </div>
         {honoredPicks.length > 0 ? (
           <>
-            <div className="breakdown-heading">Achievements included in card quality</div>
+            <div className="breakdown-heading">
+              Verified honors (+{components.honors.toFixed(1)}{components.honorsUncapped > components.honors ? ` of ${components.honorsUncapped.toFixed(1)}; capped` : ""})
+            </div>
             <ul className="breakdown-list">
               {honoredPicks.map((pick) => (
                 <li key={pick.player.id}>
                   <span>{pick.player.name}</span>
-                  <span>{soccerHonorDetails(pick.player.honors).map((honor) => `1x ${honor.label}`).join(", ")}</span>
+                  <span>
+                    {soccerHonorDetails(pick.player.honors).map((honor) => `1x ${honor.label}`).join(", ")} (+{soccerHonorPoints(pick.player.honors)})
+                  </span>
                 </li>
               ))}
             </ul>

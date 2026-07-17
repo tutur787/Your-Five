@@ -459,7 +459,7 @@ function CatchUpPanel({
     );
   }
 
-  const skipPrice = team.catchUpSkipUsed ? null : nextSkipPrice(team);
+  const skipPrice = nextSkipPrice(team);
   const freeSkipAvailable = skipPrice === 0;
   const paidSkipAvailable = canBuySkip(team, true);
 

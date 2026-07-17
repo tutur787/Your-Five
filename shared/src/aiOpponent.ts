@@ -428,11 +428,11 @@ export function decideAiAction(state: MatchState, aiSeat: SeatId, context: AiDec
     const evaluation = evaluateAiPlayer(state, aiSeat, player, context);
     const skipPrice = nextSkipPrice(team);
     if (!evaluation.fillsOpenPosition) {
-      if (!team.catchUpSkipUsed && skipPrice === 0) return { type: "useSkip", seat: aiSeat };
-      if (!team.catchUpSkipUsed && skipPrice !== null && canBuySkip(team, true)) return { type: "buySkip", seat: aiSeat };
+      if (skipPrice === 0) return { type: "useSkip", seat: aiSeat };
+      if (skipPrice !== null && canBuySkip(team, true)) return { type: "buySkip", seat: aiSeat };
       return { type: "takeForOne", seat: aiSeat };
     }
-    if (!team.catchUpSkipUsed && skipPrice === 0 && shouldUseFreeSkip(evaluation, profile, remainingSlots)) {
+    if (skipPrice === 0 && shouldUseFreeSkip(evaluation, profile, remainingSlots)) {
       return { type: "useSkip", seat: aiSeat };
     }
     const fairShare = team.budget / Math.max(1, remainingSlots);

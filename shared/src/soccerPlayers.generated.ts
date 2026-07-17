@@ -30,7 +30,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.462,
-      "savePct": 0,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 1.154
     },
@@ -39,14 +38,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 17.04,
-      "goalkeeping": 5.5,
-      "observedScore": 7.66,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 9.77
+      "goalkeeping": 17.04,
+      "observedScore": 17.04,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.218,
+      "roleScore": 13.22
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.18,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -79,23 +77,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 1.091,
-      "savePct": 8.3,
       "pointsPerMatch": 2.091,
       "goalDifferencePerMatch": 1.273
     },
     "performance": {
-      "attack": 0,
+      "attack": 17.9,
       "creation": 4.95,
       "control": 0,
-      "defense": 10.1,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.07,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.314,
-      "achievementScore": 10,
-      "roleScore": 10.85
+      "observedScore": 11.43,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.274,
+      "roleScore": 11.42
     },
-    "teamSuccess": 0.13,
+    "teamSuccess": 0.18,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -127,23 +123,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 53.3,
       "goalsConcededPerMatch": 0.867,
-      "savePct": 66.7,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 13.19,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.54,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 11.88
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 9.57
     },
-    "teamSuccess": -0.55,
+    "teamSuccess": -0.61,
     "honors": {
       "champion": true,
       "championLabel": "Europa League + UEFA Super Cup winner"
@@ -180,23 +174,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 54.2,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 0.75
     },
     "performance": {
-      "attack": 0,
+      "attack": 11.71,
       "creation": 4.95,
       "control": 0,
-      "defense": 9.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.5,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 11.02
+      "observedScore": 8.33,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 10.52
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -232,23 +224,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.688,
-      "savePct": 72.5,
       "pointsPerMatch": 2.313,
       "goalDifferencePerMatch": 1.063
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 14.24,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.38,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 12.12
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 9.57
     },
-    "teamSuccess": 0.54,
+    "teamSuccess": 0.37,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + EUSA Cup winner"
@@ -284,7 +274,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45.5,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 0.909,
-      "savePct": 76.9,
       "pointsPerMatch": 1.273,
       "goalDifferencePerMatch": 0.273
     },
@@ -295,12 +284,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 7.66,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 11.83
+      "roleScore": 12.54
     },
-    "teamSuccess": -0.95,
+    "teamSuccess": -0.91,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -332,7 +320,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 69.8,
       "pointsPerMatch": 1.692,
       "goalDifferencePerMatch": 0.231
     },
@@ -343,12 +330,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 2.63,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 8.24
+      "roleScore": 7.76
     },
-    "teamSuccess": -0.71,
+    "teamSuccess": -0.76,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -380,7 +366,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1,
-      "savePct": 82.4,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.333
     },
@@ -391,12 +376,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.79,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.119,
-      "achievementScore": 10,
-      "roleScore": 16.33
+      "roleScore": 17.38
     },
-    "teamSuccess": 0.22,
+    "teamSuccess": 0.2,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -428,7 +412,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.545,
-      "savePct": 0,
       "pointsPerMatch": 1.818,
       "goalDifferencePerMatch": 1.636
     },
@@ -439,12 +422,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 2.82,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.395,
-      "achievementScore": 10,
-      "roleScore": 8.31
+      "roleScore": 7.84
     },
-    "teamSuccess": -0.51,
+    "teamSuccess": -0.15,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -476,23 +458,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 69.8,
       "pointsPerMatch": 1.692,
       "goalDifferencePerMatch": 0.231
     },
     "performance": {
-      "attack": 8.01,
+      "attack": 10.05,
       "creation": 0.59,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.16,
-      "pedigreeScore": 17.69,
+      "observedScore": 7.68,
+      "pedigreeScore": 19.08,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 10.99
+      "roleScore": 12.63
     },
-    "teamSuccess": -0.71,
+    "teamSuccess": -0.76,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -524,21 +504,19 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.9,
       "cleanSheetPct": 28.6,
       "goalsConcededPerMatch": 1.571,
-      "savePct": 70.3,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0.714
     },
     "performance": {
-      "attack": 14.66,
+      "attack": 15.91,
       "creation": 12.06,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.01,
-      "pedigreeScore": 10.86,
+      "observedScore": 14.94,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.359,
-      "achievementScore": 10,
-      "roleScore": 11.69
+      "roleScore": 12.12
     },
     "teamSuccess": -0.35,
     "sourcePositionLabels": [
@@ -581,12 +559,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 0,
-      "goalkeeping": 0.26,
-      "observedScore": 0.21,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.226,
-      "achievementScore": 10,
-      "roleScore": 9.72
+      "goalkeeping": 0,
+      "observedScore": 0,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.141,
+      "roleScore": 10.45
     },
     "teamSuccess": -0.48,
     "sourcePositionLabels": [
@@ -620,23 +597,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.867,
-      "savePct": 79.4,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 0.733
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 10.29,
       "control": 0,
-      "defense": 9,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.26,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 14.64
+      "observedScore": 7.76,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.291,
+      "roleScore": 16.27
     },
-    "teamSuccess": 0.34,
+    "teamSuccess": 0.12,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -668,23 +643,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 88.5,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 1.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 12.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.9,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.167,
-      "achievementScore": 10,
-      "roleScore": 15.46
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.145,
+      "roleScore": 16.53
     },
-    "teamSuccess": 0.61,
+    "teamSuccess": 0.55,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -716,23 +689,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 89.5,
       "pointsPerMatch": 1.5,
       "goalDifferencePerMatch": 0.333
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 10.81,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.64,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.19,
-      "achievementScore": 10,
-      "roleScore": 11.24
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.165,
+      "roleScore": 10.37
     },
-    "teamSuccess": -0.62,
+    "teamSuccess": -0.61,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -764,23 +735,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 35.7,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 0.938,
-      "savePct": 79.5,
       "pointsPerMatch": 1.813,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 0,
+      "attack": 10.86,
       "creation": 17.52,
       "control": 0,
-      "defense": 8,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.9,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 13.5
+      "observedScore": 14.19,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.291,
+      "roleScore": 15.47
     },
-    "teamSuccess": -0.52,
+    "teamSuccess": -0.39,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + EUSA Cup + UEFA Super Cup winner"
@@ -818,7 +787,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 0.923,
-      "savePct": 75,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 0.769
     },
@@ -829,12 +797,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.63,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.384,
-      "achievementScore": 10,
-      "roleScore": 12.55
+      "roleScore": 13.4
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": -0.07,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -867,7 +834,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 1.846,
-      "savePct": 61.3,
       "pointsPerMatch": 0.769,
       "goalDifferencePerMatch": -0.385
     },
@@ -878,10 +844,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.1,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 10.41
+      "roleScore": 10.32
     },
     "teamSuccess": -0.98,
     "sourcePositionLabels": [
@@ -915,7 +880,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 35.7,
       "goalsConcededPerMatch": 1,
-      "savePct": 76.7,
       "pointsPerMatch": 1.786,
       "goalDifferencePerMatch": 0.714
     },
@@ -926,12 +890,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 8.4,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 16.67,
-      "roleScore": 14.6
+      "roleScore": 14.2
     },
-    "teamSuccess": -0.57,
+    "teamSuccess": -0.53,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + EUSA Cup + UEFA Super Cup winner",
@@ -969,7 +932,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 2,
-      "savePct": 0,
       "pointsPerMatch": 0.333,
       "goalDifferencePerMatch": -1
     },
@@ -980,10 +942,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 5.61,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.108,
-      "achievementScore": 10,
-      "roleScore": 10.66
+      "roleScore": 10.53
     },
     "teamSuccess": -0.34,
     "sourcePositionLabels": [
@@ -1017,23 +978,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.8,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 77.3,
       "pointsPerMatch": 1.5,
       "goalDifferencePerMatch": 0.583
     },
     "performance": {
-      "attack": 6.84,
+      "attack": 7.97,
       "creation": 6.18,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.67,
-      "pedigreeScore": 17.69,
+      "observedScore": 7.52,
+      "pedigreeScore": 19.08,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 11.24
+      "roleScore": 12.54
     },
-    "teamSuccess": -0.87,
+    "teamSuccess": -0.8,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -1066,23 +1025,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.6,
       "cleanSheetPct": 16.7,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 65,
       "pointsPerMatch": 1,
       "goalDifferencePerMatch": 0
     },
     "performance": {
-      "attack": 3.68,
+      "attack": 3.53,
       "creation": 9.41,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 5.11,
-      "pedigreeScore": 12.02,
+      "observedScore": 5,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.241,
-      "achievementScore": 16.67,
-      "roleScore": 11.3
+      "roleScore": 9.2
     },
-    "teamSuccess": -0.52,
+    "teamSuccess": -0.51,
     "honors": {
       "champion": true,
       "championLabel": "EUSA Cup winner",
@@ -1129,14 +1086,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 2.22,
-      "goalkeeping": 8.83,
-      "observedScore": 7.59,
-      "pedigreeScore": 19.26,
-      "dataConfidence": 0.566,
-      "achievementScore": 15.83,
-      "roleScore": 13.14
+      "goalkeeping": 9.48,
+      "observedScore": 8.37,
+      "pedigreeScore": 19.08,
+      "dataConfidence": 0.351,
+      "roleScore": 15.31
     },
-    "teamSuccess": -0.63,
+    "teamSuccess": -0.7,
     "honors": {
       "bestPlayer": true,
       "bestPlayerLabel": "UEFA Club Footballer of the Year",
@@ -1174,23 +1130,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 60,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.769
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 3.9,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.11,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 9.78
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 9.57
     },
-    "teamSuccess": -0.47,
+    "teamSuccess": -0.43,
     "honors": {
       "champion": true,
       "championLabel": "Europa League winner"
@@ -1226,23 +1180,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 64.3,
       "goalsConcededPerMatch": 0.571,
-      "savePct": 86.4,
       "pointsPerMatch": 1.643,
       "goalDifferencePerMatch": 0.143
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 17.43,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.93,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 16.04
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.291,
+      "roleScore": 14.58
     },
-    "teamSuccess": -0.76,
+    "teamSuccess": -0.8,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -1278,23 +1230,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.563,
-      "savePct": 85.5,
       "pointsPerMatch": 1.688,
       "goalDifferencePerMatch": 0.188
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 10.1,
       "control": 0,
-      "defense": 17.24,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 15.81,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 15.17
+      "observedScore": 7.67,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.291,
+      "roleScore": 13.58
     },
-    "teamSuccess": -0.72,
+    "teamSuccess": -0.77,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -1330,23 +1280,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 37.8,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1.308,
-      "savePct": 77.6,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 0.692
     },
     "performance": {
-      "attack": 0,
+      "attack": 17.14,
       "creation": 15.24,
       "control": 0,
-      "defense": 1.48,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.23,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 11.51
+      "observedScore": 16.19,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.291,
+      "roleScore": 16.06
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": -0.12,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -1378,7 +1326,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40.7,
       "cleanSheetPct": 21.4,
       "goalsConcededPerMatch": 1.214,
-      "savePct": 78.5,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 0.714
     },
@@ -1389,12 +1336,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.87,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 11.69
+      "roleScore": 11.82
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": 0.03,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -1427,7 +1373,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.222,
-      "savePct": 76.6,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 0.778
     },
@@ -1438,12 +1383,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 15,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.296,
-      "achievementScore": 10,
-      "roleScore": 14.31
+      "roleScore": 15.53
     },
-    "teamSuccess": 0.35,
+    "teamSuccess": 0.16,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -1475,7 +1419,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.4,
       "cleanSheetPct": 21.4,
       "goalsConcededPerMatch": 1.214,
-      "savePct": 78.5,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 0.714
     },
@@ -1486,12 +1429,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 10.64,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 14.36
+      "roleScore": 15.08
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": 0.03,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -1523,7 +1465,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.3,
       "cleanSheetPct": 8.3,
       "goalsConcededPerMatch": 1.5,
-      "savePct": 72.7,
       "pointsPerMatch": 1.667,
       "goalDifferencePerMatch": 0.167
     },
@@ -1534,12 +1475,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 11.12,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 14.17,
-      "roleScore": 15.14
+      "roleScore": 15.27
     },
-    "teamSuccess": -0.74,
+    "teamSuccess": -0.78,
     "honors": {
       "ballonDor": true,
       "ballonDorLabel": "Ballon d'Or"
@@ -1575,23 +1515,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.7,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 1,
-      "savePct": 71.4,
       "pointsPerMatch": 1.3,
       "goalDifferencePerMatch": 0.2
     },
     "performance": {
-      "attack": 5.29,
+      "attack": 5.15,
       "creation": 14.41,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.57,
-      "pedigreeScore": 17.69,
+      "observedScore": 7.46,
+      "pedigreeScore": 19.08,
       "dataConfidence": 0.565,
-      "achievementScore": 10,
-      "roleScore": 11.68
+      "roleScore": 12.52
     },
-    "teamSuccess": -0.92,
+    "teamSuccess": -0.91,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -1623,23 +1561,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.3,
       "cleanSheetPct": 55.6,
       "goalsConcededPerMatch": 1,
-      "savePct": 79.1,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.444
     },
     "performance": {
-      "attack": 13.8,
+      "attack": 14.26,
       "creation": 10,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.85,
-      "pedigreeScore": 10.86,
+      "observedScore": 13.2,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.458,
-      "achievementScore": 11.67,
       "roleScore": 11.76
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.57,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (12 goals)"
@@ -1684,14 +1620,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 19.26,
-      "goalkeeping": 19.77,
-      "observedScore": 19.68,
-      "pedigreeScore": 19.26,
-      "dataConfidence": 0.396,
-      "achievementScore": 10,
-      "roleScore": 18.01
+      "goalkeeping": 19.87,
+      "observedScore": 19.77,
+      "pedigreeScore": 19.08,
+      "dataConfidence": 0.246,
+      "roleScore": 19.25
     },
-    "teamSuccess": 0.21,
+    "teamSuccess": -0.05,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -1723,23 +1658,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 44.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 83.9,
       "pointsPerMatch": 2.111,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 19.24,
       "control": 0,
-      "defense": 9.29,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.28,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.299,
-      "achievementScore": 10,
-      "roleScore": 13.63
+      "observedScore": 12.24,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.261,
+      "roleScore": 15.02
     },
-    "teamSuccess": 0.17,
+    "teamSuccess": 0.09,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -1772,23 +1705,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.636,
-      "savePct": 81.6,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.818
     },
     "performance": {
-      "attack": 0,
+      "attack": 13.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 15.67,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 13.52,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 12.44
+      "observedScore": 9.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 10.74
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -1824,23 +1755,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 1,
-      "savePct": 84.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.75
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 10.29,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.22,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.267,
-      "achievementScore": 10,
-      "roleScore": 14.52
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.233,
+      "roleScore": 15.36
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.21,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -1872,23 +1801,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 22.2,
       "goalsConcededPerMatch": 1,
-      "savePct": 71,
       "pointsPerMatch": 1.556,
       "goalDifferencePerMatch": 0.667
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 16.57,
       "control": 0,
-      "defense": 4.33,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.78,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.294,
-      "achievementScore": 10,
-      "roleScore": 12.53
+      "observedScore": 10.9,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.257,
+      "roleScore": 14.69
     },
-    "teamSuccess": -0.84,
+    "teamSuccess": -0.75,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -1920,7 +1847,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 83.3,
       "cleanSheetPct": 14.3,
       "goalsConcededPerMatch": 1.429,
-      "savePct": 76.2,
       "pointsPerMatch": 1.286,
       "goalDifferencePerMatch": 0
     },
@@ -1933,8 +1859,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "observedScore": 14.39,
       "pedigreeScore": 20,
       "dataConfidence": 0.163,
-      "achievementScore": 10,
-      "roleScore": 17.72
+      "roleScore": 19.08
     },
     "teamSuccess": -0.48,
     "sourcePositionLabels": [
@@ -1968,7 +1893,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 46.2,
       "cleanSheetPct": 53.3,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 72.1,
       "pointsPerMatch": 1.6,
       "goalDifferencePerMatch": 0.267
     },
@@ -1979,12 +1903,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 5.16,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 9.46
+      "roleScore": 8.76
     },
-    "teamSuccess": -0.81,
+    "teamSuccess": -0.82,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -2020,7 +1943,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 76,
       "pointsPerMatch": 1.889,
       "goalDifferencePerMatch": 0.667
     },
@@ -2031,12 +1953,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 13.09,
-      "pedigreeScore": 18.35,
+      "pedigreeScore": 18,
       "dataConfidence": 0.326,
-      "achievementScore": 10,
-      "roleScore": 15.64
+      "roleScore": 16.4
     },
-    "teamSuccess": -0.41,
+    "teamSuccess": -0.45,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -2068,7 +1989,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45.5,
       "cleanSheetPct": 71.4,
       "goalsConcededPerMatch": 0.286,
-      "savePct": 92.9,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 0.429
     },
@@ -2079,12 +1999,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 8.88,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.267,
-      "achievementScore": 10,
-      "roleScore": 14.78
+      "roleScore": 15.57
     },
-    "teamSuccess": 0.2,
+    "teamSuccess": -0.05,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -2116,23 +2035,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.3,
       "cleanSheetPct": 20,
       "goalsConcededPerMatch": 1.1,
-      "savePct": 71.1,
       "pointsPerMatch": 1.7,
       "goalDifferencePerMatch": 0.7
     },
     "performance": {
-      "attack": 8.5,
+      "attack": 9.09,
       "creation": 2.5,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7,
-      "pedigreeScore": 17.69,
+      "observedScore": 7.44,
+      "pedigreeScore": 19.08,
       "dataConfidence": 0.56,
-      "achievementScore": 10,
-      "roleScore": 11.45
+      "roleScore": 12.56
     },
-    "teamSuccess": -0.7,
+    "teamSuccess": -0.63,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -2164,23 +2081,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 76,
       "cleanSheetPct": 44.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 83,
       "pointsPerMatch": 1.889,
       "goalDifferencePerMatch": 0.556
     },
     "performance": {
-      "attack": 12.99,
+      "attack": 14.02,
       "creation": 3.82,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.7,
-      "pedigreeScore": 15.52,
+      "observedScore": 11.47,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.483,
-      "achievementScore": 14.17,
-      "roleScore": 13.34
+      "roleScore": 13.25
     },
-    "teamSuccess": -0.41,
+    "teamSuccess": -0.48,
     "honors": {
       "ballonDor": true,
       "ballonDorLabel": "Ballon d'Or"
@@ -2225,14 +2140,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 10.74,
-      "goalkeeping": 11.94,
-      "observedScore": 11.71,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.566,
-      "achievementScore": 11.67,
-      "roleScore": 11.97
+      "goalkeeping": 12.14,
+      "observedScore": 11.92,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.351,
+      "roleScore": 12.07
     },
-    "teamSuccess": -0.91,
+    "teamSuccess": -0.88,
     "honors": {
       "positionalAward": true,
       "positionalAwardLabel": "UEFA Club Goalkeeper of the Year"
@@ -2268,23 +2182,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 25,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 80,
       "pointsPerMatch": 2.1,
       "goalDifferencePerMatch": 0.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 13.05,
       "control": 0,
-      "defense": 13.33,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 13.28,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 14.08
+      "observedScore": 9.14,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.291,
+      "roleScore": 14.01
     },
-    "teamSuccess": 0.16,
+    "teamSuccess": 0.05,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -2316,23 +2228,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 25,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 80,
       "pointsPerMatch": 1.5,
       "goalDifferencePerMatch": 0.583
     },
     "performance": {
-      "attack": 0,
+      "attack": 11.71,
       "creation": 4.95,
       "control": 0,
-      "defense": 11.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.1,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 14.29
+      "observedScore": 8.33,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.291,
+      "roleScore": 15.52
     },
-    "teamSuccess": -0.87,
+    "teamSuccess": -0.8,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -2364,23 +2274,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 78.6,
       "pointsPerMatch": 2.375,
       "goalDifferencePerMatch": 1.625
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 12.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.9,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.267,
-      "achievementScore": 10,
-      "roleScore": 15.54
+      "observedScore": 5.1,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.233,
+      "roleScore": 16.35
     },
-    "teamSuccess": 0.66,
+    "teamSuccess": 0.67,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -2412,23 +2320,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 53.8,
       "goalsConcededPerMatch": 0.923,
-      "savePct": 78.2,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 0,
+      "attack": 11.43,
       "creation": 11.24,
       "control": 0,
-      "defense": 11.67,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.58,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 13.6
+      "observedScore": 11.33,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.291,
+      "roleScore": 14.64
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -2460,7 +2366,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 51.9,
       "cleanSheetPct": 53.8,
       "goalsConcededPerMatch": 0.615,
-      "savePct": 86.4,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1
     },
@@ -2471,12 +2376,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.15,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 10.81
+      "roleScore": 10.34
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.26,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -2512,7 +2416,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 86.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.8
     },
@@ -2523,12 +2426,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.73,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.372,
-      "achievementScore": 16.67,
-      "roleScore": 15.22
+      "roleScore": 14.92
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -2566,7 +2468,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.3,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 1,
-      "savePct": 76.9,
       "pointsPerMatch": 2.286,
       "goalDifferencePerMatch": 1.571
     },
@@ -2577,12 +2478,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 17.9,
-      "pedigreeScore": 18.35,
+      "pedigreeScore": 18,
       "dataConfidence": 0.278,
-      "achievementScore": 14.17,
-      "roleScore": 17.62
+      "roleScore": 17.97
     },
-    "teamSuccess": 0.44,
+    "teamSuccess": 0.48,
     "honors": {
       "ballonDor": true,
       "ballonDorLabel": "Ballon d'Or"
@@ -2618,7 +2518,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 36.8,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 75,
       "pointsPerMatch": 1.625,
       "goalDifferencePerMatch": 0.375
     },
@@ -2629,10 +2528,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 11.49,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.274,
-      "achievementScore": 10,
-      "roleScore": 15.33
+      "roleScore": 16.22
     },
     "teamSuccess": -0.67,
     "sourcePositionLabels": [
@@ -2666,23 +2564,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.3,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 1,
-      "savePct": 77.3,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.5
     },
     "performance": {
-      "attack": 11.27,
+      "attack": 12.16,
       "creation": 17.94,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.94,
-      "pedigreeScore": 14.37,
+      "observedScore": 13.6,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.334,
-      "achievementScore": 10,
-      "roleScore": 13.31
+      "roleScore": 14.48
     },
-    "teamSuccess": 0.22,
+    "teamSuccess": 0.29,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -2714,23 +2610,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 71.8,
       "cleanSheetPct": 45.5,
       "goalsConcededPerMatch": 1.091,
-      "savePct": 76.9,
       "pointsPerMatch": 1.909,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 15.25,
+      "attack": 15.47,
       "creation": 11.76,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.38,
-      "pedigreeScore": 15.52,
+      "observedScore": 14.54,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 14.14
+      "roleScore": 14.71
     },
-    "teamSuccess": -0.36,
+    "teamSuccess": -0.28,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -2771,14 +2665,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 3.33,
-      "goalkeeping": 8.77,
-      "observedScore": 7.75,
-      "pedigreeScore": 19.26,
-      "dataConfidence": 0.226,
-      "achievementScore": 10,
-      "roleScore": 15.66
+      "goalkeeping": 9.78,
+      "observedScore": 8.79,
+      "pedigreeScore": 19.08,
+      "dataConfidence": 0.141,
+      "roleScore": 17.63
     },
-    "teamSuccess": -0.48,
+    "teamSuccess": -0.49,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -2811,23 +2704,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 83.7,
       "pointsPerMatch": 1.5,
       "goalDifferencePerMatch": 0.25
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 9.48,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.57,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.228,
-      "achievementScore": 10,
-      "roleScore": 10.96
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.199,
+      "roleScore": 10.15
     },
-    "teamSuccess": -0.75,
+    "teamSuccess": -0.74,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -2860,23 +2751,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 22.2,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 79.7,
       "pointsPerMatch": 1.556,
       "goalDifferencePerMatch": 0.444
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 1.52,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 2.21,
-      "pedigreeScore": 13.11,
-      "dataConfidence": 0.3,
-      "achievementScore": 14.17,
-      "roleScore": 10.49
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.262,
+      "roleScore": 9.76
     },
-    "teamSuccess": -0.84,
+    "teamSuccess": -0.81,
     "honors": {
       "ballonDor": true,
       "ballonDorLabel": "Ballon d'Or"
@@ -2912,23 +2801,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 0.769,
-      "savePct": 82.1,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 0.769
     },
     "performance": {
-      "attack": 0,
+      "attack": 11.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 13.05,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.43,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 15.63
+      "observedScore": 8.1,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.291,
+      "roleScore": 16.37
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.31,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -2964,23 +2851,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.333,
-      "savePct": 92,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.167
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 15.43,
       "control": 0,
-      "defense": 18.76,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 18.1,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.2,
-      "achievementScore": 10,
-      "roleScore": 16.94
+      "observedScore": 10.33,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.175,
+      "roleScore": 17.73
     },
-    "teamSuccess": -0.11,
+    "teamSuccess": -0.04,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -3012,7 +2897,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 41.2,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 80,
       "pointsPerMatch": 1.667,
       "goalDifferencePerMatch": 0.5
     },
@@ -3023,12 +2907,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 13.46,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.172,
-      "achievementScore": 10,
-      "roleScore": 16.19
+      "roleScore": 17.22
     },
-    "teamSuccess": -0.4,
+    "teamSuccess": -0.39,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -3060,7 +2943,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.5,
       "cleanSheetPct": 69.2,
       "goalsConcededPerMatch": 0.385,
-      "savePct": 90.9,
       "pointsPerMatch": 1.769,
       "goalDifferencePerMatch": 0.538
     },
@@ -3071,12 +2953,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 8.03,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 11.95
+      "roleScore": 12.69
     },
-    "teamSuccess": -0.6,
+    "teamSuccess": -0.62,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -3108,7 +2989,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.2,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 90.1,
       "pointsPerMatch": 1.583,
       "goalDifferencePerMatch": 0.667
     },
@@ -3119,12 +2999,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 10,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 14.14
+      "roleScore": 14.83
     },
-    "teamSuccess": -0.83,
+    "teamSuccess": -0.74,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -3156,7 +3035,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.2,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.714,
-      "savePct": 84.4,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0.714
     },
@@ -3167,10 +3045,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 10.05,
-      "pedigreeScore": 18.35,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 16.67,
-      "roleScore": 15.3
+      "roleScore": 14.85
     },
     "teamSuccess": -0.44,
     "honors": {
@@ -3210,21 +3087,19 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.5,
       "cleanSheetPct": 72.7,
       "goalsConcededPerMatch": 0.364,
-      "savePct": 91.1,
       "pointsPerMatch": 1.727,
       "goalDifferencePerMatch": 0.545
     },
     "performance": {
-      "attack": 2.4,
+      "attack": 2.3,
       "creation": 11.18,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.6,
-      "pedigreeScore": 17.69,
+      "observedScore": 4.52,
+      "pedigreeScore": 19.08,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 10.24
+      "roleScore": 10.85
     },
     "teamSuccess": -0.66,
     "sourcePositionLabels": [
@@ -3258,23 +3133,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.7,
-      "savePct": 84.8,
       "pointsPerMatch": 1.9,
       "goalDifferencePerMatch": 0.7
     },
     "performance": {
-      "attack": 5.71,
+      "attack": 5.93,
       "creation": 18.24,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.84,
-      "pedigreeScore": 14.37,
+      "observedScore": 9.01,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.549,
-      "achievementScore": 12.5,
-      "roleScore": 11.51
+      "roleScore": 11.67
     },
-    "teamSuccess": -0.39,
+    "teamSuccess": -0.41,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -3319,14 +3192,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 1.48,
-      "goalkeeping": 6.38,
-      "observedScore": 5.46,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.452,
-      "achievementScore": 10,
-      "roleScore": 12.31
+      "goalkeeping": 7.06,
+      "observedScore": 6.2,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.281,
+      "roleScore": 16.12
     },
-    "teamSuccess": -0.63,
+    "teamSuccess": -0.65,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -3358,23 +3230,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 31.3,
       "goalsConcededPerMatch": 1.25,
-      "savePct": 73,
       "pointsPerMatch": 2.063,
       "goalDifferencePerMatch": 0.688
     },
     "performance": {
-      "attack": 0,
+      "attack": 10.67,
       "creation": 19.05,
       "control": 0,
-      "defense": 3.86,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.9,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 14.14
+      "observedScore": 14.86,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.291,
+      "roleScore": 18
     },
-    "teamSuccess": -0.02,
+    "teamSuccess": -0.16,
     "honors": {
       "champion": true,
       "championLabel": "Europa League winner"
@@ -3410,23 +3280,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 27.3,
       "goalsConcededPerMatch": 1.091,
-      "savePct": 82.6,
       "pointsPerMatch": 2.091,
       "goalDifferencePerMatch": 1.182
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 4,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.19,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 13
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.291,
+      "roleScore": 14.58
     },
-    "teamSuccess": 0.13,
+    "teamSuccess": 0.14,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -3462,23 +3330,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 82.4,
       "pointsPerMatch": 1.778,
       "goalDifferencePerMatch": 0.667
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 10.81,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.64,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.282,
-      "achievementScore": 10,
-      "roleScore": 14.51
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.247,
+      "roleScore": 15.17
     },
-    "teamSuccess": -0.58,
+    "teamSuccess": -0.57,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -3511,23 +3377,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 71.4,
       "goalsConcededPerMatch": 0.571,
-      "savePct": 83.3,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 18.33,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 15.66,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.233,
-      "achievementScore": 10,
-      "roleScore": 12.35
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.204,
+      "roleScore": 10.13
     },
-    "teamSuccess": -0.6,
+    "teamSuccess": -0.53,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -3559,7 +3423,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 56.5,
       "cleanSheetPct": 45.5,
       "goalsConcededPerMatch": 1,
-      "savePct": 82.8,
       "pointsPerMatch": 2.455,
       "goalDifferencePerMatch": 1.273
     },
@@ -3572,10 +3435,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "observedScore": 15.74,
       "pedigreeScore": 20,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 17.07
+      "roleScore": 18.31
     },
-    "teamSuccess": 0.82,
+    "teamSuccess": 0.67,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -3607,7 +3469,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 48.5,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 76.2,
       "pointsPerMatch": 1.583,
       "goalDifferencePerMatch": 1.25
     },
@@ -3618,12 +3479,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 13.59,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 15.35
+      "roleScore": 16.25
     },
-    "teamSuccess": -0.83,
+    "teamSuccess": -0.5,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -3655,7 +3515,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.8,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 0.857,
-      "savePct": 84.6,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 1.071
     },
@@ -3666,12 +3525,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 15.05,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.397,
-      "achievementScore": 18.33,
-      "roleScore": 17.1
+      "roleScore": 16.83
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": 0.16,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -3714,7 +3572,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 52.9,
       "cleanSheetPct": 38.5,
       "goalsConcededPerMatch": 0.923,
-      "savePct": 84,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.154
     },
@@ -3725,12 +3582,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.71,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 13.91
+      "roleScore": 14.55
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.32,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -3766,23 +3622,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 0.857,
-      "savePct": 82.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 8.85,
+      "attack": 10.05,
       "creation": 0.59,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.78,
-      "pedigreeScore": 17.32,
+      "observedScore": 7.68,
+      "pedigreeScore": 18.62,
       "dataConfidence": 0.385,
-      "achievementScore": 10,
-      "roleScore": 12.78
+      "roleScore": 14.41
     },
-    "teamSuccess": -0.12,
+    "teamSuccess": -0.11,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -3814,23 +3668,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45.9,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 85.4,
       "pointsPerMatch": 2.1,
       "goalDifferencePerMatch": 0.9
     },
     "performance": {
-      "attack": 3.68,
+      "attack": 4.61,
       "creation": 7.06,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.52,
-      "pedigreeScore": 10.86,
+      "observedScore": 5.22,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 7.69
+      "roleScore": 7.53
     },
-    "teamSuccess": 0.16,
+    "teamSuccess": 0.05,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -3871,12 +3723,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 4.44,
-      "goalkeeping": 4.96,
-      "observedScore": 4.86,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.396,
-      "achievementScore": 10,
-      "roleScore": 12.74
+      "goalkeeping": 4.58,
+      "observedScore": 4.56,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.246,
+      "roleScore": 16.2
     },
     "teamSuccess": -0.82,
     "sourcePositionLabels": [
@@ -3910,23 +3761,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 36.4,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 1,
-      "savePct": 74.1,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.429
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.33,
       "creation": 4.95,
       "control": 0,
-      "defense": 8.76,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8,
-      "pedigreeScore": 18.75,
-      "dataConfidence": 0.233,
-      "achievementScore": 10,
-      "roleScore": 15.31
+      "observedScore": 10.14,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.204,
+      "roleScore": 17.99
     },
-    "teamSuccess": -0.6,
+    "teamSuccess": -0.61,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -3958,23 +3807,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 73.2,
       "pointsPerMatch": 1.833,
       "goalDifferencePerMatch": 0.75
     },
     "performance": {
-      "attack": 0,
+      "attack": 16.67,
       "creation": 4.95,
       "control": 0,
-      "defense": 9.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.5,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 13.84
+      "observedScore": 10.81,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.291,
+      "roleScore": 16.24
     },
-    "teamSuccess": -0.49,
+    "teamSuccess": -0.46,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -4006,23 +3853,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 44.4,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 79.3,
       "pointsPerMatch": 2.444,
       "goalDifferencePerMatch": 1.222
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 13.48,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.77,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.299,
-      "achievementScore": 10,
-      "roleScore": 15.55
+      "observedScore": 5.1,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.261,
+      "roleScore": 15.93
     },
-    "teamSuccess": 0.82,
+    "teamSuccess": 0.64,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -4054,23 +3899,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 75.8,
       "pointsPerMatch": 1.667,
       "goalDifferencePerMatch": 0.667
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 12.19,
       "control": 0,
-      "defense": 3.81,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 5.49,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 13.36
+      "observedScore": 8.71,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.291,
+      "roleScore": 16.22
     },
-    "teamSuccess": -0.74,
+    "teamSuccess": -0.68,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -4102,7 +3945,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45,
       "cleanSheetPct": 72.7,
       "goalsConcededPerMatch": 0.273,
-      "savePct": 90.9,
       "pointsPerMatch": 1.909,
       "goalDifferencePerMatch": 0.909
     },
@@ -4115,10 +3957,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "observedScore": 9.89,
       "pedigreeScore": 20,
       "dataConfidence": 0.397,
-      "achievementScore": 18.33,
-      "roleScore": 16.34
+      "roleScore": 15.99
     },
-    "teamSuccess": -0.36,
+    "teamSuccess": -0.31,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -4160,7 +4001,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 64.7,
       "cleanSheetPct": 45.5,
       "goalsConcededPerMatch": 0.727,
-      "savePct": 77.8,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.273
     },
@@ -4171,12 +4011,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 14.79,
-      "pedigreeScore": 17.8,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.356,
-      "achievementScore": 10,
-      "roleScore": 15.72
+      "roleScore": 17.58
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.54,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -4208,7 +4047,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 83.3,
       "cleanSheetPct": 55.6,
       "goalsConcededPerMatch": 0.889,
-      "savePct": 78.9,
       "pointsPerMatch": 1.778,
       "goalDifferencePerMatch": 0.889
     },
@@ -4219,12 +4057,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.39,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.357,
-      "achievementScore": 10,
-      "roleScore": 13.51
+      "roleScore": 14.55
     },
-    "teamSuccess": -0.58,
+    "teamSuccess": -0.48,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -4256,7 +4093,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.1,
       "cleanSheetPct": 27.3,
       "goalsConcededPerMatch": 1.364,
-      "savePct": 75.8,
       "pointsPerMatch": 1.545,
       "goalDifferencePerMatch": 0.636
     },
@@ -4267,12 +4103,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 17.02,
-      "pedigreeScore": 16.28,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 15.59
+      "roleScore": 16.25
     },
-    "teamSuccess": -0.85,
+    "teamSuccess": -0.77,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -4304,23 +4139,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.6,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.889,
-      "savePct": 70.4,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 1.333
     },
     "performance": {
-      "attack": 9.17,
+      "attack": 10.69,
       "creation": 17.06,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.14,
-      "pedigreeScore": 19.63,
+      "observedScore": 12.28,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.363,
-      "achievementScore": 10,
-      "roleScore": 15.57
+      "roleScore": 16.91
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.31,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -4352,23 +4185,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 57.9,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1,
-      "savePct": 76.3,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 0.889
     },
     "performance": {
-      "attack": 2.45,
+      "attack": 2.84,
       "creation": 3.38,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 2.68,
-      "pedigreeScore": 10.86,
+      "observedScore": 2.98,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.494,
-      "achievementScore": 10,
-      "roleScore": 7.3
+      "roleScore": 6.8
     },
-    "teamSuccess": 0.38,
+    "teamSuccess": 0.19,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -4409,12 +4240,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 3.33,
-      "goalkeeping": 3.65,
-      "observedScore": 3.59,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.452,
-      "achievementScore": 10,
-      "roleScore": 11.59
+      "goalkeeping": 3.48,
+      "observedScore": 3.46,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.281,
+      "roleScore": 15.35
     },
     "teamSuccess": -0.78,
     "sourcePositionLabels": [
@@ -4448,23 +4278,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 53.8,
       "goalsConcededPerMatch": 0.615,
-      "savePct": 71.4,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.923
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 10.57,
       "control": 0,
-      "defense": 15.48,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.5,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 16.29
+      "observedScore": 7.9,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.291,
+      "roleScore": 15.98
     },
-    "teamSuccess": -0.47,
+    "teamSuccess": -0.38,
     "honors": {
       "champion": true,
       "championLabel": "UEFA Super Cup winner"
@@ -4500,23 +4328,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.727,
-      "savePct": 84.6,
       "pointsPerMatch": 2.091,
       "goalDifferencePerMatch": 0.909
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 14.9,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.91,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 15.09
+      "observedScore": 5.1,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.291,
+      "roleScore": 14.58
     },
-    "teamSuccess": 0.13,
+    "teamSuccess": 0.04,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -4548,23 +4374,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 72.7,
       "goalsConcededPerMatch": 0.273,
-      "savePct": 85.7,
       "pointsPerMatch": 2.091,
       "goalDifferencePerMatch": 1.091
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 19.9,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 16.91,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 17.19
+      "observedScore": 5.1,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.291,
+      "roleScore": 15.5
     },
-    "teamSuccess": 0.13,
+    "teamSuccess": 0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -4600,23 +4424,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 80,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.583
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 9.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.5,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 10.64
+      "observedScore": 5.1,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 9.57
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.29,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -4649,7 +4471,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.727,
-      "savePct": 84.3,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.182
     },
@@ -4662,10 +4483,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "observedScore": 12.53,
       "pedigreeScore": 20,
       "dataConfidence": 0.397,
-      "achievementScore": 10,
-      "roleScore": 15.98
+      "roleScore": 17.04
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.49,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -4697,7 +4517,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 31.8,
       "cleanSheetPct": 57.1,
       "goalsConcededPerMatch": 0.571,
-      "savePct": 73.3,
       "pointsPerMatch": 1.929,
       "goalDifferencePerMatch": 1
     },
@@ -4708,12 +4527,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 10.48,
-      "pedigreeScore": 17.8,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 14.54
+      "roleScore": 15.7
     },
-    "teamSuccess": -0.28,
+    "teamSuccess": -0.22,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -4749,7 +4567,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.3,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 1.2,
-      "savePct": 70,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.2
     },
@@ -4760,12 +4577,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 15.05,
-      "pedigreeScore": 18.07,
+      "pedigreeScore": 18,
       "dataConfidence": 0.193,
-      "achievementScore": 10,
-      "roleScore": 16.37
+      "roleScore": 17.43
     },
-    "teamSuccess": -0.09,
+    "teamSuccess": -0.03,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -4797,7 +4613,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 41.2,
       "cleanSheetPct": 58.3,
       "goalsConcededPerMatch": 0.583,
-      "savePct": 69.6,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 1.083
     },
@@ -4808,12 +4623,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 7.98,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 14.5
+      "roleScore": 15.01
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.23,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -4849,23 +4663,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 57.1,
       "cleanSheetPct": 53.8,
       "goalsConcededPerMatch": 0.615,
-      "savePct": 71.4,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.923
     },
     "performance": {
-      "attack": 3.82,
+      "attack": 4.9,
       "creation": 8.82,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 5.07,
-      "pedigreeScore": 19.63,
+      "observedScore": 5.88,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.566,
-      "achievementScore": 18.33,
-      "roleScore": 12.44
+      "roleScore": 11.82
     },
-    "teamSuccess": -0.47,
+    "teamSuccess": -0.38,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -4908,21 +4720,19 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.3,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.625,
-      "savePct": 80,
       "pointsPerMatch": 1.5,
       "goalDifferencePerMatch": 0.125
     },
     "performance": {
-      "attack": 4.29,
+      "attack": 3.41,
       "creation": 4.41,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.32,
-      "pedigreeScore": 17.32,
+      "observedScore": 3.66,
+      "pedigreeScore": 18.62,
       "dataConfidence": 0.444,
-      "achievementScore": 12.5,
-      "roleScore": 11.7
+      "roleScore": 11.98
     },
     "teamSuccess": -0.86,
     "honors": {
@@ -4969,14 +4779,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 15.56,
-      "goalkeeping": 11.94,
-      "observedScore": 12.62,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.396,
-      "achievementScore": 10,
-      "roleScore": 15.35
+      "goalkeeping": 10.83,
+      "observedScore": 11.56,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.246,
+      "roleScore": 17.92
     },
-    "teamSuccess": -0.13,
+    "teamSuccess": -0.07,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -5008,23 +4817,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 78.3,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.667
     },
     "performance": {
-      "attack": 0,
+      "attack": 12.29,
       "creation": 4.95,
       "control": 0,
-      "defense": 7.38,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.9,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.333,
-      "achievementScore": 12.5,
-      "roleScore": 10.56
+      "observedScore": 8.62,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.291,
+      "roleScore": 10.6
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": -0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -5060,23 +4867,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 45.5,
       "goalsConcededPerMatch": 0.818,
-      "savePct": 65.4,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.273
     },
     "performance": {
-      "attack": 0,
+      "attack": 13.52,
       "creation": 12.57,
       "control": 0,
-      "defense": 12.19,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.27,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.333,
-      "achievementScore": 10,
-      "roleScore": 15.28
+      "observedScore": 13.05,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.291,
+      "roleScore": 17.48
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.01,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -5108,23 +4913,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1,
-      "savePct": 62.5,
       "pointsPerMatch": 1.778,
       "goalDifferencePerMatch": 1.222
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 6.62,
+      "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.29,
-      "pedigreeScore": 18.56,
-      "dataConfidence": 0.298,
-      "achievementScore": 10,
-      "roleScore": 14.17
+      "observedScore": 5.1,
+      "pedigreeScore": 19.76,
+      "dataConfidence": 0.26,
+      "roleScore": 15.95
     },
-    "teamSuccess": -0.58,
+    "teamSuccess": -0.34,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -5156,22 +4959,20 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.333,
-      "savePct": 95,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.333,
       "recoveriesPer90": 4.719
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 0,
-      "defense": 11.5,
+      "defense": 4.24,
       "goalkeeping": 0,
-      "observedScore": 10.77,
-      "pedigreeScore": 15.55,
-      "dataConfidence": 0.124,
-      "achievementScore": 10,
-      "roleScore": 14.22
+      "observedScore": 4.56,
+      "pedigreeScore": 16,
+      "dataConfidence": 0.118,
+      "roleScore": 14.65
     },
     "teamSuccess": 0.36,
     "sourcePositionLabels": [
@@ -5205,7 +5006,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.5,
-      "savePct": 81,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.5,
       "recoveriesPer90": 3.103
@@ -5219,10 +5019,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "observedScore": 12.6,
       "pedigreeScore": 20,
       "dataConfidence": 0.359,
-      "achievementScore": 10,
-      "roleScore": 16.24
+      "roleScore": 17.35
     },
-    "teamSuccess": 0.19,
+    "teamSuccess": 0.31,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -5254,7 +5053,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 57.1,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1,
-      "savePct": 61.5,
       "pointsPerMatch": 1.9,
       "goalDifferencePerMatch": 1.1
     },
@@ -5265,12 +5063,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.6,
-      "pedigreeScore": 17.8,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.351,
-      "achievementScore": 10,
-      "roleScore": 14.18
+      "roleScore": 15.78
     },
-    "teamSuccess": -0.39,
+    "teamSuccess": -0.26,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -5302,7 +5099,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 46.9,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 1,
-      "savePct": 79.4,
       "pointsPerMatch": 2.154,
       "goalDifferencePerMatch": 0.692
     },
@@ -5313,12 +5109,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 15.9,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.397,
-      "achievementScore": 12.5,
-      "roleScore": 13.08
+      "roleScore": 13.02
     },
-    "teamSuccess": 0.27,
+    "teamSuccess": 0.04,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -5354,7 +5149,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 0.625,
-      "savePct": 72.2,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 2,
       "recoveriesPer90": 3.608
@@ -5366,12 +5160,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 8.89,
       "goalkeeping": 0,
       "observedScore": 7.47,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.322,
-      "achievementScore": 10,
-      "roleScore": 14.71
+      "roleScore": 15.71
     },
-    "teamSuccess": 0.4,
+    "teamSuccess": 0.51,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -5403,23 +5196,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 69.6,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 64.3,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 1.417
     },
     "performance": {
-      "attack": 16.72,
+      "attack": 17.06,
       "creation": 1.76,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.98,
-      "pedigreeScore": 19.63,
+      "observedScore": 13.24,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.566,
-      "achievementScore": 15.83,
-      "roleScore": 15.86
+      "roleScore": 15.97
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": 0.22,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (8 goals)",
@@ -5458,23 +5249,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 86.7,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 85.5,
       "pointsPerMatch": 1.636,
       "goalDifferencePerMatch": 1
     },
     "performance": {
-      "attack": 12.25,
+      "attack": 12.27,
       "creation": 0.59,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.34,
-      "pedigreeScore": 10.86,
+      "observedScore": 9.35,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 10
+      "roleScore": 9.86
     },
-    "teamSuccess": -0.76,
+    "teamSuccess": -0.56,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -5515,14 +5304,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 18.52,
-      "goalkeeping": 18.29,
-      "observedScore": 18.33,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 17.22
+      "goalkeeping": 18.34,
+      "observedScore": 18.37,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.351,
+      "roleScore": 19.43
     },
-    "teamSuccess": 0.53,
+    "teamSuccess": 0.57,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -5554,24 +5342,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 36.4,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 72,
       "pointsPerMatch": 2.417,
       "goalDifferencePerMatch": 1.917,
       "recoveriesPer90": 6.459
     },
     "performance": {
-      "attack": 0,
+      "attack": 12.29,
       "creation": 15.62,
       "control": 0,
-      "defense": 13,
+      "defense": 11.52,
       "goalkeeping": 0,
-      "observedScore": 13.29,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.418,
-      "achievementScore": 12.5,
-      "roleScore": 15.6
+      "observedScore": 12.43,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.397,
+      "roleScore": 16.57
     },
-    "teamSuccess": 0.76,
+    "teamSuccess": 0.78,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -5607,24 +5393,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 0.714,
-      "savePct": 75,
       "pointsPerMatch": 2.286,
       "goalDifferencePerMatch": 1.714,
       "recoveriesPer90": 7.82
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.62,
       "creation": 14.1,
       "control": 0,
-      "defense": 14.29,
+      "defense": 16.06,
       "goalkeeping": 0,
-      "observedScore": 14.27,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.283,
-      "achievementScore": 12.5,
-      "roleScore": 16.39
+      "observedScore": 15.61,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.269,
+      "roleScore": 18.3
     },
-    "teamSuccess": 0.43,
+    "teamSuccess": 0.5,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -5660,24 +5444,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 28.6,
       "goalsConcededPerMatch": 1.286,
-      "savePct": 74.3,
       "pointsPerMatch": 1,
       "goalDifferencePerMatch": 0,
       "recoveriesPer90": 8.237
     },
     "performance": {
-      "attack": 0,
+      "attack": 16.38,
       "creation": 4.95,
       "control": 0,
-      "defense": 9.76,
+      "defense": 16.67,
       "goalkeeping": 0,
-      "observedScore": 9.23,
-      "pedigreeScore": 16.78,
-      "dataConfidence": 0.274,
-      "achievementScore": 10,
-      "roleScore": 14
+      "observedScore": 14.42,
+      "pedigreeScore": 17.53,
+      "dataConfidence": 0.26,
+      "roleScore": 16.72
     },
-    "teamSuccess": -0.79,
+    "teamSuccess": -0.78,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -5709,24 +5491,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.5,
-      "savePct": 83.3,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.375,
       "recoveriesPer90": 4.698
     },
     "performance": {
-      "attack": 0,
+      "attack": 19.24,
       "creation": 18.1,
       "control": 0,
-      "defense": 10.53,
+      "defense": 3.64,
       "goalkeeping": 0,
-      "observedScore": 11.37,
-      "pedigreeScore": 16.78,
-      "dataConfidence": 0.291,
-      "achievementScore": 10,
-      "roleScore": 14.42
+      "observedScore": 9.27,
+      "pedigreeScore": 17.53,
+      "dataConfidence": 0.277,
+      "roleScore": 15.25
     },
-    "teamSuccess": 0.17,
+    "teamSuccess": 0.24,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -5758,7 +5538,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 1,
-      "savePct": 76.5,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1,
       "recoveriesPer90": 3.846
@@ -5770,12 +5549,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 10.56,
       "goalkeeping": 0,
       "observedScore": 6.3,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.12,
-      "achievementScore": 10,
-      "roleScore": 13.44
+      "roleScore": 14.62
     },
-    "teamSuccess": 0.15,
+    "teamSuccess": 0.1,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -5807,7 +5585,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 52.9,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 66.7,
       "pointsPerMatch": 2.417,
       "goalDifferencePerMatch": 1.667,
       "recoveriesPer90": 3.846
@@ -5819,10 +5596,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 10.56,
       "goalkeeping": 0,
       "observedScore": 9.61,
-      "pedigreeScore": 17.8,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.46,
-      "achievementScore": 12.5,
-      "roleScore": 13.8
+      "roleScore": 14.75
     },
     "teamSuccess": 0.76,
     "honors": {
@@ -5860,7 +5636,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1,
-      "savePct": 56.3,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.375,
       "recoveriesPer90": 3.937
@@ -5872,12 +5647,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 11.11,
       "goalkeeping": 0,
       "observedScore": 12.93,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.339,
-      "achievementScore": 12.5,
-      "roleScore": 16.49
+      "roleScore": 17.36
     },
-    "teamSuccess": 0.18,
+    "teamSuccess": 0.26,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -5913,7 +5687,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.75,
-      "savePct": 66.7,
       "pointsPerMatch": 0.25,
       "goalDifferencePerMatch": -1.5
     },
@@ -5924,10 +5697,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 2.37,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.102,
-      "achievementScore": 10,
-      "roleScore": 13.23
+      "roleScore": 14.39
     },
     "teamSuccess": -0.32,
     "sourcePositionLabels": [
@@ -5961,22 +5733,20 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60.3,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 0.769,
-      "savePct": 67.9,
       "pointsPerMatch": 2.462,
       "goalDifferencePerMatch": 1.846,
       "recoveriesPer90": 2.6
     },
     "performance": {
-      "attack": 14.8,
+      "attack": 15.05,
       "creation": 16.47,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 15.22,
-      "pedigreeScore": 19.63,
+      "observedScore": 15.4,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.566,
-      "achievementScore": 18.33,
-      "roleScore": 17.32
+      "roleScore": 17.2
     },
     "teamSuccess": 0.83,
     "honors": {
@@ -6020,24 +5790,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 48.8,
       "cleanSheetPct": 70,
       "goalsConcededPerMatch": 0.4,
-      "savePct": 89.2,
       "pointsPerMatch": 2.3,
       "goalDifferencePerMatch": 1.6,
       "recoveriesPer90": 2.557
     },
     "performance": {
-      "attack": 6.91,
+      "attack": 7.5,
       "creation": 7.65,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.1,
-      "pedigreeScore": 19.91,
+      "observedScore": 7.54,
+      "pedigreeScore": 20,
       "dataConfidence": 0.54,
-      "achievementScore": 10,
-      "roleScore": 12.54
+      "roleScore": 13.27
     },
-    "teamSuccess": 0.53,
+    "teamSuccess": 0.57,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -6079,14 +5847,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 2.5,
       "defense": 0.74,
-      "goalkeeping": 5.53,
-      "observedScore": 4.39,
-      "pedigreeScore": 18.71,
-      "dataConfidence": 0.608,
-      "achievementScore": 10,
-      "roleScore": 10.01
+      "goalkeeping": 5.57,
+      "observedScore": 4.28,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.411,
+      "roleScore": 13.55
     },
-    "teamSuccess": -0.36,
+    "teamSuccess": -0.25,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -6118,25 +5885,23 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 28.6,
       "cleanSheetPct": 10,
       "goalsConcededPerMatch": 1.3,
-      "savePct": 72.9,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 1.1,
       "recoveriesPer90": 7.065,
       "passCompletionPct": 81.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 12.76,
       "control": 3.61,
-      "defense": 7.68,
+      "defense": 13.94,
       "goalkeeping": 0,
-      "observedScore": 7.4,
-      "pedigreeScore": 18.75,
-      "dataConfidence": 0.46,
-      "achievementScore": 10,
-      "roleScore": 13
+      "observedScore": 10.39,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.439,
+      "roleScore": 15.78
     },
-    "teamSuccess": -0.55,
+    "teamSuccess": -0.37,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6168,25 +5933,23 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 1,
-      "savePct": 70.4,
       "pointsPerMatch": 1.875,
       "goalDifferencePerMatch": 1.375,
       "recoveriesPer90": 10.465,
       "passCompletionPct": 87.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
       "control": 8.85,
-      "defense": 13.69,
+      "defense": 20,
       "goalkeeping": 0,
-      "observedScore": 12.02,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.217,
-      "achievementScore": 10,
-      "roleScore": 15.82
+      "observedScore": 13.3,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.207,
+      "roleScore": 18.05
     },
-    "teamSuccess": -0.25,
+    "teamSuccess": -0.09,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6218,25 +5981,23 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 77.1,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 1.25,
       "recoveriesPer90": 5.211,
       "passCompletionPct": 81
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 18.48,
       "control": 2.3,
-      "defense": 7.19,
+      "defense": 6.67,
       "goalkeeping": 0,
-      "observedScore": 7.33,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.46,
-      "achievementScore": 10,
-      "roleScore": 12.71
+      "observedScore": 7.35,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.439,
+      "roleScore": 14.05
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.15,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6269,7 +6030,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 80,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.75,
-      "savePct": 88.9,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.5,
       "recoveriesPer90": 8.481,
@@ -6277,18 +6037,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 80.7
     },
     "performance": {
-      "attack": 0,
+      "attack": 18.76,
       "creation": 4.95,
       "control": 1.8,
-      "defense": 16.1,
+      "defense": 17.36,
       "goalkeeping": 0,
-      "observedScore": 13.26,
-      "pedigreeScore": 16.78,
-      "dataConfidence": 0.413,
-      "achievementScore": 10,
-      "roleScore": 14.52
+      "observedScore": 13.39,
+      "pedigreeScore": 17.53,
+      "dataConfidence": 0.38,
+      "roleScore": 15.96
     },
-    "teamSuccess": 0.46,
+    "teamSuccess": 0.5,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6320,7 +6079,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 52.6,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 67.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.4,
       "recoveriesPer90": 4.173,
@@ -6333,12 +6091,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 13.33,
       "goalkeeping": 0,
       "observedScore": 11.72,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.428,
-      "achievementScore": 14.17,
-      "roleScore": 15.81
+      "roleScore": 16.24
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.05,
     "honors": {
       "bestPlayer": true,
       "bestPlayerLabel": "UEFA Men's Player of the Year"
@@ -6374,7 +6131,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 15,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1,
-      "savePct": 63,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.3,
       "recoveriesPer90": 4.036,
@@ -6387,12 +6143,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 11.48,
       "goalkeeping": 0,
       "observedScore": 10.27,
-      "pedigreeScore": 17.8,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.48,
-      "achievementScore": 10,
-      "roleScore": 13.56
+      "roleScore": 14.88
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -6424,7 +6179,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 30.8,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 85.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.333,
       "recoveriesPer90": 6.2,
@@ -6437,12 +6191,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 17.41,
       "goalkeeping": 0,
       "observedScore": 11.04,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.314,
-      "achievementScore": 10,
-      "roleScore": 11.09
+      "roleScore": 11.1
     },
-    "teamSuccess": -0.11,
+    "teamSuccess": 0.02,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -6474,7 +6227,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 87.5,
       "cleanSheetPct": 11.1,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 71.4,
       "pointsPerMatch": 1.889,
       "goalDifferencePerMatch": 1,
       "recoveriesPer90": 3.27,
@@ -6487,12 +6239,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 7.04,
       "goalkeeping": 0,
       "observedScore": 10.68,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.385,
-      "achievementScore": 10,
-      "roleScore": 12.89
+      "roleScore": 13.8
     },
-    "teamSuccess": -0.37,
+    "teamSuccess": -0.29,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -6524,25 +6275,23 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.9,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 73.8,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.25,
       "recoveriesPer90": 2.875,
       "passCompletionPct": 81
     },
     "performance": {
-      "attack": 16.79,
+      "attack": 17.11,
       "creation": 15.59,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 16.49,
-      "pedigreeScore": 19.63,
+      "observedScore": 16.73,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.566,
-      "achievementScore": 15.83,
-      "roleScore": 17.55
+      "roleScore": 17.95
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.02,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (14 goals)",
@@ -6580,25 +6329,23 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 64.3,
       "cleanSheetPct": 8.3,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 73.3,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.25,
       "recoveriesPer90": 1.645,
       "passCompletionPct": 65.4
     },
     "performance": {
-      "attack": 16.47,
+      "attack": 16.48,
       "creation": 5.29,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 13.68,
-      "pedigreeScore": 19.91,
+      "observedScore": 13.69,
+      "pedigreeScore": 20,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 15.43
+      "roleScore": 16.43
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.02,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -6641,12 +6388,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 1.25,
       "defense": 13.7,
-      "goalkeeping": 15.9,
-      "observedScore": 13.9,
-      "pedigreeScore": 17.23,
-      "dataConfidence": 0.608,
-      "achievementScore": 12.5,
-      "roleScore": 14.8
+      "goalkeeping": 16.27,
+      "observedScore": 12.43,
+      "pedigreeScore": 18.15,
+      "dataConfidence": 0.411,
+      "roleScore": 15.81
     },
     "teamSuccess": 0.79,
     "honors": {
@@ -6684,7 +6430,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 75,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.786,
-      "savePct": 86.3,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.714,
       "recoveriesPer90": 5.303,
@@ -6692,16 +6437,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.1
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 14.38,
       "control": 4.26,
-      "defense": 7.88,
+      "defense": 5.57,
       "goalkeeping": 0,
-      "observedScore": 7.83,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.523,
-      "achievementScore": 12.5,
-      "roleScore": 12.73
+      "observedScore": 6.41,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.481,
+      "roleScore": 13.1
     },
     "teamSuccess": 0.79,
     "honors": {
@@ -6739,7 +6483,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 1.167,
-      "savePct": 81.1,
       "pointsPerMatch": 1.667,
       "goalDifferencePerMatch": 0.667,
       "recoveriesPer90": 6.025,
@@ -6747,18 +6490,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 81.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 15.81,
       "control": 3.93,
-      "defense": 8.84,
+      "defense": 12.11,
       "goalkeeping": 0,
-      "observedScore": 8.64,
-      "pedigreeScore": 16.78,
-      "dataConfidence": 0.278,
-      "achievementScore": 10,
-      "roleScore": 13.84
+      "observedScore": 10.35,
+      "pedigreeScore": 17.53,
+      "dataConfidence": 0.255,
+      "roleScore": 15.7
     },
-    "teamSuccess": -0.49,
+    "teamSuccess": -0.45,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6790,7 +6532,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 22.2,
       "goalsConcededPerMatch": 1.222,
-      "savePct": 84.1,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 1.333,
       "recoveriesPer90": 8.445,
@@ -6798,18 +6539,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 80.7
     },
     "performance": {
-      "attack": 0,
+      "attack": 14.48,
       "creation": 16.76,
       "control": 1.8,
-      "defense": 9.86,
+      "defense": 15.08,
       "goalkeeping": 0,
-      "observedScore": 9.2,
-      "pedigreeScore": 18.75,
-      "dataConfidence": 0.434,
-      "achievementScore": 10,
-      "roleScore": 13.92
+      "observedScore": 13,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.399,
+      "roleScore": 17.21
     },
-    "teamSuccess": 0.38,
+    "teamSuccess": 0.39,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -6841,7 +6581,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 68.4,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.786,
-      "savePct": 86.3,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.714,
       "recoveriesPer90": 5.86,
@@ -6849,16 +6588,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 79.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 17.71,
       "creation": 16.19,
       "control": 1.31,
-      "defense": 8.7,
+      "defense": 7.44,
       "goalkeeping": 0,
-      "observedScore": 8.18,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.523,
-      "achievementScore": 12.5,
-      "roleScore": 12.62
+      "observedScore": 8.8,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.481,
+      "roleScore": 13.82
     },
     "teamSuccess": 0.79,
     "honors": {
@@ -6897,7 +6635,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 22.2,
       "goalsConcededPerMatch": 1,
-      "savePct": 83.6,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.667
     },
@@ -6908,12 +6645,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.45,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.293,
-      "achievementScore": 10,
-      "roleScore": 13.68
+      "roleScore": 14.78
     },
-    "teamSuccess": 0.53,
+    "teamSuccess": 0.58,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -6945,7 +6681,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.8,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.154,
-      "savePct": 82.8,
       "pointsPerMatch": 1.769,
       "goalDifferencePerMatch": 0.692,
       "recoveriesPer90": 3.167,
@@ -6958,12 +6693,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 6.3,
       "goalkeeping": 0,
       "observedScore": 9.43,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.523,
-      "achievementScore": 10,
-      "roleScore": 10.32
+      "roleScore": 10.24
     },
-    "teamSuccess": -0.6,
+    "teamSuccess": -0.57,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -6996,7 +6730,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 1.167,
-      "savePct": 81.8,
       "pointsPerMatch": 1.833,
       "goalDifferencePerMatch": 0.417,
       "recoveriesPer90": 2.401,
@@ -7009,12 +6742,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 2.59,
       "goalkeeping": 0,
       "observedScore": 6.84,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.523,
-      "achievementScore": 10,
-      "roleScore": 10.66
+      "roleScore": 11.09
     },
-    "teamSuccess": -0.49,
+    "teamSuccess": -0.58,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -7046,7 +6778,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 67.9,
       "cleanSheetPct": 58.3,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 88.1,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 2,
       "recoveriesPer90": 4.15,
@@ -7060,12 +6791,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 12.59,
       "goalkeeping": 0,
       "observedScore": 10.83,
-      "pedigreeScore": 16.28,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.523,
-      "achievementScore": 16.67,
-      "roleScore": 13.91
+      "roleScore": 13.18
     },
-    "teamSuccess": 0.9,
+    "teamSuccess": 0.88,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -7103,24 +6833,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 87.3,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.625,
       "passCompletionPct": 71.2
     },
     "performance": {
-      "attack": 16.74,
+      "attack": 17.08,
       "creation": 10.29,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 15.13,
-      "pedigreeScore": 17.32,
+      "observedScore": 15.39,
+      "pedigreeScore": 18.62,
       "dataConfidence": 0.445,
-      "achievementScore": 10,
-      "roleScore": 15.39
+      "roleScore": 17.18
     },
-    "teamSuccess": 0.45,
+    "teamSuccess": 0.52,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -7152,24 +6880,22 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.5,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 1.182,
-      "savePct": 83.8,
       "pointsPerMatch": 2.091,
       "goalDifferencePerMatch": 1.273,
       "passCompletionPct": 71.8
     },
     "performance": {
-      "attack": 18.33,
+      "attack": 18.77,
       "creation": 6.76,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 15.44,
-      "pedigreeScore": 19.91,
+      "observedScore": 15.77,
+      "pedigreeScore": 20,
       "dataConfidence": 0.566,
-      "achievementScore": 15.83,
-      "roleScore": 17.15
+      "roleScore": 17.61
     },
-    "teamSuccess": 0.13,
+    "teamSuccess": 0.18,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (12 goals)",
@@ -7219,14 +6945,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 20,
       "defense": 8.15,
-      "goalkeeping": 9.89,
-      "observedScore": 10.72,
-      "pedigreeScore": 17.23,
-      "dataConfidence": 0.608,
-      "achievementScore": 10,
-      "roleScore": 12.78
+      "goalkeeping": 9.62,
+      "observedScore": 11.89,
+      "pedigreeScore": 18.15,
+      "dataConfidence": 0.411,
+      "roleScore": 15.58
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.28,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -7258,7 +6983,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 46.2,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.583,
-      "savePct": 90.3,
       "pointsPerMatch": 2.75,
       "goalDifferencePerMatch": 2.083,
       "tacklesWonPer90": 0.937,
@@ -7267,18 +6991,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 19.05,
       "creation": 11.71,
       "control": 12.46,
-      "defense": 15.71,
+      "defense": 16.9,
       "goalkeeping": 0,
-      "observedScore": 15.13,
-      "pedigreeScore": 18.75,
-      "dataConfidence": 0.608,
-      "achievementScore": 12.5,
-      "roleScore": 15.94
+      "observedScore": 16.11,
+      "pedigreeScore": 20,
+      "dataConfidence": 0.587,
+      "roleScore": 17.72
     },
-    "teamSuccess": 0.94,
+    "teamSuccess": 0.92,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -7314,7 +7037,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 79.5,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.9,
       "tacklesWonPer90": 0.601,
@@ -7323,18 +7045,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 90.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 16,
       "control": 14.1,
-      "defense": 7.1,
+      "defense": 7.22,
       "goalkeeping": 0,
-      "observedScore": 8.37,
-      "pedigreeScore": 18.19,
-      "dataConfidence": 0.606,
-      "achievementScore": 10,
-      "roleScore": 11.9
+      "observedScore": 8.63,
+      "pedigreeScore": 19.29,
+      "dataConfidence": 0.585,
+      "roleScore": 13.05
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.16,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -7366,7 +7087,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 36.8,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 79.5,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.9,
       "tacklesWonPer90": 0.303,
@@ -7375,18 +7095,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 13.33,
       "control": 6.39,
-      "defense": 5.53,
+      "defense": 4.72,
       "goalkeeping": 0,
-      "observedScore": 6.06,
-      "pedigreeScore": 17.53,
-      "dataConfidence": 0.602,
-      "achievementScore": 10,
-      "roleScore": 10.53
+      "observedScore": 5.72,
+      "pedigreeScore": 18.47,
+      "dataConfidence": 0.581,
+      "roleScore": 11.07
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.16,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -7418,7 +7137,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.5,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.769,
-      "savePct": 85.7,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
       "tacklesWonPer90": 0.675,
@@ -7427,18 +7145,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 77.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.9,
       "creation": 4.95,
       "control": 0.98,
-      "defense": 14.02,
+      "defense": 13.86,
       "goalkeeping": 0,
-      "observedScore": 12.06,
-      "pedigreeScore": 11.88,
-      "dataConfidence": 0.608,
-      "achievementScore": 10,
-      "roleScore": 11.69
+      "observedScore": 11.74,
+      "pedigreeScore": 11.41,
+      "dataConfidence": 0.587,
+      "roleScore": 11.6
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0.06,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -7470,7 +7187,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.7,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 1.091,
-      "savePct": 75.5,
       "pointsPerMatch": 1.818,
       "goalDifferencePerMatch": 0.818,
       "tacklesWonPer90": 0,
@@ -7485,12 +7201,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 1.48,
       "goalkeeping": 0,
       "observedScore": 8.07,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.5,
-      "achievementScore": 10,
-      "roleScore": 11.35
+      "roleScore": 11.91
     },
-    "teamSuccess": -0.51,
+    "teamSuccess": -0.44,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -7522,7 +7237,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 89.7,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 2.2,
       "tacklesWonPer90": 0,
@@ -7537,12 +7251,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 4.81,
       "goalkeeping": 0,
       "observedScore": 4.84,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.253,
-      "achievementScore": 12.5,
-      "roleScore": 10.16
+      "roleScore": 9.54
     },
-    "teamSuccess": 0.44,
+    "teamSuccess": 0.48,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -7579,7 +7292,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 0.769,
-      "savePct": 82.1,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.154,
       "tacklesWonPer90": 0.202,
@@ -7594,12 +7306,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 14.81,
       "goalkeeping": 0,
       "observedScore": 11.43,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.523,
-      "achievementScore": 12.5,
-      "roleScore": 13.81
+      "roleScore": 14.56
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.32,
     "honors": {
       "champion": true,
       "championLabel": "UEFA Super Cup winner"
@@ -7635,7 +7346,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 67.6,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.385,
-      "savePct": 93.1,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.615,
       "tacklesWonPer90": 0.084,
@@ -7644,16 +7354,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 78.7
     },
     "performance": {
-      "attack": 17.62,
+      "attack": 18.06,
       "creation": 13.82,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 16.67,
-      "pedigreeScore": 19.91,
+      "observedScore": 17,
+      "pedigreeScore": 20,
       "dataConfidence": 0.566,
-      "achievementScore": 18.33,
-      "roleScore": 18.12
+      "roleScore": 18.31
     },
     "teamSuccess": 0.97,
     "honors": {
@@ -7697,7 +7406,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.5,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 75.8,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 1.2,
       "tacklesWonPer90": 0,
@@ -7706,18 +7414,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.5
     },
     "performance": {
-      "attack": 13.33,
+      "attack": 13.68,
       "creation": 7.35,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.84,
-      "pedigreeScore": 19.63,
+      "observedScore": 12.1,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.551,
-      "achievementScore": 10,
-      "roleScore": 14.54
+      "roleScore": 15.44
     },
-    "teamSuccess": 0.34,
+    "teamSuccess": 0.3,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -7749,7 +7456,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 16.7,
       "goalsConcededPerMatch": 1.167,
-      "savePct": 69.6,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.167,
       "nonPenaltyGoalsPer90": 0.758,
@@ -7759,18 +7465,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 78.6
     },
     "performance": {
-      "attack": 8.87,
+      "attack": 10.71,
       "creation": 6.47,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.27,
-      "pedigreeScore": 17.32,
+      "observedScore": 9.65,
+      "pedigreeScore": 18.62,
       "dataConfidence": 0.312,
-      "achievementScore": 10,
-      "roleScore": 13.82
+      "roleScore": 15.82
     },
-    "teamSuccess": 0.2,
+    "teamSuccess": 0.17,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -7819,14 +7524,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 18.75,
       "defense": 10.74,
-      "goalkeeping": 5.98,
-      "observedScore": 7.97,
-      "pedigreeScore": 17.23,
-      "dataConfidence": 0.65,
-      "achievementScore": 10,
-      "roleScore": 11.03
+      "goalkeeping": 6.33,
+      "observedScore": 9.26,
+      "pedigreeScore": 18.15,
+      "dataConfidence": 0.455,
+      "roleScore": 14.11
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.15,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -7858,7 +7562,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.5,
       "cleanSheetPct": 45.5,
       "goalsConcededPerMatch": 1,
-      "savePct": 73.8,
       "pointsPerMatch": 2.727,
       "goalDifferencePerMatch": 1.818,
       "nonPenaltyGoalsPer90": 0,
@@ -7871,18 +7574,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 88.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 17.71,
-      "control": 11.66,
-      "defense": 10.85,
+      "control": 11.69,
+      "defense": 12.34,
       "goalkeeping": 0,
-      "observedScore": 11.36,
-      "pedigreeScore": 18.19,
+      "observedScore": 12.05,
+      "pedigreeScore": 19.29,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 13.56
+      "roleScore": 14.58
     },
-    "teamSuccess": 0.93,
+    "teamSuccess": 0.9,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -7918,7 +7620,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 71.4,
       "goalsConcededPerMatch": 0.429,
-      "savePct": 85.7,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714,
       "nonPenaltyGoalsPer90": 0,
@@ -7931,18 +7632,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 11.12,
-      "defense": 13.28,
+      "control": 11.35,
+      "defense": 12.27,
       "goalkeeping": 0,
-      "observedScore": 12.43,
-      "pedigreeScore": 18.75,
+      "observedScore": 10.97,
+      "pedigreeScore": 20,
       "dataConfidence": 0.433,
-      "achievementScore": 10,
-      "roleScore": 15.11
+      "roleScore": 16.09
     },
-    "teamSuccess": -0.57,
+    "teamSuccess": -0.51,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -7974,7 +7674,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 71.7,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 1.583,
       "nonPenaltyGoalsPer90": 0.084,
@@ -7987,18 +7686,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 92.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 12,
       "creation": 4.95,
-      "control": 11.22,
-      "defense": 10.61,
+      "control": 10.12,
+      "defense": 12.09,
       "goalkeeping": 0,
-      "observedScore": 10.45,
-      "pedigreeScore": 18.19,
+      "observedScore": 11.05,
+      "pedigreeScore": 19.29,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 13.06
+      "roleScore": 13.94
     },
-    "teamSuccess": 0.9,
+    "teamSuccess": 0.83,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -8034,7 +7732,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.5,
-      "savePct": 83.3,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 2.833,
       "nonPenaltyGoalsPer90": 0.167,
@@ -8047,18 +7744,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 94.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 17.33,
       "creation": 18.86,
-      "control": 18.9,
-      "defense": 7.97,
+      "control": 18.87,
+      "defense": 4.64,
       "goalkeeping": 0,
-      "observedScore": 10.7,
-      "pedigreeScore": 17.53,
+      "observedScore": 10.22,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.39,
-      "achievementScore": 10,
-      "roleScore": 14.14
+      "roleScore": 15.25
     },
-    "teamSuccess": 0.22,
+    "teamSuccess": 0.38,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -8090,7 +7786,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 35.3,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 79.5,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.5,
       "nonPenaltyGoalsPer90": 0,
@@ -8109,12 +7804,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 9.63,
       "goalkeeping": 0,
       "observedScore": 9.4,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.604,
-      "achievementScore": 10,
-      "roleScore": 10.16
+      "roleScore": 10.08
     },
-    "teamSuccess": -0.55,
+    "teamSuccess": -0.59,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -8146,7 +7840,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 1.091,
-      "savePct": 72.7,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.364,
       "nonPenaltyGoalsPer90": 0,
@@ -8165,12 +7858,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 12.96,
       "goalkeeping": 0,
       "observedScore": 10.86,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.577,
-      "achievementScore": 12.5,
-      "roleScore": 14.17
+      "roleScore": 14.57
     },
-    "teamSuccess": 0.86,
+    "teamSuccess": 0.74,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -8206,7 +7898,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 81.3,
       "pointsPerMatch": 1.6,
       "goalDifferencePerMatch": 1.6,
       "nonPenaltyGoalsPer90": 0,
@@ -8225,12 +7916,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 3.33,
       "goalkeeping": 0,
       "observedScore": 8.9,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.307,
-      "achievementScore": 10,
-      "roleScore": 10.54
+      "roleScore": 10.44
     },
-    "teamSuccess": -0.48,
+    "teamSuccess": -0.22,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -8262,7 +7952,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.8,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.833,
-      "savePct": 76.2,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.417,
       "nonPenaltyGoalsPer90": 1.083,
@@ -8275,18 +7964,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.9
     },
     "performance": {
-      "attack": 14.95,
+      "attack": 13.74,
       "creation": 15.29,
       "control": 7.18,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.63,
-      "pedigreeScore": 19.91,
+      "observedScore": 13.72,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 11.67,
-      "roleScore": 15.76
+      "roleScore": 15.92
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.06,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League joint top scorer (10 goals)"
@@ -8322,7 +8010,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.2,
       "cleanSheetPct": 27.3,
       "goalsConcededPerMatch": 1.182,
-      "savePct": 75,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.455,
       "nonPenaltyGoalsPer90": 0.618,
@@ -8335,18 +8022,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.4
     },
     "performance": {
-      "attack": 9.68,
+      "attack": 10.2,
       "creation": 18.53,
       "control": 18.97,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.92,
-      "pedigreeScore": 19.63,
+      "observedScore": 12.31,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.65,
-      "achievementScore": 18.33,
-      "roleScore": 15.17
+      "roleScore": 14.84
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.61,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -8388,7 +8074,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.75,
-      "savePct": 79.1,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 1.75,
       "nonPenaltyGoalsPer90": 0.673,
@@ -8401,18 +8086,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 79.9
     },
     "performance": {
-      "attack": 9.8,
+      "attack": 9.97,
       "creation": 12.94,
       "control": 13.85,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.63,
-      "pedigreeScore": 16.4,
+      "observedScore": 10.76,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 12.88
+      "roleScore": 13.11
     },
-    "teamSuccess": 0.9,
+    "teamSuccess": 0.87,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -8467,14 +8151,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 17.5,
       "defense": 8.89,
-      "goalkeeping": 4.32,
-      "observedScore": 6.32,
-      "pedigreeScore": 19.26,
-      "dataConfidence": 0.477,
-      "achievementScore": 10,
-      "roleScore": 12.63
+      "goalkeeping": 4.31,
+      "observedScore": 7.4,
+      "pedigreeScore": 19.08,
+      "dataConfidence": 0.334,
+      "roleScore": 15.18
     },
-    "teamSuccess": -0.63,
+    "teamSuccess": -0.56,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -8506,7 +8189,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 77.1,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
       "nonPenaltyGoalsPer90": 0.158,
@@ -8519,18 +8201,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 92.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 16.67,
       "creation": 11.05,
-      "control": 10.03,
-      "defense": 13.75,
+      "control": 8.76,
+      "defense": 15.81,
       "goalkeeping": 0,
-      "observedScore": 12.87,
-      "pedigreeScore": 18.75,
+      "observedScore": 13.76,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 14.57
+      "roleScore": 15.94
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": -0.05,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -8566,7 +8247,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 57.1,
       "goalsConcededPerMatch": 0.571,
-      "savePct": 81,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 2.143,
       "nonPenaltyGoalsPer90": 0.16,
@@ -8579,18 +8259,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 94.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 16.95,
       "creation": 4.95,
-      "control": 14.04,
-      "defense": 16.53,
+      "control": 13.11,
+      "defense": 16.92,
       "goalkeeping": 0,
-      "observedScore": 15.45,
-      "pedigreeScore": 18.19,
+      "observedScore": 15.07,
+      "pedigreeScore": 19.29,
       "dataConfidence": 0.405,
-      "achievementScore": 10,
-      "roleScore": 16.02
+      "roleScore": 17.58
     },
-    "teamSuccess": 0.68,
+    "teamSuccess": 0.69,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -8622,7 +8301,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 1.4,
-      "savePct": 63.2,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.6,
       "nonPenaltyGoalsPer90": 0,
@@ -8635,18 +8313,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 92.5
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 18.32,
-      "defense": 7.6,
+      "control": 18.57,
+      "defense": 10.63,
       "goalkeeping": 0,
-      "observedScore": 9.61,
-      "pedigreeScore": 11.88,
+      "observedScore": 11.78,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.282,
-      "achievementScore": 10,
-      "roleScore": 11.06
+      "roleScore": 11.52
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.31,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -8678,7 +8355,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.5,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 1.143,
-      "savePct": 63.6,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714,
       "nonPenaltyGoalsPer90": 0.141,
@@ -8691,18 +8367,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.05,
       "creation": 4.95,
-      "control": 10.27,
-      "defense": 8.49,
+      "control": 9.93,
+      "defense": 7.98,
       "goalkeeping": 0,
-      "observedScore": 8.67,
-      "pedigreeScore": 11.88,
+      "observedScore": 8.77,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.461,
-      "achievementScore": 10,
-      "roleScore": 10.34
+      "roleScore": 10.2
     },
-    "teamSuccess": -0.61,
+    "teamSuccess": -0.54,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -8734,7 +8409,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.625,
-      "savePct": 77.3,
       "pointsPerMatch": 2.625,
       "goalDifferencePerMatch": 2.375,
       "nonPenaltyGoalsPer90": 0.147,
@@ -8753,12 +8427,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 12.22,
       "goalkeeping": 0,
       "observedScore": 12.35,
-      "pedigreeScore": 19.38,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.441,
-      "achievementScore": 10,
-      "roleScore": 15.33
+      "roleScore": 16.41
     },
-    "teamSuccess": 0.78,
+    "teamSuccess": 0.79,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -8790,7 +8463,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 42.9,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 1,
-      "savePct": 76.9,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.917,
       "nonPenaltyGoalsPer90": 0,
@@ -8809,12 +8481,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 17.04,
       "goalkeeping": 0,
       "observedScore": 10.34,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 12.62
+      "roleScore": 13.02
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.28,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -8850,7 +8521,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 77.1,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
       "nonPenaltyGoalsPer90": 0,
@@ -8869,12 +8539,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 13.7,
       "goalkeeping": 0,
       "observedScore": 7.31,
-      "pedigreeScore": 18.98,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 11.56
+      "roleScore": 11.44
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": -0.05,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -8910,7 +8579,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 57.6,
       "cleanSheetPct": 55.6,
       "goalsConcededPerMatch": 0.778,
-      "savePct": 75,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 2,
       "nonPenaltyGoalsPer90": 1.222,
@@ -8923,18 +8591,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.1
     },
     "performance": {
-      "attack": 14.43,
+      "attack": 14.37,
       "creation": 8.24,
       "control": 17.44,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 13.34,
-      "pedigreeScore": 19.63,
+      "observedScore": 13.3,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.585,
-      "achievementScore": 10,
-      "roleScore": 15.06
+      "roleScore": 15.89
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.66,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -8966,7 +8633,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 49,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 75,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0.568,
@@ -8979,18 +8645,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.6
     },
     "performance": {
-      "attack": 5.71,
+      "attack": 6.36,
       "creation": 14.71,
       "control": 6.67,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.56,
-      "pedigreeScore": 19.91,
+      "observedScore": 8.04,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 18.33,
-      "roleScore": 12.85
+      "roleScore": 12.23
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": 0.04,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -9032,7 +8697,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.3,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.538,
-      "savePct": 88.1,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.462,
       "nonPenaltyGoalsPer90": 0.373,
@@ -9045,18 +8709,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.2
     },
     "performance": {
-      "attack": 3.76,
+      "attack": 3.68,
       "creation": 5,
       "control": 12.31,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.44,
-      "pedigreeScore": 10.86,
+      "observedScore": 4.38,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.65,
-      "achievementScore": 10,
-      "roleScore": 7.18
+      "roleScore": 6.53
     },
-    "teamSuccess": -0.47,
+    "teamSuccess": -0.54,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -9105,14 +8768,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 12.5,
       "defense": 16.3,
-      "goalkeeping": 6.3,
-      "observedScore": 8.42,
-      "pedigreeScore": 19.26,
-      "dataConfidence": 0.65,
-      "achievementScore": 11.67,
-      "roleScore": 12.13
+      "goalkeeping": 5.04,
+      "observedScore": 7.66,
+      "pedigreeScore": 19.08,
+      "dataConfidence": 0.455,
+      "roleScore": 13.88
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.31,
     "honors": {
       "positionalAward": true,
       "positionalAwardLabel": "UEFA Champions League Goalkeeper of the Season"
@@ -9149,7 +8811,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 57.1,
       "cleanSheetPct": 69.2,
       "goalsConcededPerMatch": 0.692,
-      "savePct": 78.6,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 2.077,
       "nonPenaltyGoalsPer90": 0.328,
@@ -9162,18 +8823,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 86.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 19.62,
       "creation": 15.05,
-      "control": 7,
-      "defense": 14.27,
+      "control": 6.82,
+      "defense": 14.79,
       "goalkeeping": 0,
-      "observedScore": 12.86,
-      "pedigreeScore": 18.19,
+      "observedScore": 13.18,
+      "pedigreeScore": 19.29,
       "dataConfidence": 0.65,
-      "achievementScore": 10,
-      "roleScore": 14.01
+      "roleScore": 15.32
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.74,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -9205,7 +8865,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 30.8,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1.231,
-      "savePct": 66.7,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.308,
       "nonPenaltyGoalsPer90": 0.152,
@@ -9218,18 +8877,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 93.1
     },
     "performance": {
-      "attack": 0,
+      "attack": 16.19,
       "creation": 14.38,
-      "control": 13.75,
-      "defense": 11.99,
+      "control": 12.96,
+      "defense": 15.21,
       "goalkeeping": 0,
-      "observedScore": 12.46,
-      "pedigreeScore": 18.75,
+      "observedScore": 14.66,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 14.59
+      "roleScore": 16.53
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.59,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -9267,7 +8925,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 55.6,
       "goalsConcededPerMatch": 0.778,
-      "savePct": 68.2,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 0.889,
       "nonPenaltyGoalsPer90": 0.111,
@@ -9280,18 +8937,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 88.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 14.1,
       "creation": 4.95,
-      "control": 10.88,
-      "defense": 14.35,
+      "control": 10.83,
+      "defense": 13.42,
       "goalkeeping": 0,
-      "observedScore": 13.19,
-      "pedigreeScore": 11.88,
+      "observedScore": 12.19,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.585,
-      "achievementScore": 10,
-      "roleScore": 12.25
+      "roleScore": 11.87
     },
-    "teamSuccess": 0.38,
+    "teamSuccess": 0.19,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -9323,7 +8979,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 70.5,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.667,
       "nonPenaltyGoalsPer90": 0,
@@ -9336,18 +8991,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 17.14,
-      "control": 8.62,
-      "defense": 6.11,
+      "control": 9.43,
+      "defense": 7.3,
       "goalkeeping": 0,
-      "observedScore": 7.16,
-      "pedigreeScore": 16.78,
+      "observedScore": 8.41,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 10.82
+      "roleScore": 11.6
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.63,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -9383,7 +9037,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 1.286,
-      "savePct": 64,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 1.429,
       "nonPenaltyGoalsPer90": 0.149,
@@ -9402,12 +9055,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 16.3,
       "goalkeeping": 0,
       "observedScore": 11.05,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.436,
-      "achievementScore": 10,
-      "roleScore": 14.32
+      "roleScore": 15.88
     },
-    "teamSuccess": 0.74,
+    "teamSuccess": 0.65,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -9439,7 +9091,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 70.8,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.692,
       "nonPenaltyGoalsPer90": 0.079,
@@ -9458,12 +9109,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 14.26,
       "goalkeeping": 0,
       "observedScore": 11.05,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 13.01
+      "roleScore": 13.49
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.71,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -9499,7 +9149,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 70.8,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.692,
       "nonPenaltyGoalsPer90": 0.076,
@@ -9518,12 +9167,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 15.19,
       "goalkeeping": 0,
       "observedScore": 10.59,
-      "pedigreeScore": 18.98,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 13.62
+      "roleScore": 13.57
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.71,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -9561,7 +9209,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 64.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 66.7,
       "pointsPerMatch": 1.833,
       "goalDifferencePerMatch": 1.333,
       "nonPenaltyGoalsPer90": 0.41,
@@ -9580,12 +9227,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0.37,
       "goalkeeping": 0,
       "observedScore": 10.81,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.317,
-      "achievementScore": 10,
-      "roleScore": 13.18
+      "roleScore": 14.18
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.14,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -9617,7 +9263,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.1,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 78.6,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.6,
       "nonPenaltyGoalsPer90": 0.345,
@@ -9630,18 +9275,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.2
     },
     "performance": {
-      "attack": 6.4,
+      "attack": 5.48,
       "creation": 3.38,
       "control": 16.92,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.33,
-      "pedigreeScore": 19.63,
+      "observedScore": 5.63,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.566,
-      "achievementScore": 10,
-      "roleScore": 11.79
+      "roleScore": 11.68
     },
-    "teamSuccess": -0.55,
+    "teamSuccess": -0.57,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -9673,7 +9317,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.1,
       "cleanSheetPct": 21.4,
       "goalsConcededPerMatch": 1.143,
-      "savePct": 68.6,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.643,
       "nonPenaltyGoalsPer90": 1.268,
@@ -9686,18 +9329,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 84.4
     },
     "performance": {
-      "attack": 14.2,
+      "attack": 14.36,
       "creation": 8.53,
       "control": 4.1,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.56,
-      "pedigreeScore": 19.91,
+      "observedScore": 12.68,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 20,
-      "roleScore": 15.86
+      "roleScore": 15.24
     },
-    "teamSuccess": 0.79,
+    "teamSuccess": 0.77,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -9758,14 +9400,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 6.25,
       "defense": 5.93,
-      "goalkeeping": 7.46,
-      "observedScore": 7.11,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.585,
-      "achievementScore": 10,
-      "roleScore": 9.42
+      "goalkeeping": 6.32,
+      "observedScore": 6.27,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.41,
+      "roleScore": 9.74
     },
-    "teamSuccess": 0.38,
+    "teamSuccess": 0.39,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -9797,7 +9438,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 36.4,
       "goalsConcededPerMatch": 1,
-      "savePct": 73.8,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.636,
       "nonPenaltyGoalsPer90": 0,
@@ -9810,18 +9450,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 93.7
     },
     "performance": {
-      "attack": 0,
+      "attack": 13.24,
       "creation": 4.95,
-      "control": 10.2,
-      "defense": 11.34,
+      "control": 8.57,
+      "defense": 12.67,
       "goalkeeping": 0,
-      "observedScore": 10.8,
-      "pedigreeScore": 18.75,
+      "observedScore": 11.11,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 13.67
+      "roleScore": 14.22
     },
-    "teamSuccess": 0.86,
+    "teamSuccess": 0.81,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -9860,7 +9499,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 28.6,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.417,
-      "savePct": 63,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.833,
       "nonPenaltyGoalsPer90": 0,
@@ -9873,18 +9511,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 5.24,
-      "defense": 10.3,
+      "control": 4.52,
+      "defense": 11.82,
       "goalkeeping": 0,
-      "observedScore": 9.02,
-      "pedigreeScore": 18.75,
+      "observedScore": 8.99,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.65,
-      "achievementScore": 10,
-      "roleScore": 12.06
+      "roleScore": 12.31
     },
-    "teamSuccess": -0.63,
+    "teamSuccess": -0.52,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -9916,7 +9553,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 27.3,
       "goalsConcededPerMatch": 1.273,
-      "savePct": 69.6,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.818,
       "nonPenaltyGoalsPer90": 0,
@@ -9929,18 +9565,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 90.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 7.75,
-      "defense": 9.44,
+      "control": 6.28,
+      "defense": 10.76,
       "goalkeeping": 0,
-      "observedScore": 8.87,
-      "pedigreeScore": 11.88,
+      "observedScore": 8.79,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 10.31
+      "roleScore": 9.71
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -9976,7 +9611,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45.5,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.417,
-      "savePct": 66,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.667,
       "nonPenaltyGoalsPer90": 0.329,
@@ -9989,18 +9623,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 81.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 19.81,
       "creation": 16.95,
-      "control": 9.76,
-      "defense": 3.51,
+      "control": 11.16,
+      "defense": 4,
       "goalkeeping": 0,
-      "observedScore": 5.43,
-      "pedigreeScore": 16.78,
+      "observedScore": 7.95,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 9.87
+      "roleScore": 11.3
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": -0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -10036,7 +9669,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.25,
-      "savePct": 54.5,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0,
       "nonPenaltyGoalsPer90": 0,
@@ -10055,12 +9687,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 20,
       "goalkeeping": 0,
       "observedScore": 7.09,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.204,
-      "achievementScore": 10,
-      "roleScore": 12.94
+      "roleScore": 13.98
     },
-    "teamSuccess": -0.25,
+    "teamSuccess": -0.28,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -10092,7 +9723,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 27.3,
       "goalsConcededPerMatch": 1.273,
-      "savePct": 69.6,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.818,
       "nonPenaltyGoalsPer90": 0,
@@ -10111,12 +9741,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 8.15,
       "goalkeeping": 0,
       "observedScore": 8.88,
-      "pedigreeScore": 18.98,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.626,
-      "achievementScore": 18.33,
-      "roleScore": 13.51
+      "roleScore": 12.71
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -10158,7 +9787,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 25,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 1,
-      "savePct": 69.2,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": -0.25,
       "nonPenaltyGoalsPer90": 0,
@@ -10177,12 +9805,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 1.85,
       "goalkeeping": 0,
       "observedScore": 6.22,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.195,
-      "achievementScore": 10,
-      "roleScore": 12.86
+      "roleScore": 13.89
     },
-    "teamSuccess": -0.24,
+    "teamSuccess": -0.27,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -10214,7 +9841,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 47.8,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 1.75,
-      "savePct": 63.2,
       "pointsPerMatch": 1.375,
       "goalDifferencePerMatch": 0.625,
       "nonPenaltyGoalsPer90": 0.388,
@@ -10227,18 +9853,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 78.1
     },
     "performance": {
-      "attack": 4.75,
+      "attack": 5.26,
       "creation": 13.53,
       "control": 3.59,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.45,
-      "pedigreeScore": 16.4,
+      "observedScore": 6.83,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.503,
-      "achievementScore": 10,
-      "roleScore": 11.19
+      "roleScore": 12.12
     },
-    "teamSuccess": -0.87,
+    "teamSuccess": -0.78,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -10271,7 +9896,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 41.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 71.1,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
       "nonPenaltyGoalsPer90": 0.442,
@@ -10284,18 +9908,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.8
     },
     "performance": {
-      "attack": 5.29,
+      "attack": 4.17,
       "creation": 10.88,
       "control": 3.08,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.3,
-      "pedigreeScore": 19.91,
+      "observedScore": 5.46,
+      "pedigreeScore": 20,
       "dataConfidence": 0.65,
-      "achievementScore": 15.83,
-      "roleScore": 11.78
+      "roleScore": 10.55
     },
-    "teamSuccess": 0.09,
+    "teamSuccess": -0.05,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -10335,7 +9958,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60.6,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.125,
-      "savePct": 75.7,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.25,
       "nonPenaltyGoalsPer90": 1.233,
@@ -10348,18 +9970,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 84
     },
     "performance": {
-      "attack": 14.73,
+      "attack": 15.38,
       "creation": 11.47,
       "control": 18.46,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.27,
-      "pedigreeScore": 19.63,
+      "observedScore": 14.75,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.474,
-      "achievementScore": 10,
-      "roleScore": 16.02
+      "roleScore": 17.27
     },
-    "teamSuccess": 0.18,
+    "teamSuccess": 0.2,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -10408,14 +10029,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 15,
       "defense": 10.74,
-      "goalkeeping": 15.24,
-      "observedScore": 14.54,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 13.86
+      "goalkeeping": 15.25,
+      "observedScore": 14.75,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.455,
+      "roleScore": 13.33
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.61,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -10453,7 +10073,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 79.2,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.25,
       "nonPenaltyGoalsPer90": 0,
@@ -10466,18 +10085,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 68.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 19.62,
-      "control": 8.16,
-      "defense": 7.97,
+      "control": 9.8,
+      "defense": 6.63,
       "goalkeeping": 0,
-      "observedScore": 8.59,
-      "pedigreeScore": 15.55,
+      "observedScore": 8.29,
+      "pedigreeScore": 16,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 11.25
+      "roleScore": 10.99
     },
-    "teamSuccess": 0.46,
+    "teamSuccess": 0.4,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -10514,7 +10132,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 45.5,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 1.154,
-      "savePct": 75,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.154,
       "nonPenaltyGoalsPer90": 0.15,
@@ -10527,18 +10144,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 91.7
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.9,
       "creation": 10.57,
-      "control": 13.65,
-      "defense": 9.63,
+      "control": 13.16,
+      "defense": 10.9,
       "goalkeeping": 0,
-      "observedScore": 10.48,
-      "pedigreeScore": 18.75,
+      "observedScore": 11.82,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.65,
-      "achievementScore": 18.33,
-      "roleScore": 14.12
+      "roleScore": 14.15
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.32,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -10580,7 +10196,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1.1,
-      "savePct": 72.5,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.8,
       "nonPenaltyGoalsPer90": 0.2,
@@ -10593,18 +10208,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 86.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 17.52,
       "creation": 4.95,
-      "control": 4.1,
-      "defense": 9.16,
+      "control": 3.28,
+      "defense": 9.78,
       "goalkeeping": 0,
-      "observedScore": 7.94,
-      "pedigreeScore": 11.88,
+      "observedScore": 8.38,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.65,
-      "achievementScore": 10,
-      "roleScore": 9.42
+      "roleScore": 9.44
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -10636,7 +10250,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 71.4,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 1.154,
-      "savePct": 74.1,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0.09,
@@ -10649,18 +10262,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 12.86,
       "creation": 4.95,
-      "control": 11.23,
-      "defense": 8.33,
+      "control": 12.5,
+      "defense": 9.68,
       "goalkeeping": 0,
-      "observedScore": 8.74,
-      "pedigreeScore": 15.55,
+      "observedScore": 10.27,
+      "pedigreeScore": 16,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 11.33
+      "roleScore": 12.28
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -10696,7 +10308,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.5,
       "cleanSheetPct": 14.3,
       "goalsConcededPerMatch": 1.286,
-      "savePct": 60.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.143,
       "nonPenaltyGoalsPer90": 0,
@@ -10715,12 +10326,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 8.52,
       "goalkeeping": 0,
       "observedScore": 9.69,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.349,
-      "achievementScore": 10,
-      "roleScore": 14.45
+      "roleScore": 16.16
     },
-    "teamSuccess": -0.1,
+    "teamSuccess": -0.05,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -10754,7 +10364,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1,
-      "savePct": 77.4,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.667,
       "nonPenaltyGoalsPer90": 0,
@@ -10773,12 +10382,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 19.63,
       "goalkeeping": 0,
       "observedScore": 7.99,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.65,
-      "achievementScore": 11.67,
-      "roleScore": 9.56
+      "roleScore": 9.09
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.26,
     "honors": {
       "positionalAward": true,
       "positionalAwardLabel": "UEFA Champions League Midfielder of the Season"
@@ -10814,7 +10422,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.5,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.727,
-      "savePct": 77.8,
       "pointsPerMatch": 2.182,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0.677,
@@ -10827,18 +10434,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 79.5
     },
     "performance": {
-      "attack": 12.85,
+      "attack": 12.47,
       "creation": 17.35,
       "control": 20,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.11,
-      "pedigreeScore": 19.63,
+      "observedScore": 13.82,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.65,
-      "achievementScore": 17.5,
-      "roleScore": 16.26
+      "roleScore": 15.82
     },
-    "teamSuccess": 0.33,
+    "teamSuccess": 0.2,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (12 goals)",
@@ -10878,7 +10484,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 70.8,
       "cleanSheetPct": 57.1,
       "goalsConcededPerMatch": 1,
-      "savePct": 65,
       "pointsPerMatch": 2.286,
       "goalDifferencePerMatch": 2.143,
       "nonPenaltyGoalsPer90": 1.313,
@@ -10891,18 +10496,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 74
     },
     "performance": {
-      "attack": 15.31,
+      "attack": 15.47,
       "creation": 0.59,
       "control": 0,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.6,
-      "pedigreeScore": 17.55,
+      "observedScore": 11.72,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.446,
-      "achievementScore": 10,
-      "roleScore": 14.17
+      "roleScore": 14.9
     },
-    "teamSuccess": 0.44,
+    "teamSuccess": 0.54,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -10934,7 +10538,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 51.4,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 73.5,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.8,
       "nonPenaltyGoalsPer90": 0.606,
@@ -10947,18 +10550,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 81.4
     },
     "performance": {
-      "attack": 8.25,
+      "attack": 7.49,
       "creation": 2.5,
       "control": 11.28,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.25,
-      "pedigreeScore": 19.91,
+      "observedScore": 6.68,
+      "pedigreeScore": 20,
       "dataConfidence": 0.643,
-      "achievementScore": 10,
-      "roleScore": 11.5
+      "roleScore": 11.43
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.19,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -10990,7 +10592,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 35.7,
       "goalsConcededPerMatch": 1.071,
-      "savePct": 75.4,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 1.071,
       "nonPenaltyGoalsPer90": 0.534,
@@ -11003,18 +10604,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 77.6
     },
     "performance": {
-      "attack": 4.35,
+      "attack": 5.59,
       "creation": 9.12,
       "control": 9.74,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 5.58,
-      "pedigreeScore": 10.86,
+      "observedScore": 6.5,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.65,
-      "achievementScore": 12.5,
-      "roleScore": 8.19
+      "roleScore": 7.91
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": 0.16,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -11067,12 +10667,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 16.25,
       "defense": 10.74,
-      "goalkeeping": 14.04,
-      "observedScore": 13.77,
-      "pedigreeScore": 17.23,
-      "dataConfidence": 0.65,
-      "achievementScore": 14.17,
-      "roleScore": 14.86
+      "goalkeeping": 13.11,
+      "observedScore": 13.5,
+      "pedigreeScore": 18.15,
+      "dataConfidence": 0.455,
+      "roleScore": 16.04
     },
     "teamSuccess": 0.97,
     "honors": {
@@ -11112,7 +10711,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 44.4,
       "goalsConcededPerMatch": 0.778,
-      "savePct": 82.5,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.889,
       "nonPenaltyGoalsPer90": 0.219,
@@ -11125,18 +10723,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 86.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 18.1,
       "creation": 20,
-      "control": 12.59,
-      "defense": 7.33,
+      "control": 13.66,
+      "defense": 6.19,
       "goalkeeping": 0,
-      "observedScore": 9.01,
-      "pedigreeScore": 11.88,
+      "observedScore": 9.98,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.593,
-      "achievementScore": 14.17,
-      "roleScore": 10.78
+      "roleScore": 10.57
     },
-    "teamSuccess": 0.97,
+    "teamSuccess": 0.98,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner",
@@ -11174,7 +10771,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 66.7,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.5,
-      "savePct": 64.7,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.5,
       "nonPenaltyGoalsPer90": 0.253,
@@ -11187,18 +10783,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 91.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 18.76,
       "creation": 17.33,
-      "control": 15.46,
-      "defense": 7.91,
+      "control": 15.47,
+      "defense": 10.44,
       "goalkeeping": 0,
-      "observedScore": 9.89,
-      "pedigreeScore": 18.75,
+      "observedScore": 12.84,
+      "pedigreeScore": 20,
       "dataConfidence": 0.257,
-      "achievementScore": 10,
-      "roleScore": 15.5
+      "roleScore": 18.16
     },
-    "teamSuccess": -0.31,
+    "teamSuccess": -0.32,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -11231,7 +10826,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 0,
       "goalsConcededPerMatch": 2,
-      "savePct": 50,
       "pointsPerMatch": 0,
       "goalDifferencePerMatch": -1,
       "nonPenaltyGoalsPer90": 0,
@@ -11244,16 +10838,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 86
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 12.63,
-      "defense": 7.31,
+      "control": 13.77,
+      "defense": 9.97,
       "goalkeeping": 0,
-      "observedScore": 8.26,
-      "pedigreeScore": 18.75,
+      "observedScore": 10.19,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.152,
-      "achievementScore": 10,
-      "roleScore": 16.09
+      "roleScore": 17.22
     },
     "teamSuccess": -0.29,
     "sourcePositionLabels": [
@@ -11287,7 +10880,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.5,
-      "savePct": 85.2,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.875,
       "nonPenaltyGoalsPer90": 0,
@@ -11300,18 +10892,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 18.67,
-      "control": 6.67,
-      "defense": 6.72,
+      "control": 6.72,
+      "defense": 3.04,
       "goalkeeping": 0,
-      "observedScore": 7.31,
-      "pedigreeScore": 11.88,
+      "observedScore": 5.3,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.391,
-      "achievementScore": 12.5,
-      "roleScore": 10.45
+      "roleScore": 9.02
     },
-    "teamSuccess": 0.73,
+    "teamSuccess": 0.74,
     "honors": {
       "champion": true,
       "championLabel": "Champions League + UEFA Super Cup winner"
@@ -11347,7 +10938,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 83.3,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 3.2,
       "nonPenaltyGoalsPer90": 0,
@@ -11366,12 +10956,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 18.52,
       "goalkeeping": 0,
       "observedScore": 10.89,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.302,
-      "achievementScore": 12.5,
-      "roleScore": 11.44
+      "roleScore": 11.06
     },
-    "teamSuccess": 0.56,
+    "teamSuccess": 0.57,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -11407,7 +10996,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 75,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 1,
-      "savePct": 68.8,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.2,
       "nonPenaltyGoalsPer90": 0.206,
@@ -11426,12 +11014,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 4.07,
       "goalkeeping": 0,
       "observedScore": 11.14,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.316,
-      "achievementScore": 11.67,
-      "roleScore": 15.33
+      "roleScore": 16.95
     },
-    "teamSuccess": 0.45,
+    "teamSuccess": 0.35,
     "honors": {
       "positionalAward": true,
       "positionalAwardLabel": "UEFA Champions League Midfielder of the Season"
@@ -11467,7 +11054,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.667,
-      "savePct": 77.8,
       "pointsPerMatch": 2.5,
       "goalDifferencePerMatch": 1.667,
       "nonPenaltyGoalsPer90": 0.501,
@@ -11480,18 +11066,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.8
     },
     "performance": {
-      "attack": 10.09,
+      "attack": 6.44,
       "creation": 5.59,
       "control": 9.23,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.15,
-      "pedigreeScore": 19.91,
+      "observedScore": 6.41,
+      "pedigreeScore": 20,
       "dataConfidence": 0.389,
-      "achievementScore": 10,
-      "roleScore": 14.86
+      "roleScore": 14.71
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.61,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -11523,7 +11108,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 70.4,
       "cleanSheetPct": 14.3,
       "goalsConcededPerMatch": 2.143,
-      "savePct": 54.5,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0,
       "nonPenaltyGoalsPer90": 0.143,
@@ -11536,18 +11120,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.2
     },
     "performance": {
-      "attack": 11.41,
+      "attack": 8.25,
       "creation": 4.71,
       "control": 17.95,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.4,
-      "pedigreeScore": 19.63,
+      "observedScore": 8.03,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.455,
-      "achievementScore": 10,
-      "roleScore": 14.62
+      "roleScore": 14.3
     },
-    "teamSuccess": -0.38,
+    "teamSuccess": -0.51,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -11579,7 +11162,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.3,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 77.8,
       "pointsPerMatch": 2.1,
       "goalDifferencePerMatch": 1.2,
       "nonPenaltyGoalsPer90": 0.754,
@@ -11592,18 +11174,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 73.5
     },
     "performance": {
-      "attack": 10.54,
+      "attack": 11.15,
       "creation": 12.35,
       "control": 15.9,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.17,
-      "pedigreeScore": 16.4,
+      "observedScore": 11.63,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.603,
-      "achievementScore": 10,
-      "roleScore": 12.76
+      "roleScore": 13.94
     },
-    "teamSuccess": 0.16,
+    "teamSuccess": 0.17,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -11635,7 +11216,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 61.3,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 84.3,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.8,
       "nonPenaltyGoalsPer90": 0.585,
@@ -11648,16 +11228,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 77.4
     },
     "performance": {
-      "attack": 8.92,
+      "attack": 7.14,
       "creation": 20,
       "control": 8.21,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.1,
-      "pedigreeScore": 17.55,
+      "observedScore": 9.77,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.65,
-      "achievementScore": 20,
-      "roleScore": 14.36
+      "roleScore": 12.46
     },
     "teamSuccess": 0.97,
     "honors": {
@@ -11718,14 +11297,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 10,
       "defense": 5.19,
-      "goalkeeping": 5.62,
-      "observedScore": 5.99,
-      "pedigreeScore": 16.49,
-      "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 8.38
+      "goalkeeping": 6.18,
+      "observedScore": 6.84,
+      "pedigreeScore": 17.23,
+      "dataConfidence": 0.56,
+      "roleScore": 11.41
     },
-    "teamSuccess": -0.8,
+    "teamSuccess": -0.81,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -11774,14 +11352,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 13.75,
       "defense": 13.7,
-      "goalkeeping": 9.82,
-      "observedScore": 10.8,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.96
+      "goalkeeping": 8.65,
+      "observedScore": 10.18,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.56,
+      "roleScore": 11.05
     },
-    "teamSuccess": 0.79,
+    "teamSuccess": 0.58,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -11830,14 +11407,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 8.75,
       "defense": 20,
-      "goalkeeping": 19.15,
-      "observedScore": 18.23,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.8,
-      "achievementScore": 14.17,
-      "roleScore": 16.64
+      "goalkeeping": 18.85,
+      "observedScore": 16.94,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.56,
+      "roleScore": 14.84
     },
-    "teamSuccess": 0.76,
+    "teamSuccess": 0.73,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -11875,7 +11451,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 63.6,
       "goalsConcededPerMatch": 0.364,
-      "savePct": 87.9,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.455,
       "nonPenaltyGoalsPer90": 0,
@@ -11888,18 +11463,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 83.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 9.77,
-      "defense": 8.78,
+      "control": 10.67,
+      "defense": 4.54,
       "goalkeeping": 0,
-      "observedScore": 8.79,
-      "pedigreeScore": 11.88,
+      "observedScore": 6.16,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 9.87
+      "roleScore": 7.21
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.61,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -11935,7 +11509,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 54.5,
       "goalsConcededPerMatch": 0.455,
-      "savePct": 76.2,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.273,
       "nonPenaltyGoalsPer90": 0,
@@ -11948,18 +11521,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 95.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 14.77,
-      "defense": 10.7,
+      "control": 13.86,
+      "defense": 9.31,
       "goalkeeping": 0,
-      "observedScore": 11.22,
-      "pedigreeScore": 15.55,
+      "observedScore": 9.81,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 11.67,
-      "roleScore": 12.03
+      "roleScore": 11.05
     },
-    "teamSuccess": 0.86,
+    "teamSuccess": 0.69,
     "honors": {
       "positionalAward": true,
       "positionalAwardLabel": "UEFA Champions League Defender of the Season"
@@ -11995,7 +11567,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.5,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 79.1,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 0.923,
       "nonPenaltyGoalsPer90": 0.414,
@@ -12008,18 +11579,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 20,
       "creation": 4.95,
-      "control": 9.99,
-      "defense": 7,
+      "control": 9.3,
+      "defense": 7.74,
       "goalkeeping": 0,
-      "observedScore": 7.49,
-      "pedigreeScore": 16.78,
+      "observedScore": 8.84,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 9.45
+      "roleScore": 10.58
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.25,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -12051,7 +11621,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 72.7,
       "goalsConcededPerMatch": 0.273,
-      "savePct": 90,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.636,
       "nonPenaltyGoalsPer90": 0,
@@ -12064,18 +11633,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 13.05,
-      "control": 7.04,
-      "defense": 11.42,
+      "control": 6.45,
+      "defense": 7.03,
       "goalkeeping": 0,
-      "observedScore": 10.62,
-      "pedigreeScore": 16.78,
+      "observedScore": 7.2,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.95
+      "roleScore": 9.27
     },
-    "teamSuccess": 0.63,
+    "teamSuccess": 0.66,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -12111,7 +11679,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 75,
       "cleanSheetPct": 70,
       "goalsConcededPerMatch": 0.3,
-      "savePct": 90.6,
       "pointsPerMatch": 2.3,
       "goalDifferencePerMatch": 1.4,
       "nonPenaltyGoalsPer90": 0.116,
@@ -12124,18 +11691,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 74.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 14.29,
       "creation": 4.95,
-      "control": 2.41,
-      "defense": 11.16,
+      "control": 2.83,
+      "defense": 8.14,
       "goalkeeping": 0,
-      "observedScore": 9.1,
-      "pedigreeScore": 11.88,
+      "observedScore": 7.03,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 10.08
+      "roleScore": 7.91
     },
-    "teamSuccess": 0.53,
+    "teamSuccess": 0.52,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -12171,7 +11737,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 1,
-      "savePct": 78.3,
       "pointsPerMatch": 2.615,
       "goalDifferencePerMatch": 2.154,
       "nonPenaltyGoalsPer90": 0,
@@ -12184,16 +11749,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.9
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 14.67,
-      "control": 13.82,
-      "defense": 6.65,
+      "control": 13.83,
+      "defense": 7.04,
       "goalkeeping": 0,
-      "observedScore": 8.48,
-      "pedigreeScore": 17.53,
+      "observedScore": 9.18,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 10.62
+      "roleScore": 11.03
     },
     "teamSuccess": 0.91,
     "honors": {
@@ -12231,7 +11795,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.333,
-      "savePct": 87.5,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.417,
       "nonPenaltyGoalsPer90": 0,
@@ -12250,12 +11813,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 18.15,
       "goalkeeping": 0,
       "observedScore": 7.94,
-      "pedigreeScore": 12.58,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 16.67,
-      "roleScore": 10.04
+      "roleScore": 8.58
     },
-    "teamSuccess": 0.46,
+    "teamSuccess": 0.48,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -12293,7 +11855,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.5,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.583,
-      "savePct": 81.1,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.167,
       "nonPenaltyGoalsPer90": 0.212,
@@ -12312,12 +11873,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 7.41,
       "goalkeeping": 0,
       "observedScore": 8.26,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 9.43
+      "roleScore": 8.83
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.25,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -12353,7 +11913,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 64.3,
       "goalsConcededPerMatch": 0.571,
-      "savePct": 81.8,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 1.143,
       "nonPenaltyGoalsPer90": 0,
@@ -12372,12 +11931,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 18.89,
       "goalkeeping": 0,
       "observedScore": 7.39,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.8,
-      "achievementScore": 14.17,
-      "roleScore": 9.72
+      "roleScore": 9.06
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": 0.19,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -12415,7 +11973,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 56.5,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.8,
-      "savePct": 71.4,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.1,
       "nonPenaltyGoalsPer90": 0.424,
@@ -12434,12 +11991,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 5.19,
       "goalkeeping": 0,
       "observedScore": 11.56,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.45
+      "roleScore": 13.17
     },
-    "teamSuccess": 0.73,
+    "teamSuccess": 0.53,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -12471,7 +12027,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 55.6,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 0.643,
-      "savePct": 72.7,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 1.357,
       "nonPenaltyGoalsPer90": 0.233,
@@ -12490,12 +12045,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 14.26,
       "goalkeeping": 0,
       "observedScore": 10.39,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.5
+      "roleScore": 10.54
     },
-    "teamSuccess": 0.88,
+    "teamSuccess": 0.75,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -12527,7 +12081,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 37.5,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 1.231,
-      "savePct": 67.3,
       "pointsPerMatch": 1.615,
       "goalDifferencePerMatch": 0.308,
       "nonPenaltyGoalsPer90": 0.091,
@@ -12546,12 +12099,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 15.93,
       "goalkeeping": 0,
       "observedScore": 10.34,
-      "pedigreeScore": 18.98,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.76
+      "roleScore": 12.1
     },
-    "teamSuccess": -0.8,
+    "teamSuccess": -0.81,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -12583,7 +12135,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 90.9,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 80,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.75,
       "nonPenaltyGoalsPer90": 0.244,
@@ -12602,12 +12153,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 4.44,
       "goalkeeping": 0,
       "observedScore": 6.02,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 7.53
+      "roleScore": 7.04
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.21,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -12639,7 +12189,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 56.7,
       "cleanSheetPct": 57.1,
       "goalsConcededPerMatch": 0.429,
-      "savePct": 78.6,
       "pointsPerMatch": 2.643,
       "goalDifferencePerMatch": 1.5,
       "nonPenaltyGoalsPer90": 0.238,
@@ -12658,12 +12207,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 5.56,
       "goalkeeping": 0,
       "observedScore": 8.16,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 9.61
+      "roleScore": 9.68
     },
-    "teamSuccess": 0.93,
+    "teamSuccess": 0.83,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -12695,7 +12243,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 70.8,
       "cleanSheetPct": 37.5,
       "goalsConcededPerMatch": 1.375,
-      "savePct": 64.5,
       "pointsPerMatch": 1.625,
       "goalDifferencePerMatch": 0.625,
       "nonPenaltyGoalsPer90": 1.149,
@@ -12708,18 +12255,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 73.1
     },
     "performance": {
-      "attack": 13.16,
+      "attack": 13.22,
       "creation": 10.59,
       "control": 1.03,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.04,
-      "pedigreeScore": 14.37,
+      "observedScore": 12.08,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.783,
-      "achievementScore": 13.33,
-      "roleScore": 12.66
+      "roleScore": 12.7
     },
-    "teamSuccess": -0.76,
+    "teamSuccess": -0.71,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League top scorer (10 goals)",
@@ -12757,7 +12303,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 65.6,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1,
-      "savePct": 80.9,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0.489,
@@ -12770,18 +12315,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 77.7
     },
     "performance": {
-      "attack": 9.58,
+      "attack": 8.4,
       "creation": 12.65,
       "control": 1.54,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.79,
-      "pedigreeScore": 16.4,
+      "observedScore": 8.91,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.94
+      "roleScore": 10.62
     },
-    "teamSuccess": -0.3,
+    "teamSuccess": -0.23,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -12813,7 +12357,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 64.5,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 0.9,
-      "savePct": 82,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.8,
       "nonPenaltyGoalsPer90": 0.618,
@@ -12826,16 +12369,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 79.8
     },
     "performance": {
-      "attack": 11.35,
+      "attack": 9.5,
       "creation": 15,
       "control": 5.13,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.77,
-      "pedigreeScore": 17.55,
+      "observedScore": 10.38,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 12.86
+      "roleScore": 11.8
     },
     "teamSuccess": 0.97,
     "honors": {
@@ -12873,7 +12415,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 72.4,
       "cleanSheetPct": 18.2,
       "goalsConcededPerMatch": 1.455,
-      "savePct": 66.7,
       "pointsPerMatch": 1.364,
       "goalDifferencePerMatch": 0.091,
       "nonPenaltyGoalsPer90": 0.677,
@@ -12886,16 +12427,15 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 84.7
     },
     "performance": {
-      "attack": 8.91,
+      "attack": 9.92,
       "creation": 0.59,
       "control": 10.26,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.31,
-      "pedigreeScore": 15.52,
+      "observedScore": 8.07,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 9.11
+      "roleScore": 9.44
     },
     "teamSuccess": -0.91,
     "sourcePositionLabels": [
@@ -12929,7 +12469,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.8,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 78,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.667,
       "nonPenaltyGoalsPer90": 0.444,
@@ -12948,12 +12487,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 10.3,
-      "pedigreeScore": 16.4,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.29
+      "roleScore": 11.73
     },
-    "teamSuccess": -0.63,
+    "teamSuccess": -0.61,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -12985,7 +12523,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 74.2,
       "cleanSheetPct": 12.5,
       "goalsConcededPerMatch": 2.375,
-      "savePct": 52.5,
       "pointsPerMatch": 1.625,
       "goalDifferencePerMatch": -0.375,
       "nonPenaltyGoalsPer90": 0.25,
@@ -12998,18 +12535,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.1
     },
     "performance": {
-      "attack": 14.11,
+      "attack": 8.89,
       "creation": 4.12,
       "control": 19.49,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.38,
-      "pedigreeScore": 19.63,
+      "observedScore": 8.47,
+      "pedigreeScore": 19.54,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 13.26
+      "roleScore": 10.68
     },
-    "teamSuccess": -0.78,
+    "teamSuccess": -0.84,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -13058,14 +12594,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 3.75,
       "defense": 6.67,
-      "goalkeeping": 11.64,
-      "observedScore": 10.11,
-      "pedigreeScore": 16.49,
-      "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.55
+      "goalkeeping": 11.71,
+      "observedScore": 9.62,
+      "pedigreeScore": 17.23,
+      "dataConfidence": 0.56,
+      "roleScore": 12.97
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0.06,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -13101,7 +12636,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 14.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1,
-      "savePct": 47.1,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0,
@@ -13114,18 +12648,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 81.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 19.43,
-      "control": 10.99,
-      "defense": 5.81,
+      "control": 12.62,
+      "defense": 5.21,
       "goalkeeping": 0,
-      "observedScore": 7.52,
-      "pedigreeScore": 15.55,
+      "observedScore": 8.13,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 9.26
+      "roleScore": 9.71
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.38,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13157,7 +12690,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 11.1,
       "cleanSheetPct": 55.6,
       "goalsConcededPerMatch": 0.778,
-      "savePct": 56.3,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.222,
       "nonPenaltyGoalsPer90": 0.107,
@@ -13170,18 +12702,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 90.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 13.9,
       "creation": 4.95,
-      "control": 17.38,
-      "defense": 9.18,
+      "control": 17.9,
+      "defense": 7.54,
       "goalkeeping": 0,
-      "observedScore": 10.6,
-      "pedigreeScore": 16.78,
+      "observedScore": 10.41,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.56
+      "roleScore": 11.84
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.47,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13214,7 +12745,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 75,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 0.889,
-      "savePct": 52.9,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.333,
       "nonPenaltyGoalsPer90": 0,
@@ -13227,18 +12757,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 91.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 13.52,
-      "control": 14.4,
-      "defense": 9.53,
+      "control": 14.13,
+      "defense": 9.54,
       "goalkeeping": 0,
-      "observedScore": 10.7,
-      "pedigreeScore": 18.75,
+      "observedScore": 10.66,
+      "pedigreeScore": 18.47,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.97
+      "roleScore": 12.22
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.53,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13270,7 +12799,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1,
-      "savePct": 52.4,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.3,
       "nonPenaltyGoalsPer90": 0,
@@ -13283,18 +12811,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 81.5
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 16.38,
-      "control": 5.72,
-      "defense": 5.44,
+      "control": 6.21,
+      "defense": 5.43,
       "goalkeeping": 0,
-      "observedScore": 6.05,
-      "pedigreeScore": 15.55,
+      "observedScore": 6.43,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 8.25
+      "roleScore": 8.34
     },
-    "teamSuccess": 0.73,
+    "teamSuccess": 0.62,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13326,7 +12853,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 43.8,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1.5,
-      "savePct": 48.3,
       "pointsPerMatch": 1.9,
       "goalDifferencePerMatch": 1.2,
       "nonPenaltyGoalsPer90": 0.245,
@@ -13345,12 +12871,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0.74,
       "goalkeeping": 0,
       "observedScore": 10.85,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.97
+      "roleScore": 12.61
     },
-    "teamSuccess": -0.39,
+    "teamSuccess": -0.21,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -13382,7 +12907,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 30.8,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 50,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.231,
       "nonPenaltyGoalsPer90": 0.106,
@@ -13401,12 +12925,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 19.26,
       "goalkeeping": 0,
       "observedScore": 8.8,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 9.42
+      "roleScore": 9.27
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.55,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -13438,7 +12961,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 62.5,
       "cleanSheetPct": 38.5,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 80.8,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
       "nonPenaltyGoalsPer90": 0,
@@ -13457,12 +12979,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 6.67,
       "goalkeeping": 0,
       "observedScore": 9.81,
-      "pedigreeScore": 18.98,
+      "pedigreeScore": 19.13,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.77
+      "roleScore": 11.67
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0.06,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -13498,7 +13019,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 72.7,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.375,
-      "savePct": 71.8,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.5,
       "nonPenaltyGoalsPer90": 0.802,
@@ -13511,18 +13031,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.6
     },
     "performance": {
-      "attack": 14.18,
+      "attack": 14.69,
       "creation": 18.82,
       "control": 7.69,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 14.79,
-      "pedigreeScore": 16.4,
+      "observedScore": 15.17,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.748,
-      "achievementScore": 10,
-      "roleScore": 14.41
+      "roleScore": 15.75
     },
-    "teamSuccess": -0.59,
+    "teamSuccess": -0.61,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -13554,7 +13073,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.9,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.167,
-      "savePct": 80,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.083,
       "nonPenaltyGoalsPer90": 0.976,
@@ -13567,18 +13085,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.8
     },
     "performance": {
-      "attack": 12.48,
+      "attack": 11.83,
       "creation": 1.47,
       "control": 12.82,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.29,
-      "pedigreeScore": 15.52,
+      "observedScore": 9.81,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 18.33,
-      "roleScore": 12.39
+      "roleScore": 10.83
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -13620,7 +13137,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 44.4,
       "cleanSheetPct": 38.5,
       "goalsConcededPerMatch": 1.077,
-      "savePct": 80.8,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
       "nonPenaltyGoalsPer90": 0.3,
@@ -13633,18 +13149,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 83.6
     },
     "performance": {
-      "attack": 4.08,
+      "attack": 4.41,
       "creation": 16.18,
       "control": 2.05,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 6.39,
-      "pedigreeScore": 17.55,
+      "observedScore": 6.64,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 13.33,
-      "roleScore": 9.33
+      "roleScore": 8.81
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0.06,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -13699,14 +13214,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 7.5,
       "defense": 13.7,
-      "goalkeeping": 10.99,
-      "observedScore": 11.05,
-      "pedigreeScore": 16.49,
-      "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.82
+      "goalkeeping": 11.42,
+      "observedScore": 10.86,
+      "pedigreeScore": 17.23,
+      "dataConfidence": 0.56,
+      "roleScore": 13.67
     },
-    "teamSuccess": 0.34,
+    "teamSuccess": 0.3,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -13738,7 +13252,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.6,
-      "savePct": 85,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0,
@@ -13751,18 +13264,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 86.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 12.34,
-      "defense": 14.04,
+      "control": 13.3,
+      "defense": 14.62,
       "goalkeeping": 0,
-      "observedScore": 13.25,
-      "pedigreeScore": 11.88,
+      "observedScore": 12.86,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.311,
-      "achievementScore": 12.5,
-      "roleScore": 12.34
+      "roleScore": 11.86
     },
-    "teamSuccess": -0.21,
+    "teamSuccess": -0.16,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -13798,7 +13310,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.333,
-      "savePct": 87.9,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 2.167,
       "nonPenaltyGoalsPer90": 0.086,
@@ -13811,18 +13322,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 96
     },
     "performance": {
-      "attack": 0,
+      "attack": 12.57,
       "creation": 11.71,
-      "control": 16.73,
-      "defense": 11.71,
+      "control": 16.08,
+      "defense": 9.43,
       "goalkeeping": 0,
-      "observedScore": 12.72,
-      "pedigreeScore": 15.55,
+      "observedScore": 11.5,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 13.17
+      "roleScore": 12.4
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.48,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -13858,7 +13368,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.75,
-      "savePct": 81.6,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.833,
       "nonPenaltyGoalsPer90": 0,
@@ -13871,18 +13380,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 17.9,
-      "control": 8.67,
-      "defense": 12.94,
+      "control": 8.41,
+      "defense": 11.07,
       "goalkeeping": 0,
-      "observedScore": 12.34,
-      "pedigreeScore": 15.55,
+      "observedScore": 10.48,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.53
+      "roleScore": 11.58
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.18,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13914,7 +13422,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 63.6,
       "goalsConcededPerMatch": 0.818,
-      "savePct": 81.3,
       "pointsPerMatch": 1.909,
       "goalDifferencePerMatch": 0.727,
       "nonPenaltyGoalsPer90": 0,
@@ -13927,18 +13434,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 76.7
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 19.81,
-      "control": 0.74,
-      "defense": 7.48,
+      "control": 0.75,
+      "defense": 3.99,
       "goalkeeping": 0,
-      "observedScore": 6.75,
-      "pedigreeScore": 11.88,
+      "observedScore": 4.46,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 8.11
+      "roleScore": 5.85
     },
-    "teamSuccess": -0.36,
+    "teamSuccess": -0.37,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -13970,7 +13476,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 62.5,
       "goalsConcededPerMatch": 0.375,
-      "savePct": 88.9,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 2,
       "nonPenaltyGoalsPer90": 0.131,
@@ -13989,12 +13494,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 10,
       "goalkeeping": 0,
       "observedScore": 8.24,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.761,
-      "achievementScore": 12.5,
-      "roleScore": 9.52
+      "roleScore": 8.93
     },
-    "teamSuccess": 0.44,
+    "teamSuccess": 0.55,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -14030,7 +13534,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.8,
       "cleanSheetPct": 60,
       "goalsConcededPerMatch": 0.4,
-      "savePct": 85.2,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 2.2,
       "nonPenaltyGoalsPer90": 0.25,
@@ -14049,12 +13552,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 9.87,
-      "pedigreeScore": 18.2,
+      "pedigreeScore": 19.63,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.68
+      "roleScore": 11.82
     },
-    "teamSuccess": 0.73,
+    "teamSuccess": 0.79,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -14090,7 +13592,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 30.8,
       "cleanSheetPct": 58.3,
       "goalsConcededPerMatch": 0.417,
-      "savePct": 85.7,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.833,
       "nonPenaltyGoalsPer90": 0.181,
@@ -14109,12 +13610,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 17.78,
       "goalkeeping": 0,
       "observedScore": 11.32,
-      "pedigreeScore": 12.58,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 16.67,
-      "roleScore": 12.33
+      "roleScore": 11.28
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.45,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -14152,7 +13652,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 71.4,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.385,
-      "savePct": 85.7,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 2.077,
       "nonPenaltyGoalsPer90": 0.297,
@@ -14165,18 +13664,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 90.6
     },
     "performance": {
-      "attack": 5.1,
+      "attack": 5.44,
       "creation": 2.06,
       "control": 14.36,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 4.96,
-      "pedigreeScore": 10.86,
+      "observedScore": 5.21,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 7.09
+      "roleScore": 6.27
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.55,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -14212,7 +13710,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 74.3,
       "cleanSheetPct": 63.6,
       "goalsConcededPerMatch": 0.364,
-      "savePct": 87.5,
       "pointsPerMatch": 2.273,
       "goalDifferencePerMatch": 2.273,
       "nonPenaltyGoalsPer90": 1.172,
@@ -14231,12 +13728,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 0,
       "goalkeeping": 0,
       "observedScore": 12.25,
-      "pedigreeScore": 14.37,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 14.17,
-      "roleScore": 12.9
+      "roleScore": 12.79
     },
-    "teamSuccess": 0.49,
+    "teamSuccess": 0.62,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -14274,7 +13770,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.3,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 77.6,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.083,
       "nonPenaltyGoalsPer90": 0.646,
@@ -14287,18 +13782,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 80.1
     },
     "performance": {
-      "attack": 10.25,
+      "attack": 11.32,
       "creation": 19.12,
       "control": 4.62,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 11.74,
-      "pedigreeScore": 17.55,
+      "observedScore": 12.55,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.47
+      "roleScore": 13.53
     },
-    "teamSuccess": 0.3,
+    "teamSuccess": 0.21,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -14347,14 +13841,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 11.25,
       "defense": 13.7,
-      "goalkeeping": 12.35,
-      "observedScore": 12.45,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.08
+      "goalkeeping": 11.47,
+      "observedScore": 11.65,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.56,
+      "roleScore": 11.87
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.44,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -14386,7 +13879,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 20,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1.1,
-      "savePct": 79.6,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.1,
       "nonPenaltyGoalsPer90": 0.106,
@@ -14399,18 +13891,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 84.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 13.71,
       "creation": 4.95,
-      "control": 3.56,
-      "defense": 4.96,
+      "control": 3.1,
+      "defense": 5.03,
       "goalkeeping": 0,
-      "observedScore": 4.68,
-      "pedigreeScore": 11.88,
+      "observedScore": 5.19,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 7.08
+      "roleScore": 6.43
     },
-    "teamSuccess": 0.73,
+    "teamSuccess": 0.53,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -14446,7 +13937,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.25,
-      "savePct": 72.7,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1,
       "nonPenaltyGoalsPer90": 0,
@@ -14459,18 +13949,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 92.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 12,
-      "control": 11.14,
-      "defense": 6.3,
+      "control": 9.89,
+      "defense": 6.52,
       "goalkeeping": 0,
-      "observedScore": 7.55,
-      "pedigreeScore": 16.78,
+      "observedScore": 7.68,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 9.86
+      "roleScore": 9.65
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.38,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -14506,7 +13995,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 16.7,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 0.846,
-      "savePct": 81.4,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.462,
       "nonPenaltyGoalsPer90": 0.077,
@@ -14519,18 +14007,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 11.05,
       "creation": 10.86,
-      "control": 7.62,
-      "defense": 17.25,
+      "control": 6.75,
+      "defense": 19.14,
       "goalkeeping": 0,
-      "observedScore": 15,
-      "pedigreeScore": 11.88,
+      "observedScore": 14.81,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 13.72
+      "roleScore": 14.13
     },
-    "teamSuccess": -0.47,
+    "teamSuccess": -0.54,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -14562,7 +14049,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 100,
       "cleanSheetPct": 42.9,
       "goalsConcededPerMatch": 1,
-      "savePct": 81.1,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0.429,
       "nonPenaltyGoalsPer90": 0.143,
@@ -14575,18 +14061,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 84
     },
     "performance": {
-      "attack": 0,
+      "attack": 15.33,
       "creation": 4.95,
-      "control": 5.44,
-      "defense": 8.88,
+      "control": 5.41,
+      "defense": 9.07,
       "goalkeeping": 0,
-      "observedScore": 8,
-      "pedigreeScore": 11.88,
+      "observedScore": 8.32,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.7,
-      "achievementScore": 10,
-      "roleScore": 9.29
+      "roleScore": 9.25
     },
-    "teamSuccess": -0.38,
+    "teamSuccess": -0.46,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -14618,7 +14103,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 72.7,
       "cleanSheetPct": 41.7,
       "goalsConcededPerMatch": 0.917,
-      "savePct": 80.7,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.5,
       "nonPenaltyGoalsPer90": 0.097,
@@ -14637,12 +14121,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 2.96,
       "goalkeeping": 0,
       "observedScore": 7.1,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 8.27
+      "roleScore": 7.9
     },
-    "teamSuccess": -0.33,
+    "teamSuccess": -0.44,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -14674,7 +14157,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 40,
       "cleanSheetPct": 25,
       "goalsConcededPerMatch": 1.25,
-      "savePct": 71.2,
       "pointsPerMatch": 1.417,
       "goalDifferencePerMatch": 0.333,
       "nonPenaltyGoalsPer90": 0.197,
@@ -14693,12 +14175,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 16.67,
       "goalkeeping": 0,
       "observedScore": 12,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.53
+      "roleScore": 13.2
     },
-    "teamSuccess": -0.89,
+    "teamSuccess": -0.86,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -14730,7 +14211,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 43.8,
       "cleanSheetPct": 18.2,
       "goalsConcededPerMatch": 1.364,
-      "savePct": 70.6,
       "pointsPerMatch": 2.273,
       "goalDifferencePerMatch": 0.818,
       "nonPenaltyGoalsPer90": 0.363,
@@ -14749,12 +14229,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 3.7,
       "goalkeeping": 0,
       "observedScore": 12.03,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 13.33,
-      "roleScore": 12.12
+      "roleScore": 11.85
     },
-    "teamSuccess": 0.49,
+    "teamSuccess": 0.26,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -14792,7 +14271,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.5,
       "cleanSheetPct": 12.5,
       "goalsConcededPerMatch": 1.375,
-      "savePct": 47.6,
       "pointsPerMatch": 2.5,
       "goalDifferencePerMatch": 1.375,
       "nonPenaltyGoalsPer90": 0.658,
@@ -14805,18 +14283,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 91.7
     },
     "performance": {
-      "attack": 7.06,
+      "attack": 8.34,
       "creation": 14.12,
       "control": 13.33,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.79,
-      "pedigreeScore": 14.37,
+      "observedScore": 9.74,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.76,
-      "achievementScore": 10,
-      "roleScore": 10.11
+      "roleScore": 10.99
     },
-    "teamSuccess": 0.8,
+    "teamSuccess": 0.7,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -14848,7 +14325,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 59.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.083,
-      "savePct": 68.3,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.667,
       "nonPenaltyGoalsPer90": 0.423,
@@ -14861,18 +14337,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 71.6
     },
     "performance": {
-      "attack": 5.44,
+      "attack": 3.68,
       "creation": 13.24,
       "control": 6.15,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 7.04,
-      "pedigreeScore": 14.37,
+      "observedScore": 5.71,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 11.67,
-      "roleScore": 8.98
+      "roleScore": 7.55
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.26,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League joint top scorer (8 goals)"
@@ -14908,7 +14383,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 52,
       "cleanSheetPct": 30,
       "goalsConcededPerMatch": 1.1,
-      "savePct": 80.4,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 0.9,
       "nonPenaltyGoalsPer90": 0.499,
@@ -14921,18 +14395,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 79.9
     },
     "performance": {
-      "attack": 7.03,
+      "attack": 7.35,
       "creation": 17.65,
       "control": 2.56,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.93,
-      "pedigreeScore": 17.55,
+      "observedScore": 9.17,
+      "pedigreeScore": 17.46,
       "dataConfidence": 0.8,
-      "achievementScore": 16.67,
-      "roleScore": 11.56
+      "roleScore": 10.83
     },
-    "teamSuccess": 0.34,
+    "teamSuccess": 0.18,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -14987,14 +14460,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 5,
       "defense": 7.41,
-      "goalkeeping": 7.13,
-      "observedScore": 6.96,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 8.72
+      "goalkeeping": 6.04,
+      "observedScore": 5.97,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.56,
+      "roleScore": 8.69
     },
-    "teamSuccess": -0.01,
+    "teamSuccess": 0.18,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15030,7 +14502,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 60,
       "cleanSheetPct": 41.2,
       "goalsConcededPerMatch": 0.882,
-      "savePct": 73.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.353,
       "nonPenaltyGoalsPer90": 0.234,
@@ -15043,18 +14514,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 88.2
     },
     "performance": {
-      "attack": 0,
+      "attack": 18.29,
       "creation": 18.29,
-      "control": 9.9,
-      "defense": 7.77,
+      "control": 9.72,
+      "defense": 7.54,
       "goalkeeping": 0,
-      "observedScore": 8.72,
-      "pedigreeScore": 11.88,
+      "observedScore": 9.7,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 9.82
+      "roleScore": 10.04
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.03,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15090,7 +14560,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 37.5,
       "cleanSheetPct": 43.8,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 74.5,
       "pointsPerMatch": 1.938,
       "goalDifferencePerMatch": 1.313,
       "nonPenaltyGoalsPer90": 0,
@@ -15103,18 +14572,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 95.5
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 4.95,
-      "control": 17.39,
-      "defense": 13.63,
+      "control": 16.93,
+      "defense": 14.19,
       "goalkeeping": 0,
-      "observedScore": 13.95,
-      "pedigreeScore": 16.78,
+      "observedScore": 13.51,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 14.21
+      "roleScore": 14.31
     },
-    "teamSuccess": -0.26,
+    "teamSuccess": -0.07,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15150,7 +14618,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 0,
       "cleanSheetPct": 50,
       "goalsConcededPerMatch": 1.143,
-      "savePct": 76.5,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 0.643,
       "nonPenaltyGoalsPer90": 0,
@@ -15163,18 +14630,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.8
     },
     "performance": {
-      "attack": 0,
+      "attack": 5.24,
       "creation": 11.43,
-      "control": 8.88,
-      "defense": 11.84,
+      "control": 8.65,
+      "defense": 12.84,
       "goalkeeping": 0,
-      "observedScore": 11.23,
-      "pedigreeScore": 15.55,
+      "observedScore": 11.12,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.78
+      "roleScore": 12.1
     },
-    "teamSuccess": 0.24,
+    "teamSuccess": -0.01,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -15206,7 +14672,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 43.8,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 74.5,
       "pointsPerMatch": 1.938,
       "goalDifferencePerMatch": 1.25,
       "nonPenaltyGoalsPer90": 0.248,
@@ -15219,18 +14684,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 87.3
     },
     "performance": {
-      "attack": 0,
+      "attack": 18.48,
       "creation": 13.71,
-      "control": 11.77,
-      "defense": 11.95,
+      "control": 12.36,
+      "defense": 12.77,
       "goalkeeping": 0,
-      "observedScore": 12,
-      "pedigreeScore": 15.55,
+      "observedScore": 13.17,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 12.68
+      "roleScore": 13.73
     },
-    "teamSuccess": -0.26,
+    "teamSuccess": -0.1,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15266,7 +14730,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.8,
       "cleanSheetPct": 41.2,
       "goalsConcededPerMatch": 0.882,
-      "savePct": 73.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.353,
       "nonPenaltyGoalsPer90": 0.062,
@@ -15285,12 +14748,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 11.85,
       "goalkeeping": 0,
       "observedScore": 11.77,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 12.75
+      "roleScore": 13.02
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.03,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15326,7 +14788,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.6,
       "cleanSheetPct": 46.2,
       "goalsConcededPerMatch": 0.692,
-      "savePct": 78.6,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.692,
       "nonPenaltyGoalsPer90": 0.358,
@@ -15345,12 +14806,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 7.78,
       "goalkeeping": 0,
       "observedScore": 8.93,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.14
+      "roleScore": 10.29
     },
-    "teamSuccess": 0.42,
+    "teamSuccess": 0.52,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -15382,7 +14842,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 64.1,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.846,
-      "savePct": 59.3,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.231,
       "nonPenaltyGoalsPer90": 0.409,
@@ -15395,18 +14854,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 78.4
     },
     "performance": {
-      "attack": 9.73,
+      "attack": 9.71,
       "creation": 9.71,
       "control": 11.79,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 9.83,
-      "pedigreeScore": 10.86,
+      "observedScore": 9.81,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.03
+      "roleScore": 9.96
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": -0.03,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],
@@ -15438,7 +14896,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 68,
       "cleanSheetPct": 43.8,
       "goalsConcededPerMatch": 0.875,
-      "savePct": 72,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.5,
       "nonPenaltyGoalsPer90": 0.606,
@@ -15451,18 +14908,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.2
     },
     "performance": {
-      "attack": 11.45,
+      "attack": 11.98,
       "creation": 19.41,
       "control": 8.72,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.91,
-      "pedigreeScore": 10.86,
+      "observedScore": 13.3,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.8,
-      "achievementScore": 13.33,
-      "roleScore": 12.62
+      "roleScore": 12.75
     },
-    "teamSuccess": 0.19,
+    "teamSuccess": 0.32,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -15500,7 +14956,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.8,
       "cleanSheetPct": 40,
       "goalsConcededPerMatch": 0.867,
-      "savePct": 74.5,
       "pointsPerMatch": 2.067,
       "goalDifferencePerMatch": 1.467,
       "nonPenaltyGoalsPer90": 0.619,
@@ -15513,18 +14968,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 82.8
     },
     "performance": {
-      "attack": 8.76,
+      "attack": 9.78,
       "creation": 16.76,
       "control": 14.87,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.67,
-      "pedigreeScore": 15.52,
+      "observedScore": 11.43,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 16.67,
-      "roleScore": 12.39
+      "roleScore": 12.13
     },
-    "teamSuccess": -0.01,
+    "teamSuccess": 0.17,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -15564,7 +15018,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 53.8,
       "cleanSheetPct": 28.6,
       "goalsConcededPerMatch": 1.714,
-      "savePct": 59.3,
       "pointsPerMatch": 2.071,
       "goalDifferencePerMatch": 1.357,
       "nonPenaltyGoalsPer90": 0.955,
@@ -15577,18 +15030,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 78.9
     },
     "performance": {
-      "attack": 8.76,
+      "attack": 9.74,
       "creation": 19.71,
       "control": 5.64,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 10.79,
-      "pedigreeScore": 10.86,
+      "observedScore": 11.53,
+      "pedigreeScore": 10.54,
       "dataConfidence": 0.8,
-      "achievementScore": 11.67,
-      "roleScore": 10.94
+      "roleScore": 11.33
     },
-    "teamSuccess": 0,
+    "teamSuccess": 0.14,
     "honors": {
       "topScorer": true,
       "topScorerLabel": "UEFA Champions League joint top scorer (13 goals)"
@@ -15641,14 +15093,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "creation": 0,
       "control": 0,
       "defense": 17.78,
-      "goalkeeping": 17.25,
-      "observedScore": 15.6,
-      "pedigreeScore": 12.43,
-      "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 14.22
+      "goalkeeping": 16.66,
+      "observedScore": 13.44,
+      "pedigreeScore": 12.15,
+      "dataConfidence": 0.56,
+      "roleScore": 12.87
     },
-    "teamSuccess": 0.79,
+    "teamSuccess": 0.75,
     "sourcePositionLabels": [
       "UEFA selection: GK"
     ],
@@ -15680,7 +15131,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 54.5,
       "cleanSheetPct": 7.1,
       "goalsConcededPerMatch": 1.786,
-      "savePct": 66.7,
       "pointsPerMatch": 1.286,
       "goalDifferencePerMatch": 0.357,
       "nonPenaltyGoalsPer90": 0.313,
@@ -15693,18 +15143,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 90.6
     },
     "performance": {
-      "attack": 0,
+      "attack": 19.43,
       "creation": 14.86,
-      "control": 8.64,
-      "defense": 6.13,
+      "control": 7.48,
+      "defense": 8.56,
       "goalkeeping": 0,
-      "observedScore": 7.07,
-      "pedigreeScore": 11.88,
+      "observedScore": 9.58,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 8.32
+      "roleScore": 9.94
     },
-    "teamSuccess": -0.93,
+    "teamSuccess": -0.89,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -15736,7 +15185,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 33.3,
       "cleanSheetPct": 33.3,
       "goalsConcededPerMatch": 1.333,
-      "savePct": 66.7,
       "pointsPerMatch": 1.933,
       "goalDifferencePerMatch": 1.067,
       "nonPenaltyGoalsPer90": 0.136,
@@ -15749,18 +15197,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 93.5
     },
     "performance": {
-      "attack": 0,
+      "attack": 14.86,
       "creation": 4.95,
-      "control": 14.63,
-      "defense": 8.17,
+      "control": 13.95,
+      "defense": 9.37,
       "goalkeeping": 0,
-      "observedScore": 9.3,
-      "pedigreeScore": 16.78,
+      "observedScore": 10.6,
+      "pedigreeScore": 17.53,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.05
+      "roleScore": 11.98
     },
-    "teamSuccess": -0.27,
+    "teamSuccess": -0.2,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15796,7 +15243,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 16.7,
       "cleanSheetPct": 66.7,
       "goalsConcededPerMatch": 0.333,
-      "savePct": 87.9,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.417,
       "nonPenaltyGoalsPer90": 0.09,
@@ -15809,18 +15255,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.4
     },
     "performance": {
-      "attack": 0,
+      "attack": 12.86,
       "creation": 12.38,
-      "control": 7.62,
-      "defense": 13.81,
+      "control": 6.58,
+      "defense": 11.15,
       "goalkeeping": 0,
-      "observedScore": 12.5,
-      "pedigreeScore": 11.88,
+      "observedScore": 10.23,
+      "pedigreeScore": 11.41,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.02
+      "roleScore": 10.46
     },
-    "teamSuccess": 0.58,
+    "teamSuccess": 0.56,
     "sourcePositionLabels": [
       "UEFA selection: DEF"
     ],
@@ -15852,7 +15297,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 29.4,
       "goalsConcededPerMatch": 1.353,
-      "savePct": 64.1,
       "pointsPerMatch": 2.059,
       "goalDifferencePerMatch": 1.294,
       "nonPenaltyGoalsPer90": 0.128,
@@ -15865,18 +15309,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 89.5
     },
     "performance": {
-      "attack": 0,
+      "attack": 14.67,
       "creation": 13.9,
-      "control": 14.52,
-      "defense": 8.21,
+      "control": 14.8,
+      "defense": 11.48,
       "goalkeeping": 0,
-      "observedScore": 9.76,
-      "pedigreeScore": 15.55,
+      "observedScore": 12.73,
+      "pedigreeScore": 16,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 11.15
+      "roleScore": 13.39
     },
-    "teamSuccess": -0.03,
+    "teamSuccess": 0.08,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -15912,7 +15355,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 63.3,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1.462,
-      "savePct": 70.5,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.538,
       "nonPenaltyGoalsPer90": 0.416,
@@ -15931,12 +15373,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 1.11,
       "goalkeeping": 0,
       "observedScore": 11.16,
-      "pedigreeScore": 11.4,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 11.02
+      "roleScore": 11.15
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.67,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -15968,7 +15409,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 61.5,
       "goalsConcededPerMatch": 0.385,
-      "savePct": 85.7,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.462,
       "nonPenaltyGoalsPer90": 0.084,
@@ -15987,12 +15427,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 9.26,
       "goalkeeping": 0,
       "observedScore": 9.1,
-      "pedigreeScore": 15.1,
+      "pedigreeScore": 15.75,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 10.25
+      "roleScore": 10.43
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.65,
     "sourcePositionLabels": [
       "UEFA selection: MID"
     ],
@@ -16024,7 +15463,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.3,
       "cleanSheetPct": 29.4,
       "goalsConcededPerMatch": 1.353,
-      "savePct": 64.1,
       "pointsPerMatch": 2.059,
       "goalDifferencePerMatch": 1.294,
       "nonPenaltyGoalsPer90": 0.291,
@@ -16043,12 +15481,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 15.56,
       "goalkeeping": 0,
       "observedScore": 12.39,
-      "pedigreeScore": 16.9,
+      "pedigreeScore": 18,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 13.17
+      "roleScore": 13.51
     },
-    "teamSuccess": -0.03,
+    "teamSuccess": 0.08,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -16084,7 +15521,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 58.6,
       "cleanSheetPct": 31.3,
       "goalsConcededPerMatch": 1.375,
-      "savePct": 65.1,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.313,
       "nonPenaltyGoalsPer90": 0.789,
@@ -16103,12 +15539,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "defense": 2.22,
       "goalkeeping": 0,
       "observedScore": 11.12,
-      "pedigreeScore": 12.58,
+      "pedigreeScore": 11.13,
       "dataConfidence": 0.8,
-      "achievementScore": 16.67,
-      "roleScore": 12.2
+      "roleScore": 11.12
     },
-    "teamSuccess": -0.14,
+    "teamSuccess": 0.01,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner",
@@ -16146,7 +15581,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 50,
       "cleanSheetPct": 23.1,
       "goalsConcededPerMatch": 1.538,
-      "savePct": 63.6,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.308,
       "nonPenaltyGoalsPer90": 0.653,
@@ -16159,18 +15593,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 85.7
     },
     "performance": {
-      "attack": 7.87,
+      "attack": 7.3,
       "creation": 7.94,
       "control": 15.38,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 8.26,
-      "pedigreeScore": 15.52,
+      "observedScore": 7.83,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 12.5,
-      "roleScore": 10.13
+      "roleScore": 9.25
     },
-    "teamSuccess": 0.04,
+    "teamSuccess": 0.14,
     "honors": {
       "champion": true,
       "championLabel": "Champions League winner"
@@ -16206,7 +15639,6 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "shotAccuracyPct": 67.6,
       "cleanSheetPct": 15.4,
       "goalsConcededPerMatch": 1.462,
-      "savePct": 72.7,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.385,
       "nonPenaltyGoalsPer90": 0.866,
@@ -16219,18 +15651,17 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "passCompletionPct": 80.5
     },
     "performance": {
-      "attack": 13.73,
+      "attack": 12.73,
       "creation": 5.88,
       "control": 10.77,
       "defense": 0,
       "goalkeeping": 0,
-      "observedScore": 12.01,
-      "pedigreeScore": 14.37,
+      "observedScore": 11.26,
+      "pedigreeScore": 14.92,
       "dataConfidence": 0.8,
-      "achievementScore": 10,
-      "roleScore": 12.11
+      "roleScore": 11.99
     },
-    "teamSuccess": 0.69,
+    "teamSuccess": 0.63,
     "sourcePositionLabels": [
       "UEFA selection: ATT"
     ],

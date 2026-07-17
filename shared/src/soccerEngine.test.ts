@@ -7,7 +7,14 @@ import {
 import { buildPool, createMatch } from "./gameFactory";
 import { decideAiAction } from "./aiOpponent";
 import { SOCCER_PLAYER_DATABASE, SOCCER_SOURCE_REVISION } from "./soccerPlayers";
-import { soccerFitAssessment, soccerHonorDetails, soccerHonorPoints, soccerScoreComponents } from "./soccerScoring";
+import {
+  SOCCER_HONORS_CAP,
+  soccerFitAssessment,
+  soccerHonorDetails,
+  soccerHonorPoints,
+  soccerPlayerQuality,
+  soccerScoreComponents,
+} from "./soccerScoring";
 import type { AiDecisionContext, MatchState, SoccerPlayerCard, TeamState } from "./types";
 
 let failures = 0;
@@ -26,14 +33,25 @@ assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes > 0 && play
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.stats).every(Number.isFinite)), "every sourced metric is finite");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.teamSuccess >= -1 && player.teamSuccess <= 1), "team success is a modest cross-edition adjustment");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.performance.roleScore >= 0 && player.performance.roleScore <= 20), "every card quality is on the 0-20 scale");
+assert(SOCCER_PLAYER_DATABASE.every((player) => player.performance.achievementScore === undefined), "verified honors are not hidden inside generated card quality");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.performance.dataConfidence !== undefined && player.performance.dataConfidence >= 0 && player.performance.dataConfidence <= 1), "every card records its edition-data confidence");
 assert(SOCCER_PLAYER_DATABASE.filter((player) => player.role !== "GK").every((player) => player.performance.goalkeeping === 0), "outfield cards do not receive goalkeeper performance");
+assert(SOCCER_PLAYER_DATABASE.filter((player) => player.role !== "GK").every((player) => player.stats.savePct === undefined), "outfield cards do not carry goalkeeper save rates");
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.performance).every((value) => value === undefined || Number.isFinite(value))), "all observed, pedigree, confidence, and category values are finite");
+assert(SOCCER_PLAYER_DATABASE.filter((player) => player.role === "GK").every((player) => (player.performance.dataConfidence ?? 0) <= 0.56), "goalkeeper edition confidence reflects the smaller, team-dependent event sample");
+
+const casillas2012 = SOCCER_PLAYER_DATABASE.find((player) => player.id === "iker-casillas-toty2012")!;
+const mendy2021 = SOCCER_PLAYER_DATABASE.find((player) => player.id === "edouard-mendy-ucl2021")!;
+assert(casillas2012.performance.roleScore >= 12, "repeat UEFA pedigree prevents one volatile goalkeeper window from collapsing Casillas's card");
+assert(mendy2021.performance.roleScore > casillas2012.performance.roleScore, "Mendy's exceptional 2020/21 goalkeeper edition still outranks Casillas's weaker 2012 UEFA window");
+assert(mendy2021.performance.roleScore - casillas2012.performance.roleScore < 4, "goalkeeper sample weighting keeps the edition gap proportionate");
 
 const deBruyne2021 = SOCCER_PLAYER_DATABASE.find((player) => player.id === "kevin-de-bruyne-ucl2021")!;
 const maldini2003 = SOCCER_PLAYER_DATABASE.find((player) => player.id === "paolo-maldini-toty2003")!;
 assert(deBruyne2021.stats.passCompletionPct !== undefined && deBruyne2021.stats.recoveriesPer90 !== undefined, "modern UEFA cards use verified passing and recovery metrics");
 assert(maldini2003.stats.tacklesWonPer90 === undefined && maldini2003.stats.passCompletionPct === undefined, "untracked historical metrics are omitted instead of treated as zero");
+const canizares2001 = SOCCER_PLAYER_DATABASE.find((player) => player.id === "santiago-canizares-toty2001")!;
+assert(canizares2001.stats.savePct === undefined, "a goalkeeper save rate is omitted when shot tracking covers less than 70% of the card window");
 
 const benzema2022 = SOCCER_PLAYER_DATABASE.find((player) => player.edition === "UCL2022" && player.name.includes("Benzema"))!;
 assert(soccerHonorPoints(benzema2022.honors) === 10, "Benzema's 2021/22 card includes winner, major individual, and top-scorer categories");
@@ -98,7 +116,35 @@ decoratedTeam.roster = [...SOCCER_PLAYER_DATABASE]
   .map((player, index) => ({ player, price: 1, slot: ["GK", "DEF", "MID", "ATT_L", "ATT_R"][index] as any }));
 const decoratedScore = soccerScoreComponents(decoratedTeam);
 assert(decoratedScore.honorsUncapped > 20, "verified football achievements remain available for score details");
-assert(Math.abs(decoratedScore.total - (decoratedScore.performance.total + decoratedScore.fit.total + decoratedScore.chemistry.bonus - decoratedScore.wrongPositionPenalty)) < 0.001, "achievements and team success are not added a second time after card quality");
+assert(decoratedScore.honors === SOCCER_HONORS_CAP, "verified honors are capped at 20 points per lineup");
+assert(Math.abs(decoratedScore.total - (
+  decoratedScore.performance.total + decoratedScore.teamSuccess + decoratedScore.honors
+  + decoratedScore.fit.total + decoratedScore.chemistry.bonus - decoratedScore.wrongPositionPenalty
+)) < 0.001, "every visible football score component is added exactly once");
+
+const transparentTeam = emptyTeam();
+const plainCard = { ...byRole("ATT"), honors: undefined, teamSuccess: 0 };
+transparentTeam.roster = [{ player: plainCard, price: 1, slot: "ATT_L" }];
+const plainScore = soccerScoreComponents(transparentTeam).total;
+transparentTeam.roster = [{
+  player: { ...plainCard, teamSuccess: 0.75, honors: { bestPlayer: true, bestPlayerLabel: "Verified major award" } },
+  price: 1,
+  slot: "ATT_L",
+}];
+assert(Math.abs(soccerScoreComponents(transparentTeam).total - plainScore - 5.75) < 0.001, "major honors and team success change the final score by their displayed values");
+
+const legacyBase = byRole("MID");
+const legacyQuality = 13.4;
+const legacyAchievement = 17;
+const legacyCard = {
+  ...legacyBase,
+  performance: {
+    ...legacyBase.performance,
+    achievementScore: legacyAchievement,
+    roleScore: legacyQuality * 0.85 + legacyAchievement * 0.15,
+  },
+};
+assert(Math.abs(soccerPlayerQuality(legacyCard) - legacyQuality) < 0.001, "persisted pre-audit room cards normalize to their award-free quality");
 
 const screenshotLineup = (ids: string[]): TeamState => ({
   ...emptyTeam(),
@@ -116,7 +162,7 @@ const screenshotTeamB = screenshotLineup([
   "gianluigi-buffon-toty2003", "alessandro-bastoni-ucl2023", "luis-garcia-toty2005",
   "lionel-messi-toty2015", "david-trezeguet-toty2001",
 ]);
-assert(soccerScoreComponents(screenshotTeamA).total > soccerScoreComponents(screenshotTeamB).total + 0.5, "a stronger one-defender, two-attacker lineup wins under the card-quality model");
+assert(soccerScoreComponents(screenshotTeamA).total > soccerScoreComponents(screenshotTeamB).total + 5, "the reported stronger one-defender, two-attacker lineup wins by a meaningful margin");
 
 let aiState = createMatch("soccer", () => 0.314);
 const aiSeenPlayerIds = new Set<string>();
