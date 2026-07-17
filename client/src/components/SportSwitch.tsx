@@ -83,7 +83,7 @@ export function SportSwitch({ disabled = false }: { disabled?: boolean }) {
         className={`sport-toggle-track${dragProgress !== null ? " dragging" : ""}`}
         role="switch"
         tabIndex={disabled ? -1 : 0}
-        aria-label="Switch between basketball and soccer"
+        aria-label="Switch between basketball and football"
         aria-checked={sport === "soccer"}
         aria-disabled={disabled}
         style={switchStyle}
@@ -104,7 +104,7 @@ export function SportSwitch({ disabled = false }: { disabled?: boolean }) {
         onClick={() => setSport("soccer")}
         aria-pressed={sport === "soccer"}
       >
-        <FaFutbol aria-hidden="true" /><span>Soccer</span>
+        <FaFutbol aria-hidden="true" /><span>Football</span>
       </button>
     </div>
   );

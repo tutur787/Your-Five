@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MatchState, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
+import { formatLineupSlot } from "../utils/position";
 
 interface Props {
   state: MatchState;
@@ -60,7 +61,7 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
 
     ctx.fillStyle = COLORS.accent;
     ctx.font = "bold 18px -apple-system, Helvetica, Arial, sans-serif";
-    ctx.fillText(pos, 56, y + 4);
+    ctx.fillText(formatLineupSlot(pos), 56, y + 4);
 
     if (pick) {
       ctx.fillStyle = COLORS.text;

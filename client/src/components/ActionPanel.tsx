@@ -10,7 +10,7 @@ import {
   SeatId,
   validSlotsFor,
 } from "@fiveaside/shared/core";
-import { formatPosition } from "../utils/position";
+import { formatLineupSlot, formatPosition } from "../utils/position";
 import { subjectVerb } from "../utils/grammar";
 
 interface Props {
@@ -27,12 +27,31 @@ const TIMER_SECONDS = 15;
 function StatLine({ player }: { player: PlayerCard }) {
   if (player.sport === "soccer") {
     const { stats } = player;
-    const byRole = {
-      GK: [["SAVE%", stats.savePct], ["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch], ["PPM", stats.pointsPerMatch], ["APPS", stats.appearances]],
-      DEF: [["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch], ["PPM", stats.pointsPerMatch], ["G/90", stats.goalsPer90], ["A/90", stats.assistsPer90]],
-      MID: [["A/90", stats.assistsPer90], ["G/90", stats.goalsPer90], ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["PPM", stats.pointsPerMatch]],
-      ATT: [["G/90", stats.goalsPer90], ["A/90", stats.assistsPer90], ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["PPM", stats.pointsPerMatch]],
-    } as const;
+    type FootballStat = [string, number];
+    const available = (...values: Array<[string, number | undefined]>): FootballStat[] =>
+      values.filter((value): value is FootballStat => value[1] !== undefined);
+    const byRole: Record<typeof player.role, FootballStat[]> = {
+      GK: available(
+        ["SAVE%", stats.savePct], ["CLAIM/90", stats.claimsPer90], ["CS%", stats.cleanSheetPct],
+        ["GA/M", stats.goalsConcededPerMatch], ["PASS%", stats.passCompletionPct], ["APPS", stats.appearances]
+      ).slice(0, 5),
+      DEF: available(
+        ["TACK/90", stats.tacklesWonPer90], ["REC/90", stats.recoveriesPer90], ["CLR/90", stats.clearancesPer90],
+        ["PASS%", stats.passCompletionPct], ["PROG/90", stats.progressiveDeliveriesPer90],
+        ["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch],
+        ["A/90", stats.assistsPer90], ["G/90", stats.goalsPer90], ["APPS", stats.appearances]
+      ).slice(0, 5),
+      MID: available(
+        ["A/90", stats.assistsPer90], ["PROG/90", stats.progressiveDeliveriesPer90], ["PASS%", stats.passCompletionPct],
+        ["REC/90", stats.recoveriesPer90], ["DRIB/90", stats.dribblesPer90], ["G/90", stats.goalsPer90],
+        ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["APPS", stats.appearances]
+      ).slice(0, 5),
+      ATT: available(
+        [stats.nonPenaltyGoalsPer90 === undefined ? "G/90" : "NPG/90", stats.nonPenaltyGoalsPer90 ?? stats.goalsPer90],
+        ["SOT/90", stats.shotsOnTargetPer90], ["A/90", stats.assistsPer90], ["DRIB/90", stats.dribblesPer90],
+        ["SHOT%", stats.shotAccuracyPct], ["APPS", stats.appearances]
+      ).slice(0, 5),
+    };
     return (
       <div className="player-stat-grid soccer-stats">
         {byRole[player.role].map(([label, value]) => <span className="player-stat" key={label}><strong>{value.toFixed(label.includes("%") ? 1 : 2)}</strong><small>{label}</small></span>)}
@@ -239,7 +258,7 @@ function PlacementPanel({
               className={listedSlots.includes(slot) ? "primary position-choice" : "position-choice"}
               onClick={() => dispatch({ type: "placePick", seat, slot })}
             >
-              {slot === "DEF_L" ? "DEF-L" : slot === "DEF_R" ? "DEF-R" : slot}
+              {formatLineupSlot(slot)}
             </button>
           ))}
         </div>

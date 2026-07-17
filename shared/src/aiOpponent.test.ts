@@ -146,13 +146,12 @@ const soccerPositionState = stateWithPool([
   ...SOCCER_PLAYER_DATABASE.filter((player) => player.id !== soccerDefenders[2].id).slice(0, 5),
 ]);
 soccerPositionState.teams.A.roster = [
-  { player: soccerDefenders[0], price: 2, slot: "DEF_L" },
-  { player: soccerDefenders[1], price: 2, slot: "DEF_R" },
+  { player: soccerDefenders[0], price: 2, slot: "DEF" },
 ];
-soccerPositionState.teams.A.budget = 16;
+soccerPositionState.teams.A.budget = 18;
 const soccerPositionContext = context("expert", "soccer-position-discipline", [soccerDefenders[2].id]);
 const soccerPositionEvaluation = evaluateAiPlayer(soccerPositionState, "A", soccerDefenders[2], soccerPositionContext);
-assert(!soccerPositionEvaluation.fillsOpenPosition, "a defender is unnecessary after both soccer defender slots are filled");
+assert(!soccerPositionEvaluation.fillsOpenPosition, "a defender is unnecessary after the single football defender slot is filled");
 assert(decideAiAction(soccerPositionState, "A", soccerPositionContext).type === "useSkip", "soccer AI skips an unnecessary defender");
 
 const curry = PLAYER_DATABASE.find((player) => player.name === "Stephen Curry" && player.era === "2015-16")!;

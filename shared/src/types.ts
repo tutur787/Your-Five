@@ -16,9 +16,11 @@ export const POSITIONS: Position[] = ["PG", "SG", "SF", "PF", "C"];
 
 export type SoccerRole = "GK" | "DEF" | "MID" | "ATT";
 export const SOCCER_ROLES: SoccerRole[] = ["GK", "DEF", "MID", "ATT"];
-export type SoccerSlot = "GK" | "DEF_L" | "DEF_R" | "MID" | "ATT";
-export const SOCCER_SLOTS: SoccerSlot[] = ["GK", "DEF_L", "DEF_R", "MID", "ATT"];
-export type LineupSlot = Position | SoccerSlot;
+export type SoccerSlot = "GK" | "DEF" | "MID" | "ATT_L" | "ATT_R";
+export const SOCCER_SLOTS: SoccerSlot[] = ["GK", "DEF", "MID", "ATT_L", "ATT_R"];
+/** Accepted while in-progress rooms from the previous two-defender formation migrate. */
+export type LegacySoccerSlot = "DEF_L" | "DEF_R" | "ATT";
+export type LineupSlot = Position | SoccerSlot | LegacySoccerSlot;
 
 export interface PlayerStats {
   ppg: number;
@@ -76,6 +78,15 @@ export interface SoccerStats {
   savePct: number;
   pointsPerMatch: number;
   goalDifferencePerMatch: number;
+  /** Optional UEFA metrics are emitted only when at least 70% of this card's minutes tracked them. */
+  nonPenaltyGoalsPer90?: number;
+  tacklesWonPer90?: number;
+  recoveriesPer90?: number;
+  clearancesPer90?: number;
+  passCompletionPct?: number;
+  progressiveDeliveriesPer90?: number;
+  dribblesPer90?: number;
+  claimsPer90?: number;
 }
 
 export interface SoccerPerformance {
@@ -84,6 +95,15 @@ export interface SoccerPerformance {
   control: number;
   defense: number;
   goalkeeping: number;
+  /** Edition-only, role-weighted performance before sparse-data adjustment. */
+  observedScore?: number;
+  /** Verified UEFA selection and major-award career prior for this role. */
+  pedigreeScore?: number;
+  /** How much of the adjusted performance comes from the observed edition, from 0 to 1. */
+  dataConfidence?: number;
+  /** Baseline-inclusive achievement rating folded into this card's quality. */
+  achievementScore?: number;
+  /** Final per-card quality used by lineup scoring. */
   roleScore: number;
 }
 

@@ -41,7 +41,7 @@ function ProgressModal({ progress, onClose }: { progress: ProgressState; onClose
     <div className="modal-backdrop progress-modal-backdrop" onClick={onClose}>
       <section className="modal progress-modal" role="dialog" aria-modal="true" aria-label="My record" onClick={(event) => event.stopPropagation()}>
         <header><div><span className="page-eyebrow">YOUR RESULTS</span><h2>My record</h2></div></header>
-        <button ref={closeRef} className="icon-button modal-close" onClick={onClose} aria-label="Close" title="Close">&times;</button>
+        <button ref={closeRef} className="icon-button modal-close progress-modal-close" onClick={onClose} aria-label="Close" title="Close">&times;</button>
         <div className="progress-modal-scroll">
           <div className="progress-sports">
             {(["basketball", "soccer"] as const).map((sport) => {

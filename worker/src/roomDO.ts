@@ -9,6 +9,7 @@ import {
   RoomClientMessage,
   RoomMetadata,
   RoomServerMessage,
+  RosterPick,
   SeatId,
   SeatsFilled,
   skipCount,
@@ -542,6 +543,28 @@ function normalizeNickname(value: string): string | null {
   return /^[\p{L}\p{N} '_-]+$/u.test(nickname) ? nickname : null;
 }
 
+function normalizeLegacySoccerRoster(roster: RosterPick[]): RosterPick[] {
+  const currentSlots = new Set(SOCCER_SLOTS);
+  const reserved = new Set(roster.map((pick) => pick.slot).filter((slot): slot is typeof SOCCER_SLOTS[number] => currentSlots.has(slot as never)));
+  const used = new Set<string>();
+  return roster.map((pick) => {
+    if (currentSlots.has(pick.slot as never) && !used.has(pick.slot)) {
+      used.add(pick.slot);
+      return pick;
+    }
+    const preferred: Array<(typeof SOCCER_SLOTS)[number]> = pick.slot === "ATT"
+      ? ["ATT_L", "ATT_R", "DEF", "MID", "GK"]
+      : pick.slot === "DEF_R"
+        ? ["DEF", "ATT_R", "ATT_L", "MID", "GK"]
+        : ["DEF", "ATT_L", "ATT_R", "MID", "GK"];
+    const slot = preferred.find((candidate) => !reserved.has(candidate as never) && !used.has(candidate))
+      ?? SOCCER_SLOTS.find((candidate) => !used.has(candidate));
+    if (!slot) return pick;
+    used.add(slot);
+    return { ...pick, slot };
+  });
+}
+
 function normalizeLegacyState(state: MatchState | null): MatchState | null {
   if (!state) return null;
   const sport = state.sport ?? "basketball";
@@ -559,14 +582,16 @@ function normalizeLegacyState(state: MatchState | null): MatchState | null {
         skipsUsed: skipCount(state.teams.A),
         skipUsed: undefined,
         paidSkipUsed: undefined,
-        roster: state.teams.A.roster.map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
+        roster: (sport === "soccer" ? normalizeLegacySoccerRoster(state.teams.A.roster) : state.teams.A.roster)
+          .map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
       },
       B: {
         ...state.teams.B,
         skipsUsed: skipCount(state.teams.B),
         skipUsed: undefined,
         paidSkipUsed: undefined,
-        roster: state.teams.B.roster.map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
+        roster: (sport === "soccer" ? normalizeLegacySoccerRoster(state.teams.B.roster) : state.teams.B.roster)
+          .map((pick) => ({ ...pick, player: normalizePlayer(pick.player) })),
       },
     },
     auction: state.auction ? { ...state.auction, player: normalizePlayer(state.auction.player) } : null,

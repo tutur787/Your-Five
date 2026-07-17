@@ -28,7 +28,7 @@ export function SportProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.dataset.sport = sport;
     if (/^Your Five \| (?:\$20 All-Time )?(?:Basketball|Football|Soccer|Sports) Draft$/.test(document.title)) {
-      document.title = `Your Five | ${sport === "soccer" ? "Soccer" : "Basketball"} Draft`;
+      document.title = `Your Five | ${sport === "soccer" ? "Football" : "Basketball"} Draft`;
     }
     document.querySelector('meta[name="description"]')?.setAttribute(
       "content",

@@ -111,7 +111,7 @@ export function PrivacyPage() {
           <p>Your browser may store:</p>
           <ul>
             <li>whether you have already seen the rules introduction;</li>
-            <li>your selected basketball or soccer mode preference;</li>
+            <li>your selected basketball or football mode preference;</li>
             <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
             <li>your optional online nickname, recent draft history, streaks, mode records, and challenge results;</li>

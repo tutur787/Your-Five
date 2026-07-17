@@ -10,6 +10,7 @@ const CACHE = join(ROOT, ".cache", "soccer-data", "uefa");
 const OUTPUT = join(ROOT, "shared", "src", "soccerPlayers.generated.ts");
 const PROVENANCE_OUTPUT = join(ROOT, "shared", "src", "soccerPlayers.provenance.json");
 const VERIFY_ONLY = process.argv.includes("--verify");
+const RECALCULATE_ONLY = process.argv.includes("--recalculate");
 const API_BOOTSTRAP = "https://www.uefa.com/uefachampionsleague/history/seasons/2001/statistics/";
 const API_BASE = {
   competition: "https://compstats.uefa.com/v2",
@@ -197,12 +198,62 @@ async function matchStatistics(apiKey, matchId) {
   );
 }
 
-const statValue = (row, name) => {
+const statMaybe = (row, name) => {
   const value = row?.statistics?.find((stat) => stat.name === name)?.value;
-  const parsed = Number(value ?? 0);
+  if (value === undefined || value === null || value === "") return null;
+  const parsed = Number(value);
   if (!Number.isFinite(parsed)) throw new Error(`${row?.playerId ?? "unknown player"}: non-numeric ${name}.`);
   return parsed;
 };
+
+const statValue = (row, name) => statMaybe(row, name) ?? 0;
+
+const OPTIONAL_METRIC_COVERAGE = 0.7;
+
+function deriveAdvancedStats(playerRows, totalMinutes) {
+  const totals = new Map();
+  const trackedMinutes = new Map();
+  const collect = (key, value, minutes) => {
+    if (value === null) return;
+    totals.set(key, (totals.get(key) ?? 0) + value);
+    trackedMinutes.set(key, (trackedMinutes.get(key) ?? 0) + minutes);
+  };
+
+  for (const { row, minutes } of playerRows) {
+    collect("tacklesWon", statMaybe(row, "tackles_won"), minutes);
+    collect("recoveries", statMaybe(row, "recovered_ball"), minutes);
+    collect("clearances", statMaybe(row, "clearance_completed"), minutes);
+    collect("progressiveDeliveries", statMaybe(row, "delivery_into_attacking_third"), minutes);
+    collect("dribbles", statMaybe(row, "dribbling"), minutes);
+    collect("claims", statMaybe(row, "claims"), minutes);
+
+    const attempted = statMaybe(row, "passes_attempted");
+    const completed = statMaybe(row, "passes_completed");
+    if (attempted !== null && completed !== null) {
+      collect("passesAttempted", attempted, minutes);
+      collect("passesCompleted", completed, minutes);
+    }
+
+    const goals = statMaybe(row, "goals");
+    const penalties = statMaybe(row, "penalty_scored");
+    if (goals !== null && penalties !== null) collect("nonPenaltyGoals", Math.max(0, goals - penalties), minutes);
+  }
+
+  const hasCoverage = (key) => (trackedMinutes.get(key) ?? 0) / totalMinutes >= OPTIONAL_METRIC_COVERAGE;
+  const per90 = (key) => round(rate(totals.get(key) ?? 0, trackedMinutes.get(key) ?? 0));
+  const stats = {};
+  if (hasCoverage("nonPenaltyGoals")) stats.nonPenaltyGoalsPer90 = per90("nonPenaltyGoals");
+  if (hasCoverage("tacklesWon")) stats.tacklesWonPer90 = per90("tacklesWon");
+  if (hasCoverage("recoveries")) stats.recoveriesPer90 = per90("recoveries");
+  if (hasCoverage("clearances")) stats.clearancesPer90 = per90("clearances");
+  if (hasCoverage("progressiveDeliveries")) stats.progressiveDeliveriesPer90 = per90("progressiveDeliveries");
+  if (hasCoverage("dribbles")) stats.dribblesPer90 = per90("dribbles");
+  if (hasCoverage("claims")) stats.claimsPer90 = per90("claims");
+  if (hasCoverage("passesAttempted") && (totals.get("passesAttempted") ?? 0) > 0) {
+    stats.passCompletionPct = round((totals.get("passesCompleted") ?? 0) / totals.get("passesAttempted") * 100, 1);
+  }
+  return stats;
+}
 
 function scoreForTeam(match, teamId) {
   const homeId = String(match.homeTeam?.id);
@@ -291,6 +342,7 @@ function aggregateCard(card, matchData) {
     teamAppearances: new Map(),
     matchIds: [],
     playerIds: new Set(card.sourcePlayerIds),
+    playerRows: [],
   };
 
   for (const { match, rows } of matchData) {
@@ -328,6 +380,7 @@ function aggregateCard(card, matchData) {
       count: (aggregate.teamAppearances.get(teamId)?.count ?? 0) + 1,
     });
     aggregate.matchIds.push(String(match.id));
+    aggregate.playerRows.push({ row, minutes });
 
   }
 
@@ -355,6 +408,7 @@ function aggregateCard(card, matchData) {
     savePct: round(aggregate.shotsFacedOnTarget ? aggregate.saves / aggregate.shotsFacedOnTarget * 100 : 0, 1),
     pointsPerMatch: round(aggregate.points / aggregate.appearances),
     goalDifferencePerMatch: round((aggregate.goalsFor - aggregate.goalsAgainst) / aggregate.appearances),
+    ...deriveAdvancedStats(aggregate.playerRows, aggregate.minutes),
   };
   if (Object.values(stats).some((value) => !Number.isFinite(value))) {
     throw new Error(`${card.edition.key}: ${card.entry.name} contains a non-finite metric.`);
@@ -379,45 +433,138 @@ function percentile(value, values) {
   return (lower + (equal - 1) / 2) / (values.length - 1);
 }
 
-function category(player, peers, metrics) {
-  const reliability = Math.min(1, player.stats.minutes / 720);
-  const values = metrics.map(({ key, inverse = false }) => {
-    const raw = percentile(player.stats[key], peers.map((peer) => peer.stats[key]));
-    const adjusted = inverse ? 1 - raw : raw;
-    return 0.5 + (adjusted - 0.5) * reliability;
-  });
-  return round(values.reduce((sum, value) => sum + value, 0) / values.length * 20, 2);
+const ROLE_METRICS = {
+  GK: [
+    { keys: ["savePct"], weight: 0.45, category: "goalkeeping" },
+    { keys: ["goalsConcededPerMatch"], weight: 0.2, category: "goalkeeping", inverse: true },
+    { keys: ["cleanSheetPct"], weight: 0.15, category: "defense" },
+    { keys: ["claimsPer90"], weight: 0.1, category: "goalkeeping" },
+    { keys: ["passCompletionPct"], weight: 0.1, category: "control" },
+  ],
+  DEF: [
+    { keys: ["tacklesWonPer90"], weight: 0.2, category: "defense" },
+    { keys: ["recoveriesPer90"], weight: 0.2, category: "defense" },
+    { keys: ["clearancesPer90"], weight: 0.15, category: "defense" },
+    { keys: ["passCompletionPct"], weight: 0.1, category: "control" },
+    { keys: ["progressiveDeliveriesPer90"], weight: 0.1, category: "control" },
+    { keys: ["cleanSheetPct"], weight: 0.1, category: "defense" },
+    { keys: ["goalsConcededPerMatch"], weight: 0.1, category: "defense", inverse: true },
+    { keys: ["assistsPer90"], weight: 0.05, category: "creation" },
+  ],
+  MID: [
+    { keys: ["assistsPer90"], weight: 0.2, category: "creation" },
+    { keys: ["progressiveDeliveriesPer90"], weight: 0.2, category: "control" },
+    { keys: ["passCompletionPct"], weight: 0.15, category: "control" },
+    { keys: ["recoveriesPer90"], weight: 0.15, category: "defense" },
+    { keys: ["dribblesPer90"], weight: 0.1, category: "attack" },
+    { keys: ["goalsPer90"], weight: 0.1, category: "attack" },
+    { keys: ["shotsOnTargetPer90"], weight: 0.1, category: "attack" },
+  ],
+  ATT: [
+    { keys: ["goalsPer90"], weight: 0.3, category: "attack" },
+    { keys: ["shotsOnTargetPer90"], weight: 0.2, category: "attack" },
+    { keys: ["assistsPer90"], weight: 0.2, category: "creation" },
+    { keys: ["dribblesPer90"], weight: 0.15, category: "attack" },
+    { keys: ["shotAccuracyPct"], weight: 0.1, category: "attack" },
+    { keys: ["progressiveDeliveriesPer90"], weight: 0.05, category: "control" },
+  ],
+};
+
+function metricValue(player, metric) {
+  for (const key of metric.keys) {
+    const value = player.stats[key];
+    if (Number.isFinite(value)) return value;
+  }
+  return null;
 }
 
-function performanceFor(player, players) {
+function scoredMetric(player, peers, metric) {
+  const value = metricValue(player, metric);
+  if (value === null) return null;
+  const peerValues = peers.map((peer) => metricValue(peer, metric)).filter(Number.isFinite);
+  const rank = percentile(value, peerValues);
+  return (metric.inverse ? 1 - rank : rank) * 20;
+}
+
+function honorPoints(honors) {
+  if (!honors) return 0;
+  let points = honors.champion ? 3 : 0;
+  if (honors.bestPlayer || honors.ballonDor) points += 5;
+  if (honors.topScorer || (honors.topScorerOrKeeper && !/goalkeeper/i.test(honors.topScorerOrKeeperLabel ?? ""))) points += 2;
+  if (honors.positionalAward || (honors.topScorerOrKeeper && /goalkeeper/i.test(honors.topScorerOrKeeperLabel ?? ""))) points += 2;
+  if (honors.youngPlayer) points += 1;
+  return points;
+}
+
+function createPedigreeIndex(players) {
+  const identities = new Map();
+  for (const player of players) {
+    const identity = identities.get(player.sourceIdentity) ?? { roles: new Set(), selections: 0, majorEditions: new Set() };
+    identity.roles.add(player.role);
+    identity.selections += 1;
+    if (player.honors?.bestPlayer || player.honors?.ballonDor) identity.majorEditions.add(player.edition);
+    identities.set(player.sourceIdentity, identity);
+  }
+  return new Map(players.map((player) => {
+    const identity = identities.get(player.sourceIdentity);
+    const peers = [...identities.values()].filter((candidate) => candidate.roles.has(player.role));
+    const selectionRank = percentile(identity.selections, peers.map((candidate) => candidate.selections));
+    const majorRank = percentile(identity.majorEditions.size, peers.map((candidate) => candidate.majorEditions.size));
+    const selectionScore = 8 + selectionRank * 12;
+    const majorScore = 8 + majorRank * 12;
+    return [player.id, selectionScore * 0.8 + majorScore * 0.2];
+  }));
+}
+
+function performanceFor(player, players, pedigreeIndex) {
   const peers = players.filter((candidate) => candidate.role === player.role);
-  const values = {
-    attack: category(player, peers, [{ key: "goalsPer90" }, { key: "shotsOnTargetPer90" }, { key: "shotAccuracyPct" }]),
-    creation: category(player, peers, [{ key: "assistsPer90" }, { key: "shotsOnTargetPer90" }]),
-    control: category(player, peers, [{ key: "pointsPerMatch" }, { key: "goalDifferencePerMatch" }]),
-    defense: category(player, peers, [{ key: "cleanSheetPct" }, { key: "goalsConcededPerMatch", inverse: true }]),
-    goalkeeping: category(player, peers, [{ key: "savePct" }, { key: "cleanSheetPct" }, { key: "goalsConcededPerMatch", inverse: true }]),
-  };
-  const weights = {
-    GK: { goalkeeping: 0.65, defense: 0.25, control: 0.1 },
-    DEF: { defense: 0.6, control: 0.2, creation: 0.1, attack: 0.1 },
-    MID: { creation: 0.35, control: 0.3, attack: 0.2, defense: 0.15 },
-    ATT: { attack: 0.6, creation: 0.2, control: 0.15, defense: 0.05 },
-  }[player.role];
+  const metrics = ROLE_METRICS[player.role];
+  const scored = metrics.map((metric) => ({ metric, score: scoredMetric(player, peers, metric) }));
+  const available = scored.filter(({ score }) => score !== null);
+  const availableWeight = available.reduce((sum, { metric }) => sum + metric.weight, 0);
+  const observedScore = available.reduce((sum, { metric, score }) => sum + score * metric.weight, 0) / availableWeight;
+  const values = { attack: 0, creation: 0, control: 0, defense: 0, goalkeeping: 0 };
+  for (const category of Object.keys(values)) {
+    const categoryMetrics = available.filter(({ metric }) => metric.category === category);
+    const categoryWeight = categoryMetrics.reduce((sum, { metric }) => sum + metric.weight, 0);
+    if (categoryWeight > 0) {
+      values[category] = round(categoryMetrics.reduce((sum, { metric, score }) => sum + score * metric.weight, 0) / categoryWeight, 2);
+    }
+  }
+
+  const minutesReliability = Math.min(1, player.stats.minutes / 900);
+  const windowAlignment = player.editionKind === "calendar" ? 0.65 : 1;
+  // A UEFA club campaign is still a small sample. Preserve at least 20% verified
+  // selection pedigree even when every modern match metric is available.
+  const dataConfidence = Math.min(0.8, minutesReliability * (0.35 + 0.65 * availableWeight) * windowAlignment);
+  const pedigreeScore = pedigreeIndex.get(player.id);
+  const adjustedPerformance = observedScore * dataConfidence + pedigreeScore * (1 - dataConfidence);
+  const achievementScore = 10 + Math.min(10, honorPoints(player.honors) / 12 * 10);
   return {
     ...values,
-    roleScore: round(Object.entries(weights).reduce((sum, [key, weight]) => sum + values[key] * weight, 0), 2),
+    observedScore: round(observedScore, 2),
+    pedigreeScore: round(pedigreeScore, 2),
+    dataConfidence: round(dataConfidence, 3),
+    achievementScore: round(achievementScore, 2),
+    roleScore: round(Math.max(0, Math.min(20, adjustedPerformance * 0.85 + achievementScore * 0.15)), 2),
   };
 }
 
 function assignTeamSuccess(players) {
-  for (const edition of SOCCER_SELECTION_EDITIONS) {
-    const cards = players.filter((player) => player.edition === edition.key);
-    const values = cards.map((player) => player.stats.pointsPerMatch);
-    for (const player of cards) {
-      player.teamSuccess = round(percentile(player.stats.pointsPerMatch, values) * 4 - 2, 2);
-    }
+  const values = players.map((player) => player.stats.pointsPerMatch);
+  for (const player of players) {
+    const reliability = Math.min(1, player.stats.minutes / 720);
+    player.teamSuccess = round((percentile(player.stats.pointsPerMatch, values) * 2 - 1) * reliability, 2);
   }
+}
+
+function assignPerformance(players) {
+  const pedigreeIndex = createPedigreeIndex(players);
+  for (const player of players) player.performance = performanceFor(player, players, pedigreeIndex);
+}
+
+function generatedSource(players) {
+  return `import type { SoccerPlayerCard } from "./types";\n\n// Generated by scripts/generate-soccer-data.mjs. Do not edit by hand.\nexport const SOCCER_SOURCE_REVISION = ${JSON.stringify(SOURCE_REVISION)};\n\nexport const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = ${JSON.stringify(players, null, 2)};\n`;
 }
 
 async function build() {
@@ -489,7 +636,7 @@ async function build() {
   });
   if (new Set(players.map((player) => player.id)).size !== players.length) throw new Error("Generated duplicate soccer card IDs.");
   assignTeamSuccess(players);
-  for (const player of players) player.performance = performanceFor(player, players);
+  assignPerformance(players);
 
   const manifestPlayers = players.map(({
     id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls,
@@ -505,9 +652,44 @@ async function build() {
     players: manifestPlayers,
   };
   return {
-    source: `import type { SoccerPlayerCard } from "./types";\n\n// Generated by scripts/generate-soccer-data.mjs. Do not edit by hand.\nexport const SOCCER_SOURCE_REVISION = ${JSON.stringify(SOURCE_REVISION)};\n\nexport const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = ${JSON.stringify(outputPlayers, null, 2)};\n`,
+    source: generatedSource(outputPlayers),
     manifest,
   };
+}
+
+async function recalculateCommitted() {
+  const source = await readFile(OUTPUT, "utf8");
+  const playersMatch = source.match(/SOCCER_PLAYER_DATABASE: SoccerPlayerCard\[\] = ([\s\S]*);\s*$/);
+  if (!playersMatch) throw new Error("Generated soccer data file has an invalid shape.");
+  const players = JSON.parse(playersMatch[1]);
+  const manifest = JSON.parse(await readFile(PROVENANCE_OUTPUT, "utf8"));
+  const provenanceById = new Map(manifest.players.map((player) => [player.id, player]));
+  const rowsByMatch = new Map();
+  const advancedKeys = [
+    "nonPenaltyGoalsPer90", "tacklesWonPer90", "recoveriesPer90", "clearancesPer90",
+    "passCompletionPct", "progressiveDeliveriesPer90", "dribblesPer90", "claimsPer90",
+  ];
+
+  for (const player of players) {
+    const provenance = provenanceById.get(player.id);
+    if (!provenance) throw new Error(`${player.id}: missing provenance while recalculating.`);
+    const playerRows = [];
+    for (const matchId of provenance.sourceMatchIds) {
+      if (!rowsByMatch.has(matchId)) {
+        rowsByMatch.set(matchId, JSON.parse(await readFile(join(CACHE, "match-stats", `${matchId}.json`), "utf8")));
+      }
+      const row = rowsByMatch.get(matchId).find((candidate) => player.sourcePlayerIds.includes(String(candidate.playerId)));
+      if (!row) continue;
+      const minutes = statValue(row, "minutes_played_official");
+      if (minutes > 0) playerRows.push({ row, minutes });
+    }
+    for (const key of advancedKeys) delete player.stats[key];
+    Object.assign(player.stats, deriveAdvancedStats(playerRows, player.stats.minutes));
+  }
+  assignTeamSuccess(players);
+  assignPerformance(players);
+  await writeFile(OUTPUT, generatedSource(players));
+  console.log(`Recalculated ${players.length} committed football cards from verified cached UEFA match data.`);
 }
 
 async function verifyCommitted() {
@@ -544,6 +726,12 @@ async function verifyCommitted() {
     if (!provenance || provenance.sourceMatchIds.length === 0 || !provenance.sourceSelectionUrl) throw new Error(`${player.id} has incomplete provenance.`);
     if (player.sourceRevision !== SOURCE_REVISION || !player.sourcePlayerId || player.sourcePlayerIds.length === 0 || !player.sourceIdentity || player.sourceTeamIds.length === 0) throw new Error(`${player.id} is missing a canonical UEFA identity.`);
     if (![...Object.values(player.stats), ...Object.values(player.performance), player.teamSuccess].every(Number.isFinite)) throw new Error(`${player.id} contains a non-finite value.`);
+    for (const field of ["observedScore", "pedigreeScore", "dataConfidence", "achievementScore", "roleScore"]) {
+      if (!Number.isFinite(player.performance[field])) throw new Error(`${player.id} is missing generated ${field}.`);
+    }
+    if (player.performance.dataConfidence < 0 || player.performance.dataConfidence > 0.8 || player.performance.roleScore < 0 || player.performance.roleScore > 20) {
+      throw new Error(`${player.id} has an out-of-range generated card rating.`);
+    }
     if (player.stats.minutes <= 0 || player.stats.appearances <= 0) throw new Error(`${player.id} has no verified playing time.`);
     if (player.sourcePositionLabels.length !== 1 || player.sourcePositionLabels[0] !== `UEFA selection: ${player.role}`) throw new Error(`${player.id} does not use its official selection role.`);
     if (player.honors?.champion && !player.honors.championLabel) throw new Error(`${player.id} has an unlabeled championship honor.`);
@@ -553,6 +741,7 @@ async function verifyCommitted() {
 }
 
 if (VERIFY_ONLY) await verifyCommitted();
+else if (RECALCULATE_ONLY) await recalculateCommitted();
 else {
   const generated = await build();
   await writeFile(OUTPUT, generated.source);

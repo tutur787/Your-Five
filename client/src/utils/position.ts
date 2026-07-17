@@ -1,4 +1,4 @@
-import { PlayerCard } from "@fiveaside/shared/core";
+import { LineupSlot, PlayerCard } from "@fiveaside/shared/core";
 
 /** "PG", "PG/SG", or "PG/SG/SF" depending on how many real positions this player has listed. */
 export function formatPosition(player: PlayerCard): string {
@@ -6,4 +6,12 @@ export function formatPosition(player: PlayerCard): string {
     return [player.role, player.secondaryRole, player.tertiaryRole].filter(Boolean).join("/");
   }
   return [player.position, player.secondaryPosition, player.tertiaryPosition].filter(Boolean).join("/");
+}
+
+export function formatLineupSlot(slot: LineupSlot): string {
+  if (slot === "ATT_L") return "ATT-L";
+  if (slot === "ATT_R") return "ATT-R";
+  if (slot === "DEF_L") return "DEF-L";
+  if (slot === "DEF_R") return "DEF-R";
+  return slot;
 }

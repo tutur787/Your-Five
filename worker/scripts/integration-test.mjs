@@ -214,13 +214,13 @@ function listedSlots(player) {
     return [player.position, player.secondaryPosition, player.tertiaryPosition].filter(Boolean);
   }
   const roles = [player.role, player.secondaryRole, player.tertiaryRole].filter(Boolean);
-  return roles.flatMap((role) => role === "DEF" ? ["DEF_L", "DEF_R"] : [role]);
+  return roles.flatMap((role) => role === "ATT" ? ["ATT_L", "ATT_R"] : [role]);
 }
 
 function firstPlacementSlot(state) {
   const pending = state.pendingPlacement;
   const occupied = new Set(state.teams[pending.seat].roster.map((pick) => pick.slot));
-  const all = state.sport === "soccer" ? ["GK", "DEF_L", "DEF_R", "MID", "ATT"] : ["PG", "SG", "SF", "PF", "C"];
+  const all = state.sport === "soccer" ? ["GK", "DEF", "MID", "ATT_L", "ATT_R"] : ["PG", "SG", "SF", "PF", "C"];
   return listedSlots(pending.player).find((slot) => !occupied.has(slot)) ?? all.find((slot) => !occupied.has(slot));
 }
 

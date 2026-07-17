@@ -13,7 +13,7 @@ import {
   TeamState,
   validSlotsFor,
 } from "@fiveaside/shared/core";
-import { formatPosition } from "../utils/position";
+import { formatLineupSlot, formatPosition } from "../utils/position";
 import { ScoreBreakdown } from "./ScoreBreakdown";
 
 interface Props {
@@ -181,7 +181,7 @@ export function LineupCourt({
     event.preventDefault();
     action();
   };
-  const slotLabel = (slot: LineupSlot) => slot === "DEF_L" ? "DEF-L" : slot === "DEF_R" ? "DEF-R" : slot;
+  const slotLabel = formatLineupSlot;
   const movingPlayer = draggedPlayer ?? selectedPlayer;
 
   return (
@@ -193,13 +193,14 @@ export function LineupCourt({
       {sport === "soccer" ? (
         <svg className="court-markings pitch-markings" viewBox="0 0 640 760" preserveAspectRatio="none" aria-hidden="true">
           <rect className="pitch-boundary" x="8" y="8" width="624" height="744" />
-          <line className="pitch-line" x1="8" y1="380" x2="632" y2="380" />
-          <circle className="pitch-line" cx="320" cy="380" r="78" />
-          <circle className="pitch-dot" cx="320" cy="380" r="4" />
-          <rect className="pitch-line" x="150" y="8" width="340" height="120" />
-          <rect className="pitch-line" x="235" y="8" width="170" height="50" />
-          <rect className="pitch-line" x="150" y="632" width="340" height="120" />
-          <rect className="pitch-line" x="235" y="702" width="170" height="50" />
+          <line className="pitch-line" x1="8" y1="8" x2="632" y2="8" />
+          <path className="pitch-line" d="M230 8 C230 58 270 98 320 98 C370 98 410 58 410 8" />
+          <circle className="pitch-dot" cx="320" cy="8" r="4" />
+          <rect className="pitch-line" x="125" y="542" width="390" height="210" />
+          <rect className="pitch-line" x="225" y="680" width="190" height="72" />
+          <path className="pitch-line" d="M248 542 C260 474 380 474 392 542" />
+          <circle className="pitch-dot" cx="320" cy="598" r="4" />
+          <rect className="pitch-goal" x="274" y="744" width="92" height="16" />
         </svg>
       ) : (
         <svg className="court-markings" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">

@@ -100,8 +100,8 @@ export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[
   return [...shuffle(core, rng), ...shuffle(rest, rng)];
 }
 
-export const SOCCER_MAX_PRIMARY_IN_POOL: Record<SoccerRole, number> = { GK: 3, DEF: 6, MID: 4, ATT: 5 };
-export const SOCCER_MIN_ELIGIBLE_IN_POOL: Record<SoccerRole, number> = { GK: 2, DEF: 4, MID: 2, ATT: 2 };
+export const SOCCER_MAX_PRIMARY_IN_POOL: Record<SoccerRole, number> = { GK: 3, DEF: 4, MID: 4, ATT: 7 };
+export const SOCCER_MIN_ELIGIBLE_IN_POOL: Record<SoccerRole, number> = { GK: 2, DEF: 2, MID: 2, ATT: 4 };
 
 export function buildSoccerPoolFrom(database: readonly SoccerPlayerCard[], rng: Rng = Math.random): SoccerPlayerCard[] {
   const shuffled = shuffle(database, rng);
