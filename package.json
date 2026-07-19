@@ -11,6 +11,8 @@
     "dev:worker": "npm run dev -w worker",
     "dev:client": "npm run dev -w client",
     "deploy:worker": "npm run deploy -w worker",
+    "build:web": "npm run build -w client",
+    "deploy:web": "npm run build:web && npx wrangler pages deploy client/dist --project-name your-five --branch main",
     "test:cloudflare": "npm run test:integration -w worker",
     "test:engine": "tsx shared/src/engine.test.ts",
     "test:reliability": "tsx shared/src/reliability.test.ts",

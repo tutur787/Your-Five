@@ -2,6 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "your-five-worker",
   "main": "src/index.ts",
+  "routes": [
+    { "pattern": "api.your-five.com", "custom_domain": true }
+  ],
   "compatibility_date": "2026-07-14",
   "compatibility_flags": ["nodejs_compat"],
   "durable_objects": {

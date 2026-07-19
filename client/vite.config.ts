@@ -2,7 +2,9 @@ import react from "@vitejs/plugin-react";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
-import { defineConfig, Plugin } from "vite";
+import { defineConfig, loadEnv, Plugin } from "vite";
+
+const CLIENT_ROOT = fileURLToPath(new URL(".", import.meta.url));
 
 const CONTENT_PAGES = [
   ["about", "About Your Five | Your Five", "Learn why Your Five was built and how its basketball and football auction drafts work.", true],
@@ -19,8 +21,7 @@ function staticContentPages(): Plugin {
     name: "your-five-static-content-pages",
     apply: "build",
     async closeBundle() {
-      const clientRoot = fileURLToPath(new URL(".", import.meta.url));
-      const dist = resolve(clientRoot, "dist");
+      const dist = resolve(CLIENT_ROOT, "dist");
       const shell = await readFile(resolve(dist, "index.html"), "utf8");
 
       for (const [path, title, description, showAds] of CONTENT_PAGES) {
@@ -51,16 +52,23 @@ function staticContentPages(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), staticContentPages()],
-  server: {
-    port: 5173,
-    proxy: {
-      "^/(rooms|room|matchmaking|health)": {
-        target: "http://localhost:8787",
-        ws: true,
-        changeOrigin: true,
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, CLIENT_ROOT, "");
+  if (mode === "production" && !env.VITE_SERVER_URL) {
+    throw new Error("VITE_SERVER_URL is required for production builds so online play reaches the Worker.");
+  }
+
+  return {
+    plugins: [react(), staticContentPages()],
+    server: {
+      port: 5173,
+      proxy: {
+        "^/(rooms|room|matchmaking|health)": {
+          target: "http://localhost:8787",
+          ws: true,
+          changeOrigin: true,
+        },
       },
     },
-  },
+  };
 });
