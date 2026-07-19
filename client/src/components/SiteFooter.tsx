@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import { InfoModal, InfoTopic } from "../pages/InfoPages";
 import { useSport } from "../hooks/useSport";
 
@@ -15,6 +16,9 @@ export function SiteFooter() {
           <small>Independent {sport === "soccer" ? "football" : "basketball"} draft game</small>
         </div>
         <nav className="site-footer-nav" aria-label="Site information">
+          <Link to="/how-to-play">How to Play</Link>
+          <Link to="/scoring">Scoring</Link>
+          <Link to="/data-sources">Data</Link>
           <button type="button" onClick={() => setOpenTopic("about")}>About</button>
           <button type="button" onClick={() => setOpenTopic("privacy")}>Privacy</button>
           <button type="button" onClick={() => setOpenTopic("terms")}>Terms</button>

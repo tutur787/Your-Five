@@ -1557,6 +1557,7 @@ input[type="text"] {
 }
 
 .site-footer-nav button,
+.site-footer-nav a,
 .info-document a {
   color: var(--muted);
   text-decoration-color: #545b63;
@@ -1575,13 +1576,35 @@ input[type="text"] {
   text-decoration: none;
 }
 
+.site-footer-nav a {
+  padding: 4px 0;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .site-footer-nav button:hover:not(:disabled),
+.site-footer-nav a:hover,
 .info-document a:hover {
   border-color: transparent;
   background: transparent;
   color: var(--text);
   text-decoration-color: var(--accent);
   transform: none;
+}
+
+.formula-block {
+  margin: 18px 0;
+  border-left: 3px solid var(--accent);
+  background: #111417;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.formula-block code {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: normal;
 }
 
 .site-footer-note {
@@ -2631,7 +2654,8 @@ input[type="text"] {
     grid-column: 1 / -1;
     grid-row: 1;
     justify-content: flex-start;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px 15px;
   }
 
   .site-footer-mark {

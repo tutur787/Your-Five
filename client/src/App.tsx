@@ -1,7 +1,16 @@
 import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { SiteFooter } from "./components/SiteFooter";
-import { AboutPage, ContactPage, PrivacyPage, TermsPage } from "./pages/InfoPages";
+import { SeoMetadata } from "./components/SeoMetadata";
+import {
+  AboutPage,
+  ContactPage,
+  DataSourcesPage,
+  HowToPlayPage,
+  PrivacyPage,
+  ScoringPage,
+  TermsPage,
+} from "./pages/InfoPages";
 import { SportProvider } from "./hooks/useSport";
 
 const Landing = lazy(() => import("./pages/Landing").then((module) => ({ default: module.Landing })));
@@ -24,6 +33,7 @@ export default function App() {
 
   return (
     <SportProvider>
+      <SeoMetadata />
       <Suspense fallback={<div className="route-loading"><span className="search-pulse" /> Loading Your Five</div>}>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -35,6 +45,9 @@ export default function App() {
         <Route path="/room/:code" element={<RoomPage />} />
         <Route path="/challenge/:sport/:version/:seed" element={<ChallengeDraft />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/how-to-play" element={<HowToPlayPage />} />
+        <Route path="/scoring" element={<ScoringPage />} />
+        <Route path="/data-sources" element={<DataSourcesPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/contact" element={<ContactPage />} />

@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext, useEffect, useRef } from "react";
 import { AppHeader } from "../components/AppHeader";
 
-const LAST_UPDATED = "July 16, 2026";
+const LAST_UPDATED = "July 19, 2026";
 const REPOSITORY_URL = "https://github.com/tutur787/Your-Five";
 const ISSUES_URL = `${REPOSITORY_URL}/issues/new`;
 const PROFILE_URL = "https://github.com/tutur787";
@@ -22,14 +22,6 @@ function InfoPage({
   children: ReactNode;
 }) {
   const inModal = useContext(InfoModalContext);
-
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = `${title} | Your Five`;
-    return () => {
-      document.title = previousTitle;
-    };
-  }, [title]);
 
   return (
     <div className="game-page info-page">
@@ -97,6 +89,231 @@ export function AboutPage() {
   );
 }
 
+export function HowToPlayPage() {
+  return (
+    <InfoPage
+      eyebrow="DRAFT MANUAL"
+      title="How to Play"
+      intro="Your Five is a head-to-head auction. Both GMs begin with $20, compete for a shared stream of players, and try to finish with the stronger five-player lineup."
+    >
+      <section className="info-section">
+        <span className="info-section-number">01</span>
+        <div>
+          <h2>Choose a draft</h2>
+          <p>
+            Quick Draft plays against an AI at your chosen difficulty. The Daily Challenge gives everyone the same
+            seeded player pool. Online play matches you with another person or creates a private room for a friend.
+            Couch Draft lets two GMs share one device. Basketball and football use the same auction rules but have
+            separate players, formations, visuals, and scoring systems.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">02</span>
+        <div>
+          <h2>Manage the $20 cap</h2>
+          <p>
+            A revealed player starts an auction. The GM on the clock opens the bidding, and the two sides may raise
+            until one concedes. The winner pays the final bid. The maximum legal bid always reserves $1 for every
+            other empty roster spot, so a team can still complete its five.
+          </p>
+          <div className="formula-block"><code>maximum bid = money left - open roster spots + 1</code></div>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">03</span>
+        <div>
+          <h2>Use skips carefully</h2>
+          <p>
+            Each team follows the same skip ladder: the first skip is free, then later skips cost $1, $5, and $10.
+            A skipped player is normally offered to the other GM for $1 before leaving the draft. Paid skips are
+            allowed only when enough money remains to fill every open slot. The escalating price makes passing on a
+            poor fit possible without making endless rerolls the best strategy.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">04</span>
+        <div>
+          <h2>Build the formation</h2>
+          <p>
+            Basketball lineups fill PG, SG, SF, PF, and C. Football lineups fill GK, DEF, MID, and two ATT spots.
+            When a new player is won, the game first offers any open sourced position. If every sourced position is
+            occupied, the player may enter any open slot. You can later drag, tap, or use the keyboard to swap any
+            two players, even when the move creates a position penalty.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">05</span>
+        <div>
+          <h2>Finish and compare</h2>
+          <p>
+            The draft ends when both teams have five players. The winner is determined by the selected sport's
+            scoring model, not by money spent or money left. Expand Score details after the game to see every card,
+            bonus, chemistry pair, tactical adjustment, and position penalty that produced the result.
+          </p>
+        </div>
+      </section>
+    </InfoPage>
+  );
+}
+
+export function ScoringPage() {
+  return (
+    <InfoPage
+      eyebrow="UNDER THE HOOD"
+      title="Scoring Explained"
+      intro="Every result comes from a deterministic formula. The same lineup always receives the same score, and the post-game breakdown exposes each ingredient used by the engine."
+    >
+      <section className="info-section">
+        <span className="info-section-number">01</span>
+        <div>
+          <h2>Basketball score</h2>
+          <p>
+            Each card contributes era-adjusted points, rebounds, assists, steals, and blocks. Where sourced data is
+            available, the model also adds defensive rating versus league average, plus-minus, and team win
+            percentage. Verified MVPs, championships, Defensive Player of the Year awards, All-NBA selections, and
+            All-Defense selections add explicit accolade points.
+          </p>
+          <div className="formula-block"><code>score = player production + team success + accolades + fit + chemistry - position penalties</code></div>
+          <p>
+            Fit rewards a real playmaker and rim protector, while more than two high-usage scorers creates a
+            redundancy penalty. Verified former NBA teammates add chemistry. A wrong position is penalized by the
+            basketball distance between the player's sourced positions and the lineup slot, so PF to C is less
+            costly than C to PG.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">02</span>
+        <div>
+          <h2>Football card quality</h2>
+          <p>
+            Every football card has a 0-20 role-adjusted quality score. The observed edition score ranks verified
+            UEFA match metrics against cards with the same role. Goalkeepers use save percentage, goals conceded,
+            clean sheets, claims, and passing. Defenders emphasize tackles, recoveries, clearances, passing, and
+            progression. Midfielders emphasize creation, progression, passing, recovery, dribbling, and scoring.
+            Attackers emphasize non-penalty goals, shots on target, assists, dribbling, accuracy, and progression.
+          </p>
+          <p>
+            Short competition windows can be noisy, so the observed edition score is blended with verified UEFA
+            selection pedigree. Edition confidence increases with minutes, metric coverage, and alignment between
+            the card's selection period and its scoring window. Goalkeeper confidence is deliberately reduced
+            because keeper outcomes contain fewer independent actions and depend more heavily on the team defense.
+          </p>
+          <div className="formula-block"><code>card quality = edition score x confidence + UEFA pedigree x (1 - confidence)</code></div>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">03</span>
+        <div>
+          <h2>Football team score</h2>
+          <p>
+            The five card-quality ratings form the base. A small team-success adjustment compares points per match
+            and goal difference in the card's scoring window. Verified honors then add 3 points for winning the
+            relevant UEFA competition, 5 for one major individual award, 2 for top scorer, 2 for a positional award,
+            and 1 for Young Player of the Season. Honors are capped at 20 points per lineup.
+          </p>
+          <p>
+            Tactical fit can reward a creator, defensive anchor, scorer, and secure goalkeeper, while too many
+            attack-dominant players can reduce the bonus. Same-edition club teammates add 2 points per pair, capped
+            at 6. Position penalties are 5 between MID and ATT, 6 between DEF and MID, 16 between DEF and ATT, and
+            30 between GK and any outfield role.
+          </p>
+          <div className="formula-block"><code>score = five card qualities + team success + honors + tactical fit + chemistry - mismatches</code></div>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">04</span>
+        <div>
+          <h2>What the score is not</h2>
+          <p>
+            The score is a game model, not a definitive historical ranking or a prediction of a real match. Auction
+            value is also separate from final quality: a cheap star may be a great draft outcome, but the price itself
+            does not increase that player's score. The full breakdown is shown so close results can be inspected
+            rather than treated as a hidden judgment.
+          </p>
+        </div>
+      </section>
+    </InfoPage>
+  );
+}
+
+export function DataSourcesPage() {
+  return (
+    <InfoPage
+      eyebrow="PROVENANCE"
+      title="Data Sources"
+      intro="Your Five uses committed player databases built from named public sources. Production games do not invent missing statistics or make live requests to third-party sports sites."
+    >
+      <section className="info-section">
+        <span className="info-section-number">01</span>
+        <div>
+          <h2>Basketball cards</h2>
+          <p>
+            Historical season statistics come from NBA.com data accessed through the open-source
+            <code> nba_api</code> client. The displayed per-game numbers remain the sourced values; era factors affect
+            scoring calculations rather than rewriting the statistics shown on a card. Player positions are sourced
+            from published position listings and stored explicitly, without assigning positions from statistical
+            rules. Historical teammates and honors are stored as verified card metadata.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">02</span>
+        <div>
+          <h2>Football selection pool</h2>
+          <p>
+            The database contains 298 cards from 26 official UEFA selections. It uses UEFA.com Fans' Team of the Year
+            selections from 2001 through 2020 and UEFA Champions League Squad or Team of the Season selections from
+            2020/21 onward. The role attached to a card comes from its official selection rather than an inferred
+            statistical profile.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">03</span>
+        <div>
+          <h2>Football match data</h2>
+          <p>
+            Football statistics are generated from UEFA public club-competition match records for the card's exact
+            scoring window. The generator retains canonical player IDs, team IDs, source position labels, source
+            selection URLs, honor URLs, and every contributing match ID in a provenance manifest. Optional metrics
+            are used only when their tracked coverage passes the configured threshold, and generation fails on
+            missing matches, duplicate cards, unsupported roles, or non-finite values.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">04</span>
+        <div>
+          <h2>Verified honors</h2>
+          <p>
+            Football honors are attached only when an official source connects the award to the exact card year or
+            season. The ledger covers relevant UEFA competition wins, UEFA overall player awards, Ballon d'Or,
+            Champions League top scorer, UEFA positional awards, and Champions League Young Player of the Season.
+            Multiple major individual awards on one card share a single 5-point major-award contribution so the same
+            achievement level is not counted twice.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">05</span>
+        <div>
+          <h2>Independence and corrections</h2>
+          <p>
+            Your Five is an independent fan-made game and is not endorsed by any player, team, league, federation,
+            ratings publisher, or data provider mentioned on the site. Third-party names and facts identify their
+            subjects and sources. A suspected data error can be reported through the Contact page with the card,
+            edition, and supporting source so it can be checked against the committed provenance.
+          </p>
+        </div>
+      </section>
+    </InfoPage>
+  );
+}
+
 export function PrivacyPage() {
   return (
     <InfoPage
@@ -147,6 +364,12 @@ export function PrivacyPage() {
             diagnostic logs to deliver and protect the service. Its handling of that data is governed by the
             {" "}<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare Privacy Policy</a>.
           </p>
+          <p>
+            Your Five may use Cloudflare Web Analytics to understand aggregate page views, visits, and website
+            performance. Cloudflare describes this service as privacy-first and states that Web Analytics does not
+            collect or use visitors' personal data. It is not used to build a Your Five account or individual player
+            profile.
+          </p>
         </div>
       </section>
       <section className="info-section">
@@ -162,8 +385,8 @@ export function PrivacyPage() {
             {" "}and <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>.
           </p>
           <p>
-            Your Five does not sell personal information and does not currently use third-party analytics. Where
-            required, advertising consent choices will be presented before personalized advertising is enabled.
+            Your Five does not sell personal information. Where required, advertising consent choices will be
+            presented before personalized advertising is enabled.
           </p>
         </div>
       </section>

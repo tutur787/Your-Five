@@ -27,15 +27,6 @@ export function SportProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.dataset.sport = sport;
-    if (/^Your Five \| (?:\$20 All-Time )?(?:Basketball|Football|Soccer|Sports) Draft$/.test(document.title)) {
-      document.title = `Your Five | ${sport === "soccer" ? "Football" : "Basketball"} Draft`;
-    }
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      "content",
-      sport === "soccer"
-        ? "Draft, bid, and build your world football five with a $20 cap."
-        : "Draft, bid, and build your all-time basketball five with a $20 cap."
-    );
   }, [sport]);
 
   const value = useMemo(() => ({ sport, setSport }), [sport, setSport]);
