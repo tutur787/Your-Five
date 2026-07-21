@@ -38,9 +38,9 @@ function StatLine({ player }: { player: PlayerCard }) {
         ["GOALS ALLOWED", stats.goalsConceded], ["CLAIMS", stats.claims], ["MIN", stats.minutes]
       ).slice(0, 5),
       DEF: available(
-        ["APPS", stats.appearances], ["TACKLES", stats.tacklesWon], ["RECOVERIES", stats.recoveries],
-        ["CLEARANCES", stats.clearances], ["ASSISTS", stats.assists], ["GOALS", stats.goals],
-        ["CLEAN SHEETS", stats.cleanSheets], ["MIN", stats.minutes]
+        ["APPS", stats.appearances], ["CLEAN SHEETS", stats.cleanSheets],
+        ["GOALS CONCEDED", stats.goalsConceded], ["TACKLES", stats.tacklesWon],
+        ["RECOVERIES", stats.recoveries], ["CLEARANCES", stats.clearances], ["MIN", stats.minutes]
       ).slice(0, 5),
       MID: available(
         ["APPS", stats.appearances], ["GOALS", stats.goals], ["ASSISTS", stats.assists],
