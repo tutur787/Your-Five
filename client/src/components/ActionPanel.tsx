@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import {
   availablePlacementSlots,
   canBuySkip,
+  chemistryPartnersForPlayer,
   MatchAction,
   MatchState,
   maxAffordable,
   nextSkipPrice,
   PlayerCard,
   SeatId,
+  TeamState,
   validSlotsFor,
 } from "@fiveaside/shared/core";
 import { formatLineupSlot, formatPosition } from "../utils/position";
@@ -75,14 +77,27 @@ function StatLine({ player }: { player: PlayerCard }) {
   );
 }
 
-function PlayerSpotlight({ player }: { player: PlayerCard }) {
+function PlayerSpotlight({ player, team }: { player: PlayerCard; team?: TeamState }) {
+  const chemistryPartners = team ? chemistryPartnersForPlayer(team, player) : [];
   return (
-    <div className="player-spotlight">
-      <span className="player-position-badge">{formatPosition(player)}</span>
-      <div className="player-nameplate">
-        <h2>{player.name}</h2>
-        <span>{player.era}</span>
+    <div className="player-spotlight-block">
+      <div className="player-spotlight">
+        <span className="player-position-badge">{formatPosition(player)}</span>
+        <div className="player-nameplate">
+          <h2>{player.name}</h2>
+          <span className="player-team-line">
+            {player.team ? <strong>{player.team}</strong> : null}
+            {player.team && player.era ? <i aria-hidden="true">·</i> : null}
+            <span>{player.era}</span>
+          </span>
+        </div>
       </div>
+      {chemistryPartners.length > 0 && (
+        <div className="chemistry-preview" role="status">
+          <span>CHEMISTRY LINK</span>
+          <strong>with {chemistryPartners.map((pick) => pick.player.name).join(", ")}</strong>
+        </div>
+      )}
     </div>
   );
 }
@@ -170,7 +185,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel, tu
             <span className="standing-bidder-tag">{standingBidder}</span> {subjectVerb(standingBidder, "are", "is")} bidding on{" "}
             <strong>{auction.player.name}</strong>
           </div>
-          <PlayerSpotlight player={auction.player} />
+          <PlayerSpotlight player={auction.player} team={state.teams[actingSeat]} />
           <StatLine player={auction.player} />
           <div className="price-block" key={auction.currentBid}>
             <span>CURRENT BID</span><strong>${auction.currentBid}</strong>
@@ -200,7 +215,7 @@ export function ActionPanel({ state, dispatch, canAct, actingSeat, seatLabel, tu
             <Countdown resetKey={`skip-${offer.player.id}`} deadlineAt={turnDeadlineAt} />
           </div>
           <div className="auction-context">{seatLabel(offer.skippedBy)} passed. Your call.</div>
-          <PlayerSpotlight player={offer.player} />
+          <PlayerSpotlight player={offer.player} team={state.teams[actingSeat]} />
           <StatLine player={offer.player} />
           <div className="price-block"><span>TAKE PRICE</span><strong>$1</strong></div>
           <div className="action-row">
@@ -246,7 +261,7 @@ function PlacementPanel({
       <div className="placement-box">
         <div className="action-stage-top"><div className="auction-eyebrow neutral">ROSTER MOVE</div></div>
         <div className="auction-context">{winner} {subjectVerb(winner, "win", "wins")} the card for ${pending.price}</div>
-        <PlayerSpotlight player={pending.player} />
+        <PlayerSpotlight player={pending.player} team={team} />
         <StatLine player={pending.player} />
         <div className="placement-copy">
           {listedOpen ? "Choose an open listed position." : "Listed positions are full. Choose any open slot."}
@@ -370,7 +385,7 @@ function RevealPanel({
           </div>
           <Countdown resetKey={`reveal-${player.id}`} deadlineAt={turnDeadlineAt} />
         </div>
-        <PlayerSpotlight player={player} />
+        <PlayerSpotlight player={player} team={team} />
         <StatLine player={player} />
         <div className="raise-controls opening-controls">
           <div className="raise-chip-row">
@@ -474,7 +489,7 @@ function CatchUpPanel({
           <Countdown resetKey={`catch-up-${player.id}`} deadlineAt={turnDeadlineAt} />
         </div>
         <div className="auction-context">The other lineup is full. Add this card for $1 or use a remaining skip.</div>
-        <PlayerSpotlight player={player} />
+        <PlayerSpotlight player={player} team={team} />
         <StatLine player={player} />
         <div className="price-block"><span>ROSTER PRICE</span><strong>$1</strong></div>
         <div className="action-row">

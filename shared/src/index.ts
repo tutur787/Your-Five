@@ -1,6 +1,7 @@
 export * from "./types";
 export * from "./players";
 export * from "./soccerPlayers";
+export * from "./soccerTeams";
 export * from "./soccerScoring";
 export * from "./gameEngine";
 export * from "./gameFactory";

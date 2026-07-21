@@ -40,6 +40,11 @@ export function chemistryPartnersByPlayerId(team: TeamState, sport: Sport): Map<
   return partners;
 }
 
+function lineupEra(player: TeamState["roster"][number]["player"]): string {
+  if (player.sport === "basketball") return player.era;
+  return player.era.match(/\d{4}(?:\/\d{2})?$/)?.[0] ?? player.era;
+}
+
 export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false, sport }: Props) {
   const skipPrice = nextSkipPrice(team);
   const paidSkipAvailable = canBuySkip(team, inCatchUp);
@@ -258,8 +263,10 @@ export function LineupCourt({
                     )}
                   </span>
                   <span className="court-player-meta">
-                    {formatPosition(pick.player)} · {pick.player.era}
+                    {formatPosition(pick.player)}
+                    {pick.player.teamCode ? ` · ${pick.player.teamCode}` : ""}
                   </span>
+                  <span className="court-player-era">{lineupEra(pick.player)}</span>
                 </div>
                 <div className="court-player-controls">
                   <span className="price-inline">${pick.price}</span>

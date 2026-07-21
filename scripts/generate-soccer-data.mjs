@@ -266,8 +266,12 @@ function scoreForTeam(match, teamId) {
   return teamId === homeId ? { for: home, against: away } : { for: away, against: home };
 }
 
-function teamName(row) {
-  return row.team?.translations?.displayName?.EN ?? row.team?.translations?.name?.EN ?? `Team ${row.teamId}`;
+function teamMetadata(row, match) {
+  const team = [match.homeTeam, match.awayTeam].find((candidate) => String(candidate?.id) === String(row.teamId));
+  return {
+    name: team?.translations?.displayName?.EN ?? team?.internationalName ?? row.team?.translations?.displayName?.EN ?? `Team ${row.teamId}`,
+    code: team?.teamCode ?? team?.translations?.displayTeamCode?.EN,
+  };
 }
 
 function competitionHonorName(match) {
@@ -381,8 +385,10 @@ function aggregateCard(card, matchData) {
       aggregate.shotsFacedTrackedMinutes += minutes;
       aggregate.saves += Math.max(0, opponentShots - score.against);
     }
+    const team = teamMetadata(row, match);
     aggregate.teamAppearances.set(teamId, {
-      name: teamName(row),
+      name: team.name,
+      code: team.code,
       count: (aggregate.teamAppearances.get(teamId)?.count ?? 0) + 1,
     });
     aggregate.matchIds.push(String(match.id));
@@ -425,6 +431,7 @@ function aggregateCard(card, matchData) {
   return {
     stats,
     team: teamRows[0][1].name,
+    teamCode: teamRows[0][1].code,
     sourcePlayerIds: [...aggregate.playerIds],
     sourceTeamIds: teamRows.map(([teamId]) => teamId),
     sourceMatchIds: [...new Set(aggregate.matchIds)].sort((a, b) => Number(a) - Number(b)),
@@ -623,6 +630,7 @@ async function build() {
       role: card.entry.role,
       era: card.edition.label,
       team: aggregate.team,
+      teamCode: aggregate.teamCode,
       sourceTeamIds: aggregate.sourceTeamIds,
       edition: card.edition.key,
       editionKind: card.edition.selection === "fan-team" ? "calendar" : "season",
@@ -642,8 +650,8 @@ async function build() {
   assignPerformance(players);
 
   const manifestPlayers = players.map(({
-    id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls,
-  }) => ({ id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls }));
+    id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, teamCode, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls,
+  }) => ({ id, sourcePlayerId, sourcePlayerIds, sourceIdentity, name, edition, team, teamCode, sourceTeamIds, sourcePositionLabels, sourceMatchIds, sourceSelectionUrl, sourceHonorUrls }));
   const outputPlayers = players.map(({ sourceMatchIds: _matches, sourceSelectionUrl: _selection, sourceHonorUrls: _honors, ...player }) => player);
   const manifest = {
     source: "UEFA.com official selections and UEFA public match statistics",

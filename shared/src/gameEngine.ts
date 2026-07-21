@@ -1,4 +1,5 @@
 import {
+  soccerChemistryPartners,
   soccerPlayerCompositeValue,
   soccerPositionPenalty,
   soccerScoreComponents,
@@ -340,6 +341,18 @@ export interface ChemistryPair {
   b: RosterPick;
 }
 
+function basketballPlayersHaveChemistry(a: BasketballPlayerCard, b: BasketballPlayerCard): boolean {
+  return Boolean(a.chemistryWith?.includes(b.id) || b.chemistryWith?.includes(a.id));
+}
+
+/** Existing roster picks that would form a scored chemistry link with this card. */
+export function chemistryPartnersForPlayer(team: TeamState, player: PlayerCard): RosterPick[] {
+  if (player.sport === "soccer") return soccerChemistryPartners(team, player);
+  return team.roster.filter(
+    (pick) => pick.player.sport === "basketball" && basketballPlayersHaveChemistry(player, pick.player)
+  );
+}
+
 /** Every pair of drafted picks whose real players were once actual NBA teammates. */
 export function chemistryPairs(team: TeamState): ChemistryPair[] {
   const pairs: ChemistryPair[] = [];
@@ -347,7 +360,11 @@ export function chemistryPairs(team: TeamState): ChemistryPair[] {
     for (let j = i + 1; j < team.roster.length; j++) {
       const a = team.roster[i];
       const b = team.roster[j];
-      if (a.player.sport === "basketball" && b.player.sport === "basketball" && a.player.chemistryWith?.includes(b.player.id)) {
+      if (
+        a.player.sport === "basketball" &&
+        b.player.sport === "basketball" &&
+        basketballPlayersHaveChemistry(a.player, b.player)
+      ) {
         pairs.push({ a, b });
       }
     }

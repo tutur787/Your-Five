@@ -985,16 +985,58 @@ const REALISM: Record<string, RealismRow> = {
   "antonio-daniels-2006-07": { spg: 0.5, bpg: 0.1, plusMinus: -0.3, defRtgVsAvg: -4.2, teamWinPct: 0.5, eraFactor: 1.04 },
 };
 
-export const PLAYER_DATABASE: BasketballPlayerCard[] = raw.map(([name, position, era, ppg, rpg, apg, secondaryPosition, tertiaryPosition]) => {
+const BASKETBALL_TEAM_EDITIONS = [
+  ["Philadelphia 76ers", "PHI"], ["Philadelphia 76ers", "PHI"],
+  ["Milwaukee Bucks", "MIL"], ["Milwaukee Bucks", "MIL"],
+  ["Chicago Bulls", "CHI"], ["Chicago Bulls", "CHI"], ["Chicago Bulls", "CHI"],
+  ["Chicago Bulls", "CHI"], ["Chicago Bulls", "CHI"], ["Chicago Bulls", "CHI"],
+  ["Chicago Bulls", "CHI"],
+  ["Cleveland Cavaliers", "CLE"], ["Cleveland Cavaliers", "CLE"], ["Cleveland Cavaliers", "CLE"],
+  ["Boston Celtics", "BOS"], ["Boston Celtics", "BOS"],
+  ["Los Angeles Clippers", "LAC"],
+  ["Memphis Grizzlies", "MEM"], ["Memphis Grizzlies", "MEM"],
+  ["Atlanta Hawks", "ATL"],
+  ["Miami Heat", "MIA"], ["Miami Heat", "MIA"], ["Miami Heat", "MIA"],
+  ["Charlotte Hornets", "CHH"], ["Utah Jazz", "UTA"], ["Sacramento Kings", "SAC"],
+  ["New York Knicks", "NYK"], ["New York Knicks", "NYK"], ["New York Knicks", "NYK"], ["New York Knicks", "NYK"],
+  ["Los Angeles Lakers", "LAL"], ["Los Angeles Lakers", "LAL"], ["Los Angeles Lakers", "LAL"],
+  ["Los Angeles Lakers", "LAL"], ["Los Angeles Lakers", "LAL"], ["Los Angeles Lakers", "LAL"],
+  ["Los Angeles Lakers", "LAL"],
+  ["Orlando Magic", "ORL"],
+  ["Dallas Mavericks", "DAL"], ["Dallas Mavericks", "DAL"],
+  ["New Jersey Nets", "NJN"],
+  ["Denver Nuggets", "DEN"], ["Denver Nuggets", "DEN"],
+  ["Indiana Pacers", "IND"],
+  ["Detroit Pistons", "DET"], ["Detroit Pistons", "DET"],
+  ["Toronto Raptors", "TOR"], ["Toronto Raptors", "TOR"],
+  ["Houston Rockets", "HOU"], ["Houston Rockets", "HOU"],
+  ["San Antonio Spurs", "SAS"], ["San Antonio Spurs", "SAS"], ["San Antonio Spurs", "SAS"],
+  ["Phoenix Suns", "PHX"], ["Phoenix Suns", "PHX"],
+  ["Seattle SuperSonics", "SEA"], ["Oklahoma City Thunder", "OKC"],
+  ["Minnesota Timberwolves", "MIN"],
+  ["Portland Trail Blazers", "POR"], ["Portland Trail Blazers", "POR"], ["Portland Trail Blazers", "POR"],
+  ["Golden State Warriors", "GSW"], ["Golden State Warriors", "GSW"],
+  ["Golden State Warriors", "GSW"], ["Golden State Warriors", "GSW"],
+  ["Washington Wizards", "WAS"],
+] as const;
+
+if (raw.length !== BASKETBALL_TEAM_EDITIONS.length * 6) {
+  throw new Error("Basketball team-edition metadata no longer matches the player database.");
+}
+
+export const PLAYER_DATABASE: BasketballPlayerCard[] = raw.map(([name, position, era, ppg, rpg, apg, secondaryPosition, tertiaryPosition], index) => {
   const id = `${name}-${era}`
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
   const realism = REALISM[id];
+  const [team, teamCode] = BASKETBALL_TEAM_EDITIONS[Math.floor(index / 6)];
   return {
     sport: "basketball" as const,
     id,
     name,
+    team,
+    teamCode,
     position,
     secondaryPosition,
     tertiaryPosition,

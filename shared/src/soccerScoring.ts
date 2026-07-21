@@ -109,13 +109,23 @@ export interface SoccerChemistryPair {
   b: RosterPick;
 }
 
+/** The exact same-edition, same-club test used by both scoring and auction previews. */
+export function soccerPlayersHaveChemistry(a: SoccerPlayerCard, b: SoccerPlayerCard): boolean {
+  return a.edition === b.edition && a.sourceTeamIds.some((teamId) => b.sourceTeamIds.includes(teamId));
+}
+
+export function soccerChemistryPartners(team: TeamState, player: SoccerPlayerCard): RosterPick[] {
+  return team.roster.filter(
+    (pick) => pick.player.sport === "soccer" && soccerPlayersHaveChemistry(player, pick.player)
+  );
+}
+
 export function soccerChemistryPairs(team: TeamState): SoccerChemistryPair[] {
   const picks = team.roster.filter((pick): pick is RosterPick & { player: SoccerPlayerCard } => pick.player.sport === "soccer");
   const pairs: SoccerChemistryPair[] = [];
   for (let i = 0; i < picks.length; i++) {
     for (let j = i + 1; j < picks.length; j++) {
-      const sharedTeam = picks[i].player.sourceTeamIds.some((teamId) => picks[j].player.sourceTeamIds.includes(teamId));
-      if (picks[i].player.edition === picks[j].player.edition && sharedTeam) {
+      if (soccerPlayersHaveChemistry(picks[i].player, picks[j].player)) {
         pairs.push({ a: picks[i], b: picks[j] });
       }
     }

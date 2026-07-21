@@ -394,6 +394,12 @@ input[type="number"], input[type="text"] {
   line-height: 1.2;
 }
 
+.court-player-era {
+  color: #89929f;
+  font-size: 8px;
+  line-height: 1.15;
+}
+
 .court-player-controls {
   display: flex;
   align-items: center;
@@ -1932,7 +1938,11 @@ input[type="text"] {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin: 8px 0 18px;
+  margin: 8px 0 0;
+}
+
+.player-spotlight-block {
+  margin-bottom: 18px;
 }
 
 .player-position-badge {
@@ -1956,13 +1966,55 @@ input[type="text"] {
   line-height: 0.95;
 }
 
-.player-nameplate span {
-  display: block;
+.player-team-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
   margin-top: 7px;
   color: var(--muted);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.player-team-line strong {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.player-team-line i {
+  font-style: normal;
+}
+
+.chemistry-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  width: fit-content;
+  max-width: calc(100% - 80px);
+  margin: 12px 0 0 80px;
+  border-left: 3px solid var(--good);
+  background: rgba(61, 220, 132, 0.08);
+  padding: 7px 10px;
+  color: var(--good);
+  font-size: 10px;
+}
+
+.chemistry-preview span {
+  flex: 0 0 auto;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.chemistry-preview strong {
+  min-width: 0;
+  color: var(--text);
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .player-stat-grid {

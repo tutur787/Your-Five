@@ -49,6 +49,10 @@ export interface BasketballPlayerCard {
   sport: "basketball";
   id: string;
   name: string;
+  /** Franchise represented by this exact season card. Optional for legacy persisted rooms. */
+  team?: string;
+  /** Official three-letter franchise abbreviation for this exact season card. */
+  teamCode?: string;
   position: Position;
   /** A second position this player is commonly also listed at (e.g. Curry is PG/SG). Not every player has one. */
   secondaryPosition?: Position;
@@ -142,6 +146,8 @@ export interface SoccerPlayerCard {
   tertiaryRole?: SoccerRole;
   era: string;
   team: string;
+  /** UEFA team code for the primary club represented in this card's scoring window. */
+  teamCode?: string;
   /** Official UEFA team IDs represented by this card during its scoring window. */
   sourceTeamIds: string[];
   edition: string;

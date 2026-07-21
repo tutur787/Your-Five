@@ -1,6 +1,7 @@
 import {
   applyAction,
   availablePlacementSlots,
+  chemistryPartnersForPlayer,
   positionPenaltyForSlot,
   validSlotsFor,
 } from "./gameEngine";
@@ -28,6 +29,7 @@ const emptyTeam = (): TeamState => ({ seat: "A", budget: 20, roster: [], skipsUs
 
 assert(SOCCER_PLAYER_DATABASE.length === 298, "database contains all 298 official UEFA selection cards");
 assert(new Set(SOCCER_PLAYER_DATABASE.map((player) => player.id)).size === 298, "all soccer card IDs are unique");
+assert(SOCCER_PLAYER_DATABASE.every((player) => player.team && !player.team.startsWith("Team ") && /^[A-Z]{3}$/.test(player.teamCode ?? "")), "every football card has a sourced club name and three-letter UEFA code");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.sourceRevision === SOCCER_SOURCE_REVISION), "every card uses the pinned source revision");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes > 0 && player.stats.appearances > 0), "every card has verified UEFA playing time");
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.stats).every(Number.isFinite)), "every sourced metric is finite");
@@ -68,6 +70,23 @@ const attacker = byRole("ATT");
 assert(validSlotsFor(attacker).includes("ATT_L") && validSlotsFor(attacker).includes("ATT_R"), "an attacker is valid in both attacker slots");
 assert(positionPenaltyForSlot(defender, "MID") === 6, "DEF to MID costs 6");
 assert(positionPenaltyForSlot(defender, "ATT_L") === 16, "DEF to ATT costs 16");
+
+const chemistryCandidates = SOCCER_PLAYER_DATABASE.filter((player) =>
+  SOCCER_PLAYER_DATABASE.some((candidate) =>
+    candidate.id !== player.id &&
+    candidate.edition === player.edition &&
+    player.sourceTeamIds.some((teamId) => candidate.sourceTeamIds.includes(teamId))
+  )
+);
+const chemistryCandidate = chemistryCandidates[0]!;
+const chemistryMate = SOCCER_PLAYER_DATABASE.find((candidate) =>
+  candidate.id !== chemistryCandidate.id &&
+  candidate.edition === chemistryCandidate.edition &&
+  chemistryCandidate.sourceTeamIds.some((teamId) => candidate.sourceTeamIds.includes(teamId))
+)!;
+const chemistryPreviewTeam = emptyTeam();
+chemistryPreviewTeam.roster = [{ player: chemistryMate, price: 1, slot: validSlotsFor(chemistryMate)[0] }];
+assert(chemistryPartnersForPlayer(chemistryPreviewTeam, chemistryCandidate)[0]?.player.id === chemistryMate.id, "football auction chemistry preview uses the same-edition, same-club scoring relationship");
 assert(positionPenaltyForSlot(byRole("MID"), "ATT_R") === 5, "MID to ATT costs 5");
 assert(positionPenaltyForSlot(byRole("GK"), "ATT_L") === 30, "GK to outfield costs 30");
 

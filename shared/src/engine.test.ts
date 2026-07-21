@@ -8,6 +8,7 @@ import {
   actingSeat,
   applyAction,
   availablePlacementSlots,
+  chemistryPartnersForPlayer,
   chemistryPairs,
   fitAssessment,
   HIGH_USAGE_PPG_THRESHOLD,
@@ -30,6 +31,13 @@ import { dailyRng } from "./dailySeed";
 import { BASKETBALL_RUNTIME } from "./basketballRuntime";
 import { PLAYER_DATABASE } from "./players";
 import { AiDecisionContext, BasketballPlayerCard, MatchState, PlayerCard, POSITIONS } from "./types";
+
+assertBasketballMetadata();
+
+function assertBasketballMetadata() {
+  const missing = PLAYER_DATABASE.filter((player) => !player.team || !/^[A-Z]{3}$/.test(player.teamCode ?? ""));
+  if (missing.length > 0) throw new Error(`Test setup error: ${missing.length} basketball cards lack team metadata`);
+}
 
 function findPlayer(id: string): BasketballPlayerCard {
   const player = BASKETBALL_RUNTIME.database.find((p) => p.id === id && p.sport === "basketball") as BasketballPlayerCard | undefined;
@@ -579,6 +587,8 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   );
   const components = scoreComponents(state.teams.A);
   assert(components.chemistry.bonus > 0, "S16: a real teammate pair produces a nonzero chemistry bonus in the score breakdown");
+  const previewPartners = chemistryPartnersForPlayer(giveAllToA([lebron2015]).teams.A, wade2005);
+  assert(previewPartners.length === 1 && previewPartners[0].player.id === lebron2015.id, "S16: the auction chemistry preview uses the same NBA teammate relationship as scoring");
 }
 
 // --- Scenario 17: players who were never real teammates do not bond ---
