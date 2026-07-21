@@ -14,7 +14,6 @@ import {
   validSlotsFor,
 } from "@fiveaside/shared/core";
 import { formatLineupSlot, formatPosition } from "../utils/position";
-import { ScoreBreakdown } from "./ScoreBreakdown";
 
 interface Props {
   team: TeamState;
@@ -70,7 +69,6 @@ export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCat
         <span className="lineup-label">STARTING FIVE</span>
       </div>
       <LineupCourt team={team} sport={sport} editable={editable} onChangeSlot={onChangeSlot} />
-      {team.roster.length > 0 && <ScoreBreakdown team={team} sport={sport} />}
     </div>
   );
 }

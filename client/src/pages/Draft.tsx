@@ -66,18 +66,6 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           extraActions={resultsExtra}
         />
       )}
-
-      <details className="activity-drawer">
-        <summary><span>Game feed</span><span>{state.log.length} updates</span></summary>
-        <div className="log-panel">
-          {state.log
-            .slice()
-            .reverse()
-            .map((line, i) => (
-              <div key={i}>{line}</div>
-            ))}
-        </div>
-      </details>
     </div>
   );
 }

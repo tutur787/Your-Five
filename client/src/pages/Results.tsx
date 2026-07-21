@@ -47,7 +47,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
                 <h3>{seatLabel(seat)}</h3>
                 <span>${team.budget} left</span>
               </div>
-              <ScoreBreakdown team={team} sport={state.sport} defaultOpen />
+              <ScoreBreakdown team={team} sport={state.sport} />
               <LineupCourt
                 team={team}
                 sport={state.sport}

@@ -18,7 +18,6 @@ import { formatLineupSlot } from "../utils/position";
 
 interface Props {
   team: TeamState;
-  defaultOpen?: boolean;
   sport: Sport;
 }
 
@@ -33,8 +32,8 @@ function formatAccolades(a: PlayerAccolades): string {
 }
 
 /** Collapsible "why is my score what it is" breakdown — every ingredient behind the final score. */
-export function ScoreBreakdown({ team, defaultOpen, sport }: Props) {
-  if (sport === "soccer") return <SoccerScoreBreakdown team={team} defaultOpen={defaultOpen} />;
+export function ScoreBreakdown({ team, sport }: Props) {
+  if (sport === "soccer") return <SoccerScoreBreakdown team={team} />;
   const raw = rawStatTotal(team);
   const components = scoreComponents(team);
   const accoladedPicks = team.roster.filter(
@@ -46,7 +45,7 @@ export function ScoreBreakdown({ team, defaultOpen, sport }: Props) {
     .filter(({ penalty }) => penalty > 0);
 
   return (
-    <details className="score-breakdown-details" open={defaultOpen}>
+    <details className="score-breakdown-details">
       <summary>Score details ({components.total.toFixed(1)})</summary>
       <div className="score-breakdown-body">
         <div className="breakdown-row">
@@ -163,14 +162,14 @@ export function ScoreBreakdown({ team, defaultOpen, sport }: Props) {
   );
 }
 
-function SoccerScoreBreakdown({ team, defaultOpen }: { team: TeamState; defaultOpen?: boolean }) {
+function SoccerScoreBreakdown({ team }: { team: TeamState }) {
   const components = soccerScoreComponents(team);
   const soccerPicks = team.roster.filter(
     (pick): pick is RosterPick & { player: SoccerPlayerCard } => pick.player.sport === "soccer"
   );
   const honoredPicks = soccerPicks.filter((pick) => soccerHonorPoints(pick.player.honors) > 0);
   return (
-    <details className="score-breakdown-details" open={defaultOpen}>
+    <details className="score-breakdown-details">
       <summary>Score details ({components.total.toFixed(1)})</summary>
       <div className="score-breakdown-body">
         <div className="breakdown-heading">Role-adjusted card quality</div>

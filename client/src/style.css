@@ -547,30 +547,6 @@ input[type="number"], input[type="text"] {
   margin-bottom: 16px;
 }
 
-.log-panel {
-  max-height: 160px;
-  overflow-y: auto;
-  font-size: 13px;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.log-panel > div:first-child {
-  border-radius: 6px;
-  animation: highlight-fade 1.6s ease-out;
-}
-
-@keyframes highlight-fade {
-  from {
-    background: rgba(79, 140, 255, 0.28);
-  }
-  to {
-    background: transparent;
-  }
-}
-
 .auction-box, .skip-box {
   text-align: center;
   padding: 20px 0;
@@ -2278,33 +2254,6 @@ input[type="text"] {
 
 .score-breakdown-details summary:hover {
   color: var(--text);
-}
-
-.activity-drawer {
-  border-top: 1px solid var(--border);
-  padding-top: 12px;
-}
-
-.activity-drawer summary {
-  display: flex;
-  justify-content: space-between;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 11px;
-  font-weight: 800;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-.activity-drawer summary::-webkit-details-marker {
-  display: none;
-}
-
-.log-panel {
-  margin-top: 12px;
-  padding: 12px;
-  border-left: 2px solid var(--border);
-  background: #111316;
 }
 
 .results-shell {
