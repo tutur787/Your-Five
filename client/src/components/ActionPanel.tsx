@@ -34,29 +34,32 @@ function StatLine({ player }: { player: PlayerCard }) {
       values.filter((value): value is FootballStat => value[1] !== undefined);
     const byRole: Record<typeof player.role, FootballStat[]> = {
       GK: available(
-        ["SAVE%", stats.savePct], ["CLAIM/90", stats.claimsPer90], ["CS%", stats.cleanSheetPct],
-        ["GA/M", stats.goalsConcededPerMatch], ["PASS%", stats.passCompletionPct], ["APPS", stats.appearances]
+        ["APPS", stats.appearances], ["SAVES", stats.saves], ["CLEAN SHEETS", stats.cleanSheets],
+        ["GOALS ALLOWED", stats.goalsConceded], ["CLAIMS", stats.claims], ["MIN", stats.minutes]
       ).slice(0, 5),
       DEF: available(
-        ["TACK/90", stats.tacklesWonPer90], ["REC/90", stats.recoveriesPer90], ["CLR/90", stats.clearancesPer90],
-        ["PASS%", stats.passCompletionPct], ["PROG/90", stats.progressiveDeliveriesPer90],
-        ["CS%", stats.cleanSheetPct], ["GA/M", stats.goalsConcededPerMatch],
-        ["A/90", stats.assistsPer90], ["G/90", stats.goalsPer90], ["APPS", stats.appearances]
+        ["APPS", stats.appearances], ["TACKLES", stats.tacklesWon], ["RECOVERIES", stats.recoveries],
+        ["CLEARANCES", stats.clearances], ["ASSISTS", stats.assists], ["GOALS", stats.goals],
+        ["CLEAN SHEETS", stats.cleanSheets], ["MIN", stats.minutes]
       ).slice(0, 5),
       MID: available(
-        ["A/90", stats.assistsPer90], ["PROG/90", stats.progressiveDeliveriesPer90], ["PASS%", stats.passCompletionPct],
-        ["REC/90", stats.recoveriesPer90], ["DRIB/90", stats.dribblesPer90], ["G/90", stats.goalsPer90],
-        ["SOT/90", stats.shotsOnTargetPer90], ["SHOT%", stats.shotAccuracyPct], ["APPS", stats.appearances]
+        ["APPS", stats.appearances], ["GOALS", stats.goals], ["ASSISTS", stats.assists],
+        ["RECOVERIES", stats.recoveries], ["PROGRESSIONS", stats.progressiveDeliveries],
+        ["DRIBBLES", stats.dribbles], ["SOT", stats.shotsOnTarget], ["MIN", stats.minutes]
       ).slice(0, 5),
       ATT: available(
-        [stats.nonPenaltyGoalsPer90 === undefined ? "G/90" : "NPG/90", stats.nonPenaltyGoalsPer90 ?? stats.goalsPer90],
-        ["SOT/90", stats.shotsOnTargetPer90], ["A/90", stats.assistsPer90], ["DRIB/90", stats.dribblesPer90],
-        ["SHOT%", stats.shotAccuracyPct], ["APPS", stats.appearances]
+        ["APPS", stats.appearances], ["GOALS", stats.goals], ["ASSISTS", stats.assists],
+        ["SOT", stats.shotsOnTarget], ["DRIBBLES", stats.dribbles], ["MIN", stats.minutes]
       ).slice(0, 5),
     };
     return (
       <div className="player-stat-grid soccer-stats">
-        {byRole[player.role].map(([label, value]) => <span className="player-stat" key={label}><strong>{value.toFixed(label.includes("%") ? 1 : 2)}</strong><small>{label}</small></span>)}
+        {byRole[player.role].map(([label, value]) => (
+          <span className="player-stat" key={label}>
+            <strong>{Number.isInteger(value) ? value : value.toFixed(1)}</strong>
+            <small>{label}</small>
+          </span>
+        ))}
       </div>
     );
   }

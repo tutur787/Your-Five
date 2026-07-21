@@ -226,6 +226,7 @@ function deriveAdvancedStats(playerRows, totalMinutes) {
     collect("progressiveDeliveries", statMaybe(row, "delivery_into_attacking_third"), minutes);
     collect("dribbles", statMaybe(row, "dribbling"), minutes);
     collect("claims", statMaybe(row, "claims"), minutes);
+    collect("saves", statMaybe(row, "saves"), minutes);
 
     const attempted = statMaybe(row, "passes_attempted");
     const completed = statMaybe(row, "passes_completed");
@@ -242,13 +243,19 @@ function deriveAdvancedStats(playerRows, totalMinutes) {
   const hasCoverage = (key) => (trackedMinutes.get(key) ?? 0) / totalMinutes >= OPTIONAL_METRIC_COVERAGE;
   const per90 = (key) => round(rate(totals.get(key) ?? 0, trackedMinutes.get(key) ?? 0));
   const stats = {};
-  if (hasCoverage("nonPenaltyGoals")) stats.nonPenaltyGoalsPer90 = per90("nonPenaltyGoals");
-  if (hasCoverage("tacklesWon")) stats.tacklesWonPer90 = per90("tacklesWon");
-  if (hasCoverage("recoveries")) stats.recoveriesPer90 = per90("recoveries");
-  if (hasCoverage("clearances")) stats.clearancesPer90 = per90("clearances");
-  if (hasCoverage("progressiveDeliveries")) stats.progressiveDeliveriesPer90 = per90("progressiveDeliveries");
-  if (hasCoverage("dribbles")) stats.dribblesPer90 = per90("dribbles");
-  if (hasCoverage("claims")) stats.claimsPer90 = per90("claims");
+  const addTrackedTotal = (key) => {
+    if (!hasCoverage(key)) return;
+    stats[key] = round(totals.get(key) ?? 0, 1);
+    stats[`${key}Per90`] = per90(key);
+  };
+  addTrackedTotal("nonPenaltyGoals");
+  addTrackedTotal("tacklesWon");
+  addTrackedTotal("recoveries");
+  addTrackedTotal("clearances");
+  addTrackedTotal("progressiveDeliveries");
+  addTrackedTotal("dribbles");
+  addTrackedTotal("claims");
+  if (hasCoverage("saves")) stats.saves = round(totals.get("saves") ?? 0, 1);
   if (hasCoverage("passesAttempted") && (totals.get("passesAttempted") ?? 0) > 0) {
     stats.passCompletionPct = round((totals.get("passesCompleted") ?? 0) / totals.get("passesAttempted") * 100, 1);
   }
@@ -412,6 +419,11 @@ function aggregateCard(card, matchData) {
   const stats = {
     minutes: round(aggregate.minutes, 1),
     appearances: round(aggregate.appearances, 0),
+    goals: round(aggregate.goals, 0),
+    assists: round(aggregate.assists, 0),
+    shotsOnTarget: round(aggregate.shotsOnTarget, 0),
+    cleanSheets: round(aggregate.cleanSheets, 0),
+    goalsConceded: round(aggregate.goalsAgainst, 0),
     goalsPer90: round(rate(aggregate.goals, aggregate.minutes)),
     assistsPer90: round(rate(aggregate.assists, aggregate.minutes)),
     shotsOnTargetPer90: round(rate(aggregate.shotsOnTarget, aggregate.minutes)),
@@ -419,7 +431,9 @@ function aggregateCard(card, matchData) {
     cleanSheetPct: round(aggregate.cleanSheets / aggregate.appearances * 100, 1),
     goalsConcededPerMatch: round(aggregate.goalsAgainst / aggregate.appearances),
     ...(card.entry.role === "GK" && savePctCoverage >= OPTIONAL_METRIC_COVERAGE && aggregate.shotsFacedOnTarget > 0
-      ? { savePct: round(aggregate.saves / aggregate.shotsFacedOnTarget * 100, 1) }
+      ? {
+          savePct: round(aggregate.saves / aggregate.shotsFacedOnTarget * 100, 1),
+        }
       : {}),
     pointsPerMatch: round(aggregate.points / aggregate.appearances),
     goalDifferencePerMatch: round((aggregate.goalsFor - aggregate.goalsAgainst) / aggregate.appearances),
@@ -677,8 +691,10 @@ async function recalculateCommitted() {
   const provenanceById = new Map(manifest.players.map((player) => [player.id, player]));
   const rowsByMatch = new Map();
   const advancedKeys = [
-    "nonPenaltyGoalsPer90", "tacklesWonPer90", "recoveriesPer90", "clearancesPer90",
-    "passCompletionPct", "progressiveDeliveriesPer90", "dribblesPer90", "claimsPer90",
+    "nonPenaltyGoals", "nonPenaltyGoalsPer90", "tacklesWon", "tacklesWonPer90",
+    "recoveries", "recoveriesPer90", "clearances", "clearancesPer90", "passCompletionPct",
+    "progressiveDeliveries", "progressiveDeliveriesPer90", "dribbles", "dribblesPer90",
+    "claims", "claimsPer90", "saves",
   ];
 
   for (const player of players) {
@@ -754,6 +770,9 @@ async function verifyCommitted() {
       throw new Error(`${player.id} has an out-of-range generated card rating.`);
     }
     if (player.stats.minutes <= 0 || player.stats.appearances <= 0) throw new Error(`${player.id} has no verified playing time.`);
+    for (const field of ["goals", "assists", "shotsOnTarget", "cleanSheets", "goalsConceded"]) {
+      if (!Number.isFinite(player.stats[field]) || player.stats[field] < 0) throw new Error(`${player.id} is missing sourced ${field}.`);
+    }
     if (player.sourcePositionLabels.length !== 1 || player.sourcePositionLabels[0] !== `UEFA selection: ${player.role}`) throw new Error(`${player.id} does not use its official selection role.`);
     if (player.honors?.champion && !player.honors.championLabel) throw new Error(`${player.id} has an unlabeled championship honor.`);
     if ((player.honors?.bestPlayer || player.honors?.ballonDor || player.honors?.topScorer || player.honors?.positionalAward || player.honors?.youngPlayer) && provenance.sourceHonorUrls.length === 0) throw new Error(`${player.id} has an award without official provenance.`);

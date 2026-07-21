@@ -73,6 +73,12 @@ export interface BasketballPlayerCard {
 export interface SoccerStats {
   minutes: number;
   appearances: number;
+  /** Exact counting totals from this card's sourced UEFA scoring window. */
+  goals: number;
+  assists: number;
+  shotsOnTarget: number;
+  cleanSheets: number;
+  goalsConceded: number;
   goalsPer90: number;
   assistsPer90: number;
   shotsOnTargetPer90: number;
@@ -81,17 +87,25 @@ export interface SoccerStats {
   goalsConcededPerMatch: number;
   /** Omitted when UEFA shot-on-target tracking covers less than 70% of the card window. */
   savePct?: number;
+  saves?: number;
   pointsPerMatch: number;
   goalDifferencePerMatch: number;
   /** Optional UEFA metrics are emitted only when at least 70% of this card's minutes tracked them. */
   nonPenaltyGoalsPer90?: number;
+  nonPenaltyGoals?: number;
   tacklesWonPer90?: number;
+  tacklesWon?: number;
   recoveriesPer90?: number;
+  recoveries?: number;
   clearancesPer90?: number;
+  clearances?: number;
   passCompletionPct?: number;
   progressiveDeliveriesPer90?: number;
+  progressiveDeliveries?: number;
   dribblesPer90?: number;
+  dribbles?: number;
   claimsPer90?: number;
+  claims?: number;
 }
 
 export interface SoccerPerformance {

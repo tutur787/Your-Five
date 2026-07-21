@@ -15,7 +15,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Santiago Cañizares",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 52268",
+    "team": "Valencia",
+    "teamCode": "VAL",
     "sourceTeamIds": [
       "52268"
     ],
@@ -24,6 +25,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1200,
       "appearances": 13,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 8,
+      "goalsConceded": 6,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -61,7 +67,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cosmin Contra",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 69619",
+    "team": "Alavés",
+    "teamCode": "ALA",
     "sourceTeamIds": [
       "69619",
       "50058"
@@ -71,6 +78,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 847,
       "appearances": 11,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 6,
+      "goalsConceded": 12,
       "goalsPer90": 0.213,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.213,
@@ -108,7 +120,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sami Hyypiä",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -117,6 +130,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1296,
       "appearances": 15,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 8,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -158,7 +176,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Patrik Andersson",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037",
       "50080"
@@ -168,6 +187,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0.083,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.167,
@@ -209,7 +233,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Bixente Lizarazu",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -218,6 +243,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1426,
       "appearances": 16,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 8,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -259,7 +289,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Beckham",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -268,6 +299,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 971,
       "appearances": 11,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 10,
+      "cleanSheets": 4,
+      "goalsConceded": 10,
       "goalsPer90": 0.185,
       "assistsPer90": 0.093,
       "shotsOnTargetPer90": 0.927,
@@ -305,7 +341,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Patrick Vieira",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -314,6 +351,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1170,
       "appearances": 13,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 2,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0.077,
       "shotsOnTargetPer90": 0.231,
@@ -351,7 +393,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zinédine Zidane",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -360,6 +403,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 270,
       "appearances": 3,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 1,
+      "goalsConceded": 3,
       "goalsPer90": 0.333,
       "assistsPer90": 0.333,
       "shotsOnTargetPer90": 0.667,
@@ -397,7 +445,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kily González",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 52268",
+    "team": "Valencia",
+    "teamCode": "VAL",
     "sourceTeamIds": [
       "52268"
     ],
@@ -406,6 +455,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 897,
       "appearances": 11,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 6,
+      "goalsConceded": 6,
       "goalsPer90": 0.1,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.201,
@@ -443,7 +497,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thierry Henry",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -452,6 +507,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1157,
       "appearances": 13,
+      "goals": 9,
+      "assists": 0,
+      "shotsOnTarget": 18,
+      "cleanSheets": 2,
+      "goalsConceded": 13,
       "goalsPer90": 0.7,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 1.4,
@@ -489,7 +549,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Trezeguet",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2001",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -498,6 +559,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 571,
       "appearances": 7,
+      "goals": 8,
+      "assists": 2,
+      "shotsOnTarget": 13,
+      "cleanSheets": 2,
+      "goalsConceded": 11,
       "goalsPer90": 1.261,
       "assistsPer90": 0.315,
       "shotsOnTargetPer90": 2.049,
@@ -535,7 +601,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Rüştü Reçber",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 52692",
+    "team": "Fenerbahçe",
+    "teamCode": "FEN",
     "sourceTeamIds": [
       "52692"
     ],
@@ -544,6 +611,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 360,
       "appearances": 4,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 0,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -582,7 +654,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -591,6 +664,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1321,
       "appearances": 15,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0.068,
       "shotsOnTargetPer90": 0.136,
@@ -628,7 +706,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Nesta",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -637,6 +716,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 450,
       "appearances": 5,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -674,7 +758,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristian Chivu",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50143",
+    "team": "Ajax",
+    "teamCode": "AJX",
     "sourceTeamIds": [
       "50143"
     ],
@@ -683,6 +768,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 512,
       "appearances": 6,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 2,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.176,
@@ -720,7 +810,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Roberto Carlos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -729,6 +820,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1405,
       "appearances": 16,
+      "goals": 1,
+      "assists": 4,
+      "shotsOnTarget": 10,
+      "cleanSheets": 6,
+      "goalsConceded": 15,
       "goalsPer90": 0.064,
       "assistsPer90": 0.256,
       "shotsOnTargetPer90": 0.641,
@@ -771,7 +867,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Clarence Seedorf",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058",
       "50138"
@@ -781,6 +878,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 871,
       "appearances": 13,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 4,
+      "cleanSheets": 4,
+      "goalsConceded": 12,
       "goalsPer90": 0.103,
       "assistsPer90": 0.31,
       "shotsOnTargetPer90": 0.413,
@@ -818,7 +920,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Michael Ballack",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50109",
+    "team": "Leverkusen",
+    "teamCode": "LEV",
     "sourceTeamIds": [
       "50109",
       "50037"
@@ -828,6 +931,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1132,
       "appearances": 13,
+      "goals": 4,
+      "assists": 1,
+      "shotsOnTarget": 16,
+      "cleanSheets": 0,
+      "goalsConceded": 24,
       "goalsPer90": 0.318,
       "assistsPer90": 0.08,
       "shotsOnTargetPer90": 1.272,
@@ -865,7 +973,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zinédine Zidane",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -874,6 +983,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1141,
       "appearances": 14,
+      "goals": 4,
+      "assists": 1,
+      "shotsOnTarget": 14,
+      "cleanSheets": 5,
+      "goalsConceded": 14,
       "goalsPer90": 0.316,
       "assistsPer90": 0.079,
       "shotsOnTargetPer90": 1.104,
@@ -917,7 +1031,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Damien Duff",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 53344",
+    "team": "Blackburn",
+    "teamCode": "BLA",
     "sourceTeamIds": [
       "53344"
     ],
@@ -926,6 +1041,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 246,
       "appearances": 3,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 0,
+      "goalsConceded": 6,
       "goalsPer90": 0.366,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.366,
@@ -963,7 +1083,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thierry Henry",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -972,6 +1093,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1022,
       "appearances": 12,
+      "goals": 7,
+      "assists": 2,
+      "shotsOnTarget": 21,
+      "cleanSheets": 5,
+      "goalsConceded": 10,
       "goalsPer90": 0.616,
       "assistsPer90": 0.176,
       "shotsOnTargetPer90": 1.849,
@@ -1009,7 +1135,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2002",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "50138"
@@ -1019,6 +1146,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 384,
       "appearances": 6,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 7,
+      "cleanSheets": 1,
+      "goalsConceded": 8,
       "goalsPer90": 0.234,
       "assistsPer90": 0.234,
       "shotsOnTargetPer90": 1.641,
@@ -1062,7 +1194,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Buffon",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -1071,6 +1204,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1140,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 16,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -1115,7 +1253,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Paulo Ferreira",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50064",
+    "team": "Porto",
+    "teamCode": "POR",
     "sourceTeamIds": [
       "50064"
     ],
@@ -1124,6 +1263,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1230,
       "appearances": 13,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -1165,7 +1309,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Nesta",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -1174,6 +1319,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1175,
       "appearances": 14,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 9,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -1215,7 +1365,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Paolo Maldini",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -1224,6 +1375,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1401,
       "appearances": 16,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 10,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.064,
       "shotsOnTargetPer90": 0.128,
@@ -1265,7 +1421,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Roberto Carlos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -1274,6 +1431,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1084,
       "appearances": 13,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 14,
+      "cleanSheets": 2,
+      "goalsConceded": 17,
       "goalsPer90": 0.166,
       "assistsPer90": 0.166,
       "shotsOnTargetPer90": 1.162,
@@ -1311,7 +1473,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luís Figo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -1320,6 +1483,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1196,
       "appearances": 14,
+      "goals": 2,
+      "assists": 5,
+      "shotsOnTarget": 11,
+      "cleanSheets": 3,
+      "goalsConceded": 17,
       "goalsPer90": 0.151,
       "assistsPer90": 0.376,
       "shotsOnTargetPer90": 0.828,
@@ -1357,7 +1525,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Beckham",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682",
       "50051"
@@ -1367,6 +1536,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 673,
       "appearances": 9,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 7,
+      "cleanSheets": 3,
+      "goalsConceded": 11,
       "goalsPer90": 0.401,
       "assistsPer90": 0.401,
       "shotsOnTargetPer90": 0.936,
@@ -1404,7 +1578,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zinédine Zidane",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -1413,6 +1588,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1231,
       "appearances": 14,
+      "goals": 2,
+      "assists": 4,
+      "shotsOnTarget": 9,
+      "cleanSheets": 3,
+      "goalsConceded": 17,
       "goalsPer90": 0.146,
       "assistsPer90": 0.292,
       "shotsOnTargetPer90": 0.658,
@@ -1450,7 +1630,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Pavel Nedvěd",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -1459,6 +1640,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1101,
       "appearances": 12,
+      "goals": 5,
+      "assists": 2,
+      "shotsOnTarget": 14,
+      "cleanSheets": 1,
+      "goalsConceded": 18,
       "goalsPer90": 0.409,
       "assistsPer90": 0.163,
       "shotsOnTargetPer90": 1.144,
@@ -1500,7 +1686,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thierry Henry",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -1509,6 +1696,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 899,
       "appearances": 10,
+      "goals": 4,
+      "assists": 4,
+      "shotsOnTarget": 21,
+      "cleanSheets": 4,
+      "goalsConceded": 10,
       "goalsPer90": 0.4,
       "assistsPer90": 0.4,
       "shotsOnTargetPer90": 2.102,
@@ -1546,7 +1738,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ruud van Nistelrooy",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2003",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -1555,6 +1748,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 729,
       "appearances": 9,
+      "goals": 8,
+      "assists": 2,
+      "shotsOnTarget": 19,
+      "cleanSheets": 5,
+      "goalsConceded": 9,
       "goalsPer90": 0.988,
       "assistsPer90": 0.247,
       "shotsOnTargetPer90": 2.346,
@@ -1596,7 +1794,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Buffon",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -1605,6 +1804,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 2,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -1613,7 +1817,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.286,
       "savePct": 92.9,
       "pointsPerMatch": 2.143,
-      "goalDifferencePerMatch": 0.429
+      "goalDifferencePerMatch": 0.429,
+      "saves": 23
     },
     "performance": {
       "attack": 0,
@@ -1643,7 +1848,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cafu",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -1652,6 +1858,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 808,
       "appearances": 9,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.446,
       "shotsOnTargetPer90": 0.223,
@@ -1689,7 +1900,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ricardo Carvalho",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50064",
+    "team": "Porto",
+    "teamCode": "POR",
     "sourceTeamIds": [
       "50064",
       "52914"
@@ -1699,6 +1911,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 6,
+      "goalsConceded": 7,
       "goalsPer90": 0.091,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.182,
@@ -1740,7 +1957,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Nesta",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -1749,6 +1967,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 720,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -1786,7 +2009,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ashley Cole",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -1795,6 +2019,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 795,
       "appearances": 9,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.226,
       "shotsOnTargetPer90": 0,
@@ -1832,7 +2061,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -1841,6 +2071,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 371,
       "appearances": 7,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 10,
+      "cleanSheets": 1,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0.485,
       "shotsOnTargetPer90": 2.426,
@@ -1878,7 +2113,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Maniche",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50064",
+    "team": "Porto",
+    "teamCode": "POR",
     "sourceTeamIds": [
       "50064"
     ],
@@ -1887,6 +2123,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1380,
       "appearances": 15,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 12,
+      "cleanSheets": 8,
+      "goalsConceded": 12,
       "goalsPer90": 0.13,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.783,
@@ -1928,7 +2169,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ronaldinho",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -1937,6 +2179,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 740,
       "appearances": 9,
+      "goals": 3,
+      "assists": 2,
+      "shotsOnTarget": 11,
+      "cleanSheets": 3,
+      "goalsConceded": 6,
       "goalsPer90": 0.365,
       "assistsPer90": 0.243,
       "shotsOnTargetPer90": 1.338,
@@ -1974,7 +2221,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Pavel Nedvěd",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -1983,6 +2231,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 606,
       "appearances": 7,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 5,
+      "cleanSheets": 5,
+      "goalsConceded": 2,
       "goalsPer90": 0.297,
       "assistsPer90": 0.149,
       "shotsOnTargetPer90": 0.743,
@@ -2020,7 +2273,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thierry Henry",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -2029,6 +2283,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 891,
       "appearances": 10,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 21,
+      "cleanSheets": 2,
+      "goalsConceded": 11,
       "goalsPer90": 0.606,
       "assistsPer90": 0.101,
       "shotsOnTargetPer90": 2.121,
@@ -2066,7 +2325,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andriy Shevchenko",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2004",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -2075,6 +2335,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 769,
       "appearances": 9,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 19,
+      "cleanSheets": 4,
+      "goalsConceded": 9,
       "goalsPer90": 0.702,
       "assistsPer90": 0.117,
       "shotsOnTargetPer90": 2.224,
@@ -2116,7 +2381,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Petr Čech",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -2125,6 +2391,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -2133,7 +2404,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "savePct": 79.2,
       "pointsPerMatch": 1.364,
-      "goalDifferencePerMatch": 0.273
+      "goalDifferencePerMatch": 0.273,
+      "saves": 38
     },
     "performance": {
       "attack": 0,
@@ -2167,7 +2439,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cafu",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -2176,6 +2449,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 914,
       "appearances": 10,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 6,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.098,
       "shotsOnTargetPer90": 0.098,
@@ -2213,7 +2491,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "John Terry",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -2222,6 +2501,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 6,
+      "goalsConceded": 11,
       "goalsPer90": 0.083,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.083,
@@ -2259,7 +2543,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -2268,6 +2553,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 720,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 4,
+      "goalsConceded": 7,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.125,
@@ -2305,7 +2595,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Paolo Maldini",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -2314,6 +2605,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1097,
       "appearances": 13,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 7,
+      "goalsConceded": 12,
       "goalsPer90": 0.082,
       "assistsPer90": 0.082,
       "shotsOnTargetPer90": 0.082,
@@ -2351,7 +2647,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luis García",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -2360,6 +2657,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1210,
       "appearances": 13,
+      "goals": 8,
+      "assists": 1,
+      "shotsOnTarget": 14,
+      "cleanSheets": 7,
+      "goalsConceded": 8,
       "goalsPer90": 0.595,
       "assistsPer90": 0.074,
       "shotsOnTargetPer90": 1.041,
@@ -2401,7 +2703,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Steven Gerrard",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -2410,6 +2713,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 845,
       "appearances": 10,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 10,
+      "cleanSheets": 6,
+      "goalsConceded": 6,
       "goalsPer90": 0.107,
       "assistsPer90": 0.213,
       "shotsOnTargetPer90": 1.065,
@@ -2453,7 +2761,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ronaldinho",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -2462,6 +2771,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 7,
+      "assists": 3,
+      "shotsOnTarget": 14,
+      "cleanSheets": 3,
+      "goalsConceded": 7,
       "goalsPer90": 1,
       "assistsPer90": 0.429,
       "shotsOnTargetPer90": 2,
@@ -2503,7 +2817,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Pavel Nedvěd",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -2512,6 +2827,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 621,
       "appearances": 8,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 7,
+      "cleanSheets": 3,
+      "goalsConceded": 7,
       "goalsPer90": 0.145,
       "assistsPer90": 0.29,
       "shotsOnTargetPer90": 1.014,
@@ -2549,7 +2869,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Samuel Eto'o",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -2558,6 +2879,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 531,
       "appearances": 6,
+      "goals": 4,
+      "assists": 3,
+      "shotsOnTarget": 14,
+      "cleanSheets": 3,
+      "goalsConceded": 6,
       "goalsPer90": 0.678,
       "assistsPer90": 0.508,
       "shotsOnTargetPer90": 2.373,
@@ -2595,7 +2921,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andriy Shevchenko",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2005",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -2604,6 +2931,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 905,
       "appearances": 11,
+      "goals": 9,
+      "assists": 3,
+      "shotsOnTarget": 28,
+      "cleanSheets": 5,
+      "goalsConceded": 12,
       "goalsPer90": 0.895,
       "assistsPer90": 0.298,
       "shotsOnTargetPer90": 2.785,
@@ -2641,7 +2973,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Buffon",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -2650,6 +2983,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 360,
       "appearances": 4,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 1,
+      "goalsConceded": 6,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -2658,7 +2996,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "savePct": 78.6,
       "pointsPerMatch": 1,
-      "goalDifferencePerMatch": -0.5
+      "goalDifferencePerMatch": -0.5,
+      "saves": 21
     },
     "performance": {
       "attack": 0,
@@ -2688,7 +3027,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluca Zambrotta",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080",
       "50139"
@@ -2698,6 +3038,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 617,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 7,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -2735,7 +3080,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Fabio Cannavaro",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "50139"
@@ -2745,6 +3091,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -2786,7 +3137,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -2795,6 +3147,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1154,
       "appearances": 13,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 6,
+      "goalsConceded": 10,
       "goalsPer90": 0.078,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.078,
@@ -2836,7 +3193,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Philipp Lahm",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -2845,6 +3203,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 540,
       "appearances": 6,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 0,
+      "cleanSheets": 4,
+      "goalsConceded": 2,
       "goalsPer90": 0,
       "assistsPer90": 0.167,
       "shotsOnTargetPer90": 0,
@@ -2882,7 +3245,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Steven Gerrard",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -2891,6 +3255,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 390,
       "appearances": 6,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 7,
+      "cleanSheets": 3,
+      "goalsConceded": 5,
       "goalsPer90": 0.462,
       "assistsPer90": 0.231,
       "shotsOnTargetPer90": 1.615,
@@ -2928,7 +3297,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cesc Fàbregas",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -2937,6 +3307,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1153,
       "appearances": 13,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 8,
+      "cleanSheets": 9,
+      "goalsConceded": 5,
       "goalsPer90": 0.078,
       "assistsPer90": 0.234,
       "shotsOnTargetPer90": 0.624,
@@ -2974,7 +3349,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kaká",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -2983,6 +3359,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1022,
       "appearances": 12,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 13,
+      "cleanSheets": 5,
+      "goalsConceded": 8,
       "goalsPer90": 0.528,
       "assistsPer90": 0.088,
       "shotsOnTargetPer90": 1.145,
@@ -3020,7 +3401,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ronaldinho",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -3029,6 +3411,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1259,
       "appearances": 14,
+      "goals": 4,
+      "assists": 2,
+      "shotsOnTarget": 17,
+      "cleanSheets": 7,
+      "goalsConceded": 10,
       "goalsPer90": 0.286,
       "assistsPer90": 0.143,
       "shotsOnTargetPer90": 1.215,
@@ -3072,7 +3459,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thierry Henry",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -3081,6 +3469,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 19,
+      "cleanSheets": 8,
+      "goalsConceded": 4,
       "goalsPer90": 0.273,
       "assistsPer90": 0.273,
       "shotsOnTargetPer90": 1.727,
@@ -3118,7 +3511,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Samuel Eto'o",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2006",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -3127,6 +3521,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 874,
       "appearances": 10,
+      "goals": 4,
+      "assists": 5,
+      "shotsOnTarget": 18,
+      "cleanSheets": 5,
+      "goalsConceded": 7,
       "goalsPer90": 0.412,
       "assistsPer90": 0.515,
       "shotsOnTargetPer90": 1.854,
@@ -3168,7 +3567,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -3177,6 +3577,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 720,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 1,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -3185,7 +3590,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.625,
       "savePct": 75,
       "pointsPerMatch": 1.75,
-      "goalDifferencePerMatch": 0.5
+      "goalDifferencePerMatch": 0.5,
+      "saves": 38
     },
     "performance": {
       "attack": 0,
@@ -3215,7 +3621,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Alves",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 52714",
+    "team": "Sevilla",
+    "teamCode": "SEV",
     "sourceTeamIds": [
       "52714"
     ],
@@ -3224,6 +3631,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1465,
       "appearances": 16,
+      "goals": 1,
+      "assists": 7,
+      "shotsOnTarget": 8,
+      "cleanSheets": 5,
+      "goalsConceded": 20,
       "goalsPer90": 0.061,
       "assistsPer90": 0.43,
       "shotsOnTargetPer90": 0.491,
@@ -3265,7 +3677,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Nesta",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -3274,6 +3687,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -3315,7 +3733,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "John Terry",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -3324,6 +3743,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 763,
       "appearances": 9,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 6,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.118,
@@ -3361,7 +3785,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Éric Abidal",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080",
       "5312"
@@ -3371,6 +3796,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -3408,7 +3838,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -3417,6 +3848,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 948,
       "appearances": 11,
+      "goals": 8,
+      "assists": 3,
+      "shotsOnTarget": 26,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0.759,
       "assistsPer90": 0.285,
       "shotsOnTargetPer90": 2.468,
@@ -3454,7 +3890,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Steven Gerrard",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -3463,6 +3900,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1093,
       "appearances": 12,
+      "goals": 5,
+      "assists": 3,
+      "shotsOnTarget": 16,
+      "cleanSheets": 4,
+      "goalsConceded": 10,
       "goalsPer90": 0.412,
       "assistsPer90": 0.247,
       "shotsOnTargetPer90": 1.317,
@@ -3500,7 +3942,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kaká",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -3509,6 +3952,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1286,
       "appearances": 14,
+      "goals": 8,
+      "assists": 4,
+      "shotsOnTarget": 30,
+      "cleanSheets": 6,
+      "goalsConceded": 12,
       "goalsPer90": 0.56,
       "assistsPer90": 0.28,
       "shotsOnTargetPer90": 2.1,
@@ -3557,7 +4005,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Clarence Seedorf",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -3566,6 +4015,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1084,
       "appearances": 13,
+      "goals": 4,
+      "assists": 4,
+      "shotsOnTarget": 9,
+      "cleanSheets": 5,
+      "goalsConceded": 12,
       "goalsPer90": 0.332,
       "assistsPer90": 0.332,
       "shotsOnTargetPer90": 0.747,
@@ -3607,7 +4061,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zlatan Ibrahimović",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -3616,6 +4071,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 612,
       "appearances": 7,
+      "goals": 5,
+      "assists": 0,
+      "shotsOnTarget": 13,
+      "cleanSheets": 3,
+      "goalsConceded": 6,
       "goalsPer90": 0.735,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 1.912,
@@ -3653,7 +4113,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Didier Drogba",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2007",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -3662,6 +4123,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 908,
       "appearances": 10,
+      "goals": 5,
+      "assists": 2,
+      "shotsOnTarget": 17,
+      "cleanSheets": 4,
+      "goalsConceded": 6,
       "goalsPer90": 0.496,
       "assistsPer90": 0.198,
       "shotsOnTargetPer90": 1.685,
@@ -3699,7 +4165,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -3708,6 +4175,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -3716,7 +4188,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.286,
       "savePct": 69,
       "pointsPerMatch": 1.286,
-      "goalDifferencePerMatch": -0.143
+      "goalDifferencePerMatch": -0.143,
+      "saves": 14
     },
     "performance": {
       "attack": 0,
@@ -3746,7 +4219,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -3755,6 +4229,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 4,
+      "cleanSheets": 3,
+      "goalsConceded": 7,
       "goalsPer90": 0.143,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.571,
@@ -3792,7 +4271,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "John Terry",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -3801,6 +4281,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1140,
       "appearances": 12,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0.158,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.158,
@@ -3838,7 +4323,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -3847,6 +4333,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 809,
       "appearances": 9,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 4,
+      "goalsConceded": 6,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.111,
@@ -3884,7 +4375,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Philipp Lahm",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -3893,6 +4385,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1010,
       "appearances": 12,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 4,
+      "goalsConceded": 16,
       "goalsPer90": 0,
       "assistsPer90": 0.089,
       "shotsOnTargetPer90": 0.089,
@@ -3930,7 +4427,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -3939,6 +4437,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 950,
       "appearances": 11,
+      "goals": 3,
+      "assists": 1,
+      "shotsOnTarget": 18,
+      "cleanSheets": 8,
+      "goalsConceded": 3,
       "goalsPer90": 0.284,
       "assistsPer90": 0.095,
       "shotsOnTargetPer90": 1.705,
@@ -3986,7 +4489,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Xavi Hernández",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -3995,6 +4499,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 807,
       "appearances": 11,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 11,
+      "cleanSheets": 5,
+      "goalsConceded": 8,
       "goalsPer90": 0.335,
       "assistsPer90": 0.335,
       "shotsOnTargetPer90": 1.227,
@@ -4032,7 +4541,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cesc Fàbregas",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -4041,6 +4551,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 10,
+      "cleanSheets": 5,
+      "goalsConceded": 8,
       "goalsPer90": 0.111,
       "assistsPer90": 0.333,
       "shotsOnTargetPer90": 1.111,
@@ -4078,7 +4593,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Franck Ribéry",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -4087,6 +4603,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 920,
       "appearances": 11,
+      "goals": 4,
+      "assists": 7,
+      "shotsOnTarget": 11,
+      "cleanSheets": 3,
+      "goalsConceded": 15,
       "goalsPer90": 0.391,
       "assistsPer90": 0.685,
       "shotsOnTargetPer90": 1.076,
@@ -4124,7 +4645,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4133,6 +4655,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 577,
       "appearances": 9,
+      "goals": 7,
+      "assists": 3,
+      "shotsOnTarget": 10,
+      "cleanSheets": 3,
+      "goalsConceded": 8,
       "goalsPer90": 1.092,
       "assistsPer90": 0.468,
       "shotsOnTargetPer90": 1.56,
@@ -4170,7 +4697,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Fernando Torres",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2008",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -4179,6 +4707,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 786,
       "appearances": 9,
+      "goals": 3,
+      "assists": 1,
+      "shotsOnTarget": 11,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0.344,
       "assistsPer90": 0.115,
       "shotsOnTargetPer90": 1.26,
@@ -4216,7 +4749,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -4225,6 +4759,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 720,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -4233,7 +4772,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "savePct": 68.4,
       "pointsPerMatch": 1.625,
-      "goalDifferencePerMatch": 0.375
+      "goalDifferencePerMatch": 0.375,
+      "saves": 25
     },
     "performance": {
       "attack": 0,
@@ -4263,7 +4803,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Alves",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4272,6 +4813,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1200,
       "appearances": 13,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 8,
+      "cleanSheets": 7,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0.075,
       "shotsOnTargetPer90": 0.6,
@@ -4313,7 +4859,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "John Terry",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -4322,6 +4869,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 6,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -4359,7 +4911,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4368,6 +4921,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 968,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 8,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.186,
@@ -4409,7 +4967,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Patrice Evra",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682"
     ],
@@ -4418,6 +4977,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 922,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.098,
@@ -4455,7 +5019,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 52682",
+    "team": "Man Utd",
+    "teamCode": "MUN",
     "sourceTeamIds": [
       "52682",
       "50051"
@@ -4465,6 +5030,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 900,
       "appearances": 11,
+      "goals": 10,
+      "assists": 1,
+      "shotsOnTarget": 34,
+      "cleanSheets": 6,
+      "goalsConceded": 8,
       "goalsPer90": 1,
       "assistsPer90": 0.1,
       "shotsOnTargetPer90": 3.4,
@@ -4502,7 +5072,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Xavi Hernández",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4511,6 +5082,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1290,
       "appearances": 14,
+      "goals": 1,
+      "assists": 5,
+      "shotsOnTarget": 7,
+      "cleanSheets": 8,
+      "goalsConceded": 8,
       "goalsPer90": 0.07,
       "assistsPer90": 0.349,
       "shotsOnTargetPer90": 0.488,
@@ -4552,7 +5128,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kaká",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -4561,6 +5138,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 438,
       "appearances": 5,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 8,
+      "cleanSheets": 2,
+      "goalsConceded": 6,
       "goalsPer90": 0.205,
       "assistsPer90": 0.411,
       "shotsOnTargetPer90": 1.644,
@@ -4598,7 +5180,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4607,6 +5190,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 939,
       "appearances": 12,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 7,
+      "cleanSheets": 7,
+      "goalsConceded": 7,
       "goalsPer90": 0.096,
       "assistsPer90": 0.192,
       "shotsOnTargetPer90": 0.671,
@@ -4648,7 +5236,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4657,6 +5246,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1200,
       "appearances": 13,
+      "goals": 6,
+      "assists": 3,
+      "shotsOnTarget": 20,
+      "cleanSheets": 7,
+      "goalsConceded": 8,
       "goalsPer90": 0.45,
       "assistsPer90": 0.225,
       "shotsOnTargetPer90": 1.5,
@@ -4704,7 +5298,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zlatan Ibrahimović",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2009",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080",
       "50138"
@@ -4714,6 +5309,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 706,
       "appearances": 8,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 16,
+      "cleanSheets": 5,
+      "goalsConceded": 5,
       "goalsPer90": 0.127,
       "assistsPer90": 0.127,
       "shotsOnTargetPer90": 2.04,
@@ -4755,7 +5355,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -4764,6 +5365,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 4,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -4772,7 +5378,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.571,
       "savePct": 76.5,
       "pointsPerMatch": 2,
-      "goalDifferencePerMatch": 1.143
+      "goalDifferencePerMatch": 1.143,
+      "saves": 12
     },
     "performance": {
       "attack": 0,
@@ -4802,7 +5409,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Maicon",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -4811,6 +5419,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1063,
       "appearances": 12,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 3,
+      "cleanSheets": 5,
+      "goalsConceded": 13,
       "goalsPer90": 0.085,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.254,
@@ -4852,7 +5465,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gerard Piqué",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4861,6 +5475,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 957,
       "appearances": 11,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 5,
+      "goalsConceded": 9,
       "goalsPer90": 0.094,
       "assistsPer90": 0.094,
       "shotsOnTargetPer90": 0.282,
@@ -4898,7 +5517,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Carles Puyol",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -4907,6 +5527,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 804,
       "appearances": 9,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -4944,7 +5569,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ashley Cole",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -4953,6 +5579,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 267,
       "appearances": 3,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 1,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -4961,6 +5592,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.333,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.333,
+      "recoveries": 14,
       "recoveriesPer90": 4.719
     },
     "performance": {
@@ -4991,7 +5623,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5000,6 +5633,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 702,
       "appearances": 8,
+      "goals": 5,
+      "assists": 2,
+      "shotsOnTarget": 19,
+      "cleanSheets": 5,
+      "goalsConceded": 4,
       "goalsPer90": 0.641,
       "assistsPer90": 0.256,
       "shotsOnTargetPer90": 2.436,
@@ -5008,6 +5646,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.5,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.5,
+      "recoveries": 18,
       "recoveriesPer90": 3.103
     },
     "performance": {
@@ -5038,7 +5677,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Xavi Hernández",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5047,6 +5687,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 797,
       "appearances": 10,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 4,
+      "cleanSheets": 3,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0.339,
       "shotsOnTargetPer90": 0.452,
@@ -5084,7 +5729,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Wesley Sneijder",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -5093,6 +5739,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1123,
       "appearances": 13,
+      "goals": 4,
+      "assists": 6,
+      "shotsOnTarget": 15,
+      "cleanSheets": 6,
+      "goalsConceded": 13,
       "goalsPer90": 0.321,
       "assistsPer90": 0.481,
       "shotsOnTargetPer90": 1.202,
@@ -5134,7 +5785,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5143,6 +5795,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 631,
       "appearances": 8,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 5,
       "goalsPer90": 0,
       "assistsPer90": 0.285,
       "shotsOnTargetPer90": 0.143,
@@ -5151,6 +5808,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.625,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 2,
+      "recoveries": 18,
       "recoveriesPer90": 3.608
     },
     "performance": {
@@ -5181,7 +5839,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5190,6 +5849,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 954,
       "appearances": 12,
+      "goals": 12,
+      "assists": 1,
+      "shotsOnTarget": 32,
+      "cleanSheets": 5,
+      "goalsConceded": 10,
       "goalsPer90": 1.132,
       "assistsPer90": 0.094,
       "shotsOnTargetPer90": 3.019,
@@ -5233,7 +5897,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Villa",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2010",
-    "team": "Team 52268",
+    "team": "Valencia",
+    "teamCode": "VAL",
     "sourceTeamIds": [
       "52268",
       "50080"
@@ -5243,6 +5908,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 962,
       "appearances": 11,
+      "goals": 6,
+      "assists": 0,
+      "shotsOnTarget": 39,
+      "cleanSheets": 4,
+      "goalsConceded": 11,
       "goalsPer90": 0.561,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 3.649,
@@ -5280,7 +5950,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5289,6 +5960,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 900,
       "appearances": 10,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 7,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -5297,7 +5973,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.4,
       "savePct": 89.2,
       "pointsPerMatch": 2.3,
-      "goalDifferencePerMatch": 1.6
+      "goalDifferencePerMatch": 1.6,
+      "saves": 33
     },
     "performance": {
       "attack": 0,
@@ -5327,7 +6004,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Alves",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5336,6 +6014,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1059,
       "appearances": 12,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 4,
+      "cleanSheets": 6,
+      "goalsConceded": 8,
       "goalsPer90": 0.085,
       "assistsPer90": 0.17,
       "shotsOnTargetPer90": 0.34,
@@ -5344,6 +6027,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.667,
       "pointsPerMatch": 2.417,
       "goalDifferencePerMatch": 1.917,
+      "recoveries": 76,
       "recoveriesPer90": 6.459
     },
     "performance": {
@@ -5378,7 +6062,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gerard Piqué",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5387,6 +6072,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 610,
       "appearances": 7,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 5,
       "goalsPer90": 0.148,
       "assistsPer90": 0.148,
       "shotsOnTargetPer90": 0.148,
@@ -5395,6 +6085,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.714,
       "pointsPerMatch": 2.286,
       "goalDifferencePerMatch": 1.714,
+      "recoveries": 53,
       "recoveriesPer90": 7.82
     },
     "performance": {
@@ -5429,7 +6120,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thiago Silva",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50058",
+    "team": "Milan",
+    "teamCode": "MIL",
     "sourceTeamIds": [
       "50058"
     ],
@@ -5438,6 +6130,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 590,
       "appearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 2,
+      "goalsConceded": 9,
       "goalsPer90": 0.153,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.153,
@@ -5446,6 +6143,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.286,
       "pointsPerMatch": 1,
       "goalDifferencePerMatch": 0,
+      "recoveries": 54,
       "recoveriesPer90": 8.237
     },
     "performance": {
@@ -5476,7 +6174,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marcelo",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5485,6 +6184,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 628,
       "appearances": 8,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 3,
+      "cleanSheets": 5,
+      "goalsConceded": 4,
       "goalsPer90": 0.287,
       "assistsPer90": 0.287,
       "shotsOnTargetPer90": 0.43,
@@ -5493,6 +6197,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.5,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.375,
+      "recoveries": 32,
       "recoveriesPer90": 4.698
     },
     "performance": {
@@ -5523,7 +6228,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Arjen Robben",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -5532,6 +6238,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 235,
       "appearances": 4,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 3,
+      "cleanSheets": 2,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 1.149,
@@ -5540,6 +6251,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1,
+      "recoveries": 10,
       "recoveriesPer90": 3.846
     },
     "performance": {
@@ -5570,7 +6282,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Xavi Hernández",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5579,6 +6292,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1026,
       "appearances": 12,
+      "goals": 3,
+      "assists": 2,
+      "shotsOnTarget": 9,
+      "cleanSheets": 5,
+      "goalsConceded": 10,
       "goalsPer90": 0.263,
       "assistsPer90": 0.175,
       "shotsOnTargetPer90": 0.789,
@@ -5587,6 +6305,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.833,
       "pointsPerMatch": 2.417,
       "goalDifferencePerMatch": 1.667,
+      "recoveries": 40,
       "recoveriesPer90": 3.846
     },
     "performance": {
@@ -5621,7 +6340,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5630,6 +6350,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 663,
       "appearances": 8,
+      "goals": 2,
+      "assists": 3,
+      "shotsOnTarget": 6,
+      "cleanSheets": 2,
+      "goalsConceded": 8,
       "goalsPer90": 0.271,
       "assistsPer90": 0.407,
       "shotsOnTargetPer90": 0.814,
@@ -5638,6 +6363,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.375,
+      "recoveries": 29,
       "recoveriesPer90": 3.937
     },
     "performance": {
@@ -5672,7 +6398,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gareth Bale",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 1652",
+    "team": "Tottenham",
+    "teamCode": "TOT",
     "sourceTeamIds": [
       "1652"
     ],
@@ -5681,6 +6408,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 231,
       "appearances": 4,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 1,
+      "goalsConceded": 7,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.39,
@@ -5718,7 +6450,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5727,6 +6460,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1170,
       "appearances": 13,
+      "goals": 13,
+      "assists": 6,
+      "shotsOnTarget": 38,
+      "cleanSheets": 6,
+      "goalsConceded": 10,
       "goalsPer90": 1,
       "assistsPer90": 0.462,
       "shotsOnTargetPer90": 2.923,
@@ -5735,6 +6473,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.769,
       "pointsPerMatch": 2.462,
       "goalDifferencePerMatch": 1.846,
+      "recoveries": 26,
       "recoveriesPer90": 2.6
     },
     "performance": {
@@ -5775,7 +6514,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2011",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5784,6 +6524,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 859,
       "appearances": 10,
+      "goals": 5,
+      "assists": 2,
+      "shotsOnTarget": 21,
+      "cleanSheets": 7,
+      "goalsConceded": 4,
       "goalsPer90": 0.524,
       "assistsPer90": 0.21,
       "shotsOnTargetPer90": 2.2,
@@ -5792,6 +6537,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.4,
       "pointsPerMatch": 2.3,
       "goalDifferencePerMatch": 1.6,
+      "recoveries": 20,
       "recoveriesPer90": 2.557
     },
     "performance": {
@@ -5822,7 +6568,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Iker Casillas",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5831,6 +6578,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1020,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 1,
+      "goalsConceded": 15,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -5840,6 +6592,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 71.7,
       "pointsPerMatch": 1.909,
       "goalDifferencePerMatch": 1.091,
+      "saves": 29,
       "passCompletionPct": 72.6
     },
     "performance": {
@@ -5870,7 +6623,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -5879,6 +6633,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 930,
       "appearances": 10,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 1,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0.097,
       "shotsOnTargetPer90": 0.194,
@@ -5887,6 +6646,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.3,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 1.1,
+      "recoveries": 73,
       "recoveriesPer90": 7.065,
       "passCompletionPct": 81.8
     },
@@ -5918,7 +6678,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gerard Piqué",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -5927,6 +6688,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 425,
       "appearances": 8,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -5935,6 +6701,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.875,
       "goalDifferencePerMatch": 1.375,
+      "recoveries": 45,
       "recoveriesPer90": 10.465,
       "passCompletionPct": 87.3
     },
@@ -5966,7 +6733,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Philipp Lahm",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -5975,6 +6743,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1140,
       "appearances": 12,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0.316,
       "shotsOnTargetPer90": 0.158,
@@ -5983,6 +6756,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 1.25,
+      "recoveries": 66,
       "recoveriesPer90": 5.211,
       "passCompletionPct": 81
     },
@@ -6014,7 +6788,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thiago Silva",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747",
       "50058"
@@ -6024,6 +6799,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 711,
       "appearances": 8,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 4,
+      "cleanSheets": 4,
+      "goalsConceded": 6,
       "goalsPer90": 0.253,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.506,
@@ -6032,7 +6812,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.75,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.5,
+      "recoveries": 67,
       "recoveriesPer90": 8.481,
+      "clearances": 21,
       "clearancesPer90": 3.559,
       "passCompletionPct": 80.7
     },
@@ -6064,7 +6846,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -6073,6 +6856,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 737,
       "appearances": 10,
+      "goals": 3,
+      "assists": 2,
+      "shotsOnTarget": 10,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0.366,
       "assistsPer90": 0.244,
       "shotsOnTargetPer90": 1.221,
@@ -6081,6 +6869,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.4,
+      "recoveries": 30,
       "recoveriesPer90": 4.173,
       "passCompletionPct": 83.7
     },
@@ -6116,7 +6905,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Xavi Hernández",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -6125,6 +6915,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 825,
       "appearances": 10,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 3,
+      "cleanSheets": 3,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0.327,
       "shotsOnTargetPer90": 0.327,
@@ -6133,6 +6928,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.3,
+      "recoveries": 37,
       "recoveriesPer90": 4.036,
       "passCompletionPct": 91.2
     },
@@ -6164,7 +6960,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrea Pirlo",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -6173,6 +6970,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 540,
       "appearances": 6,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 4,
+      "cleanSheets": 3,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0.5,
       "shotsOnTargetPer90": 0.667,
@@ -6181,6 +6983,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.667,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.333,
+      "recoveries": 31,
       "recoveriesPer90": 6.2,
       "passCompletionPct": 74.3
     },
@@ -6212,7 +7015,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Mesut Özil",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -6221,6 +7025,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 662,
       "appearances": 9,
+      "goals": 2,
+      "assists": 5,
+      "shotsOnTarget": 7,
+      "cleanSheets": 1,
+      "goalsConceded": 12,
       "goalsPer90": 0.272,
       "assistsPer90": 0.68,
       "shotsOnTargetPer90": 0.952,
@@ -6229,6 +7038,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 1.889,
       "goalDifferencePerMatch": 1,
+      "recoveries": 21,
       "recoveriesPer90": 3.27,
       "passCompletionPct": 69.9
     },
@@ -6260,7 +7070,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -6269,6 +7080,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1022,
       "appearances": 12,
+      "goals": 13,
+      "assists": 5,
+      "shotsOnTarget": 39,
+      "cleanSheets": 4,
+      "goalsConceded": 11,
       "goalsPer90": 1.145,
       "assistsPer90": 0.44,
       "shotsOnTargetPer90": 3.434,
@@ -6277,6 +7093,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.25,
+      "recoveries": 23,
       "recoveriesPer90": 2.875,
       "passCompletionPct": 81
     },
@@ -6314,7 +7131,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2012",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -6323,6 +7141,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1110,
       "appearances": 12,
+      "goals": 13,
+      "assists": 2,
+      "shotsOnTarget": 45,
+      "cleanSheets": 1,
+      "goalsConceded": 16,
       "goalsPer90": 1.054,
       "assistsPer90": 0.162,
       "shotsOnTargetPer90": 3.649,
@@ -6331,6 +7154,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.25,
+      "recoveries": 17,
       "recoveriesPer90": 1.645,
       "passCompletionPct": 65.4
     },
@@ -6362,7 +7186,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Manuel Neuer",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -6371,6 +7196,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1290,
       "appearances": 14,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 7,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -6380,7 +7210,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 86.3,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.714,
+      "clearances": 7,
       "clearancesPer90": 0.677,
+      "saves": 40,
       "passCompletionPct": 72.2
     },
     "performance": {
@@ -6415,7 +7247,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Philipp Lahm",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -6424,6 +7257,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1188,
       "appearances": 14,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 6,
+      "cleanSheets": 7,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0.152,
       "shotsOnTargetPer90": 0.455,
@@ -6432,7 +7270,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.786,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.714,
+      "recoveries": 70,
       "recoveriesPer90": 5.303,
+      "clearances": 10,
       "clearancesPer90": 0.98,
       "passCompletionPct": 82.1
     },
@@ -6468,7 +7308,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thiago Silva",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -6477,6 +7318,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 478,
       "appearances": 6,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 0,
+      "goalsConceded": 7,
       "goalsPer90": 0,
       "assistsPer90": 0.188,
       "shotsOnTargetPer90": 0.188,
@@ -6485,7 +7331,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.167,
       "pointsPerMatch": 1.667,
       "goalDifferencePerMatch": 0.667,
+      "recoveries": 32,
       "recoveriesPer90": 6.025,
+      "clearances": 13,
       "clearancesPer90": 3.015,
       "passCompletionPct": 81.9
     },
@@ -6517,7 +7365,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -6526,6 +7375,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 746,
       "appearances": 9,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 6,
+      "cleanSheets": 2,
+      "goalsConceded": 11,
       "goalsPer90": 0.121,
       "assistsPer90": 0.241,
       "shotsOnTargetPer90": 0.724,
@@ -6534,7 +7388,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.222,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 1.333,
+      "recoveries": 70,
       "recoveriesPer90": 8.445,
+      "clearances": 14,
       "clearancesPer90": 2.226,
       "passCompletionPct": 80.7
     },
@@ -6566,7 +7422,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Alaba",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -6575,6 +7432,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1290,
       "appearances": 14,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 13,
+      "cleanSheets": 7,
+      "goalsConceded": 11,
       "goalsPer90": 0.209,
       "assistsPer90": 0.209,
       "shotsOnTargetPer90": 0.907,
@@ -6583,7 +7445,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.786,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.714,
+      "recoveries": 84,
       "recoveriesPer90": 5.86,
+      "clearances": 11,
       "clearancesPer90": 0.825,
       "passCompletionPct": 79.9
     },
@@ -6619,7 +7483,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gareth Bale",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "1652"
@@ -6629,6 +7494,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 664,
       "appearances": 9,
+      "goals": 5,
+      "assists": 1,
+      "shotsOnTarget": 14,
+      "cleanSheets": 2,
+      "goalsConceded": 9,
       "goalsPer90": 0.678,
       "assistsPer90": 0.136,
       "shotsOnTargetPer90": 1.898,
@@ -6666,7 +7536,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marco Reus",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -6675,6 +7546,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1113,
       "appearances": 13,
+      "goals": 3,
+      "assists": 4,
+      "shotsOnTarget": 27,
+      "cleanSheets": 3,
+      "goalsConceded": 15,
       "goalsPer90": 0.243,
       "assistsPer90": 0.323,
       "shotsOnTargetPer90": 2.183,
@@ -6683,6 +7559,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.154,
       "pointsPerMatch": 1.769,
       "goalDifferencePerMatch": 0.692,
+      "recoveries": 36,
       "recoveriesPer90": 3.167,
       "passCompletionPct": 58.3
     },
@@ -6714,7 +7591,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Mesut Özil",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "52280"
@@ -6724,6 +7602,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1034,
       "appearances": 12,
+      "goals": 1,
+      "assists": 4,
+      "shotsOnTarget": 5,
+      "cleanSheets": 5,
+      "goalsConceded": 14,
       "goalsPer90": 0.087,
       "assistsPer90": 0.348,
       "shotsOnTargetPer90": 0.435,
@@ -6732,6 +7615,7 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.167,
       "pointsPerMatch": 1.833,
       "goalDifferencePerMatch": 0.417,
+      "recoveries": 23,
       "recoveriesPer90": 2.401,
       "passCompletionPct": 73.5
     },
@@ -6763,7 +7647,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Franck Ribéry",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -6772,6 +7657,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1041,
       "appearances": 12,
+      "goals": 4,
+      "assists": 3,
+      "shotsOnTarget": 19,
+      "cleanSheets": 7,
+      "goalsConceded": 8,
       "goalsPer90": 0.346,
       "assistsPer90": 0.259,
       "shotsOnTargetPer90": 1.643,
@@ -6780,7 +7670,9 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.667,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 2,
+      "recoveries": 48,
       "recoveriesPer90": 4.15,
+      "clearances": 5,
       "clearancesPer90": 0.563,
       "passCompletionPct": 73.7
     },
@@ -6818,7 +7710,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zlatan Ibrahimović",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -6827,6 +7720,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 709,
       "appearances": 8,
+      "goals": 9,
+      "assists": 2,
+      "shotsOnTarget": 24,
+      "cleanSheets": 2,
+      "goalsConceded": 7,
       "goalsPer90": 1.142,
       "assistsPer90": 0.254,
       "shotsOnTargetPer90": 3.047,
@@ -6865,7 +7763,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2013",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -6874,6 +7773,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 15,
+      "assists": 2,
+      "shotsOnTarget": 47,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 1.364,
       "assistsPer90": 0.182,
       "shotsOnTargetPer90": 4.273,
@@ -6918,7 +7822,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Manuel Neuer",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -6927,6 +7832,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -6936,8 +7846,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 76.5,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.917,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "clearances": 14,
       "clearancesPer90": 1.167,
+      "saves": 30,
       "passCompletionPct": 91.1
     },
     "performance": {
@@ -6968,7 +7881,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -6977,6 +7891,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1051,
       "appearances": 12,
+      "goals": 3,
+      "assists": 1,
+      "shotsOnTarget": 6,
+      "cleanSheets": 6,
+      "goalsConceded": 7,
       "goalsPer90": 0.257,
       "assistsPer90": 0.086,
       "shotsOnTargetPer90": 0.514,
@@ -6985,8 +7904,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.583,
       "pointsPerMatch": 2.75,
       "goalDifferencePerMatch": 2.083,
+      "tacklesWon": 10,
       "tacklesWonPer90": 0.937,
+      "recoveries": 112,
       "recoveriesPer90": 9.591,
+      "clearances": 25,
       "clearancesPer90": 2.141,
       "passCompletionPct": 89.3
     },
@@ -7022,7 +7944,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Philipp Lahm",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -7031,6 +7954,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 898,
       "appearances": 10,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 3,
+      "cleanSheets": 4,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.2,
       "shotsOnTargetPer90": 0.301,
@@ -7039,8 +7967,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.9,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.601,
+      "recoveries": 47,
       "recoveriesPer90": 4.71,
+      "clearances": 3,
       "clearancesPer90": 0.301,
       "passCompletionPct": 90.3
     },
@@ -7072,7 +8003,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Alaba",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -7081,6 +8013,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 891,
       "appearances": 10,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 7,
+      "cleanSheets": 4,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.101,
       "shotsOnTargetPer90": 0.707,
@@ -7089,8 +8026,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.9,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.303,
+      "recoveries": 49,
       "recoveriesPer90": 4.949,
+      "clearances": 3,
       "clearancesPer90": 0.303,
       "passCompletionPct": 85.6
     },
@@ -7122,7 +8062,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Diego Godín",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50124",
+    "team": "Atleti",
+    "teamCode": "ATM",
     "sourceTeamIds": [
       "50124"
     ],
@@ -7131,6 +8072,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1200,
       "appearances": 13,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 6,
+      "cleanSheets": 8,
+      "goalsConceded": 10,
       "goalsPer90": 0.15,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.45,
@@ -7139,8 +8085,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.769,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
+      "tacklesWon": 9,
       "tacklesWonPer90": 0.675,
+      "recoveries": 89,
       "recoveriesPer90": 6.675,
+      "clearances": 30,
       "clearancesPer90": 2.25,
       "passCompletionPct": 77.6
     },
@@ -7172,7 +8121,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Arjen Robben",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -7181,6 +8131,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 860,
       "appearances": 11,
+      "goals": 3,
+      "assists": 2,
+      "shotsOnTarget": 27,
+      "cleanSheets": 4,
+      "goalsConceded": 12,
       "goalsPer90": 0.314,
       "assistsPer90": 0.209,
       "shotsOnTargetPer90": 2.826,
@@ -7189,8 +8144,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.091,
       "pointsPerMatch": 1.818,
       "goalDifferencePerMatch": 0.818,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 17,
       "recoveriesPer90": 1.987,
+      "clearances": 0,
       "clearancesPer90": 0,
       "passCompletionPct": 76.5
     },
@@ -7222,7 +8180,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ángel Di María",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -7231,6 +8190,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 435,
       "appearances": 5,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 2,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0.207,
       "shotsOnTargetPer90": 0.621,
@@ -7239,8 +8203,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 2.2,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 13,
       "recoveriesPer90": 2.69,
+      "clearances": 2,
       "clearancesPer90": 0.414,
       "passCompletionPct": 62.6
     },
@@ -7276,7 +8243,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Toni Kroos",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "50037"
@@ -7286,6 +8254,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 983,
       "appearances": 13,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 10,
+      "cleanSheets": 6,
+      "goalsConceded": 10,
       "goalsPer90": 0.092,
       "assistsPer90": 0.183,
       "shotsOnTargetPer90": 0.916,
@@ -7294,8 +8267,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.769,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.154,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.202,
+      "recoveries": 47,
       "recoveriesPer90": 4.303,
+      "clearances": 2,
       "clearancesPer90": 0.202,
       "passCompletionPct": 92.3
     },
@@ -7331,7 +8307,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -7340,6 +8317,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1158,
       "appearances": 13,
+      "goals": 15,
+      "assists": 5,
+      "shotsOnTarget": 48,
+      "cleanSheets": 8,
+      "goalsConceded": 5,
       "goalsPer90": 1.166,
       "assistsPer90": 0.389,
       "shotsOnTargetPer90": 3.731,
@@ -7348,8 +8330,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.385,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.615,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.084,
+      "recoveries": 12,
       "recoveriesPer90": 1.093,
+      "clearances": 5,
       "clearancesPer90": 0.421,
       "passCompletionPct": 78.7
     },
@@ -7391,7 +8376,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -7400,6 +8386,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 877,
       "appearances": 10,
+      "goals": 10,
+      "assists": 2,
+      "shotsOnTarget": 23,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 1.026,
       "assistsPer90": 0.205,
       "shotsOnTargetPer90": 2.36,
@@ -7408,8 +8399,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 1.2,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 11,
       "recoveriesPer90": 1.258,
+      "clearances": 0,
       "clearancesPer90": 0,
       "passCompletionPct": 82.5
     },
@@ -7441,7 +8435,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Zlatan Ibrahimović",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2014",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -7450,6 +8445,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 497,
       "appearances": 6,
+      "goals": 4,
+      "assists": 1,
+      "shotsOnTarget": 10,
+      "cleanSheets": 1,
+      "goalsConceded": 7,
       "goalsPer90": 0.724,
       "assistsPer90": 0.181,
       "shotsOnTargetPer90": 1.811,
@@ -7458,9 +8458,13 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.167,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.167,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.758,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 4,
       "recoveriesPer90": 0.847,
+      "clearances": 4,
       "clearancesPer90": 0.724,
       "passCompletionPct": 78.6
     },
@@ -7492,7 +8496,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Manuel Neuer",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -7501,6 +8506,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -7510,13 +8520,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 66.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 2,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 19,
       "clearancesPer90": 1.727,
+      "progressiveDeliveries": 4,
       "progressiveDeliveriesPer90": 0.364,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 40,
       "claimsPer90": 3.636,
+      "saves": 25,
       "passCompletionPct": 90.3
     },
     "performance": {
@@ -7547,7 +8565,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Alves",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -7556,6 +8575,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1004,
       "appearances": 11,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 5,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0.269,
       "shotsOnTargetPer90": 0.448,
@@ -7564,13 +8588,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.727,
       "goalDifferencePerMatch": 1.818,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 9,
       "tacklesWonPer90": 0.807,
+      "recoveries": 71,
       "recoveriesPer90": 6.365,
+      "clearances": 14,
       "clearancesPer90": 1.255,
+      "progressiveDeliveries": 59,
       "progressiveDeliveriesPer90": 6.007,
+      "dribbles": 8,
       "dribblesPer90": 0.814,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 88.8
     },
     "performance": {
@@ -7605,7 +8637,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -7614,6 +8647,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 599,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.301,
@@ -7622,13 +8660,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.429,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.601,
+      "recoveries": 49,
       "recoveriesPer90": 7.362,
+      "clearances": 8,
       "clearancesPer90": 1.202,
+      "progressiveDeliveries": 40,
       "progressiveDeliveriesPer90": 6.01,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.8
     },
     "performance": {
@@ -7659,7 +8705,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gerard Piqué",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -7668,6 +8715,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1076,
       "appearances": 12,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 0.084,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.167,
@@ -7676,13 +8728,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 1.583,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.084,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.502,
+      "recoveries": 80,
       "recoveriesPer90": 6.691,
+      "clearances": 32,
       "clearancesPer90": 2.677,
+      "progressiveDeliveries": 45,
       "progressiveDeliveriesPer90": 4.236,
+      "dribbles": 1,
       "dribblesPer90": 0.094,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 2,
       "passCompletionPct": 92.4
     },
     "performance": {
@@ -7717,7 +8777,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Alaba",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -7726,6 +8787,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 540,
       "appearances": 6,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 3,
+      "cleanSheets": 4,
+      "goalsConceded": 3,
       "goalsPer90": 0.167,
       "assistsPer90": 0.333,
       "shotsOnTargetPer90": 0.5,
@@ -7734,13 +8800,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.5,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 2.833,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.167,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.167,
+      "recoveries": 33,
       "recoveriesPer90": 5.5,
+      "clearances": 5,
       "clearancesPer90": 0.833,
+      "progressiveDeliveries": 58,
       "progressiveDeliveriesPer90": 9.667,
+      "dribbles": 2,
       "dribblesPer90": 0.333,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94.6
     },
     "performance": {
@@ -7771,7 +8845,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Paul Pogba",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -7780,6 +8855,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 836,
       "appearances": 10,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 6,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0.431,
       "shotsOnTargetPer90": 0.646,
@@ -7788,13 +8868,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.108,
+      "recoveries": 34,
       "recoveriesPer90": 3.66,
+      "clearances": 8,
       "clearancesPer90": 0.861,
+      "progressiveDeliveries": 26,
       "progressiveDeliveriesPer90": 2.799,
+      "dribbles": 26,
       "dribblesPer90": 2.799,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.1
     },
     "performance": {
@@ -7825,7 +8913,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -7834,6 +8923,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 799,
       "appearances": 11,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0.225,
       "shotsOnTargetPer90": 0.225,
@@ -7842,13 +8936,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.091,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.364,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.113,
+      "recoveries": 37,
       "recoveriesPer90": 4.168,
+      "clearances": 5,
       "clearancesPer90": 0.563,
+      "progressiveDeliveries": 80,
       "progressiveDeliveriesPer90": 9.783,
+      "dribbles": 10,
       "dribblesPer90": 1.223,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 1,
       "passCompletionPct": 90.5
     },
     "performance": {
@@ -7883,7 +8985,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "James Rodríguez",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -7892,6 +8995,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 425,
       "appearances": 5,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 3,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0.212,
       "shotsOnTargetPer90": 0.635,
@@ -7900,13 +9008,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.6,
       "pointsPerMatch": 1.6,
       "goalDifferencePerMatch": 1.6,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 12,
       "recoveriesPer90": 2.541,
+      "clearances": 3,
       "clearancesPer90": 0.635,
+      "progressiveDeliveries": 43,
       "progressiveDeliveriesPer90": 9.106,
+      "dribbles": 4,
       "dribblesPer90": 0.847,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.9
     },
     "performance": {
@@ -7937,7 +9053,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -7946,6 +9063,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 16,
+      "assists": 5,
+      "shotsOnTarget": 37,
+      "cleanSheets": 8,
+      "goalsConceded": 10,
       "goalsPer90": 1.333,
       "assistsPer90": 0.417,
       "shotsOnTargetPer90": 3.083,
@@ -7954,13 +9076,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.833,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.417,
+      "nonPenaltyGoals": 13,
       "nonPenaltyGoalsPer90": 1.083,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 8,
       "recoveriesPer90": 0.667,
+      "clearances": 4,
       "clearancesPer90": 0.333,
+      "progressiveDeliveries": 24,
       "progressiveDeliveriesPer90": 2,
+      "dribbles": 12,
       "dribblesPer90": 1,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.9
     },
     "performance": {
@@ -7995,7 +9125,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -8004,6 +9135,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1020,
       "appearances": 11,
+      "goals": 7,
+      "assists": 6,
+      "shotsOnTarget": 25,
+      "cleanSheets": 3,
+      "goalsConceded": 13,
       "goalsPer90": 0.618,
       "assistsPer90": 0.529,
       "shotsOnTargetPer90": 2.206,
@@ -8012,13 +9148,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.182,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.455,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.618,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 27,
       "recoveriesPer90": 2.382,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 67,
       "progressiveDeliveriesPer90": 6.7,
+      "dribbles": 37,
       "dribblesPer90": 3.7,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.4
     },
     "performance": {
@@ -8059,7 +9203,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Neymar",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2015",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -8068,6 +9213,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1070,
       "appearances": 12,
+      "goals": 9,
+      "assists": 4,
+      "shotsOnTarget": 20,
+      "cleanSheets": 5,
+      "goalsConceded": 9,
       "goalsPer90": 0.757,
       "assistsPer90": 0.336,
       "shotsOnTargetPer90": 1.682,
@@ -8076,13 +9226,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.75,
       "pointsPerMatch": 2.583,
       "goalDifferencePerMatch": 1.75,
+      "nonPenaltyGoals": 8,
       "nonPenaltyGoalsPer90": 0.673,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 18,
       "recoveriesPer90": 1.514,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 45,
       "progressiveDeliveriesPer90": 3.785,
+      "dribbles": 54,
       "dribblesPer90": 4.542,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 79.9
     },
     "performance": {
@@ -8119,7 +9277,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Buffon",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -8128,6 +9287,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 660,
       "appearances": 7,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -8137,13 +9301,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 63.6,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 5,
       "clearancesPer90": 0.682,
+      "progressiveDeliveries": 3,
       "progressiveDeliveriesPer90": 0.409,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 21,
       "claimsPer90": 2.864,
+      "saves": 15,
       "passCompletionPct": 88.3
     },
     "performance": {
@@ -8174,7 +9346,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8183,6 +9356,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1140,
       "appearances": 12,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 6,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0.158,
       "assistsPer90": 0.079,
       "shotsOnTargetPer90": 0.474,
@@ -8191,13 +9369,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.158,
+      "tacklesWon": 8,
       "tacklesWonPer90": 0.632,
+      "recoveries": 119,
       "recoveriesPer90": 9.395,
+      "clearances": 29,
       "clearancesPer90": 2.289,
+      "progressiveDeliveries": 48,
       "progressiveDeliveriesPer90": 3.789,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92.3
     },
     "performance": {
@@ -8232,7 +9418,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gerard Piqué",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -8241,6 +9428,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 561,
       "appearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 4,
+      "goalsConceded": 4,
       "goalsPer90": 0.16,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.16,
@@ -8249,13 +9441,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.571,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 2.143,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.16,
+      "tacklesWon": 7,
       "tacklesWonPer90": 1.123,
+      "recoveries": 49,
       "recoveriesPer90": 7.861,
+      "clearances": 16,
       "clearancesPer90": 2.567,
+      "progressiveDeliveries": 32,
       "progressiveDeliveriesPer90": 5.134,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94.3
     },
     "performance": {
@@ -8286,7 +9486,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Jérôme Boateng",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -8295,6 +9496,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 390,
       "appearances": 5,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 0,
+      "goalsConceded": 7,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.231,
@@ -8303,13 +9509,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.4,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.6,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.231,
+      "recoveries": 39,
       "recoveriesPer90": 9,
+      "clearances": 7,
       "clearancesPer90": 1.615,
+      "progressiveDeliveries": 47,
       "progressiveDeliveriesPer90": 10.846,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92.5
     },
     "performance": {
@@ -8340,7 +9554,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Leonardo Bonucci",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -8349,6 +9564,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 638,
       "appearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 5,
+      "cleanSheets": 3,
+      "goalsConceded": 8,
       "goalsPer90": 0.141,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.705,
@@ -8357,13 +9577,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.143,
       "pointsPerMatch": 1.714,
       "goalDifferencePerMatch": 0.714,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.141,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.141,
+      "recoveries": 46,
       "recoveriesPer90": 6.489,
+      "clearances": 21,
       "clearancesPer90": 2.962,
+      "progressiveDeliveries": 36,
       "progressiveDeliveriesPer90": 5.078,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 89.2
     },
     "performance": {
@@ -8394,7 +9622,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andrés Iniesta",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -8403,6 +9632,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 611,
       "appearances": 8,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 5,
       "goalsPer90": 0.147,
       "assistsPer90": 0.295,
       "shotsOnTargetPer90": 0.295,
@@ -8411,13 +9645,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.625,
       "pointsPerMatch": 2.625,
       "goalDifferencePerMatch": 2.375,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.147,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 28,
       "recoveriesPer90": 4.124,
+      "clearances": 2,
       "clearancesPer90": 0.295,
+      "progressiveDeliveries": 79,
       "progressiveDeliveriesPer90": 11.637,
+      "dribbles": 7,
       "dribblesPer90": 1.031,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.3
     },
     "performance": {
@@ -8448,7 +9690,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Toni Kroos",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8457,6 +9700,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 980,
       "appearances": 12,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 5,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0.092,
       "shotsOnTargetPer90": 0.276,
@@ -8465,13 +9713,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.917,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.184,
+      "recoveries": 62,
       "recoveriesPer90": 5.694,
+      "clearances": 1,
       "clearancesPer90": 0.092,
+      "progressiveDeliveries": 115,
       "progressiveDeliveriesPer90": 10.561,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.8
     },
     "performance": {
@@ -8506,7 +9762,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luka Modrić",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8515,6 +9772,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1004,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.179,
@@ -8523,13 +9785,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.359,
+      "recoveries": 47,
       "recoveriesPer90": 4.213,
+      "clearances": 4,
       "clearancesPer90": 0.359,
+      "progressiveDeliveries": 84,
       "progressiveDeliveriesPer90": 7.53,
+      "dribbles": 2,
       "dribblesPer90": 0.179,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.9
     },
     "performance": {
@@ -8564,7 +9834,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -8573,6 +9844,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 13,
+      "assists": 2,
+      "shotsOnTarget": 19,
+      "cleanSheets": 5,
+      "goalsConceded": 7,
       "goalsPer90": 1.444,
       "assistsPer90": 0.222,
       "shotsOnTargetPer90": 2.111,
@@ -8581,13 +9857,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.778,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 2,
+      "nonPenaltyGoals": 11,
       "nonPenaltyGoalsPer90": 1.222,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.222,
+      "recoveries": 14,
       "recoveriesPer90": 1.556,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 49,
       "progressiveDeliveriesPer90": 5.444,
+      "dribbles": 21,
       "dribblesPer90": 2.333,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.1
     },
     "performance": {
@@ -8618,7 +9902,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8627,6 +9912,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1109,
       "appearances": 12,
+      "goals": 7,
+      "assists": 5,
+      "shotsOnTarget": 25,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 0.568,
       "assistsPer90": 0.406,
       "shotsOnTargetPer90": 2.029,
@@ -8635,13 +9925,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.568,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.081,
+      "recoveries": 8,
       "recoveriesPer90": 0.649,
+      "clearances": 3,
       "clearancesPer90": 0.243,
+      "progressiveDeliveries": 24,
       "progressiveDeliveriesPer90": 1.948,
+      "dribbles": 12,
       "dribblesPer90": 0.974,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.6
     },
     "performance": {
@@ -8682,7 +9980,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Antoine Griezmann",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2016",
-    "team": "Team 50124",
+    "team": "Atleti",
+    "teamCode": "ATM",
     "sourceTeamIds": [
       "50124"
     ],
@@ -8691,6 +9990,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1205,
       "appearances": 13,
+      "goals": 6,
+      "assists": 2,
+      "shotsOnTarget": 19,
+      "cleanSheets": 8,
+      "goalsConceded": 7,
       "goalsPer90": 0.448,
       "assistsPer90": 0.149,
       "shotsOnTargetPer90": 1.419,
@@ -8699,13 +10003,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.538,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.462,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.373,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.149,
+      "recoveries": 28,
       "recoveriesPer90": 2.091,
+      "clearances": 4,
       "clearancesPer90": 0.299,
+      "progressiveDeliveries": 45,
       "progressiveDeliveriesPer90": 3.361,
+      "dribbles": 9,
       "dribblesPer90": 0.672,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.2
     },
     "performance": {
@@ -8736,7 +10048,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Buffon",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -8745,6 +10058,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 7,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -8754,13 +10072,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 67.7,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 4,
       "clearancesPer90": 0.333,
+      "progressiveDeliveries": 2,
       "progressiveDeliveriesPer90": 0.167,
+      "dribbles": 1,
       "dribblesPer90": 0.083,
+      "claims": 26,
       "claimsPer90": 2.167,
+      "saves": 23,
       "passCompletionPct": 85.2
     },
     "performance": {
@@ -8795,7 +10121,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Alves",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139",
       "52747"
@@ -8805,6 +10132,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1097,
       "appearances": 13,
+      "goals": 4,
+      "assists": 2,
+      "shotsOnTarget": 4,
+      "cleanSheets": 9,
+      "goalsConceded": 9,
       "goalsPer90": 0.328,
       "assistsPer90": 0.164,
       "shotsOnTargetPer90": 0.328,
@@ -8813,13 +10145,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.692,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 2.077,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.328,
+      "tacklesWon": 12,
       "tacklesWonPer90": 0.985,
+      "recoveries": 94,
       "recoveriesPer90": 7.712,
+      "clearances": 14,
       "clearancesPer90": 1.149,
+      "progressiveDeliveries": 52,
       "progressiveDeliveriesPer90": 4.266,
+      "dribbles": 11,
       "dribblesPer90": 0.902,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86.6
     },
     "performance": {
@@ -8850,7 +10190,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8859,6 +10200,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1181,
       "appearances": 13,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 4,
+      "cleanSheets": 2,
+      "goalsConceded": 16,
       "goalsPer90": 0.152,
       "assistsPer90": 0.152,
       "shotsOnTargetPer90": 0.305,
@@ -8867,13 +10213,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.231,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.308,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.152,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.457,
+      "recoveries": 128,
       "recoveriesPer90": 9.754,
+      "clearances": 49,
       "clearancesPer90": 3.734,
+      "progressiveDeliveries": 70,
       "progressiveDeliveriesPer90": 5.334,
+      "dribbles": 4,
       "dribblesPer90": 0.305,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.1
     },
     "performance": {
@@ -8910,7 +10264,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Giorgio Chiellini",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -8919,6 +10274,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 5,
+      "goalsConceded": 7,
       "goalsPer90": 0.111,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.111,
@@ -8927,13 +10287,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.778,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 0.889,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.111,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.444,
+      "recoveries": 67,
       "recoveriesPer90": 7.444,
+      "clearances": 43,
       "clearancesPer90": 4.778,
+      "progressiveDeliveries": 53,
       "progressiveDeliveriesPer90": 5.889,
+      "dribbles": 1,
       "dribblesPer90": 0.111,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 88.6
     },
     "performance": {
@@ -8964,7 +10332,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marcelo",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -8973,6 +10342,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1078,
       "appearances": 12,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 2,
+      "cleanSheets": 3,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0.25,
       "shotsOnTargetPer90": 0.167,
@@ -8981,13 +10355,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.667,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 7,
       "tacklesWonPer90": 0.584,
+      "recoveries": 54,
       "recoveriesPer90": 4.508,
+      "clearances": 15,
       "clearancesPer90": 1.252,
+      "progressiveDeliveries": 72,
       "progressiveDeliveriesPer90": 6.011,
+      "dribbles": 11,
       "dribblesPer90": 0.918,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.4
     },
     "performance": {
@@ -9022,7 +10404,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -9031,6 +10414,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 604,
       "appearances": 7,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 2,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0.149,
       "assistsPer90": 0.447,
       "shotsOnTargetPer90": 0.298,
@@ -9039,13 +10427,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.286,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 1.429,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.149,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.298,
+      "recoveries": 33,
       "recoveriesPer90": 4.917,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 42,
       "progressiveDeliveriesPer90": 6.258,
+      "dribbles": 7,
       "dribblesPer90": 1.043,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 81.1
     },
     "performance": {
@@ -9076,7 +10472,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Toni Kroos",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9085,6 +10482,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1136,
       "appearances": 13,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 5,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0.079,
       "assistsPer90": 0.238,
       "shotsOnTargetPer90": 0.396,
@@ -9093,13 +10495,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.692,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.079,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.238,
+      "recoveries": 54,
       "recoveriesPer90": 4.278,
+      "clearances": 1,
       "clearancesPer90": 0.079,
+      "progressiveDeliveries": 104,
       "progressiveDeliveriesPer90": 8.239,
+      "dribbles": 4,
       "dribblesPer90": 0.317,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94.3
     },
     "performance": {
@@ -9134,7 +10544,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luka Modrić",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9143,6 +10554,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1179,
       "appearances": 13,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 5,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0.076,
       "assistsPer90": 0.153,
       "shotsOnTargetPer90": 0.382,
@@ -9151,13 +10567,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.692,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.076,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.305,
+      "recoveries": 57,
       "recoveriesPer90": 4.351,
+      "clearances": 6,
       "clearancesPer90": 0.458,
+      "progressiveDeliveries": 115,
       "progressiveDeliveriesPer90": 8.779,
+      "dribbles": 10,
       "dribblesPer90": 0.763,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.1
     },
     "performance": {
@@ -9194,7 +10618,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Eden Hazard",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -9203,6 +10628,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 439,
       "appearances": 6,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 9,
+      "cleanSheets": 2,
+      "goalsConceded": 8,
       "goalsPer90": 0.615,
       "assistsPer90": 0.615,
       "shotsOnTargetPer90": 1.845,
@@ -9211,13 +10641,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 1.833,
       "goalDifferencePerMatch": 1.333,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.41,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 6,
       "recoveriesPer90": 1.23,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 17,
       "progressiveDeliveriesPer90": 3.485,
+      "dribbles": 18,
       "dribblesPer90": 3.69,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 80
     },
     "performance": {
@@ -9248,7 +10686,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -9257,6 +10696,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 783,
       "appearances": 10,
+      "goals": 4,
+      "assists": 1,
+      "shotsOnTarget": 17,
+      "cleanSheets": 6,
+      "goalsConceded": 9,
       "goalsPer90": 0.46,
       "assistsPer90": 0.115,
       "shotsOnTargetPer90": 1.954,
@@ -9265,13 +10709,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 0.6,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.345,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.23,
+      "recoveries": 11,
       "recoveriesPer90": 1.264,
+      "clearances": 1,
       "clearancesPer90": 0.115,
+      "progressiveDeliveries": 47,
       "progressiveDeliveriesPer90": 5.402,
+      "dribbles": 20,
       "dribblesPer90": 2.299,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.2
     },
     "performance": {
@@ -9302,7 +10754,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2017",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9311,6 +10764,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1207,
       "appearances": 14,
+      "goals": 19,
+      "assists": 3,
+      "shotsOnTarget": 38,
+      "cleanSheets": 3,
+      "goalsConceded": 16,
       "goalsPer90": 1.417,
       "assistsPer90": 0.224,
       "shotsOnTargetPer90": 2.833,
@@ -9319,13 +10777,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.143,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.643,
+      "nonPenaltyGoals": 17,
       "nonPenaltyGoalsPer90": 1.268,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 6,
       "recoveriesPer90": 0.447,
+      "clearances": 7,
       "clearancesPer90": 0.522,
+      "progressiveDeliveries": 21,
       "progressiveDeliveriesPer90": 1.566,
+      "dribbles": 16,
       "dribblesPer90": 1.193,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.4
     },
     "performance": {
@@ -9368,7 +10834,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marc-André ter Stegen",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -9377,6 +10844,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -9386,13 +10858,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 74.3,
       "pointsPerMatch": 2.222,
       "goalDifferencePerMatch": 1.333,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 6,
       "clearancesPer90": 0.667,
+      "progressiveDeliveries": 0,
       "progressiveDeliveriesPer90": 0,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 14,
       "claimsPer90": 1.556,
+      "saves": 27,
       "passCompletionPct": 80
     },
     "performance": {
@@ -9423,7 +10903,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9432,6 +10913,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 989,
       "appearances": 11,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 4,
+      "cleanSheets": 4,
+      "goalsConceded": 11,
       "goalsPer90": 0.091,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.364,
@@ -9440,13 +10926,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.636,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.364,
+      "recoveries": 97,
       "recoveriesPer90": 8.827,
+      "clearances": 29,
       "clearancesPer90": 2.639,
+      "progressiveDeliveries": 33,
       "progressiveDeliveriesPer90": 3.003,
+      "dribbles": 1,
       "dribblesPer90": 0.091,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.7
     },
     "performance": {
@@ -9484,7 +10978,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Virgil van Dijk",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -9493,6 +10988,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 17,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.167,
@@ -9501,13 +11001,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.417,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.833,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.25,
+      "recoveries": 89,
       "recoveriesPer90": 7.417,
+      "clearances": 56,
       "clearancesPer90": 4.667,
+      "progressiveDeliveries": 35,
       "progressiveDeliveriesPer90": 2.917,
+      "dribbles": 2,
       "dribblesPer90": 0.167,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.3
     },
     "performance": {
@@ -9538,7 +11046,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Raphaël Varane",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9547,6 +11056,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1020,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -9555,13 +11069,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.273,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.818,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.176,
+      "recoveries": 87,
       "recoveriesPer90": 7.676,
+      "clearances": 52,
       "clearancesPer90": 4.588,
+      "progressiveDeliveries": 27,
       "progressiveDeliveriesPer90": 2.382,
+      "dribbles": 1,
       "dribblesPer90": 0.088,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.9
     },
     "performance": {
@@ -9596,7 +11118,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marcelo",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9605,6 +11128,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1094,
       "appearances": 12,
+      "goals": 4,
+      "assists": 3,
+      "shotsOnTarget": 5,
+      "cleanSheets": 3,
+      "goalsConceded": 17,
       "goalsPer90": 0.329,
       "assistsPer90": 0.247,
       "shotsOnTargetPer90": 0.411,
@@ -9613,13 +11141,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.417,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.667,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.329,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.329,
+      "recoveries": 49,
       "recoveriesPer90": 4.031,
+      "clearances": 17,
       "clearancesPer90": 1.399,
+      "progressiveDeliveries": 101,
       "progressiveDeliveriesPer90": 8.309,
+      "dribbles": 12,
       "dribblesPer90": 0.987,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 81.2
     },
     "performance": {
@@ -9654,7 +11190,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "N'Golo Kanté",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -9663,6 +11200,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 283,
       "appearances": 4,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 1,
+      "goalsConceded": 5,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -9671,13 +11213,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.25,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 1.272,
+      "recoveries": 28,
       "recoveriesPer90": 8.905,
+      "clearances": 2,
       "clearancesPer90": 0.636,
+      "progressiveDeliveries": 7,
       "progressiveDeliveriesPer90": 2.226,
+      "dribbles": 2,
       "dribblesPer90": 0.636,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.5
     },
     "performance": {
@@ -9708,7 +11258,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luka Modrić",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -9717,6 +11268,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 867,
       "appearances": 11,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 4,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0.104,
       "shotsOnTargetPer90": 0.415,
@@ -9725,13 +11281,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.273,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.818,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.415,
+      "recoveries": 34,
       "recoveriesPer90": 3.529,
+      "clearances": 4,
       "clearancesPer90": 0.415,
+      "progressiveDeliveries": 83,
       "progressiveDeliveriesPer90": 8.616,
+      "dribbles": 10,
       "dribblesPer90": 1.038,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.4
     },
     "performance": {
@@ -9772,7 +11336,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Eden Hazard",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -9781,6 +11346,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 270,
       "appearances": 4,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 2,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0.333,
       "shotsOnTargetPer90": 0.333,
@@ -9789,13 +11359,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": -0.25,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 6,
       "recoveriesPer90": 2,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 3,
       "progressiveDeliveriesPer90": 1,
+      "dribbles": 5,
       "dribblesPer90": 1.667,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 83.9
     },
     "performance": {
@@ -9826,7 +11404,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kylian Mbappé",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -9835,6 +11414,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 696,
       "appearances": 8,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 11,
+      "cleanSheets": 0,
+      "goalsConceded": 14,
       "goalsPer90": 0.388,
       "assistsPer90": 0.388,
       "shotsOnTargetPer90": 1.422,
@@ -9843,13 +11427,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.75,
       "pointsPerMatch": 1.375,
       "goalDifferencePerMatch": 0.625,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.388,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 6,
       "recoveriesPer90": 0.776,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 12,
       "progressiveDeliveriesPer90": 1.552,
+      "dribbles": 39,
       "dribblesPer90": 5.043,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 78.1
     },
     "performance": {
@@ -9880,7 +11472,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051",
       "50139"
@@ -9890,6 +11483,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1019,
       "appearances": 12,
+      "goals": 7,
+      "assists": 3,
+      "shotsOnTarget": 19,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 0.618,
       "assistsPer90": 0.265,
       "shotsOnTargetPer90": 1.678,
@@ -9898,13 +11496,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2.083,
       "goalDifferencePerMatch": 0.75,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.442,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 5,
       "recoveriesPer90": 0.442,
+      "clearances": 6,
       "clearancesPer90": 0.53,
+      "progressiveDeliveries": 16,
       "progressiveDeliveriesPer90": 1.413,
+      "dribbles": 15,
       "dribblesPer90": 1.325,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.8
     },
     "performance": {
@@ -9943,7 +11549,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2018",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -9952,6 +11559,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 657,
       "appearances": 8,
+      "goals": 9,
+      "assists": 2,
+      "shotsOnTarget": 20,
+      "cleanSheets": 2,
+      "goalsConceded": 9,
       "goalsPer90": 1.233,
       "assistsPer90": 0.274,
       "shotsOnTargetPer90": 2.74,
@@ -9960,13 +11572,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.125,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.25,
+      "nonPenaltyGoals": 9,
       "nonPenaltyGoalsPer90": 1.233,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.137,
+      "recoveries": 7,
       "recoveriesPer90": 0.959,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 46,
       "progressiveDeliveriesPer90": 6.301,
+      "dribbles": 15,
       "dribblesPer90": 2.055,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84
     },
     "performance": {
@@ -9997,7 +11617,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alisson Becker",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10006,6 +11627,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 990,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -10015,13 +11641,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 82.2,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.455,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 9,
       "clearancesPer90": 0.818,
+      "progressiveDeliveries": 0,
       "progressiveDeliveriesPer90": 0,
+      "dribbles": 1,
       "dribblesPer90": 0.091,
+      "claims": 32,
       "claimsPer90": 2.909,
+      "saves": 40,
       "passCompletionPct": 86.8
     },
     "performance": {
@@ -10058,7 +11692,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Trent Alexander-Arnold",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10067,6 +11702,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 918,
       "appearances": 12,
+      "goals": 0,
+      "assists": 5,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0.49,
       "shotsOnTargetPer90": 0,
@@ -10075,13 +11715,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.25,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.196,
+      "recoveries": 55,
       "recoveriesPer90": 5.392,
+      "clearances": 25,
       "clearancesPer90": 2.451,
+      "progressiveDeliveries": 82,
       "progressiveDeliveriesPer90": 8.039,
+      "dribbles": 4,
       "dribblesPer90": 0.392,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 68.6
     },
     "performance": {
@@ -10117,7 +11765,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Virgil van Dijk",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10126,6 +11775,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1200,
       "appearances": 13,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 5,
+      "cleanSheets": 4,
+      "goalsConceded": 15,
       "goalsPer90": 0.15,
       "assistsPer90": 0.075,
       "shotsOnTargetPer90": 0.375,
@@ -10134,13 +11788,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.154,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.154,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.15,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.15,
+      "recoveries": 120,
       "recoveriesPer90": 9,
+      "clearances": 45,
       "clearancesPer90": 3.375,
+      "progressiveDeliveries": 80,
       "progressiveDeliveriesPer90": 6,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.7
     },
     "performance": {
@@ -10180,7 +11842,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Matthijs de Ligt",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 50143",
+    "team": "Ajax",
+    "teamCode": "AJX",
     "sourceTeamIds": [
       "50143",
       "50139"
@@ -10190,6 +11853,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 900,
       "appearances": 10,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 4,
+      "cleanSheets": 3,
+      "goalsConceded": 11,
       "goalsPer90": 0.2,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.4,
@@ -10198,13 +11866,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.1,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.8,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.2,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.2,
+      "recoveries": 66,
       "recoveriesPer90": 6.6,
+      "clearances": 41,
       "clearancesPer90": 4.1,
+      "progressiveDeliveries": 17,
       "progressiveDeliveriesPer90": 1.7,
+      "dribbles": 1,
       "dribblesPer90": 0.1,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86.9
     },
     "performance": {
@@ -10235,7 +11911,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andy Robertson",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10244,6 +11921,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1005,
       "appearances": 13,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 5,
+      "cleanSheets": 4,
+      "goalsConceded": 15,
       "goalsPer90": 0.09,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.448,
@@ -10252,13 +11934,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.154,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.09,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.448,
+      "recoveries": 65,
       "recoveriesPer90": 5.821,
+      "clearances": 25,
       "clearancesPer90": 2.239,
+      "progressiveDeliveries": 95,
       "progressiveDeliveriesPer90": 8.507,
+      "dribbles": 4,
       "dribblesPer90": 0.358,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.6
     },
     "performance": {
@@ -10293,7 +11983,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -10302,6 +11993,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 483,
       "appearances": 7,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 5,
+      "cleanSheets": 1,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.745,
       "shotsOnTargetPer90": 0.932,
@@ -10310,13 +12006,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.286,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.143,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 19,
       "recoveriesPer90": 3.54,
+      "clearances": 1,
       "clearancesPer90": 0.186,
+      "progressiveDeliveries": 23,
       "progressiveDeliveriesPer90": 4.286,
+      "dribbles": 9,
       "dribblesPer90": 1.677,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 75.9
     },
     "performance": {
@@ -10348,7 +12052,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Frenkie de Jong",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080",
       "50143"
@@ -10358,6 +12063,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1017,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 12,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.088,
@@ -10366,13 +12076,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.667,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 7,
       "tacklesWonPer90": 0.619,
+      "recoveries": 89,
       "recoveriesPer90": 7.876,
+      "clearances": 11,
       "clearancesPer90": 0.973,
+      "progressiveDeliveries": 78,
       "progressiveDeliveriesPer90": 6.903,
+      "dribbles": 5,
       "dribblesPer90": 0.442,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.5
     },
     "performance": {
@@ -10407,7 +12125,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -10416,6 +12135,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 931,
       "appearances": 11,
+      "goals": 8,
+      "assists": 5,
+      "shotsOnTarget": 24,
+      "cleanSheets": 6,
+      "goalsConceded": 8,
       "goalsPer90": 0.773,
       "assistsPer90": 0.483,
       "shotsOnTargetPer90": 2.32,
@@ -10424,13 +12148,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.727,
       "pointsPerMatch": 2.182,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.677,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 14,
       "recoveriesPer90": 1.353,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 81,
       "progressiveDeliveriesPer90": 7.83,
+      "dribbles": 42,
       "dribblesPer90": 4.06,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 79.5
     },
     "performance": {
@@ -10469,7 +12201,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Robert Lewandowski",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -10478,6 +12211,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 617,
       "appearances": 7,
+      "goals": 10,
+      "assists": 0,
+      "shotsOnTarget": 17,
+      "cleanSheets": 4,
+      "goalsConceded": 7,
       "goalsPer90": 1.459,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 2.48,
@@ -10486,13 +12224,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.286,
       "goalDifferencePerMatch": 2.143,
+      "nonPenaltyGoals": 9,
       "nonPenaltyGoalsPer90": 1.313,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 10,
       "recoveriesPer90": 1.459,
+      "clearances": 4,
       "clearancesPer90": 0.583,
+      "progressiveDeliveries": 4,
       "progressiveDeliveriesPer90": 0.583,
+      "dribbles": 7,
       "dribblesPer90": 1.021,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 74
     },
     "performance": {
@@ -10523,7 +12269,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -10532,6 +12279,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 891,
       "appearances": 10,
+      "goals": 7,
+      "assists": 1,
+      "shotsOnTarget": 18,
+      "cleanSheets": 4,
+      "goalsConceded": 9,
       "goalsPer90": 0.707,
       "assistsPer90": 0.101,
       "shotsOnTargetPer90": 1.818,
@@ -10540,13 +12292,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.8,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.606,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 7,
       "recoveriesPer90": 0.707,
+      "clearances": 5,
       "clearancesPer90": 0.505,
+      "progressiveDeliveries": 29,
       "progressiveDeliveriesPer90": 2.929,
+      "dribbles": 18,
       "dribblesPer90": 1.818,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 81.4
     },
     "performance": {
@@ -10577,7 +12337,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sadio Mané",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2019",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10586,6 +12347,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1180,
       "appearances": 14,
+      "goals": 7,
+      "assists": 3,
+      "shotsOnTarget": 15,
+      "cleanSheets": 5,
+      "goalsConceded": 15,
       "goalsPer90": 0.534,
       "assistsPer90": 0.229,
       "shotsOnTargetPer90": 1.144,
@@ -10594,13 +12360,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.071,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 1.071,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.534,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 22,
       "recoveriesPer90": 1.678,
+      "clearances": 1,
       "clearancesPer90": 0.076,
+      "progressiveDeliveries": 30,
       "progressiveDeliveriesPer90": 2.288,
+      "dribbles": 18,
       "dribblesPer90": 1.373,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 77.6
     },
     "performance": {
@@ -10635,7 +12409,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Manuel Neuer",
     "role": "GK",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -10644,6 +12419,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1020,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -10653,13 +12433,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 85.2,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.727,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 10,
       "clearancesPer90": 0.882,
+      "progressiveDeliveries": 4,
       "progressiveDeliveriesPer90": 0.353,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 23,
       "claimsPer90": 2.029,
+      "saves": 47,
       "passCompletionPct": 88.2
     },
     "performance": {
@@ -10696,7 +12484,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Joshua Kimmich",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -10705,6 +12494,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 821,
       "appearances": 9,
+      "goals": 2,
+      "assists": 6,
+      "shotsOnTarget": 2,
+      "cleanSheets": 4,
+      "goalsConceded": 7,
       "goalsPer90": 0.219,
       "assistsPer90": 0.658,
       "shotsOnTargetPer90": 0.219,
@@ -10713,13 +12507,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.778,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.889,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.219,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.548,
+      "recoveries": 40,
       "recoveriesPer90": 4.385,
+      "clearances": 7,
       "clearancesPer90": 0.767,
+      "progressiveDeliveries": 80,
       "progressiveDeliveriesPer90": 8.77,
+      "dribbles": 1,
       "dribblesPer90": 0.11,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86.3
     },
     "performance": {
@@ -10756,7 +12558,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sergio Ramos",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -10765,6 +12568,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 356,
       "appearances": 4,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 1,
+      "goalsConceded": 6,
       "goalsPer90": 0.253,
       "assistsPer90": 0.253,
       "shotsOnTargetPer90": 0.506,
@@ -10773,13 +12581,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.253,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.506,
+      "recoveries": 24,
       "recoveriesPer90": 6.067,
+      "clearances": 8,
       "clearancesPer90": 2.022,
+      "progressiveDeliveries": 29,
       "progressiveDeliveriesPer90": 7.331,
+      "dribbles": 1,
       "dribblesPer90": 0.253,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.2
     },
     "performance": {
@@ -10811,7 +12627,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Virgil van Dijk",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -10820,6 +12637,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 210,
       "appearances": 2,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 0,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -10828,13 +12650,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2,
       "pointsPerMatch": 0,
       "goalDifferencePerMatch": -1,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 23,
       "recoveriesPer90": 9.857,
+      "clearances": 5,
       "clearancesPer90": 2.143,
+      "progressiveDeliveries": 21,
       "progressiveDeliveriesPer90": 9,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86
     },
     "performance": {
@@ -10865,7 +12695,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alphonso Davies",
     "role": "DEF",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -10874,6 +12705,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 542,
       "appearances": 8,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0.332,
       "shotsOnTargetPer90": 0,
@@ -10882,13 +12718,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.5,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.875,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 31,
       "recoveriesPer90": 5.148,
+      "clearances": 5,
       "clearancesPer90": 0.83,
+      "progressiveDeliveries": 26,
       "progressiveDeliveriesPer90": 4.317,
+      "dribbles": 17,
       "dribblesPer90": 2.823,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.6
     },
     "performance": {
@@ -10923,7 +12767,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thiago Alcántara",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -10932,6 +12777,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 418,
       "appearances": 5,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 3,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -10940,13 +12790,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.6,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 3.2,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 13,
       "tacklesWonPer90": 2.799,
+      "recoveries": 35,
       "recoveriesPer90": 7.536,
+      "clearances": 2,
       "clearancesPer90": 0.431,
+      "progressiveDeliveries": 50,
       "progressiveDeliveriesPer90": 10.766,
+      "dribbles": 5,
       "dribblesPer90": 1.077,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92.8
     },
     "performance": {
@@ -10981,7 +12839,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -10990,6 +12849,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 437,
       "appearances": 5,
+      "goals": 2,
+      "assists": 5,
+      "shotsOnTarget": 9,
+      "cleanSheets": 2,
+      "goalsConceded": 5,
       "goalsPer90": 0.412,
       "assistsPer90": 1.03,
       "shotsOnTargetPer90": 1.854,
@@ -10998,13 +12862,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.2,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.206,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 13,
       "recoveriesPer90": 2.677,
+      "clearances": 4,
       "clearancesPer90": 0.824,
+      "progressiveDeliveries": 23,
       "progressiveDeliveriesPer90": 4.737,
+      "dribbles": 5,
       "dribblesPer90": 1.03,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 78.8
     },
     "performance": {
@@ -11039,7 +12911,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Cristiano Ronaldo",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50139",
+    "team": "Juventus",
+    "teamCode": "JUV",
     "sourceTeamIds": [
       "50139"
     ],
@@ -11048,6 +12921,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 539,
       "appearances": 6,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 12,
+      "cleanSheets": 2,
+      "goalsConceded": 4,
       "goalsPer90": 1.002,
       "assistsPer90": 0.167,
       "shotsOnTargetPer90": 2.004,
@@ -11056,13 +12934,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.667,
       "pointsPerMatch": 2.5,
       "goalDifferencePerMatch": 1.667,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.501,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.167,
+      "recoveries": 7,
       "recoveriesPer90": 1.169,
+      "clearances": 4,
       "clearancesPer90": 0.668,
+      "progressiveDeliveries": 13,
       "progressiveDeliveriesPer90": 2.171,
+      "dribbles": 4,
       "dribblesPer90": 0.668,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.8
     },
     "performance": {
@@ -11093,7 +12979,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -11102,6 +12989,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 4,
+      "assists": 1,
+      "shotsOnTarget": 19,
+      "cleanSheets": 1,
+      "goalsConceded": 15,
       "goalsPer90": 0.571,
       "assistsPer90": 0.143,
       "shotsOnTargetPer90": 2.714,
@@ -11110,13 +13002,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2.143,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.143,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 7,
       "recoveriesPer90": 1,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 44,
       "progressiveDeliveriesPer90": 6.286,
+      "dribbles": 27,
       "dribblesPer90": 3.857,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.2
     },
     "performance": {
@@ -11147,7 +13047,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Neymar",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -11156,6 +13057,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 835,
       "appearances": 10,
+      "goals": 8,
+      "assists": 3,
+      "shotsOnTarget": 16,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 0.862,
       "assistsPer90": 0.323,
       "shotsOnTargetPer90": 1.725,
@@ -11164,13 +13070,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 2.1,
       "goalDifferencePerMatch": 1.2,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.754,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 16,
       "recoveriesPer90": 1.725,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 46,
       "progressiveDeliveriesPer90": 4.958,
+      "dribbles": 56,
       "dribblesPer90": 6.036,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 73.5
     },
     "performance": {
@@ -11201,7 +13115,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Robert Lewandowski",
     "role": "ATT",
     "era": "UEFA.com Fans' Team of the Year 2020",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -11210,6 +13125,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 923,
       "appearances": 10,
+      "goals": 8,
+      "assists": 7,
+      "shotsOnTarget": 19,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 0.78,
       "assistsPer90": 0.683,
       "shotsOnTargetPer90": 1.853,
@@ -11218,13 +13138,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.8,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.585,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 12,
       "recoveriesPer90": 1.17,
+      "clearances": 7,
       "clearancesPer90": 0.683,
+      "progressiveDeliveries": 21,
       "progressiveDeliveriesPer90": 2.048,
+      "dribbles": 8,
       "dribblesPer90": 0.78,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 77.4
     },
     "performance": {
@@ -11265,7 +13193,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thibaut Courtois",
     "role": "GK",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -11274,6 +13203,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1170,
       "appearances": 13,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 4,
+      "goalsConceded": 16,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -11283,13 +13217,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 67.3,
       "pointsPerMatch": 1.615,
       "goalDifferencePerMatch": 0.308,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 14,
       "clearancesPer90": 1.077,
+      "progressiveDeliveries": 4,
       "progressiveDeliveriesPer90": 0.308,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 47,
       "claimsPer90": 3.615,
+      "saves": 34,
       "passCompletionPct": 82
     },
     "performance": {
@@ -11320,7 +13262,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ederson",
     "role": "GK",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -11329,6 +13272,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1260,
       "appearances": 14,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 7,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -11338,13 +13286,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 71.9,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.143,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 19,
       "clearancesPer90": 1.357,
+      "progressiveDeliveries": 11,
       "progressiveDeliveriesPer90": 0.786,
+      "dribbles": 1,
       "dribblesPer90": 0.071,
+      "claims": 39,
       "claimsPer90": 2.786,
+      "saves": 24,
       "passCompletionPct": 86.5
     },
     "performance": {
@@ -11375,7 +13331,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Edouard Mendy",
     "role": "GK",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11384,6 +13341,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 9,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -11393,13 +13355,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 91.4,
       "pointsPerMatch": 2.417,
       "goalDifferencePerMatch": 1.583,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 10,
       "clearancesPer90": 0.833,
+      "progressiveDeliveries": 6,
       "progressiveDeliveriesPer90": 0.5,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 37,
       "claimsPer90": 3.083,
+      "saves": 32,
       "passCompletionPct": 81.8
     },
     "performance": {
@@ -11436,7 +13406,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "César Azpilicueta",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11445,6 +13416,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 964,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 7,
+      "goalsConceded": 4,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.187,
@@ -11453,13 +13429,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.364,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.455,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.187,
+      "recoveries": 50,
       "recoveriesPer90": 4.668,
+      "clearances": 24,
       "clearancesPer90": 2.241,
+      "progressiveDeliveries": 72,
       "progressiveDeliveriesPer90": 6.722,
+      "dribbles": 1,
       "dribblesPer90": 0.093,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 83.9
     },
     "performance": {
@@ -11494,7 +13478,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Rúben Dias",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -11503,6 +13488,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 970,
       "appearances": 11,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 6,
+      "goalsConceded": 5,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -11511,13 +13501,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.455,
       "pointsPerMatch": 2.545,
       "goalDifferencePerMatch": 1.273,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 7,
       "tacklesWonPer90": 0.649,
+      "recoveries": 54,
       "recoveriesPer90": 5.01,
+      "clearances": 12,
       "clearancesPer90": 1.113,
+      "progressiveDeliveries": 61,
       "progressiveDeliveriesPer90": 5.66,
+      "dribbles": 1,
       "dribblesPer90": 0.093,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 95.4
     },
     "performance": {
@@ -11552,7 +13550,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marquinhos",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -11561,6 +13560,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1087,
       "appearances": 13,
+      "goals": 5,
+      "assists": 0,
+      "shotsOnTarget": 6,
+      "cleanSheets": 3,
+      "goalsConceded": 14,
       "goalsPer90": 0.414,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.497,
@@ -11569,13 +13573,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 0.923,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.414,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.166,
+      "recoveries": 80,
       "recoveriesPer90": 6.624,
+      "clearances": 27,
       "clearancesPer90": 2.236,
+      "progressiveDeliveries": 52,
       "progressiveDeliveriesPer90": 4.305,
+      "dribbles": 1,
       "dribblesPer90": 0.083,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 89.6
     },
     "performance": {
@@ -11606,7 +13618,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Antonio Rüdiger",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11615,6 +13628,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 922,
       "appearances": 11,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 8,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0.098,
       "shotsOnTargetPer90": 0.195,
@@ -11623,13 +13641,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.273,
       "pointsPerMatch": 2.364,
       "goalDifferencePerMatch": 1.636,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.39,
+      "recoveries": 45,
       "recoveriesPer90": 4.393,
+      "clearances": 36,
       "clearancesPer90": 3.514,
+      "progressiveDeliveries": 40,
       "progressiveDeliveriesPer90": 3.905,
+      "dribbles": 3,
       "dribblesPer90": 0.293,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.8
     },
     "performance": {
@@ -11664,7 +13690,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ben Chilwell",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11673,6 +13700,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 774,
       "appearances": 10,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 3,
+      "cleanSheets": 7,
+      "goalsConceded": 3,
       "goalsPer90": 0.116,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.349,
@@ -11681,13 +13713,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.3,
       "pointsPerMatch": 2.3,
       "goalDifferencePerMatch": 1.4,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.116,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.698,
+      "recoveries": 33,
       "recoveriesPer90": 3.837,
+      "clearances": 16,
       "clearancesPer90": 1.86,
+      "progressiveDeliveries": 34,
       "progressiveDeliveriesPer90": 3.953,
+      "dribbles": 5,
       "dribblesPer90": 0.581,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 74.4
     },
     "performance": {
@@ -11722,7 +13762,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Alaba",
     "role": "DEF",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -11731,6 +13772,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1170,
       "appearances": 13,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 4,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 0,
       "assistsPer90": 0.154,
       "shotsOnTargetPer90": 0.308,
@@ -11739,13 +13785,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.615,
       "goalDifferencePerMatch": 2.154,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.231,
+      "recoveries": 76,
       "recoveriesPer90": 5.846,
+      "clearances": 19,
       "clearancesPer90": 1.462,
+      "progressiveDeliveries": 83,
       "progressiveDeliveriesPer90": 6.385,
+      "dribbles": 1,
       "dribblesPer90": 0.077,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 89.9
     },
     "performance": {
@@ -11780,7 +13834,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Jorginho",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11789,6 +13844,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1031,
       "appearances": 12,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 8,
+      "goalsConceded": 4,
       "goalsPer90": 0.087,
       "assistsPer90": 0.087,
       "shotsOnTargetPer90": 0.087,
@@ -11797,13 +13857,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.333,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 1.417,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.524,
+      "recoveries": 85,
       "recoveriesPer90": 7.42,
+      "clearances": 10,
       "clearancesPer90": 0.873,
+      "progressiveDeliveries": 62,
       "progressiveDeliveriesPer90": 5.412,
+      "dribbles": 2,
       "dribblesPer90": 0.175,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.1
     },
     "performance": {
@@ -11840,7 +13908,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Mason Mount",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11849,6 +13918,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 850,
       "appearances": 12,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 5,
+      "cleanSheets": 8,
+      "goalsConceded": 7,
       "goalsPer90": 0.212,
       "assistsPer90": 0.212,
       "shotsOnTargetPer90": 0.529,
@@ -11857,13 +13931,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.583,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.167,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.212,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 32,
       "recoveriesPer90": 3.388,
+      "clearances": 5,
       "clearancesPer90": 0.529,
+      "progressiveDeliveries": 40,
       "progressiveDeliveriesPer90": 4.235,
+      "dribbles": 12,
       "dribblesPer90": 1.271,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.7
     },
     "performance": {
@@ -11898,7 +13980,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "N'Golo Kanté",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -11907,6 +13990,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 800,
       "appearances": 14,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 0,
+      "cleanSheets": 9,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0.113,
       "shotsOnTargetPer90": 0,
@@ -11915,13 +14003,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.571,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 1.143,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.675,
+      "recoveries": 67,
       "recoveriesPer90": 7.537,
+      "clearances": 8,
       "clearancesPer90": 0.9,
+      "progressiveDeliveries": 34,
       "progressiveDeliveriesPer90": 3.825,
+      "dribbles": 9,
       "dribblesPer90": 1.012,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86.2
     },
     "performance": {
@@ -11958,7 +14054,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -11967,6 +14064,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 849,
       "appearances": 10,
+      "goals": 4,
+      "assists": 4,
+      "shotsOnTarget": 13,
+      "cleanSheets": 4,
+      "goalsConceded": 8,
       "goalsPer90": 0.424,
       "assistsPer90": 0.424,
       "shotsOnTargetPer90": 1.378,
@@ -11975,13 +14077,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.8,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.1,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.424,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.106,
+      "recoveries": 28,
       "recoveriesPer90": 2.968,
+      "clearances": 6,
       "clearancesPer90": 0.636,
+      "progressiveDeliveries": 52,
       "progressiveDeliveriesPer90": 5.512,
+      "dribbles": 18,
       "dribblesPer90": 1.908,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 78.3
     },
     "performance": {
@@ -12012,7 +14122,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "İlkay Gündoğan",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -12021,6 +14132,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1157,
       "appearances": 14,
+      "goals": 3,
+      "assists": 1,
+      "shotsOnTarget": 5,
+      "cleanSheets": 7,
+      "goalsConceded": 9,
       "goalsPer90": 0.233,
       "assistsPer90": 0.078,
       "shotsOnTargetPer90": 0.389,
@@ -12029,13 +14145,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.643,
       "pointsPerMatch": 2.571,
       "goalDifferencePerMatch": 1.357,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.233,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.389,
+      "recoveries": 55,
       "recoveriesPer90": 4.278,
+      "clearances": 5,
       "clearancesPer90": 0.389,
+      "progressiveDeliveries": 108,
       "progressiveDeliveriesPer90": 8.401,
+      "dribbles": 12,
       "dribblesPer90": 0.933,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.9
     },
     "performance": {
@@ -12066,7 +14190,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luka Modrić",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -12075,6 +14200,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 994,
       "appearances": 13,
+      "goals": 1,
+      "assists": 3,
+      "shotsOnTarget": 3,
+      "cleanSheets": 4,
+      "goalsConceded": 16,
       "goalsPer90": 0.091,
       "assistsPer90": 0.272,
       "shotsOnTargetPer90": 0.272,
@@ -12083,13 +14213,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.231,
       "pointsPerMatch": 1.615,
       "goalDifferencePerMatch": 0.308,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.091,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.091,
+      "recoveries": 54,
       "recoveriesPer90": 4.889,
+      "clearances": 2,
       "clearancesPer90": 0.181,
+      "progressiveDeliveries": 96,
       "progressiveDeliveriesPer90": 8.692,
+      "dribbles": 3,
       "dribblesPer90": 0.272,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 88.6
     },
     "performance": {
@@ -12120,7 +14258,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Sérgio Oliveira",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50064",
+    "team": "Porto",
+    "teamCode": "POR",
     "sourceTeamIds": [
       "50064"
     ],
@@ -12129,6 +14268,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 738,
       "appearances": 8,
+      "goals": 5,
+      "assists": 0,
+      "shotsOnTarget": 10,
+      "cleanSheets": 5,
+      "goalsConceded": 7,
       "goalsPer90": 0.61,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 1.22,
@@ -12137,13 +14281,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.875,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.75,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.244,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.122,
+      "recoveries": 22,
       "recoveriesPer90": 2.683,
+      "clearances": 7,
       "clearancesPer90": 0.854,
+      "progressiveDeliveries": 33,
       "progressiveDeliveriesPer90": 4.024,
+      "dribbles": 3,
       "dribblesPer90": 0.366,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 76.9
     },
     "performance": {
@@ -12174,7 +14326,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Phil Foden",
     "role": "MID",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -12183,6 +14336,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1133,
       "appearances": 14,
+      "goals": 3,
+      "assists": 3,
+      "shotsOnTarget": 17,
+      "cleanSheets": 8,
+      "goalsConceded": 6,
       "goalsPer90": 0.238,
       "assistsPer90": 0.238,
       "shotsOnTargetPer90": 1.35,
@@ -12191,13 +14349,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.429,
       "pointsPerMatch": 2.643,
       "goalDifferencePerMatch": 1.5,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.238,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.238,
+      "recoveries": 39,
       "recoveriesPer90": 3.098,
+      "clearances": 2,
       "clearancesPer90": 0.159,
+      "progressiveDeliveries": 24,
       "progressiveDeliveriesPer90": 1.906,
+      "dribbles": 21,
       "dribblesPer90": 1.668,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 83.1
     },
     "performance": {
@@ -12228,7 +14394,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Erling Haaland",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -12237,6 +14404,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 705,
       "appearances": 8,
+      "goals": 10,
+      "assists": 2,
+      "shotsOnTarget": 17,
+      "cleanSheets": 3,
+      "goalsConceded": 11,
       "goalsPer90": 1.277,
       "assistsPer90": 0.255,
       "shotsOnTargetPer90": 2.17,
@@ -12245,13 +14417,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 1.625,
       "goalDifferencePerMatch": 0.625,
+      "nonPenaltyGoals": 9,
       "nonPenaltyGoalsPer90": 1.149,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.128,
+      "recoveries": 10,
       "recoveriesPer90": 1.277,
+      "clearances": 7,
       "clearancesPer90": 0.894,
+      "progressiveDeliveries": 6,
       "progressiveDeliveriesPer90": 0.766,
+      "dribbles": 2,
       "dribblesPer90": 0.255,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 73.1
     },
     "performance": {
@@ -12288,7 +14468,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kylian Mbappé",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -12297,6 +14478,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1105,
       "appearances": 13,
+      "goals": 8,
+      "assists": 4,
+      "shotsOnTarget": 21,
+      "cleanSheets": 3,
+      "goalsConceded": 13,
       "goalsPer90": 0.652,
       "assistsPer90": 0.326,
       "shotsOnTargetPer90": 1.71,
@@ -12305,13 +14491,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.923,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.489,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 13,
       "recoveriesPer90": 1.059,
+      "clearances": 1,
       "clearancesPer90": 0.081,
+      "progressiveDeliveries": 12,
       "progressiveDeliveriesPer90": 0.977,
+      "dribbles": 52,
       "dribblesPer90": 4.235,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 77.7
     },
     "performance": {
@@ -12342,7 +14536,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Robert Lewandowski",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -12351,6 +14546,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 874,
       "appearances": 10,
+      "goals": 9,
+      "assists": 4,
+      "shotsOnTarget": 20,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0.927,
       "assistsPer90": 0.412,
       "shotsOnTargetPer90": 2.059,
@@ -12359,13 +14559,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.9,
       "pointsPerMatch": 3,
       "goalDifferencePerMatch": 2.8,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.618,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 13,
       "recoveriesPer90": 1.339,
+      "clearances": 6,
       "clearancesPer90": 0.618,
+      "progressiveDeliveries": 16,
       "progressiveDeliveriesPer90": 1.648,
+      "dribbles": 10,
       "dribblesPer90": 1.03,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 79.8
     },
     "performance": {
@@ -12400,7 +14608,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Karim Benzema",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -12409,6 +14618,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 931,
       "appearances": 11,
+      "goals": 7,
+      "assists": 0,
+      "shotsOnTarget": 21,
+      "cleanSheets": 2,
+      "goalsConceded": 16,
       "goalsPer90": 0.677,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 2.03,
@@ -12417,13 +14631,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.455,
       "pointsPerMatch": 1.364,
       "goalDifferencePerMatch": 0.091,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.677,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 12,
       "recoveriesPer90": 1.16,
+      "clearances": 3,
       "clearancesPer90": 0.29,
+      "progressiveDeliveries": 25,
       "progressiveDeliveriesPer90": 2.417,
+      "dribbles": 6,
       "dribblesPer90": 0.58,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.7
     },
     "performance": {
@@ -12454,7 +14676,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Neymar",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -12463,6 +14686,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1014,
       "appearances": 12,
+      "goals": 6,
+      "assists": 5,
+      "shotsOnTarget": 20,
+      "cleanSheets": 3,
+      "goalsConceded": 13,
       "goalsPer90": 0.533,
       "assistsPer90": 0.444,
       "shotsOnTargetPer90": 1.775,
@@ -12471,13 +14699,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.667,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.444,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 19,
       "recoveriesPer90": 1.686,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 60,
       "progressiveDeliveriesPer90": 5.325,
+      "dribbles": 84,
       "dribblesPer90": 7.456,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 77.4
     },
     "performance": {
@@ -12508,7 +14744,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lionel Messi",
     "role": "ATT",
     "era": "UEFA Champions League Squad of the Season 2020/21",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -12517,6 +14754,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 720,
       "appearances": 8,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 23,
+      "cleanSheets": 1,
+      "goalsConceded": 19,
       "goalsPer90": 0.75,
       "assistsPer90": 0.125,
       "shotsOnTargetPer90": 2.875,
@@ -12525,13 +14767,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2.375,
       "pointsPerMatch": 1.625,
       "goalDifferencePerMatch": -0.375,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.25,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 9,
       "recoveriesPer90": 1.125,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 62,
       "progressiveDeliveriesPer90": 7.75,
+      "dribbles": 29,
       "dribblesPer90": 3.625,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.1
     },
     "performance": {
@@ -12562,7 +14812,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thibaut Courtois",
     "role": "GK",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -12571,6 +14822,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1230,
       "appearances": 13,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -12580,13 +14836,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 80.8,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 6,
       "clearancesPer90": 0.439,
+      "progressiveDeliveries": 10,
       "progressiveDeliveriesPer90": 0.732,
+      "dribbles": 1,
       "dribblesPer90": 0.073,
+      "claims": 33,
       "claimsPer90": 2.415,
+      "saves": 61,
       "passCompletionPct": 75.6
     },
     "performance": {
@@ -12621,7 +14885,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Trent Alexander-Arnold",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -12630,6 +14895,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 794,
       "appearances": 9,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.453,
       "shotsOnTargetPer90": 0.113,
@@ -12638,13 +14908,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 51,
       "recoveriesPer90": 5.781,
+      "clearances": 16,
       "clearancesPer90": 1.814,
+      "progressiveDeliveries": 93,
       "progressiveDeliveriesPer90": 10.542,
+      "dribbles": 9,
       "dribblesPer90": 1.02,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 81.2
     },
     "performance": {
@@ -12675,7 +14953,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Antonio Rüdiger",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 52914",
+    "team": "Chelsea",
+    "teamCode": "CHE",
     "sourceTeamIds": [
       "52914"
     ],
@@ -12684,6 +14963,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 840,
       "appearances": 9,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 5,
+      "goalsConceded": 7,
       "goalsPer90": 0.107,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.107,
@@ -12692,13 +14976,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.778,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.222,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.107,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.536,
+      "recoveries": 46,
       "recoveriesPer90": 4.929,
+      "clearances": 12,
       "clearancesPer90": 1.286,
+      "progressiveDeliveries": 104,
       "progressiveDeliveriesPer90": 11.143,
+      "dribbles": 6,
       "dribblesPer90": 0.643,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.8
     },
     "performance": {
@@ -12730,7 +15022,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Virgil van Dijk",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -12739,6 +15032,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 810,
       "appearances": 9,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 3,
+      "cleanSheets": 3,
+      "goalsConceded": 8,
       "goalsPer90": 0,
       "assistsPer90": 0.111,
       "shotsOnTargetPer90": 0.333,
@@ -12747,13 +15045,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.889,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.333,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.222,
+      "recoveries": 62,
       "recoveriesPer90": 6.889,
+      "clearances": 21,
       "clearancesPer90": 2.333,
+      "progressiveDeliveries": 55,
       "progressiveDeliveriesPer90": 6.111,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.3
     },
     "performance": {
@@ -12784,7 +15090,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Andy Robertson",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -12793,6 +15100,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 826,
       "appearances": 10,
+      "goals": 0,
+      "assists": 2,
+      "shotsOnTarget": 2,
+      "cleanSheets": 3,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0.218,
       "shotsOnTargetPer90": 0.218,
@@ -12801,13 +15113,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.3,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.327,
+      "recoveries": 44,
       "recoveriesPer90": 4.794,
+      "clearances": 12,
       "clearancesPer90": 1.308,
+      "progressiveDeliveries": 45,
       "progressiveDeliveriesPer90": 4.903,
+      "dribbles": 9,
       "dribblesPer90": 0.981,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 81.5
     },
     "performance": {
@@ -12838,7 +15158,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -12847,6 +15168,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 734,
       "appearances": 10,
+      "goals": 2,
+      "assists": 4,
+      "shotsOnTarget": 7,
+      "cleanSheets": 3,
+      "goalsConceded": 15,
       "goalsPer90": 0.245,
       "assistsPer90": 0.49,
       "shotsOnTargetPer90": 0.858,
@@ -12855,13 +15181,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "pointsPerMatch": 1.9,
       "goalDifferencePerMatch": 1.2,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.245,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 11,
       "recoveriesPer90": 1.349,
+      "clearances": 2,
       "clearancesPer90": 0.245,
+      "progressiveDeliveries": 54,
       "progressiveDeliveriesPer90": 6.621,
+      "dribbles": 14,
       "dribblesPer90": 1.717,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.1
     },
     "performance": {
@@ -12892,7 +15226,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Fabinho",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 7889",
+    "team": "Liverpool",
+    "teamCode": "LIV",
     "sourceTeamIds": [
       "7889"
     ],
@@ -12901,6 +15236,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 849,
       "appearances": 13,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 4,
+      "goalsConceded": 14,
       "goalsPer90": 0.106,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.106,
@@ -12909,13 +15249,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.231,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.106,
+      "tacklesWon": 9,
       "tacklesWonPer90": 0.954,
+      "recoveries": 74,
       "recoveriesPer90": 7.845,
+      "clearances": 5,
       "clearancesPer90": 0.53,
+      "progressiveDeliveries": 64,
       "progressiveDeliveriesPer90": 6.784,
+      "dribbles": 3,
       "dribblesPer90": 0.318,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92.3
     },
     "performance": {
@@ -12946,7 +15294,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Luka Modrić",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -12955,6 +15304,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1077,
       "appearances": 13,
+      "goals": 0,
+      "assists": 4,
+      "shotsOnTarget": 5,
+      "cleanSheets": 5,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0.334,
       "shotsOnTargetPer90": 0.418,
@@ -12963,13 +15317,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.251,
+      "recoveries": 39,
       "recoveriesPer90": 3.259,
+      "clearances": 3,
       "clearancesPer90": 0.251,
+      "progressiveDeliveries": 92,
       "progressiveDeliveriesPer90": 7.688,
+      "dribbles": 8,
       "dribblesPer90": 0.669,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.5
     },
     "performance": {
@@ -13004,7 +15366,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kylian Mbappé",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -13013,6 +15376,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 673,
       "appearances": 8,
+      "goals": 6,
+      "assists": 4,
+      "shotsOnTarget": 16,
+      "cleanSheets": 2,
+      "goalsConceded": 11,
       "goalsPer90": 0.802,
       "assistsPer90": 0.535,
       "shotsOnTargetPer90": 2.14,
@@ -13021,13 +15389,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 1.75,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.802,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 10,
       "recoveriesPer90": 1.337,
+      "clearances": 2,
       "clearancesPer90": 0.267,
+      "progressiveDeliveries": 15,
       "progressiveDeliveriesPer90": 2.006,
+      "dribbles": 43,
       "dribblesPer90": 5.75,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.6
     },
     "performance": {
@@ -13058,7 +15434,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Karim Benzema",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13067,6 +15444,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1106,
       "appearances": 12,
+      "goals": 15,
+      "assists": 1,
+      "shotsOnTarget": 23,
+      "cleanSheets": 4,
+      "goalsConceded": 14,
       "goalsPer90": 1.221,
       "assistsPer90": 0.081,
       "shotsOnTargetPer90": 1.872,
@@ -13075,13 +15457,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.167,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.083,
+      "nonPenaltyGoals": 12,
       "nonPenaltyGoalsPer90": 0.976,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.081,
+      "recoveries": 6,
       "recoveriesPer90": 0.488,
+      "clearances": 7,
       "clearancesPer90": 0.57,
+      "progressiveDeliveries": 44,
       "progressiveDeliveriesPer90": 3.58,
+      "dribbles": 18,
       "dribblesPer90": 1.465,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.8
     },
     "performance": {
@@ -13122,7 +15512,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vinícius Júnior",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2021/22",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13131,6 +15522,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1199,
       "appearances": 13,
+      "goals": 4,
+      "assists": 6,
+      "shotsOnTarget": 8,
+      "cleanSheets": 5,
+      "goalsConceded": 14,
       "goalsPer90": 0.3,
       "assistsPer90": 0.45,
       "shotsOnTargetPer90": 0.601,
@@ -13139,13 +15535,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.077,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.154,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.3,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.225,
+      "recoveries": 29,
       "recoveriesPer90": 2.177,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 14,
       "progressiveDeliveriesPer90": 1.051,
+      "dribbles": 83,
       "dribblesPer90": 6.23,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 83.6
     },
     "performance": {
@@ -13182,7 +15586,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Thibaut Courtois",
     "role": "GK",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13191,6 +15596,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 900,
       "appearances": 10,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -13200,13 +15610,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 79.2,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 1.2,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 6,
       "clearancesPer90": 0.6,
+      "progressiveDeliveries": 7,
       "progressiveDeliveriesPer90": 0.7,
+      "dribbles": 1,
       "dribblesPer90": 0.1,
+      "claims": 28,
       "claimsPer90": 2.8,
+      "saves": 42,
       "passCompletionPct": 81.4
     },
     "performance": {
@@ -13237,7 +15655,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kyle Walker",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13246,6 +15665,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 280,
       "appearances": 5,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 2,
+      "goalsConceded": 3,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -13254,13 +15678,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.6,
       "pointsPerMatch": 1.8,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.643,
+      "recoveries": 22,
       "recoveriesPer90": 7.071,
+      "clearances": 9,
       "clearancesPer90": 2.893,
+      "progressiveDeliveries": 26,
       "progressiveDeliveriesPer90": 8.357,
+      "dribbles": 6,
       "dribblesPer90": 1.929,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 86.4
     },
     "performance": {
@@ -13295,7 +15727,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Rúben Dias",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13304,6 +15737,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1048,
       "appearances": 12,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 5,
+      "cleanSheets": 8,
+      "goalsConceded": 4,
       "goalsPer90": 0.086,
       "assistsPer90": 0.086,
       "shotsOnTargetPer90": 0.429,
@@ -13312,13 +15750,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.333,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 2.167,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.086,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.515,
+      "recoveries": 66,
       "recoveriesPer90": 5.668,
+      "clearances": 21,
       "clearancesPer90": 1.803,
+      "progressiveDeliveries": 74,
       "progressiveDeliveriesPer90": 6.355,
+      "dribbles": 4,
       "dribblesPer90": 0.344,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 96
     },
     "performance": {
@@ -13353,7 +15799,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Bastoni",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -13362,6 +15809,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 989,
       "appearances": 12,
+      "goals": 0,
+      "assists": 3,
+      "shotsOnTarget": 1,
+      "cleanSheets": 8,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.273,
       "shotsOnTargetPer90": 0.091,
@@ -13370,13 +15822,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.75,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.833,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 10,
       "tacklesWonPer90": 0.91,
+      "recoveries": 49,
       "recoveriesPer90": 4.459,
+      "clearances": 34,
       "clearancesPer90": 3.094,
+      "progressiveDeliveries": 51,
       "progressiveDeliveriesPer90": 4.641,
+      "dribbles": 5,
       "dribblesPer90": 0.455,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.8
     },
     "performance": {
@@ -13407,7 +15867,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Federico Dimarco",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -13416,6 +15877,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 736,
       "appearances": 11,
+      "goals": 0,
+      "assists": 5,
+      "shotsOnTarget": 2,
+      "cleanSheets": 7,
+      "goalsConceded": 9,
       "goalsPer90": 0,
       "assistsPer90": 0.611,
       "shotsOnTargetPer90": 0.245,
@@ -13424,13 +15890,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.818,
       "pointsPerMatch": 1.909,
       "goalDifferencePerMatch": 0.727,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.245,
+      "recoveries": 32,
       "recoveriesPer90": 3.913,
+      "clearances": 18,
       "clearancesPer90": 2.201,
+      "progressiveDeliveries": 20,
       "progressiveDeliveriesPer90": 2.446,
+      "dribbles": 6,
       "dribblesPer90": 0.734,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 76.7
     },
     "performance": {
@@ -13461,7 +15935,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "John Stones",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13470,6 +15945,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 685,
       "appearances": 8,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 5,
+      "goalsConceded": 3,
       "goalsPer90": 0.131,
       "assistsPer90": 0.131,
       "shotsOnTargetPer90": 0.131,
@@ -13478,13 +15958,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.375,
       "pointsPerMatch": 2.25,
       "goalDifferencePerMatch": 2,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.131,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.131,
+      "recoveries": 28,
       "recoveriesPer90": 3.679,
+      "clearances": 9,
       "clearancesPer90": 1.182,
+      "progressiveDeliveries": 34,
       "progressiveDeliveriesPer90": 4.467,
+      "dribbles": 6,
       "dribblesPer90": 0.788,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.1
     },
     "performance": {
@@ -13519,7 +16007,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Kevin De Bruyne",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13528,6 +16017,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 721,
       "appearances": 10,
+      "goals": 2,
+      "assists": 7,
+      "shotsOnTarget": 7,
+      "cleanSheets": 6,
+      "goalsConceded": 4,
       "goalsPer90": 0.25,
       "assistsPer90": 0.874,
       "shotsOnTargetPer90": 0.874,
@@ -13536,13 +16030,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.4,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 2.2,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.25,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 9,
       "recoveriesPer90": 1.123,
+      "clearances": 3,
       "clearancesPer90": 0.374,
+      "progressiveDeliveries": 39,
       "progressiveDeliveriesPer90": 4.868,
+      "dribbles": 14,
       "dribblesPer90": 1.748,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 76.6
     },
     "performance": {
@@ -13577,7 +16079,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Rodri",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13586,6 +16089,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 996,
       "appearances": 12,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 4,
+      "cleanSheets": 7,
+      "goalsConceded": 5,
       "goalsPer90": 0.181,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.361,
@@ -13594,13 +16102,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.417,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.833,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.181,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.542,
+      "recoveries": 72,
       "recoveriesPer90": 6.506,
+      "clearances": 8,
       "clearancesPer90": 0.723,
+      "progressiveDeliveries": 117,
       "progressiveDeliveriesPer90": 10.572,
+      "dribbles": 7,
       "dribblesPer90": 0.633,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.8
     },
     "performance": {
@@ -13637,7 +16153,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Bernardo Silva",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13646,6 +16163,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 909,
       "appearances": 13,
+      "goals": 3,
+      "assists": 1,
+      "shotsOnTarget": 5,
+      "cleanSheets": 8,
+      "goalsConceded": 5,
       "goalsPer90": 0.297,
       "assistsPer90": 0.099,
       "shotsOnTargetPer90": 0.495,
@@ -13654,13 +16176,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.385,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 2.077,
+      "nonPenaltyGoals": 3,
       "nonPenaltyGoalsPer90": 0.297,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.495,
+      "recoveries": 36,
       "recoveriesPer90": 3.564,
+      "clearances": 1,
       "clearancesPer90": 0.099,
+      "progressiveDeliveries": 39,
       "progressiveDeliveriesPer90": 3.861,
+      "dribbles": 29,
       "dribblesPer90": 2.871,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.6
     },
     "performance": {
@@ -13695,7 +16225,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Erling Haaland",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -13704,6 +16235,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 845,
       "appearances": 11,
+      "goals": 12,
+      "assists": 1,
+      "shotsOnTarget": 26,
+      "cleanSheets": 7,
+      "goalsConceded": 4,
       "goalsPer90": 1.278,
       "assistsPer90": 0.107,
       "shotsOnTargetPer90": 2.769,
@@ -13712,13 +16248,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.364,
       "pointsPerMatch": 2.273,
       "goalDifferencePerMatch": 2.273,
+      "nonPenaltyGoals": 11,
       "nonPenaltyGoalsPer90": 1.172,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 9,
       "recoveriesPer90": 0.959,
+      "clearances": 4,
       "clearancesPer90": 0.426,
+      "progressiveDeliveries": 6,
       "progressiveDeliveriesPer90": 0.639,
+      "dribbles": 12,
       "dribblesPer90": 1.278,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 74.8
     },
     "performance": {
@@ -13755,7 +16299,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vinícius Júnior",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2022/23",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13764,6 +16309,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 975,
       "appearances": 12,
+      "goals": 7,
+      "assists": 6,
+      "shotsOnTarget": 19,
+      "cleanSheets": 5,
+      "goalsConceded": 13,
       "goalsPer90": 0.646,
       "assistsPer90": 0.554,
       "shotsOnTargetPer90": 1.754,
@@ -13772,13 +16322,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2.167,
       "goalDifferencePerMatch": 1.083,
+      "nonPenaltyGoals": 7,
       "nonPenaltyGoalsPer90": 0.646,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.277,
+      "recoveries": 20,
       "recoveriesPer90": 1.846,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 17,
       "progressiveDeliveriesPer90": 1.569,
+      "dribbles": 82,
       "dribblesPer90": 7.569,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 80.1
     },
     "performance": {
@@ -13809,7 +16367,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gregor Kobel",
     "role": "GK",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -13818,6 +16377,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1080,
       "appearances": 12,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 6,
+      "goalsConceded": 10,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -13827,13 +16391,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 81.8,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 8,
       "clearancesPer90": 0.667,
+      "progressiveDeliveries": 11,
       "progressiveDeliveriesPer90": 0.917,
+      "dribbles": 3,
       "dribblesPer90": 0.25,
+      "claims": 21,
       "claimsPer90": 1.75,
+      "saves": 46,
       "passCompletionPct": 84
     },
     "performance": {
@@ -13864,7 +16436,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Dani Carvajal",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13873,6 +16446,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 846,
       "appearances": 10,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 1,
+      "cleanSheets": 3,
+      "goalsConceded": 11,
       "goalsPer90": 0.106,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.106,
@@ -13881,13 +16459,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.1,
       "pointsPerMatch": 2.4,
       "goalDifferencePerMatch": 1.1,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.106,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.426,
+      "recoveries": 39,
       "recoveriesPer90": 4.149,
+      "clearances": 15,
       "clearancesPer90": 1.596,
+      "progressiveDeliveries": 24,
       "progressiveDeliveriesPer90": 2.553,
+      "dribbles": 4,
       "dribblesPer90": 0.426,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84.2
     },
     "performance": {
@@ -13922,7 +16508,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Antonio Rüdiger",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -13931,6 +16518,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1039,
       "appearances": 12,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 2,
+      "cleanSheets": 3,
+      "goalsConceded": 15,
       "goalsPer90": 0,
       "assistsPer90": 0.087,
       "shotsOnTargetPer90": 0.173,
@@ -13939,13 +16531,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.25,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.433,
+      "recoveries": 47,
       "recoveriesPer90": 4.071,
+      "clearances": 34,
       "clearancesPer90": 2.945,
+      "progressiveDeliveries": 46,
       "progressiveDeliveriesPer90": 3.985,
+      "dribbles": 1,
       "dribblesPer90": 0.087,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92.8
     },
     "performance": {
@@ -13980,7 +16580,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Mats Hummels",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -13989,6 +16590,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1170,
       "appearances": 13,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 6,
+      "goalsConceded": 11,
       "goalsPer90": 0.077,
       "assistsPer90": 0.077,
       "shotsOnTargetPer90": 0.077,
@@ -13997,13 +16603,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.846,
       "pointsPerMatch": 1.846,
       "goalDifferencePerMatch": 0.462,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.077,
+      "tacklesWon": 37,
       "tacklesWonPer90": 2.846,
+      "recoveries": 120,
       "recoveriesPer90": 9.231,
+      "clearances": 50,
       "clearancesPer90": 3.846,
+      "progressiveDeliveries": 48,
       "progressiveDeliveriesPer90": 3.692,
+      "dribbles": 9,
       "dribblesPer90": 0.692,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 89.2
     },
     "performance": {
@@ -14034,7 +16648,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ian Maatsen",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -14043,6 +16658,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 630,
       "appearances": 7,
+      "goals": 1,
+      "assists": 0,
+      "shotsOnTarget": 3,
+      "cleanSheets": 3,
+      "goalsConceded": 7,
       "goalsPer90": 0.143,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.429,
@@ -14051,13 +16671,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.857,
       "goalDifferencePerMatch": 0.429,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.143,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.429,
+      "recoveries": 42,
       "recoveriesPer90": 6,
+      "clearances": 13,
       "clearancesPer90": 1.857,
+      "progressiveDeliveries": 28,
       "progressiveDeliveriesPer90": 4,
+      "dribbles": 13,
       "dribblesPer90": 1.857,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 84
     },
     "performance": {
@@ -14088,7 +16716,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marcel Sabitzer",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52758",
+    "team": "B. Dortmund",
+    "teamCode": "BVB",
     "sourceTeamIds": [
       "52758"
     ],
@@ -14097,6 +16726,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 929,
       "appearances": 12,
+      "goals": 1,
+      "assists": 5,
+      "shotsOnTarget": 8,
+      "cleanSheets": 5,
+      "goalsConceded": 11,
       "goalsPer90": 0.097,
       "assistsPer90": 0.484,
       "shotsOnTargetPer90": 0.775,
@@ -14105,13 +16739,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.917,
       "pointsPerMatch": 1.917,
       "goalDifferencePerMatch": 0.5,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.097,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.291,
+      "recoveries": 26,
       "recoveriesPer90": 2.519,
+      "clearances": 12,
       "clearancesPer90": 1.163,
+      "progressiveDeliveries": 21,
       "progressiveDeliveriesPer90": 2.034,
+      "dribbles": 4,
       "dribblesPer90": 0.388,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.5
     },
     "performance": {
@@ -14142,7 +16784,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vitinha",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14151,6 +16794,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 914,
       "appearances": 12,
+      "goals": 2,
+      "assists": 1,
+      "shotsOnTarget": 6,
+      "cleanSheets": 3,
+      "goalsConceded": 15,
       "goalsPer90": 0.197,
       "assistsPer90": 0.098,
       "shotsOnTargetPer90": 0.591,
@@ -14159,13 +16807,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.25,
       "pointsPerMatch": 1.417,
       "goalDifferencePerMatch": 0.333,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.197,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.591,
+      "recoveries": 52,
       "recoveriesPer90": 5.12,
+      "clearances": 9,
       "clearancesPer90": 0.886,
+      "progressiveDeliveries": 73,
       "progressiveDeliveriesPer90": 7.188,
+      "dribbles": 13,
       "dribblesPer90": 1.28,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94.7
     },
     "performance": {
@@ -14196,7 +16852,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Jude Bellingham",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -14205,6 +16862,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 993,
       "appearances": 11,
+      "goals": 4,
+      "assists": 5,
+      "shotsOnTarget": 7,
+      "cleanSheets": 2,
+      "goalsConceded": 15,
       "goalsPer90": 0.363,
       "assistsPer90": 0.453,
       "shotsOnTargetPer90": 0.634,
@@ -14213,13 +16875,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.364,
       "pointsPerMatch": 2.273,
       "goalDifferencePerMatch": 0.818,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.363,
+      "tacklesWon": 14,
       "tacklesWonPer90": 1.269,
+      "recoveries": 29,
       "recoveriesPer90": 2.628,
+      "clearances": 4,
       "clearancesPer90": 0.363,
+      "progressiveDeliveries": 64,
       "progressiveDeliveriesPer90": 5.801,
+      "dribbles": 38,
       "dribblesPer90": 3.444,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91
     },
     "performance": {
@@ -14256,7 +16926,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Phil Foden",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 52919",
+    "team": "Man City",
+    "teamCode": "MCI",
     "sourceTeamIds": [
       "52919"
     ],
@@ -14265,6 +16936,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 684,
       "appearances": 8,
+      "goals": 5,
+      "assists": 3,
+      "shotsOnTarget": 12,
+      "cleanSheets": 1,
+      "goalsConceded": 11,
       "goalsPer90": 0.658,
       "assistsPer90": 0.395,
       "shotsOnTargetPer90": 1.579,
@@ -14273,13 +16949,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 2.5,
       "goalDifferencePerMatch": 1.375,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.658,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 15,
       "recoveriesPer90": 1.974,
+      "clearances": 3,
       "clearancesPer90": 0.395,
+      "progressiveDeliveries": 28,
       "progressiveDeliveriesPer90": 3.684,
+      "dribbles": 15,
       "dribblesPer90": 1.974,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 91.7
     },
     "performance": {
@@ -14310,7 +16994,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Harry Kane",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -14319,6 +17004,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1064,
       "appearances": 12,
+      "goals": 8,
+      "assists": 4,
+      "shotsOnTarget": 16,
+      "cleanSheets": 4,
+      "goalsConceded": 13,
       "goalsPer90": 0.677,
       "assistsPer90": 0.338,
       "shotsOnTargetPer90": 1.353,
@@ -14327,13 +17017,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.083,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 0.667,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.423,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.085,
+      "recoveries": 10,
       "recoveriesPer90": 0.846,
+      "clearances": 9,
       "clearancesPer90": 0.761,
+      "progressiveDeliveries": 23,
       "progressiveDeliveriesPer90": 1.945,
+      "dribbles": 7,
       "dribblesPer90": 0.592,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 71.6
     },
     "performance": {
@@ -14368,7 +17066,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vinícius Júnior",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2023/24",
-    "team": "Team 50051",
+    "team": "Real Madrid",
+    "teamCode": "RMA",
     "sourceTeamIds": [
       "50051"
     ],
@@ -14377,6 +17076,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 901,
       "appearances": 10,
+      "goals": 6,
+      "assists": 5,
+      "shotsOnTarget": 13,
+      "cleanSheets": 3,
+      "goalsConceded": 11,
       "goalsPer90": 0.599,
       "assistsPer90": 0.499,
       "shotsOnTargetPer90": 1.299,
@@ -14385,13 +17089,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.1,
       "pointsPerMatch": 2.2,
       "goalDifferencePerMatch": 0.9,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.499,
+      "tacklesWon": 3,
       "tacklesWonPer90": 0.3,
+      "recoveries": 9,
       "recoveriesPer90": 0.899,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 12,
       "progressiveDeliveriesPer90": 1.199,
+      "dribbles": 80,
       "dribblesPer90": 7.991,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 79.9
     },
     "performance": {
@@ -14428,7 +17140,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gianluigi Donnarumma",
     "role": "GK",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14437,6 +17150,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1380,
       "appearances": 15,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 6,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -14446,13 +17164,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 71.4,
       "pointsPerMatch": 2.067,
       "goalDifferencePerMatch": 1.533,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 0,
       "tacklesWonPer90": 0,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 8,
       "clearancesPer90": 0.522,
+      "progressiveDeliveries": 5,
       "progressiveDeliveriesPer90": 0.326,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 33,
       "claimsPer90": 2.152,
+      "saves": 39,
       "passCompletionPct": 78.8
     },
     "performance": {
@@ -14487,7 +17213,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Achraf Hakimi",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14496,6 +17223,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1540,
       "appearances": 17,
+      "goals": 4,
+      "assists": 5,
+      "shotsOnTarget": 15,
+      "cleanSheets": 7,
+      "goalsConceded": 15,
       "goalsPer90": 0.234,
       "assistsPer90": 0.292,
       "shotsOnTargetPer90": 0.877,
@@ -14504,13 +17236,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.882,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.353,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.234,
+      "tacklesWon": 11,
       "tacklesWonPer90": 0.643,
+      "recoveries": 74,
       "recoveriesPer90": 4.325,
+      "clearances": 20,
       "clearancesPer90": 1.169,
+      "progressiveDeliveries": 87,
       "progressiveDeliveriesPer90": 5.084,
+      "dribbles": 37,
       "dribblesPer90": 2.162,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 88.2
     },
     "performance": {
@@ -14545,7 +17285,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marquinhos",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14554,6 +17295,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1439,
       "appearances": 16,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 3,
+      "cleanSheets": 7,
+      "goalsConceded": 14,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.188,
@@ -14562,13 +17308,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.875,
       "pointsPerMatch": 1.938,
       "goalDifferencePerMatch": 1.313,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 10,
       "tacklesWonPer90": 0.625,
+      "recoveries": 109,
       "recoveriesPer90": 6.817,
+      "clearances": 56,
       "clearancesPer90": 3.502,
+      "progressiveDeliveries": 115,
       "progressiveDeliveriesPer90": 7.192,
+      "dribbles": 1,
       "dribblesPer90": 0.063,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 95.5
     },
     "performance": {
@@ -14603,7 +17357,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Alessandro Bastoni",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 50138",
+    "team": "Inter",
+    "teamCode": "INT",
     "sourceTeamIds": [
       "50138"
     ],
@@ -14612,6 +17367,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1078,
       "appearances": 14,
+      "goals": 0,
+      "assists": 1,
+      "shotsOnTarget": 0,
+      "cleanSheets": 7,
+      "goalsConceded": 16,
       "goalsPer90": 0,
       "assistsPer90": 0.083,
       "shotsOnTargetPer90": 0,
@@ -14620,13 +17380,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.143,
       "pointsPerMatch": 2.143,
       "goalDifferencePerMatch": 0.643,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 15,
       "tacklesWonPer90": 1.252,
+      "recoveries": 61,
       "recoveriesPer90": 5.093,
+      "clearances": 31,
       "clearancesPer90": 2.588,
+      "progressiveDeliveries": 57,
       "progressiveDeliveriesPer90": 4.759,
+      "dribbles": 13,
       "dribblesPer90": 1.085,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.8
     },
     "performance": {
@@ -14657,7 +17425,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Nuno Mendes",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14666,6 +17435,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1449,
       "appearances": 16,
+      "goals": 4,
+      "assists": 2,
+      "shotsOnTarget": 4,
+      "cleanSheets": 7,
+      "goalsConceded": 14,
       "goalsPer90": 0.248,
       "assistsPer90": 0.124,
       "shotsOnTargetPer90": 0.248,
@@ -14674,13 +17448,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.875,
       "pointsPerMatch": 1.938,
       "goalDifferencePerMatch": 1.25,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.248,
+      "tacklesWon": 23,
       "tacklesWonPer90": 1.429,
+      "recoveries": 87,
       "recoveriesPer90": 5.404,
+      "clearances": 31,
       "clearancesPer90": 1.925,
+      "progressiveDeliveries": 112,
       "progressiveDeliveriesPer90": 6.957,
+      "dribbles": 27,
       "dribblesPer90": 1.677,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 87.3
     },
     "performance": {
@@ -14715,7 +17497,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vitinha",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14724,6 +17507,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1448,
       "appearances": 17,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 7,
+      "cleanSheets": 7,
+      "goalsConceded": 15,
       "goalsPer90": 0.124,
       "assistsPer90": 0.124,
       "shotsOnTargetPer90": 0.435,
@@ -14732,13 +17520,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.882,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.353,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.062,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.311,
+      "recoveries": 66,
       "recoveriesPer90": 4.102,
+      "clearances": 15,
       "clearancesPer90": 0.932,
+      "progressiveDeliveries": 143,
       "progressiveDeliveriesPer90": 8.888,
+      "dribbles": 20,
       "dribblesPer90": 1.243,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94
     },
     "performance": {
@@ -14773,7 +17569,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Declan Rice",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -14782,6 +17579,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1005,
       "appearances": 13,
+      "goals": 4,
+      "assists": 2,
+      "shotsOnTarget": 7,
+      "cleanSheets": 6,
+      "goalsConceded": 9,
       "goalsPer90": 0.358,
       "assistsPer90": 0.179,
       "shotsOnTargetPer90": 0.627,
@@ -14790,13 +17592,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.692,
       "pointsPerMatch": 2.231,
       "goalDifferencePerMatch": 1.692,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.358,
+      "tacklesWon": 7,
       "tacklesWonPer90": 0.627,
+      "recoveries": 39,
       "recoveriesPer90": 3.493,
+      "clearances": 10,
       "clearancesPer90": 0.896,
+      "progressiveDeliveries": 57,
       "progressiveDeliveriesPer90": 5.104,
+      "dribbles": 9,
       "dribblesPer90": 0.806,
+      "claims": 1,
       "claimsPer90": 0.09,
+      "saves": 0,
       "passCompletionPct": 90
     },
     "performance": {
@@ -14827,7 +17637,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Lamine Yamal",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -14836,6 +17647,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1101,
       "appearances": 13,
+      "goals": 5,
+      "assists": 3,
+      "shotsOnTarget": 25,
+      "cleanSheets": 3,
+      "goalsConceded": 24,
       "goalsPer90": 0.409,
       "assistsPer90": 0.245,
       "shotsOnTargetPer90": 2.044,
@@ -14844,13 +17660,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.846,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.231,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.409,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.409,
+      "recoveries": 19,
       "recoveriesPer90": 1.553,
+      "clearances": 2,
       "clearancesPer90": 0.163,
+      "progressiveDeliveries": 39,
       "progressiveDeliveriesPer90": 3.188,
+      "dribbles": 109,
       "dribblesPer90": 8.91,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 78.4
     },
     "performance": {
@@ -14881,7 +17705,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Désiré Doué",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14890,6 +17715,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 742,
       "appearances": 16,
+      "goals": 5,
+      "assists": 5,
+      "shotsOnTarget": 17,
+      "cleanSheets": 7,
+      "goalsConceded": 14,
       "goalsPer90": 0.606,
       "assistsPer90": 0.606,
       "shotsOnTargetPer90": 2.062,
@@ -14898,13 +17728,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.875,
       "pointsPerMatch": 2.125,
       "goalDifferencePerMatch": 1.5,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.606,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.606,
+      "recoveries": 20,
       "recoveriesPer90": 2.426,
+      "clearances": 3,
       "clearancesPer90": 0.364,
+      "progressiveDeliveries": 17,
       "progressiveDeliveriesPer90": 2.062,
+      "dribbles": 52,
       "dribblesPer90": 6.307,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.2
     },
     "performance": {
@@ -14941,7 +17779,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ousmane Dembélé",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -14950,6 +17789,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1163,
       "appearances": 15,
+      "goals": 8,
+      "assists": 6,
+      "shotsOnTarget": 23,
+      "cleanSheets": 6,
+      "goalsConceded": 13,
       "goalsPer90": 0.619,
       "assistsPer90": 0.464,
       "shotsOnTargetPer90": 1.78,
@@ -14958,13 +17802,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.867,
       "pointsPerMatch": 2.067,
       "goalDifferencePerMatch": 1.467,
+      "nonPenaltyGoals": 8,
       "nonPenaltyGoalsPer90": 0.619,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.077,
+      "recoveries": 14,
       "recoveriesPer90": 1.083,
+      "clearances": 3,
       "clearancesPer90": 0.232,
+      "progressiveDeliveries": 51,
       "progressiveDeliveriesPer90": 3.947,
+      "dribbles": 62,
       "dribblesPer90": 4.798,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 82.8
     },
     "performance": {
@@ -15003,7 +17855,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Raphinha",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2024/25",
-    "team": "Team 50080",
+    "team": "Barcelona",
+    "teamCode": "BAR",
     "sourceTeamIds": [
       "50080"
     ],
@@ -15012,6 +17865,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1225,
       "appearances": 14,
+      "goals": 13,
+      "assists": 9,
+      "shotsOnTarget": 21,
+      "cleanSheets": 4,
+      "goalsConceded": 24,
       "goalsPer90": 0.955,
       "assistsPer90": 0.661,
       "shotsOnTargetPer90": 1.543,
@@ -15020,13 +17878,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.714,
       "pointsPerMatch": 2.071,
       "goalDifferencePerMatch": 1.357,
+      "nonPenaltyGoals": 13,
       "nonPenaltyGoalsPer90": 0.955,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.147,
+      "recoveries": 18,
       "recoveriesPer90": 1.322,
+      "clearances": 0,
       "clearancesPer90": 0,
+      "progressiveDeliveries": 24,
       "progressiveDeliveriesPer90": 1.763,
+      "dribbles": 23,
       "dribblesPer90": 1.69,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 78.9
     },
     "performance": {
@@ -15061,7 +17927,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "David Raya",
     "role": "GK",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -15070,6 +17937,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1290,
       "appearances": 14,
+      "goals": 0,
+      "assists": 0,
+      "shotsOnTarget": 0,
+      "cleanSheets": 9,
+      "goalsConceded": 5,
       "goalsPer90": 0,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0,
@@ -15079,13 +17951,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "savePct": 88.1,
       "pointsPerMatch": 2.429,
       "goalDifferencePerMatch": 1.571,
+      "nonPenaltyGoals": 0,
       "nonPenaltyGoalsPer90": 0,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.07,
+      "recoveries": 0,
       "recoveriesPer90": 0,
+      "clearances": 14,
       "clearancesPer90": 0.977,
+      "progressiveDeliveries": 30,
       "progressiveDeliveriesPer90": 2.093,
+      "dribbles": 1,
       "dribblesPer90": 0.07,
+      "claims": 41,
       "claimsPer90": 2.86,
+      "saves": 37,
       "passCompletionPct": 70.2
     },
     "performance": {
@@ -15116,7 +17996,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marcos Llorente",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 50124",
+    "team": "Atleti",
+    "teamCode": "ATM",
     "sourceTeamIds": [
       "50124"
     ],
@@ -15125,6 +18006,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1151,
       "appearances": 14,
+      "goals": 4,
+      "assists": 2,
+      "shotsOnTarget": 6,
+      "cleanSheets": 1,
+      "goalsConceded": 25,
       "goalsPer90": 0.313,
       "assistsPer90": 0.156,
       "shotsOnTargetPer90": 0.469,
@@ -15133,13 +18019,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.786,
       "pointsPerMatch": 1.286,
       "goalDifferencePerMatch": 0.357,
+      "nonPenaltyGoals": 4,
       "nonPenaltyGoalsPer90": 0.313,
+      "tacklesWon": 11,
       "tacklesWonPer90": 0.86,
+      "recoveries": 53,
       "recoveriesPer90": 4.144,
+      "clearances": 18,
       "clearancesPer90": 1.407,
+      "progressiveDeliveries": 45,
       "progressiveDeliveriesPer90": 3.519,
+      "dribbles": 5,
       "dribblesPer90": 0.391,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 90.6
     },
     "performance": {
@@ -15170,7 +18064,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Marquinhos",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -15179,6 +18074,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1320,
       "appearances": 15,
+      "goals": 2,
+      "assists": 0,
+      "shotsOnTarget": 2,
+      "cleanSheets": 5,
+      "goalsConceded": 20,
       "goalsPer90": 0.136,
       "assistsPer90": 0,
       "shotsOnTargetPer90": 0.136,
@@ -15187,13 +18087,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 1.933,
       "goalDifferencePerMatch": 1.067,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.136,
+      "tacklesWon": 8,
       "tacklesWonPer90": 0.545,
+      "recoveries": 73,
       "recoveriesPer90": 4.977,
+      "clearances": 34,
       "clearancesPer90": 2.318,
+      "progressiveDeliveries": 88,
       "progressiveDeliveriesPer90": 6,
+      "dribbles": 0,
       "dribblesPer90": 0,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 93.5
     },
     "performance": {
@@ -15228,7 +18136,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Gabriel",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -15237,6 +18146,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1002,
       "appearances": 12,
+      "goals": 1,
+      "assists": 1,
+      "shotsOnTarget": 1,
+      "cleanSheets": 8,
+      "goalsConceded": 4,
       "goalsPer90": 0.09,
       "assistsPer90": 0.09,
       "shotsOnTargetPer90": 0.09,
@@ -15245,13 +18159,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.333,
       "pointsPerMatch": 2.333,
       "goalDifferencePerMatch": 1.417,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.09,
+      "tacklesWon": 6,
       "tacklesWonPer90": 0.539,
+      "recoveries": 61,
       "recoveriesPer90": 5.479,
+      "clearances": 40,
       "clearancesPer90": 3.593,
+      "progressiveDeliveries": 38,
       "progressiveDeliveriesPer90": 3.413,
+      "dribbles": 2,
       "dribblesPer90": 0.18,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 89.4
     },
     "performance": {
@@ -15282,7 +18204,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Nuno Mendes",
     "role": "DEF",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -15291,6 +18214,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1403,
       "appearances": 17,
+      "goals": 2,
+      "assists": 2,
+      "shotsOnTarget": 6,
+      "cleanSheets": 5,
+      "goalsConceded": 23,
       "goalsPer90": 0.128,
       "assistsPer90": 0.128,
       "shotsOnTargetPer90": 0.385,
@@ -15299,13 +18227,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.353,
       "pointsPerMatch": 2.059,
       "goalDifferencePerMatch": 1.294,
+      "nonPenaltyGoals": 2,
       "nonPenaltyGoalsPer90": 0.128,
+      "tacklesWon": 15,
       "tacklesWonPer90": 0.962,
+      "recoveries": 87,
       "recoveriesPer90": 5.581,
+      "clearances": 16,
       "clearancesPer90": 1.026,
+      "progressiveDeliveries": 125,
       "progressiveDeliveriesPer90": 8.019,
+      "dribbles": 69,
       "dribblesPer90": 4.426,
+      "claims": 1,
       "claimsPer90": 0.064,
+      "saves": 0,
       "passCompletionPct": 89.5
     },
     "performance": {
@@ -15340,7 +18276,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Michael Olise",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -15349,6 +18286,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1081,
       "appearances": 13,
+      "goals": 5,
+      "assists": 8,
+      "shotsOnTarget": 19,
+      "cleanSheets": 2,
+      "goalsConceded": 19,
       "goalsPer90": 0.416,
       "assistsPer90": 0.666,
       "shotsOnTargetPer90": 1.582,
@@ -15357,13 +18299,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.462,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.538,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.416,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.167,
+      "recoveries": 22,
       "recoveriesPer90": 1.832,
+      "clearances": 3,
       "clearancesPer90": 0.25,
+      "progressiveDeliveries": 33,
       "progressiveDeliveriesPer90": 2.747,
+      "dribbles": 93,
       "dribblesPer90": 7.743,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.7
     },
     "performance": {
@@ -15394,7 +18344,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Declan Rice",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52280",
+    "team": "Arsenal",
+    "teamCode": "ARS",
     "sourceTeamIds": [
       "52280"
     ],
@@ -15403,6 +18354,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1070,
       "appearances": 13,
+      "goals": 1,
+      "assists": 2,
+      "shotsOnTarget": 3,
+      "cleanSheets": 8,
+      "goalsConceded": 5,
       "goalsPer90": 0.084,
       "assistsPer90": 0.168,
       "shotsOnTargetPer90": 0.252,
@@ -15411,13 +18367,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.385,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.462,
+      "nonPenaltyGoals": 1,
       "nonPenaltyGoalsPer90": 0.084,
+      "tacklesWon": 5,
       "tacklesWonPer90": 0.421,
+      "recoveries": 43,
       "recoveriesPer90": 3.617,
+      "clearances": 11,
       "clearancesPer90": 0.925,
+      "progressiveDeliveries": 89,
       "progressiveDeliveriesPer90": 7.486,
+      "dribbles": 9,
       "dribblesPer90": 0.757,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 92
     },
     "performance": {
@@ -15448,7 +18412,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Vitinha",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -15457,6 +18422,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1544,
       "appearances": 17,
+      "goals": 6,
+      "assists": 1,
+      "shotsOnTarget": 14,
+      "cleanSheets": 5,
+      "goalsConceded": 23,
       "goalsPer90": 0.35,
       "assistsPer90": 0.058,
       "shotsOnTargetPer90": 0.816,
@@ -15465,13 +18435,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.353,
       "pointsPerMatch": 2.059,
       "goalDifferencePerMatch": 1.294,
+      "nonPenaltyGoals": 5,
       "nonPenaltyGoalsPer90": 0.291,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.233,
+      "recoveries": 80,
       "recoveriesPer90": 4.663,
+      "clearances": 11,
       "clearancesPer90": 0.641,
+      "progressiveDeliveries": 180,
       "progressiveDeliveriesPer90": 10.492,
+      "dribbles": 9,
       "dribblesPer90": 0.525,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 94.6
     },
     "performance": {
@@ -15506,7 +18484,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Khvicha Kvaratskhelia",
     "role": "MID",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -15515,6 +18494,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1141,
       "appearances": 16,
+      "goals": 10,
+      "assists": 6,
+      "shotsOnTarget": 17,
+      "cleanSheets": 5,
+      "goalsConceded": 22,
       "goalsPer90": 0.789,
       "assistsPer90": 0.473,
       "shotsOnTargetPer90": 1.341,
@@ -15523,13 +18507,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 2,
       "goalDifferencePerMatch": 1.313,
+      "nonPenaltyGoals": 10,
       "nonPenaltyGoalsPer90": 0.789,
+      "tacklesWon": 4,
       "tacklesWonPer90": 0.316,
+      "recoveries": 26,
       "recoveriesPer90": 2.051,
+      "clearances": 8,
       "clearancesPer90": 0.631,
+      "progressiveDeliveries": 28,
       "progressiveDeliveriesPer90": 2.209,
+      "dribbles": 60,
       "dribblesPer90": 4.733,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 88
     },
     "performance": {
@@ -15566,7 +18558,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Ousmane Dembélé",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 52747",
+    "team": "Paris",
+    "teamCode": "PSG",
     "sourceTeamIds": [
       "52747"
     ],
@@ -15575,6 +18568,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 827,
       "appearances": 13,
+      "goals": 8,
+      "assists": 2,
+      "shotsOnTarget": 14,
+      "cleanSheets": 3,
+      "goalsConceded": 20,
       "goalsPer90": 0.871,
       "assistsPer90": 0.218,
       "shotsOnTargetPer90": 1.524,
@@ -15583,13 +18581,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.538,
       "pointsPerMatch": 2.077,
       "goalDifferencePerMatch": 1.308,
+      "nonPenaltyGoals": 6,
       "nonPenaltyGoalsPer90": 0.653,
+      "tacklesWon": 2,
       "tacklesWonPer90": 0.218,
+      "recoveries": 9,
       "recoveriesPer90": 0.979,
+      "clearances": 3,
       "clearancesPer90": 0.326,
+      "progressiveDeliveries": 43,
       "progressiveDeliveriesPer90": 4.68,
+      "dribbles": 15,
       "dribblesPer90": 1.632,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 85.7
     },
     "performance": {
@@ -15624,7 +18630,8 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "name": "Harry Kane",
     "role": "ATT",
     "era": "UEFA Champions League Team of the Season 2025/26",
-    "team": "Team 50037",
+    "team": "Bayern München",
+    "teamCode": "BAY",
     "sourceTeamIds": [
       "50037"
     ],
@@ -15633,6 +18640,11 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
     "stats": {
       "minutes": 1039,
       "appearances": 13,
+      "goals": 14,
+      "assists": 2,
+      "shotsOnTarget": 23,
+      "cleanSheets": 2,
+      "goalsConceded": 19,
       "goalsPer90": 1.213,
       "assistsPer90": 0.173,
       "shotsOnTargetPer90": 1.992,
@@ -15641,13 +18653,21 @@ export const SOCCER_PLAYER_DATABASE: SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.462,
       "pointsPerMatch": 2.385,
       "goalDifferencePerMatch": 1.385,
+      "nonPenaltyGoals": 10,
       "nonPenaltyGoalsPer90": 0.866,
+      "tacklesWon": 1,
       "tacklesWonPer90": 0.087,
+      "recoveries": 17,
       "recoveriesPer90": 1.473,
+      "clearances": 5,
       "clearancesPer90": 0.433,
+      "progressiveDeliveries": 32,
       "progressiveDeliveriesPer90": 2.772,
+      "dribbles": 28,
       "dribblesPer90": 2.425,
+      "claims": 0,
       "claimsPer90": 0,
+      "saves": 0,
       "passCompletionPct": 80.5
     },
     "performance": {
