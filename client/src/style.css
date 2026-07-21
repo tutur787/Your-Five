@@ -3228,6 +3228,36 @@ html[data-sport="soccer"] .standing-bidder-tag {
   padding: 24px 26px 30px;
 }
 
+.progress-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.progress-tabs button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.progress-tabs button:hover,
+.progress-tabs button.active {
+  border-bottom-color: var(--accent);
+  color: var(--text);
+}
+
+.progress-tabs button span {
+  margin-left: 5px;
+  color: var(--accent-2);
+  font-size: 9px;
+}
+
 .progress-sports {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3326,6 +3356,192 @@ html[data-sport="soccer"] .standing-bidder-tag {
 
 .history-result.win { color: var(--good); }
 .history-result.loss { color: var(--bad); }
+
+.achievements-summary {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 15px 16px;
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.achievements-summary strong {
+  color: var(--text);
+  font-size: 20px;
+}
+
+.achievement-total-track,
+.achievement-progress {
+  position: relative;
+  height: 5px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--border) 72%, transparent);
+}
+
+.achievement-total-track > span,
+.achievement-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--accent-2);
+  transition: width 300ms ease;
+}
+
+.achievement-category {
+  margin-top: 24px;
+}
+
+.achievement-category > h3 {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.achievement-badge {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  min-height: 106px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-alt);
+}
+
+.achievement-badge.earned {
+  border-color: color-mix(in srgb, var(--accent-2) 58%, var(--border));
+  background: color-mix(in srgb, var(--accent-2) 7%, var(--panel-alt));
+}
+
+.achievement-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--muted);
+}
+
+.achievement-badge.earned .achievement-icon {
+  border-color: var(--accent-2);
+  background: var(--accent-2);
+  color: #121417;
+}
+
+.achievement-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.achievement-copy {
+  min-width: 0;
+}
+
+.achievement-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.achievement-title-row strong {
+  font-size: 13px;
+}
+
+.achievement-title-row svg {
+  flex: 0 0 auto;
+  width: 11px;
+  color: var(--good);
+}
+
+.achievement-copy p {
+  margin: 5px 0 10px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.achievement-copy > small {
+  color: var(--accent-2);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.achievement-progress {
+  padding-right: 44px;
+  overflow: visible;
+}
+
+.achievement-progress small {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.achievement-toast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 150;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: min(320px, calc(100vw - 28px));
+  padding: 12px;
+  border: 1px solid var(--accent-2);
+  border-radius: 6px;
+  background: var(--panel);
+  box-shadow: 0 16px 38px rgb(0 0 0 / 34%);
+  animation: achievement-toast-in 220ms ease-out;
+}
+
+.achievement-toast-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-2);
+  color: #121417;
+}
+
+.achievement-toast > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.achievement-toast small {
+  color: var(--accent-2);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.achievement-toast strong {
+  font-size: 13px;
+}
+
+@keyframes achievement-toast-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .account-button {
   overflow: hidden;
@@ -3533,6 +3749,20 @@ html[data-sport="soccer"] .standing-bidder-tag {
 
   .progress-sports {
     grid-template-columns: 1fr;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .achievement-toast {
+    right: 14px;
+    bottom: 14px;
   }
 
   .progress-history-row {

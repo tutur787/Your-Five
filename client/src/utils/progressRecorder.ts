@@ -1,11 +1,13 @@
-import { MatchState, SeatId, teamScore } from "@fiveaside/shared/core";
+import { MatchState, SeatId, teamScore, validSlotsFor } from "@fiveaside/shared/core";
 import {
   loadProgress,
   ProgressHistoryEntry,
   ProgressMode,
   ProgressRecord,
   ProgressState,
+  ACHIEVEMENT_UNLOCKED_EVENT,
   saveProgress,
+  unlockAchievements,
 } from "./progressStorage";
 
 const emptyRecord = (): ProgressRecord => ({ wins: 0, losses: 0, ties: 0 });
@@ -53,7 +55,7 @@ export function recordCompletedMatch(
     sportProgress.bestScore = Math.max(scoreFor, sportProgress.bestScore ?? Number.NEGATIVE_INFINITY);
   }
 
-  progress.recent = [{
+  const entry: ProgressHistoryEntry = {
     matchId: state.matchId,
     completedAt: new Date().toISOString(),
     sport: state.sport,
@@ -65,8 +67,19 @@ export function recordCompletedMatch(
     opponentLineup: state.teams[otherSeat].roster.map((pick) => pick.player.name),
     targetScore: options.targetScore,
     targetBeaten: options.targetScore === undefined ? undefined : scoreFor > options.targetScore,
-  }, ...progress.recent];
+    completionReason: state.completionReason ?? "score",
+    budgetLeft: state.teams[ownSeat].budget,
+    skipsUsed: state.teams[ownSeat].skipsUsed,
+    maxPickPrice: Math.max(0, ...state.teams[ownSeat].roster.map((pick) => pick.price)),
+    allPositionsValid: state.teams[ownSeat].roster.length === 5
+      && state.teams[ownSeat].roster.every((pick) => validSlotsFor(pick.player).includes(pick.slot)),
+  };
+  progress.recent = [entry, ...progress.recent];
   progress.recordedMatchIds = [...progress.recordedMatchIds, state.matchId];
+  const newlyUnlocked = unlockAchievements(progress, entry);
   saveProgress(progress, options.storage);
+  if (newlyUnlocked.length > 0 && options.storage === undefined && typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent(ACHIEVEMENT_UNLOCKED_EVENT, { detail: newlyUnlocked }));
+  }
   return progress;
 }

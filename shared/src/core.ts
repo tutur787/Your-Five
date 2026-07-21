@@ -6,3 +6,4 @@ export * from "./aiOpponent";
 export * from "./protocol";
 export * from "./runtimeTypes";
 export * from "./runtimeMatch";
+export * from "./achievements";

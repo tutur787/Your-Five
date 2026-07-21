@@ -41,6 +41,8 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   assert(progress.sports.basketball.overall.wins === 1, "a completed match is recorded exactly once");
   assert(progress.sports.basketball.currentWinStreak === 1, "a win starts the sport win streak");
   assert(progress.recent.length === 1, "duplicate completion effects do not duplicate history");
+  assert(progress.achievements.some((achievement) => achievement.id === "first-five"), "the first completed draft unlocks its milestone");
+  assert(progress.achievements.some((achievement) => achievement.id === "cap-manager"), "match-specific budget achievements are evaluated");
 
   recordCompletedMatch(completedMatch("basketball", "daily-tie", "tie"), "daily", "A", { storage });
   progress = loadProgress(storage);
@@ -61,6 +63,21 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   progress = loadProgress(storage);
   assert(progress.recent.length === 10, "recent history is capped at ten drafts");
   assert(progress.recordedMatchIds.length === 15, "exactly-once IDs remain available beyond the visible history");
+  assert(progress.achievements.some((achievement) => achievement.id === "getting-the-hang"), "aggregate draft milestones unlock from all-time records");
+}
+
+{
+  const storage = new MemoryStorage();
+  recordCompletedMatch(completedMatch("soccer", "local-only", "A"), "local", null, { storage });
+  assert(loadProgress(storage).achievements.length === 0, "couch drafts do not unlock competitive achievements");
+}
+
+{
+  const storage = new MemoryStorage();
+  for (let index = 0; index < 7; index++) {
+    recordCompletedMatch(completedMatch("basketball", `daily-${index}`, "A"), "daily", "A", { storage });
+  }
+  assert(loadProgress(storage).achievements.some((achievement) => achievement.id === "daily-routine"), "seven daily drafts unlock Daily Routine");
 }
 
 {
@@ -74,6 +91,7 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   );
   assert(progress.sports.soccer.bestScore === 87.5, "legacy daily best scores migrate");
   assert(progress.recent.length === 0, "legacy aggregate records do not invent recent drafts");
+  assert(progress.achievements.some((achievement) => achievement.id === "against-the-odds"), "legacy aggregate records unlock achievements they can prove");
   assert(storage.getItem(PROGRESS_KEY) !== null, "migration writes the versioned progress document");
 }
 

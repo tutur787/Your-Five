@@ -12,6 +12,7 @@ import {
   TermsPage,
 } from "./pages/InfoPages";
 import { SportProvider } from "./hooks/useSport";
+import { AchievementToast } from "./components/ProgressModal";
 
 const Landing = lazy(() => import("./pages/Landing").then((module) => ({ default: module.Landing })));
 const AiLanding = lazy(() => import("./pages/AiLanding").then((module) => ({ default: module.AiLanding })));
@@ -34,6 +35,7 @@ export default function App() {
   return (
     <SportProvider>
       <SeoMetadata />
+      <AchievementToast />
       <Suspense fallback={<div className="route-loading"><span className="search-pulse" /> Loading Your Five</div>}>
       <Routes>
         <Route path="/" element={<Landing />} />

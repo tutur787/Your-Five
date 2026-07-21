@@ -9,3 +9,4 @@ export * from "./runtimeMatch";
 export * from "./dailySeed";
 export * from "./aiOpponent";
 export * from "./protocol";
+export * from "./achievements";

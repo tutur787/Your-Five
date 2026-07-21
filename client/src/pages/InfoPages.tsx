@@ -331,7 +331,7 @@ export function PrivacyPage() {
             <li>your selected basketball or football mode preference;</li>
             <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
-            <li>your optional online nickname, recent draft history, streaks, mode records, and challenge results;</li>
+            <li>your optional online nickname, recent draft history, streaks, mode records, achievements, and challenge results;</li>
             <li>a random anonymous client identifier used to apply basic room-creation and matchmaking rate limits; and</li>
             <li>a temporary private-room seat token in session storage so you can reconnect during that browser session.</li>
           </ul>
@@ -345,7 +345,7 @@ export function PrivacyPage() {
           <p>
             You may continue as a guest or sign in with Google. When you sign in, Google provides a stable account
             identifier, your email address, and your Google profile name. Your Five stores those values, your chosen
-            display name, account creation time, revocable session records, and your synced game progress in Cloudflare
+            display name, account creation time, revocable session records, and your synced game progress and achievements in Cloudflare
             Durable Objects. Your Five does not receive or store your Google password and does not retain Google's access token.
             Google's handling of sign-in information is governed by the
             {" "}<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy Policy</a>.

@@ -1,34 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="court" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#bd672f"/>
-      <stop offset="1" stop-color="#e3944d"/>
-    </linearGradient>
-    <linearGradient id="pitch" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#245d3d"/>
-      <stop offset="1" stop-color="#3c8b58"/>
-    </linearGradient>
-  </defs>
   <rect width="1200" height="630" fill="#0d0f11"/>
-  <path d="M0 0h460L330 630H0z" fill="url(#court)"/>
-  <path d="M1200 0H740l130 630h330z" fill="url(#pitch)"/>
-  <g opacity=".42" fill="none" stroke="#fff7e9" stroke-width="5">
-    <path d="M24 40h375l-91 550H24z"/>
-    <circle cx="215" cy="315" r="113"/>
-    <path d="M81 40v166h247V40"/>
+  <rect width="600" height="8" fill="#e87532"/>
+  <rect x="600" width="600" height="8" fill="#36ad68"/>
+
+  <g opacity=".2" stroke="#6c737c" stroke-width="1">
+    <path d="M72 8v622M128 8v622M184 8v622M240 8v622M296 8v622M352 8v622M408 8v622M464 8v622M520 8v622M576 8v622M632 8v622"/>
   </g>
-  <g opacity=".42" fill="none" stroke="#f3f7f4" stroke-width="5">
-    <path d="M801 40h375v550H892z"/>
-    <path d="M801 205h269V40M892 425h218v165"/>
-    <circle cx="1003" cy="315" r="86"/>
+
+  <g transform="translate(72 68)">
+    <rect width="70" height="70" rx="14" fill="#171b20" stroke="#394048" stroke-width="2"/>
+    <path d="M0 0h70v70z" fill="#e87532" clip-path="url(#leftMark)"/>
+    <path d="M0 0h70v70z" fill="#36ad68" clip-path="url(#rightMark)"/>
+    <defs>
+      <clipPath id="leftMark"><path d="M0 0h70L0 70z"/></clipPath>
+      <clipPath id="rightMark"><path d="M70 0v70H0z"/></clipPath>
+    </defs>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#fffaf2" stroke-width="3"/>
+    <path d="M18 26c11 3 23 3 35 0M22 50c8-8 19-13 32-16M34 15c-2 11-1 23 3 40" fill="none" stroke="#fffaf2" stroke-width="2.4" stroke-linecap="round"/>
   </g>
-  <rect x="444" y="86" width="312" height="458" rx="10" fill="#111417" stroke="#343940" stroke-width="3"/>
-  <rect x="548" y="122" width="104" height="104" rx="22" fill="#e87532"/>
-  <circle cx="600" cy="174" r="34" fill="none" stroke="#fffaf1" stroke-width="4"/>
-  <path d="M567 164c22 5 44 4 67-4M575 201c16-14 36-24 60-29M598 141c-3 18-2 37 5 66" fill="none" stroke="#fffaf1" stroke-width="3" stroke-linecap="round"/>
-  <text x="600" y="296" fill="#f5f1e8" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" text-anchor="middle">YOUR FIVE</text>
-  <text x="600" y="345" fill="#f0b35a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" text-anchor="middle" letter-spacing="3">BID. DRAFT. BUILD.</text>
-  <line x1="502" y1="385" x2="698" y2="385" stroke="#343940" stroke-width="2"/>
-  <text x="600" y="438" fill="#9ca3aa" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">BASKETBALL + FOOTBALL</text>
-  <text x="600" y="476" fill="#f5f1e8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" text-anchor="middle">$20. FIVE SPOTS.</text>
+
+  <text x="166" y="93" fill="#f6f2ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900">YOUR FIVE</text>
+  <text x="166" y="121" fill="#929aa4" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">THE $20 SPORTS DRAFT</text>
+
+  <text x="72" y="246" fill="#f6f2ea" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="76" font-weight="900">BID FOR LEGENDS.</text>
+  <text x="72" y="326" fill="#f6f2ea" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="76" font-weight="900">BUILD YOUR FIVE.</text>
+
+  <rect x="72" y="376" width="74" height="5" fill="#e87532"/>
+  <rect x="146" y="376" width="74" height="5" fill="#36ad68"/>
+  <text x="72" y="430" fill="#b4bac2" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">BASKETBALL + FOOTBALL</text>
+  <text x="72" y="475" fill="#f0b35a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800">HEAD-TO-HEAD AUCTIONS · FIVE-PLAYER LINEUPS</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="72" y="526" fill="#f6f2ea" font-size="19">$20 CAP</text>
+    <text x="178" y="526" fill="#5f6770" font-size="19">/</text>
+    <text x="200" y="526" fill="#f6f2ea" font-size="19">5 SPOTS</text>
+    <text x="306" y="526" fill="#5f6770" font-size="19">/</text>
+    <text x="328" y="526" fill="#f6f2ea" font-size="19">1 WINNER</text>
+  </g>
+  <text x="72" y="580" fill="#aeb5bd" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800">your-five.com</text>
+
+  <path d="M770 8h430v311H720z" fill="#c96f34"/>
+  <path d="M720 319h480v311H770z" fill="#286c48"/>
+
+  <g fill="none" stroke="#fff8ee" stroke-width="3.5" opacity=".62">
+    <rect x="830" y="22" width="330" height="280"/>
+    <path d="M942 22v113h106V22"/>
+    <path d="M955 135a40 40 0 0 0 80 0"/>
+    <path d="M955 135a40 40 0 0 1 80 0" stroke-dasharray="7 7"/>
+    <path d="M850 22v86c0 63 65 102 145 102s145-39 145-102V22"/>
+    <path d="M995 22v8M975 30h40" stroke-width="4"/>
+    <circle cx="995" cy="39" r="6"/>
+    <path d="M969 39q26 39 52 0"/>
+    <path d="M956 302a39 39 0 0 1 78 0"/>
+  </g>
+
+  <g fill="none" stroke="#eef7f0" stroke-width="4" opacity=".6">
+    <rect x="790" y="340" width="380" height="260"/>
+    <path d="M870 600v-108h220v108"/>
+    <path d="M925 600v-49h110v49"/>
+    <path d="M950 600v17h60v-17"/>
+    <circle cx="980" cy="526" r="5" fill="#eef7f0" stroke="none"/>
+    <path d="M929 492a56 56 0 0 1 102 0"/>
+    <path d="M930 340a50 50 0 0 0 100 0"/>
+    <path d="M790 580a20 20 0 0 0 20 20M1150 600a20 20 0 0 0 20-20"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="900" letter-spacing="1.5">
+    <text x="848" y="288" fill="#fff8ee" opacity=".82">BASKETBALL</text>
+    <text x="808" y="367" fill="#eef7f0" opacity=".82">FOOTBALL</text>
+  </g>
 </svg>

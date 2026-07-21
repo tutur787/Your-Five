@@ -1,3 +1,5 @@
+import { ACHIEVEMENT_IDS, type AchievementId, type AchievementUnlock } from "@fiveaside/shared/core";
+
 const SPORTS = ["basketball", "soccer"] as const;
 const MODES = [
   "ai-casual",
@@ -32,6 +34,11 @@ interface HistoryEntry {
   opponentLineup: string[];
   targetScore?: number;
   targetBeaten?: boolean;
+  completionReason?: "score" | "forfeit";
+  budgetLeft?: number;
+  skipsUsed?: number;
+  maxPickPrice?: number;
+  allPositionsValid?: boolean;
 }
 
 interface SportProgress {
@@ -47,6 +54,7 @@ export interface AccountProgress {
   recent: HistoryEntry[];
   recordedMatchIds: string[];
   migratedLegacy: boolean;
+  achievements: AchievementUnlock[];
 }
 
 const MAX_RECENT = 10;
@@ -68,6 +76,7 @@ export function emptyAccountProgress(): AccountProgress {
     recent: [],
     recordedMatchIds: [],
     migratedLegacy: true,
+    achievements: [],
   };
 }
 
@@ -123,7 +132,26 @@ function sanitizeHistory(value: unknown): HistoryEntry | null {
     opponentLineup: sanitizeLineup(raw.opponentLineup),
     targetScore: raw.targetScore === undefined ? undefined : boundedScore(raw.targetScore),
     targetBeaten: typeof raw.targetBeaten === "boolean" ? raw.targetBeaten : undefined,
+    completionReason: raw.completionReason === "forfeit" ? "forfeit" : "score",
+    budgetLeft: raw.budgetLeft === undefined ? undefined : boundedInteger(raw.budgetLeft, 20),
+    skipsUsed: raw.skipsUsed === undefined ? undefined : boundedInteger(raw.skipsUsed, 100),
+    maxPickPrice: raw.maxPickPrice === undefined ? undefined : boundedInteger(raw.maxPickPrice, 20),
+    allPositionsValid: typeof raw.allPositionsValid === "boolean" ? raw.allPositionsValid : undefined,
   };
+}
+
+function sanitizeAchievements(value: unknown): AchievementUnlock[] {
+  if (!Array.isArray(value)) return [];
+  const validIds = new Set<string>(ACHIEVEMENT_IDS);
+  const entries = value.flatMap((candidate): AchievementUnlock[] => {
+    const raw = objectValue(candidate);
+    const id = sanitizeText(raw.id) as AchievementId;
+    const unlocked = typeof raw.unlockedAt === "string" ? new Date(raw.unlockedAt) : null;
+    if (!validIds.has(id) || !unlocked || !Number.isFinite(unlocked.getTime())) return [];
+    const matchId = sanitizeText(raw.matchId);
+    return [{ id, unlockedAt: unlocked.toISOString(), matchId: matchId || undefined }];
+  });
+  return [...new Map(entries.map((entry) => [entry.id, entry])).values()];
 }
 
 function sanitizeSport(value: unknown): SportProgress {
@@ -162,6 +190,7 @@ export function sanitizeAccountProgress(value: unknown): AccountProgress {
     recent: dedupedRecent,
     recordedMatchIds: [...new Set(ids)].slice(-MAX_RECORDED_IDS),
     migratedLegacy: true,
+    achievements: sanitizeAchievements(raw.achievements),
   };
 }
 
@@ -206,5 +235,11 @@ export function mergeAccountProgress(stored: unknown, incoming: unknown): Accoun
     .sort((a, b) => b.completedAt.localeCompare(a.completedAt))
     .slice(0, MAX_RECENT);
   next.recordedMatchIds = [...seen].slice(-MAX_RECORDED_IDS);
+  const achievements = new Map(next.achievements.map((achievement) => [achievement.id, achievement]));
+  for (const achievement of candidate.achievements) {
+    const existing = achievements.get(achievement.id);
+    if (!existing || achievement.unlockedAt < existing.unlockedAt) achievements.set(achievement.id, achievement);
+  }
+  next.achievements = [...achievements.values()];
   return next;
 }
