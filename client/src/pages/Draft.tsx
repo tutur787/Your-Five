@@ -34,28 +34,28 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
         <ActionPanel state={state} dispatch={dispatch} canAct={canAct} actingSeat={acting} seatLabel={label} turnDeadlineAt={turnDeadlineAt} />
       )}
 
-      <div className="scoreboard">
-        <TeamPanel
-          team={state.teams.A}
-          label={label("A")}
-          isActing={acting === "A"}
-          editable={canEdit("A")}
-          onChangeSlot={changeSlot("A")}
-          inCatchUp={state.phase === "catchUp" && state.turn === "A"}
-          sport={state.sport}
-          showPlayerScores={state.phase === "complete"}
-        />
-        <TeamPanel
-          team={state.teams.B}
-          label={label("B")}
-          isActing={acting === "B"}
-          editable={canEdit("B")}
-          onChangeSlot={changeSlot("B")}
-          inCatchUp={state.phase === "catchUp" && state.turn === "B"}
-          sport={state.sport}
-          showPlayerScores={state.phase === "complete"}
-        />
-      </div>
+      {state.phase !== "complete" && (
+        <div className="scoreboard">
+          <TeamPanel
+            team={state.teams.A}
+            label={label("A")}
+            isActing={acting === "A"}
+            editable={canEdit("A")}
+            onChangeSlot={changeSlot("A")}
+            inCatchUp={state.phase === "catchUp" && state.turn === "A"}
+            sport={state.sport}
+          />
+          <TeamPanel
+            team={state.teams.B}
+            label={label("B")}
+            isActing={acting === "B"}
+            editable={canEdit("B")}
+            onChangeSlot={changeSlot("B")}
+            inCatchUp={state.phase === "catchUp" && state.turn === "B"}
+            sport={state.sport}
+          />
+        </div>
+      )}
 
       {state.phase === "complete" && (
         <Results

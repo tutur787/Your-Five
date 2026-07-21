@@ -2397,6 +2397,11 @@ input[type="text"] {
   font-size: 34px;
 }
 
+.results-rematch-row {
+  width: 100%;
+  justify-content: center;
+}
+
 .final-scoreline {
   display: flex;
   align-items: baseline;
@@ -2419,6 +2424,9 @@ input[type="text"] {
 
 .result-team {
   min-width: 0;
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
   border-top: 1px solid var(--border);
   padding-top: 16px;
 }
@@ -2817,6 +2825,11 @@ input[type="text"] {
   .scoreboard,
   .results-grid {
     grid-template-columns: 1fr;
+  }
+
+  .result-team {
+    display: block;
+    grid-row: auto;
   }
 
   .team-label {

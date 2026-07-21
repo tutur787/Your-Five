@@ -62,7 +62,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
         })}
       </div>
       {onRematch && (
-        <div className="action-row">
+        <div className="action-row results-rematch-row">
           <button className="primary" onClick={onRematch}>
             Play again
           </button>
