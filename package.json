@@ -21,8 +21,9 @@
     "test:progress": "tsx client/src/utils/progressStorage.test.ts",
     "test:accounts": "tsx worker/src/accountProgress.test.ts",
     "test:soccer": "tsx shared/src/soccerEngine.test.ts",
-    "data:soccer": "node scripts/generate-soccer-data.mjs",
-    "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify"
+    "data:soccer": "node scripts/generate-soccer-data.mjs && node scripts/generate-soccer-teammates.mjs",
+    "data:soccer-teammates": "node scripts/generate-soccer-teammates.mjs",
+    "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify && node scripts/generate-soccer-teammates.mjs --verify"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

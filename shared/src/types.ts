@@ -158,6 +158,8 @@ export interface SoccerPlayerCard {
   honors?: SoccerHonors;
   sourcePositionLabels: string[];
   sourceRevision: string;
+  /** IDs of selected-player cards with a verified same-club UEFA match appearance. */
+  chemistryWith?: string[];
 }
 
 export type PlayerCard = BasketballPlayerCard | SoccerPlayerCard;

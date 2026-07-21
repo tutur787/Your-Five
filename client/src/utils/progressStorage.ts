@@ -100,6 +100,24 @@ function sanitizeRecord(value: unknown): ProgressRecord {
   };
 }
 
+function sanitizeModes(value: unknown): Partial<Record<ProgressMode, ProgressRecord>> {
+  if (typeof value !== "object" || value === null) return {};
+  return Object.fromEntries(
+    Object.entries(value).map(([mode, record]) => [mode, sanitizeRecord(record)])
+  ) as Partial<Record<ProgressMode, ProgressRecord>>;
+}
+
+function sanitizeSportProgress(value: unknown): SportProgress {
+  const raw = typeof value === "object" && value !== null ? value as Partial<SportProgress> : {};
+  const bestScore = Number(raw.bestScore);
+  return {
+    overall: sanitizeRecord(raw.overall),
+    modes: sanitizeModes(raw.modes),
+    currentWinStreak: Math.max(0, Math.floor(Number(raw.currentWinStreak) || 0)),
+    bestScore: Number.isFinite(bestScore) && bestScore > 0 ? bestScore : null,
+  };
+}
+
 function addRecord(target: ProgressRecord, source: ProgressRecord): void {
   target.wins += source.wins;
   target.losses += source.losses;
@@ -251,8 +269,8 @@ export function loadProgress(storage?: Storage): ProgressState {
         ...parsed,
         version: 1,
         sports: {
-          basketball: { ...emptySport(), ...parsed.sports?.basketball, overall: sanitizeRecord(parsed.sports?.basketball?.overall) },
-          soccer: { ...emptySport(), ...parsed.sports?.soccer, overall: sanitizeRecord(parsed.sports?.soccer?.overall) },
+          basketball: sanitizeSportProgress(parsed.sports?.basketball),
+          soccer: sanitizeSportProgress(parsed.sports?.soccer),
         },
         recent: Array.isArray(parsed.recent) ? parsed.recent.slice(0, MAX_RECENT) : [],
         recordedMatchIds: Array.isArray(parsed.recordedMatchIds) ? parsed.recordedMatchIds.slice(-MAX_RECORDED_IDS) : [],
@@ -273,7 +291,7 @@ export function loadProgress(storage?: Storage): ProgressState {
 }
 
 export function progressRecordFor(sport: Sport, mode: ProgressMode, storage?: Storage): ProgressRecord {
-  return { ...(loadProgress(storage).sports[sport].modes[mode] ?? emptyRecord()) };
+  return { ...(loadProgress(storage).sports[sport].modes?.[mode] ?? emptyRecord()) };
 }
 
 export function saveProgress(progress: ProgressState, storage?: Storage, notify = true): void {

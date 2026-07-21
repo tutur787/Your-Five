@@ -71,22 +71,12 @@ assert(validSlotsFor(attacker).includes("ATT_L") && validSlotsFor(attacker).incl
 assert(positionPenaltyForSlot(defender, "MID") === 6, "DEF to MID costs 6");
 assert(positionPenaltyForSlot(defender, "ATT_L") === 16, "DEF to ATT costs 16");
 
-const chemistryCandidates = SOCCER_PLAYER_DATABASE.filter((player) =>
-  SOCCER_PLAYER_DATABASE.some((candidate) =>
-    candidate.id !== player.id &&
-    candidate.edition === player.edition &&
-    player.sourceTeamIds.some((teamId) => candidate.sourceTeamIds.includes(teamId))
-  )
-);
-const chemistryCandidate = chemistryCandidates[0]!;
-const chemistryMate = SOCCER_PLAYER_DATABASE.find((candidate) =>
-  candidate.id !== chemistryCandidate.id &&
-  candidate.edition === chemistryCandidate.edition &&
-  chemistryCandidate.sourceTeamIds.some((teamId) => candidate.sourceTeamIds.includes(teamId))
-)!;
+const chemistryCandidate = SOCCER_PLAYER_DATABASE.find((player) => player.id === "sadio-mane-toty2019")!;
+const chemistryMate = SOCCER_PLAYER_DATABASE.find((player) => player.id === "trent-alexander-arnold-ucl2022")!;
 const chemistryPreviewTeam = emptyTeam();
 chemistryPreviewTeam.roster = [{ player: chemistryMate, price: 1, slot: validSlotsFor(chemistryMate)[0] }];
-assert(chemistryPartnersForPlayer(chemistryPreviewTeam, chemistryCandidate)[0]?.player.id === chemistryMate.id, "football auction chemistry preview uses the same-edition, same-club scoring relationship");
+assert(chemistryCandidate.edition !== chemistryMate.edition, "cross-edition chemistry fixture uses different card editions");
+assert(chemistryPartnersForPlayer(chemistryPreviewTeam, chemistryCandidate)[0]?.player.id === chemistryMate.id, "Mané 2019 links with historical Liverpool teammate Trent 2021/22");
 assert(positionPenaltyForSlot(byRole("MID"), "ATT_R") === 5, "MID to ATT costs 5");
 assert(positionPenaltyForSlot(byRole("GK"), "ATT_L") === 30, "GK to outfield costs 30");
 
@@ -107,11 +97,11 @@ pool.forEach((player) => primaryCounts[player.role]++);
 assert(primaryCounts.GK === 3 && primaryCounts.DEF === 4 && primaryCounts.MID === 4 && primaryCounts.ATT === 7, "pool contains 3 GK, 4 DEF, 4 MID, and 7 ATT primary cards");
 assert(new Set(pool.map((player) => player.sourceIdentity)).size === pool.length, "a pool never contains two editions of the same player");
 
-const teammateGroups = new Map<string, SoccerPlayerCard[]>();
-for (const player of SOCCER_PLAYER_DATABASE.filter((card) => card.edition === "TOTY2011")) {
-  for (const teamId of player.sourceTeamIds) teammateGroups.set(teamId, [...(teammateGroups.get(teamId) ?? []), player]);
-}
-const chemistryCards = [...teammateGroups.values()].sort((a, b) => b.length - a.length)[0].slice(0, 5);
+const chemistryCards = SOCCER_PLAYER_DATABASE
+  .map((player) => ({ player, links: player.chemistryWith?.length ?? 0 }))
+  .sort((a, b) => b.links - a.links)
+  .slice(0, 5)
+  .map(({ player }) => player);
 const chemistryTeam = emptyTeam();
 chemistryTeam.roster = chemistryCards.map((player, index) => ({ player, price: 1, slot: ["GK", "DEF", "MID", "ATT_L", "ATT_R"][index] as any }));
 assert(soccerScoreComponents(chemistryTeam).chemistry.bonus === 6, "chemistry is capped at 6");

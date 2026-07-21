@@ -10,5 +10,5 @@ export interface SportRuntime {
 
 export const POOL_VERSIONS: Record<Sport, string> = {
   basketball: "nba-v1",
-  soccer: "uefa-v4",
+  soccer: "uefa-v5",
 };

@@ -257,7 +257,7 @@ export function LineupCourt({
                   <span className="court-player-name">
                     {pick.player.name}
                     {bondedWith && (
-                      <span className="chemistry-flame" title={`${sport === "soccer" ? "Same-edition teammates" : "Real NBA teammates"} with ${bondedWith.join(", ")}`}>
+                      <span className="chemistry-flame" title={`${sport === "soccer" ? "Verified club teammates" : "Real NBA teammates"} with ${bondedWith.join(", ")}`}>
                         LINK
                       </span>
                     )}

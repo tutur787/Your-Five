@@ -109,8 +109,12 @@ export interface SoccerChemistryPair {
   b: RosterPick;
 }
 
-/** The exact same-edition, same-club test used by both scoring and auction previews. */
+/** The historical teammate test shared by scoring and auction previews. */
 export function soccerPlayersHaveChemistry(a: SoccerPlayerCard, b: SoccerPlayerCard): boolean {
+  if (a.chemistryWith || b.chemistryWith) {
+    return Boolean(a.chemistryWith?.includes(b.id) || b.chemistryWith?.includes(a.id));
+  }
+  // Rooms created before the historical teammate ledger retain their old chemistry behavior.
   return a.edition === b.edition && a.sourceTeamIds.some((teamId) => b.sourceTeamIds.includes(teamId));
 }
 

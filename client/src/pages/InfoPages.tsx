@@ -217,9 +217,10 @@ export function ScoringPage() {
           </p>
           <p>
             Tactical fit can reward a creator, defensive anchor, scorer, and secure goalkeeper, while too many
-            attack-dominant players can reduce the bonus. Same-edition club teammates add 2 points per pair, capped
-            at 6. Position penalties are 5 between MID and ATT, 6 between DEF and MID, 16 between DEF and ATT, and
-            30 between GK and any outfield role.
+            attack-dominant players can reduce the bonus. Verified historical club teammates add 2 points per pair,
+            capped at 6. A teammate link requires both players to have appeared for the same club in the same sourced
+            UEFA match, regardless of which card editions are drafted. Position penalties are 5 between MID and ATT,
+            6 between DEF and MID, 16 between DEF and ATT, and 30 between GK and any outfield role.
           </p>
           <div className="formula-block"><code>score = five card qualities + team success + honors + tactical fit + chemistry - mismatches</code></div>
         </div>

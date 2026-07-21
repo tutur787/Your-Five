@@ -1,6 +1,6 @@
 import { createSeededMatch, validSlotsFor, type MatchState, type Sport } from "@fiveaside/shared";
 import { recordCompletedMatch } from "./progressRecorder";
-import { loadProgress, PROGRESS_KEY } from "./progressStorage";
+import { loadProgress, progressRecordFor, PROGRESS_KEY } from "./progressStorage";
 
 class MemoryStorage implements Storage {
   private values = new Map<string, string>();
@@ -93,6 +93,23 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   assert(progress.recent.length === 0, "legacy aggregate records do not invent recent drafts");
   assert(progress.achievements.some((achievement) => achievement.id === "against-the-odds"), "legacy aggregate records unlock achievements they can prove");
   assert(storage.getItem(PROGRESS_KEY) !== null, "migration writes the versioned progress document");
+}
+
+{
+  const storage = new MemoryStorage();
+  storage.setItem(PROGRESS_KEY, JSON.stringify({
+    version: 1,
+    sports: {
+      basketball: { overall: { wins: "2" }, modes: null, currentWinStreak: "bad", bestScore: "bad" },
+      soccer: null,
+    },
+    migratedLegacy: true,
+  }));
+  const progress = loadProgress(storage);
+  assert(progress.sports.basketball.overall.wins === 2, "partially valid legacy progress keeps its safe record values");
+  assert(Object.keys(progress.sports.basketball.modes).length === 0, "invalid legacy mode records normalize to an empty map");
+  assert(progress.sports.soccer.currentWinStreak === 0, "missing sport progress normalizes to safe defaults");
+  assert(progressRecordFor("basketball", "ai-competitive", storage).wins === 0, "the AI chooser can read a repaired legacy mode record");
 }
 
 if (failures > 0) {
