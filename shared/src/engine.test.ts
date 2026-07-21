@@ -17,6 +17,7 @@ import {
   MIN_ELIGIBLE_PER_POSITION_IN_POOL,
   nextSkipPrice,
   PENALTY_PER_WRONG_POSITION,
+  playerScoreContributions,
   positionPenaltyForSlot,
   scoreComponents,
   STACKING_PENALTY_PER_EXTRA_ALPHA,
@@ -587,6 +588,9 @@ function giveAllToA(players: PlayerCard[]): MatchState {
   );
   const components = scoreComponents(state.teams.A);
   assert(components.chemistry.bonus > 0, "S16: a real teammate pair produces a nonzero chemistry bonus in the score breakdown");
+  const playerScores = playerScoreContributions(state.teams.A, "basketball");
+  assert(Math.abs(playerScores.reduce((sum, player) => sum + player.total, 0) - components.total) < 0.001, "S16: basketball player scores add back to the exact team score");
+  assert(playerScores.every((player) => player.chemistry === components.chemistry.bonus / 2), "S16: a basketball chemistry bonus is split evenly between both teammates");
   const previewPartners = chemistryPartnersForPlayer(giveAllToA([lebron2015]).teams.A, wade2005);
   assert(previewPartners.length === 1 && previewPartners[0].player.id === lebron2015.id, "S16: the auction chemistry preview uses the same NBA teammate relationship as scoring");
 }

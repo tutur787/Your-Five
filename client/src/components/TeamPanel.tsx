@@ -4,6 +4,7 @@ import {
   chemistryPairs,
   LineupSlot,
   nextSkipPrice,
+  playerScoreContributions,
   positionPenaltyForSlot,
   ROSTER_SIZE,
   SeatId,
@@ -23,6 +24,7 @@ interface Props {
   onChangeSlot?: (playerId: string, slot: LineupSlot) => void;
   inCatchUp?: boolean;
   sport: Sport;
+  showPlayerScores?: boolean;
 }
 
 /** playerId -> names of real-life teammates also on this roster, for the chemistry badge + tooltip. */
@@ -45,7 +47,7 @@ function lineupEra(player: TeamState["roster"][number]["player"]): string {
   return player.era.match(/\d{4}(?:\/\d{2})?$/)?.[0] ?? player.era;
 }
 
-export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false, sport }: Props) {
+export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCatchUp = false, sport, showPlayerScores = false }: Props) {
   const skipPrice = nextSkipPrice(team);
   const paidSkipAvailable = canBuySkip(team, inCatchUp);
   const skipLabel = skipPrice === 0
@@ -73,7 +75,7 @@ export function TeamPanel({ team, label, isActing, editable, onChangeSlot, inCat
         </span>
         <span className="lineup-label">STARTING FIVE</span>
       </div>
-      <LineupCourt team={team} sport={sport} editable={editable} onChangeSlot={onChangeSlot} />
+      <LineupCourt team={team} sport={sport} editable={editable} onChangeSlot={onChangeSlot} showPlayerScores={showPlayerScores} />
     </div>
   );
 }
@@ -83,13 +85,16 @@ export function LineupCourt({
   sport,
   editable,
   onChangeSlot,
+  showPlayerScores = false,
 }: {
   team: TeamState;
   sport: Sport;
   editable?: boolean;
   onChangeSlot?: (playerId: string, slot: LineupSlot) => void;
+  showPlayerScores?: boolean;
 }) {
   const partners = chemistryPartnersByPlayerId(team, sport);
+  const scores = new Map(playerScoreContributions(team, sport).map((score) => [score.playerId, score]));
   const slots = slotsForSport(sport);
   const [draggedPlayer, setDraggedPlayer] = useState<{
     id: string;
@@ -220,6 +225,7 @@ export function LineupCourt({
         const bondedWith = pick ? partners.get(pick.player.id) : undefined;
         const penalty = pick ? positionPenaltyForSlot(pick.player, pick.slot) : 0;
         const wrongPosition = penalty > 0;
+        const playerScore = pick && showPlayerScores ? scores.get(pick.player.id) : undefined;
         const dropState = movingPlayer
           ? movingPlayer.validSlots.includes(pos)
             ? " drop-valid"
@@ -241,7 +247,7 @@ export function LineupCourt({
             </div>
             {pick ? (
               <div
-                className={`court-player-card${draggedPlayer?.id === pick.player.id ? " dragging-source" : ""}${selectedPlayer?.id === pick.player.id ? " selected-source" : ""}${editable && onChangeSlot ? " draggable" : ""}`}
+                className={`court-player-card${playerScore ? " has-player-score" : ""}${draggedPlayer?.id === pick.player.id ? " dragging-source" : ""}${selectedPlayer?.id === pick.player.id ? " selected-source" : ""}${editable && onChangeSlot ? " draggable" : ""}`}
                 onPointerDown={(event) => beginDrag(event, pick.player.id, pick.player.name, pick.slot)}
                 onPointerMove={moveDrag}
                 onPointerUp={endDrag}
@@ -269,6 +275,14 @@ export function LineupCourt({
                   <span className="court-player-era">{lineupEra(pick.player)}</span>
                 </div>
                 <div className="court-player-controls">
+                  {playerScore && (
+                    <span
+                      className="player-score-inline"
+                      title={`Core ${playerScore.core.toFixed(1)} · Team ${playerScore.teamSuccess >= 0 ? "+" : ""}${playerScore.teamSuccess.toFixed(1)} · Accolades +${playerScore.awards.toFixed(1)} · Chemistry +${playerScore.chemistry.toFixed(1)} · Fit ${playerScore.fitShare >= 0 ? "+" : ""}${playerScore.fitShare.toFixed(1)}${playerScore.positionPenalty > 0 ? ` · Position -${playerScore.positionPenalty.toFixed(1)}` : ""}`}
+                    >
+                      <small>SCORE</small>{playerScore.total.toFixed(1)}
+                    </span>
+                  )}
                   <span className="price-inline">${pick.price}</span>
                   {wrongPosition && <span className="mismatch-pill">-{penalty}</span>}
                 </div>

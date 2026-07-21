@@ -2,6 +2,7 @@ import {
   accoladePoints,
   BasketballPlayerCard,
   PlayerAccolades,
+  playerScoreContributions,
   positionPenaltyForSlot,
   rawStatTotal,
   RosterPick,
@@ -31,6 +32,36 @@ function formatAccolades(a: PlayerAccolades): string {
   return parts.join(", ");
 }
 
+function signed(value: number): string {
+  return `${value >= 0 ? "+" : ""}${value.toFixed(1)}`;
+}
+
+function PlayerScoreList({ team, sport }: Props) {
+  const scores = new Map(playerScoreContributions(team, sport).map((score) => [score.playerId, score]));
+  return (
+    <>
+      <div className="breakdown-heading">Player scores</div>
+      <ul className="breakdown-list">
+        {team.roster.map((pick) => {
+          const score = scores.get(pick.player.id);
+          if (!score) return null;
+          return (
+            <li className="player-contribution" key={pick.player.id}>
+              <span>
+                {pick.player.name} · {formatLineupSlot(pick.slot)}
+                <small>
+                  Core {score.core.toFixed(1)} · Team {signed(score.teamSuccess)} · Accolades +{score.awards.toFixed(1)} · Chemistry +{score.chemistry.toFixed(1)} · Fit {signed(score.fitShare)}{score.positionPenalty > 0 ? ` · Position -${score.positionPenalty.toFixed(1)}` : ""}
+                </small>
+              </span>
+              <strong>{score.total.toFixed(1)}</strong>
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+}
+
 /** Collapsible "why is my score what it is" breakdown — every ingredient behind the final score. */
 export function ScoreBreakdown({ team, sport }: Props) {
   if (sport === "soccer") return <SoccerScoreBreakdown team={team} />;
@@ -48,6 +79,8 @@ export function ScoreBreakdown({ team, sport }: Props) {
     <details className="score-breakdown-details">
       <summary>Score details ({components.total.toFixed(1)})</summary>
       <div className="score-breakdown-body">
+        <PlayerScoreList team={team} sport={sport} />
+        <div className="breakdown-heading">Core scoring</div>
         <div className="breakdown-row">
           <span>Real stats (PPG+RPG+APG)</span>
           <span>{raw.toFixed(1)}</span>
@@ -167,40 +200,31 @@ function SoccerScoreBreakdown({ team }: { team: TeamState }) {
   const soccerPicks = team.roster.filter(
     (pick): pick is RosterPick & { player: SoccerPlayerCard } => pick.player.sport === "soccer"
   );
+  const coreScores = soccerPicks.map((pick) => soccerPlayerQuality(pick.player));
   const honoredPicks = soccerPicks.filter((pick) => soccerHonorPoints(pick.player.honors) > 0);
   return (
     <details className="score-breakdown-details">
       <summary>Score details ({components.total.toFixed(1)})</summary>
       <div className="score-breakdown-body">
-        <div className="breakdown-heading">Role-adjusted card quality</div>
-        <ul className="breakdown-list">
-          {soccerPicks.map((pick) => {
-            const performance = pick.player.performance;
-            const hasNewRating = performance.observedScore !== undefined && performance.pedigreeScore !== undefined;
-            return (
-              <li className="football-card-quality" key={pick.player.id}>
-                <span>
-                  {pick.player.name} · {pick.player.role}
-                  {hasNewRating && (
-                    <small>
-                      Edition {performance.observedScore!.toFixed(1)} · UEFA pedigree {performance.pedigreeScore!.toFixed(1)} · {Math.round((performance.dataConfidence ?? 0) * 100)}% edition confidence
-                    </small>
-                  )}
-                </span>
-                <strong>{soccerPlayerQuality(pick.player).toFixed(1)}</strong>
-              </li>
-            );
-          })}
-        </ul>
-        <div className="breakdown-row"><span>Five card-quality ratings</span><span>{components.performance.total.toFixed(1)}</span></div>
+        <PlayerScoreList team={team} sport="soccer" />
+        <div className="breakdown-heading">Core scoring</div>
+        <div className="breakdown-row"><span>Attack</span><span>{components.performance.attack.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Creation</span><span>{components.performance.creation.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Control</span><span>{components.performance.control.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Defense</span><span>{components.performance.defense.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Goalkeeping</span><span>{components.performance.goalkeeping.toFixed(1)}</span></div>
+        <div className="breakdown-row"><span>Role-adjusted performance</span><span>{components.performance.total.toFixed(1)}</span></div>
+        <div className="core-score-equation">
+          {coreScores.map((score) => score.toFixed(1)).join(" + ")} = {components.performance.total.toFixed(1)}
+        </div>
         <div className="breakdown-row">
-          <span>Team success in the scoring window</span>
+          <span>Team success (60% weighted)</span>
           <span>{components.teamSuccess >= 0 ? "+" : ""}{components.teamSuccess.toFixed(1)}</span>
         </div>
         {honoredPicks.length > 0 ? (
           <>
             <div className="breakdown-heading">
-              Verified honors (+{components.honors.toFixed(1)}{components.honorsUncapped > components.honors ? ` of ${components.honorsUncapped.toFixed(1)}; capped` : ""})
+              Accolades (+{components.honors.toFixed(1)}{components.honorsUncapped > components.honors ? ` of ${components.honorsUncapped.toFixed(1)}; capped` : ""})
             </div>
             <ul className="breakdown-list">
               {honoredPicks.map((pick) => (
@@ -215,7 +239,7 @@ function SoccerScoreBreakdown({ team }: { team: TeamState }) {
           </>
         ) : null}
         <div className="breakdown-heading" style={{ color: components.fit.total >= 0 ? "var(--good)" : "var(--bad)" }}>
-          Tactical fit ({components.fit.total >= 0 ? "+" : ""}{components.fit.total.toFixed(1)})
+          Lineup fit ({components.fit.total >= 0 ? "+" : ""}{components.fit.total.toFixed(1)})
         </div>
         <ul className="breakdown-list">
           <li><span>Creator</span><span>+{components.fit.creatorBonus}</span></li>
@@ -225,13 +249,13 @@ function SoccerScoreBreakdown({ team }: { team: TeamState }) {
           {components.fit.stackingPenalty > 0 && <li><span>Attack-heavy redundancy</span><span>&minus;{components.fit.stackingPenalty}</span></li>}
         </ul>
         {components.chemistry.pairs.length > 0 && (
-          <><div className="breakdown-heading">Same-edition chemistry (+{components.chemistry.bonus})</div>
-          <ul className="breakdown-list">{components.chemistry.pairs.map((pair) => <li key={`${pair.a.player.id}-${pair.b.player.id}`}><span>{pair.a.player.name} + {pair.b.player.name}</span><span>teammates</span></li>)}</ul></>
+          <><div className="breakdown-heading">Chemistry (+{components.chemistry.bonus})</div>
+          <ul className="breakdown-list">{components.chemistry.pairs.map((pair) => <li key={`${pair.a.player.id}-${pair.b.player.id}`}><span>{pair.a.player.name} + {pair.b.player.name}</span><span>real teammates</span></li>)}</ul></>
         )}
         {components.mismatches.length > 0 ? (
-          <><div className="breakdown-heading" style={{ color: "var(--bad)" }}>Position mismatches (&minus;{components.wrongPositionPenalty})</div>
-          <ul className="breakdown-list">{components.mismatches.map(({ pick, penalty }) => <li key={pick.player.id}><span>{pick.player.name} at {formatLineupSlot(pick.slot)}</span><span>&minus;{penalty}</span></li>)}</ul></>
-        ) : <div className="breakdown-heading" style={{ color: "var(--good)" }}>Everyone is in a sourced role</div>}
+          <><div className="breakdown-heading" style={{ color: "var(--bad)" }}>Wrong position (&minus;{components.wrongPositionPenalty})</div>
+          <ul className="breakdown-list">{components.mismatches.map(({ pick, penalty }) => <li key={pick.player.id}><span>{pick.player.name}</span><span>sitting at {formatLineupSlot(pick.slot)} (&minus;{penalty})</span></li>)}</ul></>
+        ) : <div className="breakdown-heading" style={{ color: "var(--good)" }}>Everyone's in position - no penalty</div>}
         <div className="breakdown-row breakdown-total"><span>Final score</span><span>{components.total.toFixed(1)}</span></div>
       </div>
     </details>

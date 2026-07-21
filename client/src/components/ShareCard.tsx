@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MatchState, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
+import { MatchState, playerScoreContributions, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
 import { formatLineupSlot } from "../utils/position";
 
 interface Props {
@@ -22,9 +22,19 @@ const COLORS = {
   good: "#8fd14f",
 };
 
+function fittedText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string {
+  if (ctx.measureText(text).width <= maxWidth) return text;
+  let shortened = text;
+  while (shortened.length > 1 && ctx.measureText(`${shortened}…`).width > maxWidth) {
+    shortened = shortened.slice(0, -1);
+  }
+  return `${shortened}…`;
+}
+
 function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, label: string, subtitle?: string) {
   const team = state.teams[seat];
   const score = teamScore(team, state.sport);
+  const playerScores = new Map(playerScoreContributions(team, state.sport).map((value) => [value.playerId, value]));
 
   ctx.clearRect(0, 0, CARD_WIDTH, CARD_HEIGHT);
   ctx.fillStyle = COLORS.bg;
@@ -64,12 +74,23 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
     ctx.fillText(formatLineupSlot(pos), 56, y + 4);
 
     if (pick) {
+      const playerScore = playerScores.get(pick.player.id);
       ctx.fillStyle = COLORS.text;
       ctx.font = "bold 22px -apple-system, Helvetica, Arial, sans-serif";
-      ctx.fillText(pick.player.name, 116, y - 2);
+      ctx.fillText(fittedText(ctx, pick.player.name, 370), 116, y - 2);
       ctx.fillStyle = COLORS.muted;
       ctx.font = "15px -apple-system, Helvetica, Arial, sans-serif";
-      ctx.fillText(`${pick.player.era} · $${pick.price}`, 116, y + 20);
+      ctx.fillText(fittedText(ctx, `${pick.player.era} · $${pick.price}`, 370), 116, y + 20);
+      if (playerScore) {
+        ctx.textAlign = "right";
+        ctx.fillStyle = COLORS.accent2;
+        ctx.font = "bold 22px -apple-system, Helvetica, Arial, sans-serif";
+        ctx.fillText(playerScore.total.toFixed(1), CARD_WIDTH - 56, y - 1);
+        ctx.fillStyle = COLORS.muted;
+        ctx.font = "bold 10px -apple-system, Helvetica, Arial, sans-serif";
+        ctx.fillText("SCORE", CARD_WIDTH - 56, y + 18);
+        ctx.textAlign = "left";
+      }
     } else {
       ctx.fillStyle = COLORS.muted;
       ctx.font = "italic 18px -apple-system, Helvetica, Arial, sans-serif";

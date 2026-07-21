@@ -190,19 +190,21 @@ export function ScoringPage() {
         <div>
           <h2>Football card quality</h2>
           <p>
-            Every football card has a 0-20 role-adjusted quality score. The observed edition score ranks verified
-            UEFA match metrics against cards with the same role. Goalkeepers use save percentage, goals conceded,
-            clean sheets, claims, and passing. Defenders emphasize tackles, recoveries, clearances, passing, and
-            progression. Midfielders emphasize creation, progression, passing, recovery, dribbling, and scoring.
-            Attackers emphasize non-penalty goals, shots on target, assists, dribbling, accuracy, and progression.
+            Every football card has an 8-20 role-adjusted quality score. Official selection establishes an elite
+            baseline of 13 for the smaller UEFA.com Team of the Year and 12 for the larger Champions League season
+            squads. The observed edition score then ranks verified match metrics against cards with the same role.
+            Goalkeepers use saves, goals conceded, clean sheets, claims, and passing. Defenders emphasize tackles,
+            recoveries, clearances, passing, and progression. Midfielders emphasize creation, progression, passing,
+            recovery, dribbling, and scoring. Attackers emphasize goals, shots on target, assists, dribbling,
+            accuracy, and progression.
           </p>
           <p>
-            Short competition windows can be noisy, so the observed edition score is blended with verified UEFA
-            selection pedigree. Edition confidence increases with minutes, metric coverage, and alignment between
-            the card's selection period and its scoring window. Goalkeeper confidence is deliberately reduced
-            because keeper outcomes contain fewer independent actions and depend more heavily on the team defense.
+            Edition form moves that baseline in proportion to minutes, metric coverage, and alignment between the
+            selection period and scoring window, with the adjustment capped so incomplete historical tracking cannot
+            collapse a UEFA-selected card. Repeat UEFA selections add at most 3 points as a career-pedigree
+            tie-break. Exact-year accolades are scored separately, so reputation is never counted twice.
           </p>
-          <div className="formula-block"><code>card quality = edition score x confidence + UEFA pedigree x (1 - confidence)</code></div>
+          <div className="formula-block"><code>card quality = selection baseline + confidence-weighted edition form + bounded pedigree bonus</code></div>
         </div>
       </section>
       <section className="info-section">
@@ -211,18 +213,19 @@ export function ScoringPage() {
           <h2>Football team score</h2>
           <p>
             The five card-quality ratings form the base. A small team-success adjustment compares points per match
-            and goal difference in the card's scoring window. Verified honors then add 3 points for winning the
-            relevant UEFA competition, 5 for one major individual award, 2 for top scorer, 2 for a positional award,
-            and 1 for Young Player of the Season. Honors are capped at 20 points per lineup.
+            and goal difference in the card's scoring window, with the raw adjustment reduced to 60%. Verified
+            accolades then add 2 points for winning the relevant UEFA competition, 4 for one major individual award,
+            2 for top scorer, 1.5 for a positional award, and 1 for Young Player of the Season. Accolades are capped
+            at 12 points per lineup.
           </p>
           <p>
-            Tactical fit can reward a creator, defensive anchor, scorer, and secure goalkeeper, while too many
-            attack-dominant players can reduce the bonus. Verified historical club teammates add 2 points per pair,
-            capped at 6. A teammate link requires both players to have appeared for the same club in the same sourced
+            Lineup fit can reward a creator, defensive anchor, scorer, and secure goalkeeper, while too many
+            attack-dominant players can reduce the bonus. Verified historical club teammates add 1 point per pair,
+            capped at 4. A teammate link requires both players to have appeared for the same club in the same sourced
             UEFA match, regardless of which card editions are drafted. Position penalties are 5 between MID and ATT,
             6 between DEF and MID, 16 between DEF and ATT, and 30 between GK and any outfield role.
           </p>
-          <div className="formula-block"><code>score = five card qualities + team success + honors + tactical fit + chemistry - mismatches</code></div>
+          <div className="formula-block"><code>score = five card qualities + team success + accolades + lineup fit + chemistry - wrong-position penalties</code></div>
         </div>
       </section>
       <section className="info-section">
@@ -257,7 +260,7 @@ export function DataSourcesPage() {
             <code> nba_api</code> client. The displayed per-game numbers remain the sourced values; era factors affect
             scoring calculations rather than rewriting the statistics shown on a card. Player positions are sourced
             from published position listings and stored explicitly, without assigning positions from statistical
-            rules. Historical teammates and honors are stored as verified card metadata.
+            rules. Historical teammates and accolades are stored as verified card metadata.
           </p>
         </div>
       </section>
@@ -280,7 +283,7 @@ export function DataSourcesPage() {
           <p>
             Football statistics are generated from UEFA public club-competition match records for the card's exact
             scoring window. The generator retains canonical player IDs, team IDs, source position labels, source
-            selection URLs, honor URLs, and every contributing match ID in a provenance manifest. Optional metrics
+            selection URLs, accolade source URLs, and every contributing match ID in a provenance manifest. Optional metrics
             are used only when their tracked coverage passes the configured threshold, and generation fails on
             missing matches, duplicate cards, unsupported roles, or non-finite values.
           </p>
@@ -289,12 +292,12 @@ export function DataSourcesPage() {
       <section className="info-section">
         <span className="info-section-number">04</span>
         <div>
-          <h2>Verified honors</h2>
+          <h2>Verified accolades</h2>
           <p>
-            Football honors are attached only when an official source connects the award to the exact card year or
+            Football accolades are attached only when an official source connects the award to the exact card year or
             season. The ledger covers relevant UEFA competition wins, UEFA overall player awards, Ballon d'Or,
             Champions League top scorer, UEFA positional awards, and Champions League Young Player of the Season.
-            Multiple major individual awards on one card share a single 5-point major-award contribution so the same
+            Multiple major individual awards on one card share a single 4-point major-award contribution so the same
             achievement level is not counted twice.
           </p>
         </div>

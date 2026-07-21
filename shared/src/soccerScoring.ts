@@ -15,16 +15,22 @@ export const SOCCER_POSITION_MISMATCH: Record<SoccerRole, Record<SoccerRole, num
   ATT: { GK: 30, DEF: 16, MID: 5, ATT: 0 },
 };
 
-export const SOCCER_CHEMISTRY_PER_PAIR = 2;
-export const SOCCER_CHEMISTRY_CAP = 6;
-export const SOCCER_HONORS_CAP = 20;
+export const SOCCER_CHEMISTRY_PER_PAIR = 1;
+export const SOCCER_CHEMISTRY_CAP = 4;
+export const SOCCER_HONORS_CAP = 12;
+export const SOCCER_TEAM_SUCCESS_WEIGHT = 0.6;
 export const SOCCER_HONOR_POINTS = {
-  champion: 3,
-  majorIndividual: 5,
+  champion: 2,
+  majorIndividual: 4,
   topScorer: 2,
-  positionalAward: 2,
+  positionalAward: 1.5,
   youngPlayer: 1,
 } as const;
+
+const SOCCER_CALENDAR_SELECTION_BASE = 13;
+const SOCCER_SEASON_SELECTION_BASE = 12;
+const SOCCER_EDITION_ADJUSTMENT = 0.45;
+const SOCCER_PEDIGREE_BONUS_CAP = 3;
 
 export interface SoccerHonorDetail {
   label: string;
@@ -155,15 +161,13 @@ export function soccerFitAssessment(team: TeamState): SoccerFitAssessment {
     (player) => (player.role === "MID" || player.role === "ATT") && player.performance.creation >= 12
   ) ? 1 : 0;
   const defensiveAnchorBonus = players.some(
-    (player) => player.role === "DEF" &&
-      Math.max(player.performance.defense, soccerPlayerQuality(player)) >= 12
+    (player) => player.role === "DEF" && player.performance.defense >= 12
   ) ? 1 : 0;
   const scorerBonus = players.some(
     (player) => player.role === "ATT" && player.performance.attack >= 12
   ) ? 1 : 0;
   const goalkeeperBonus = players.some(
-    (player) => player.role === "GK" &&
-      Math.max(player.performance.goalkeeping, soccerPlayerQuality(player)) >= 12
+    (player) => player.role === "GK" && player.performance.goalkeeping >= 12
   ) ? 1 : 0;
   const attackDominantPlayers = players.filter(
     (player) => (player.role === "MID" || player.role === "ATT") &&
@@ -186,13 +190,43 @@ export interface SoccerScoreComponents {
   total: number;
 }
 
-/** Normalize cards persisted by the pre-explicit-honors formula. */
+function clamp(value: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, value));
+}
+
+/**
+ * Performance-led card quality for UEFA-selected players.
+ *
+ * Selection into a UEFA XI/squad establishes an elite baseline. Reliable edition data can move
+ * that baseline by at most 3.6 points, while repeat-selection pedigree is limited to a 3-point
+ * tie-break so a famous name cannot erase a poor card window. Exact accolades remain separate.
+ */
 export function soccerPlayerQuality(player: SoccerPlayerCard): number {
   const achievementScore = player.performance.achievementScore;
   if (achievementScore !== undefined) {
     return Math.max(0, Math.min(20, (player.performance.roleScore - achievementScore * 0.15) / 0.85));
   }
-  return player.performance.roleScore;
+
+  const observed = player.performance.observedScore;
+  const pedigree = player.performance.pedigreeScore;
+  const confidence = player.performance.dataConfidence;
+  if (observed === undefined || pedigree === undefined || confidence === undefined) {
+    return clamp(player.performance.roleScore, 8, 20);
+  }
+
+  const selectionBase = player.editionKind === "calendar"
+    ? SOCCER_CALENDAR_SELECTION_BASE
+    : SOCCER_SEASON_SELECTION_BASE;
+  const reliableConfidence = clamp(confidence, 0, 0.8);
+  const editionAdjustment = (clamp(observed, 0, 20) - 10)
+    * SOCCER_EDITION_ADJUSTMENT
+    * reliableConfidence;
+  const pedigreeBonus = clamp((pedigree - 8) / 12, 0, 1) * SOCCER_PEDIGREE_BONUS_CAP;
+  return clamp(selectionBase + editionAdjustment + pedigreeBonus, 8, 20);
+}
+
+export function soccerTeamSuccessValue(player: SoccerPlayerCard): number {
+  return player.teamSuccess * SOCCER_TEAM_SUCCESS_WEIGHT;
 }
 
 export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
@@ -208,7 +242,7 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
     }),
     { attack: 0, creation: 0, control: 0, defense: 0, goalkeeping: 0, total: 0 }
   );
-  const teamSuccess = picks.reduce((sum, pick) => sum + pick.player.teamSuccess, 0);
+  const teamSuccess = picks.reduce((sum, pick) => sum + soccerTeamSuccessValue(pick.player), 0);
   const honorsUncapped = picks.reduce((sum, pick) => sum + soccerHonorPoints(pick.player.honors), 0);
   const honors = Math.min(SOCCER_HONORS_CAP, honorsUncapped);
   const fit = soccerFitAssessment(team);
@@ -223,5 +257,5 @@ export function soccerScoreComponents(team: TeamState): SoccerScoreComponents {
 }
 
 export function soccerPlayerCompositeValue(player: SoccerPlayerCard): number {
-  return soccerPlayerQuality(player) + player.teamSuccess + soccerHonorPoints(player.honors);
+  return soccerPlayerQuality(player) + soccerTeamSuccessValue(player) + soccerHonorPoints(player.honors);
 }

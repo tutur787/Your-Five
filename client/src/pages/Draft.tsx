@@ -43,6 +43,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           onChangeSlot={changeSlot("A")}
           inCatchUp={state.phase === "catchUp" && state.turn === "A"}
           sport={state.sport}
+          showPlayerScores={state.phase === "complete"}
         />
         <TeamPanel
           team={state.teams.B}
@@ -52,6 +53,7 @@ export function Draft({ state, dispatch, error, mySeat, seatNames, onRematch, he
           onChangeSlot={changeSlot("B")}
           inCatchUp={state.phase === "catchUp" && state.turn === "B"}
           sport={state.sport}
+          showPlayerScores={state.phase === "complete"}
         />
       </div>
 

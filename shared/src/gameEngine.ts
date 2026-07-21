@@ -1,9 +1,12 @@
 import {
   soccerChemistryPartners,
+  soccerHonorPoints,
   soccerPlayerCompositeValue,
+  soccerPlayerQuality,
   soccerPositionPenalty,
   soccerScoreComponents,
   soccerSlotsForPlayer,
+  soccerTeamSuccessValue,
 } from "./soccerScoring";
 import {
   ActionResult,
@@ -390,6 +393,18 @@ export interface ScoreComponents {
   total: number;
 }
 
+/** One additive player's share of the final score. The five totals add to the team score. */
+export interface PlayerScoreContribution {
+  playerId: string;
+  core: number;
+  teamSuccess: number;
+  awards: number;
+  chemistry: number;
+  fitShare: number;
+  positionPenalty: number;
+  total: number;
+}
+
 export function scoreComponents(team: TeamState): ScoreComponents {
   let offense = 0;
   let defenseBox = 0;
@@ -411,6 +426,69 @@ export function scoreComponents(team: TeamState): ScoreComponents {
   const mismatchPenalty = wrongPositionPenalty(team);
   const total = offense + defenseBox + defRating + plusMinus + teamSuccess + accolades + fit.total + chemistry.bonus - mismatchPenalty;
   return { offense, defenseBox, defRating, plusMinus, teamSuccess, accolades, fit, chemistry, wrongPositionPenalty: mismatchPenalty, total };
+}
+
+function addChemistryShare(shares: Map<string, number>, playerId: string, amount: number): void {
+  shares.set(playerId, (shares.get(playerId) ?? 0) + amount);
+}
+
+/**
+ * Additive per-player scores used by completed lineups, score details, and share cards.
+ * Pair chemistry is split between its two players. Team fit is shared evenly because it is
+ * produced by the lineup as a whole rather than by a single card.
+ */
+export function playerScoreContributions(team: TeamState, sport: Sport = teamSport(team)): PlayerScoreContribution[] {
+  const picks = team.roster.filter((pick) => pick.player.sport === sport);
+  if (picks.length === 0) return [];
+
+  const chemistryShares = new Map<string, number>();
+  let fitTotal = 0;
+  let awardScale = 1;
+
+  if (sport === "soccer") {
+    const components = soccerScoreComponents(team);
+    fitTotal = components.fit.total;
+    awardScale = components.honorsUncapped > 0 ? components.honors / components.honorsUncapped : 0;
+    const pairValue = components.chemistry.pairs.length > 0
+      ? components.chemistry.bonus / components.chemistry.pairs.length
+      : 0;
+    for (const pair of components.chemistry.pairs) {
+      addChemistryShare(chemistryShares, pair.a.player.id, pairValue / 2);
+      addChemistryShare(chemistryShares, pair.b.player.id, pairValue / 2);
+    }
+  } else {
+    const components = scoreComponents(team);
+    fitTotal = components.fit.total;
+    for (const pair of components.chemistry.pairs) {
+      addChemistryShare(chemistryShares, pair.a.player.id, CHEMISTRY_BONUS_PER_PAIR / 2);
+      addChemistryShare(chemistryShares, pair.b.player.id, CHEMISTRY_BONUS_PER_PAIR / 2);
+    }
+  }
+
+  const fitShare = fitTotal / picks.length;
+  return picks.map((pick) => {
+    let core = 0;
+    let teamSuccess = 0;
+    let awards = 0;
+    let positionPenalty = 0;
+    if (pick.player.sport === "soccer") {
+      core = soccerPlayerQuality(pick.player);
+      teamSuccess = soccerTeamSuccessValue(pick.player);
+      awards = soccerHonorPoints(pick.player.honors) * awardScale;
+      positionPenalty = soccerPositionPenalty(pick.player, pick.slot);
+    } else {
+      core = playerOffenseValue(pick.player)
+        + playerDefenseBoxValue(pick.player)
+        + playerDefRatingValue(pick.player)
+        + playerPlusMinusValue(pick.player);
+      teamSuccess = playerTeamSuccessValue(pick.player);
+      awards = accoladePoints(pick.player.accolades);
+      positionPenalty = positionPenaltyForSlot(pick.player, pick.slot);
+    }
+    const chemistry = chemistryShares.get(pick.player.id) ?? 0;
+    const total = core + teamSuccess + awards + chemistry + fitShare - positionPenalty;
+    return { playerId: pick.player.id, core, teamSuccess, awards, chemistry, fitShare, positionPenalty, total };
+  });
 }
 
 /**

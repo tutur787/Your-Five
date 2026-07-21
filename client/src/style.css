@@ -407,6 +407,63 @@ input[type="number"], input[type="text"] {
   font-size: 11px;
 }
 
+.player-score-inline {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  color: var(--accent-2);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.player-score-inline small {
+  color: var(--muted);
+  font-size: 6px;
+  letter-spacing: 0.08em;
+}
+
+.court-player-card.has-player-score {
+  height: 76px;
+  justify-content: flex-start;
+  gap: 1px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+.court-player-card.has-player-score .court-player-main {
+  gap: 0;
+}
+
+.court-player-card.has-player-score .court-player-name {
+  font-size: 11px;
+  line-height: 1.05;
+}
+
+.court-player-card.has-player-score .court-player-meta {
+  font-size: 9px;
+  line-height: 1.05;
+}
+
+.court-player-card.has-player-score .court-player-era {
+  font-size: 7px;
+  line-height: 1;
+}
+
+.court-player-card.has-player-score .court-player-controls {
+  gap: 4px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.court-player-card.has-player-score .mismatch-pill {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 1px 4px;
+  background: rgba(20, 23, 26, 0.96);
+  font-size: 8px;
+}
+
 .court-slot.drop-valid .court-position-target {
   border-color: var(--good);
   background: rgba(61, 220, 132, 0.16);
@@ -855,20 +912,31 @@ input[type="number"], input[type="text"] {
   gap: 8px;
 }
 
-.football-card-quality > span:first-child {
+.football-card-quality > span:first-child,
+.player-contribution > span:first-child {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.football-card-quality small {
+.football-card-quality small,
+.player-contribution small {
   margin-top: 2px;
   color: var(--muted);
   font-size: 10px;
   line-height: 1.35;
 }
 
-.football-card-quality > strong {
+.core-score-equation {
+  color: var(--muted);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.football-card-quality > strong,
+.player-contribution > strong {
   color: var(--text);
   font-variant-numeric: tabular-nums;
 }
@@ -989,6 +1057,11 @@ input[type="number"], input[type="text"] {
   .court-player-card {
     height: 64px;
     padding: 7px 7px 7px 36px;
+  }
+
+  .court-player-card.has-player-score {
+    height: 76px;
+    padding: 5px 7px 5px 36px;
   }
 
   .court-slot-label {

@@ -18,7 +18,7 @@ const PAGE_METADATA: Record<string, { title: string; description: string; ads?: 
   },
   "/scoring": {
     title: "How Your Five Scoring Works",
-    description: "See how player performance, achievements, chemistry, tactical fit, and position penalties decide a Your Five matchup.",
+    description: "See how player performance, accolades, chemistry, lineup fit, and position penalties decide a Your Five matchup.",
     ads: true,
   },
   "/data-sources": {

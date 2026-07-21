@@ -52,6 +52,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
                 team={team}
                 sport={state.sport}
                 editable={editable}
+                showPlayerScores
                 onChangeSlot={onChangeSlot ? (playerId, slot) => onChangeSlot(seat, playerId, slot) : undefined}
               />
               <p className="spent-line">Spent ${spent} of $20</p>

@@ -118,11 +118,11 @@ export interface SoccerPerformance {
   observedScore?: number;
   /** Verified repeat UEFA-selection career prior for this role. Awards are scored separately. */
   pedigreeScore?: number;
-  /** How much of the adjusted performance comes from the observed edition, from 0 to 1. */
+  /** Reliability of the observed edition metrics, from 0 to 1. */
   dataConfidence?: number;
   /** Legacy rating used by rooms created before honors became an explicit score component. */
   achievementScore?: number;
-  /** Final per-card quality used by lineup scoring. */
+  /** Generated legacy blend retained for persisted-room compatibility and data auditing. */
   roleScore: number;
 }
 
