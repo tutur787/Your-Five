@@ -2,8 +2,10 @@ node_modules/
 dist/
 .env
 .env.local
+.dev.vars*
 *.tsbuildinfo
 .DS_Store
 .wrangler/
 .cache/soccer-data/
 deployment.txt
+GOOGLE_AUTH_SETUP.md

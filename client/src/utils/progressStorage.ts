@@ -44,6 +44,7 @@ export interface ProgressState {
 }
 
 export const PROGRESS_KEY = "your-five:progress:v1";
+export const PROGRESS_CHANGED_EVENT = "your-five:progress-changed";
 const MAX_RECENT = 10;
 const MAX_RECORDED_IDS = 100;
 const DIFFICULTIES: AiDifficulty[] = ["casual", "competitive", "expert"];
@@ -146,12 +147,15 @@ export function progressRecordFor(sport: Sport, mode: ProgressMode, storage?: St
   return { ...(loadProgress(storage).sports[sport].modes[mode] ?? emptyRecord()) };
 }
 
-export function saveProgress(progress: ProgressState, storage?: Storage): void {
+export function saveProgress(progress: ProgressState, storage?: Storage, notify = true): void {
   progress.recent = progress.recent.slice(0, MAX_RECENT);
   progress.recordedMatchIds = progress.recordedMatchIds.slice(-MAX_RECORDED_IDS);
   try {
     storeFor(storage)?.setItem(PROGRESS_KEY, JSON.stringify(progress));
   } catch {
     // The current result remains visible in memory when storage is unavailable.
+  }
+  if (notify && storage === undefined && typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent(PROGRESS_CHANGED_EVENT, { detail: progress }));
   }
 }

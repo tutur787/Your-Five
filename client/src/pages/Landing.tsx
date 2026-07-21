@@ -4,6 +4,7 @@ import { OnboardingModal, useOnboarding } from "../components/OnboardingModal";
 import { SportSwitch } from "../components/SportSwitch";
 import { useSport } from "../hooks/useSport";
 import { ProgressButton } from "../components/ProgressModal";
+import { AccountButton } from "../components/AccountButton";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export function Landing() {
         <BrandLockup />
         <SportSwitch />
         <div className="home-header-tools">
+          <AccountButton />
           <ProgressButton />
           <button className="text-button" onClick={onboarding.show}>Rules</button>
         </div>

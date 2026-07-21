@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { SportSwitch } from "./SportSwitch";
 import { useSport } from "../hooks/useSport";
 import { ProgressButton } from "./ProgressModal";
+import { AccountButton } from "./AccountButton";
 
 export function BrandLockup({ compact = false }: { compact?: boolean }) {
   const { sport } = useSport();
@@ -46,7 +47,7 @@ export function AppHeader({
         <h1>{title}</h1>
         {detail && <div className="page-detail">{detail}</div>}
       </div>
-      <div className="app-header-actions"><ProgressButton /><SportSwitch disabled={sportLocked} />{actions}</div>
+      <div className="app-header-actions"><AccountButton /><ProgressButton /><SportSwitch disabled={sportLocked} />{actions}</div>
     </header>
   );
 }

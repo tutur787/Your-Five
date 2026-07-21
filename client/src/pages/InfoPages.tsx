@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext, useEffect, useRef } from "react";
 import { AppHeader } from "../components/AppHeader";
 
-const LAST_UPDATED = "July 19, 2026";
+const LAST_UPDATED = "July 21, 2026";
 const REPOSITORY_URL = "https://github.com/tutur787/Your-Five";
 const ISSUES_URL = `${REPOSITORY_URL}/issues/new`;
 const PROFILE_URL = "https://github.com/tutur787";
@@ -341,6 +341,24 @@ export function PrivacyPage() {
       <section className="info-section">
         <span className="info-section-number">02</span>
         <div>
+          <h2>Optional Google account</h2>
+          <p>
+            You may continue as a guest or sign in with Google. When you sign in, Google provides a stable account
+            identifier, your email address, and your Google profile name. Your Five stores those values, your chosen
+            display name, account creation time, revocable session records, and your synced game progress in Cloudflare
+            Durable Objects. Your Five does not receive or store your Google password and does not retain Google's access token.
+            Google's handling of sign-in information is governed by the
+            {" "}<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy Policy</a>.
+          </p>
+          <p>
+            A secure, HttpOnly session cookie keeps you signed in for up to 30 days. Your current device record is imported
+            when the account is first created. Later completed drafts are merged by match ID to avoid counting the same game twice.
+          </p>
+        </div>
+      </section>
+      <section className="info-section">
+        <span className="info-section-number">03</span>
+        <div>
           <h2>Online matches</h2>
           <p>
             Online play sends room identifiers, random seat tokens, draft actions, and game state to the Your Five
@@ -348,14 +366,11 @@ export function PrivacyPage() {
             Room information is used only to coordinate the match. Inactive room data is scheduled
             for deletion approximately one hour after all players disconnect.
           </p>
-          <p>
-            Your Five does not currently request your name, email address, precise location, contacts, payment
-            information, or social-media account.
-          </p>
+          <p>Online play does not require an account. Your Five does not request precise location, contacts, or payment information.</p>
         </div>
       </section>
       <section className="info-section">
-        <span className="info-section-number">03</span>
+        <span className="info-section-number">04</span>
         <div>
           <h2>Hosting and service data</h2>
           <p>
@@ -367,13 +382,12 @@ export function PrivacyPage() {
           <p>
             Your Five may use Cloudflare Web Analytics to understand aggregate page views, visits, and website
             performance. Cloudflare describes this service as privacy-first and states that Web Analytics does not
-            collect or use visitors' personal data. It is not used to build a Your Five account or individual player
-            profile.
+            collect or use visitors' personal data. Analytics is kept separate from Your Five account profiles.
           </p>
         </div>
       </section>
       <section className="info-section">
-        <span className="info-section-number">04</span>
+        <span className="info-section-number">05</span>
         <div>
           <h2>Advertising and sharing</h2>
           <p>
@@ -391,12 +405,12 @@ export function PrivacyPage() {
         </div>
       </section>
       <section className="info-section">
-        <span className="info-section-number">05</span>
+        <span className="info-section-number">06</span>
         <div>
           <h2>Children and your choices</h2>
           <p>
-            The service is not directed to children under 13. You may play without providing identifying information,
-            clear locally stored data through your browser, and close an online room at any time by leaving the page.
+            The service is not directed to children under 13. You may play without an account, clear locally stored data
+            through your browser, sign out from the account panel, or permanently delete the account and its cloud record.
           </p>
           <p>
             For a privacy question or request, use the private contact options listed on the
@@ -436,6 +450,7 @@ export function TermsPage() {
             <li>interfere with matchmaking, rooms, other players, or service availability;</li>
             <li>use bots, automation, or exploits to gain an unfair advantage or create excessive traffic;</li>
             <li>use an abusive, threatening, discriminatory, impersonating, or otherwise inappropriate online nickname;</li>
+            <li>create an account for another person, misrepresent your identity, or attempt to access another account;</li>
             <li>attempt to access another player's private room token or non-public service data;</li>
             <li>use the service for unlawful, abusive, fraudulent, or infringing activity; or</li>
             <li>misrepresent an affiliation between Your Five and any league, team, player, or company.</li>

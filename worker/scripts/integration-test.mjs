@@ -291,6 +291,16 @@ async function testInvalidSport() {
   assert.equal((await legacy.json()).sport, "basketball");
 }
 
+async function testGuestAccountState() {
+  const response = await fetch(`${HTTP_BASE}/auth/me`);
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), { user: null });
+  const protectedResponse = await fetch(`${HTTP_BASE}/account/progress`);
+  assert.equal(protectedResponse.status, 401);
+  const unconfiguredGoogle = await fetch(`${HTTP_BASE}/auth/google/start`, { redirect: "manual" });
+  assert.equal(unconfiguredGoogle.status, 503);
+}
+
 async function testRateLimits() {
   const roomClient = crypto.randomUUID();
   for (let attempt = 0; attempt < 10; attempt++) {
@@ -317,5 +327,6 @@ await testMatchmaking("basketball");
 await testMatchmaking("soccer");
 await testIsolatedQueues();
 await testInvalidSport();
+await testGuestAccountState();
 await testRateLimits();
 console.log(`Cloudflare integration checks passed against ${HTTP_BASE}`);

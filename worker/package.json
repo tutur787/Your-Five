@@ -9,7 +9,8 @@
     "test:integration": "node scripts/integration-test.mjs"
   },
   "dependencies": {
-    "@fiveaside/shared": "*"
+    "@fiveaside/shared": "*",
+    "jose": "^6.2.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260715.1",

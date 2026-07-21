@@ -7,8 +7,12 @@
   ],
   "compatibility_date": "2026-07-14",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "FRONTEND_ORIGIN": "https://your-five.com"
+  },
   "durable_objects": {
     "bindings": [
+      { "name": "ACCOUNTS", "class_name": "AccountDO" },
       { "name": "ROOMS", "class_name": "RoomDO" },
       { "name": "MATCHMAKING", "class_name": "MatchmakingDO" }
     ]
@@ -33,6 +37,10 @@
     {
       "tag": "v1",
       "new_sqlite_classes": ["RoomDO", "MatchmakingDO"]
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": ["AccountDO"]
     }
   ]
 }

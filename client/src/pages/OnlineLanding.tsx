@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
 import { connectMatchmaking, createRoomCode, getOnlineNickname, normalizeOnlineNickname, storeOnlineNickname } from "../utils/socket";
 import { useSport } from "../hooks/useSport";
+import { useAuth } from "../hooks/useAuth";
 
 export function OnlineLanding() {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ export function OnlineLanding() {
   const [error, setError] = useState<string | null>(null);
   const [nickname, setNickname] = useState(getOnlineNickname);
   const { sport } = useSport();
+  const { user } = useAuth();
   const normalizedNickname = normalizeOnlineNickname(nickname);
   const nicknameInvalid = normalizedNickname === null;
 
@@ -27,6 +29,12 @@ export function OnlineLanding() {
     // Auto-search is consumed once when arriving from a completed or cancelled room.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!user || nickname.trim() || getOnlineNickname()) return;
+    setNickname(user.displayName);
+    storeOnlineNickname(user.displayName);
+  }, [nickname, user]);
 
   const createRoom = async () => {
     if (normalizedNickname === null) return;
