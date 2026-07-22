@@ -72,7 +72,7 @@ export interface BasketballPlayerCard {
   accolades?: PlayerAccolades;
   /** This card's team win% across its season range (games-played-weighted if traded). Essentially always available. */
   teamWinPct?: number;
-  /** Multiplier applied only to the *scoring* formula (never to the real stats shown in the UI) to offset pace/scoring differences between eras. Defaults to 1 (no adjustment) when absent. */
+  /** NBA All-Time scoring multiplier used to offset pace differences between eras. Ignored by the single-season NBA 2025/26 pool. */
   eraFactor?: number;
   /** IDs of real-life teammates within this match pool, attached when the pool is built. */
   chemistryWith?: string[];

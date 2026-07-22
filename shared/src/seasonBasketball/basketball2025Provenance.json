@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": "2025-26",
   "nbaApiVersion": "1.11.4",
-  "generatedAt": "2026-07-22T16:46:33.528679+00:00",
+  "generatedAt": "2026-07-22T18:00:36.594568+00:00",
   "selection": "Six team-specific player stints per NBA team ranked by regular-season minutes, games, starts, then NBA player ID.",
   "endpoints": [
     {
@@ -49,17 +49,6 @@
       },
       "retrievedAt": "2026-07-22T16:13:24.419599+00:00",
       "contentSha256": "27bcd8aa74a2a133114a99be96f9c86f9a1ec497b74c99055e5575adcec957a5"
-    },
-    {
-      "name": "teams-2015-16-base",
-      "parameters": {
-        "season": "2015-16",
-        "season_type_all_star": "Regular Season",
-        "per_mode_detailed": "Totals",
-        "measure_type_detailed_defense": "Base"
-      },
-      "retrievedAt": "2026-07-22T16:13:26.168959+00:00",
-      "contentSha256": "ea2e37ed0449e677a682e37d50b73e0479bd17a5873c645d906c70141004a1c1"
     }
   ],
   "positionSources": [
@@ -1780,8 +1769,8 @@
   "completedGames": 1230,
   "cardCount": 180,
   "leagueDefensiveRating": 113.73281495719029,
-  "eraFactor": 0.8881028147470947,
-  "cardsSha256": "667beeb104f2d9883a388aaf4e12918157d7b3a66b81551eb0ce98cbc3b5b359",
+  "scoringPolicy": "Raw 2025/26 production is used without era adjustment inside the single-season pool.",
+  "cardsSha256": "d89519b7918a98b95c43f366f69d7913151066049690c3dee6629ebae6578ccf",
   "cards": [
     {
       "id": "nba-2025-26-1629638-atl",

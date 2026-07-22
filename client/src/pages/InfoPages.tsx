@@ -177,8 +177,9 @@ export function ScoringPage() {
         <div>
           <h2>Basketball score</h2>
           <p>
-            Each card contributes era-adjusted points, rebounds, assists, steals, and blocks. Where sourced data is
-            available, the model also adds defensive rating versus league average, plus-minus, and team win
+            NBA All-Time cards contribute era-adjusted points, rebounds, assists, steals, and blocks so different
+            eras can be compared fairly. NBA 2025/26 uses its raw single-season production with no era adjustment.
+            Where sourced data is available, the model also adds defensive rating versus league average, plus-minus, and team win
             percentage. Verified MVPs, championships, Defensive Player of the Year awards, All-NBA selections, and
             All-Defense selections add explicit accolade points.
           </p>

@@ -21,7 +21,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.733
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630552-atl",
       "nba-2025-26-1630700-atl",
@@ -50,7 +49,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.433
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -82,7 +80,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.133
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "accolades": {
       "allDefense": 1
@@ -115,7 +112,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.433
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1629638-atl",
@@ -145,7 +141,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.733
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "chemistryWith": [
       "nba-2025-26-1629638-atl",
@@ -175,7 +170,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.067
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629638-atl",
       "nba-2025-26-1630552-atl",
@@ -204,7 +198,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.733
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "accolades": {
       "allDefense": 1
@@ -237,7 +230,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.633
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1628401-bos",
@@ -267,7 +259,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.733
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "accolades": {
       "allNba": 1
@@ -300,7 +291,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.733
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628401-bos",
       "nba-2025-26-1630202-bos",
@@ -329,7 +319,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 8.133
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628401-bos",
       "nba-2025-26-1630202-bos",
@@ -358,7 +347,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.683,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628401-bos",
       "nba-2025-26-1630202-bos",
@@ -387,7 +375,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.267
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1628378-cle",
@@ -420,7 +407,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.633
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -452,7 +438,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.433
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-201935-cle",
@@ -482,7 +467,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.333
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-201935-cle",
@@ -512,7 +496,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.267
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201935-cle",
       "nba-2025-26-1628378-cle",
@@ -541,7 +524,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.833
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201935-cle",
       "nba-2025-26-1628378-cle",
@@ -570,7 +552,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.467
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1630180-nop",
@@ -600,7 +581,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.067
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630530-nop",
@@ -630,7 +610,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.467
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630530-nop",
@@ -660,7 +639,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -5.667
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630530-nop",
       "nba-2025-26-1630180-nop",
@@ -689,7 +667,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.167
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630530-nop",
       "nba-2025-26-1630180-nop",
@@ -718,7 +695,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.667
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630530-nop",
       "nba-2025-26-1630180-nop",
@@ -747,7 +723,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.167
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630200-chi",
@@ -777,7 +752,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641824-chi",
       "nba-2025-26-1630581-chi",
@@ -806,7 +780,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.367
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1641824-chi",
@@ -836,7 +809,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.867
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1641824-chi",
@@ -866,7 +838,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.133
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1641824-chi",
@@ -896,7 +867,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.378,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641824-chi",
       "nba-2025-26-1630200-chi",
@@ -925,7 +895,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.967
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631108-dal",
       "nba-2025-26-1630230-dal",
@@ -954,7 +923,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.467
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642843-dal",
       "nba-2025-26-1630230-dal",
@@ -983,7 +951,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.567
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642843-dal",
       "nba-2025-26-1631108-dal",
@@ -1012,7 +979,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.667
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1642843-dal",
@@ -1042,7 +1008,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.733
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642843-dal",
       "nba-2025-26-1631108-dal",
@@ -1075,7 +1040,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.867
     },
     "teamWinPct": 0.317,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642843-dal",
       "nba-2025-26-1631108-dal",
@@ -1104,7 +1068,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.967
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -1136,7 +1099,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.567
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -1168,7 +1130,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.167
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627750-den",
       "nba-2025-26-203999-den",
@@ -1197,7 +1158,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.467
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627750-den",
       "nba-2025-26-203999-den",
@@ -1226,7 +1186,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.967
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1627750-den",
@@ -1256,7 +1215,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.867
     },
     "teamWinPct": 0.659,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627750-den",
       "nba-2025-26-203999-den",
@@ -1285,7 +1243,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.333
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-203110-gsw",
@@ -1315,7 +1272,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.133
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-202691-dal",
       "nba-2025-26-1641764-gsw",
@@ -1347,7 +1303,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.833
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641764-gsw",
       "nba-2025-26-203110-gsw",
@@ -1376,7 +1331,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.033
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1641764-gsw",
@@ -1406,7 +1360,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.133
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641764-gsw",
       "nba-2025-26-203110-gsw",
@@ -1435,7 +1388,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.451,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-202691-dal",
       "nba-2025-26-1641764-gsw",
@@ -1467,7 +1419,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.333
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "chemistryWith": [
       "nba-2025-26-201142-hou",
@@ -1497,7 +1448,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.333
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "accolades": {
       "allNba": 1
@@ -1535,7 +1485,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.733
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641708-hou",
       "nba-2025-26-201142-hou",
@@ -1564,7 +1513,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.033
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-1641708-hou",
@@ -1594,7 +1542,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.133
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "chemistryWith": [
       "nba-2025-26-1641708-hou",
@@ -1624,7 +1571,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.133
     },
     "teamWinPct": 0.634,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641708-hou",
       "nba-2025-26-201142-hou",
@@ -1653,7 +1599,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.367
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-202695-lac",
@@ -1683,7 +1628,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.933
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -1718,7 +1662,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.367
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-1627739-lac",
@@ -1748,7 +1691,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.033
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627739-lac",
       "nba-2025-26-202695-lac",
@@ -1777,7 +1719,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.567
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1627739-lac",
@@ -1807,7 +1748,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.833
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627739-lac",
       "nba-2025-26-202695-lac",
@@ -1836,7 +1776,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.867
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "accolades": {
       "allNba": 1
@@ -1869,7 +1808,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.367
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629029-lal",
       "nba-2025-26-2544-lal",
@@ -1898,7 +1836,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.333
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1629029-lal",
@@ -1929,7 +1866,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.767
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629029-lal",
       "nba-2025-26-1631222-lal",
@@ -1958,7 +1894,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.667
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629029-lal",
       "nba-2025-26-1631222-lal",
@@ -1987,7 +1922,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.133
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1629029-lal",
@@ -2017,7 +1951,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.733
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "accolades": {
       "allDefense": 1
@@ -2050,7 +1983,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.833
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1628389-mia",
@@ -2080,7 +2012,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.167
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1628389-mia",
@@ -2110,7 +2041,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.733
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628389-mia",
       "nba-2025-26-1631170-mia",
@@ -2139,7 +2069,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.433
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1628389-mia",
@@ -2169,7 +2098,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.367
     },
     "teamWinPct": 0.524,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628389-mia",
       "nba-2025-26-1631170-mia",
@@ -2198,7 +2126,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.767
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1631260-mil",
@@ -2228,7 +2155,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.967
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631157-mil",
       "nba-2025-26-1626167-mil",
@@ -2257,7 +2183,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.067
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1631157-mil",
@@ -2287,7 +2212,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.067
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1631157-mil",
@@ -2317,7 +2241,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.667
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631157-mil",
       "nba-2025-26-1631260-mil",
@@ -2346,7 +2269,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.667
     },
     "teamWinPct": 0.39,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631157-mil",
       "nba-2025-26-1631260-mil",
@@ -2375,7 +2297,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.633
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-1628978-min",
@@ -2405,7 +2326,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.733
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-203944-min",
       "nba-2025-26-203497-min",
@@ -2434,7 +2354,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.733
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "accolades": {
       "allDefense": 1
     },
@@ -2466,7 +2385,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.333
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-203944-min",
@@ -2496,7 +2414,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.567
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-203944-min",
       "nba-2025-26-1628978-min",
@@ -2525,7 +2442,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.833
     },
     "teamWinPct": 0.598,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-203944-min",
@@ -2555,7 +2471,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.567
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641730-bkn",
       "nba-2025-26-1629008-bkn",
@@ -2584,7 +2499,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.567
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629651-bkn",
       "nba-2025-26-1629008-bkn",
@@ -2613,7 +2527,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -5.867
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629651-bkn",
       "nba-2025-26-1641730-bkn",
@@ -2642,7 +2555,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.067
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1629651-bkn",
       "nba-2025-26-1641730-bkn",
@@ -2671,7 +2583,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.567
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1629651-bkn",
@@ -2701,7 +2612,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.667
     },
     "teamWinPct": 0.244,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1629651-bkn",
@@ -2731,7 +2641,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.733
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "accolades": {
       "champion": 1
@@ -2764,7 +2673,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.367
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1,
       "champion": 1
@@ -2797,7 +2705,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.933
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "accolades": {
       "champion": 1
@@ -2830,7 +2737,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.533
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "accolades": {
       "allDefense": 1,
       "champion": 1
@@ -2863,7 +2769,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.233
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "accolades": {
       "champion": 1
     },
@@ -2895,7 +2800,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.033
     },
     "teamWinPct": 0.646,
-    "eraFactor": 0.8881,
     "accolades": {
       "champion": 1
     },
@@ -2927,7 +2831,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.233
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631094-orl",
       "nba-2025-26-1628976-orl",
@@ -2956,7 +2859,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.367
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630217-orl",
       "nba-2025-26-1628976-orl",
@@ -2985,7 +2887,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.433
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1630217-orl",
@@ -3015,7 +2916,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.633
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630217-orl",
       "nba-2025-26-1631094-orl",
@@ -3044,7 +2944,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.133
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630217-orl",
       "nba-2025-26-1631094-orl",
@@ -3073,7 +2972,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.333
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630217-orl",
       "nba-2025-26-1631094-orl",
@@ -3102,7 +3000,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.467
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-202695-lac",
       "nba-2025-26-1641716-ind",
@@ -3132,7 +3029,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.867
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1627783-ind",
@@ -3162,7 +3058,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -5.567
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1627783-ind",
@@ -3192,7 +3087,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.033
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627783-ind",
       "nba-2025-26-1641716-ind",
@@ -3221,7 +3115,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.167
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627783-ind",
       "nba-2025-26-1641716-ind",
@@ -3250,7 +3143,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.267
     },
     "teamWinPct": 0.232,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1627783-ind",
       "nba-2025-26-1641716-ind",
@@ -3279,7 +3171,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.333
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -3311,7 +3202,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.167
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630178-phi",
       "nba-2025-26-1629656-phi",
@@ -3340,7 +3230,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.333
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630178-phi",
@@ -3370,7 +3259,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.833
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630178-phi",
       "nba-2025-26-1642845-phi",
@@ -3399,7 +3287,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.467
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630178-phi",
@@ -3429,7 +3316,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.833
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630178-phi",
       "nba-2025-26-1642845-phi",
@@ -3458,7 +3344,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.733
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1626220-phx",
       "nba-2025-26-1626164-phx",
@@ -3487,7 +3372,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.367
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631221-phx",
       "nba-2025-26-1626164-phx",
@@ -3516,7 +3400,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.733
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631221-phx",
       "nba-2025-26-1626220-phx",
@@ -3545,7 +3428,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.033
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1631221-phx",
       "nba-2025-26-1626220-phx",
@@ -3574,7 +3456,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1631221-phx",
@@ -3604,7 +3485,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.633
     },
     "teamWinPct": 0.549,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "chemistryWith": [
       "nba-2025-26-1631221-phx",
@@ -3634,7 +3514,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.733
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630166-por",
@@ -3664,7 +3543,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.667
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641739-por",
       "nba-2025-26-1642270-por",
@@ -3693,7 +3571,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.067
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641739-por",
       "nba-2025-26-1630166-por",
@@ -3722,7 +3599,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.467
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1641739-por",
@@ -3752,7 +3628,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.133
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1641739-por",
@@ -3782,7 +3657,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.033
     },
     "teamWinPct": 0.512,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1641739-por",
       "nba-2025-26-1630166-por",
@@ -3811,7 +3685,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -8.567
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642875-sac",
       "nba-2025-26-1642363-sac",
@@ -3840,7 +3713,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.567
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201942-sac",
       "nba-2025-26-1642363-sac",
@@ -3869,7 +3741,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.067
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201942-sac",
       "nba-2025-26-1642875-sac",
@@ -3898,7 +3769,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -8.367
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201935-cle",
       "nba-2025-26-201142-hou",
@@ -3931,7 +3801,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.367
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201942-sac",
       "nba-2025-26-1642875-sac",
@@ -3960,7 +3829,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.567
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-201942-sac",
       "nba-2025-26-1642875-sac",
@@ -3989,7 +3857,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.733
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628368-sas",
       "nba-2025-26-1630170-sas",
@@ -4018,7 +3885,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.833
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630577-sas",
       "nba-2025-26-1630170-sas",
@@ -4047,7 +3913,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.833
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630577-sas",
@@ -4077,7 +3942,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.333
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630577-sas",
@@ -4107,7 +3971,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.133
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-202691-dal",
@@ -4140,7 +4003,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.533
     },
     "teamWinPct": 0.756,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630577-sas",
@@ -4170,7 +4032,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 8.533
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "accolades": {
       "mvp": 1,
@@ -4204,7 +4065,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 9.933
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PG",
     "accolades": {
       "allDefense": 1
@@ -4237,7 +4097,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 11.433
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "accolades": {
       "allNba": 1,
@@ -4271,7 +4130,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.533
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628983-okc",
       "nba-2025-26-1641717-okc",
@@ -4300,7 +4158,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 8.533
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628983-okc",
       "nba-2025-26-1641717-okc",
@@ -4329,7 +4186,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 11.233
     },
     "teamWinPct": 0.78,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1628983-okc",
       "nba-2025-26-1641717-okc",
@@ -4358,7 +4214,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.733
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "accolades": {
       "allDefense": 1
@@ -4391,7 +4246,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.033
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630567-tor",
       "nba-2025-26-1630193-tor",
@@ -4420,7 +4274,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 1.633
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630567-tor",
@@ -4450,7 +4303,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.433
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630567-tor",
       "nba-2025-26-1627742-tor",
@@ -4479,7 +4331,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.033
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-1630567-tor",
@@ -4509,7 +4360,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.233
     },
     "teamWinPct": 0.561,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630567-tor",
@@ -4539,7 +4389,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.667
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642271-uta",
       "nba-2025-26-1641718-uta",
@@ -4568,7 +4417,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.667
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642846-uta",
       "nba-2025-26-1641718-uta",
@@ -4597,7 +4445,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -9.867
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642846-uta",
       "nba-2025-26-1642271-uta",
@@ -4626,7 +4473,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.067
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642846-uta",
       "nba-2025-26-1642271-uta",
@@ -4655,7 +4501,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.667
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642846-uta",
       "nba-2025-26-1642271-uta",
@@ -4684,7 +4529,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -8.867
     },
     "teamWinPct": 0.268,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642846-uta",
       "nba-2025-26-1642271-uta",
@@ -4713,7 +4557,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -4.067
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642285-mem",
       "nba-2025-26-1642907-mem",
@@ -4742,7 +4585,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.267
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1642377-mem",
@@ -4772,7 +4614,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.233
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642377-mem",
       "nba-2025-26-1642285-mem",
@@ -4801,7 +4642,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.467
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1642377-mem",
@@ -4831,7 +4671,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -2.267
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642377-mem",
       "nba-2025-26-1642285-mem",
@@ -4860,7 +4699,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -3.767
     },
     "teamWinPct": 0.305,
-    "eraFactor": 0.8881,
     "secondaryPosition": "PF",
     "chemistryWith": [
       "nba-2025-26-1642377-mem",
@@ -4890,7 +4728,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -8.867
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1642860-was",
@@ -4920,7 +4757,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.667
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642267-was",
       "nba-2025-26-1641731-was",
@@ -4949,7 +4785,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -7.467
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642267-was",
       "nba-2025-26-1642860-was",
@@ -4978,7 +4813,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -6.167
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642267-was",
       "nba-2025-26-1642860-was",
@@ -5007,7 +4841,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -5.967
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642267-was",
       "nba-2025-26-1642860-was",
@@ -5036,7 +4869,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -5.667
     },
     "teamWinPct": 0.207,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1642267-was",
@@ -5066,7 +4898,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.733
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -5098,7 +4929,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 4.233
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1630595-det",
@@ -5128,7 +4958,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.533
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "accolades": {
       "allNba": 1
     },
@@ -5160,7 +4989,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 6.533
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "accolades": {
       "allDefense": 1
@@ -5193,7 +5021,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 5.133
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1630595-det",
@@ -5223,7 +5050,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 9.233
     },
     "teamWinPct": 0.732,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1630595-det",
       "nba-2025-26-1629130-det",
@@ -5252,7 +5078,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 0.733
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SG",
     "chemistryWith": [
       "nba-2025-26-1628970-cha",
@@ -5282,7 +5107,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -1.067
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "secondaryPosition": "SF",
     "chemistryWith": [
       "nba-2025-26-1642851-cha",
@@ -5312,7 +5136,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": -0.367
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642851-cha",
       "nba-2025-26-1628970-cha",
@@ -5341,7 +5164,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.433
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642851-cha",
       "nba-2025-26-1628970-cha",
@@ -5370,7 +5192,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 2.233
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "secondaryPosition": "C",
     "chemistryWith": [
       "nba-2025-26-1642851-cha",
@@ -5400,7 +5221,6 @@ export const BASKETBALL_2025_DATABASE: BasketballPlayerCard[] = [
       "defRtgVsAvg": 3.733
     },
     "teamWinPct": 0.537,
-    "eraFactor": 0.8881,
     "chemistryWith": [
       "nba-2025-26-1642851-cha",
       "nba-2025-26-1628970-cha",

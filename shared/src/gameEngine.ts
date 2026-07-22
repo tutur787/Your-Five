@@ -274,13 +274,17 @@ function eraAdjusted(stat: number, factor: number | undefined): number {
   return stat * (factor ?? 1);
 }
 
+function basketballScoringFactor(player: BasketballPlayerCard): number | undefined {
+  return player.competition === "nba-2025-26" ? 1 : player.eraFactor;
+}
+
 function playerOffenseValue(player: BasketballPlayerCard): number {
   const { ppg, rpg, apg } = player.stats;
-  return eraAdjusted(ppg + rpg + apg, player.eraFactor);
+  return eraAdjusted(ppg + rpg + apg, basketballScoringFactor(player));
 }
 
 function playerDefenseBoxValue(player: BasketballPlayerCard): number {
-  return eraAdjusted((player.stats.spg ?? 0) + (player.stats.bpg ?? 0), player.eraFactor);
+  return eraAdjusted((player.stats.spg ?? 0) + (player.stats.bpg ?? 0), basketballScoringFactor(player));
 }
 
 function playerDefRatingValue(player: BasketballPlayerCard): number {
@@ -324,14 +328,14 @@ export function fitAssessment(team: TeamState): FitAssessment {
     .map((pick) => pick.player)
     .filter((player): player is BasketballPlayerCard => player.sport === "basketball");
   const alphaScorers = players.filter(
-    (player) => eraAdjusted(player.stats.ppg, player.eraFactor) >= HIGH_USAGE_PPG_THRESHOLD
+    (player) => eraAdjusted(player.stats.ppg, basketballScoringFactor(player)) >= HIGH_USAGE_PPG_THRESHOLD
   ).length;
   const stackingPenalty = Math.max(0, alphaScorers - MAX_ALPHA_SCORERS_BEFORE_PENALTY) * STACKING_PENALTY_PER_EXTRA_ALPHA;
   const hasPlaymaking = players.some(
-    (player) => eraAdjusted(player.stats.apg, player.eraFactor) >= PLAYMAKER_APG_THRESHOLD
+    (player) => eraAdjusted(player.stats.apg, basketballScoringFactor(player)) >= PLAYMAKER_APG_THRESHOLD
   );
   const hasRimProtection = players.some(
-    (player) => eraAdjusted(player.stats.bpg ?? 0, player.eraFactor) >= RIM_PROTECTOR_BPG_THRESHOLD
+    (player) => eraAdjusted(player.stats.bpg ?? 0, basketballScoringFactor(player)) >= RIM_PROTECTOR_BPG_THRESHOLD
   );
   const balanceBonus = (hasPlaymaking ? PLAYMAKING_BONUS : 0) + (hasRimProtection ? RIM_PROTECTION_BONUS : 0);
   return { alphaScorers, stackingPenalty, hasPlaymaking, hasRimProtection, balanceBonus, total: balanceBonus - stackingPenalty };

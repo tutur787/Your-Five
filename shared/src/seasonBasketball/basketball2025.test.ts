@@ -3,9 +3,11 @@ import path from "node:path";
 import {
   basketballCompetitionForPoolVersion,
   buildBasketballPoolFrom,
+  fitAssessment,
   normalizeBasketballCompetitionChoice,
   playerCompositeValue,
   resolveBasketballCompetition,
+  scoreComponents,
   seededRng,
   teamScore,
   validSlotsFor,
@@ -39,8 +41,9 @@ assert(BASKETBALL_2025_DATABASE.every((player) => /^[A-Z]{3}$/.test(player.teamC
 assert(BASKETBALL_2025_DATABASE.every((player) => validSlotsFor(player).length >= 1), "every sourced position maps to a lineup slot");
 assert(BASKETBALL_2025_DATABASE.every((player) => [
   player.stats.ppg, player.stats.rpg, player.stats.apg, player.stats.spg, player.stats.bpg,
-  player.stats.plusMinus, player.stats.defRtgVsAvg, player.teamWinPct, player.eraFactor,
+  player.stats.plusMinus, player.stats.defRtgVsAvg, player.teamWinPct,
 ].every((value) => Number.isFinite(value))), "every card has finite scoring inputs");
+assert(BASKETBALL_2025_DATABASE.every((player) => player.eraFactor === undefined), "season cards do not carry an era adjustment");
 assert(teamCounts.size === 30, "season database covers all 30 teams");
 assert([...teamCounts.values()].every((count) => count === 6), "every team contributes exactly six cards");
 assert(new Set(BASKETBALL_2025_DATABASE.map((player) => player.id)).size === 180, "card IDs are unique");
@@ -85,6 +88,24 @@ const stronger = roleLineup(true);
 const weaker = roleLineup(false);
 assert(teamScore(stronger, "basketball") > teamScore(weaker, "basketball") + 20, "representative stronger lineup clearly beats weaker lineup");
 
+const rawThresholdPlayer: BasketballPlayerCard = {
+  ...BASKETBALL_2025_DATABASE[0],
+  id: "season-raw-threshold-test",
+  eraFactor: 0.1,
+  stats: { ...BASKETBALL_2025_DATABASE[0].stats, ppg: 25, rpg: 8, apg: 6, spg: 1, bpg: 1.5 },
+};
+const rawThresholdTeam: TeamState = {
+  seat: "A",
+  budget: 19,
+  roster: [{ player: rawThresholdPlayer, price: 1, slot: rawThresholdPlayer.position }],
+  skipsUsed: 0,
+  catchUpSkipUsed: false,
+};
+const rawComponents = scoreComponents(rawThresholdTeam);
+const rawFit = fitAssessment(rawThresholdTeam);
+assert(rawComponents.offense === 39 && rawComponents.defenseBox === 2.5, "season offense and defense ignore even a legacy persisted era factor");
+assert(rawFit.alphaScorers === 1 && rawFit.hasPlaymaking && rawFit.hasRimProtection, "season lineup-fit thresholds use raw statistics");
+
 const first = BASKETBALL_2025_RUNTIME.buildPool(seededRng("deterministic-season-pool")).map((player) => player.id);
 const second = BASKETBALL_2025_RUNTIME.buildPool(seededRng("deterministic-season-pool")).map((player) => player.id);
 assert(JSON.stringify(first) === JSON.stringify(second), "season pool generation is deterministic for a seed");
@@ -93,6 +114,8 @@ const manifestPath = path.join(process.cwd(), "shared/src/seasonBasketball/baske
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 assert(manifest.nbaApiVersion === "1.11.4", "provenance pins nba_api 1.11.4");
 assert(manifest.completedGames === 1230 && manifest.cardCount === 180, "provenance records season completeness");
+assert(!manifest.endpoints.some((endpoint: { name: string }) => endpoint.name.includes("2015-16")), "season generation no longer fetches an era baseline");
+assert(/without era adjustment/.test(manifest.scoringPolicy), "provenance records the raw single-season scoring policy");
 assert(manifest.positionSources.length === 180, "every card has a recorded position source");
 assert(manifest.chemistrySources.length === 2, "provenance records current and historical chemistry sources");
 assert(manifest.cards.every((card: { minutes: number; games: number; starts: number }) =>

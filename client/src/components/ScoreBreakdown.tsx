@@ -68,6 +68,9 @@ export function ScoreBreakdown({ team, sport }: Props) {
   if (sport === "soccer") return <SoccerScoreBreakdown team={team} />;
   const raw = rawStatTotal(team);
   const components = scoreComponents(team);
+  const isSingleSeason = team.roster.some(
+    (pick) => pick.player.sport === "basketball" && pick.player.competition === "nba-2025-26"
+  );
   const accoladedPicks = team.roster.filter(
     (p): p is typeof p & { player: BasketballPlayerCard } =>
       p.player.sport === "basketball" && Boolean(p.player.accolades) && accoladePoints(p.player.accolades) > 0
@@ -82,16 +85,18 @@ export function ScoreBreakdown({ team, sport }: Props) {
       <div className="score-breakdown-body">
         <PlayerScoreList team={team} sport={sport} />
         <div className="breakdown-heading">Core scoring</div>
+        {!isSingleSeason && (
+          <div className="breakdown-row">
+            <span>Real stats (PPG+RPG+APG)</span>
+            <span>{raw.toFixed(1)}</span>
+          </div>
+        )}
         <div className="breakdown-row">
-          <span>Real stats (PPG+RPG+APG)</span>
-          <span>{raw.toFixed(1)}</span>
-        </div>
-        <div className="breakdown-row">
-          <span>Era-adjusted offense</span>
+          <span>{isSingleSeason ? "Offense (PPG+RPG+APG)" : "Era-adjusted offense"}</span>
           <span>{components.offense.toFixed(1)}</span>
         </div>
         <div className="breakdown-row">
-          <span>Defense (SPG/BPG, era-adjusted)</span>
+          <span>{isSingleSeason ? "Defense (SPG+BPG)" : "Defense (SPG/BPG, era-adjusted)"}</span>
           <span>{components.defenseBox >= 0 ? "+" : ""}{components.defenseBox.toFixed(1)}</span>
         </div>
         <div className="breakdown-row">

@@ -220,7 +220,6 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     advanced, source_advanced = endpoint_rows("players-advanced", leaguedashplayerstats.LeagueDashPlayerStats, offline, measure_type_detailed_defense="Advanced", **common)
     starters, source_starters = endpoint_rows("players-starters", leaguedashplayerstats.LeagueDashPlayerStats, offline, measure_type_detailed_defense="Base", starter_bench_nullable="Starters", **common)
     teams, source_teams = endpoint_rows("teams-base", leaguedashteamstats.LeagueDashTeamStats, offline, measure_type_detailed_defense="Base", **common)
-    old_teams, source_old = endpoint_rows("teams-2015-16-base", leaguedashteamstats.LeagueDashTeamStats, offline, season="2015-16", season_type_all_star="Regular Season", per_mode_detailed="Totals", measure_type_detailed_defense="Base")
 
     if len(teams) != 30 or sum(int(row["GP"]) for row in teams) // 2 != 1230:
         raise ValueError("2025/26 regular season is incomplete")
@@ -241,9 +240,6 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     if len(selected) != 180:
         raise ValueError(f"Expected 180 cards, found {len(selected)}")
     prefetch_positions(sorted({str(row["PLAYER_NAME"]) for row in selected}), offline)
-    current_ppg = sum(finite(row["PTS"], "PTS") for row in teams) / sum(int(row["GP"]) for row in teams)
-    old_ppg = sum(finite(row["PTS"], "PTS") for row in old_teams) / sum(int(row["GP"]) for row in old_teams)
-    era_factor = old_ppg / current_ppg
     weighted_def = [(finite(row["DEF_RATING"], "DEF_RATING"), finite(row["MIN"], "MIN")) for row in advanced if int(row["TEAM_ID"]) != 0 and finite(row["MIN"], "MIN") > 0]
     league_def_rating = sum(value * minutes for value, minutes in weighted_def) / sum(minutes for _, minutes in weighted_def)
 
@@ -279,7 +275,7 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
                 "bpg": finite(row["BLK"], "BLK") / gp, "plusMinus": finite(row["PLUS_MINUS"], "PLUS_MINUS") / gp,
                 "defRtgVsAvg": league_def_rating - finite(advanced_row["DEF_RATING"], "DEF_RATING"),
             },
-            "teamWinPct": finite(team["W_PCT"], "W_PCT"), "eraFactor": era_factor,
+            "teamWinPct": finite(team["W_PCT"], "W_PCT"),
             "ranking": {"minutes": finite(row["MIN"], "MIN"), "games": gp, "starts": starts_by_key.get((player_id, team_id), 0)},
         }
         if len(positions) > 1: card["secondaryPosition"] = positions[1]
@@ -303,7 +299,7 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "schemaVersion": 1, "season": SEASON, "nbaApiVersion": "1.11.4",
         "generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
         "selection": "Six team-specific player stints per NBA team ranked by regular-season minutes, games, starts, then NBA player ID.",
-        "endpoints": [source_base, source_advanced, source_starters, source_teams, source_old],
+        "endpoints": [source_base, source_advanced, source_starters, source_teams],
         "positionSources": position_sources,
         "awardSources": [AWARD_SOURCE, CHAMPION_SOURCE],
         "chemistrySources": [
@@ -319,7 +315,8 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
             },
         ],
         "teamCount": 30, "completedGames": 1230, "cardCount": 180,
-        "leagueDefensiveRating": league_def_rating, "eraFactor": era_factor,
+        "leagueDefensiveRating": league_def_rating,
+        "scoringPolicy": "Raw 2025/26 production is used without era adjustment inside the single-season pool.",
         "cardsSha256": "",
         "cards": [{"id": card["id"], "sourceIdentity": card["sourceIdentity"], "teamCode": card["teamCode"], **card["ranking"]} for card in cards],
     }
@@ -327,7 +324,6 @@ def generate(offline: bool) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         del card["ranking"]
         for key, value in card["stats"].items(): card["stats"][key] = round(value, 3)
         card["teamWinPct"] = round(card["teamWinPct"], 4)
-        card["eraFactor"] = round(card["eraFactor"], 4)
     manifest["cardsSha256"] = digest(cards)
     return cards, manifest
 
