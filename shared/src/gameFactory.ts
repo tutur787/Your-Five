@@ -4,7 +4,9 @@ import { BASKETBALL_RUNTIME } from "./basketballRuntime";
 import { SOCCER_RUNTIME } from "./soccerRuntime";
 import type { BasketballPlayerCard, MatchState, PlayerCard, SoccerPlayerCard, Sport } from "./types";
 import { POOL_VERSIONS, type SportRuntime } from "./runtimeTypes";
-import { normalizeFootballCompetition, type FootballCompetition } from "./footballCompetitions";
+import { normalizeFootballCompetition } from "./footballCompetitions";
+import { normalizeBasketballCompetition } from "./basketballCompetitions";
+import type { Competition } from "./competitions";
 
 export { POOL_VERSIONS };
 
@@ -13,9 +15,12 @@ function randomIdentifier(): string {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
 }
 
-export function runtimeForSport(sport: Sport, competition?: FootballCompetition): SportRuntime {
+export function runtimeForSport(sport: Sport, competition?: Competition): SportRuntime {
   if (sport === "soccer" && normalizeFootballCompetition(competition) !== "uefa-all-time") {
     throw new Error("Domestic football runtimes must be loaded through their competition-specific module.");
+  }
+  if (sport === "basketball" && normalizeBasketballCompetition(competition) !== "nba-all-time") {
+    throw new Error("Season basketball runtimes must be loaded through their competition-specific module.");
   }
   return sport === "soccer" ? SOCCER_RUNTIME : BASKETBALL_RUNTIME;
 }

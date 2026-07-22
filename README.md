@@ -8,13 +8,13 @@ Your Five is a head-to-head sports auction draft game. Two GMs share a `$20` cap
 
 ## Features
 
-- Basketball and six selectable football competition pools with sport-specific scoring and lineup rules.
+- NBA All-Time and NBA 2025/26 basketball pools, plus six selectable football competition pools.
 - Head-to-head auctions with a hard cap, roster reserve, and escalating skip costs.
 - Unlimited AI drafts with Casual, Competitive, and Expert opponents.
 - A deterministic daily challenge and reproducible challenge links.
 - Random online matchmaking and private rooms powered by Cloudflare Durable Objects and WebSockets.
 - Responsive court and pitch lineups with drag, tap, and keyboard position controls.
-- Google sign-in with synchronized records, recent drafts, streaks, and achievements.
+- Google sign-in with synchronized records, recent drafts, player purchase statistics, streaks, and achievements.
 - Guest play that keeps progress locally without requiring an account.
 
 ## How It Works
@@ -42,9 +42,9 @@ flowchart LR
 | `client/` | React, Vite, routing, game UI, local progress, and Cloudflare Pages assets |
 | `shared/` | Sport-neutral auction engine, player databases, scoring, AI, protocols, and tests |
 | `worker/` | WebSocket rooms, matchmaking, reconnects, timers, rate limits, and Google accounts |
-| `scripts/` | Football data generation and offline provenance validation |
+| `scripts/` | Basketball and football data generation with offline provenance validation |
 
-Basketball and every football competition have separate lazy-loaded runtimes, so a session downloads only the database used by its draft.
+Every basketball and football competition has a separate lazy-loaded runtime, so a session downloads only the database used by its draft.
 
 ## Local Development
 

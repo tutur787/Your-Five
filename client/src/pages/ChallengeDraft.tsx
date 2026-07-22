@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { footballCompetitionForPoolVersion, footballCompetitionLabel, POOL_VERSIONS, Sport, SportRuntime, teamScore } from "@fiveaside/shared/core";
+import { competitionForPoolVersion, competitionLabel, Sport, SportRuntime, teamScore } from "@fiveaside/shared/core";
 import { AppHeader } from "../components/AppHeader";
 import { useAiMatch } from "../hooks/useAiMatch";
 import { useSport } from "../hooks/useSport";
@@ -21,8 +21,8 @@ export function ChallengeDraft() {
   const version = params.version ?? "";
   const targetValue = Number(searchParams.get("target"));
   const target = Number.isFinite(targetValue) && targetValue >= 0 && targetValue <= 999.9 ? targetValue : 0;
-  const competition = sport === "soccer" ? footballCompetitionForPoolVersion(version) : null;
-  const valid = Boolean(sport && seed && (sport === "soccer" ? competition : version === POOL_VERSIONS[sport]));
+  const competition = sport ? competitionForPoolVersion(sport, version) : null;
+  const valid = Boolean(sport && seed && competition);
 
   useEffect(() => {
     if (sport) setSport(sport);
@@ -66,7 +66,7 @@ function ActiveChallenge({ sport, seed, target, runtime }: { sport: Sport; seed:
       <AppHeader
         eyebrow="SCORE CHALLENGE"
         title={`Beat ${target.toFixed(1)}`}
-        detail={`Same pool · Competitive AI${runtime.competition ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
+        detail={`Same pool · Competitive AI · ${competitionLabel(runtime.sport, runtime.competition)}`}
         actions={<button className="secondary-button" onClick={reset}>Restart</button>}
       />
       {completed && (
@@ -81,7 +81,7 @@ function ActiveChallenge({ sport, seed, target, runtime }: { sport: Sport; seed:
         mySeat={humanSeat}
         seatNames={{ A: "You", B: "Competitive AI" }}
         onRematch={reset}
-        resultsSubtitle={`Score Challenge · Target ${target.toFixed(1)}${runtime.competition ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
+        resultsSubtitle={`Score Challenge · Target ${target.toFixed(1)} · ${competitionLabel(runtime.sport, runtime.competition)}`}
       />
     </div>
   );

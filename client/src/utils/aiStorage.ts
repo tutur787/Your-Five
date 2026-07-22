@@ -1,4 +1,4 @@
-import { AiDifficulty, FootballCompetition, MatchState, SeatId, Sport, teamScore } from "@fiveaside/shared/core";
+import { AiDifficulty, Competition, MatchState, SeatId, Sport, teamScore } from "@fiveaside/shared/core";
 
 export interface AiRecord {
   wins: number;
@@ -9,9 +9,10 @@ export interface AiRecord {
 export const EMPTY_AI_RECORD: AiRecord = { wins: 0, losses: 0, ties: 0 };
 export const AI_DIFFICULTY_KEY = "your-five:ai-difficulty";
 
-const dailyNamespace = (sport: Sport, competition?: FootballCompetition) => sport === "soccer" && competition ? `${sport}:${competition}` : sport;
-export const dailyBestScoreKey = (sport: Sport, competition?: FootballCompetition) => `your-five:daily-best-score:${dailyNamespace(sport, competition)}`;
-export const dailyCompletedKey = (sport: Sport, date: string, competition?: FootballCompetition) => `your-five:daily-completed:${dailyNamespace(sport, competition)}:${date}`;
+const dailyNamespace = (sport: Sport, competition?: Competition) => competition ? `${sport}:${competition}` : sport;
+const isLegacyDefault = (competition?: Competition) => competition === "uefa-all-time" || competition === "nba-all-time";
+export const dailyBestScoreKey = (sport: Sport, competition?: Competition) => `your-five:daily-best-score:${dailyNamespace(sport, competition)}`;
+export const dailyCompletedKey = (sport: Sport, date: string, competition?: Competition) => `your-five:daily-completed:${dailyNamespace(sport, competition)}:${date}`;
 export const aiRecordKey = (sport: Sport, difficulty: AiDifficulty) => `your-five:ai-record:${sport}:${difficulty}`;
 
 function localStore(storage?: Storage): Storage | null {
@@ -74,22 +75,22 @@ export function recordAiResult(
   return next;
 }
 
-export function loadDailyCompleted(sport: Sport, date: string, storage?: Storage, competition?: FootballCompetition): MatchState | null {
+export function loadDailyCompleted(sport: Sport, date: string, storage?: Storage, competition?: Competition): MatchState | null {
   try {
     const store = localStore(storage);
     const raw = store?.getItem(dailyCompletedKey(sport, date, competition))
-      ?? (competition === "uefa-all-time" ? store?.getItem(dailyCompletedKey(sport, date)) : null);
+      ?? (isLegacyDefault(competition) ? store?.getItem(dailyCompletedKey(sport, date)) : null);
     return raw ? (JSON.parse(raw) as MatchState) : null;
   } catch {
     return null;
   }
 }
 
-export function loadDailyBestScore(sport: Sport, storage?: Storage, competition?: FootballCompetition): number | null {
+export function loadDailyBestScore(sport: Sport, storage?: Storage, competition?: Competition): number | null {
   try {
     const store = localStore(storage);
     const raw = store?.getItem(dailyBestScoreKey(sport, competition))
-      ?? (competition === "uefa-all-time" ? store?.getItem(dailyBestScoreKey(sport)) : null);
+      ?? (isLegacyDefault(competition) ? store?.getItem(dailyBestScoreKey(sport)) : null);
     if (!raw) return null;
     const score = Number(raw);
     return Number.isFinite(score) ? score : null;
@@ -104,15 +105,20 @@ export function saveDailyResult(
   state: MatchState,
   humanSeat: SeatId = "A",
   storage?: Storage,
-  competition?: FootballCompetition
+  competition?: Competition
 ): number {
   const store = localStore(storage);
   const score = teamScore(state.teams[humanSeat], state.sport);
   try {
     const resolved = competition ?? state.competition;
-    store?.setItem(dailyCompletedKey(sport, date, resolved), JSON.stringify(state));
+    const serialized = JSON.stringify(state);
+    store?.setItem(dailyCompletedKey(sport, date, resolved), serialized);
+    if (isLegacyDefault(resolved)) store?.setItem(dailyCompletedKey(sport, date), serialized);
     const best = loadDailyBestScore(sport, storage, resolved);
-    if (best === null || score > best) store?.setItem(dailyBestScoreKey(sport, resolved), String(score));
+    if (best === null || score > best) {
+      store?.setItem(dailyBestScoreKey(sport, resolved), String(score));
+      if (isLegacyDefault(resolved)) store?.setItem(dailyBestScoreKey(sport), String(score));
+    }
   } catch {
     // Daily persistence is optional when browser storage is unavailable.
   }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ACHIEVEMENT_DEFINITIONS, footballCompetitionLabel, type AchievementId } from "@fiveaside/shared/core";
+import { ACHIEVEMENT_DEFINITIONS, competitionForPoolVersion, competitionLabel, type AchievementId } from "@fiveaside/shared/core";
 import { FaCheck, FaLock, FaMedal, FaTrophy } from "react-icons/fa6";
 import {
   ACHIEVEMENT_UNLOCKED_EVENT,
@@ -22,11 +22,32 @@ const MODE_LABELS: Record<ProgressMode, string> = {
 };
 
 function HistoryRow({ entry }: { entry: ProgressHistoryEntry }) {
+  const competition = competitionForPoolVersion(entry.sport, entry.poolVersion) ?? entry.competition;
   return (
     <div className="progress-history-row">
       <span className={`history-result ${entry.result}`}>{entry.result === "neutral" ? "LOCAL" : entry.result.toUpperCase()}</span>
-      <span><strong>{MODE_LABELS[entry.mode]}</strong><small>{entry.sport === "soccer" ? `Football · ${footballCompetitionLabel(entry.competition)}` : "Basketball"} · {new Date(entry.completedAt).toLocaleDateString()}</small></span>
+      <span><strong>{MODE_LABELS[entry.mode]}</strong><small>{entry.sport === "soccer" ? "Football" : "Basketball"} · {competitionLabel(entry.sport, competition)} · {new Date(entry.completedAt).toLocaleDateString()}</small></span>
       <span>{entry.scoreFor.toFixed(1)}<small>{entry.result === "neutral" ? ` vs ${entry.scoreAgainst.toFixed(1)}` : " score"}</small></span>
+    </div>
+  );
+}
+
+function DraftStatsPanel({ progress }: { progress: ProgressState["sports"]["basketball"] }) {
+  const stats = progress.draftStats;
+  if (stats.totalPicks === 0) {
+    return <div className="progress-draft-empty">Draft stats begin with your next completed game.</div>;
+  }
+  const mostDrafted = [...stats.players].sort((a, b) => b.purchases - a.purchases || b.totalSpent - a.totalSpent || a.playerName.localeCompare(b.playerName))[0];
+  const recordFee = [...stats.players].sort((a, b) => b.highestPrice - a.highestPrice || b.purchases - a.purchases || a.playerName.localeCompare(b.playerName))[0];
+  return (
+    <div className="progress-draft-stats">
+      <h4>Draft stats</h4>
+      <div className="progress-draft-grid">
+        <span><small>Most drafted</small><strong>{mostDrafted?.playerName ?? "—"}</strong><em>{mostDrafted ? `${mostDrafted.purchases} acquisition${mostDrafted.purchases === 1 ? "" : "s"}` : "—"}</em></span>
+        <span><small>Record fee</small><strong>{recordFee?.playerName ?? "—"}</strong><em>{recordFee ? `$${recordFee.highestPrice}` : "—"}</em></span>
+        <span><small>Average fee</small><strong>${(stats.totalSpent / stats.totalPicks).toFixed(1)}</strong><em>per player</em></span>
+        <span><small>Total picks</small><strong>{stats.totalPicks}</strong><em>${stats.totalSpent} spent</em></span>
+      </div>
     </div>
   );
 }
@@ -112,6 +133,7 @@ function ProgressModal({ progress, onClose }: { progress: ProgressState; onClose
                         <div key={mode}><span>{MODE_LABELS[mode as ProgressMode]}</span><strong>{record.wins}-{record.losses}-{record.ties}</strong></div>
                       ))}
                     </div>
+                    <DraftStatsPanel progress={data} />
                   </section>
                 );
               })}

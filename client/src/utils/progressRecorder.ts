@@ -1,8 +1,17 @@
-import { MatchState, SeatId, teamScore, validSlotsFor } from "@fiveaside/shared/core";
 import {
+  competitionForPoolVersion,
+  competitionForSport,
+  MatchState,
+  SeatId,
+  teamScore,
+  validSlotsFor,
+} from "@fiveaside/shared/core";
+import {
+  DraftStats,
   loadProgress,
   ProgressHistoryEntry,
   ProgressMode,
+  ProgressPurchase,
   ProgressRecord,
   ProgressState,
   ACHIEVEMENT_UNLOCKED_EVENT,
@@ -11,6 +20,35 @@ import {
 } from "./progressStorage";
 
 const emptyRecord = (): ProgressRecord => ({ wins: 0, losses: 0, ties: 0 });
+
+function playerKey(name: string): string {
+  return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function addPurchases(stats: DraftStats, purchases: ProgressPurchase[]): void {
+  const players = new Map(stats.players.map((player) => [player.playerKey, player]));
+  for (const purchase of purchases) {
+    const existing = players.get(purchase.playerKey);
+    if (existing) {
+      existing.purchases++;
+      existing.totalSpent += purchase.price;
+      existing.highestPrice = Math.max(existing.highestPrice, purchase.price);
+      existing.playerName = purchase.playerName;
+    } else {
+      const created = {
+        playerKey: purchase.playerKey,
+        playerName: purchase.playerName,
+        purchases: 1,
+        totalSpent: purchase.price,
+        highestPrice: purchase.price,
+      };
+      stats.players.push(created);
+      players.set(created.playerKey, created);
+    }
+    stats.totalPicks++;
+    stats.totalSpent += purchase.price;
+  }
+}
 
 export function recordCompletedMatch(
   state: MatchState,
@@ -34,6 +72,11 @@ export function recordCompletedMatch(
       : state.winner === ownSeat
         ? "win"
         : "loss";
+  const purchases: ProgressPurchase[] = state.teams[ownSeat].roster.map((pick) => ({
+    playerKey: playerKey(pick.player.name),
+    playerName: pick.player.name,
+    price: pick.price,
+  }));
 
   if (perspective !== null) {
     const sportProgress = progress.sports[state.sport];
@@ -53,13 +96,17 @@ export function recordCompletedMatch(
     }
     sportProgress.modes[mode] = modeRecord;
     sportProgress.bestScore = Math.max(scoreFor, sportProgress.bestScore ?? Number.NEGATIVE_INFINITY);
+    addPurchases(sportProgress.draftStats, purchases);
   }
+
+  const poolVersionCompetition = competitionForPoolVersion(state.sport, state.poolVersion);
 
   const entry: ProgressHistoryEntry = {
     matchId: state.matchId,
     completedAt: new Date().toISOString(),
     sport: state.sport,
-    competition: state.competition,
+    competition: poolVersionCompetition ?? competitionForSport(state.sport, state.competition),
+    poolVersion: state.poolVersion,
     mode,
     result,
     scoreFor,
@@ -74,6 +121,7 @@ export function recordCompletedMatch(
     maxPickPrice: Math.max(0, ...state.teams[ownSeat].roster.map((pick) => pick.price)),
     allPositionsValid: state.teams[ownSeat].roster.length === 5
       && state.teams[ownSeat].roster.every((pick) => validSlotsFor(pick.player).includes(pick.slot)),
+    purchases: perspective === null ? undefined : purchases,
   };
   progress.recent = [entry, ...progress.recent];
   progress.recordedMatchIds = [...progress.recordedMatchIds, state.matchId];

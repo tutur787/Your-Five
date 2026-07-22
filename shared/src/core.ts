@@ -1,5 +1,7 @@
 export * from "./types";
 export * from "./footballCompetitions";
+export * from "./basketballCompetitions";
+export * from "./competitions";
 export * from "./domesticFootballScoring";
 export * from "./soccerScoring";
 export * from "./gameEngine";

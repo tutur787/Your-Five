@@ -1,18 +1,19 @@
 import type { PlayerCard, Sport } from "./types";
 import type { Rng } from "./gameEngine";
-import type { FootballCompetition } from "./footballCompetitions";
+import type { Competition } from "./competitions";
+import { BASKETBALL_POOL_VERSIONS } from "./basketballCompetitions";
 import { FOOTBALL_POOL_VERSIONS } from "./footballCompetitions";
 
 export interface SportRuntime {
   sport: Sport;
-  /** Present for football runtimes and always resolved, never `random`. */
-  competition?: FootballCompetition;
+  /** Always resolved for competition-aware runtimes, never `random`. */
+  competition?: Competition;
   poolVersion: string;
   database: readonly PlayerCard[];
   buildPool: (rng?: Rng) => PlayerCard[];
 }
 
 export const POOL_VERSIONS: Record<Sport, string> = {
-  basketball: "nba-v1",
+  basketball: BASKETBALL_POOL_VERSIONS["nba-all-time"],
   soccer: FOOTBALL_POOL_VERSIONS["uefa-all-time"],
 };

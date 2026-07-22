@@ -1,5 +1,7 @@
 export type Sport = "basketball" | "soccer";
 
+import type { BasketballCompetition } from "./basketballCompetitions";
+import type { Competition } from "./competitions";
 import type { FootballCompetition } from "./footballCompetitions";
 
 export type AiDifficulty = "casual" | "competitive" | "expert";
@@ -49,7 +51,11 @@ export interface PlayerAccolades {
 
 export interface BasketballPlayerCard {
   sport: "basketball";
+  /** Competition database this card belongs to. Missing legacy cards are NBA All-Time. */
+  competition?: BasketballCompetition;
   id: string;
+  /** Stable NBA player identity used to prevent duplicate team stints in one draft. */
+  sourceIdentity?: string;
   name: string;
   /** Franchise represented by this exact season card. Optional for legacy persisted rooms. */
   team?: string;
@@ -254,8 +260,8 @@ export const STARTING_BUDGET = 20;
 
 export interface MatchState {
   sport: Sport;
-  /** Resolved football competition. Missing legacy football matches are UEFA all-time. */
-  competition?: FootballCompetition;
+  /** Resolved sport competition. Missing legacy matches use that sport's all-time pool. */
+  competition?: Competition;
   /** Stable identity used to record a completed match exactly once on a device. */
   matchId?: string;
   /** Seed that reproduces the initial reveal pool for shareable challenges. */

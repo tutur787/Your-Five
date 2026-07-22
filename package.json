@@ -15,6 +15,7 @@
     "deploy:web": "VITE_SERVER_URL=${VITE_SERVER_URL:-https://api.your-five.com} npm run build:web && npx wrangler pages deploy client/dist --project-name your-five --branch main",
     "test:cloudflare": "npm run test:integration -w worker",
     "test:engine": "tsx shared/src/engine.test.ts",
+    "test:basketball-season": "tsx shared/src/seasonBasketball/basketball2025.test.ts",
     "test:reliability": "tsx shared/src/reliability.test.ts",
     "test:ai": "tsx shared/src/aiOpponent.test.ts",
     "test:ai-storage": "tsx client/src/utils/aiStorage.test.ts",
@@ -27,7 +28,9 @@
     "data:soccer-teammates": "node scripts/generate-soccer-teammates.mjs",
     "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify && node scripts/generate-soccer-teammates.mjs --verify",
     "data:football-domestic": "tsx scripts/football-data/generate.ts",
-    "verify:football-domestic": "tsx scripts/football-data/generate.ts --verify --offline"
+    "verify:football-domestic": "tsx scripts/football-data/generate.ts --verify --offline",
+    "data:basketball-season": "python3 scripts/basketball-data/generate.py",
+    "verify:basketball-season": "python3 scripts/basketball-data/generate.py --verify --offline"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

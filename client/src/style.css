@@ -3558,6 +3558,61 @@ html[data-sport="soccer"] .standing-bidder-tag {
   color: var(--text);
 }
 
+.progress-draft-stats {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.progress-draft-stats h4 {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.progress-draft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+}
+
+.progress-draft-grid > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.progress-draft-grid small {
+  color: var(--muted);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.progress-draft-grid strong {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progress-draft-grid em {
+  color: var(--accent-2);
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.progress-draft-empty {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 10px;
+}
+
 .progress-history {
   margin-top: 26px;
 }

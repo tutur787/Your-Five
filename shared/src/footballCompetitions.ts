@@ -78,10 +78,3 @@ export function resolveFootballCompetition(
   if (choice !== "random") return choice;
   return FOOTBALL_COMPETITIONS[Math.min(FOOTBALL_COMPETITIONS.length - 1, Math.floor(rng() * FOOTBALL_COMPETITIONS.length))];
 }
-
-export function competitionForSport(
-  sport: "basketball" | "soccer",
-  competition: unknown
-): FootballCompetition | undefined {
-  return sport === "soccer" ? normalizeFootballCompetition(competition) : undefined;
-}

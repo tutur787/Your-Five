@@ -5,7 +5,7 @@ import { SportSwitch } from "../components/SportSwitch";
 import { useSport } from "../hooks/useSport";
 import { ProgressButton } from "../components/ProgressModal";
 import { AccountButton } from "../components/AccountButton";
-import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
+import { PlayerPoolSelect } from "../components/PlayerPoolSelect";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ export function Landing() {
         </div>
       </section>
 
-      <FootballCompetitionSelect />
+      <PlayerPoolSelect />
 
       <section className="mode-select" aria-label="Choose a game mode">
         <button className="mode-option featured" onClick={() => navigate("/ai")}>
@@ -64,7 +64,7 @@ export function Landing() {
         </button>
       </section>
 
-      <footer className="home-footer">{soccer ? "GLOBAL FOOTBALL CARDS" : "ALL-TIME CARDS"} <span /> HEAD-TO-HEAD AUCTIONS <span /> LINEUP FIT</footer>
+      <footer className="home-footer">{soccer ? "GLOBAL FOOTBALL CARDS" : "NBA PLAYER POOLS"} <span /> HEAD-TO-HEAD AUCTIONS <span /> LINEUP FIT</footer>
       <OnboardingModal open={onboarding.open} onClose={onboarding.close} />
     </main>
   );

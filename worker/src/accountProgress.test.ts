@@ -14,12 +14,15 @@ function entry(matchId: string, result: "win" | "loss" | "tie" = "win") {
     matchId,
     completedAt: "2026-07-21T12:00:00.000Z",
     sport: "basketball" as const,
+    competition: "nba-all-time" as const,
+    poolVersion: "nba-v1",
     mode: "ai-competitive" as const,
     result,
     scoreFor: 71.2,
     scoreAgainst: 65.4,
     lineup: ["A", "B", "C", "D", "E"],
     opponentLineup: ["F", "G", "H", "I", "J"],
+    purchases: [{ playerKey: "a", playerName: "A", price: 4 }],
   };
 }
 
@@ -45,6 +48,7 @@ function entry(matchId: string, result: "win" | "loss" | "tie" = "win") {
   local.recordedMatchIds.push("new");
   const merged = mergeAccountProgress(cloud, local);
   assert(merged.sports.basketball.overall.wins === 2, "a new match is added to the cloud record");
+  assert(merged.sports.basketball.draftStats.totalPicks === 1 && merged.sports.basketball.draftStats.totalSpent === 4, "new cloud matches update acquisition stats exactly once");
   assert(merged.recordedMatchIds.filter((id) => id === "known").length === 1, "known match IDs are not counted twice");
 
   local.achievements = [{ id: "online-debut", unlockedAt: "2026-07-21T13:00:00.000Z", matchId: "new" }];
@@ -67,6 +71,7 @@ function entry(matchId: string, result: "win" | "loss" | "tie" = "win") {
   });
   assert(sanitized.sports.basketball.overall.wins === 0 && sanitized.sports.basketball.overall.losses === 3, "account totals are bounded and normalized");
   assert(sanitized.recent[0].scoreFor === 0 && sanitized.recent[0].lineup.length === 5, "history payloads are bounded before storage");
+  assert(sanitized.recent[0].competition === "nba-all-time" && sanitized.recent[0].poolVersion === "nba-v1", "account sync preserves recent-game pool metadata");
   assert(sanitized.recordedMatchIds.length === 1, "recorded match IDs are deduplicated");
   assert(sanitized.achievements.length === 1 && sanitized.achievements[0].id === "first-five", "unknown achievement IDs are rejected");
 }

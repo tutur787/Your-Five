@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { footballCompetitionLabel, LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared/core";
+import { competitionLabel, LineupSlot, MatchState, SeatId, teamScore } from "@fiveaside/shared/core";
 import { ShareCard } from "../components/ShareCard";
 import { ScoreBreakdown } from "../components/ScoreBreakdown";
 import { LineupCourt } from "../components/TeamPanel";
@@ -25,7 +25,7 @@ export function Results({ state, seatLabel, onRematch, editableSeat, onChangeSlo
     <section className="results-shell">
       <div className="results-header">
         <div className="page-eyebrow">FINAL SCORE</div>
-        {state.sport === "soccer" && <div className="result-competition">{footballCompetitionLabel(state.competition)}</div>}
+        <div className="result-competition">{competitionLabel(state.sport, state.competition)}</div>
         <h2>{state.completionReason === "forfeit"
           ? `${winner} ${subjectVerb(winner ?? "", "win", "wins")} by forfeit.`
           : winner

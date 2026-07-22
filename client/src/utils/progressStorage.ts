@@ -1,10 +1,12 @@
 import {
   ACHIEVEMENT_DEFINITIONS,
   ACHIEVEMENT_IDS,
+  competitionForPoolVersion,
+  competitionForSport,
   type AchievementId,
   type AchievementUnlock,
   type AiDifficulty,
-  type FootballCompetition,
+  type Competition,
   type Sport,
 } from "@fiveaside/shared/core";
 
@@ -26,7 +28,8 @@ export interface ProgressHistoryEntry {
   matchId: string;
   completedAt: string;
   sport: Sport;
-  competition?: FootballCompetition;
+  competition?: Competition;
+  poolVersion?: string;
   mode: ProgressMode;
   result: "win" | "loss" | "tie" | "neutral";
   scoreFor: number;
@@ -40,13 +43,35 @@ export interface ProgressHistoryEntry {
   skipsUsed?: number;
   maxPickPrice?: number;
   allPositionsValid?: boolean;
+  purchases?: ProgressPurchase[];
 }
 
-interface SportProgress {
+export interface ProgressPurchase {
+  playerKey: string;
+  playerName: string;
+  price: number;
+}
+
+export interface PlayerPurchaseStat {
+  playerKey: string;
+  playerName: string;
+  purchases: number;
+  totalSpent: number;
+  highestPrice: number;
+}
+
+export interface DraftStats {
+  totalPicks: number;
+  totalSpent: number;
+  players: PlayerPurchaseStat[];
+}
+
+export interface SportProgress {
   overall: ProgressRecord;
   modes: Partial<Record<ProgressMode, ProgressRecord>>;
   currentWinStreak: number;
   bestScore: number | null;
+  draftStats: DraftStats;
 }
 
 export interface ProgressState {
@@ -63,14 +88,27 @@ export const PROGRESS_CHANGED_EVENT = "your-five:progress-changed";
 export const ACHIEVEMENT_UNLOCKED_EVENT = "your-five:achievement-unlocked";
 const MAX_RECENT = 10;
 const MAX_RECORDED_IDS = 100;
+const MAX_PLAYER_STATS = 2_000;
 const DIFFICULTIES: AiDifficulty[] = ["casual", "competitive", "expert"];
+const PROGRESS_MODES: ProgressMode[] = [
+  "ai-casual",
+  "ai-competitive",
+  "ai-expert",
+  "daily",
+  "online-random",
+  "online-private",
+  "challenge",
+  "local",
+];
 
 const emptyRecord = (): ProgressRecord => ({ wins: 0, losses: 0, ties: 0 });
+const emptyDraftStats = (): DraftStats => ({ totalPicks: 0, totalSpent: 0, players: [] });
 const emptySport = (): SportProgress => ({
   overall: emptyRecord(),
   modes: {},
   currentWinStreak: 0,
   bestScore: null,
+  draftStats: emptyDraftStats(),
 });
 
 export function emptyProgress(): ProgressState {
@@ -109,6 +147,85 @@ function sanitizeModes(value: unknown): Partial<Record<ProgressMode, ProgressRec
   ) as Partial<Record<ProgressMode, ProgressRecord>>;
 }
 
+function boundedInteger(value: unknown, maximum = 1_000_000): number {
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.min(maximum, Math.max(0, Math.floor(number))) : 0;
+}
+
+function sanitizeText(value: unknown, maximum = 100): string {
+  return typeof value === "string" ? value.trim().slice(0, maximum) : "";
+}
+
+function sanitizePurchase(value: unknown): ProgressPurchase | null {
+  if (typeof value !== "object" || value === null) return null;
+  const raw = value as Partial<ProgressPurchase>;
+  const playerKey = sanitizeText(raw.playerKey);
+  const playerName = sanitizeText(raw.playerName);
+  if (!playerKey || !playerName) return null;
+  return { playerKey, playerName, price: boundedInteger(raw.price, 20) };
+}
+
+function sanitizePlayerPurchaseStat(value: unknown): PlayerPurchaseStat | null {
+  if (typeof value !== "object" || value === null) return null;
+  const raw = value as Partial<PlayerPurchaseStat>;
+  const playerKey = sanitizeText(raw.playerKey);
+  const playerName = sanitizeText(raw.playerName);
+  if (!playerKey || !playerName) return null;
+  return {
+    playerKey,
+    playerName,
+    purchases: boundedInteger(raw.purchases),
+    totalSpent: boundedInteger(raw.totalSpent),
+    highestPrice: boundedInteger(raw.highestPrice, 20),
+  };
+}
+
+function sanitizeDraftStats(value: unknown): DraftStats {
+  if (typeof value !== "object" || value === null) return emptyDraftStats();
+  const raw = value as Partial<DraftStats>;
+  const players = Array.isArray(raw.players)
+    ? raw.players.map(sanitizePlayerPurchaseStat).filter((entry): entry is PlayerPurchaseStat => entry !== null).slice(0, MAX_PLAYER_STATS)
+    : [];
+  return {
+    totalPicks: boundedInteger(raw.totalPicks),
+    totalSpent: boundedInteger(raw.totalSpent),
+    players,
+  };
+}
+
+function sanitizeHistoryEntry(value: unknown): ProgressHistoryEntry | null {
+  if (typeof value !== "object" || value === null) return null;
+  const raw = value as Partial<ProgressHistoryEntry>;
+  if (raw.sport !== "basketball" && raw.sport !== "soccer") return null;
+  const matchId = sanitizeText(raw.matchId);
+  const completedAt = typeof raw.completedAt === "string" ? new Date(raw.completedAt) : null;
+  const mode = PROGRESS_MODES.includes(raw.mode as ProgressMode) ? raw.mode as ProgressMode : null;
+  if (!matchId || !completedAt || !Number.isFinite(completedAt.getTime()) || !mode) return null;
+  const poolVersion = sanitizeText(raw.poolVersion) || undefined;
+  const competition = competitionForPoolVersion(raw.sport, poolVersion)
+    ?? competitionForSport(raw.sport, raw.competition);
+  const result = raw.result === "win" || raw.result === "loss" || raw.result === "tie" || raw.result === "neutral"
+    ? raw.result
+    : "neutral";
+  return {
+    ...raw,
+    matchId,
+    completedAt: completedAt.toISOString(),
+    sport: raw.sport,
+    competition,
+    poolVersion,
+    mode,
+    result,
+    scoreFor: Number.isFinite(Number(raw.scoreFor)) ? Number(raw.scoreFor) : 0,
+    scoreAgainst: Number.isFinite(Number(raw.scoreAgainst)) ? Number(raw.scoreAgainst) : 0,
+    lineup: Array.isArray(raw.lineup) ? raw.lineup.map((name) => sanitizeText(name)).filter(Boolean).slice(0, 5) : [],
+    opponentLineup: Array.isArray(raw.opponentLineup) ? raw.opponentLineup.map((name) => sanitizeText(name)).filter(Boolean).slice(0, 5) : [],
+    purchases: Array.isArray(raw.purchases)
+      ? raw.purchases.map(sanitizePurchase).filter((entry): entry is ProgressPurchase => entry !== null).slice(0, 5)
+      : undefined,
+  };
+}
+
 function sanitizeSportProgress(value: unknown): SportProgress {
   const raw = typeof value === "object" && value !== null ? value as Partial<SportProgress> : {};
   const bestScore = Number(raw.bestScore);
@@ -117,6 +234,7 @@ function sanitizeSportProgress(value: unknown): SportProgress {
     modes: sanitizeModes(raw.modes),
     currentWinStreak: Math.max(0, Math.floor(Number(raw.currentWinStreak) || 0)),
     bestScore: Number.isFinite(bestScore) && bestScore > 0 ? bestScore : null,
+    draftStats: sanitizeDraftStats(raw.draftStats),
   };
 }
 
@@ -274,7 +392,9 @@ export function loadProgress(storage?: Storage): ProgressState {
           basketball: sanitizeSportProgress(parsed.sports?.basketball),
           soccer: sanitizeSportProgress(parsed.sports?.soccer),
         },
-        recent: Array.isArray(parsed.recent) ? parsed.recent.slice(0, MAX_RECENT) : [],
+        recent: Array.isArray(parsed.recent)
+          ? parsed.recent.map(sanitizeHistoryEntry).filter((entry): entry is ProgressHistoryEntry => entry !== null).slice(0, MAX_RECENT)
+          : [],
         recordedMatchIds: Array.isArray(parsed.recordedMatchIds) ? parsed.recordedMatchIds.slice(-MAX_RECORDED_IDS) : [],
         achievements: sanitizeAchievements(parsed.achievements),
       };

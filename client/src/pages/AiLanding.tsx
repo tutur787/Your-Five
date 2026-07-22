@@ -1,13 +1,13 @@
 import {
   AiDifficulty,
-  footballCompetitionLabel,
-  resolveFootballCompetition,
+  competitionLabel,
+  resolveCompetitionForSport,
   seededRng,
   todayUtcDateString,
 } from "@fiveaside/shared/core";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
-import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
+import { PlayerPoolSelect } from "../components/PlayerPoolSelect";
 import { useAiDifficulty } from "../hooks/useAiDifficulty";
 import { useSport } from "../hooks/useSport";
 import { loadDailyBestScore, loadDailyCompleted } from "../utils/aiStorage";
@@ -21,12 +21,14 @@ function difficultyLabel(difficulty: AiDifficulty): string {
 
 export function AiLanding() {
   const navigate = useNavigate();
-  const { sport, footballCompetition } = useSport();
+  const { sport, basketballCompetition, footballCompetition } = useSport();
   const { difficulty, setDifficulty } = useAiDifficulty();
   const today = todayUtcDateString();
-  const dailyCompetition = sport === "soccer"
-    ? resolveFootballCompetition(footballCompetition, seededRng(`football-competition:daily:${today}`))
-    : undefined;
+  const dailyCompetition = resolveCompetitionForSport(
+    sport,
+    sport === "soccer" ? footballCompetition : basketballCompetition,
+    seededRng(`${sport}-competition:daily:${today}`)
+  );
   const dailyComplete = loadDailyCompleted(sport, today, undefined, dailyCompetition) !== null;
   const dailyBest = loadDailyBestScore(sport, undefined, dailyCompetition);
 
@@ -39,7 +41,7 @@ export function AiLanding() {
         sportLocked={false}
       />
 
-      <FootballCompetitionSelect />
+      <PlayerPoolSelect />
 
       <section className="ai-difficulty-section" aria-labelledby="difficulty-title">
         <div className="ai-section-heading">
@@ -83,7 +85,7 @@ export function AiLanding() {
             <span className="mode-label">Daily Challenge</span>
             <span className="mode-meta">
               {dailyComplete ? "Completed today" : "Today's shared board"} · Competitive AI
-              {dailyCompetition ? ` · ${footballCompetitionLabel(dailyCompetition)}` : ""}
+              {` · ${competitionLabel(sport, dailyCompetition)}`}
               {dailyBest !== null ? ` · Best ${dailyBest.toFixed(1)}` : ""}
             </span>
           </span>

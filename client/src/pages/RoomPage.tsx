@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { footballCompetitionLabel } from "@fiveaside/shared/core";
+import { competitionLabel } from "@fiveaside/shared/core";
 import { AppHeader } from "../components/AppHeader";
 import { useOnlineMatch } from "../hooks/useOnlineMatch";
 import { useRecordProgress } from "../hooks/useRecordProgress";
@@ -57,7 +57,7 @@ export function RoomPage() {
   const otherSeat = seat === "A" ? "B" : "A";
   const otherRematchReady = metadata.rematchReady[otherSeat];
   const competitionDetail = metadata.competition
-    ? footballCompetitionLabel(metadata.competition)
+    ? competitionLabel(state?.sport ?? "basketball", metadata.competition)
     : null;
 
   const header = (
@@ -117,7 +117,7 @@ export function RoomPage() {
         seatNames={labels}
         turnDeadlineAt={metadata.turnDeadlineAt}
         resultsExtra={resultActions}
-        resultsSubtitle={`${roomKind === "matched" ? "Online Quick Match" : "Private Match"}${state.sport === "soccer" ? ` · ${footballCompetitionLabel(state.competition)}` : ""}`}
+        resultsSubtitle={`${roomKind === "matched" ? "Online Quick Match" : "Private Match"} · ${competitionLabel(state.sport, state.competition)}`}
       />
     </div>
   );

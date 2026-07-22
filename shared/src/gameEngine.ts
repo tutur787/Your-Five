@@ -71,6 +71,7 @@ export const MIN_ELIGIBLE_PER_POSITION_IN_POOL = 2;
 export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[], rng: Rng = Math.random): BasketballPlayerCard[] {
   const shuffled = shuffle(database, rng);
   const chosen = new Set<string>();
+  const chosenPlayers = new Set<string>();
   const primaryCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
   const eligibleCount: Record<Position, number> = { PG: 0, SG: 0, SF: 0, PF: 0, C: 0 };
   const core: BasketballPlayerCard[] = []; // the min-coverage players, revealed first
@@ -78,6 +79,7 @@ export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[
 
   const take = (player: BasketballPlayerCard, bucket: BasketballPlayerCard[]) => {
     chosen.add(player.id);
+    if (player.sourceIdentity) chosenPlayers.add(player.sourceIdentity);
     primaryCount[player.position]++;
     for (const pos of validSlotsFor(player)) eligibleCount[pos as Position]++;
     bucket.push(player);
@@ -87,7 +89,7 @@ export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[
   for (const pos of POSITIONS) {
     for (const player of shuffled) {
       if (eligibleCount[pos] >= MIN_ELIGIBLE_PER_POSITION_IN_POOL) break;
-      if (chosen.has(player.id)) continue;
+      if (chosen.has(player.id) || (player.sourceIdentity && chosenPlayers.has(player.sourceIdentity))) continue;
       if (!validSlotsFor(player).includes(pos)) continue;
       if (primaryCount[player.position] >= MAX_PER_POSITION_IN_POOL) continue;
       take(player, core);
@@ -96,7 +98,7 @@ export function buildBasketballPoolFrom(database: readonly BasketballPlayerCard[
 
   // Phase 2: fill out the rest of the pool for variety, still respecting the primary cap.
   for (const player of shuffled) {
-    if (chosen.has(player.id)) continue;
+    if (chosen.has(player.id) || (player.sourceIdentity && chosenPlayers.has(player.sourceIdentity))) continue;
     if (primaryCount[player.position] >= MAX_PER_POSITION_IN_POOL) continue;
     take(player, rest);
   }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { footballCompetitionLabel, MatchState, playerScoreContributions, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
+import { competitionLabel, MatchState, playerScoreContributions, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
 import { formatLineupSlot } from "../utils/position";
 
 interface Props {
@@ -44,10 +44,10 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
   ctx.font = "bold 30px -apple-system, Helvetica, Arial, sans-serif";
   ctx.fillText(`YOUR FIVE / $20 ${state.sport === "soccer" ? "FOOTBALL" : "BASKETBALL"} DRAFT`, 36, 60);
 
-  const competitionLabel = state.sport === "soccer" ? footballCompetitionLabel(state.competition) : null;
+  const poolLabel = competitionLabel(state.sport, state.competition);
   const resolvedSubtitle = [
     subtitle,
-    competitionLabel && !subtitle?.includes(competitionLabel) ? competitionLabel : null,
+    poolLabel && !subtitle?.includes(poolLabel) ? poolLabel : null,
   ].filter(Boolean).join(" · ");
   if (resolvedSubtitle) {
     ctx.fillStyle = COLORS.muted;

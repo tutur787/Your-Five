@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
-import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
+import { PlayerPoolSelect } from "../components/PlayerPoolSelect";
 import { connectMatchmaking, createRoomCode, getOnlineNickname, normalizeOnlineNickname, storeOnlineNickname } from "../utils/socket";
 import { useSport } from "../hooks/useSport";
 import { useAuth } from "../hooks/useAuth";
-import { footballCompetitionLabel, type FootballCompetition } from "@fiveaside/shared";
+import { competitionLabel, type Competition } from "@fiveaside/shared";
 
 interface CompetitionDrawState {
-  choices: [FootballCompetition, FootballCompetition];
-  selected: FootballCompetition;
-  active: FootballCompetition;
+  choices: [Competition, Competition];
+  selected: Competition;
+  active: Competition;
   revealed: boolean;
 }
 
@@ -26,7 +26,8 @@ export function OnlineLanding() {
   const [competitionDraw, setCompetitionDraw] = useState<CompetitionDrawState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [nickname, setNickname] = useState(getOnlineNickname);
-  const { sport, footballCompetition } = useSport();
+  const { sport, basketballCompetition, footballCompetition } = useSport();
+  const competitionChoice = sport === "soccer" ? footballCompetition : basketballCompetition;
   const { user } = useAuth();
   const normalizedNickname = normalizeOnlineNickname(nickname);
   const nicknameInvalid = normalizedNickname === null;
@@ -58,7 +59,7 @@ export function OnlineLanding() {
     setCreating(true);
     setError(null);
     try {
-      const { code, token } = await createRoomCode(sport, footballCompetition);
+      const { code, token } = await createRoomCode(sport, competitionChoice);
       navigate(`/room/${code}?token=${encodeURIComponent(token)}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not reach the server.");
@@ -75,7 +76,7 @@ export function OnlineLanding() {
     setCompetitionDraw(null);
 
     matchSocketRef.current?.close();
-    const socket = connectMatchmaking(sport, footballCompetition, (message) => {
+    const socket = connectMatchmaking(sport, competitionChoice, (message) => {
       if (message.type === "matchFound") {
         matchSocketRef.current = null;
         const destination = `/room/${message.code}?token=${encodeURIComponent(message.token)}`;
@@ -129,7 +130,7 @@ export function OnlineLanding() {
   return (
     <div className="game-page online-page">
       <AppHeader eyebrow="MATCHMAKING" title="Play online" detail={`Choose your ${sport === "soccer" ? "football" : "basketball"} matchup`} sportLocked={creating || matchmaking} />
-      <FootballCompetitionSelect disabled={creating || matchmaking} />
+      <PlayerPoolSelect disabled={creating || matchmaking} />
       <div className="online-identity">
         <label htmlFor="online-nickname">Playing as</label>
         <input
@@ -184,7 +185,7 @@ export function OnlineLanding() {
             <div className="competition-draw-options">
               {competitionDraw.choices.map((choice) => (
                 <div className={`competition-draw-option${competitionDraw.active === choice ? " active" : ""}`} key={choice}>
-                  {footballCompetitionLabel(choice)}
+                  {competitionLabel(sport, choice)}
                 </div>
               ))}
             </div>

@@ -1,4 +1,4 @@
-import { FootballCompetitionChoice, MatchAction, MatchmakingServerMessage, RoomServerMessage, Sport } from "@fiveaside/shared/core";
+import { CompetitionChoice, MatchAction, MatchmakingServerMessage, RoomServerMessage, Sport } from "@fiveaside/shared/core";
 
 const ACK_TIMEOUT_MS = 7000;
 const ROOM_CODE_PATTERN = /^[A-HJ-NP-Z2-9]{6}$/;
@@ -61,9 +61,9 @@ function socketUrl(path: string): string {
 }
 
 /** Reserves a private room and returns the creator's durable seat token. */
-export async function createRoomCode(sport: Sport, competition?: FootballCompetitionChoice): Promise<{ code: string; token: string; sport: Sport }> {
+export async function createRoomCode(sport: Sport, competition?: CompetitionChoice): Promise<{ code: string; token: string; sport: Sport }> {
   const query = new URLSearchParams({ sport });
-  if (sport === "soccer" && competition) query.set("competition", competition);
+  if (competition) query.set("competition", competition);
   const res = await fetch(`${httpBase()}/rooms/new?${query}`, {
     headers: { "X-Your-Five-Client": getClientId() },
   });
@@ -196,9 +196,9 @@ export class RoomSocket {
 
 /** Connects to the shared matchmaking queue. This protocol needs no client->server payloads:
  * connecting IS "find a match," and closing the socket IS "cancel matchmaking." */
-export function connectMatchmaking(sport: Sport, competition: FootballCompetitionChoice | undefined, onMessage: (message: MatchmakingServerMessage) => void): WebSocket {
+export function connectMatchmaking(sport: Sport, competition: CompetitionChoice | undefined, onMessage: (message: MatchmakingServerMessage) => void): WebSocket {
   const query = new URLSearchParams({ sport, client: getClientId() });
-  if (sport === "soccer" && competition) query.set("competition", competition);
+  if (competition) query.set("competition", competition);
   const ws = new WebSocket(socketUrl(`/matchmaking?${query}`));
   ws.addEventListener("message", (event) => {
     try {

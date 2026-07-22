@@ -275,6 +275,12 @@ export function DataSourcesPage() {
             from published position listings and stored explicitly, without assigning positions from statistical
             rules. Historical teammates and accolades are stored as verified card metadata.
           </p>
+          <p>
+            The NBA 2025/26 option contains the six players with the most regular-season minutes for each of the 30
+            teams. Team-specific stints are ranked by minutes, games, starts, and stable NBA player ID. Its committed
+            provenance manifest records all endpoint parameters, retrieval times, content hashes, ranking inputs,
+            exact position sources, and official award sources; production does not contact NBA.com during a draft.
+          </p>
         </div>
       </section>
       <section className="info-section">
@@ -365,10 +371,10 @@ export function PrivacyPage() {
           <ul>
             <li>whether you have already seen the rules introduction;</li>
             <li>your selected basketball or football mode preference;</li>
-            <li>your selected football competition preference;</li>
+            <li>your selected basketball and football player-pool preferences;</li>
             <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
-            <li>your optional online nickname, recent draft history, streaks, mode records, achievements, and challenge results;</li>
+            <li>your optional online nickname, recent draft history, player purchase statistics, streaks, mode records, achievements, and challenge results;</li>
             <li>a random anonymous client identifier used to apply basic room-creation and matchmaking rate limits; and</li>
             <li>a temporary private-room seat token in session storage so you can reconnect during that browser session.</li>
           </ul>

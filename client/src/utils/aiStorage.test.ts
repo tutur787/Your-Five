@@ -47,6 +47,13 @@ saveDailyResult("basketball", "2026-07-15", daily, "A", storage);
 assert(loadDailyCompleted("basketball", "2026-07-15", storage) !== null, "Daily completion remains loadable");
 assert(storage.getItem(dailyCompletedKey("basketball", "2026-07-15")) !== null, "Daily completion keeps its existing storage key");
 
+const seasonDaily = createMatch("basketball", () => 0.25);
+seasonDaily.competition = "nba-2025-26";
+saveDailyResult("basketball", "2026-07-16", seasonDaily, "A", storage, seasonDaily.competition);
+assert(loadDailyCompleted("basketball", "2026-07-16", storage, "nba-2025-26") !== null, "NBA season daily completion uses its competition namespace");
+assert(loadDailyCompleted("basketball", "2026-07-16", storage, "nba-all-time") === null, "NBA season and All-Time daily boards remain isolated");
+assert(storage.getItem(dailyBestScoreKey("basketball", "nba-2025-26")) !== null, "NBA season daily best score is namespaced");
+
 const footballDaily = createMatch("soccer", () => 0.2);
 footballDaily.competition = "premier-league-2025-26";
 saveDailyResult("soccer", "2026-07-15", footballDaily, "A", storage, footballDaily.competition);

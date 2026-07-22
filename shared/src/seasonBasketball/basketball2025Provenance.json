@@ -1,0 +1,3227 @@
+{
+  "schemaVersion": 1,
+  "season": "2025-26",
+  "nbaApiVersion": "1.11.4",
+  "generatedAt": "2026-07-22T16:46:33.528679+00:00",
+  "selection": "Six team-specific player stints per NBA team ranked by regular-season minutes, games, starts, then NBA player ID.",
+  "endpoints": [
+    {
+      "name": "players-base",
+      "parameters": {
+        "measure_type_detailed_defense": "Base",
+        "season": "2025-26",
+        "season_type_all_star": "Regular Season",
+        "per_mode_detailed": "Totals"
+      },
+      "retrievedAt": "2026-07-22T16:13:19.810383+00:00",
+      "contentSha256": "4daf95b50af256251759cf37d49fb7334cd72de6edc2e6de9564633e00221a54"
+    },
+    {
+      "name": "players-advanced",
+      "parameters": {
+        "measure_type_detailed_defense": "Advanced",
+        "season": "2025-26",
+        "season_type_all_star": "Regular Season",
+        "per_mode_detailed": "Totals"
+      },
+      "retrievedAt": "2026-07-22T16:13:20.971720+00:00",
+      "contentSha256": "0f54d0fd05b2b8287d7ddf13ce85ba3c0036f14c78de4db708b3d24c5eb44fc3"
+    },
+    {
+      "name": "players-starters",
+      "parameters": {
+        "measure_type_detailed_defense": "Base",
+        "starter_bench_nullable": "Starters",
+        "season": "2025-26",
+        "season_type_all_star": "Regular Season",
+        "per_mode_detailed": "Totals"
+      },
+      "retrievedAt": "2026-07-22T16:13:23.110399+00:00",
+      "contentSha256": "2e905dd1f10e4b5e1984dea157d7c66708116fba9660ae37320bd438b214e6d8"
+    },
+    {
+      "name": "teams-base",
+      "parameters": {
+        "measure_type_detailed_defense": "Base",
+        "season": "2025-26",
+        "season_type_all_star": "Regular Season",
+        "per_mode_detailed": "Totals"
+      },
+      "retrievedAt": "2026-07-22T16:13:24.419599+00:00",
+      "contentSha256": "27bcd8aa74a2a133114a99be96f9c86f9a1ec497b74c99055e5575adcec957a5"
+    },
+    {
+      "name": "teams-2015-16-base",
+      "parameters": {
+        "season": "2015-16",
+        "season_type_all_star": "Regular Season",
+        "per_mode_detailed": "Totals",
+        "measure_type_detailed_defense": "Base"
+      },
+      "retrievedAt": "2026-07-22T16:13:26.168959+00:00",
+      "contentSha256": "ea2e37ed0449e677a682e37d50b73e0479bd17a5873c645d906c70141004a1c1"
+    }
+  ],
+  "positionSources": [
+    {
+      "playerId": 1629638,
+      "name": "Nickeil Alexander-Walker",
+      "url": "https://en.wikipedia.org/wiki/Nickeil_Alexander-Walker",
+      "contentSha256": "fb3dfb583d6136a9f4f0a07af30d57690f7690336d6bcc05bd5f50c8636d059e",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630552,
+      "name": "Jalen Johnson",
+      "url": "https://en.wikipedia.org/wiki/Jalen_Johnson",
+      "contentSha256": "cef9b604dd9ca804a19a25a1e36dd2abaab7374d48af487f97bbd7a42a3ccd40",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630700,
+      "name": "Dyson Daniels",
+      "url": "https://en.wikipedia.org/wiki/Dyson_Daniels",
+      "contentSha256": "81070ef02ea6dd8f9d8d1f649ca74ad83cbe707e74d3e25722b9f66bee44b896",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630168,
+      "name": "Onyeka Okongwu",
+      "url": "https://en.wikipedia.org/wiki/Onyeka_Okongwu",
+      "contentSha256": "15def1c8f562e7e1c06fe282f661a3f1c199f3524a239199c75b1d012bfd971e",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 203468,
+      "name": "CJ McCollum",
+      "url": "https://en.wikipedia.org/wiki/CJ_McCollum",
+      "contentSha256": "b1e4268cff710d21c141ea5a5be93b8401b5038c1b5b7e9847eee58258c47abb",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1629111,
+      "name": "Jock Landale",
+      "url": "https://en.wikipedia.org/wiki/Jock_Landale",
+      "contentSha256": "48e75cf023298f2ca1933d1dab9152794b39b974fde1671223793503305edad3",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1628401,
+      "name": "Derrick White",
+      "url": "https://en.wikipedia.org/wiki/Derrick_White",
+      "contentSha256": "22fd7b6efbabd97c1bc8ebfca2c17e1481a11c0564fb9d2595650700d8567c67",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630202,
+      "name": "Payton Pritchard",
+      "url": "https://en.wikipedia.org/wiki/Payton_Pritchard",
+      "contentSha256": "4d3b9688cf25d7dcecae90feb0a52c8384864ed94a563f37734e1c349b849165",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1627759,
+      "name": "Jaylen Brown",
+      "url": "https://en.wikipedia.org/wiki/Jaylen_Brown",
+      "contentSha256": "035a66f54486c3a919741df6da14405d81baf3cc412365ed2dd777fd7b82bda8",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630573,
+      "name": "Sam Hauser",
+      "url": "https://en.wikipedia.org/wiki/Sam_Hauser",
+      "contentSha256": "ea46fcf0e228f02b01e1052975ac8ffac03981e3b7ac8626f63d11de1f61227f",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "url": "https://en.wikipedia.org/wiki/Neemias_Queta",
+      "contentSha256": "38122f577e0baa2832bd27650d0f15ff1a633afe351cae3b5cbece7368f633ab",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 202696,
+      "name": "Nikola Vučević",
+      "url": "https://en.wikipedia.org/wiki/Nikola_Vučević",
+      "contentSha256": "d00a4f62c8099ef1d51b27c89ed41ccdd5acd72acc33bb827f0b323e88d212c7",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 201935,
+      "name": "James Harden",
+      "url": "https://en.wikipedia.org/wiki/James_Harden",
+      "contentSha256": "96cc4724adfeb7ec7e77090bf2bee8081251538d7e49c91698b5668a5a7061c3",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628378,
+      "name": "Donovan Mitchell",
+      "url": "https://en.wikipedia.org/wiki/Donovan_Mitchell",
+      "contentSha256": "fc3070c58ada21f6fa7bc586d3880e0b0cb435b0165cfad6c3e4a131ec723952",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630596,
+      "name": "Evan Mobley",
+      "url": "https://en.wikipedia.org/wiki/Evan_Mobley",
+      "contentSha256": "5e1d080fe6eb2479ac26267ea9021d10598af38e508c0c74ccea5ffb163544ec",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 1642281,
+      "name": "Jaylon Tyson",
+      "url": "https://en.wikipedia.org/wiki/Jaylon_Tyson",
+      "contentSha256": "860820a99b2c83f7773bd8b6757aa54baac92b9f378dd61fb753718a2c718a07",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203471,
+      "name": "Dennis Schröder",
+      "url": "https://en.wikipedia.org/wiki/Dennis_Schröder",
+      "contentSha256": "b094678faf41707a9158da16aaf9a86ce43cadb2ada24e428d5034c5b8559fbe",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1628386,
+      "name": "Jarrett Allen",
+      "url": "https://en.wikipedia.org/wiki/Jarrett_Allen",
+      "contentSha256": "00e27fad654321aa83347ec64bbd73e6104ed7494ef89af24193b44655e1fa9f",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1630530,
+      "name": "Trey Murphy III",
+      "url": "https://en.wikipedia.org/wiki/Trey_Murphy_III",
+      "contentSha256": "5ad78e777ce99b9daee87717f5d2baef0109abd5ff56dcf15360c1a0a67dd053",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630180,
+      "name": "Saddiq Bey",
+      "url": "https://en.wikipedia.org/wiki/Saddiq_Bey",
+      "contentSha256": "e62c488bfebb46efce583e33d92986ad3d45416d4a64cd7c15b045e21c0e7fe8",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642847,
+      "name": "Jeremiah Fears",
+      "url": "https://en.wikipedia.org/wiki/Jeremiah_Fears",
+      "contentSha256": "825027551c5809eb73c85d87b25e1401853ffceb5cda67f29b00965652148b17",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642852,
+      "name": "Derik Queen",
+      "url": "https://en.wikipedia.org/wiki/Derik_Queen",
+      "contentSha256": "29832544b7eff4b317661b8ba20541aedb550a5a2d435bd8e7306dbcef9d873d",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1629627,
+      "name": "Zion Williamson",
+      "url": "https://en.wikipedia.org/wiki/Zion_Williamson",
+      "contentSha256": "1e6a859a94957ad9c5f194b8f8698a5b50afc956058adf88446c504bdc2fc96c",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630529,
+      "name": "Herbert Jones",
+      "url": "https://en.wikipedia.org/wiki/Herbert_Jones_(basketball)",
+      "contentSha256": "8a434d5da8deac0ae699682506c241a463c4f68540fa13b9e39bf61ca7a04869",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1641824,
+      "name": "Matas Buzelis",
+      "url": "https://en.wikipedia.org/wiki/Matas_Buzelis",
+      "contentSha256": "79ef70bcee02670d579547178ce32f626acf1449c53683a44846ea75face585a",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630200,
+      "name": "Tre Jones",
+      "url": "https://en.wikipedia.org/wiki/Tre_Jones",
+      "contentSha256": "fccda1bd91830452575d7b1cbdf272eb3fae842d3f634d9bfe965239b54dd353",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630581,
+      "name": "Josh Giddey",
+      "url": "https://en.wikipedia.org/wiki/Josh_Giddey",
+      "contentSha256": "3085a7f604381cbeebcb84c5a632e53087aaec2ecdb1a04218f5d506b35fe61a",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630171,
+      "name": "Isaac Okoro",
+      "url": "https://en.wikipedia.org/wiki/Isaac_Okoro",
+      "contentSha256": "061f9b9d8e104341200fb6a2104fb115a3da41ed0548074a13797d5582bac305",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1629012,
+      "name": "Collin Sexton",
+      "url": "https://en.wikipedia.org/wiki/Collin_Sexton",
+      "contentSha256": "6059290559409fff2d1a9720d7bd57044d99a63ec5bea405c9dfc3f08ace805c",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630172,
+      "name": "Patrick Williams",
+      "url": "https://en.wikipedia.org/wiki/Patrick_Williams_(basketball)",
+      "contentSha256": "6c2aead8b65855fc42124093b894536da6feb52a164b6e138068e85533d23efa",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1642843,
+      "name": "Cooper Flagg",
+      "url": "https://en.wikipedia.org/wiki/Cooper_Flagg",
+      "contentSha256": "49578bd2aa3895cde73bfdc5d01262b312d39f87d18eeabfb19b3e8c6fb82cf2",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1631108,
+      "name": "Max Christie",
+      "url": "https://en.wikipedia.org/wiki/Max_Christie",
+      "contentSha256": "66e9ad2951654eeaa31c2b712dd323a6604cfc5b23f2d74a00af32ef48f3e48b",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630230,
+      "name": "Naji Marshall",
+      "url": "https://en.wikipedia.org/wiki/Naji_Marshall",
+      "contentSha256": "3086af38ef7f3994f060b11391291fc719e6f07a57086ff259fee014ccbb9ab0",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1629023,
+      "name": "P.J. Washington",
+      "url": "https://en.wikipedia.org/wiki/P._J._Washington",
+      "contentSha256": "578f932033ebcf110d7ee7fdcd443076135d57ed5f4de1188274888786a65eb5",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 202691,
+      "name": "Klay Thompson",
+      "url": "https://en.wikipedia.org/wiki/Klay_Thompson",
+      "contentSha256": "7fc042f72e5c67002769bc987541e86956600cbc0bccf27f75031dab9345c28a",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630314,
+      "name": "Brandon Williams",
+      "url": "https://en.wikipedia.org/wiki/Brandon_Williams_(basketball,_born_1999)",
+      "contentSha256": "3148b79956c0e19dd0502666e5a2197c07504e891afd3de483e6cad6777870b6",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1627750,
+      "name": "Jamal Murray",
+      "url": "https://en.wikipedia.org/wiki/Jamal_Murray",
+      "contentSha256": "5de482657954c21b67e35e9602d9a271f04c0d273df7b13d56ab519b80160e0e",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 203999,
+      "name": "Nikola Jokić",
+      "url": "https://en.wikipedia.org/wiki/Nikola_Jokić",
+      "contentSha256": "766ba035adbbfb6f0b55adc3b3cff7d12e911b0ae82636073cd10c6ef3abd231",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 203501,
+      "name": "Tim Hardaway Jr.",
+      "url": "https://en.wikipedia.org/wiki/Tim_Hardaway_Jr.",
+      "contentSha256": "a31842bd1ed239ee6e1039c54bee006383be0ce7c179b400fa1b85bae8866a52",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628971,
+      "name": "Bruce Brown",
+      "url": "https://en.wikipedia.org/wiki/Bruce_Brown_(basketball)",
+      "contentSha256": "11ff654172b5510e0fdaa424b5f67d271b52fd1048f85071f9f69f532e71cca2",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1629661,
+      "name": "Cameron Johnson",
+      "url": "https://en.wikipedia.org/wiki/Cameron_Johnson",
+      "contentSha256": "a8a5f5b3c29047fb4907334dbc26b546076d211b179320c5f2f238351a14235e",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1631212,
+      "name": "Peyton Watson",
+      "url": "https://en.wikipedia.org/wiki/Peyton_Watson",
+      "contentSha256": "0a73c26e630175f983f64128ac746b54657425089e076dfe93205b0b3dfed374",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1641764,
+      "name": "Brandin Podziemski",
+      "url": "https://de.wikipedia.org/wiki/Brandin_Podziemski",
+      "contentSha256": "e45d959c8214bd35a1e02e8fbe0569668273ac2fbdb05ab887dac9bd37c2db6b",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203110,
+      "name": "Draymond Green",
+      "url": "https://en.wikipedia.org/wiki/Draymond_Green",
+      "contentSha256": "443e899a0a936531eb93f922cc011f5c7dad9fbbe0f8e20d5e43921f968abfba",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630541,
+      "name": "Moses Moody",
+      "url": "https://en.wikipedia.org/wiki/Moses_Moody",
+      "contentSha256": "039afbcc4266687f25041719304cf97ce7828fda0ca000e7ae357d0d793e29d3",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630611,
+      "name": "Gui Santos",
+      "url": "https://en.wikipedia.org/wiki/Gui_Santos",
+      "contentSha256": "26e598a7280e395c8e10a8622ceb98945238a8f007459885fcc377587a187a8c",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1642954,
+      "name": "Will Richard",
+      "url": "https://en.wikipedia.org/wiki/Will_Richard",
+      "contentSha256": "2fa14eb283745626e9c69b86489d1d0fb681bc917acd5d4a9cad21ec90453392",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "url": "https://en.wikipedia.org/wiki/Stephen_Curry",
+      "contentSha256": "846ac7b1bee74d9612f321a12f03db86ee56c0cff0be260c50dd27f19ef8aa99",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641708,
+      "name": "Amen Thompson",
+      "url": "https://en.wikipedia.org/wiki/Amen_Thompson",
+      "contentSha256": "d818cc95f836384c94a0b7ac9daf4e8afd2b5d3f64b03b92701c11a13203a375",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 201142,
+      "name": "Kevin Durant",
+      "url": "https://en.wikipedia.org/wiki/Kevin_Durant",
+      "contentSha256": "e89543b8b3a4a060e747b4e3e3abccf24115453a1173147ecf7b6c9ba0ac785e",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1631095,
+      "name": "Jabari Smith Jr.",
+      "url": "https://en.wikipedia.org/wiki/Jabari_Smith_Jr.",
+      "contentSha256": "e55e9a2aaccfabf2f2c4848bbc5f4fd1f7c58e5544bd7d9a4575f75be466c467",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630578,
+      "name": "Alperen Sengun",
+      "url": "https://en.wikipedia.org/wiki/Alperen_Şengün",
+      "contentSha256": "4ba6b52116ff90fe2f9c608ce7734a45606899d638ab9910b0ce1d31d5020c4a",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 1642263,
+      "name": "Reed Sheppard",
+      "url": "https://en.wikipedia.org/wiki/Reed_Sheppard",
+      "contentSha256": "d74d51711f81dd031cc8b9d664856986e60fca72f551e8ae94a86df8de0bfbfd",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1631106,
+      "name": "Tari Eason",
+      "url": "https://en.wikipedia.org/wiki/Tari_Eason",
+      "contentSha256": "aa535d97962b7a695cf0b2ca1f78927a46227bc30ec859f6092868eaff880f0d",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1627739,
+      "name": "Kris Dunn",
+      "url": "https://en.wikipedia.org/wiki/Kris_Dunn",
+      "contentSha256": "2d7546ae0e0c6dd99d252860ad2739077f56a00f33af0464369ebb060a1ab0de",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 202695,
+      "name": "Kawhi Leonard",
+      "url": "https://en.wikipedia.org/wiki/Kawhi_Leonard",
+      "contentSha256": "50bbb54e1b03a06c56ee01d5f214e250b42553dc9bb48997a77797d52c3bb242",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1628381,
+      "name": "John Collins",
+      "url": "https://en.wikipedia.org/wiki/John_Collins_(basketball)",
+      "contentSha256": "49bbe1c52ababca80b81a5c9ead2daf3fc9fd9b890e17c15bc07c1ab19e26dd2",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 201572,
+      "name": "Brook Lopez",
+      "url": "https://en.wikipedia.org/wiki/Brook_Lopez",
+      "contentSha256": "a5997d3dd3f16528ae4e9f86e96080207c3343ef6819029c690c5362443dd14b",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1631097,
+      "name": "Bennedict Mathurin",
+      "url": "https://en.wikipedia.org/wiki/Bennedict_Mathurin",
+      "contentSha256": "c702b2c6b25d2d080260497df30f5464167d79beb49a1e70c2bf4a19d1b43a76",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642920,
+      "name": "Kobe Sanders",
+      "url": "https://en.wikipedia.org/wiki/Kobe_Sanders",
+      "contentSha256": "a284d3cfe1dfe0b9fa8818bb10cc19ca33b8e66fe890398f8a47d2a1de24989e",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1629029,
+      "name": "Luka Dončić",
+      "url": "https://en.wikipedia.org/wiki/Luka_Dončić",
+      "contentSha256": "262b93058013629fdd373cee3de331e0181461f5218d9f6745bebd67f8790aa0",
+      "positions": [
+        "PG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1631222,
+      "name": "Jake LaRavia",
+      "url": "https://en.wikipedia.org/wiki/Jake_LaRavia",
+      "contentSha256": "fd839957c26361ed435d8dcc28080f8177159aa088805672e0cdf23146652b2f",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 2544,
+      "name": "LeBron James",
+      "url": "https://en.wikipedia.org/wiki/LeBron_James",
+      "contentSha256": "6d63f52207675ccdee4f78a4ab1b7db9b66b5398e173bd68ff079854f6523911",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629028,
+      "name": "Deandre Ayton",
+      "url": "https://en.wikipedia.org/wiki/Deandre_Ayton",
+      "contentSha256": "fbf1b7dae7b5e9994238e2123d14f5979be2759fffb2a730c2ba7efea2041a95",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1629060,
+      "name": "Rui Hachimura",
+      "url": "https://en.wikipedia.org/wiki/Rui_Hachimura",
+      "contentSha256": "0240fef3b3b11f8970dae0c06792a8de897407b985ab89863b35194e402f5942",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 203935,
+      "name": "Marcus Smart",
+      "url": "https://en.wikipedia.org/wiki/Marcus_Smart",
+      "contentSha256": "f8227e80d94dcbe49de0bcfa55d61e955d59bf5e7732c3c7635a6dde897d1603",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628389,
+      "name": "Bam Adebayo",
+      "url": "https://en.wikipedia.org/wiki/Bam_Adebayo",
+      "contentSha256": "f16099a62963beae12d870ca513ed65653445a1cef1e7c09b720b7eb3a0a2911",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1631170,
+      "name": "Jaime Jaquez Jr.",
+      "url": "https://en.wikipedia.org/wiki/Jaime_Jaquez_Jr.",
+      "contentSha256": "966a9ec8d109eda49aa0f91066858486071f7345eb8c8052c3e2ec44a8dd60a3",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203952,
+      "name": "Andrew Wiggins",
+      "url": "https://en.wikipedia.org/wiki/Andrew_Wiggins",
+      "contentSha256": "52856224ecdfa589f6935d9dd28138f9e400021ba1ac8c62a0dde417fb4ba4cd",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630558,
+      "name": "Davion Mitchell",
+      "url": "https://en.wikipedia.org/wiki/Davion_Mitchell",
+      "contentSha256": "a0f8dc99c9b9ecc821b7ddc403b506dbb5ebef9f456d80539b7776cfe2ef8dae",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641796,
+      "name": "Pelle Larsson",
+      "url": "https://en.wikipedia.org/wiki/Pelle_Larsson",
+      "contentSha256": "b90b8442553cfc1fcd9efde8e40f6170b6bb652697bd3b08aeb5e74b20f4604c",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1626181,
+      "name": "Norman Powell",
+      "url": "https://en.wikipedia.org/wiki/Norman_Powell",
+      "contentSha256": "14e777cd2a0df69b2c2ae963e8ced80bea580b72a72caa1811bc00fd3fd531b2",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1631157,
+      "name": "Ryan Rollins",
+      "url": "https://en.wikipedia.org/wiki/Ryan_Rollins",
+      "contentSha256": "1f07555e241276605bcef230c6b67758c1b2cfde59d722fac2242564d86d36b3",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1631260,
+      "name": "AJ Green",
+      "url": "https://en.wikipedia.org/wiki/A._J._Green_(basketball)",
+      "contentSha256": "18d04996a676e83a66f33a3f348135721dd6d611993ea7ab5d36c95246f732cc",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1626167,
+      "name": "Myles Turner",
+      "url": "https://en.wikipedia.org/wiki/Myles_Turner",
+      "contentSha256": "295abcc5efd0d9e3e4361b9b36384629f37c76f515ccfbe26f76b34cdfc50a5b",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1628398,
+      "name": "Kyle Kuzma",
+      "url": "https://en.wikipedia.org/wiki/Kyle_Kuzma",
+      "contentSha256": "3b1dc607b8895fe7115b41619970869ac27cd52cc2ae23121d9a8eb906bb3705",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1626171,
+      "name": "Bobby Portis Jr.",
+      "url": "https://en.wikipedia.org/wiki/Bobby_Portis",
+      "contentSha256": "971220e768e1cf507a2ae3c503db7cbf09840e3a4b8030a416eca72dbebd9639",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629018,
+      "name": "Gary Trent Jr.",
+      "url": "https://en.wikipedia.org/wiki/Gary_Trent_Jr.",
+      "contentSha256": "e7a910ea2ae862ca0e687ea1f1296c8f094a83f2e521bf57bc08a97a7371779f",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203944,
+      "name": "Julius Randle",
+      "url": "https://en.wikipedia.org/wiki/Julius_Randle",
+      "contentSha256": "9cca549c76431f5a9df4f67530b4787a193f21e9f7e19ad72b25b05f09f97677",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 1628978,
+      "name": "Donte DiVincenzo",
+      "url": "https://en.wikipedia.org/wiki/Donte_DiVincenzo",
+      "contentSha256": "deee7c7765d83bb18325f6cd3cd742cdfe74a840701ec1fe88cef268e44d8f0f",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203497,
+      "name": "Rudy Gobert",
+      "url": "https://en.wikipedia.org/wiki/Rudy_Gobert",
+      "contentSha256": "a55152e2a2e55f9968c8019852891852a03e4a0a23a6d3499c226d90cbb8b860",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1630183,
+      "name": "Jaden McDaniels",
+      "url": "https://en.wikipedia.org/wiki/Jaden_McDaniels",
+      "contentSha256": "b1990235dd2eb43cd4cf96667394abf6f29463a252969abd65492f0c1b89273d",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1630162,
+      "name": "Anthony Edwards",
+      "url": "https://en.wikipedia.org/wiki/Anthony_Edwards_(basketball)",
+      "contentSha256": "56ad582fb8f2826f70b6fde58bacb10d3f5d29f17f1ac0db6802b3a15437d284",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1629675,
+      "name": "Naz Reid",
+      "url": "https://en.wikipedia.org/wiki/Naz_Reid",
+      "contentSha256": "50942534f21aee74232fcdf5bcf820123e1a765a5ede5e0067359583c2b1fc22",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629651,
+      "name": "Nic Claxton",
+      "url": "https://en.wikipedia.org/wiki/Nic_Claxton",
+      "contentSha256": "b693642952f2614a042bcbc83e63b182b63ff199d932ee708f21fe35ae92a6bf",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1641730,
+      "name": "Noah Clowney",
+      "url": "https://en.wikipedia.org/wiki/Noah_Clowney",
+      "contentSha256": "da597b6b0a37cc6966296060a99d82221c1f59d07794ade2e146f344137e6962",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629008,
+      "name": "Michael Porter Jr.",
+      "url": "https://en.wikipedia.org/wiki/Michael_Porter_Jr.",
+      "contentSha256": "7fd2693355c7d62304e1f98e3f17a2d2cba651581dfe533ae82fa4222676bbaf",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1629611,
+      "name": "Terance Mann",
+      "url": "https://en.wikipedia.org/wiki/Terance_Mann",
+      "contentSha256": "44b4cc5d3880b0ccdaaaddcfd9f890e4357e158d93df822afe145211b22388e7",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642962,
+      "name": "Drake Powell",
+      "url": "https://en.wikipedia.org/wiki/Drake_Powell",
+      "contentSha256": "20d8a400bf70e2e0cc2591935010aa7b40df94f186dace423398114044a87792",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642856,
+      "name": "Egor Dëmin",
+      "url": "https://en.wikipedia.org/wiki/Egor_Dëmin",
+      "contentSha256": "5d377e7cb6737b91cd7c15cd8702a10c85f82b5f6acbe30ca5b5f5ee8d444d2b",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628969,
+      "name": "Mikal Bridges",
+      "url": "https://en.wikipedia.org/wiki/Mikal_Bridges",
+      "contentSha256": "54de80292ea0aa604d913e216abe49f9f5823e7888b920e925764c442f8bd8a3",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1628973,
+      "name": "Jalen Brunson",
+      "url": "https://en.wikipedia.org/wiki/Jalen_Brunson",
+      "contentSha256": "5f9a28775a6de175be7e0194bf7f9e2e23188233d18a721dd52d92b74f8146fc",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1626157,
+      "name": "Karl-Anthony Towns",
+      "url": "https://en.wikipedia.org/wiki/Karl-Anthony_Towns",
+      "contentSha256": "317bdf9f29b210065bd4c3306b33135315e0968dafc4665182f4fdab73aa4de5",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1628384,
+      "name": "OG Anunoby",
+      "url": "https://en.wikipedia.org/wiki/OG_Anunoby",
+      "contentSha256": "5d7069809b419a5d0587f27fb2e3cbecbbfb0d00cd02947e6da93c41d6cb3ce1",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1628404,
+      "name": "Josh Hart",
+      "url": "https://en.wikipedia.org/wiki/Josh_Hart",
+      "contentSha256": "b53c973a7b19add92ef79d5054c72cf0460ae6ed616a9eba42daecda93e63f5e",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630631,
+      "name": "Jose Alvarado",
+      "url": "https://en.wikipedia.org/wiki/Jose_Alvarado_(basketball)",
+      "contentSha256": "c705e961fb85361f5753775cceaf665a6ad3d9578d52063c865511e6ad089b1a",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630217,
+      "name": "Desmond Bane",
+      "url": "https://en.wikipedia.org/wiki/Desmond_Bane",
+      "contentSha256": "234abb437b36e633393c517c0072b1a87d44826f178f6999b8d5fa184a550c8c",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1631094,
+      "name": "Paolo Banchero",
+      "url": "https://en.wikipedia.org/wiki/Paolo_Banchero",
+      "contentSha256": "201a8c6e07942ee3ddd0688be0fd5e62c03c45d1686aa05d799e145f5eef595c",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1628976,
+      "name": "Wendell Carter Jr.",
+      "url": "https://en.wikipedia.org/wiki/Wendell_Carter_Jr.",
+      "contentSha256": "f411c4e622dd959d2b40fb3d0b99fa74bf61d18e049b4c1754894dd098c33e2a",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1641710,
+      "name": "Anthony Black",
+      "url": "https://en.wikipedia.org/wiki/Anthony_Black_(basketball)",
+      "contentSha256": "10cfdcd89f1dc00882302e69f8254774684cd6b2e358766da49a45d18df57cf7",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641783,
+      "name": "Tristan da Silva",
+      "url": "https://en.wikipedia.org/wiki/Tristan_da_Silva",
+      "contentSha256": "055a1138657f6a7745a9b45c7e3c51f2be5f4ab3d0202bc44bb607a47f69760b",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630591,
+      "name": "Jalen Suggs",
+      "url": "https://en.wikipedia.org/wiki/Jalen_Suggs",
+      "contentSha256": "c4a3b6fa8c9c6ed209f0061b8c92eeb630430b5478ac4e874b24d0b1ef13a99c",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1627783,
+      "name": "Pascal Siakam",
+      "url": "https://en.wikipedia.org/wiki/Pascal_Siakam",
+      "contentSha256": "18e8cf610c2108631110fad5d28fb2a2b24c7b8be399a8a943ba35adc169f68a",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1641716,
+      "name": "Jarace Walker",
+      "url": "https://en.wikipedia.org/wiki/Jarace_Walker",
+      "contentSha256": "3a6196250ff22c470f20f1a33d621f23ff094d67ef615b7e427af77b1f5765b4",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1629614,
+      "name": "Andrew Nembhard",
+      "url": "https://en.wikipedia.org/wiki/Andrew_Nembhard",
+      "contentSha256": "11f5c1148de505c7147ca468292adbf8c619fe474c7272e40c43d5530b436c42",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630643,
+      "name": "Jay Huff",
+      "url": "https://en.wikipedia.org/wiki/Jay_Huff",
+      "contentSha256": "feca85dfd98f5d17dbed8604975ec9a8b9624c2a196753d1edb239124bfdb298",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1627826,
+      "name": "Ivica Zubac",
+      "url": "https://en.wikipedia.org/wiki/Ivica_Zubac",
+      "contentSha256": "894222d9d0666508ca75dd3b7364147debb98c4ad219e1d2283bba3fa9fcc0be",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1641767,
+      "name": "Ben Sheppard",
+      "url": "https://en.wikipedia.org/wiki/Ben_Sheppard_(basketball)",
+      "contentSha256": "2730d2f5bd71e8fa72397405ebd3d5457559d74c3862e38da23d70cf976a1706",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630178,
+      "name": "Tyrese Maxey",
+      "url": "https://en.wikipedia.org/wiki/Tyrese_Maxey",
+      "contentSha256": "b5d96b95dd0e5cdbc884da9c443905761b7e217efaca181549987137f3c31a6a",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1642845,
+      "name": "VJ Edgecombe",
+      "url": "https://en.wikipedia.org/wiki/V._J._Edgecombe",
+      "contentSha256": "6805daf20348102f697e1e51837647391aa2e965aad100ffaa6b6408100ce9aa",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1629656,
+      "name": "Quentin Grimes",
+      "url": "https://en.wikipedia.org/wiki/Quentin_Grimes",
+      "contentSha256": "fcbb36e69271fbb1d8083705272dd8a17176306aa1edddb66a750598485d43c4",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1631230,
+      "name": "Dominick Barlow",
+      "url": "https://en.wikipedia.org/wiki/Dominick_Barlow",
+      "contentSha256": "d128d2a5ab0056497bdbbc170f94d45c0d59a5d690fdb5fffff3dbba53f28666",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1626162,
+      "name": "Kelly Oubre Jr.",
+      "url": "https://en.wikipedia.org/wiki/Kelly_Oubre_Jr.",
+      "contentSha256": "4e3e3aaa368319a84e107e7539d3ebfe58cc9b50ae7f711a9796b4913757753a",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1641737,
+      "name": "Adem Bona",
+      "url": "https://en.wikipedia.org/wiki/Adem_Bona",
+      "contentSha256": "352adf6dafff15cfc1809422b69acfc3e7ba81f1fc596343b065501992b74b9a",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1631221,
+      "name": "Collin Gillespie",
+      "url": "https://en.wikipedia.org/wiki/Collin_Gillespie",
+      "contentSha256": "bb03a023f8b792b3a982a8d9c4e4d0ab946b3300ed9edab8a24379b5151cd8a3",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1626220,
+      "name": "Royce O'Neale",
+      "url": "https://en.wikipedia.org/wiki/Royce_O'Neale",
+      "contentSha256": "79a8bb357125f4cb0727d5d5d95de72a55e63f0a0762a71c1d162f129eda7822",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1626164,
+      "name": "Devin Booker",
+      "url": "https://en.wikipedia.org/wiki/Devin_Booker",
+      "contentSha256": "bb0f6b5ac098cbcce436da0c8e68604947f94abfbf8223aab5656ec4d2ab092b",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642345,
+      "name": "Oso Ighodaro",
+      "url": "https://en.wikipedia.org/wiki/Oso_Ighodaro",
+      "contentSha256": "927ed5f37d1573f0b722ac32b2d4de021318cd880cac54c69bbac31d08549357",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1628415,
+      "name": "Dillon Brooks",
+      "url": "https://en.wikipedia.org/wiki/Dillon_Brooks",
+      "contentSha256": "b0eaac48c37c12235434ed3beac8793964bd4094825d9675179225e86fd33ab9",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630692,
+      "name": "Jordan Goodwin",
+      "url": "https://en.wikipedia.org/wiki/Jordan_Goodwin",
+      "contentSha256": "74da633b346e624532757935e1aa2008097fca91784783a40ddf3164a375a234",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641739,
+      "name": "Toumani Camara",
+      "url": "https://en.wikipedia.org/wiki/Toumani_Camara",
+      "contentSha256": "55980933f07fef47163123bec468d06322f43d93a3ef1e33aa26bd7a90b595a0",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630166,
+      "name": "Deni Avdija",
+      "url": "https://en.wikipedia.org/wiki/Deni_Avdija",
+      "contentSha256": "c57e2b2fcc1d2153b9f74da59474eee51eba7835c0aef4b9dd28f856de74bdfe",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642270,
+      "name": "Donovan Clingan",
+      "url": "https://en.wikipedia.org/wiki/Donovan_Clingan",
+      "contentSha256": "87b03a2ae61d5c604eb1f936ea77ae35ce58eb5781d00bd8d0ac9cbb837621b9",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 203924,
+      "name": "Jerami Grant",
+      "url": "https://en.wikipedia.org/wiki/Jerami_Grant",
+      "contentSha256": "a1d7b01d1b2d2198434d31fdfb749009c464a6312e94dcf3f9ef8054520aeead",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 201950,
+      "name": "Jrue Holiday",
+      "url": "https://en.wikipedia.org/wiki/Jrue_Holiday",
+      "contentSha256": "4ddf54061921d2f2d038685e7a2a444c92d241f7099a45e39d99b223f59f2ba3",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1631101,
+      "name": "Shaedon Sharpe",
+      "url": "https://en.wikipedia.org/wiki/Shaedon_Sharpe",
+      "contentSha256": "a327dd68dde722babfc33b8b049cd1ce14b6bea5971ac378f3283aaa3ed989cb",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 201942,
+      "name": "DeMar DeRozan",
+      "url": "https://en.wikipedia.org/wiki/DeMar_DeRozan",
+      "contentSha256": "a984608a7e49d9ccadced35ea3fbcffe2c8be7f9414ea3778d62bb7e3f5c245b",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642875,
+      "name": "Maxime Raynaud",
+      "url": "https://en.wikipedia.org/wiki/Maxime_Raynaud",
+      "contentSha256": "96f683e410eadb75affb7312f2652ff90e07aed718f474c2064b595ab5db0069",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1642363,
+      "name": "Nique Clifford",
+      "url": "https://en.wikipedia.org/wiki/Nique_Clifford",
+      "contentSha256": "ff20070815e1a794e3ddbbfbff9817aaec4dc7f4d94485c319845da3ec3320e3",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 201566,
+      "name": "Russell Westbrook",
+      "url": "https://en.wikipedia.org/wiki/Russell_Westbrook",
+      "contentSha256": "56154ee5834a0b43df5f99e95b7b067ad0c481d8712a605dc090fc4bff4b6673",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630173,
+      "name": "Precious Achiuwa",
+      "url": "https://en.wikipedia.org/wiki/Precious_Achiuwa",
+      "contentSha256": "00cb0761e22a7dcb2746fd97c8d24f04df5707812090ccd25c289f918bd97075",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1628370,
+      "name": "Malik Monk",
+      "url": "https://en.wikipedia.org/wiki/Malik_Monk",
+      "contentSha256": "342e6c4b7f9a81710699e4d670744e5336218fd40aaa87b83e5dcd1a6bdabb63",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630577,
+      "name": "Julian Champagnie",
+      "url": "https://en.wikipedia.org/wiki/Julian_Champagnie",
+      "contentSha256": "a197ec88414661938b65b5ac31712bd9f836b48e4e577d29f41277cd94ea77bf",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1628368,
+      "name": "De'Aaron Fox",
+      "url": "https://en.wikipedia.org/wiki/De'Aaron_Fox",
+      "contentSha256": "352aad9cd579d8fd83d8df665b3cfd18136e5f40b2ef070f3669a42996fdbab5",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630170,
+      "name": "Devin Vassell",
+      "url": "https://en.wikipedia.org/wiki/Devin_Vassell",
+      "contentSha256": "5760fae9efd200774ab948ee4c8d78b3b75adfa0aea31fcc0a46f57ee7647a26",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642264,
+      "name": "Stephon Castle",
+      "url": "https://en.wikipedia.org/wiki/Stephon_Castle",
+      "contentSha256": "6bb4a81005f79bc651072663e1a3c3d5eac2b699e054f7e5d4d6936e99fbd77d",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 203084,
+      "name": "Harrison Barnes",
+      "url": "https://en.wikipedia.org/wiki/Harrison_Barnes",
+      "contentSha256": "3922200048f54a002ec1cbb0ee041a31f75754d558e7900487c44215594b72c7",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629640,
+      "name": "Keldon Johnson",
+      "url": "https://en.wikipedia.org/wiki/Keldon_Johnson",
+      "contentSha256": "a053ab816905f780c6d49d6658bc5113dc1c6ed9ce48b2f735c4941153036077",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "url": "https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander",
+      "contentSha256": "b0c7944a3675452092c928f1ca7dc515f8c89415e8a7ed273738b37932576aba",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1641717,
+      "name": "Cason Wallace",
+      "url": "https://en.wikipedia.org/wiki/Cason_Wallace",
+      "contentSha256": "e9f18e2f289203749298bc614f7d82627432bf4d44b71d01d1b0347eefd4c63c",
+      "positions": [
+        "SG",
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1631096,
+      "name": "Chet Holmgren",
+      "url": "https://en.wikipedia.org/wiki/Chet_Holmgren",
+      "contentSha256": "5c58930ffeadff07684243e04c44a6140fc44199463bf61ce77c8f539fe514df",
+      "positions": [
+        "C",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1629652,
+      "name": "Luguentz Dort",
+      "url": "https://en.wikipedia.org/wiki/Luguentz_Dort",
+      "contentSha256": "1b92228ecccc7efc93516639238292f7495e450e3c0c47c3d64b37fae9de991a",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630198,
+      "name": "Isaiah Joe",
+      "url": "https://en.wikipedia.org/wiki/Isaiah_Joe",
+      "contentSha256": "7cee3dd17d68da906bb9f71d94c6e0416a1a24d781740a1c7151f4f05d7e92aa",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642349,
+      "name": "Ajay Mitchell",
+      "url": "https://en.wikipedia.org/wiki/Ajay_Mitchell",
+      "contentSha256": "0f9dfe1bfe3b5b87e151e7d85c8272d2a8407b1b4616e298e987a11c347e6206",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630567,
+      "name": "Scottie Barnes",
+      "url": "https://en.wikipedia.org/wiki/Scottie_Barnes",
+      "contentSha256": "151b1941b63c1895e35b7e11bfbc1013ce3974c2d8516ef27717bb935cd473e8",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1627742,
+      "name": "Brandon Ingram",
+      "url": "https://en.wikipedia.org/wiki/Brandon_Ingram",
+      "contentSha256": "12919b5f193ccd06dfb824b196711570cb7b47421b1260855e73ee7198fef2c6",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630193,
+      "name": "Immanuel Quickley",
+      "url": "https://en.wikipedia.org/wiki/Immanuel_Quickley",
+      "contentSha256": "713ccaa937ee589102e0ac29c6bab5583cc8541a9ca79f918d37ba71743e8772",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642347,
+      "name": "Jamal Shead",
+      "url": "https://en.wikipedia.org/wiki/Jamal_Shead",
+      "contentSha256": "6343852fc53b69a48588db6d8d22e2f53a2377b3e14de2076994085c91fd60c9",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1630572,
+      "name": "Sandro Mamukelashvili",
+      "url": "https://en.wikipedia.org/wiki/Sandro_Mamukelashvili",
+      "contentSha256": "0cc7e9c352dcf864022e9b305e7c1996858872c255e9b2bab918626a101d1874",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 1629628,
+      "name": "RJ Barrett",
+      "url": "https://en.wikipedia.org/wiki/RJ_Barrett",
+      "contentSha256": "c09ddeb6d994fa394cc982c17e371e3ac5cf959b66c736485d7cc5826d1055ef",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642846,
+      "name": "Ace Bailey",
+      "url": "https://en.wikipedia.org/wiki/Ace_Bailey_(basketball)",
+      "contentSha256": "678fd428042aca650175846c226a30429c73582a53b3c930555ef4a99c0899df",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642271,
+      "name": "Kyle Filipowski",
+      "url": "https://en.wikipedia.org/wiki/Kyle_Filipowski",
+      "contentSha256": "65b305fbf90f43c21e65c902662c27b59627286b2c0981ee2dc84b0080540485",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1641718,
+      "name": "Keyonte George",
+      "url": "https://en.wikipedia.org/wiki/Keyonte_George",
+      "contentSha256": "ea24c4c65814551381ea35b997721e6dd5d5214bf9ab4c76f2f1389ca0380e8b",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641729,
+      "name": "Brice Sensabaugh",
+      "url": "https://en.wikipedia.org/wiki/Brice_Sensabaugh",
+      "contentSha256": "131341bc98b309906e4ae335a7d484b8ed6b3d0cbaedf38ffce1723aa928c833",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642262,
+      "name": "Cody Williams",
+      "url": "https://en.wikipedia.org/wiki/Cody_Williams",
+      "contentSha256": "33414591dd066db445fb9bc33fc024a5c3303a7a8f3701c8d5f7c2553502aaa5",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642268,
+      "name": "Isaiah Collier",
+      "url": "https://en.wikipedia.org/wiki/Isaiah_Collier",
+      "contentSha256": "dc62aa7cd6391dd16e64d4ff2ed07473b6e223bfb05d51533acabb52b0a8eca3",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1642377,
+      "name": "Jaylen Wells",
+      "url": "https://en.wikipedia.org/wiki/Jaylen_Wells",
+      "contentSha256": "84a2bf683c940e84dff686e0ad2b95977555446186c35ca95dd6c9e45769b565",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642285,
+      "name": "Cam Spencer",
+      "url": "https://en.wikipedia.org/wiki/Cam_Spencer",
+      "contentSha256": "db6fc1809e7f875d233f2a3a51f6e4f6ca2b3a289bf538f8e8b0ccce83e8b78c",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642907,
+      "name": "Cedric Coward",
+      "url": "https://en.wikipedia.org/wiki/Cedric_Coward",
+      "contentSha256": "6ed28773df5b9b37ed6f9f6d38732e73279e6e84ac3089caf337c3de1b08d9fd",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642383,
+      "name": "Walter Clayton Jr.",
+      "url": "https://en.wikipedia.org/wiki/Walter_Clayton_Jr.",
+      "contentSha256": "0b26d4349e68627cf6598feacd62980e7dca25f38642d6ab7906879475d91840",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1630583,
+      "name": "Santi Aldama",
+      "url": "https://en.wikipedia.org/wiki/Santi_Aldama",
+      "contentSha256": "4fa23ba4000c232046c37de60f812d0fb2ec33c751a1efa0f5c88881b8deda9d",
+      "positions": [
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1641713,
+      "name": "GG Jackson",
+      "url": "https://en.wikipedia.org/wiki/GG_Jackson",
+      "contentSha256": "e15e471650ae27df9be681efdde9f010ed864dedbd5710cae99efeaafaff63e0",
+      "positions": [
+        "SF",
+        "PF"
+      ]
+    },
+    {
+      "playerId": 1642267,
+      "name": "Bub Carrington",
+      "url": "https://en.wikipedia.org/wiki/Bub_Carrington",
+      "contentSha256": "40c817ca269fa57278f535512727656299966b74e081919cf64a7d54d0bb2e91",
+      "positions": [
+        "PG",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642860,
+      "name": "Will Riley",
+      "url": "https://en.wikipedia.org/wiki/Will_Riley",
+      "contentSha256": "27039fae76946cebb98154dbe532b504b7045512cd9c7975782c17fdbd5d300a",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1641731,
+      "name": "Bilal Coulibaly",
+      "url": "https://en.wikipedia.org/wiki/Bilal_Coulibaly",
+      "contentSha256": "c8360be24fb35063c936a945606c81355d0ae6a20b7e45139ee71e64733c9a6b",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642848,
+      "name": "Tre Johnson",
+      "url": "https://en.wikipedia.org/wiki/Tre_Johnson_(basketball)",
+      "contentSha256": "32220a94f8f6d8256cfdf2ccacfa2bb23852667b2ca7d079cc6588424621e368",
+      "positions": [
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1642273,
+      "name": "Kyshawn George",
+      "url": "https://en.wikipedia.org/wiki/Kyshawn_George",
+      "contentSha256": "0f979d84f03c06272f2079ebbb8e35e3c6f26456891645fbdad87e29f393a535",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630551,
+      "name": "Justin Champagnie",
+      "url": "https://en.wikipedia.org/wiki/Justin_Champagnie",
+      "contentSha256": "2c5a340ba0ee385cd56e3666e05be4cc80bdd57cf8a783efda8b15248da07f1a",
+      "positions": [
+        "SG",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630595,
+      "name": "Cade Cunningham",
+      "url": "https://en.wikipedia.org/wiki/Cade_Cunningham",
+      "contentSha256": "22b010840e820c1db3b60d9602f762686f08174a0acec3a4380e267dce20071e",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1629130,
+      "name": "Duncan Robinson",
+      "url": "https://en.wikipedia.org/wiki/Duncan_Robinson",
+      "contentSha256": "49fcc14f1b37f10a730b28d7e913bcf5f5d93e895f4edb9a0219457aaad02a1e",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1631105,
+      "name": "Jalen Duren",
+      "url": "https://en.wikipedia.org/wiki/Jalen_Duren",
+      "contentSha256": "b149fac9ca7d31e3de1441ca468dfced010beb246fdcee10a2a2dee4d2b463cc",
+      "positions": [
+        "C"
+      ]
+    },
+    {
+      "playerId": 1641709,
+      "name": "Ausar Thompson",
+      "url": "https://en.wikipedia.org/wiki/Ausar_Thompson",
+      "contentSha256": "87697f3536c048a50837b0eb12dc23a1e08aa97b0b2bd9cce9d92977fe07b13b",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 202699,
+      "name": "Tobias Harris",
+      "url": "https://en.wikipedia.org/wiki/Tobias_Harris",
+      "contentSha256": "990920dcd8cd686a2d29009119792cfe2affe37afb369f86af57b9d2866341da",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1641842,
+      "name": "Ronald Holland II",
+      "url": "https://en.wikipedia.org/wiki/Ron_Holland_(basketball)",
+      "contentSha256": "fad026b5ff762c810ef649bea898f005281ae89696e46b4f77551a0e3d74f359",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1642851,
+      "name": "Kon Knueppel",
+      "url": "https://en.wikipedia.org/wiki/Kon_Knueppel",
+      "contentSha256": "10163ed4629372d006b9400785b29e23356c19f9067dd26534ff43152e352ed0",
+      "positions": [
+        "SF",
+        "SG"
+      ]
+    },
+    {
+      "playerId": 1628970,
+      "name": "Miles Bridges",
+      "url": "https://en.wikipedia.org/wiki/Miles_Bridges",
+      "contentSha256": "3c9e6b14be122045eeb031447c7d31872f175b9f7450ef4526870929f1b71635",
+      "positions": [
+        "PF",
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1630163,
+      "name": "LaMelo Ball",
+      "url": "https://en.wikipedia.org/wiki/LaMelo_Ball",
+      "contentSha256": "2632ffc02f7bb48a00231f7b5a8ef03f1b5ef617e2dfeb1b4f0ac814d9e09cc6",
+      "positions": [
+        "PG"
+      ]
+    },
+    {
+      "playerId": 1641706,
+      "name": "Brandon Miller",
+      "url": "https://en.wikipedia.org/wiki/Brandon_Miller_(basketball,_born_2002)",
+      "contentSha256": "d3fe0400288b1b11d6c9254351b194940ae17242f8f084c7de5698fa87a8a7dc",
+      "positions": [
+        "SF"
+      ]
+    },
+    {
+      "playerId": 1631217,
+      "name": "Moussa Diabaté",
+      "url": "https://en.wikipedia.org/wiki/Moussa_Diabaté",
+      "contentSha256": "13dc9ac7f4fc694db42c79bac44b1339780ed0214b89774e0cedfa250db5d655",
+      "positions": [
+        "PF",
+        "C"
+      ]
+    },
+    {
+      "playerId": 1642883,
+      "name": "Sion James",
+      "url": "https://en.wikipedia.org/wiki/Sion_James",
+      "contentSha256": "a336a9ec5bcb8514e30713b074a5a8e6d79c1ddf1a31a79a8955a24ad89b912f",
+      "positions": [
+        "SG"
+      ]
+    }
+  ],
+  "awardSources": [
+    "https://pr.nba.com/voting-results-2025-26-nba-regular-season-awards/",
+    "https://www.nba.com/news/knicks-rally-win-nba-title"
+  ],
+  "chemistrySources": [
+    {
+      "kind": "current-season-team",
+      "source": "players-base",
+      "description": "Players with the same 2025/26 NBA team ID."
+    },
+    {
+      "kind": "historical-team-season",
+      "source": "shared/src/players.ts#TEAMMATE_PAIRS",
+      "description": "Existing verified NBA team-season overlap ledger used by NBA All-Time."
+    }
+  ],
+  "teamCount": 30,
+  "completedGames": 1230,
+  "cardCount": 180,
+  "leagueDefensiveRating": 113.73281495719029,
+  "eraFactor": 0.8881028147470947,
+  "cardsSha256": "667beeb104f2d9883a388aaf4e12918157d7b3a66b81551eb0ce98cbc3b5b359",
+  "cards": [
+    {
+      "id": "nba-2025-26-1629638-atl",
+      "sourceIdentity": "nba:1629638",
+      "teamCode": "ATL",
+      "minutes": 2603.1766666666667,
+      "games": 78,
+      "starts": 71
+    },
+    {
+      "id": "nba-2025-26-1630552-atl",
+      "sourceIdentity": "nba:1630552",
+      "teamCode": "ATL",
+      "minutes": 2531.5983333333334,
+      "games": 72,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-1630700-atl",
+      "sourceIdentity": "nba:1630700",
+      "teamCode": "ATL",
+      "minutes": 2519.54,
+      "games": 76,
+      "starts": 76
+    },
+    {
+      "id": "nba-2025-26-1630168-atl",
+      "sourceIdentity": "nba:1630168",
+      "teamCode": "ATL",
+      "minutes": 2296.9683333333332,
+      "games": 74,
+      "starts": 63
+    },
+    {
+      "id": "nba-2025-26-203468-atl",
+      "sourceIdentity": "nba:203468",
+      "teamCode": "ATL",
+      "minutes": 2263.3716666666664,
+      "games": 76,
+      "starts": 60
+    },
+    {
+      "id": "nba-2025-26-1629111-atl",
+      "sourceIdentity": "nba:1629111",
+      "teamCode": "ATL",
+      "minutes": 1506.0766666666666,
+      "games": 68,
+      "starts": 27
+    },
+    {
+      "id": "nba-2025-26-1628401-bos",
+      "sourceIdentity": "nba:1628401",
+      "teamCode": "BOS",
+      "minutes": 2624.9566666666665,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1630202-bos",
+      "sourceIdentity": "nba:1630202",
+      "teamCode": "BOS",
+      "minutes": 2555.5233333333335,
+      "games": 79,
+      "starts": 50
+    },
+    {
+      "id": "nba-2025-26-1627759-bos",
+      "sourceIdentity": "nba:1627759",
+      "teamCode": "BOS",
+      "minutes": 2442.838333333333,
+      "games": 71,
+      "starts": 71
+    },
+    {
+      "id": "nba-2025-26-1630573-bos",
+      "sourceIdentity": "nba:1630573",
+      "teamCode": "BOS",
+      "minutes": 1934.15,
+      "games": 78,
+      "starts": 49
+    },
+    {
+      "id": "nba-2025-26-1629674-bos",
+      "sourceIdentity": "nba:1629674",
+      "teamCode": "BOS",
+      "minutes": 1926.2066666666667,
+      "games": 76,
+      "starts": 75
+    },
+    {
+      "id": "nba-2025-26-202696-bos",
+      "sourceIdentity": "nba:202696",
+      "teamCode": "BOS",
+      "minutes": 1818.1183333333333,
+      "games": 64,
+      "starts": 49
+    },
+    {
+      "id": "nba-2025-26-201935-cle",
+      "sourceIdentity": "nba:201935",
+      "teamCode": "CLE",
+      "minutes": 2438.495,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1628378-cle",
+      "sourceIdentity": "nba:1628378",
+      "teamCode": "CLE",
+      "minutes": 2342.0633333333335,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1630596-cle",
+      "sourceIdentity": "nba:1630596",
+      "teamCode": "CLE",
+      "minutes": 2074.2883333333334,
+      "games": 65,
+      "starts": 63
+    },
+    {
+      "id": "nba-2025-26-1642281-cle",
+      "sourceIdentity": "nba:1642281",
+      "teamCode": "CLE",
+      "minutes": 1777.4833333333333,
+      "games": 66,
+      "starts": 42
+    },
+    {
+      "id": "nba-2025-26-203471-cle",
+      "sourceIdentity": "nba:203471",
+      "teamCode": "CLE",
+      "minutes": 1696.2983333333334,
+      "games": 70,
+      "starts": 17
+    },
+    {
+      "id": "nba-2025-26-1628386-cle",
+      "sourceIdentity": "nba:1628386",
+      "teamCode": "CLE",
+      "minutes": 1519.12,
+      "games": 56,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1630530-nop",
+      "sourceIdentity": "nba:1630530",
+      "teamCode": "NOP",
+      "minutes": 2340.6383333333333,
+      "games": 66,
+      "starts": 66
+    },
+    {
+      "id": "nba-2025-26-1630180-nop",
+      "sourceIdentity": "nba:1630180",
+      "teamCode": "NOP",
+      "minutes": 2245.575,
+      "games": 72,
+      "starts": 64
+    },
+    {
+      "id": "nba-2025-26-1642847-nop",
+      "sourceIdentity": "nba:1642847",
+      "teamCode": "NOP",
+      "minutes": 2111.903333333333,
+      "games": 82,
+      "starts": 49
+    },
+    {
+      "id": "nba-2025-26-1642852-nop",
+      "sourceIdentity": "nba:1642852",
+      "teamCode": "NOP",
+      "minutes": 2023.38,
+      "games": 81,
+      "starts": 48
+    },
+    {
+      "id": "nba-2025-26-1629627-nop",
+      "sourceIdentity": "nba:1629627",
+      "teamCode": "NOP",
+      "minutes": 1841.0633333333333,
+      "games": 62,
+      "starts": 55
+    },
+    {
+      "id": "nba-2025-26-1630529-nop",
+      "sourceIdentity": "nba:1630529",
+      "teamCode": "NOP",
+      "minutes": 1588.3816666666667,
+      "games": 56,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1641824-chi",
+      "sourceIdentity": "nba:1641824",
+      "teamCode": "CHI",
+      "minutes": 2248.2483333333334,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1630200-chi",
+      "sourceIdentity": "nba:1630200",
+      "teamCode": "CHI",
+      "minutes": 1752.3733333333332,
+      "games": 65,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1630581-chi",
+      "sourceIdentity": "nba:1630581",
+      "teamCode": "CHI",
+      "minutes": 1731.3566666666666,
+      "games": 54,
+      "starts": 51
+    },
+    {
+      "id": "nba-2025-26-1630171-chi",
+      "sourceIdentity": "nba:1630171",
+      "teamCode": "CHI",
+      "minutes": 1694.89,
+      "games": 63,
+      "starts": 62
+    },
+    {
+      "id": "nba-2025-26-1629012-chi",
+      "sourceIdentity": "nba:1629012",
+      "teamCode": "CHI",
+      "minutes": 1613.2033333333334,
+      "games": 68,
+      "starts": 22
+    },
+    {
+      "id": "nba-2025-26-1630172-chi",
+      "sourceIdentity": "nba:1630172",
+      "teamCode": "CHI",
+      "minutes": 1473.78,
+      "games": 72,
+      "starts": 6
+    },
+    {
+      "id": "nba-2025-26-1642843-dal",
+      "sourceIdentity": "nba:1642843",
+      "teamCode": "DAL",
+      "minutes": 2343.858333333333,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1631108-dal",
+      "sourceIdentity": "nba:1631108",
+      "teamCode": "DAL",
+      "minutes": 2244.48,
+      "games": 77,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1630230-dal",
+      "sourceIdentity": "nba:1630230",
+      "teamCode": "DAL",
+      "minutes": 2183.74,
+      "games": 74,
+      "starts": 47
+    },
+    {
+      "id": "nba-2025-26-1629023-dal",
+      "sourceIdentity": "nba:1629023",
+      "teamCode": "DAL",
+      "minutes": 1735.62,
+      "games": 56,
+      "starts": 53
+    },
+    {
+      "id": "nba-2025-26-202691-dal",
+      "sourceIdentity": "nba:202691",
+      "teamCode": "DAL",
+      "minutes": 1496.83,
+      "games": 69,
+      "starts": 8
+    },
+    {
+      "id": "nba-2025-26-1630314-dal",
+      "sourceIdentity": "nba:1630314",
+      "teamCode": "DAL",
+      "minutes": 1462.645,
+      "games": 66,
+      "starts": 15
+    },
+    {
+      "id": "nba-2025-26-1627750-den",
+      "sourceIdentity": "nba:1627750",
+      "teamCode": "DEN",
+      "minutes": 2651.891666666667,
+      "games": 75,
+      "starts": 75
+    },
+    {
+      "id": "nba-2025-26-203999-den",
+      "sourceIdentity": "nba:203999",
+      "teamCode": "DEN",
+      "minutes": 2264.855,
+      "games": 65,
+      "starts": 65
+    },
+    {
+      "id": "nba-2025-26-203501-den",
+      "sourceIdentity": "nba:203501",
+      "teamCode": "DEN",
+      "minutes": 2127.3,
+      "games": 80,
+      "starts": 6
+    },
+    {
+      "id": "nba-2025-26-1628971-den",
+      "sourceIdentity": "nba:1628971",
+      "teamCode": "DEN",
+      "minutes": 1997.7883333333334,
+      "games": 82,
+      "starts": 4
+    },
+    {
+      "id": "nba-2025-26-1629661-den",
+      "sourceIdentity": "nba:1629661",
+      "teamCode": "DEN",
+      "minutes": 1647.0316666666668,
+      "games": 54,
+      "starts": 54
+    },
+    {
+      "id": "nba-2025-26-1631212-den",
+      "sourceIdentity": "nba:1631212",
+      "teamCode": "DEN",
+      "minutes": 1597.7583333333334,
+      "games": 54,
+      "starts": 40
+    },
+    {
+      "id": "nba-2025-26-1641764-gsw",
+      "sourceIdentity": "nba:1641764",
+      "teamCode": "GSW",
+      "minutes": 2332.673333333333,
+      "games": 82,
+      "starts": 43
+    },
+    {
+      "id": "nba-2025-26-203110-gsw",
+      "sourceIdentity": "nba:203110",
+      "teamCode": "GSW",
+      "minutes": 1868.8883333333333,
+      "games": 68,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1630541-gsw",
+      "sourceIdentity": "nba:1630541",
+      "teamCode": "GSW",
+      "minutes": 1539.8983333333333,
+      "games": 60,
+      "starts": 49
+    },
+    {
+      "id": "nba-2025-26-1630611-gsw",
+      "sourceIdentity": "nba:1630611",
+      "teamCode": "GSW",
+      "minutes": 1395.3633333333332,
+      "games": 68,
+      "starts": 30
+    },
+    {
+      "id": "nba-2025-26-1642954-gsw",
+      "sourceIdentity": "nba:1642954",
+      "teamCode": "GSW",
+      "minutes": 1376.805,
+      "games": 69,
+      "starts": 21
+    },
+    {
+      "id": "nba-2025-26-201939-gsw",
+      "sourceIdentity": "nba:201939",
+      "teamCode": "GSW",
+      "minutes": 1328.7283333333332,
+      "games": 43,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1641708-hou",
+      "sourceIdentity": "nba:1641708",
+      "teamCode": "HOU",
+      "minutes": 2953.15,
+      "games": 79,
+      "starts": 79
+    },
+    {
+      "id": "nba-2025-26-201142-hou",
+      "sourceIdentity": "nba:201142",
+      "teamCode": "HOU",
+      "minutes": 2839.8233333333333,
+      "games": 78,
+      "starts": 78
+    },
+    {
+      "id": "nba-2025-26-1631095-hou",
+      "sourceIdentity": "nba:1631095",
+      "teamCode": "HOU",
+      "minutes": 2705.365,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1630578-hou",
+      "sourceIdentity": "nba:1630578",
+      "teamCode": "HOU",
+      "minutes": 2397.695,
+      "games": 72,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-1642263-hou",
+      "sourceIdentity": "nba:1642263",
+      "teamCode": "HOU",
+      "minutes": 2146.923333333333,
+      "games": 82,
+      "starts": 21
+    },
+    {
+      "id": "nba-2025-26-1631106-hou",
+      "sourceIdentity": "nba:1631106",
+      "teamCode": "HOU",
+      "minutes": 1549.105,
+      "games": 60,
+      "starts": 34
+    },
+    {
+      "id": "nba-2025-26-1627739-lac",
+      "sourceIdentity": "nba:1627739",
+      "teamCode": "LAC",
+      "minutes": 2230.0,
+      "games": 82,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-202695-lac",
+      "sourceIdentity": "nba:202695",
+      "teamCode": "LAC",
+      "minutes": 2084.7283333333335,
+      "games": 65,
+      "starts": 65
+    },
+    {
+      "id": "nba-2025-26-1628381-lac",
+      "sourceIdentity": "nba:1628381",
+      "teamCode": "LAC",
+      "minutes": 1871.4783333333332,
+      "games": 69,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-201572-lac",
+      "sourceIdentity": "nba:201572",
+      "teamCode": "LAC",
+      "minutes": 1635.2733333333333,
+      "games": 75,
+      "starts": 40
+    },
+    {
+      "id": "nba-2025-26-1631097-lac",
+      "sourceIdentity": "nba:1631097",
+      "teamCode": "LAC",
+      "minutes": 1620.015,
+      "games": 54,
+      "starts": 25
+    },
+    {
+      "id": "nba-2025-26-1642920-lac",
+      "sourceIdentity": "nba:1642920",
+      "teamCode": "LAC",
+      "minutes": 1351.4166666666667,
+      "games": 68,
+      "starts": 16
+    },
+    {
+      "id": "nba-2025-26-1629029-lal",
+      "sourceIdentity": "nba:1629029",
+      "teamCode": "LAL",
+      "minutes": 2288.6016666666665,
+      "games": 64,
+      "starts": 64
+    },
+    {
+      "id": "nba-2025-26-1631222-lal",
+      "sourceIdentity": "nba:1631222",
+      "teamCode": "LAL",
+      "minutes": 2061.47,
+      "games": 82,
+      "starts": 43
+    },
+    {
+      "id": "nba-2025-26-2544-lal",
+      "sourceIdentity": "nba:2544",
+      "teamCode": "LAL",
+      "minutes": 1989.055,
+      "games": 60,
+      "starts": 60
+    },
+    {
+      "id": "nba-2025-26-1629028-lal",
+      "sourceIdentity": "nba:1629028",
+      "teamCode": "LAL",
+      "minutes": 1958.385,
+      "games": 72,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-1629060-lal",
+      "sourceIdentity": "nba:1629060",
+      "teamCode": "LAL",
+      "minutes": 1926.565,
+      "games": 68,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-203935-lal",
+      "sourceIdentity": "nba:203935",
+      "teamCode": "LAL",
+      "minutes": 1768.9783333333332,
+      "games": 62,
+      "starts": 54
+    },
+    {
+      "id": "nba-2025-26-1628389-mia",
+      "sourceIdentity": "nba:1628389",
+      "teamCode": "MIA",
+      "minutes": 2364.685,
+      "games": 73,
+      "starts": 73
+    },
+    {
+      "id": "nba-2025-26-1631170-mia",
+      "sourceIdentity": "nba:1631170",
+      "teamCode": "MIA",
+      "minutes": 2121.21,
+      "games": 75,
+      "starts": 1
+    },
+    {
+      "id": "nba-2025-26-203952-mia",
+      "sourceIdentity": "nba:203952",
+      "teamCode": "MIA",
+      "minutes": 2062.5983333333334,
+      "games": 68,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1630558-mia",
+      "sourceIdentity": "nba:1630558",
+      "teamCode": "MIA",
+      "minutes": 2000.255,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1641796-mia",
+      "sourceIdentity": "nba:1641796",
+      "teamCode": "MIA",
+      "minutes": 1849.1433333333334,
+      "games": 70,
+      "starts": 54
+    },
+    {
+      "id": "nba-2025-26-1626181-mia",
+      "sourceIdentity": "nba:1626181",
+      "teamCode": "MIA",
+      "minutes": 1716.9366666666667,
+      "games": 58,
+      "starts": 52
+    },
+    {
+      "id": "nba-2025-26-1631157-mil",
+      "sourceIdentity": "nba:1631157",
+      "teamCode": "MIL",
+      "minutes": 2375.483333333333,
+      "games": 74,
+      "starts": 67
+    },
+    {
+      "id": "nba-2025-26-1631260-mil",
+      "sourceIdentity": "nba:1631260",
+      "teamCode": "MIL",
+      "minutes": 2269.9333333333334,
+      "games": 78,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1626167-mil",
+      "sourceIdentity": "nba:1626167",
+      "teamCode": "MIL",
+      "minutes": 1911.8033333333333,
+      "games": 71,
+      "starts": 71
+    },
+    {
+      "id": "nba-2025-26-1628398-mil",
+      "sourceIdentity": "nba:1628398",
+      "teamCode": "MIL",
+      "minutes": 1805.7416666666666,
+      "games": 69,
+      "starts": 43
+    },
+    {
+      "id": "nba-2025-26-1626171-mil",
+      "sourceIdentity": "nba:1626171",
+      "teamCode": "MIL",
+      "minutes": 1619.3133333333333,
+      "games": 67,
+      "starts": 9
+    },
+    {
+      "id": "nba-2025-26-1629018-mil",
+      "sourceIdentity": "nba:1629018",
+      "teamCode": "MIL",
+      "minutes": 1377.3816666666667,
+      "games": 65,
+      "starts": 21
+    },
+    {
+      "id": "nba-2025-26-203944-min",
+      "sourceIdentity": "nba:203944",
+      "teamCode": "MIN",
+      "minutes": 2610.2966666666666,
+      "games": 79,
+      "starts": 79
+    },
+    {
+      "id": "nba-2025-26-1628978-min",
+      "sourceIdentity": "nba:1628978",
+      "teamCode": "MIN",
+      "minutes": 2494.036666666667,
+      "games": 82,
+      "starts": 82
+    },
+    {
+      "id": "nba-2025-26-203497-min",
+      "sourceIdentity": "nba:203497",
+      "teamCode": "MIN",
+      "minutes": 2380.0466666666666,
+      "games": 76,
+      "starts": 76
+    },
+    {
+      "id": "nba-2025-26-1630183-min",
+      "sourceIdentity": "nba:1630183",
+      "teamCode": "MIN",
+      "minutes": 2316.4133333333334,
+      "games": 73,
+      "starts": 73
+    },
+    {
+      "id": "nba-2025-26-1630162-min",
+      "sourceIdentity": "nba:1630162",
+      "teamCode": "MIN",
+      "minutes": 2136.5933333333332,
+      "games": 61,
+      "starts": 60
+    },
+    {
+      "id": "nba-2025-26-1629675-min",
+      "sourceIdentity": "nba:1629675",
+      "teamCode": "MIN",
+      "minutes": 2007.35,
+      "games": 77,
+      "starts": 3
+    },
+    {
+      "id": "nba-2025-26-1629651-bkn",
+      "sourceIdentity": "nba:1629651",
+      "teamCode": "BKN",
+      "minutes": 1920.3666666666666,
+      "games": 69,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1641730-bkn",
+      "sourceIdentity": "nba:1641730",
+      "teamCode": "BKN",
+      "minutes": 1780.0633333333333,
+      "games": 66,
+      "starts": 60
+    },
+    {
+      "id": "nba-2025-26-1629008-bkn",
+      "sourceIdentity": "nba:1629008",
+      "teamCode": "BKN",
+      "minutes": 1688.6033333333332,
+      "games": 52,
+      "starts": 52
+    },
+    {
+      "id": "nba-2025-26-1629611-bkn",
+      "sourceIdentity": "nba:1629611",
+      "teamCode": "BKN",
+      "minutes": 1529.0166666666667,
+      "games": 63,
+      "starts": 51
+    },
+    {
+      "id": "nba-2025-26-1642962-bkn",
+      "sourceIdentity": "nba:1642962",
+      "teamCode": "BKN",
+      "minutes": 1319.5133333333333,
+      "games": 63,
+      "starts": 24
+    },
+    {
+      "id": "nba-2025-26-1642856-bkn",
+      "sourceIdentity": "nba:1642856",
+      "teamCode": "BKN",
+      "minutes": 1308.2083333333333,
+      "games": 52,
+      "starts": 45
+    },
+    {
+      "id": "nba-2025-26-1628969-nyk",
+      "sourceIdentity": "nba:1628969",
+      "teamCode": "NYK",
+      "minutes": 2691.935,
+      "games": 82,
+      "starts": 82
+    },
+    {
+      "id": "nba-2025-26-1628973-nyk",
+      "sourceIdentity": "nba:1628973",
+      "teamCode": "NYK",
+      "minutes": 2589.806666666667,
+      "games": 74,
+      "starts": 74
+    },
+    {
+      "id": "nba-2025-26-1626157-nyk",
+      "sourceIdentity": "nba:1626157",
+      "teamCode": "NYK",
+      "minutes": 2321.7816666666668,
+      "games": 75,
+      "starts": 75
+    },
+    {
+      "id": "nba-2025-26-1628384-nyk",
+      "sourceIdentity": "nba:1628384",
+      "teamCode": "NYK",
+      "minutes": 2223.8716666666664,
+      "games": 67,
+      "starts": 67
+    },
+    {
+      "id": "nba-2025-26-1628404-nyk",
+      "sourceIdentity": "nba:1628404",
+      "teamCode": "NYK",
+      "minutes": 1993.575,
+      "games": 66,
+      "starts": 52
+    },
+    {
+      "id": "nba-2025-26-1630631-nyk",
+      "sourceIdentity": "nba:1630631",
+      "teamCode": "NYK",
+      "minutes": 1370.2366666666667,
+      "games": 69,
+      "starts": 3
+    },
+    {
+      "id": "nba-2025-26-1630217-orl",
+      "sourceIdentity": "nba:1630217",
+      "teamCode": "ORL",
+      "minutes": 2756.045,
+      "games": 82,
+      "starts": 82
+    },
+    {
+      "id": "nba-2025-26-1631094-orl",
+      "sourceIdentity": "nba:1631094",
+      "teamCode": "ORL",
+      "minutes": 2501.685,
+      "games": 72,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-1628976-orl",
+      "sourceIdentity": "nba:1628976",
+      "teamCode": "ORL",
+      "minutes": 2288.3516666666665,
+      "games": 78,
+      "starts": 78
+    },
+    {
+      "id": "nba-2025-26-1641710-orl",
+      "sourceIdentity": "nba:1641710",
+      "teamCode": "ORL",
+      "minutes": 1910.05,
+      "games": 64,
+      "starts": 40
+    },
+    {
+      "id": "nba-2025-26-1641783-orl",
+      "sourceIdentity": "nba:1641783",
+      "teamCode": "ORL",
+      "minutes": 1899.4566666666667,
+      "games": 77,
+      "starts": 34
+    },
+    {
+      "id": "nba-2025-26-1630591-orl",
+      "sourceIdentity": "nba:1630591",
+      "teamCode": "ORL",
+      "minutes": 1573.57,
+      "games": 57,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1627783-ind",
+      "sourceIdentity": "nba:1627783",
+      "teamCode": "IND",
+      "minutes": 2056.6516666666666,
+      "games": 62,
+      "starts": 62
+    },
+    {
+      "id": "nba-2025-26-1641716-ind",
+      "sourceIdentity": "nba:1641716",
+      "teamCode": "IND",
+      "minutes": 1953.3833333333334,
+      "games": 76,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1629614-ind",
+      "sourceIdentity": "nba:1629614",
+      "teamCode": "IND",
+      "minutes": 1785.5933333333332,
+      "games": 57,
+      "starts": 57
+    },
+    {
+      "id": "nba-2025-26-1630643-ind",
+      "sourceIdentity": "nba:1630643",
+      "teamCode": "IND",
+      "minutes": 1719.2433333333333,
+      "games": 82,
+      "starts": 47
+    },
+    {
+      "id": "nba-2025-26-1627826-ind",
+      "sourceIdentity": "nba:1627826",
+      "teamCode": "IND",
+      "minutes": 1446.6983333333333,
+      "games": 48,
+      "starts": 47
+    },
+    {
+      "id": "nba-2025-26-1641767-ind",
+      "sourceIdentity": "nba:1641767",
+      "teamCode": "IND",
+      "minutes": 1390.4766666666667,
+      "games": 65,
+      "starts": 20
+    },
+    {
+      "id": "nba-2025-26-1630178-phi",
+      "sourceIdentity": "nba:1630178",
+      "teamCode": "PHI",
+      "minutes": 2661.1183333333333,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1642845-phi",
+      "sourceIdentity": "nba:1642845",
+      "teamCode": "PHI",
+      "minutes": 2623.305,
+      "games": 75,
+      "starts": 75
+    },
+    {
+      "id": "nba-2025-26-1629656-phi",
+      "sourceIdentity": "nba:1629656",
+      "teamCode": "PHI",
+      "minutes": 2205.721666666667,
+      "games": 75,
+      "starts": 19
+    },
+    {
+      "id": "nba-2025-26-1631230-phi",
+      "sourceIdentity": "nba:1631230",
+      "teamCode": "PHI",
+      "minutes": 1688.5183333333334,
+      "games": 71,
+      "starts": 59
+    },
+    {
+      "id": "nba-2025-26-1626162-phi",
+      "sourceIdentity": "nba:1626162",
+      "teamCode": "PHI",
+      "minutes": 1574.3116666666667,
+      "games": 50,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1641737-phi",
+      "sourceIdentity": "nba:1641737",
+      "teamCode": "PHI",
+      "minutes": 1234.1616666666666,
+      "games": 71,
+      "starts": 18
+    },
+    {
+      "id": "nba-2025-26-1631221-phx",
+      "sourceIdentity": "nba:1631221",
+      "teamCode": "PHX",
+      "minutes": 2281.8016666666667,
+      "games": 80,
+      "starts": 58
+    },
+    {
+      "id": "nba-2025-26-1626220-phx",
+      "sourceIdentity": "nba:1626220",
+      "teamCode": "PHX",
+      "minutes": 2213.0533333333333,
+      "games": 78,
+      "starts": 67
+    },
+    {
+      "id": "nba-2025-26-1626164-phx",
+      "sourceIdentity": "nba:1626164",
+      "teamCode": "PHX",
+      "minutes": 2146.43,
+      "games": 64,
+      "starts": 64
+    },
+    {
+      "id": "nba-2025-26-1642345-phx",
+      "sourceIdentity": "nba:1642345",
+      "teamCode": "PHX",
+      "minutes": 1808.37,
+      "games": 82,
+      "starts": 24
+    },
+    {
+      "id": "nba-2025-26-1628415-phx",
+      "sourceIdentity": "nba:1628415",
+      "teamCode": "PHX",
+      "minutes": 1701.5833333333333,
+      "games": 56,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1630692-phx",
+      "sourceIdentity": "nba:1630692",
+      "teamCode": "PHX",
+      "minutes": 1571.7766666666666,
+      "games": 70,
+      "starts": 10
+    },
+    {
+      "id": "nba-2025-26-1641739-por",
+      "sourceIdentity": "nba:1641739",
+      "teamCode": "POR",
+      "minutes": 2731.2366666666667,
+      "games": 82,
+      "starts": 82
+    },
+    {
+      "id": "nba-2025-26-1630166-por",
+      "sourceIdentity": "nba:1630166",
+      "teamCode": "POR",
+      "minutes": 2199.385,
+      "games": 66,
+      "starts": 66
+    },
+    {
+      "id": "nba-2025-26-1642270-por",
+      "sourceIdentity": "nba:1642270",
+      "teamCode": "POR",
+      "minutes": 2093.6366666666668,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-203924-por",
+      "sourceIdentity": "nba:203924",
+      "teamCode": "POR",
+      "minutes": 1695.1016666666667,
+      "games": 57,
+      "starts": 38
+    },
+    {
+      "id": "nba-2025-26-201950-por",
+      "sourceIdentity": "nba:201950",
+      "teamCode": "POR",
+      "minutes": 1560.4016666666666,
+      "games": 53,
+      "starts": 51
+    },
+    {
+      "id": "nba-2025-26-1631101-por",
+      "sourceIdentity": "nba:1631101",
+      "teamCode": "POR",
+      "minutes": 1471.3016666666667,
+      "games": 50,
+      "starts": 42
+    },
+    {
+      "id": "nba-2025-26-201942-sac",
+      "sourceIdentity": "nba:201942",
+      "teamCode": "SAC",
+      "minutes": 2405.515,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1642875-sac",
+      "sourceIdentity": "nba:1642875",
+      "teamCode": "SAC",
+      "minutes": 1963.88,
+      "games": 74,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1642363-sac",
+      "sourceIdentity": "nba:1642363",
+      "teamCode": "SAC",
+      "minutes": 1881.925,
+      "games": 75,
+      "starts": 28
+    },
+    {
+      "id": "nba-2025-26-201566-sac",
+      "sourceIdentity": "nba:201566",
+      "teamCode": "SAC",
+      "minutes": 1852.57,
+      "games": 64,
+      "starts": 58
+    },
+    {
+      "id": "nba-2025-26-1630173-sac",
+      "sourceIdentity": "nba:1630173",
+      "teamCode": "SAC",
+      "minutes": 1745.185,
+      "games": 73,
+      "starts": 57
+    },
+    {
+      "id": "nba-2025-26-1628370-sac",
+      "sourceIdentity": "nba:1628370",
+      "teamCode": "SAC",
+      "minutes": 1363.6433333333334,
+      "games": 62,
+      "starts": 3
+    },
+    {
+      "id": "nba-2025-26-1630577-sas",
+      "sourceIdentity": "nba:1630577",
+      "teamCode": "SAS",
+      "minutes": 2265.963333333333,
+      "games": 82,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1628368-sas",
+      "sourceIdentity": "nba:1628368",
+      "teamCode": "SAS",
+      "minutes": 2231.065,
+      "games": 72,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-1630170-sas",
+      "sourceIdentity": "nba:1630170",
+      "teamCode": "SAS",
+      "minutes": 2044.2316666666666,
+      "games": 67,
+      "starts": 65
+    },
+    {
+      "id": "nba-2025-26-1642264-sas",
+      "sourceIdentity": "nba:1642264",
+      "teamCode": "SAS",
+      "minutes": 2037.7433333333333,
+      "games": 68,
+      "starts": 67
+    },
+    {
+      "id": "nba-2025-26-203084-sas",
+      "sourceIdentity": "nba:203084",
+      "teamCode": "SAS",
+      "minutes": 1986.475,
+      "games": 77,
+      "starts": 52
+    },
+    {
+      "id": "nba-2025-26-1629640-sas",
+      "sourceIdentity": "nba:1629640",
+      "teamCode": "SAS",
+      "minutes": 1911.4666666666667,
+      "games": 82,
+      "starts": 0
+    },
+    {
+      "id": "nba-2025-26-1628983-okc",
+      "sourceIdentity": "nba:1628983",
+      "teamCode": "OKC",
+      "minutes": 2258.9466666666667,
+      "games": 68,
+      "starts": 68
+    },
+    {
+      "id": "nba-2025-26-1641717-okc",
+      "sourceIdentity": "nba:1641717",
+      "teamCode": "OKC",
+      "minutes": 2046.07,
+      "games": 77,
+      "starts": 58
+    },
+    {
+      "id": "nba-2025-26-1631096-okc",
+      "sourceIdentity": "nba:1631096",
+      "teamCode": "OKC",
+      "minutes": 1997.2683333333334,
+      "games": 69,
+      "starts": 69
+    },
+    {
+      "id": "nba-2025-26-1629652-okc",
+      "sourceIdentity": "nba:1629652",
+      "teamCode": "OKC",
+      "minutes": 1848.7416666666666,
+      "games": 69,
+      "starts": 69
+    },
+    {
+      "id": "nba-2025-26-1630198-okc",
+      "sourceIdentity": "nba:1630198",
+      "teamCode": "OKC",
+      "minutes": 1507.445,
+      "games": 71,
+      "starts": 9
+    },
+    {
+      "id": "nba-2025-26-1642349-okc",
+      "sourceIdentity": "nba:1642349",
+      "teamCode": "OKC",
+      "minutes": 1472.7983333333334,
+      "games": 57,
+      "starts": 16
+    },
+    {
+      "id": "nba-2025-26-1630567-tor",
+      "sourceIdentity": "nba:1630567",
+      "teamCode": "TOR",
+      "minutes": 2680.7766666666666,
+      "games": 80,
+      "starts": 80
+    },
+    {
+      "id": "nba-2025-26-1627742-tor",
+      "sourceIdentity": "nba:1627742",
+      "teamCode": "TOR",
+      "minutes": 2603.8633333333332,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1630193-tor",
+      "sourceIdentity": "nba:1630193",
+      "teamCode": "TOR",
+      "minutes": 2231.3083333333334,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1642347-tor",
+      "sourceIdentity": "nba:1642347",
+      "teamCode": "TOR",
+      "minutes": 1852.2383333333332,
+      "games": 82,
+      "starts": 12
+    },
+    {
+      "id": "nba-2025-26-1630572-tor",
+      "sourceIdentity": "nba:1630572",
+      "teamCode": "TOR",
+      "minutes": 1750.6916666666666,
+      "games": 80,
+      "starts": 13
+    },
+    {
+      "id": "nba-2025-26-1629628-tor",
+      "sourceIdentity": "nba:1629628",
+      "teamCode": "TOR",
+      "minutes": 1725.76,
+      "games": 57,
+      "starts": 57
+    },
+    {
+      "id": "nba-2025-26-1642846-uta",
+      "sourceIdentity": "nba:1642846",
+      "teamCode": "UTA",
+      "minutes": 1987.6433333333334,
+      "games": 72,
+      "starts": 61
+    },
+    {
+      "id": "nba-2025-26-1642271-uta",
+      "sourceIdentity": "nba:1642271",
+      "teamCode": "UTA",
+      "minutes": 1800.9433333333334,
+      "games": 77,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1641718-uta",
+      "sourceIdentity": "nba:1641718",
+      "teamCode": "UTA",
+      "minutes": 1786.1083333333333,
+      "games": 54,
+      "starts": 54
+    },
+    {
+      "id": "nba-2025-26-1641729-uta",
+      "sourceIdentity": "nba:1641729",
+      "teamCode": "UTA",
+      "minutes": 1761.8666666666666,
+      "games": 75,
+      "starts": 22
+    },
+    {
+      "id": "nba-2025-26-1642262-uta",
+      "sourceIdentity": "nba:1642262",
+      "teamCode": "UTA",
+      "minutes": 1630.5416666666667,
+      "games": 67,
+      "starts": 41
+    },
+    {
+      "id": "nba-2025-26-1642268-uta",
+      "sourceIdentity": "nba:1642268",
+      "teamCode": "UTA",
+      "minutes": 1516.92,
+      "games": 59,
+      "starts": 19
+    },
+    {
+      "id": "nba-2025-26-1642377-mem",
+      "sourceIdentity": "nba:1642377",
+      "teamCode": "MEM",
+      "minutes": 1820.6416666666667,
+      "games": 69,
+      "starts": 69
+    },
+    {
+      "id": "nba-2025-26-1642285-mem",
+      "sourceIdentity": "nba:1642285",
+      "teamCode": "MEM",
+      "minutes": 1714.4516666666666,
+      "games": 72,
+      "starts": 20
+    },
+    {
+      "id": "nba-2025-26-1642907-mem",
+      "sourceIdentity": "nba:1642907",
+      "teamCode": "MEM",
+      "minutes": 1597.9466666666667,
+      "games": 62,
+      "starts": 47
+    },
+    {
+      "id": "nba-2025-26-1642383-mem",
+      "sourceIdentity": "nba:1642383",
+      "teamCode": "MEM",
+      "minutes": 1410.535,
+      "games": 69,
+      "starts": 6
+    },
+    {
+      "id": "nba-2025-26-1630583-mem",
+      "sourceIdentity": "nba:1630583",
+      "teamCode": "MEM",
+      "minutes": 1198.0783333333334,
+      "games": 43,
+      "starts": 11
+    },
+    {
+      "id": "nba-2025-26-1641713-mem",
+      "sourceIdentity": "nba:1641713",
+      "teamCode": "MEM",
+      "minutes": 1177.765,
+      "games": 55,
+      "starts": 28
+    },
+    {
+      "id": "nba-2025-26-1642267-was",
+      "sourceIdentity": "nba:1642267",
+      "teamCode": "WAS",
+      "minutes": 2270.65,
+      "games": 82,
+      "starts": 48
+    },
+    {
+      "id": "nba-2025-26-1642860-was",
+      "sourceIdentity": "nba:1642860",
+      "teamCode": "WAS",
+      "minutes": 1632.4716666666666,
+      "games": 74,
+      "starts": 18
+    },
+    {
+      "id": "nba-2025-26-1641731-was",
+      "sourceIdentity": "nba:1641731",
+      "teamCode": "WAS",
+      "minutes": 1467.605,
+      "games": 56,
+      "starts": 56
+    },
+    {
+      "id": "nba-2025-26-1642848-was",
+      "sourceIdentity": "nba:1642848",
+      "teamCode": "WAS",
+      "minutes": 1442.8166666666666,
+      "games": 60,
+      "starts": 42
+    },
+    {
+      "id": "nba-2025-26-1642273-was",
+      "sourceIdentity": "nba:1642273",
+      "teamCode": "WAS",
+      "minutes": 1390.9633333333334,
+      "games": 48,
+      "starts": 48
+    },
+    {
+      "id": "nba-2025-26-1630551-was",
+      "sourceIdentity": "nba:1630551",
+      "teamCode": "WAS",
+      "minutes": 1377.4533333333334,
+      "games": 69,
+      "starts": 19
+    },
+    {
+      "id": "nba-2025-26-1630595-det",
+      "sourceIdentity": "nba:1630595",
+      "teamCode": "DET",
+      "minutes": 2171.6716666666666,
+      "games": 64,
+      "starts": 64
+    },
+    {
+      "id": "nba-2025-26-1629130-det",
+      "sourceIdentity": "nba:1629130",
+      "teamCode": "DET",
+      "minutes": 2113.1583333333333,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1631105-det",
+      "sourceIdentity": "nba:1631105",
+      "teamCode": "DET",
+      "minutes": 1975.8533333333332,
+      "games": 70,
+      "starts": 70
+    },
+    {
+      "id": "nba-2025-26-1641709-det",
+      "sourceIdentity": "nba:1641709",
+      "teamCode": "DET",
+      "minutes": 1895.61,
+      "games": 73,
+      "starts": 72
+    },
+    {
+      "id": "nba-2025-26-202699-det",
+      "sourceIdentity": "nba:202699",
+      "teamCode": "DET",
+      "minutes": 1745.45,
+      "games": 63,
+      "starts": 63
+    },
+    {
+      "id": "nba-2025-26-1641842-det",
+      "sourceIdentity": "nba:1641842",
+      "teamCode": "DET",
+      "minutes": 1550.4483333333333,
+      "games": 78,
+      "starts": 5
+    },
+    {
+      "id": "nba-2025-26-1642851-cha",
+      "sourceIdentity": "nba:1642851",
+      "teamCode": "CHA",
+      "minutes": 2550.7466666666664,
+      "games": 81,
+      "starts": 80
+    },
+    {
+      "id": "nba-2025-26-1628970-cha",
+      "sourceIdentity": "nba:1628970",
+      "teamCode": "CHA",
+      "minutes": 2387.2316666666666,
+      "games": 77,
+      "starts": 77
+    },
+    {
+      "id": "nba-2025-26-1630163-cha",
+      "sourceIdentity": "nba:1630163",
+      "teamCode": "CHA",
+      "minutes": 2017.4466666666667,
+      "games": 72,
+      "starts": 69
+    },
+    {
+      "id": "nba-2025-26-1641706-cha",
+      "sourceIdentity": "nba:1641706",
+      "teamCode": "CHA",
+      "minutes": 1968.3116666666667,
+      "games": 65,
+      "starts": 65
+    },
+    {
+      "id": "nba-2025-26-1631217-cha",
+      "sourceIdentity": "nba:1631217",
+      "teamCode": "CHA",
+      "minutes": 1898.9566666666667,
+      "games": 73,
+      "starts": 47
+    },
+    {
+      "id": "nba-2025-26-1642883-cha",
+      "sourceIdentity": "nba:1642883",
+      "teamCode": "CHA",
+      "minutes": 1843.28,
+      "games": 82,
+      "starts": 19
+    }
+  ]
+}

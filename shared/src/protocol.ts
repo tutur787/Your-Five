@@ -1,5 +1,5 @@
 import { MatchAction, MatchState, SeatId, Sport } from "./types";
-import type { FootballCompetition, FootballCompetitionChoice } from "./footballCompetitions";
+import type { Competition, CompetitionChoice } from "./competitions";
 
 /** Whether both seats in a room currently have a connected player. */
 export interface SeatsFilled {
@@ -10,8 +10,8 @@ export interface SeatsFilled {
 export type RoomKind = "private" | "matched";
 
 export interface RoomMetadata {
-  competition?: FootballCompetition;
-  competitionChoice?: FootballCompetitionChoice;
+  competition?: Competition;
+  competitionChoice?: CompetitionChoice;
   seatsFilled: SeatsFilled;
   seatNames: Partial<Record<SeatId, string>>;
   rematchReady: SeatsFilled;
@@ -34,7 +34,7 @@ export type RoomClientMessage =
 
 /** Sent by the server over the room WebSocket. */
 export type RoomServerMessage =
-  | { type: "joined"; seat: SeatId; token: string; sport: Sport; competition?: FootballCompetition; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled; metadata?: RoomMetadata }
+  | { type: "joined"; seat: SeatId; token: string; sport: Sport; competition?: Competition; roomKind: RoomKind; state: MatchState | null; seatsFilled: SeatsFilled; metadata?: RoomMetadata }
   | { type: "state"; state: MatchState; metadata?: RoomMetadata }
   | { type: "roomUpdate"; seatsFilled: SeatsFilled; metadata?: RoomMetadata }
   | { type: "opponentLeft"; seat: SeatId; reconnectDeadlineAt?: number | null }
@@ -55,10 +55,10 @@ export type MatchmakingServerMessage =
       seat: SeatId;
       token: string;
       sport: Sport;
-      competition?: FootballCompetition;
+      competition?: Competition;
       competitionDraw?: {
-        choices: [FootballCompetition, FootballCompetition];
-        selected: FootballCompetition;
+        choices: [Competition, Competition];
+        selected: Competition;
         durationMs: number;
       };
     }

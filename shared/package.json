@@ -9,6 +9,7 @@
     ".": "./src/index.ts",
     "./core": "./src/core.ts",
     "./basketball-runtime": "./src/basketballRuntime.ts",
+    "./basketball-2025-26-runtime": "./src/seasonBasketball/basketball2025Runtime.ts",
     "./soccer-runtime": "./src/soccerRuntime.ts",
     "./football-premier-league-runtime": "./src/domesticFootball/premierLeagueRuntime.ts",
     "./football-laliga-runtime": "./src/domesticFootball/laligaRuntime.ts",

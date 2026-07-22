@@ -1,4 +1,11 @@
-import { ACHIEVEMENT_IDS, type AchievementId, type AchievementUnlock } from "@fiveaside/shared/core";
+import {
+  ACHIEVEMENT_IDS,
+  competitionForPoolVersion,
+  competitionForSport,
+  type AchievementId,
+  type AchievementUnlock,
+  type Competition,
+} from "@fiveaside/shared/core";
 
 const SPORTS = ["basketball", "soccer"] as const;
 const MODES = [
@@ -26,6 +33,8 @@ interface HistoryEntry {
   matchId: string;
   completedAt: string;
   sport: Sport;
+  competition?: Competition;
+  poolVersion?: string;
   mode: ProgressMode;
   result: Result;
   scoreFor: number;
@@ -39,6 +48,27 @@ interface HistoryEntry {
   skipsUsed?: number;
   maxPickPrice?: number;
   allPositionsValid?: boolean;
+  purchases?: Purchase[];
+}
+
+interface Purchase {
+  playerKey: string;
+  playerName: string;
+  price: number;
+}
+
+interface PlayerPurchaseStat {
+  playerKey: string;
+  playerName: string;
+  purchases: number;
+  totalSpent: number;
+  highestPrice: number;
+}
+
+interface DraftStats {
+  totalPicks: number;
+  totalSpent: number;
+  players: PlayerPurchaseStat[];
 }
 
 interface SportProgress {
@@ -46,6 +76,7 @@ interface SportProgress {
   modes: Partial<Record<ProgressMode, ProgressRecord>>;
   currentWinStreak: number;
   bestScore: number | null;
+  draftStats: DraftStats;
 }
 
 export interface AccountProgress {
@@ -60,13 +91,16 @@ export interface AccountProgress {
 const MAX_RECENT = 10;
 const MAX_RECORDED_IDS = 100;
 const MAX_TEXT = 100;
+const MAX_PLAYER_STATS = 2_000;
 
 const emptyRecord = (): ProgressRecord => ({ wins: 0, losses: 0, ties: 0 });
+const emptyDraftStats = (): DraftStats => ({ totalPicks: 0, totalSpent: 0, players: [] });
 const emptySport = (): SportProgress => ({
   overall: emptyRecord(),
   modes: {},
   currentWinStreak: 0,
   bestScore: null,
+  draftStats: emptyDraftStats(),
 });
 
 export function emptyAccountProgress(): AccountProgress {
@@ -111,6 +145,40 @@ function sanitizeLineup(value: unknown): string[] {
   return Array.isArray(value) ? value.map(sanitizeText).filter(Boolean).slice(0, 5) : [];
 }
 
+function sanitizePurchase(value: unknown): Purchase | null {
+  const raw = objectValue(value);
+  const playerKey = sanitizeText(raw.playerKey);
+  const playerName = sanitizeText(raw.playerName);
+  if (!playerKey || !playerName) return null;
+  return { playerKey, playerName, price: boundedInteger(raw.price, 20) };
+}
+
+function sanitizePlayerPurchaseStat(value: unknown): PlayerPurchaseStat | null {
+  const raw = objectValue(value);
+  const playerKey = sanitizeText(raw.playerKey);
+  const playerName = sanitizeText(raw.playerName);
+  if (!playerKey || !playerName) return null;
+  return {
+    playerKey,
+    playerName,
+    purchases: boundedInteger(raw.purchases),
+    totalSpent: boundedInteger(raw.totalSpent),
+    highestPrice: boundedInteger(raw.highestPrice, 20),
+  };
+}
+
+function sanitizeDraftStats(value: unknown): DraftStats {
+  const raw = objectValue(value);
+  const players = Array.isArray(raw.players)
+    ? raw.players.map(sanitizePlayerPurchaseStat).filter((entry): entry is PlayerPurchaseStat => entry !== null).slice(0, MAX_PLAYER_STATS)
+    : [];
+  return {
+    totalPicks: boundedInteger(raw.totalPicks),
+    totalSpent: boundedInteger(raw.totalSpent),
+    players,
+  };
+}
+
 function sanitizeHistory(value: unknown): HistoryEntry | null {
   const raw = objectValue(value);
   const matchId = sanitizeText(raw.matchId);
@@ -120,10 +188,13 @@ function sanitizeHistory(value: unknown): HistoryEntry | null {
   const completed = typeof raw.completedAt === "string" ? new Date(raw.completedAt) : null;
   if (!matchId || !sport || !mode || !result || !completed || !Number.isFinite(completed.getTime())) return null;
 
+  const poolVersion = sanitizeText(raw.poolVersion) || undefined;
   return {
     matchId,
     completedAt: completed.toISOString(),
     sport,
+    competition: competitionForPoolVersion(sport, poolVersion) ?? competitionForSport(sport, raw.competition),
+    poolVersion,
     mode,
     result,
     scoreFor: boundedScore(raw.scoreFor),
@@ -137,6 +208,9 @@ function sanitizeHistory(value: unknown): HistoryEntry | null {
     skipsUsed: raw.skipsUsed === undefined ? undefined : boundedInteger(raw.skipsUsed, 100),
     maxPickPrice: raw.maxPickPrice === undefined ? undefined : boundedInteger(raw.maxPickPrice, 20),
     allPositionsValid: typeof raw.allPositionsValid === "boolean" ? raw.allPositionsValid : undefined,
+    purchases: Array.isArray(raw.purchases)
+      ? raw.purchases.map(sanitizePurchase).filter((entry): entry is Purchase => entry !== null).slice(0, 5)
+      : undefined,
   };
 }
 
@@ -167,7 +241,33 @@ function sanitizeSport(value: unknown): SportProgress {
     modes,
     currentWinStreak: boundedInteger(raw.currentWinStreak),
     bestScore: Number.isFinite(bestScore) ? boundedScore(bestScore) : null,
+    draftStats: sanitizeDraftStats(raw.draftStats),
   };
+}
+
+function addPurchases(stats: DraftStats, purchases: Purchase[]): void {
+  const players = new Map(stats.players.map((player) => [player.playerKey, player]));
+  for (const purchase of purchases) {
+    const existing = players.get(purchase.playerKey);
+    if (existing) {
+      existing.purchases += 1;
+      existing.totalSpent += purchase.price;
+      existing.highestPrice = Math.max(existing.highestPrice, purchase.price);
+      existing.playerName = purchase.playerName;
+    } else {
+      const created = {
+        playerKey: purchase.playerKey,
+        playerName: purchase.playerName,
+        purchases: 1,
+        totalSpent: purchase.price,
+        highestPrice: purchase.price,
+      };
+      stats.players.push(created);
+      players.set(created.playerKey, created);
+    }
+    stats.totalPicks += 1;
+    stats.totalSpent += purchase.price;
+  }
 }
 
 export function sanitizeAccountProgress(value: unknown): AccountProgress {
@@ -213,6 +313,7 @@ function applyEntry(progress: AccountProgress, entry: HistoryEntry): void {
   }
   sport.modes[entry.mode] = mode;
   sport.bestScore = Math.max(entry.scoreFor, sport.bestScore ?? Number.NEGATIVE_INFINITY);
+  addPurchases(sport.draftStats, entry.purchases ?? []);
 }
 
 /** The first device contributes its full legacy snapshot. Later devices contribute only match

@@ -5,12 +5,12 @@ import { useAiMatch } from "../hooks/useAiMatch";
 import { Draft } from "./Draft";
 import { RuntimeLoading, useSportRuntime } from "../hooks/useSportRuntime";
 import { useSport } from "../hooks/useSport";
-import { footballCompetitionLabel, type SportRuntime } from "@fiveaside/shared/core";
+import { competitionLabel, type SportRuntime } from "@fiveaside/shared/core";
 
 export function QuickAiDraft() {
-  const { sport, footballCompetition } = useSport();
+  const { sport, basketballCompetition, footballCompetition } = useSport();
   const [draftKey, setDraftKey] = useState(() => crypto.randomUUID());
-  const runtime = useSportRuntime(sport, footballCompetition, `quick:${draftKey}`);
+  const runtime = useSportRuntime(sport, sport === "soccer" ? footballCompetition : basketballCompetition, `quick:${draftKey}`);
   if (!runtime) return <RuntimeLoading />;
   return <ActiveQuickAiDraft key={`${runtime.poolVersion}:${draftKey}`} runtime={runtime} onNewDraft={() => setDraftKey(crypto.randomUUID())} />;
 }
@@ -25,7 +25,7 @@ function ActiveQuickAiDraft({ runtime, onNewDraft }: { runtime: SportRuntime; on
       <AppHeader
         eyebrow={`${label.toUpperCase()} AI`}
         title="Quick Draft"
-        detail={`${runtime.sport === "soccer" ? `${footballCompetitionLabel(runtime.competition)} · ` : ""}${record.wins}W · ${record.losses}L · ${record.ties}T`}
+        detail={`${competitionLabel(runtime.sport, runtime.competition)} · ${record.wins}W · ${record.losses}L · ${record.ties}T`}
         actions={<button className="secondary-button" onClick={onNewDraft}>Restart</button>}
       />
       <Draft
@@ -35,7 +35,7 @@ function ActiveQuickAiDraft({ runtime, onNewDraft }: { runtime: SportRuntime; on
         mySeat={humanSeat}
         seatNames={{ A: "You", B: `${label} AI` }}
         onRematch={onNewDraft}
-        resultsSubtitle={`Quick Draft · ${label}${runtime.sport === "soccer" ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
+        resultsSubtitle={`Quick Draft · ${label} · ${competitionLabel(runtime.sport, runtime.competition)}`}
       />
     </div>
   );

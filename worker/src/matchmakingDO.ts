@@ -1,17 +1,18 @@
 import { DurableObject } from "cloudflare:workers";
 import {
-  DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+  competitionChoiceForSport,
+  isBasketballCompetitionChoice,
   isFootballCompetitionChoice,
-  resolveFootballCompetition,
-  type FootballCompetition,
-  type FootballCompetitionChoice,
+  resolveCompetitionForSport,
+  type Competition,
+  type CompetitionChoice,
   MatchmakingServerMessage,
   Sport,
 } from "@fiveaside/shared";
 import { Env } from "./env";
 import { generateClaimToken, generateRoomCode } from "./ids";
 
-type WaitAttachment = { status: "waiting" | "matched"; sport?: Sport; competitionChoice?: FootballCompetitionChoice };
+type WaitAttachment = { status: "waiting" | "matched"; sport?: Sport; competitionChoice?: CompetitionChoice };
 const ROOM_ALLOCATION_ATTEMPTS = 12;
 const WS_OPEN = 1;
 
@@ -30,9 +31,11 @@ export class MatchmakingDO extends DurableObject<Env> {
     const requested = new URL(request.url).searchParams.get("sport") ?? "basketball";
     if (requested !== "basketball" && requested !== "soccer") return new Response("Invalid sport.", { status: 400 });
     const sport: Sport = requested;
-    const requestedCompetition = new URL(request.url).searchParams.get("competition") ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
-    if (sport === "soccer" && !isFootballCompetitionChoice(requestedCompetition)) return new Response("Invalid football competition.", { status: 400 });
-    const competitionChoice: FootballCompetitionChoice = sport === "soccer" ? requestedCompetition as FootballCompetitionChoice : DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+    const requestedCompetition = new URL(request.url).searchParams.get("competition");
+    if (requestedCompetition !== null && !(sport === "soccer" ? isFootballCompetitionChoice(requestedCompetition) : isBasketballCompetitionChoice(requestedCompetition))) {
+      return new Response("Invalid player pool.", { status: 400 });
+    }
+    const competitionChoice = competitionChoiceForSport(sport, requestedCompetition);
 
     const pair = new WebSocketPair();
     const [client, server] = [pair[0], pair[1]];
@@ -52,7 +55,7 @@ export class MatchmakingDO extends DurableObject<Env> {
       const waitingAttachment: Required<WaitAttachment> = {
         status: "matched",
         sport: legacyAttachment.sport ?? sport,
-        competitionChoice: legacyAttachment.competitionChoice ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+        competitionChoice: competitionChoiceForSport(sport, legacyAttachment.competitionChoice),
       };
       waiting.serializeAttachment(waitingAttachment satisfies WaitAttachment);
       this.ctx.acceptWebSocket(server);
@@ -83,22 +86,18 @@ export class MatchmakingDO extends DurableObject<Env> {
     return Boolean(attachment && attachment.status === "waiting" && (attachment.sport ?? sport) === sport);
   }
 
-  private async pair(a: WebSocket, b: WebSocket, sport: Sport, choiceA: FootballCompetitionChoice, choiceB: FootballCompetitionChoice): Promise<void> {
+  private async pair(a: WebSocket, b: WebSocket, sport: Sport, choiceA: CompetitionChoice, choiceB: CompetitionChoice): Promise<void> {
     const tokenA = generateClaimToken();
     const tokenB = generateClaimToken();
-    const candidateA = sport === "soccer" ? resolveFootballCompetition(choiceA) : undefined;
-    const candidateB = sport === "soccer" ? resolveFootballCompetition(choiceB) : undefined;
-    const competition: FootballCompetition | undefined = candidateA && candidateB
-      ? candidateA === candidateB || Math.random() < 0.5 ? candidateA : candidateB
+    const candidateA = resolveCompetitionForSport(sport, choiceA);
+    const candidateB = resolveCompetitionForSport(sport, choiceB);
+    const competition: Competition = candidateA === candidateB || Math.random() < 0.5 ? candidateA : candidateB;
+    const competitionDraw = candidateA !== candidateB
+      ? { choices: [candidateA, candidateB] as [Competition, Competition], selected: competition, durationMs: 5_000 }
       : undefined;
-    const competitionDraw = candidateA && candidateB && candidateA !== candidateB && competition
-      ? { choices: [candidateA, candidateB] as [FootballCompetition, FootballCompetition], selected: competition, durationMs: 5_000 }
-      : undefined;
-    const roomChoice: FootballCompetitionChoice = sport !== "soccer"
-      ? DEFAULT_FOOTBALL_COMPETITION_CHOICE
-      : choiceA === choiceB
+    const roomChoice: CompetitionChoice = choiceA === choiceB
         ? choiceA
-        : competition ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+        : competition;
     let code: string | null = null;
 
     for (let attempt = 0; attempt < ROOM_ALLOCATION_ATTEMPTS; attempt += 1) {

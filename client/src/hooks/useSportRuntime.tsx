@@ -1,22 +1,24 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  DEFAULT_FOOTBALL_COMPETITION,
-  resolveFootballCompetition,
+  competitionChoiceForSport,
+  resolveCompetitionForSport,
   seededRng,
-  type FootballCompetition,
-  type FootballCompetitionChoice,
+  type Competition,
+  type CompetitionChoice,
   type Sport,
   type SportRuntime,
 } from "@fiveaside/shared/core";
 import { useSport } from "./useSport";
 
-const cache: Partial<Record<Sport | FootballCompetition, SportRuntime>> = {};
+const cache: Partial<Record<Competition, SportRuntime>> = {};
 
-async function loadRuntime(sport: Sport, competition?: FootballCompetition): Promise<SportRuntime> {
-  const key = sport === "soccer" ? competition ?? DEFAULT_FOOTBALL_COMPETITION : sport;
+async function loadRuntime(sport: Sport, competition: Competition): Promise<SportRuntime> {
+  const key = competition;
   if (cache[key]) return cache[key] as SportRuntime;
   const runtime = sport === "basketball"
-    ? (await import("@fiveaside/shared/basketball-runtime")).BASKETBALL_RUNTIME
+    ? competition === "nba-2025-26"
+      ? (await import("@fiveaside/shared/basketball-2025-26-runtime")).BASKETBALL_2025_RUNTIME
+      : (await import("@fiveaside/shared/basketball-runtime")).BASKETBALL_RUNTIME
     : competition === "premier-league-2025-26"
       ? (await import("@fiveaside/shared/football-premier-league-runtime")).PREMIER_LEAGUE_RUNTIME
       : competition === "laliga-2025-26"
@@ -34,18 +36,21 @@ async function loadRuntime(sport: Sport, competition?: FootballCompetition): Pro
 
 export function useSportRuntime(
   sport: Sport,
-  choiceOverride?: FootballCompetitionChoice,
+  choiceOverride?: CompetitionChoice,
   randomResolutionKey?: string | number
 ): SportRuntime | null {
   const selected = useSport();
-  const choice = choiceOverride ?? selected.footballCompetition;
+  const selectedChoice = sport === "soccer" ? selected.footballCompetition : selected.basketballCompetition;
+  const choice = competitionChoiceForSport(sport, choiceOverride ?? selectedChoice);
   const competition = useMemo(
-    () => sport === "soccer"
-      ? resolveFootballCompetition(choice, randomResolutionKey === undefined ? Math.random : seededRng(`football-competition:${randomResolutionKey}`))
-      : undefined,
+    () => resolveCompetitionForSport(
+      sport,
+      choice,
+      randomResolutionKey === undefined ? Math.random : seededRng(`${sport}-competition:${randomResolutionKey}`)
+    ),
     [sport, choice, randomResolutionKey]
   );
-  const key = sport === "soccer" ? competition ?? DEFAULT_FOOTBALL_COMPETITION : sport;
+  const key = competition;
   const [runtime, setRuntime] = useState<SportRuntime | null>(() => cache[key] ?? null);
   useEffect(() => {
     let active = true;

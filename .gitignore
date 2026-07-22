@@ -8,5 +8,6 @@ dist/
 .wrangler/
 .cache/soccer-data/
 .cache/football-data/
+.cache/basketball-data/
 deployment.txt
 GOOGLE_AUTH_SETUP.md

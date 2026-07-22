@@ -11,6 +11,7 @@ const FOOTBALL_COMPETITIONS = [
   "bundesliga-2025-26",
   "ligue-1-2025-26",
 ];
+const BASKETBALL_COMPETITIONS = ["nba-all-time", "nba-2025-26"];
 
 class TestSocket {
   constructor(path) {
@@ -97,8 +98,9 @@ async function createPrivateRoom(sport = "basketball", competition) {
   assert.equal(typeof room.token, "string");
   assert.ok(room.token.length > 0);
   assert.equal(room.sport, sport);
-  if (sport === "soccer") {
-    assert.ok(FOOTBALL_COMPETITIONS.includes(room.competition));
+  {
+    const supported = sport === "soccer" ? FOOTBALL_COMPETITIONS : BASKETBALL_COMPETITIONS;
+    assert.ok(supported.includes(room.competition));
     if (competition && competition !== "random") assert.equal(room.competition, competition);
   }
   return room;
@@ -113,11 +115,9 @@ async function testPrivateRoom(sport = "basketball", competition) {
   assert.equal(a.joined.roomKind, "private");
   assert.equal(a.joined.sport, sport);
   assert.equal(b.joined.sport, sport);
-  if (sport === "soccer") {
-    assert.equal(a.joined.competition, room.competition);
-    assert.equal(b.joined.competition, room.competition);
-    assert.equal(a.joined.metadata.competition, room.competition);
-  }
+  assert.equal(a.joined.competition, room.competition);
+  assert.equal(b.joined.competition, room.competition);
+  assert.equal(a.joined.metadata.competition, room.competition);
   assert.notEqual(a.joined.token, b.joined.token);
 
   await expectRejectedRoom(room.code);
@@ -135,7 +135,7 @@ async function testPrivateRoom(sport = "basketball", competition) {
   assert.equal(ack.ok, true);
   const started = await aAgain.socket.waitFor((message) => message.type === "state");
   assert.equal(started.state.sport, sport);
-  if (sport === "soccer") assert.equal(started.state.competition, room.competition);
+  assert.equal(started.state.competition, room.competition);
   await Promise.all([aAgain.socket.close(), bAgain.socket.close()]);
 }
 
@@ -352,14 +352,42 @@ async function testFootballCompetitionQueues() {
   await Promise.all([premier.close(), laliga.close(), explicit.close(), randomA.close(), randomFirst.close(), randomSecond.close()]);
 }
 
+async function testBasketballCompetitionQueues() {
+  const allTime = new TestSocket("/matchmaking?sport=basketball&competition=nba-all-time");
+  await allTime.waitFor((message) => message.type === "waiting");
+  const season = new TestSocket("/matchmaking?sport=basketball&competition=nba-2025-26");
+  const [matchA, matchB] = await Promise.all([
+    allTime.waitFor((message) => message.type === "matchFound"),
+    season.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(matchA.code, matchB.code, "different NBA pools enter the same match");
+  assert.deepEqual(matchA.competitionDraw.choices, BASKETBALL_COMPETITIONS, "the basketball draw presents both requested pools");
+  assert.equal(matchA.competitionDraw.durationMs, 5_000, "basketball pool selection uses the five-second draw");
+  assert.equal(matchA.competitionDraw.selected, matchA.competition, "the basketball draw reveals the room pool");
+  assert.deepEqual(matchA.competitionDraw, matchB.competitionDraw, "both basketball players receive the same draw");
+
+  const roomA = await connectRoom(matchA.code, matchA.token);
+  const roomB = await connectRoom(matchB.code, matchB.token);
+  assert.equal(roomA.joined.competition, matchA.competition, "the first seat adopts the selected basketball pool");
+  assert.equal(roomB.joined.competition, matchA.competition, "the second seat adopts the selected basketball pool");
+  assert.equal(roomB.joined.state.competition, matchA.competition, "the server creates the match from the selected basketball runtime");
+  assert.equal(roomB.joined.state.poolVersion, matchA.competition === "nba-2025-26" ? "nba-2025-26-v1" : "nba-v1");
+
+  await Promise.all([allTime.close(), season.close(), roomA.socket.close(), roomB.socket.close()]);
+}
+
 async function testInvalidSport() {
   const response = await fetch(`${HTTP_BASE}/rooms/new?sport=tennis`);
   assert.equal(response.status, 400);
   const legacy = await fetch(`${HTTP_BASE}/rooms/new`);
   assert.equal(legacy.status, 200);
-  assert.equal((await legacy.json()).sport, "basketball");
+  const legacyRoom = await legacy.json();
+  assert.equal(legacyRoom.sport, "basketball");
+  assert.equal(legacyRoom.competition, "nba-all-time");
   const invalidCompetition = await fetch(`${HTTP_BASE}/rooms/new?sport=soccer&competition=mls`);
   assert.equal(invalidCompetition.status, 400);
+  const invalidBasketballCompetition = await fetch(`${HTTP_BASE}/rooms/new?sport=basketball&competition=wnba`);
+  assert.equal(invalidBasketballCompetition.status, 400);
 }
 
 async function testGuestAccountState() {
@@ -393,6 +421,8 @@ async function testRateLimits() {
 }
 
 await testPrivateRoom("basketball");
+await testPrivateRoom("basketball", "random");
+await testPrivateRoom("basketball", "nba-2025-26");
 await testPrivateRoom("soccer");
 await testPrivateRoom("soccer", "random");
 await testPrivateRoom("soccer", "premier-league-2025-26");
@@ -400,6 +430,7 @@ await testMatchmaking("basketball");
 await testMatchmaking("soccer");
 await testIsolatedQueues();
 await testFootballCompetitionQueues();
+await testBasketballCompetitionQueues();
 await testInvalidSport();
 await testGuestAccountState();
 await testRateLimits();

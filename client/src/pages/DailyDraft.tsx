@@ -3,11 +3,11 @@ import { useDailyMatch } from "../hooks/useDailyMatch";
 import { Draft } from "./Draft";
 import { RuntimeLoading, useSportRuntime } from "../hooks/useSportRuntime";
 import { useSport } from "../hooks/useSport";
-import { footballCompetitionLabel, todayUtcDateString, type SportRuntime } from "@fiveaside/shared/core";
+import { competitionLabel, todayUtcDateString, type SportRuntime } from "@fiveaside/shared/core";
 
 export function DailyDraft() {
-  const { sport, footballCompetition } = useSport();
-  const runtime = useSportRuntime(sport, footballCompetition, `daily:${todayUtcDateString()}`);
+  const { sport, basketballCompetition, footballCompetition } = useSport();
+  const runtime = useSportRuntime(sport, sport === "soccer" ? footballCompetition : basketballCompetition, `daily:${todayUtcDateString()}`);
   if (!runtime) return <RuntimeLoading />;
   return <ActiveDailyDraft runtime={runtime} />;
 }
@@ -19,7 +19,7 @@ function ActiveDailyDraft({ runtime }: { runtime: SportRuntime }) {
       <AppHeader
         eyebrow="DAILY CHALLENGE"
         title={today}
-        detail={`${runtime.sport === "soccer" ? `${footballCompetitionLabel(runtime.competition)} · ` : ""}${bestScore !== null ? `Best score ${bestScore.toFixed(1)}` : "Fresh board"}`}
+        detail={`${competitionLabel(runtime.sport, runtime.competition)} · ${bestScore !== null ? `Best score ${bestScore.toFixed(1)}` : "Fresh board"}`}
       />
       {alreadyPlayedToday && state.phase === "complete" && (
         <div className="notice-banner">Today's run is complete. A new board drops tomorrow.</div>
@@ -30,7 +30,7 @@ function ActiveDailyDraft({ runtime }: { runtime: SportRuntime }) {
         error={error}
         mySeat={humanSeat}
         seatNames={{ A: "You", B: "AI Opponent" }}
-        resultsSubtitle={`Daily Draft · ${today}${runtime.sport === "soccer" ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
+        resultsSubtitle={`Daily Draft · ${today} · ${competitionLabel(runtime.sport, runtime.competition)}`}
       />
     </div>
   );

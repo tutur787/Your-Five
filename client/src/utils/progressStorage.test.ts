@@ -41,6 +41,7 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   assert(progress.sports.basketball.overall.wins === 1, "a completed match is recorded exactly once");
   assert(progress.sports.basketball.currentWinStreak === 1, "a win starts the sport win streak");
   assert(progress.recent.length === 1, "duplicate completion effects do not duplicate history");
+  assert(progress.sports.basketball.draftStats.totalPicks === 1, "a completed personal draft records its acquired players once");
   assert(progress.achievements.some((achievement) => achievement.id === "first-five"), "the first completed draft unlocks its milestone");
   assert(progress.achievements.some((achievement) => achievement.id === "cap-manager"), "match-specific budget achievements are evaluated");
 
@@ -64,6 +65,30 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
   assert(progress.recent.length === 10, "recent history is capped at ten drafts");
   assert(progress.recordedMatchIds.length === 15, "exactly-once IDs remain available beyond the visible history");
   assert(progress.achievements.some((achievement) => achievement.id === "getting-the-hang"), "aggregate draft milestones unlock from all-time records");
+}
+
+{
+  const storage = new MemoryStorage();
+  const first = completedMatch("basketball", "stats-one", "A");
+  first.teams.A.roster[0].price = 3;
+  const second = completedMatch("basketball", "stats-two", "A");
+  second.teams.A.roster = [{ ...first.teams.A.roster[0], price: 7 }];
+  recordCompletedMatch(first, "ai-competitive", "A", { storage });
+  recordCompletedMatch(second, "ai-competitive", "A", { storage });
+  const stats = loadProgress(storage).sports.basketball.draftStats;
+  assert(stats.totalPicks === 2 && stats.totalSpent === 10, "draft stats retain total acquisitions and spend");
+  assert(stats.players[0]?.purchases === 2 && stats.players[0]?.highestPrice === 7, "draft stats aggregate repeat purchases and the record fee");
+}
+
+{
+  const storage = new MemoryStorage();
+  const season = completedMatch("basketball", "season-history", "A");
+  season.competition = "nba-all-time";
+  season.poolVersion = "nba-2025-26-v1";
+  recordCompletedMatch(season, "ai-competitive", "A", { storage });
+  const entry = loadProgress(storage).recent[0];
+  assert(entry.competition === "nba-2025-26", "recent history derives the actual pool from its authoritative pool version");
+  assert(entry.poolVersion === "nba-2025-26-v1", "recent history retains the pool version across reloads");
 }
 
 {
