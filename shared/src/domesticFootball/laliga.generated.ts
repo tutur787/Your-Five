@@ -44,7 +44,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 93,
       "passCompletionPct": 77.277,
       "progressiveDeliveriesPer90": 18.891,
-      "progressiveDeliveries": 666
+      "progressiveDeliveries": 666,
+      "passes": 1131,
+      "keyPasses": 28,
+      "interceptions": 31
     },
     "performance": {
       "attack": 8.11,
@@ -121,7 +124,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 11.694,
       "progressiveDeliveries": 421,
       "claimsPer90": 1.111,
-      "claims": 40
+      "claims": 40,
+      "passes": 1141,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -194,7 +200,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 82,
       "passCompletionPct": 81.502,
       "progressiveDeliveriesPer90": 17.789,
-      "progressiveDeliveries": 557
+      "progressiveDeliveries": 557,
+      "passes": 919,
+      "keyPasses": 17,
+      "interceptions": 32
     },
     "performance": {
       "attack": 9.19,
@@ -267,7 +276,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 179,
       "passCompletionPct": 82.093,
       "progressiveDeliveriesPer90": 22.284,
-      "progressiveDeliveries": 671
+      "progressiveDeliveries": 671,
+      "passes": 1491,
+      "keyPasses": 18,
+      "interceptions": 48
     },
     "performance": {
       "attack": 18.92,
@@ -340,7 +352,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 73.221,
       "progressiveDeliveriesPer90": 14.618,
-      "progressiveDeliveries": 370
+      "progressiveDeliveries": 370,
+      "passes": 534,
+      "keyPasses": 25,
+      "interceptions": 12
     },
     "performance": {
       "attack": 6.26,
@@ -413,7 +428,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 129,
       "passCompletionPct": 85.833,
       "progressiveDeliveriesPer90": 16.037,
-      "progressiveDeliveries": 402
+      "progressiveDeliveries": 402,
+      "passes": 1087,
+      "keyPasses": 8,
+      "interceptions": 37
     },
     "performance": {
       "attack": 3.78,
@@ -486,7 +504,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 80.945,
       "progressiveDeliveriesPer90": 24.244,
-      "progressiveDeliveries": 511
+      "progressiveDeliveries": 511,
+      "passes": 656,
+      "keyPasses": 40,
+      "interceptions": 13
     },
     "performance": {
       "attack": 12.59,
@@ -559,7 +580,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 78.374,
       "progressiveDeliveriesPer90": 24.032,
-      "progressiveDeliveries": 498
+      "progressiveDeliveries": 498,
+      "passes": 689,
+      "keyPasses": 36,
+      "interceptions": 20
     },
     "performance": {
       "attack": 5.74,
@@ -632,7 +656,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 23,
       "passCompletionPct": 75.676,
       "progressiveDeliveriesPer90": 27.901,
-      "progressiveDeliveries": 536
+      "progressiveDeliveries": 536,
+      "passes": 666,
+      "keyPasses": 36,
+      "interceptions": 14
     },
     "performance": {
       "attack": 9.39,
@@ -705,7 +732,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 3,
       "passCompletionPct": 77.232,
       "progressiveDeliveriesPer90": 12.587,
-      "progressiveDeliveries": 160
+      "progressiveDeliveries": 160,
+      "passes": 224,
+      "keyPasses": 6,
+      "interceptions": 15
     },
     "performance": {
       "attack": 2.36,
@@ -778,7 +808,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 61,
       "passCompletionPct": 82.821,
       "progressiveDeliveriesPer90": 20.583,
-      "progressiveDeliveries": 349
+      "progressiveDeliveries": 349,
+      "passes": 716,
+      "keyPasses": 7,
+      "interceptions": 14
     },
     "performance": {
       "attack": 12.69,
@@ -855,7 +888,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 10.822,
       "progressiveDeliveries": 395,
       "claimsPer90": 0.603,
-      "claims": 22
+      "claims": 22,
+      "passes": 1042,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -928,7 +964,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 215,
       "passCompletionPct": 85.613,
       "progressiveDeliveriesPer90": 17.075,
-      "progressiveDeliveries": 583
+      "progressiveDeliveries": 583,
+      "passes": 1696,
+      "keyPasses": 12,
+      "interceptions": 33
     },
     "performance": {
       "attack": 18.11,
@@ -1001,7 +1040,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 49,
       "passCompletionPct": 80.115,
       "progressiveDeliveriesPer90": 28.682,
-      "progressiveDeliveries": 965
+      "progressiveDeliveries": 965,
+      "passes": 1388,
+      "keyPasses": 39,
+      "interceptions": 23
     },
     "performance": {
       "attack": 2.69,
@@ -1074,7 +1116,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 46,
       "passCompletionPct": 60.051,
       "progressiveDeliveriesPer90": 9.021,
-      "progressiveDeliveries": 296
+      "progressiveDeliveries": 296,
+      "passes": 393,
+      "keyPasses": 16,
+      "interceptions": 6
     },
     "performance": {
       "attack": 15.88,
@@ -1147,7 +1192,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 46,
       "passCompletionPct": 74.597,
       "progressiveDeliveriesPer90": 22.198,
-      "progressiveDeliveries": 569
+      "progressiveDeliveries": 569,
+      "passes": 992,
+      "keyPasses": 15,
+      "interceptions": 28
     },
     "performance": {
       "attack": 4.6,
@@ -1220,7 +1268,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 80.738,
       "progressiveDeliveriesPer90": 19.262,
-      "progressiveDeliveries": 571
+      "progressiveDeliveries": 571,
+      "passes": 623,
+      "keyPasses": 27,
+      "interceptions": 9
     },
     "performance": {
       "attack": 16.17,
@@ -1293,7 +1344,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 88,
       "passCompletionPct": 81.333,
       "progressiveDeliveriesPer90": 21.989,
-      "progressiveDeliveries": 624
+      "progressiveDeliveries": 624,
+      "passes": 1050,
+      "keyPasses": 16,
+      "interceptions": 43
     },
     "performance": {
       "attack": 11.62,
@@ -1366,7 +1420,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 122,
       "passCompletionPct": 86.377,
       "progressiveDeliveriesPer90": 17.611,
-      "progressiveDeliveries": 498
+      "progressiveDeliveries": 498,
+      "passes": 1314,
+      "keyPasses": 9,
+      "interceptions": 17
     },
     "performance": {
       "attack": 11.89,
@@ -1439,7 +1496,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 22,
       "passCompletionPct": 79.469,
       "progressiveDeliveriesPer90": 27.797,
-      "progressiveDeliveries": 694
+      "progressiveDeliveries": 694,
+      "passes": 828,
+      "keyPasses": 44,
+      "interceptions": 17
     },
     "performance": {
       "attack": 2.95,
@@ -1512,7 +1572,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 79.741,
       "progressiveDeliveriesPer90": 25.595,
-      "progressiveDeliveries": 612
+      "progressiveDeliveries": 612,
+      "passes": 849,
+      "keyPasses": 38,
+      "interceptions": 10
     },
     "performance": {
       "attack": 0.69,
@@ -1585,7 +1648,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 58,
       "passCompletionPct": 83.885,
       "progressiveDeliveriesPer90": 28.439,
-      "progressiveDeliveries": 571
+      "progressiveDeliveries": 571,
+      "passes": 906,
+      "keyPasses": 29,
+      "interceptions": 29
     },
     "performance": {
       "attack": 2.23,
@@ -1658,7 +1724,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 229,
       "passCompletionPct": 87.271,
       "progressiveDeliveriesPer90": 21.532,
-      "progressiveDeliveries": 773
+      "progressiveDeliveries": 773,
+      "passes": 2129,
+      "keyPasses": 17,
+      "interceptions": 48
     },
     "performance": {
       "attack": 15.95,
@@ -1735,7 +1804,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 15,
       "progressiveDeliveries": 510,
       "claimsPer90": 0.706,
-      "claims": 24
+      "claims": 24,
+      "passes": 1258,
+      "keyPasses": 2,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -1808,7 +1880,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 76.071,
       "progressiveDeliveriesPer90": 11.708,
-      "progressiveDeliveries": 323
+      "progressiveDeliveries": 323,
+      "passes": 397,
+      "keyPasses": 31,
+      "interceptions": 11
     },
     "performance": {
       "attack": 19.03,
@@ -1881,7 +1956,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 80,
       "passCompletionPct": 82.197,
       "progressiveDeliveriesPer90": 27.732,
-      "progressiveDeliveries": 864
+      "progressiveDeliveries": 864,
+      "passes": 1320,
+      "keyPasses": 43,
+      "interceptions": 38
     },
     "performance": {
       "attack": 3.78,
@@ -1954,7 +2032,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 86,
       "passCompletionPct": 84.585,
       "progressiveDeliveriesPer90": 24.506,
-      "progressiveDeliveries": 730
+      "progressiveDeliveries": 730,
+      "passes": 1278,
+      "keyPasses": 27,
+      "interceptions": 31
     },
     "performance": {
       "attack": 10.54,
@@ -2027,7 +2108,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 23,
       "passCompletionPct": 82.454,
       "progressiveDeliveriesPer90": 26.618,
-      "progressiveDeliveries": 669
+      "progressiveDeliveries": 669,
+      "passes": 872,
+      "keyPasses": 39,
+      "interceptions": 3
     },
     "performance": {
       "attack": 12.4,
@@ -2100,7 +2184,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 62,
       "passCompletionPct": 88.639,
       "progressiveDeliveriesPer90": 19.976,
-      "progressiveDeliveries": 469
+      "progressiveDeliveries": 469,
+      "passes": 889,
+      "keyPasses": 10,
+      "interceptions": 28
     },
     "performance": {
       "attack": 6.45,
@@ -2173,7 +2260,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 68.33,
       "progressiveDeliveriesPer90": 20.095,
-      "progressiveDeliveries": 470
+      "progressiveDeliveries": 470,
+      "passes": 521,
+      "keyPasses": 41,
+      "interceptions": 13
     },
     "performance": {
       "attack": 15.44,
@@ -2246,7 +2336,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 155,
       "passCompletionPct": 85.774,
       "progressiveDeliveriesPer90": 13.071,
-      "progressiveDeliveries": 262
+      "progressiveDeliveries": 262,
+      "passes": 963,
+      "keyPasses": 3,
+      "interceptions": 21
     },
     "performance": {
       "attack": 19.19,
@@ -2319,7 +2412,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 84.896,
       "progressiveDeliveriesPer90": 24.799,
-      "progressiveDeliveries": 515
+      "progressiveDeliveries": 515,
+      "passes": 768,
+      "keyPasses": 23,
+      "interceptions": 8
     },
     "performance": {
       "attack": 3.64,
@@ -2392,7 +2488,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 78,
       "passCompletionPct": 89.178,
       "progressiveDeliveriesPer90": 22.647,
-      "progressiveDeliveries": 502
+      "progressiveDeliveries": 502,
+      "passes": 1192,
+      "keyPasses": 12,
+      "interceptions": 36
     },
     "performance": {
       "attack": 11.62,
@@ -2465,7 +2564,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 1,
       "passCompletionPct": 83.171,
       "progressiveDeliveriesPer90": 33.165,
-      "progressiveDeliveries": 1041
+      "progressiveDeliveries": 1041,
+      "passes": 1129,
+      "keyPasses": 70,
+      "interceptions": 2
     },
     "performance": {
       "attack": 16.93,
@@ -2542,7 +2644,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 6.75,
       "progressiveDeliveries": 216,
       "claimsPer90": 0.531,
-      "claims": 17
+      "claims": 17,
+      "passes": 1009,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -2615,7 +2720,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 55,
       "passCompletionPct": 91.532,
       "progressiveDeliveriesPer90": 40.092,
-      "progressiveDeliveries": 1168
+      "progressiveDeliveries": 1168,
+      "passes": 1913,
+      "keyPasses": 25,
+      "interceptions": 47
     },
     "performance": {
       "attack": 4.91,
@@ -2688,7 +2796,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 51,
       "passCompletionPct": 90.126,
       "progressiveDeliveriesPer90": 41.624,
-      "progressiveDeliveries": 1270
+      "progressiveDeliveries": 1270,
+      "passes": 1904,
+      "keyPasses": 43,
+      "interceptions": 24
     },
     "performance": {
       "attack": 14.95,
@@ -2761,7 +2872,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 0,
       "passCompletionPct": 86.473,
       "progressiveDeliveriesPer90": 29.965,
-      "progressiveDeliveries": 867
+      "progressiveDeliveries": 867,
+      "passes": 998,
+      "keyPasses": 65,
+      "interceptions": 2
     },
     "performance": {
       "attack": 18.95,
@@ -2834,7 +2948,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 60,
       "passCompletionPct": 90.598,
       "progressiveDeliveriesPer90": 42.802,
-      "progressiveDeliveries": 1110
+      "progressiveDeliveries": 1110,
+      "passes": 1723,
+      "keyPasses": 29,
+      "interceptions": 39
     },
     "performance": {
       "attack": 17.03,
@@ -2907,7 +3024,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 90.706,
       "progressiveDeliveriesPer90": 48.376,
-      "progressiveDeliveries": 1089
+      "progressiveDeliveries": 1089,
+      "passes": 1345,
+      "keyPasses": 70,
+      "interceptions": 9
     },
     "performance": {
       "attack": 15.66,
@@ -2980,7 +3100,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 129,
       "passCompletionPct": 89.825,
       "progressiveDeliveriesPer90": 38.174,
-      "progressiveDeliveries": 864
+      "progressiveDeliveries": 864,
+      "passes": 1661,
+      "keyPasses": 10,
+      "interceptions": 19
     },
     "performance": {
       "attack": 18.38,
@@ -3053,7 +3176,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 89.21,
       "progressiveDeliveriesPer90": 38.216,
-      "progressiveDeliveries": 814
+      "progressiveDeliveries": 814,
+      "passes": 1177,
+      "keyPasses": 36,
+      "interceptions": 14
     },
     "performance": {
       "attack": 18.37,
@@ -3126,7 +3252,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 57,
       "passCompletionPct": 94.008,
       "progressiveDeliveriesPer90": 24.742,
-      "progressiveDeliveries": 469
+      "progressiveDeliveries": 469,
+      "passes": 1185,
+      "keyPasses": 5,
+      "interceptions": 10
     },
     "performance": {
       "attack": 18.51,
@@ -3199,7 +3328,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 52,
       "passCompletionPct": 93.089,
       "progressiveDeliveriesPer90": 26.059,
-      "progressiveDeliveries": 432
+      "progressiveDeliveries": 432,
+      "passes": 1172,
+      "keyPasses": 2,
+      "interceptions": 4
     },
     "performance": {
       "attack": 14.97,
@@ -3276,7 +3408,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 14.083,
       "progressiveDeliveries": 507,
       "claimsPer90": 0.556,
-      "claims": 20
+      "claims": 20,
+      "passes": 1242,
+      "keyPasses": 2,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -3349,7 +3484,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 85.385,
       "progressiveDeliveriesPer90": 23.008,
-      "progressiveDeliveries": 634
+      "progressiveDeliveries": 634,
+      "passes": 1040,
+      "keyPasses": 34,
+      "interceptions": 19
     },
     "performance": {
       "attack": 13.41,
@@ -3422,7 +3560,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 83.258,
       "progressiveDeliveriesPer90": 16.733,
-      "progressiveDeliveries": 457
+      "progressiveDeliveries": 457,
+      "passes": 663,
+      "keyPasses": 18,
+      "interceptions": 5
     },
     "performance": {
       "attack": 17.71,
@@ -3495,7 +3636,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 71.954,
       "progressiveDeliveriesPer90": 13.072,
-      "progressiveDeliveries": 356
+      "progressiveDeliveries": 356,
+      "passes": 517,
+      "keyPasses": 27,
+      "interceptions": 14
     },
     "performance": {
       "attack": 8.93,
@@ -3568,7 +3712,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 79,
       "passCompletionPct": 81.155,
       "progressiveDeliveriesPer90": 19.133,
-      "progressiveDeliveries": 483
+      "progressiveDeliveries": 483,
+      "passes": 918,
+      "keyPasses": 7,
+      "interceptions": 31
     },
     "performance": {
       "attack": 3.78,
@@ -3641,7 +3788,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 85.967,
       "progressiveDeliveriesPer90": 24.229,
-      "progressiveDeliveries": 557
+      "progressiveDeliveries": 557,
+      "passes": 1019,
+      "keyPasses": 24,
+      "interceptions": 14
     },
     "performance": {
       "attack": 1.87,
@@ -3714,7 +3864,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 113,
       "passCompletionPct": 88.867,
       "progressiveDeliveriesPer90": 13.212,
-      "progressiveDeliveries": 303
+      "progressiveDeliveries": 303,
+      "passes": 1024,
+      "keyPasses": 5,
+      "interceptions": 27
     },
     "performance": {
       "attack": 13.78,
@@ -3787,7 +3940,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 86.745,
       "progressiveDeliveriesPer90": 15.694,
-      "progressiveDeliveries": 294
+      "progressiveDeliveries": 294,
+      "passes": 679,
+      "keyPasses": 3,
+      "interceptions": 15
     },
     "performance": {
       "attack": 2.48,
@@ -3860,7 +4016,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 149,
       "passCompletionPct": 82.399,
       "progressiveDeliveriesPer90": 18.937,
-      "progressiveDeliveries": 376
+      "progressiveDeliveries": 376,
+      "passes": 1017,
+      "keyPasses": 7,
+      "interceptions": 21
     },
     "performance": {
       "attack": 15.41,
@@ -3933,7 +4092,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 80.483,
       "progressiveDeliveriesPer90": 19.084,
-      "progressiveDeliveries": 412
+      "progressiveDeliveries": 412,
+      "passes": 497,
+      "keyPasses": 20,
+      "interceptions": 6
     },
     "performance": {
       "attack": 4.82,
@@ -4006,7 +4168,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 55,
       "passCompletionPct": 79.65,
       "progressiveDeliveriesPer90": 20.607,
-      "progressiveDeliveries": 392
+      "progressiveDeliveries": 392,
+      "passes": 742,
+      "keyPasses": 17,
+      "interceptions": 20
     },
     "performance": {
       "attack": 3.78,
@@ -4083,7 +4248,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 13.054,
       "progressiveDeliveries": 483,
       "claimsPer90": 0.649,
-      "claims": 24
+      "claims": 24,
+      "passes": 1374,
+      "keyPasses": 4,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -4156,7 +4324,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 95,
       "passCompletionPct": 80.919,
       "progressiveDeliveriesPer90": 24.006,
-      "progressiveDeliveries": 741
+      "progressiveDeliveries": 741,
+      "passes": 1284,
+      "keyPasses": 11,
+      "interceptions": 47
     },
     "performance": {
       "attack": 9.46,
@@ -4229,7 +4400,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 76.834,
       "progressiveDeliveriesPer90": 17.542,
-      "progressiveDeliveries": 529
+      "progressiveDeliveries": 529,
+      "passes": 777,
+      "keyPasses": 42,
+      "interceptions": 4
     },
     "performance": {
       "attack": 15.07,
@@ -4302,7 +4476,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 72,
       "passCompletionPct": 86.623,
       "progressiveDeliveriesPer90": 33.771,
-      "progressiveDeliveries": 1015
+      "progressiveDeliveries": 1015,
+      "passes": 1510,
+      "keyPasses": 45,
+      "interceptions": 31
     },
     "performance": {
       "attack": 0.48,
@@ -4375,7 +4552,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 86.444,
       "progressiveDeliveriesPer90": 31.123,
-      "progressiveDeliveries": 804
+      "progressiveDeliveries": 804,
+      "passes": 1195,
+      "keyPasses": 46,
+      "interceptions": 15
     },
     "performance": {
       "attack": 15.28,
@@ -4448,7 +4628,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 45,
       "passCompletionPct": 86.937,
       "progressiveDeliveriesPer90": 27.63,
-      "progressiveDeliveries": 680
+      "progressiveDeliveries": 680,
+      "passes": 1309,
+      "keyPasses": 18,
+      "interceptions": 35
     },
     "performance": {
       "attack": 3.45,
@@ -4521,7 +4704,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 159,
       "passCompletionPct": 91.224,
       "progressiveDeliveriesPer90": 18.24,
-      "progressiveDeliveries": 456
+      "progressiveDeliveries": 456,
+      "passes": 1356,
+      "keyPasses": 2,
+      "interceptions": 34
     },
     "performance": {
       "attack": 17.3,
@@ -4594,7 +4780,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 129,
       "passCompletionPct": 90.574,
       "progressiveDeliveriesPer90": 18.628,
-      "progressiveDeliveries": 445
+      "progressiveDeliveries": 445,
+      "passes": 1358,
+      "keyPasses": 3,
+      "interceptions": 28
     },
     "performance": {
       "attack": 13.24,
@@ -4667,7 +4856,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 149,
       "passCompletionPct": 88.118,
       "progressiveDeliveriesPer90": 17.68,
-      "progressiveDeliveries": 409
+      "progressiveDeliveries": 409,
+      "passes": 1153,
+      "keyPasses": 5,
+      "interceptions": 22
     },
     "performance": {
       "attack": 1.68,
@@ -4740,7 +4932,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 74.69,
       "progressiveDeliveriesPer90": 24.17,
-      "progressiveDeliveries": 492
+      "progressiveDeliveries": 492,
+      "passes": 565,
+      "keyPasses": 24,
+      "interceptions": 4
     },
     "performance": {
       "attack": 18.23,
@@ -4813,7 +5008,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 80.303,
       "progressiveDeliveriesPer90": 31.543,
-      "progressiveDeliveries": 620
+      "progressiveDeliveries": 620,
+      "passes": 726,
+      "keyPasses": 44,
+      "interceptions": 15
     },
     "performance": {
       "attack": 4.48,
@@ -4890,7 +5088,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 12.788,
       "progressiveDeliveries": 422,
       "claimsPer90": 0.333,
-      "claims": 11
+      "claims": 11,
+      "passes": 968,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -4963,7 +5164,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 40,
       "passCompletionPct": 81.044,
       "progressiveDeliveriesPer90": 26.368,
-      "progressiveDeliveries": 789
+      "progressiveDeliveries": 789,
+      "passes": 1303,
+      "keyPasses": 28,
+      "interceptions": 48
     },
     "performance": {
       "attack": 2.93,
@@ -5036,7 +5240,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 71,
       "passCompletionPct": 81.271,
       "progressiveDeliveriesPer90": 21.833,
-      "progressiveDeliveries": 622
+      "progressiveDeliveries": 622,
+      "passes": 1164,
+      "keyPasses": 22,
+      "interceptions": 39
     },
     "performance": {
       "attack": 11.08,
@@ -5109,7 +5316,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 89.053,
       "progressiveDeliveriesPer90": 20.583,
-      "progressiveDeliveries": 502
+      "progressiveDeliveries": 502,
+      "passes": 950,
+      "keyPasses": 24,
+      "interceptions": 22
     },
     "performance": {
       "attack": 14.43,
@@ -5182,7 +5392,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 127,
       "passCompletionPct": 88.336,
       "progressiveDeliveriesPer90": 15.332,
-      "progressiveDeliveries": 400
+      "progressiveDeliveries": 400,
+      "passes": 1106,
+      "keyPasses": 7,
+      "interceptions": 25
     },
     "performance": {
       "attack": 9.11,
@@ -5255,7 +5468,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 47,
       "passCompletionPct": 83.333,
       "progressiveDeliveriesPer90": 29.241,
-      "progressiveDeliveries": 681
+      "progressiveDeliveries": 681,
+      "passes": 1026,
+      "keyPasses": 36,
+      "interceptions": 30
     },
     "performance": {
       "attack": 3.78,
@@ -5328,7 +5544,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 163,
       "passCompletionPct": 80.205,
       "progressiveDeliveriesPer90": 22.755,
-      "progressiveDeliveries": 557
+      "progressiveDeliveries": 557,
+      "passes": 1369,
+      "keyPasses": 7,
+      "interceptions": 37
     },
     "performance": {
       "attack": 17.84,
@@ -5401,7 +5620,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 83.246,
       "progressiveDeliveriesPer90": 23.753,
-      "progressiveDeliveries": 526
+      "progressiveDeliveries": 526,
+      "passes": 764,
+      "keyPasses": 22,
+      "interceptions": 12
     },
     "performance": {
       "attack": 1.13,
@@ -5474,7 +5696,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 63.866,
       "progressiveDeliveriesPer90": 11.671,
-      "progressiveDeliveries": 267
+      "progressiveDeliveries": 267,
+      "passes": 357,
+      "keyPasses": 13,
+      "interceptions": 1
     },
     "performance": {
       "attack": 14.95,
@@ -5547,7 +5772,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 73.084,
       "progressiveDeliveriesPer90": 25.69,
-      "progressiveDeliveries": 459
+      "progressiveDeliveries": 459,
+      "passes": 561,
+      "keyPasses": 28,
+      "interceptions": 7
     },
     "performance": {
       "attack": 3.88,
@@ -5620,7 +5848,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 24,
       "passCompletionPct": 86.524,
       "progressiveDeliveriesPer90": 17.622,
-      "progressiveDeliveries": 317
+      "progressiveDeliveries": 317,
+      "passes": 653,
+      "keyPasses": 9,
+      "interceptions": 18
     },
     "performance": {
       "attack": 8.08,
@@ -5693,7 +5924,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 86,
       "passCompletionPct": 83.874,
       "progressiveDeliveriesPer90": 20.772,
-      "progressiveDeliveries": 568
+      "progressiveDeliveries": 568,
+      "passes": 924,
+      "keyPasses": 25,
+      "interceptions": 23
     },
     "performance": {
       "attack": 12.16,
@@ -5766,7 +6000,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 34,
       "passCompletionPct": 78.614,
       "progressiveDeliveriesPer90": 24.036,
-      "progressiveDeliveries": 704
+      "progressiveDeliveries": 704,
+      "passes": 837,
+      "keyPasses": 38,
+      "interceptions": 18
     },
     "performance": {
       "attack": 7.44,
@@ -5839,7 +6076,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 194,
       "passCompletionPct": 86.298,
       "progressiveDeliveriesPer90": 12.545,
-      "progressiveDeliveries": 362
+      "progressiveDeliveries": 362,
+      "passes": 1321,
+      "keyPasses": 2,
+      "interceptions": 29
     },
     "performance": {
       "attack": 3.78,
@@ -5912,7 +6152,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 66,
       "passCompletionPct": 86.169,
       "progressiveDeliveriesPer90": 30.363,
-      "progressiveDeliveries": 753
+      "progressiveDeliveries": 753,
+      "passes": 1381,
+      "keyPasses": 21,
+      "interceptions": 21
     },
     "performance": {
       "attack": 6.4,
@@ -5985,7 +6228,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 81.531,
       "progressiveDeliveriesPer90": 25.882,
-      "progressiveDeliveries": 595
+      "progressiveDeliveries": 595,
+      "passes": 980,
+      "keyPasses": 32,
+      "interceptions": 24
     },
     "performance": {
       "attack": 14.26,
@@ -6058,7 +6304,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 70.408,
       "progressiveDeliveriesPer90": 10.994,
-      "progressiveDeliveries": 242
+      "progressiveDeliveries": 242,
+      "passes": 392,
+      "keyPasses": 17,
+      "interceptions": 4
     },
     "performance": {
       "attack": 11.19,
@@ -6131,7 +6380,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 76.608,
       "progressiveDeliveriesPer90": 19.665,
-      "progressiveDeliveries": 385
+      "progressiveDeliveries": 385,
+      "passes": 513,
+      "keyPasses": 17,
+      "interceptions": 10
     },
     "performance": {
       "attack": 4.53,
@@ -6208,7 +6460,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 14.25,
       "progressiveDeliveries": 285,
       "claimsPer90": 1.15,
-      "claims": 23
+      "claims": 23,
+      "passes": 655,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -6281,7 +6536,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 112,
       "passCompletionPct": 85.558,
       "progressiveDeliveriesPer90": 21.938,
-      "progressiveDeliveries": 429
+      "progressiveDeliveries": 429,
+      "passes": 1004,
+      "keyPasses": 5,
+      "interceptions": 22
     },
     "performance": {
       "attack": 4.09,
@@ -6354,7 +6612,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 77.551,
       "progressiveDeliveriesPer90": 17.093,
-      "progressiveDeliveries": 309
+      "progressiveDeliveries": 309,
+      "passes": 392,
+      "keyPasses": 17,
+      "interceptions": 2
     },
     "performance": {
       "attack": 14.49,
@@ -6431,7 +6692,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 10,
       "progressiveDeliveries": 180,
       "claimsPer90": 1.167,
-      "claims": 21
+      "claims": 21,
+      "passes": 494,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -6508,7 +6772,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 9.467,
       "progressiveDeliveries": 284,
       "claimsPer90": 0.633,
-      "claims": 19
+      "claims": 19,
+      "passes": 886,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -6581,7 +6848,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 101,
       "passCompletionPct": 87.647,
       "progressiveDeliveriesPer90": 26.438,
-      "progressiveDeliveries": 715
+      "progressiveDeliveries": 715,
+      "passes": 1449,
+      "keyPasses": 13,
+      "interceptions": 19
     },
     "performance": {
       "attack": 3.78,
@@ -6654,7 +6924,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 53,
       "passCompletionPct": 89.455,
       "progressiveDeliveriesPer90": 32.926,
-      "progressiveDeliveries": 799
+      "progressiveDeliveries": 799,
+      "passes": 1432,
+      "keyPasses": 20,
+      "interceptions": 12
     },
     "performance": {
       "attack": 4.94,
@@ -6727,7 +7000,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 81.818,
       "progressiveDeliveriesPer90": 28.037,
-      "progressiveDeliveries": 657
+      "progressiveDeliveries": 657,
+      "passes": 946,
+      "keyPasses": 29,
+      "interceptions": 18
     },
     "performance": {
       "attack": 6.22,
@@ -6800,7 +7076,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 91.924,
       "progressiveDeliveriesPer90": 44.757,
-      "progressiveDeliveries": 1104
+      "progressiveDeliveries": 1104,
+      "passes": 1907,
+      "keyPasses": 35,
+      "interceptions": 18
     },
     "performance": {
       "attack": 7.84,
@@ -6873,7 +7152,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 5,
       "passCompletionPct": 83.454,
       "progressiveDeliveriesPer90": 27.965,
-      "progressiveDeliveries": 591
+      "progressiveDeliveries": 591,
+      "passes": 689,
+      "keyPasses": 47,
+      "interceptions": 3
     },
     "performance": {
       "attack": 12.87,
@@ -6946,7 +7228,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 81.044,
       "progressiveDeliveriesPer90": 33.321,
-      "progressiveDeliveries": 582
+      "progressiveDeliveries": 582,
+      "passes": 728,
+      "keyPasses": 46,
+      "interceptions": 16
     },
     "performance": {
       "attack": 10.46,
@@ -7019,7 +7304,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 68,
       "progressiveDeliveriesPer90": 13.948,
-      "progressiveDeliveries": 307
+      "progressiveDeliveries": 307,
+      "passes": 425,
+      "keyPasses": 10,
+      "interceptions": 0
     },
     "performance": {
       "attack": 18.46,
@@ -7092,7 +7380,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 65,
       "passCompletionPct": 86.756,
       "progressiveDeliveriesPer90": 29.408,
-      "progressiveDeliveries": 580
+      "progressiveDeliveries": 580,
+      "passes": 891,
+      "keyPasses": 25,
+      "interceptions": 20
     },
     "performance": {
       "attack": 4.39,
@@ -7165,7 +7456,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 88.973,
       "progressiveDeliveriesPer90": 38.139,
-      "progressiveDeliveries": 706
+      "progressiveDeliveries": 706,
+      "passes": 1052,
+      "keyPasses": 20,
+      "interceptions": 27
     },
     "performance": {
       "attack": 7.7,
@@ -7238,7 +7532,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 76.03,
       "progressiveDeliveriesPer90": 23.166,
-      "progressiveDeliveries": 374
+      "progressiveDeliveries": 374,
+      "passes": 534,
+      "keyPasses": 12,
+      "interceptions": 12
     },
     "performance": {
       "attack": 11.58,
@@ -7311,7 +7608,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 79.115,
       "progressiveDeliveriesPer90": 20.928,
-      "progressiveDeliveries": 579
+      "progressiveDeliveries": 579,
+      "passes": 814,
+      "keyPasses": 37,
+      "interceptions": 12
     },
     "performance": {
       "attack": 18.09,
@@ -7384,7 +7684,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 54,
       "passCompletionPct": 83.209,
       "progressiveDeliveriesPer90": 25.363,
-      "progressiveDeliveries": 680
+      "progressiveDeliveries": 680,
+      "passes": 1209,
+      "keyPasses": 27,
+      "interceptions": 28
     },
     "performance": {
       "attack": 9.35,
@@ -7461,7 +7764,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 7.429,
       "progressiveDeliveries": 208,
       "claimsPer90": 0.786,
-      "claims": 22
+      "claims": 22,
+      "passes": 621,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -7534,7 +7840,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 127,
       "passCompletionPct": 84.061,
       "progressiveDeliveriesPer90": 19.669,
-      "progressiveDeliveries": 521
+      "progressiveDeliveries": 521,
+      "passes": 1236,
+      "keyPasses": 8,
+      "interceptions": 29
     },
     "performance": {
       "attack": 12.43,
@@ -7607,7 +7916,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 156,
       "passCompletionPct": 88.407,
       "progressiveDeliveriesPer90": 17.688,
-      "progressiveDeliveries": 487
+      "progressiveDeliveries": 487,
+      "passes": 1544,
+      "keyPasses": 3,
+      "interceptions": 23
     },
     "performance": {
       "attack": 3.78,
@@ -7680,7 +7992,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 24,
       "passCompletionPct": 82.406,
       "progressiveDeliveriesPer90": 25.918,
-      "progressiveDeliveries": 690
+      "progressiveDeliveries": 690,
+      "passes": 881,
+      "keyPasses": 54,
+      "interceptions": 16
     },
     "performance": {
       "attack": 17.64,
@@ -7753,7 +8068,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 59,
       "passCompletionPct": 80.538,
       "progressiveDeliveriesPer90": 27.172,
-      "progressiveDeliveries": 647
+      "progressiveDeliveries": 647,
+      "passes": 1079,
+      "keyPasses": 23,
+      "interceptions": 34
     },
     "performance": {
       "attack": 14.17,
@@ -7826,7 +8144,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 75.5,
       "progressiveDeliveriesPer90": 13.477,
-      "progressiveDeliveries": 317
+      "progressiveDeliveries": 317,
+      "passes": 400,
+      "keyPasses": 28,
+      "interceptions": 5
     },
     "performance": {
       "attack": 17.33,
@@ -7899,7 +8220,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 108,
       "passCompletionPct": 88.386,
       "progressiveDeliveriesPer90": 14.08,
-      "progressiveDeliveries": 301
+      "progressiveDeliveries": 301,
+      "passes": 973,
+      "keyPasses": 4,
+      "interceptions": 18
     },
     "performance": {
       "attack": 3.78,
@@ -7972,7 +8296,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 16,
       "passCompletionPct": 81.33,
       "progressiveDeliveriesPer90": 17.397,
-      "progressiveDeliveries": 352
+      "progressiveDeliveries": 352,
+      "passes": 466,
+      "keyPasses": 15,
+      "interceptions": 21
     },
     "performance": {
       "attack": 17.19,
@@ -8045,7 +8372,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 141,
       "passCompletionPct": 90.239,
       "progressiveDeliveriesPer90": 17.727,
-      "progressiveDeliveries": 390
+      "progressiveDeliveries": 390,
+      "passes": 1086,
+      "keyPasses": 7,
+      "interceptions": 18
     },
     "performance": {
       "attack": 14.32,
@@ -8122,7 +8452,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 19.605,
       "progressiveDeliveries": 745,
       "claimsPer90": 0.816,
-      "claims": 31
+      "claims": 31,
+      "passes": 1035,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -8195,7 +8528,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 180,
       "passCompletionPct": 86.417,
       "progressiveDeliveriesPer90": 15.81,
-      "progressiveDeliveries": 569
+      "progressiveDeliveries": 569,
+      "passes": 1362,
+      "keyPasses": 7,
+      "interceptions": 46
     },
     "performance": {
       "attack": 15.68,
@@ -8268,7 +8604,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 85.512,
       "progressiveDeliveriesPer90": 28.739,
-      "progressiveDeliveries": 995
+      "progressiveDeliveries": 995,
+      "passes": 1836,
+      "keyPasses": 22,
+      "interceptions": 54
     },
     "performance": {
       "attack": 9.56,
@@ -8341,7 +8680,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 63,
       "passCompletionPct": 86.625,
       "progressiveDeliveriesPer90": 25.997,
-      "progressiveDeliveries": 866
+      "progressiveDeliveries": 866,
+      "passes": 1757,
+      "keyPasses": 17,
+      "interceptions": 41
     },
     "performance": {
       "attack": 3.78,
@@ -8414,7 +8756,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 58.507,
       "progressiveDeliveriesPer90": 16.547,
-      "progressiveDeliveries": 501
+      "progressiveDeliveries": 501,
+      "passes": 670,
+      "keyPasses": 24,
+      "interceptions": 4
     },
     "performance": {
       "attack": 13.21,
@@ -8487,7 +8832,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 85.757,
       "progressiveDeliveriesPer90": 26.195,
-      "progressiveDeliveries": 654
+      "progressiveDeliveries": 654,
+      "passes": 1011,
+      "keyPasses": 19,
+      "interceptions": 21
     },
     "performance": {
       "attack": 7.86,
@@ -8560,7 +8908,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 81,
       "passCompletionPct": 82.26,
       "progressiveDeliveriesPer90": 16.276,
-      "progressiveDeliveries": 389
+      "progressiveDeliveries": 389,
+      "passes": 761,
+      "keyPasses": 14,
+      "interceptions": 11
     },
     "performance": {
       "attack": 3.78,
@@ -8633,7 +8984,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 22,
       "passCompletionPct": 85.294,
       "progressiveDeliveriesPer90": 31.714,
-      "progressiveDeliveries": 703
+      "progressiveDeliveries": 703,
+      "passes": 850,
+      "keyPasses": 38,
+      "interceptions": 10
     },
     "performance": {
       "attack": 3.31,
@@ -8706,7 +9060,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 73.141,
       "progressiveDeliveriesPer90": 15.253,
-      "progressiveDeliveries": 332
+      "progressiveDeliveries": 332,
+      "passes": 417,
+      "keyPasses": 28,
+      "interceptions": 7
     },
     "performance": {
       "attack": 13.05,
@@ -8779,7 +9136,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 103,
       "passCompletionPct": 86.475,
       "progressiveDeliveriesPer90": 20.242,
-      "progressiveDeliveries": 390
+      "progressiveDeliveries": 390,
+      "passes": 939,
+      "keyPasses": 5,
+      "interceptions": 11
     },
     "performance": {
       "attack": 3.78,
@@ -8852,7 +9212,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 82.207,
       "progressiveDeliveriesPer90": 19.524,
-      "progressiveDeliveries": 269
+      "progressiveDeliveries": 269,
+      "passes": 444,
+      "keyPasses": 11,
+      "interceptions": 10
     },
     "performance": {
       "attack": 5.81,
@@ -8929,7 +9292,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 11.486,
       "progressiveDeliveries": 396,
       "claimsPer90": 0.87,
-      "claims": 30
+      "claims": 30,
+      "passes": 1138,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -9002,7 +9368,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 215,
       "passCompletionPct": 90.956,
       "progressiveDeliveriesPer90": 17.352,
-      "progressiveDeliveries": 605
+      "progressiveDeliveries": 605,
+      "passes": 1924,
+      "keyPasses": 9,
+      "interceptions": 33
     },
     "performance": {
       "attack": 8.38,
@@ -9075,7 +9444,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 124,
       "passCompletionPct": 85.224,
       "progressiveDeliveriesPer90": 24.164,
-      "progressiveDeliveries": 719
+      "progressiveDeliveries": 719,
+      "passes": 1428,
+      "keyPasses": 24,
+      "interceptions": 41
     },
     "performance": {
       "attack": 16.76,
@@ -9148,7 +9520,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 82.435,
       "progressiveDeliveriesPer90": 28.762,
-      "progressiveDeliveries": 844
+      "progressiveDeliveries": 844,
+      "passes": 1002,
+      "keyPasses": 55,
+      "interceptions": 20
     },
     "performance": {
       "attack": 7.76,
@@ -9221,7 +9596,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 56,
       "passCompletionPct": 91.201,
       "progressiveDeliveriesPer90": 25.582,
-      "progressiveDeliveries": 720
+      "progressiveDeliveries": 720,
+      "passes": 1466,
+      "keyPasses": 17,
+      "interceptions": 30
     },
     "performance": {
       "attack": 5.12,
@@ -9294,7 +9672,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 126,
       "passCompletionPct": 89.369,
       "progressiveDeliveriesPer90": 29.552,
-      "progressiveDeliveries": 857
+      "progressiveDeliveries": 857,
+      "passes": 2107,
+      "keyPasses": 11,
+      "interceptions": 39
     },
     "performance": {
       "attack": 3.78,
@@ -9367,7 +9748,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 89.369,
       "progressiveDeliveriesPer90": 27.801,
-      "progressiveDeliveries": 784
+      "progressiveDeliveries": 784,
+      "passes": 1411,
+      "keyPasses": 25,
+      "interceptions": 16
     },
     "performance": {
       "attack": 4.7,
@@ -9440,7 +9824,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 104,
       "passCompletionPct": 83.681,
       "progressiveDeliveriesPer90": 22.201,
-      "progressiveDeliveries": 631
+      "progressiveDeliveries": 631,
+      "passes": 1054,
+      "keyPasses": 16,
+      "interceptions": 30
     },
     "performance": {
       "attack": 1.37,
@@ -9513,7 +9900,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 16,
       "passCompletionPct": 78.022,
       "progressiveDeliveriesPer90": 7.026,
-      "progressiveDeliveries": 153
+      "progressiveDeliveries": 153,
+      "passes": 273,
+      "keyPasses": 12,
+      "interceptions": 3
     },
     "performance": {
       "attack": 12.97,
@@ -9586,7 +9976,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 83.784,
       "progressiveDeliveriesPer90": 21.847,
-      "progressiveDeliveries": 385
+      "progressiveDeliveries": 385,
+      "passes": 518,
+      "keyPasses": 21,
+      "interceptions": 9
     },
     "performance": {
       "attack": 1.29,
@@ -9659,7 +10052,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 85.777,
       "progressiveDeliveriesPer90": 35.929,
-      "progressiveDeliveries": 705
+      "progressiveDeliveries": 705,
+      "passes": 907,
+      "keyPasses": 35,
+      "interceptions": 16
     },
     "performance": {
       "attack": 16.79,
@@ -9736,7 +10132,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 16.541,
       "progressiveDeliveries": 612,
       "claimsPer90": 0.676,
-      "claims": 25
+      "claims": 25,
+      "passes": 1124,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -9809,7 +10208,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 80.432,
       "progressiveDeliveriesPer90": 31.024,
-      "progressiveDeliveries": 980
+      "progressiveDeliveries": 980,
+      "passes": 1344,
+      "keyPasses": 28,
+      "interceptions": 46
     },
     "performance": {
       "attack": 8.76,
@@ -9882,7 +10284,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 101,
       "passCompletionPct": 87.534,
       "progressiveDeliveriesPer90": 31.229,
-      "progressiveDeliveries": 940
+      "progressiveDeliveries": 940,
+      "passes": 1476,
+      "keyPasses": 30,
+      "interceptions": 35
     },
     "performance": {
       "attack": 3.78,
@@ -9955,7 +10360,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 82.5,
       "progressiveDeliveriesPer90": 35.5,
-      "progressiveDeliveries": 880
+      "progressiveDeliveries": 880,
+      "passes": 1240,
+      "keyPasses": 30,
+      "interceptions": 23
     },
     "performance": {
       "attack": 3.85,
@@ -10028,7 +10436,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 67.241,
       "progressiveDeliveriesPer90": 14.728,
-      "progressiveDeliveries": 388
+      "progressiveDeliveries": 388,
+      "passes": 522,
+      "keyPasses": 26,
+      "interceptions": 12
     },
     "performance": {
       "attack": 11.64,
@@ -10101,7 +10512,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 143,
       "passCompletionPct": 85.545,
       "progressiveDeliveriesPer90": 21.35,
-      "progressiveDeliveries": 608
+      "progressiveDeliveries": 608,
+      "passes": 1349,
+      "keyPasses": 6,
+      "interceptions": 32
     },
     "performance": {
       "attack": 11.35,
@@ -10174,7 +10588,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 76.953,
       "progressiveDeliveriesPer90": 32.315,
-      "progressiveDeliveries": 777
+      "progressiveDeliveries": 777,
+      "passes": 768,
+      "keyPasses": 49,
+      "interceptions": 13
     },
     "performance": {
       "attack": 6.67,
@@ -10247,7 +10664,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 69.355,
       "progressiveDeliveriesPer90": 19.137,
-      "progressiveDeliveries": 461
+      "progressiveDeliveries": 461,
+      "passes": 496,
+      "keyPasses": 25,
+      "interceptions": 8
     },
     "performance": {
       "attack": 5.33,
@@ -10320,7 +10740,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 127,
       "passCompletionPct": 89.167,
       "progressiveDeliveriesPer90": 21.102,
-      "progressiveDeliveries": 483
+      "progressiveDeliveries": 483,
+      "passes": 1237,
+      "keyPasses": 7,
+      "interceptions": 25
     },
     "performance": {
       "attack": 3.78,
@@ -10393,7 +10816,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 81.345,
       "progressiveDeliveriesPer90": 21.115,
-      "progressiveDeliveries": 423
+      "progressiveDeliveries": 423,
+      "passes": 595,
+      "keyPasses": 27,
+      "interceptions": 4
     },
     "performance": {
       "attack": 14.88,
@@ -10466,7 +10892,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 9,
       "passCompletionPct": 77.425,
       "progressiveDeliveriesPer90": 26.461,
-      "progressiveDeliveries": 496
+      "progressiveDeliveries": 496,
+      "passes": 567,
+      "keyPasses": 34,
+      "interceptions": 7
     },
     "performance": {
       "attack": 8.89,
@@ -10539,7 +10968,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 242,
       "passCompletionPct": 87.164,
       "progressiveDeliveriesPer90": 17.951,
-      "progressiveDeliveries": 660
+      "progressiveDeliveries": 660,
+      "passes": 1784,
+      "keyPasses": 3,
+      "interceptions": 22
     },
     "performance": {
       "attack": 3.78,
@@ -10612,7 +11044,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 58,
       "passCompletionPct": 64.865,
       "progressiveDeliveriesPer90": 14.387,
-      "progressiveDeliveries": 501
+      "progressiveDeliveries": 501,
+      "passes": 703,
+      "keyPasses": 23,
+      "interceptions": 2
     },
     "performance": {
       "attack": 17.78,
@@ -10689,7 +11124,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 12.697,
       "progressiveDeliveries": 419,
       "claimsPer90": 0.485,
-      "claims": 16
+      "claims": 16,
+      "passes": 1147,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -10762,7 +11200,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 90,
       "passCompletionPct": 79.89,
       "progressiveDeliveriesPer90": 23.689,
-      "progressiveDeliveries": 712
+      "progressiveDeliveries": 712,
+      "passes": 1268,
+      "keyPasses": 17,
+      "interceptions": 26
     },
     "performance": {
       "attack": 16.17,
@@ -10835,7 +11276,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 84,
       "passCompletionPct": 79.091,
       "progressiveDeliveriesPer90": 26.851,
-      "progressiveDeliveries": 813
+      "progressiveDeliveries": 813,
+      "passes": 1210,
+      "keyPasses": 36,
+      "interceptions": 24
     },
     "performance": {
       "attack": 1.46,
@@ -10908,7 +11352,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 84.556,
       "progressiveDeliveriesPer90": 30.424,
-      "progressiveDeliveries": 909
+      "progressiveDeliveries": 909,
+      "passes": 1159,
+      "keyPasses": 58,
+      "interceptions": 26
     },
     "performance": {
       "attack": 7.86,
@@ -10981,7 +11428,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 98,
       "passCompletionPct": 76.502,
       "progressiveDeliveriesPer90": 20.277,
-      "progressiveDeliveries": 602
+      "progressiveDeliveries": 602,
+      "passes": 932,
+      "keyPasses": 20,
+      "interceptions": 35
     },
     "performance": {
       "attack": 10.81,
@@ -11054,7 +11504,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 84,
       "passCompletionPct": 85.952,
       "progressiveDeliveriesPer90": 20.125,
-      "progressiveDeliveries": 502
+      "progressiveDeliveries": 502,
+      "passes": 1082,
+      "keyPasses": 8,
+      "interceptions": 35
     },
     "performance": {
       "attack": 9.02,
@@ -11127,7 +11580,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 121,
       "passCompletionPct": 88.431,
       "progressiveDeliveriesPer90": 17.739,
-      "progressiveDeliveries": 408
+      "progressiveDeliveries": 408,
+      "passes": 1141,
+      "keyPasses": 7,
+      "interceptions": 16
     },
     "performance": {
       "attack": 3.78,
@@ -11200,7 +11656,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 22,
       "passCompletionPct": 89.335,
       "progressiveDeliveriesPer90": 28.579,
-      "progressiveDeliveries": 563
+      "progressiveDeliveries": 563,
+      "passes": 947,
+      "keyPasses": 17,
+      "interceptions": 19
     },
     "performance": {
       "attack": 10.41,
@@ -11273,7 +11732,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 85.056,
       "progressiveDeliveriesPer90": 34.978,
-      "progressiveDeliveries": 623
+      "progressiveDeliveries": 623,
+      "passes": 803,
+      "keyPasses": 35,
+      "interceptions": 9
     },
     "performance": {
       "attack": 16.56,
@@ -11346,7 +11808,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 78,
       "passCompletionPct": 92.167,
       "progressiveDeliveriesPer90": 41.769,
-      "progressiveDeliveries": 1267
+      "progressiveDeliveries": 1267,
+      "passes": 2349,
+      "keyPasses": 31,
+      "interceptions": 48
     },
     "performance": {
       "attack": 10,
@@ -11423,7 +11888,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 147,
       "passCompletionPct": 94.942,
       "progressiveDeliveriesPer90": 36.957,
-      "progressiveDeliveries": 1112
+      "progressiveDeliveries": 1112,
+      "passes": 2768,
+      "keyPasses": 5,
+      "interceptions": 30
     },
     "performance": {
       "attack": 10.27,
@@ -11504,7 +11972,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 2.833,
       "progressiveDeliveries": 85,
       "claimsPer90": 0.667,
-      "claims": 20
+      "claims": 20,
+      "passes": 856,
+      "keyPasses": 0,
+      "interceptions": 2
     },
     "performance": {
       "attack": 10,
@@ -11581,7 +12052,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 111,
       "passCompletionPct": 91.418,
       "progressiveDeliveriesPer90": 36.271,
-      "progressiveDeliveries": 856
+      "progressiveDeliveries": 856,
+      "passes": 1946,
+      "keyPasses": 13,
+      "interceptions": 29
     },
     "performance": {
       "attack": 3.78,
@@ -11658,7 +12132,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 3,
       "passCompletionPct": 81.097,
       "progressiveDeliveriesPer90": 47.262,
-      "progressiveDeliveries": 1191
+      "progressiveDeliveries": 1191,
+      "passes": 1349,
+      "keyPasses": 72,
+      "interceptions": 10
     },
     "performance": {
       "attack": 16.08,
@@ -11737,7 +12214,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 23,
       "passCompletionPct": 85.267,
       "progressiveDeliveriesPer90": 37.352,
-      "progressiveDeliveries": 862
+      "progressiveDeliveries": 862,
+      "passes": 1215,
+      "keyPasses": 49,
+      "interceptions": 14
     },
     "performance": {
       "attack": 16.74,
@@ -11814,7 +12294,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 55,
       "passCompletionPct": 91.571,
       "progressiveDeliveriesPer90": 44.184,
-      "progressiveDeliveries": 1110
+      "progressiveDeliveries": 1110,
+      "passes": 1922,
+      "keyPasses": 23,
+      "interceptions": 30
     },
     "performance": {
       "attack": 12.7,
@@ -11891,7 +12374,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 10,
       "passCompletionPct": 75.796,
       "progressiveDeliveriesPer90": 14.894,
-      "progressiveDeliveries": 327
+      "progressiveDeliveries": 327,
+      "passes": 471,
+      "keyPasses": 23,
+      "interceptions": 3
     },
     "performance": {
       "attack": 19.91,
@@ -11968,7 +12454,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 23,
       "passCompletionPct": 91.582,
       "progressiveDeliveriesPer90": 60.869,
-      "progressiveDeliveries": 1425
+      "progressiveDeliveries": 1425,
+      "passes": 2055,
+      "keyPasses": 63,
+      "interceptions": 24
     },
     "performance": {
       "attack": 12.47,
@@ -12045,7 +12534,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 91.792,
       "progressiveDeliveriesPer90": 34.819,
-      "progressiveDeliveries": 725
+      "progressiveDeliveries": 725,
+      "passes": 1194,
+      "keyPasses": 23,
+      "interceptions": 5
     },
     "performance": {
       "attack": 3.78,
@@ -12122,7 +12614,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 87.416,
       "progressiveDeliveriesPer90": 33.606,
-      "progressiveDeliveries": 671
+      "progressiveDeliveries": 671,
+      "passes": 890,
+      "keyPasses": 34,
+      "interceptions": 7
     },
     "performance": {
       "attack": 17.14,
@@ -12199,7 +12694,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 86.707,
       "progressiveDeliveriesPer90": 41.403,
-      "progressiveDeliveries": 1318
+      "progressiveDeliveries": 1318,
+      "passes": 1798,
+      "keyPasses": 85,
+      "interceptions": 34
     },
     "performance": {
       "attack": 17.05,
@@ -12272,7 +12770,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 217,
       "passCompletionPct": 88.268,
       "progressiveDeliveriesPer90": 13.676,
-      "progressiveDeliveries": 427
+      "progressiveDeliveries": 427,
+      "passes": 1432,
+      "keyPasses": 7,
+      "interceptions": 36
     },
     "performance": {
       "attack": 3.78,
@@ -12345,7 +12846,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 71.799,
       "progressiveDeliveriesPer90": 17.188,
-      "progressiveDeliveries": 495
+      "progressiveDeliveries": 495,
+      "passes": 656,
+      "keyPasses": 34,
+      "interceptions": 9
     },
     "performance": {
       "attack": 9.7,
@@ -12418,7 +12922,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 81.94,
       "progressiveDeliveriesPer90": 34.002,
-      "progressiveDeliveries": 929
+      "progressiveDeliveries": 929,
+      "passes": 1196,
+      "keyPasses": 56,
+      "interceptions": 24
     },
     "performance": {
       "attack": 10.34,
@@ -12495,7 +13002,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 9.536,
       "progressiveDeliveries": 267,
       "claimsPer90": 0.607,
-      "claims": 17
+      "claims": 17,
+      "passes": 859,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -12568,7 +13078,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 79.323,
       "progressiveDeliveriesPer90": 25.144,
-      "progressiveDeliveries": 630
+      "progressiveDeliveries": 630,
+      "passes": 798,
+      "keyPasses": 32,
+      "interceptions": 16
     },
     "performance": {
       "attack": 11.76,
@@ -12641,7 +13154,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 39,
       "passCompletionPct": 88.082,
       "progressiveDeliveriesPer90": 25.378,
-      "progressiveDeliveries": 571
+      "progressiveDeliveries": 571,
+      "passes": 1074,
+      "keyPasses": 18,
+      "interceptions": 23
     },
     "performance": {
       "attack": 9.07,
@@ -12714,7 +13230,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 159,
       "passCompletionPct": 86.524,
       "progressiveDeliveriesPer90": 19.201,
-      "progressiveDeliveries": 422
+      "progressiveDeliveries": 422,
+      "passes": 1165,
+      "keyPasses": 5,
+      "interceptions": 27
     },
     "performance": {
       "attack": 14.59,
@@ -12787,7 +13306,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 45,
       "passCompletionPct": 82.665,
       "progressiveDeliveriesPer90": 20.788,
-      "progressiveDeliveries": 419
+      "progressiveDeliveries": 419,
+      "passes": 698,
+      "keyPasses": 19,
+      "interceptions": 21
     },
     "performance": {
       "attack": 6.18,
@@ -12860,7 +13382,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 70,
       "passCompletionPct": 88.23,
       "progressiveDeliveriesPer90": 27.247,
-      "progressiveDeliveries": 551
+      "progressiveDeliveries": 551,
+      "passes": 1028,
+      "keyPasses": 24,
+      "interceptions": 14
     },
     "performance": {
       "attack": 18.65,
@@ -12933,7 +13458,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 113,
       "passCompletionPct": 85.908,
       "progressiveDeliveriesPer90": 19.776,
-      "progressiveDeliveries": 412
+      "progressiveDeliveries": 412,
+      "passes": 958,
+      "keyPasses": 10,
+      "interceptions": 24
     },
     "performance": {
       "attack": 14.88,
@@ -13010,7 +13538,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 8.711,
       "progressiveDeliveries": 331,
       "claimsPer90": 0.553,
-      "claims": 21
+      "claims": 21,
+      "passes": 968,
+      "keyPasses": 1,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -13083,7 +13614,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 161,
       "passCompletionPct": 90.202,
       "progressiveDeliveriesPer90": 35.253,
-      "progressiveDeliveries": 1085
+      "progressiveDeliveries": 1085,
+      "passes": 2378,
+      "keyPasses": 13,
+      "interceptions": 28
     },
     "performance": {
       "attack": 9.73,
@@ -13156,7 +13690,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 65,
       "passCompletionPct": 85.364,
       "progressiveDeliveriesPer90": 27.906,
-      "progressiveDeliveries": 835
+      "progressiveDeliveries": 835,
+      "passes": 1510,
+      "keyPasses": 19,
+      "interceptions": 25
     },
     "performance": {
       "attack": 16.49,
@@ -13229,7 +13766,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 97,
       "passCompletionPct": 90.337,
       "progressiveDeliveriesPer90": 28.255,
-      "progressiveDeliveries": 804
+      "progressiveDeliveries": 804,
+      "passes": 1842,
+      "keyPasses": 10,
+      "interceptions": 26
     },
     "performance": {
       "attack": 3.78,
@@ -13302,7 +13842,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 88.421,
       "progressiveDeliveriesPer90": 21.089,
-      "progressiveDeliveries": 583
+      "progressiveDeliveries": 583,
+      "passes": 1045,
+      "keyPasses": 17,
+      "interceptions": 26
     },
     "performance": {
       "attack": 7.51,
@@ -13375,7 +13918,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 73.026,
       "progressiveDeliveriesPer90": 13.77,
-      "progressiveDeliveries": 291
+      "progressiveDeliveries": 291,
+      "passes": 456,
+      "keyPasses": 17,
+      "interceptions": 1
     },
     "performance": {
       "attack": 17.96,
@@ -13448,7 +13994,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 38,
       "passCompletionPct": 84.964,
       "progressiveDeliveriesPer90": 37.748,
-      "progressiveDeliveries": 825
+      "progressiveDeliveries": 825,
+      "passes": 1237,
+      "keyPasses": 30,
+      "interceptions": 9
     },
     "performance": {
       "attack": 14.86,
@@ -13521,7 +14070,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 77.885,
       "progressiveDeliveriesPer90": 15.64,
-      "progressiveDeliveries": 289
+      "progressiveDeliveries": 289,
+      "passes": 416,
+      "keyPasses": 15,
+      "interceptions": 8
     },
     "performance": {
       "attack": 16.65,
@@ -13594,7 +14146,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 108,
       "passCompletionPct": 95.862,
       "progressiveDeliveriesPer90": 14.538,
-      "progressiveDeliveries": 241
+      "progressiveDeliveries": 241,
+      "passes": 1015,
+      "keyPasses": 1,
+      "interceptions": 17
     },
     "performance": {
       "attack": 4.72,
@@ -13667,7 +14222,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 72.099,
       "progressiveDeliveriesPer90": 16.306,
-      "progressiveDeliveries": 258
+      "progressiveDeliveries": 258,
+      "passes": 362,
+      "keyPasses": 10,
+      "interceptions": 6
     },
     "performance": {
       "attack": 7.72,
@@ -13740,7 +14298,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 33,
       "passCompletionPct": 76.504,
       "progressiveDeliveriesPer90": 23.526,
-      "progressiveDeliveries": 367
+      "progressiveDeliveries": 367,
+      "passes": 532,
+      "keyPasses": 14,
+      "interceptions": 21
     },
     "performance": {
       "attack": 17.78,
@@ -13813,7 +14374,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 22,
       "passCompletionPct": 89.53,
       "progressiveDeliveriesPer90": 38.007,
-      "progressiveDeliveries": 1337
+      "progressiveDeliveries": 1337,
+      "passes": 1958,
+      "keyPasses": 27,
+      "interceptions": 27
     },
     "performance": {
       "attack": 8.24,
@@ -13886,7 +14450,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 178,
       "passCompletionPct": 87.458,
       "progressiveDeliveriesPer90": 26.302,
-      "progressiveDeliveries": 863
+      "progressiveDeliveries": 863,
+      "passes": 2073,
+      "keyPasses": 8,
+      "interceptions": 51
     },
     "performance": {
       "attack": 8.65,
@@ -13959,7 +14526,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 44,
       "passCompletionPct": 87.489,
       "progressiveDeliveriesPer90": 28.609,
-      "progressiveDeliveries": 912
+      "progressiveDeliveries": 912,
+      "passes": 1151,
+      "keyPasses": 45,
+      "interceptions": 23
     },
     "performance": {
       "attack": 10.04,
@@ -14032,7 +14602,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 55,
       "passCompletionPct": 90.806,
       "progressiveDeliveriesPer90": 24.272,
-      "progressiveDeliveries": 678
+      "progressiveDeliveries": 678,
+      "passes": 1327,
+      "keyPasses": 11,
+      "interceptions": 43
     },
     "performance": {
       "attack": 7.04,
@@ -14105,7 +14678,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 107,
       "passCompletionPct": 88.748,
       "progressiveDeliveriesPer90": 32.858,
-      "progressiveDeliveries": 755
+      "progressiveDeliveries": 755,
+      "passes": 1502,
+      "keyPasses": 15,
+      "interceptions": 29
     },
     "performance": {
       "attack": 13.51,
@@ -14178,7 +14754,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 64.432,
       "progressiveDeliveriesPer90": 17.673,
-      "progressiveDeliveries": 432
+      "progressiveDeliveries": 432,
+      "passes": 537,
+      "keyPasses": 33,
+      "interceptions": 3
     },
     "performance": {
       "attack": 8.24,
@@ -14251,7 +14830,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 78.427,
       "progressiveDeliveriesPer90": 17.728,
-      "progressiveDeliveries": 365
+      "progressiveDeliveries": 365,
+      "passes": 496,
+      "keyPasses": 22,
+      "interceptions": 5
     },
     "performance": {
       "attack": 16.2,
@@ -14324,7 +14906,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 86,
       "passCompletionPct": 90.184,
       "progressiveDeliveriesPer90": 28.975,
-      "progressiveDeliveries": 697
+      "progressiveDeliveries": 697,
+      "passes": 1518,
+      "keyPasses": 5,
+      "interceptions": 20
     },
     "performance": {
       "attack": 12.97,
@@ -14401,7 +14986,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 19.409,
       "progressiveDeliveries": 427,
       "claimsPer90": 1.045,
-      "claims": 23
+      "claims": 23,
+      "passes": 1180,
+      "keyPasses": 2,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
@@ -14474,7 +15062,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 80,
       "progressiveDeliveriesPer90": 15.025,
-      "progressiveDeliveries": 302
+      "progressiveDeliveries": 302,
+      "passes": 415,
+      "keyPasses": 9,
+      "interceptions": 5
     },
     "performance": {
       "attack": 15.52,
@@ -14547,7 +15138,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 34,
       "passCompletionPct": 91.408,
       "progressiveDeliveriesPer90": 31.21,
-      "progressiveDeliveries": 688
+      "progressiveDeliveries": 688,
+      "passes": 1222,
+      "keyPasses": 21,
+      "interceptions": 16
     },
     "performance": {
       "attack": 4.09,
@@ -14620,7 +15214,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 218,
       "passCompletionPct": 80.41,
       "progressiveDeliveriesPer90": 18.108,
-      "progressiveDeliveries": 670
+      "progressiveDeliveries": 670,
+      "passes": 1511,
+      "keyPasses": 11,
+      "interceptions": 26
     },
     "performance": {
       "attack": 17.57,
@@ -14697,7 +15294,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 15.541,
       "progressiveDeliveries": 575,
       "claimsPer90": 1.216,
-      "claims": 45
+      "claims": 45,
+      "passes": 988,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -14770,7 +15370,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 73,
       "passCompletionPct": 79.327,
       "progressiveDeliveriesPer90": 18.479,
-      "progressiveDeliveries": 656
+      "progressiveDeliveries": 656,
+      "passes": 1011,
+      "keyPasses": 27,
+      "interceptions": 40
     },
     "performance": {
       "attack": 20,
@@ -14843,7 +15446,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 76.28,
       "progressiveDeliveriesPer90": 33.635,
-      "progressiveDeliveries": 950
+      "progressiveDeliveries": 950,
+      "passes": 1016,
+      "keyPasses": 82,
+      "interceptions": 23
     },
     "performance": {
       "attack": 7.7,
@@ -14916,7 +15522,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 95,
       "passCompletionPct": 80.547,
       "progressiveDeliveriesPer90": 19.986,
-      "progressiveDeliveries": 628
+      "progressiveDeliveries": 628,
+      "passes": 1244,
+      "keyPasses": 17,
+      "interceptions": 40
     },
     "performance": {
       "attack": 3.78,
@@ -14989,7 +15598,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 86.892,
       "progressiveDeliveriesPer90": 24.376,
-      "progressiveDeliveries": 588
+      "progressiveDeliveries": 588,
+      "passes": 946,
+      "keyPasses": 23,
+      "interceptions": 22
     },
     "performance": {
       "attack": 8.69,
@@ -15062,7 +15674,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 83.423,
       "progressiveDeliveriesPer90": 18.03,
-      "progressiveDeliveries": 487
+      "progressiveDeliveries": 487,
+      "passes": 555,
+      "keyPasses": 32,
+      "interceptions": 18
     },
     "performance": {
       "attack": 3.35,
@@ -15135,7 +15750,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 59,
       "passCompletionPct": 80.938,
       "progressiveDeliveriesPer90": 18.863,
-      "progressiveDeliveries": 551
+      "progressiveDeliveries": 551,
+      "passes": 981,
+      "keyPasses": 10,
+      "interceptions": 32
     },
     "performance": {
       "attack": 3.78,
@@ -15208,7 +15826,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 69.78,
       "progressiveDeliveriesPer90": 9.615,
-      "progressiveDeliveries": 255
+      "progressiveDeliveries": 255,
+      "passes": 364,
+      "keyPasses": 18,
+      "interceptions": 7
     },
     "performance": {
       "attack": 8.53,
@@ -15281,7 +15902,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 71.536,
       "progressiveDeliveriesPer90": 17.719,
-      "progressiveDeliveries": 391
+      "progressiveDeliveries": 391,
+      "passes": 534,
+      "keyPasses": 34,
+      "interceptions": 18
     },
     "performance": {
       "attack": 9.37,
@@ -15354,7 +15978,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 124,
       "passCompletionPct": 88.48,
       "progressiveDeliveriesPer90": 13.353,
-      "progressiveDeliveries": 319
+      "progressiveDeliveries": 319,
+      "passes": 1224,
+      "keyPasses": 3,
+      "interceptions": 28
     },
     "performance": {
       "attack": 3.78,
@@ -15431,7 +16058,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "progressiveDeliveriesPer90": 23.5,
       "progressiveDeliveries": 893,
       "claimsPer90": 0.263,
-      "claims": 10
+      "claims": 10,
+      "passes": 1122,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
@@ -15504,7 +16134,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 51,
       "passCompletionPct": 77.922,
       "progressiveDeliveriesPer90": 31.265,
-      "progressiveDeliveries": 1137
+      "progressiveDeliveries": 1137,
+      "passes": 1386,
+      "keyPasses": 78,
+      "interceptions": 42
     },
     "performance": {
       "attack": 3.38,
@@ -15577,7 +16210,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 34,
       "passCompletionPct": 75.594,
       "progressiveDeliveriesPer90": 15.318,
-      "progressiveDeliveries": 554
+      "progressiveDeliveries": 554,
+      "passes": 799,
+      "keyPasses": 22,
+      "interceptions": 23
     },
     "performance": {
       "attack": 13.34,
@@ -15650,7 +16286,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 141,
       "passCompletionPct": 64.352,
       "progressiveDeliveriesPer90": 19.304,
-      "progressiveDeliveries": 684
+      "progressiveDeliveries": 684,
+      "passes": 864,
+      "keyPasses": 18,
+      "interceptions": 25
     },
     "performance": {
       "attack": 7.84,
@@ -15723,7 +16362,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 212,
       "passCompletionPct": 76.529,
       "progressiveDeliveriesPer90": 12.387,
-      "progressiveDeliveries": 403
+      "progressiveDeliveries": 403,
+      "passes": 899,
+      "keyPasses": 2,
+      "interceptions": 35
     },
     "performance": {
       "attack": 8.92,
@@ -15796,7 +16438,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 145,
       "passCompletionPct": 78.67,
       "progressiveDeliveriesPer90": 14.309,
-      "progressiveDeliveries": 411
+      "progressiveDeliveries": 411,
+      "passes": 797,
+      "keyPasses": 2,
+      "interceptions": 35
     },
     "performance": {
       "attack": 3.78,
@@ -15869,7 +16514,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 73.111,
       "progressiveDeliveriesPer90": 16.026,
-      "progressiveDeliveries": 380
+      "progressiveDeliveries": 380,
+      "passes": 569,
+      "keyPasses": 8,
+      "interceptions": 15
     },
     "performance": {
       "attack": 8.5,
@@ -15942,7 +16590,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 44,
       "passCompletionPct": 77.371,
       "progressiveDeliveriesPer90": 17.51,
-      "progressiveDeliveries": 393
+      "progressiveDeliveries": 393,
+      "passes": 601,
+      "keyPasses": 17,
+      "interceptions": 34
     },
     "performance": {
       "attack": 14.05,
@@ -16015,7 +16666,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 7,
       "passCompletionPct": 68.978,
       "progressiveDeliveriesPer90": 12.586,
-      "progressiveDeliveries": 239
+      "progressiveDeliveries": 239,
+      "passes": 274,
+      "keyPasses": 4,
+      "interceptions": 4
     },
     "performance": {
       "attack": 13.62,
@@ -16088,7 +16742,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 59,
       "passCompletionPct": 63.898,
       "progressiveDeliveriesPer90": 22.693,
-      "progressiveDeliveries": 442
+      "progressiveDeliveries": 442,
+      "passes": 590,
+      "keyPasses": 11,
+      "interceptions": 31
     },
     "performance": {
       "attack": 4.41,
@@ -16161,7 +16818,10 @@ export const LALIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 64.674,
       "progressiveDeliveriesPer90": 16.44,
-      "progressiveDeliveries": 293
+      "progressiveDeliveries": 293,
+      "passes": 368,
+      "keyPasses": 15,
+      "interceptions": 9
     },
     "performance": {
       "attack": 10.02,

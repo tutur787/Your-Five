@@ -46,7 +46,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 95,
       "passCompletionPct": 87.325,
       "progressiveDeliveriesPer90": 18.106,
-      "progressiveDeliveries": 650
+      "progressiveDeliveries": 650,
+      "passes": 1712,
+      "keyPasses": 15,
+      "interceptions": 46
     },
     "performance": {
       "attack": 6.84,
@@ -121,10 +124,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 42,
       "passCompletionPct": 84.955,
       "progressiveDeliveriesPer90": 19.139,
-      "progressiveDeliveries": 652
+      "progressiveDeliveries": 652,
+      "passes": 1994,
+      "keyPasses": 115,
+      "interceptions": 20
     },
     "performance": {
-      "attack": 14.72,
+      "attack": 14.75,
       "creation": 20,
       "control": 13.58,
       "defense": 8.6,
@@ -200,10 +206,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 73,
       "passCompletionPct": 81.563,
       "progressiveDeliveriesPer90": 19.683,
-      "progressiveDeliveries": 566
+      "progressiveDeliveries": 566,
+      "passes": 1600,
+      "keyPasses": 34,
+      "interceptions": 31
     },
     "performance": {
-      "attack": 16.48,
+      "attack": 16.5,
       "creation": 9.41,
       "control": 11.85,
       "defense": 14.63,
@@ -277,18 +286,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 59.086,
       "progressiveDeliveriesPer90": 20.688,
-      "progressiveDeliveries": 662
+      "progressiveDeliveries": 662,
+      "claimsPer90": 0.938,
+      "claims": 30,
+      "passes": 941,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 6,
       "defense": 1,
-      "goalkeeping": 9.76,
-      "observedScore": 10.83,
+      "goalkeeping": 10.21,
+      "observedScore": 11.1,
       "dataConfidence": 1,
-      "roleScore": 10.83,
-      "domesticQuality": 10.83
+      "roleScore": 11.1,
+      "domesticQuality": 11.1
     },
     "teamSuccess": 1.58,
     "sourcePositionLabels": [
@@ -352,7 +366,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 83.417,
       "progressiveDeliveriesPer90": 5.872,
-      "progressiveDeliveries": 171
+      "progressiveDeliveries": 171,
+      "passes": 796,
+      "keyPasses": 44,
+      "interceptions": 8
     },
     "performance": {
       "attack": 13.29,
@@ -427,10 +444,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 92,
       "passCompletionPct": 86.484,
       "progressiveDeliveriesPer90": 12.213,
-      "progressiveDeliveries": 355
+      "progressiveDeliveries": 355,
+      "passes": 1132,
+      "keyPasses": 26,
+      "interceptions": 27
     },
     "performance": {
-      "attack": 3.3,
+      "attack": 3.34,
       "creation": 9.68,
       "control": 11.73,
       "defense": 10.7,
@@ -502,7 +522,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 22,
       "passCompletionPct": 81.705,
       "progressiveDeliveriesPer90": 7.515,
-      "progressiveDeliveries": 209
+      "progressiveDeliveries": 209,
+      "passes": 880,
+      "keyPasses": 32,
+      "interceptions": 21
     },
     "performance": {
       "attack": 13.8,
@@ -577,7 +600,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 89.159,
       "progressiveDeliveriesPer90": 6.259,
-      "progressiveDeliveries": 163
+      "progressiveDeliveries": 163,
+      "passes": 904,
+      "keyPasses": 38,
+      "interceptions": 17
     },
     "performance": {
       "attack": 11.96,
@@ -652,7 +678,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 105,
       "passCompletionPct": 86.251,
       "progressiveDeliveriesPer90": 16.097,
-      "progressiveDeliveries": 296
+      "progressiveDeliveries": 296,
+      "passes": 851,
+      "keyPasses": 2,
+      "interceptions": 13
     },
     "performance": {
       "attack": 13,
@@ -727,7 +756,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 85,
       "passCompletionPct": 88.551,
       "progressiveDeliveriesPer90": 18.528,
-      "progressiveDeliveries": 358
+      "progressiveDeliveries": 358,
+      "passes": 987,
+      "keyPasses": 4,
+      "interceptions": 31
     },
     "performance": {
       "attack": 3.72,
@@ -802,7 +834,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 68.954,
       "progressiveDeliveriesPer90": 3.248,
-      "progressiveDeliveries": 59
+      "progressiveDeliveries": 59,
+      "passes": 306,
+      "keyPasses": 8,
+      "interceptions": 3
     },
     "performance": {
       "attack": 17.98,
@@ -879,18 +914,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 52,
       "passCompletionPct": 61.571,
       "progressiveDeliveriesPer90": 25.395,
-      "progressiveDeliveries": 965
+      "progressiveDeliveries": 965,
+      "claimsPer90": 0.368,
+      "claims": 14,
+      "passes": 1439,
+      "keyPasses": 2,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 9,
       "defense": 14,
-      "goalkeeping": 9.68,
-      "observedScore": 12.06,
+      "goalkeeping": 8.66,
+      "observedScore": 11.6,
       "dataConfidence": 1,
-      "roleScore": 12.06,
-      "domesticQuality": 12.06
+      "roleScore": 11.6,
+      "domesticQuality": 11.6
     },
     "teamSuccess": -0.42,
     "sourcePositionLabels": [
@@ -954,7 +994,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 85,
       "passCompletionPct": 90.184,
       "progressiveDeliveriesPer90": 15.343,
-      "progressiveDeliveries": 582
+      "progressiveDeliveries": 582,
+      "passes": 1793,
+      "keyPasses": 49,
+      "interceptions": 59
     },
     "performance": {
       "attack": 12.5,
@@ -1029,7 +1072,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 242,
       "passCompletionPct": 80.757,
       "progressiveDeliveriesPer90": 15.784,
-      "progressiveDeliveries": 584
+      "progressiveDeliveries": 584,
+      "passes": 1559,
+      "keyPasses": 15,
+      "interceptions": 32
     },
     "performance": {
       "attack": 12.89,
@@ -1104,7 +1150,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 144,
       "passCompletionPct": 75.162,
       "progressiveDeliveriesPer90": 13.569,
-      "progressiveDeliveries": 471
+      "progressiveDeliveries": 471,
+      "passes": 1079,
+      "keyPasses": 16,
+      "interceptions": 15
     },
     "performance": {
       "attack": 7.37,
@@ -1179,7 +1228,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 145,
       "passCompletionPct": 81.481,
       "progressiveDeliveriesPer90": 16.449,
-      "progressiveDeliveries": 541
+      "progressiveDeliveries": 541,
+      "passes": 1188,
+      "keyPasses": 21,
+      "interceptions": 30
     },
     "performance": {
       "attack": 3.03,
@@ -1254,7 +1306,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 84.697,
       "progressiveDeliveriesPer90": 5.912,
-      "progressiveDeliveries": 183
+      "progressiveDeliveries": 183,
+      "passes": 941,
+      "keyPasses": 27,
+      "interceptions": 16
     },
     "performance": {
       "attack": 15.67,
@@ -1329,18 +1384,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 84.503,
       "progressiveDeliveriesPer90": 8.641,
-      "progressiveDeliveries": 253
+      "progressiveDeliveries": 253,
+      "passes": 1026,
+      "keyPasses": 33,
+      "interceptions": 12
     },
     "performance": {
-      "attack": 15.25,
+      "attack": 15.26,
       "creation": 13.58,
       "control": 5.93,
       "defense": 5.68,
       "goalkeeping": 10,
-      "observedScore": 12.08,
+      "observedScore": 12.09,
       "dataConfidence": 1,
-      "roleScore": 12.08,
-      "domesticQuality": 12.08
+      "roleScore": 12.09,
+      "domesticQuality": 12.09
     },
     "teamSuccess": -0.42,
     "sourcePositionLabels": [
@@ -1404,7 +1462,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 203,
       "passCompletionPct": 85.481,
       "progressiveDeliveriesPer90": 12.544,
-      "progressiveDeliveries": 361
+      "progressiveDeliveries": 361,
+      "passes": 1102,
+      "keyPasses": 1,
+      "interceptions": 37
     },
     "performance": {
       "attack": 17.63,
@@ -1479,10 +1540,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 24,
       "passCompletionPct": 87.7,
       "progressiveDeliveriesPer90": 14.522,
-      "progressiveDeliveries": 339
+      "progressiveDeliveries": 339,
+      "passes": 1065,
+      "keyPasses": 10,
+      "interceptions": 28
     },
     "performance": {
-      "attack": 6.41,
+      "attack": 6.44,
       "creation": 8.45,
       "control": 15.06,
       "defense": 11.07,
@@ -1554,7 +1618,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 25,
       "passCompletionPct": 60.773,
       "progressiveDeliveriesPer90": 3.619,
-      "progressiveDeliveries": 77
+      "progressiveDeliveries": 77,
+      "passes": 362,
+      "keyPasses": 12,
+      "interceptions": 5
     },
     "performance": {
       "attack": 8.86,
@@ -1629,10 +1696,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 85.864,
       "progressiveDeliveriesPer90": 7.615,
-      "progressiveDeliveries": 138
+      "progressiveDeliveries": 138,
+      "passes": 573,
+      "keyPasses": 32,
+      "interceptions": 12
     },
     "performance": {
-      "attack": 10.85,
+      "attack": 10.86,
       "creation": 17.96,
       "control": 7.56,
       "defense": 7.94,
@@ -1704,7 +1774,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 275,
       "passCompletionPct": 89.004,
       "progressiveDeliveriesPer90": 26.632,
-      "progressiveDeliveries": 1012
+      "progressiveDeliveries": 1012,
+      "passes": 2792,
+      "keyPasses": 12,
+      "interceptions": 28
     },
     "performance": {
       "attack": 19.47,
@@ -1779,7 +1852,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 190,
       "passCompletionPct": 89.668,
       "progressiveDeliveriesPer90": 21.745,
-      "progressiveDeliveries": 749
+      "progressiveDeliveries": 749,
+      "passes": 2168,
+      "keyPasses": 8,
+      "interceptions": 29
     },
     "performance": {
       "attack": 7.63,
@@ -1854,10 +1930,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 58,
       "passCompletionPct": 90.855,
       "progressiveDeliveriesPer90": 15.172,
-      "progressiveDeliveries": 545
+      "progressiveDeliveries": 545,
+      "passes": 2187,
+      "keyPasses": 71,
+      "interceptions": 30
     },
     "performance": {
-      "attack": 12.95,
+      "attack": 12.97,
       "creation": 18.35,
       "control": 17.04,
       "defense": 9.75,
@@ -1929,18 +2008,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 53,
       "passCompletionPct": 88.871,
       "progressiveDeliveriesPer90": 14.69,
-      "progressiveDeliveries": 489
+      "progressiveDeliveries": 489,
+      "passes": 1860,
+      "keyPasses": 26,
+      "interceptions": 48
     },
     "performance": {
-      "attack": 11.81,
+      "attack": 11.83,
       "creation": 7.9,
       "control": 15.68,
       "defense": 12.2,
       "goalkeeping": 10,
-      "observedScore": 13.09,
+      "observedScore": 13.1,
       "dataConfidence": 1,
-      "roleScore": 13.09,
-      "domesticQuality": 13.09
+      "roleScore": 13.1,
+      "domesticQuality": 13.1
     },
     "teamSuccess": 1.16,
     "sourcePositionLabels": [
@@ -2004,10 +2086,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 80,
       "progressiveDeliveriesPer90": 6.487,
-      "progressiveDeliveries": 198
+      "progressiveDeliveries": 198,
+      "passes": 750,
+      "keyPasses": 49,
+      "interceptions": 13
     },
     "performance": {
-      "attack": 13.54,
+      "attack": 13.58,
       "creation": 16.24,
       "control": 2.72,
       "defense": 1.42,
@@ -2079,18 +2164,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 35,
       "passCompletionPct": 87.204,
       "progressiveDeliveriesPer90": 13.896,
-      "progressiveDeliveries": 411
+      "progressiveDeliveries": 411,
+      "passes": 1438,
+      "keyPasses": 31,
+      "interceptions": 21
     },
     "performance": {
-      "attack": 6.54,
+      "attack": 6.58,
       "creation": 12.89,
       "control": 13.58,
       "defense": 6.73,
       "goalkeeping": 10,
-      "observedScore": 11.66,
+      "observedScore": 11.67,
       "dataConfidence": 1,
-      "roleScore": 11.66,
-      "domesticQuality": 11.66
+      "roleScore": 11.67,
+      "domesticQuality": 11.67
     },
     "teamSuccess": 1.16,
     "sourcePositionLabels": [
@@ -2154,18 +2242,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 84.87,
       "progressiveDeliveriesPer90": 12.889,
-      "progressiveDeliveries": 342
+      "progressiveDeliveries": 342,
+      "passes": 1421,
+      "keyPasses": 57,
+      "interceptions": 11
     },
     "performance": {
-      "attack": 14.56,
+      "attack": 14.57,
       "creation": 15.01,
       "control": 10.25,
       "defense": 6.48,
       "goalkeeping": 10,
-      "observedScore": 12.82,
+      "observedScore": 12.83,
       "dataConfidence": 1,
-      "roleScore": 12.82,
-      "domesticQuality": 12.82
+      "roleScore": 12.83,
+      "domesticQuality": 12.83
     },
     "teamSuccess": 1.16,
     "sourcePositionLabels": [
@@ -2229,7 +2320,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 71,
       "passCompletionPct": 86.729,
       "progressiveDeliveriesPer90": 15.093,
-      "progressiveDeliveries": 379
+      "progressiveDeliveries": 379,
+      "passes": 1070,
+      "keyPasses": 25,
+      "interceptions": 14
     },
     "performance": {
       "attack": 14.47,
@@ -2306,18 +2400,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 79.018,
       "progressiveDeliveriesPer90": 15.538,
-      "progressiveDeliveries": 404
+      "progressiveDeliveries": 404,
+      "claimsPer90": 0.615,
+      "claims": 16,
+      "passes": 815,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 19,
       "defense": 15,
-      "goalkeeping": 10.65,
-      "observedScore": 13.55,
+      "goalkeeping": 9.95,
+      "observedScore": 13.15,
       "dataConfidence": 1,
-      "roleScore": 13.55,
-      "domesticQuality": 13.55
+      "roleScore": 13.15,
+      "domesticQuality": 13.15
     },
     "teamSuccess": 1.16,
     "sourcePositionLabels": [
@@ -2381,10 +2480,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 7,
       "passCompletionPct": 79.445,
       "progressiveDeliveriesPer90": 7.165,
-      "progressiveDeliveries": 171
+      "progressiveDeliveries": 171,
+      "passes": 793,
+      "keyPasses": 42,
+      "interceptions": 4
     },
     "performance": {
-      "attack": 15.75,
+      "attack": 15.78,
       "creation": 18.6,
       "control": 2.84,
       "defense": 1.44,
@@ -2456,7 +2558,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 77,
       "progressiveDeliveriesPer90": 3.63,
-      "progressiveDeliveries": 73
+      "progressiveDeliveries": 73,
+      "passes": 400,
+      "keyPasses": 17,
+      "interceptions": 3
     },
     "performance": {
       "attack": 12.96,
@@ -2531,10 +2636,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 49,
       "passCompletionPct": 87.663,
       "progressiveDeliveriesPer90": 21.866,
-      "progressiveDeliveries": 810
+      "progressiveDeliveries": 810,
+      "passes": 2383,
+      "keyPasses": 50,
+      "interceptions": 41
     },
     "performance": {
-      "attack": 7.21,
+      "attack": 7.25,
       "creation": 11.91,
       "control": 17.65,
       "defense": 17.16,
@@ -2606,7 +2714,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 218,
       "passCompletionPct": 86.615,
       "progressiveDeliveriesPer90": 13.387,
-      "progressiveDeliveries": 502
+      "progressiveDeliveries": 502,
+      "passes": 1539,
+      "keyPasses": 3,
+      "interceptions": 29
     },
     "performance": {
       "attack": 3.03,
@@ -2681,7 +2792,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 88,
       "passCompletionPct": 84,
       "progressiveDeliveriesPer90": 14.064,
-      "progressiveDeliveries": 501
+      "progressiveDeliveries": 501,
+      "passes": 1325,
+      "keyPasses": 33,
+      "interceptions": 47
     },
     "performance": {
       "attack": 13.42,
@@ -2756,10 +2870,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 81.871,
       "progressiveDeliveriesPer90": 9.926,
-      "progressiveDeliveries": 343
+      "progressiveDeliveries": 343,
+      "passes": 1208,
+      "keyPasses": 45,
+      "interceptions": 13
     },
     "performance": {
-      "attack": 18.69,
+      "attack": 18.7,
       "creation": 12.92,
       "control": 6.42,
       "defense": 1.21,
@@ -2833,18 +2950,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 57.143,
       "progressiveDeliveriesPer90": 17.48,
-      "progressiveDeliveries": 518
+      "progressiveDeliveries": 518,
+      "claimsPer90": 0.472,
+      "claims": 14,
+      "passes": 784,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 2,
       "defense": 4,
-      "goalkeeping": 13.09,
-      "observedScore": 12.06,
+      "goalkeeping": 11.92,
+      "observedScore": 11.69,
       "dataConfidence": 1,
-      "roleScore": 12.06,
-      "domesticQuality": 12.06
+      "roleScore": 11.69,
+      "domesticQuality": 11.69
     },
     "teamSuccess": -1.16,
     "sourcePositionLabels": [
@@ -2908,7 +3030,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 30,
       "passCompletionPct": 73.362,
       "progressiveDeliveriesPer90": 4.434,
-      "progressiveDeliveries": 114
+      "progressiveDeliveries": 114,
+      "passes": 458,
+      "keyPasses": 11,
+      "interceptions": 3
     },
     "performance": {
       "attack": 7.51,
@@ -2983,18 +3108,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 50,
       "passCompletionPct": 86.82,
       "progressiveDeliveriesPer90": 12.721,
-      "progressiveDeliveries": 294
+      "progressiveDeliveries": 294,
+      "passes": 956,
+      "keyPasses": 10,
+      "interceptions": 25
     },
     "performance": {
-      "attack": 5.55,
+      "attack": 5.59,
       "creation": 5.68,
       "control": 12.84,
       "defense": 13.7,
       "goalkeeping": 10,
-      "observedScore": 11.69,
+      "observedScore": 11.7,
       "dataConfidence": 1,
-      "roleScore": 11.69,
-      "domesticQuality": 11.69
+      "roleScore": 11.7,
+      "domesticQuality": 11.7
     },
     "teamSuccess": -1.16,
     "sourcePositionLabels": [
@@ -3058,7 +3186,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 130,
       "passCompletionPct": 83.569,
       "progressiveDeliveriesPer90": 20.844,
-      "progressiveDeliveries": 494
+      "progressiveDeliveries": 494,
+      "passes": 1132,
+      "keyPasses": 8,
+      "interceptions": 34
     },
     "performance": {
       "attack": 11.32,
@@ -3133,10 +3264,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 91.172,
       "progressiveDeliveriesPer90": 5.32,
-      "progressiveDeliveries": 109
+      "progressiveDeliveries": 109,
+      "passes": 657,
+      "keyPasses": 40,
+      "interceptions": 8
     },
     "performance": {
-      "attack": 11.77,
+      "attack": 11.78,
       "creation": 18.38,
       "control": 9.51,
       "defense": 1.48,
@@ -3208,7 +3342,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 71,
       "passCompletionPct": 85.851,
       "progressiveDeliveriesPer90": 15.906,
-      "progressiveDeliveries": 281
+      "progressiveDeliveries": 281,
+      "passes": 629,
+      "keyPasses": 9,
+      "interceptions": 25
     },
     "performance": {
       "attack": 3.72,
@@ -3283,10 +3420,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 86.355,
       "progressiveDeliveriesPer90": 14.706,
-      "progressiveDeliveries": 192
+      "progressiveDeliveries": 192,
+      "passes": 535,
+      "keyPasses": 10,
+      "interceptions": 7
     },
     "performance": {
-      "attack": 8.58,
+      "attack": 8.6,
       "creation": 7.54,
       "control": 13.04,
       "defense": 11.66,
@@ -3358,10 +3498,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 83,
       "passCompletionPct": 86.193,
       "progressiveDeliveriesPer90": 14.006,
-      "progressiveDeliveries": 486
+      "progressiveDeliveries": 486,
+      "passes": 1731,
+      "keyPasses": 18,
+      "interceptions": 50
     },
     "performance": {
-      "attack": 3.06,
+      "attack": 3.1,
       "creation": 2.52,
       "control": 12.59,
       "defense": 15.78,
@@ -3433,7 +3576,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 185,
       "passCompletionPct": 87.586,
       "progressiveDeliveriesPer90": 14.385,
-      "progressiveDeliveries": 472
+      "progressiveDeliveries": 472,
+      "passes": 1450,
+      "keyPasses": 9,
+      "interceptions": 29
     },
     "performance": {
       "attack": 13.95,
@@ -3508,7 +3654,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 207,
       "passCompletionPct": 88.472,
       "progressiveDeliveriesPer90": 19.489,
-      "progressiveDeliveries": 636
+      "progressiveDeliveries": 636,
+      "passes": 1839,
+      "keyPasses": 11,
+      "interceptions": 31
     },
     "performance": {
       "attack": 3.03,
@@ -3583,7 +3732,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 73,
       "passCompletionPct": 78.054,
       "progressiveDeliveriesPer90": 10.278,
-      "progressiveDeliveries": 320
+      "progressiveDeliveries": 320,
+      "passes": 884,
+      "keyPasses": 19,
+      "interceptions": 34
     },
     "performance": {
       "attack": 9.34,
@@ -3658,7 +3810,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 83,
       "passCompletionPct": 78.788,
       "progressiveDeliveriesPer90": 13.823,
-      "progressiveDeliveries": 405
+      "progressiveDeliveries": 405,
+      "passes": 957,
+      "keyPasses": 21,
+      "interceptions": 27
     },
     "performance": {
       "attack": 3.03,
@@ -3733,7 +3888,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 58.696,
       "progressiveDeliveriesPer90": 4.259,
-      "progressiveDeliveries": 129
+      "progressiveDeliveries": 129,
+      "passes": 460,
+      "keyPasses": 19,
+      "interceptions": 4
     },
     "performance": {
       "attack": 13.29,
@@ -3808,7 +3966,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 82.635,
       "progressiveDeliveriesPer90": 5.623,
-      "progressiveDeliveries": 154
+      "progressiveDeliveries": 154,
+      "passes": 668,
+      "keyPasses": 29,
+      "interceptions": 15
     },
     "performance": {
       "attack": 5.59,
@@ -3883,10 +4044,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 52,
       "passCompletionPct": 82.109,
       "progressiveDeliveriesPer90": 11.695,
-      "progressiveDeliveries": 309
+      "progressiveDeliveries": 309,
+      "passes": 939,
+      "keyPasses": 60,
+      "interceptions": 20
     },
     "performance": {
-      "attack": 12.66,
+      "attack": 12.68,
       "creation": 15.25,
       "control": 7.65,
       "defense": 11.34,
@@ -3960,18 +4124,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 58.156,
       "progressiveDeliveriesPer90": 25.727,
-      "progressiveDeliveries": 566
+      "progressiveDeliveries": 566,
+      "claimsPer90": 0.636,
+      "claims": 14,
+      "passes": 846,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 3,
       "defense": 13,
-      "goalkeeping": 12.12,
-      "observedScore": 12.43,
+      "goalkeeping": 11.58,
+      "observedScore": 12.25,
       "dataConfidence": 1,
-      "roleScore": 12.43,
-      "domesticQuality": 12.43
+      "roleScore": 12.25,
+      "domesticQuality": 12.25
     },
     "teamSuccess": -0.74,
     "sourcePositionLabels": [
@@ -4035,7 +4204,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 90,
       "passCompletionPct": 76.869,
       "progressiveDeliveriesPer90": 13.813,
-      "progressiveDeliveries": 291
+      "progressiveDeliveries": 291,
+      "passes": 709,
+      "keyPasses": 11,
+      "interceptions": 28
     },
     "performance": {
       "attack": 16.58,
@@ -4110,7 +4282,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 160,
       "passCompletionPct": 84.851,
       "progressiveDeliveriesPer90": 16.498,
-      "progressiveDeliveries": 347
+      "progressiveDeliveries": 347,
+      "passes": 1010,
+      "keyPasses": 5,
+      "interceptions": 24
     },
     "performance": {
       "attack": 11.58,
@@ -4185,7 +4360,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 39,
       "passCompletionPct": 77.175,
       "progressiveDeliveriesPer90": 5.815,
-      "progressiveDeliveries": 220
+      "progressiveDeliveries": 220,
+      "passes": 793,
+      "keyPasses": 34,
+      "interceptions": 27
     },
     "performance": {
       "attack": 8.25,
@@ -4260,18 +4438,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 88.22,
       "progressiveDeliveriesPer90": 12.649,
-      "progressiveDeliveries": 425
+      "progressiveDeliveries": 425,
+      "passes": 1562,
+      "keyPasses": 33,
+      "interceptions": 35
     },
     "performance": {
-      "attack": 7.23,
+      "attack": 7.25,
       "creation": 12.02,
       "control": 14.2,
       "defense": 15.97,
       "goalkeeping": 10,
-      "observedScore": 13.39,
+      "observedScore": 13.4,
       "dataConfidence": 1,
-      "roleScore": 13.39,
-      "domesticQuality": 13.39
+      "roleScore": 13.4,
+      "domesticQuality": 13.4
     },
     "teamSuccess": -1.58,
     "sourcePositionLabels": [
@@ -4335,18 +4516,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 116,
       "passCompletionPct": 77.168,
       "progressiveDeliveriesPer90": 15.537,
-      "progressiveDeliveries": 468
+      "progressiveDeliveries": 468,
+      "passes": 1038,
+      "keyPasses": 24,
+      "interceptions": 33
     },
     "performance": {
-      "attack": 1.24,
+      "attack": 1.28,
       "creation": 12.13,
       "control": 8.64,
       "defense": 7.84,
       "goalkeeping": 10,
-      "observedScore": 10.29,
+      "observedScore": 10.3,
       "dataConfidence": 1,
-      "roleScore": 10.29,
-      "domesticQuality": 10.29
+      "roleScore": 10.3,
+      "domesticQuality": 10.3
     },
     "teamSuccess": -1.58,
     "sourcePositionLabels": [
@@ -4410,10 +4594,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 30,
       "passCompletionPct": 84.977,
       "progressiveDeliveriesPer90": 5.952,
-      "progressiveDeliveries": 164
+      "progressiveDeliveries": 164,
+      "passes": 639,
+      "keyPasses": 26,
+      "interceptions": 16
     },
     "performance": {
-      "attack": 12.52,
+      "attack": 12.55,
       "creation": 8.26,
       "control": 5.19,
       "defense": 6.98,
@@ -4485,7 +4672,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 194,
       "passCompletionPct": 82.323,
       "progressiveDeliveriesPer90": 15.807,
-      "progressiveDeliveries": 444
+      "progressiveDeliveries": 444,
+      "passes": 1171,
+      "keyPasses": 4,
+      "interceptions": 49
     },
     "performance": {
       "attack": 18.16,
@@ -4560,7 +4750,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 83,
       "passCompletionPct": 77.728,
       "progressiveDeliveriesPer90": 12.161,
-      "progressiveDeliveries": 297
+      "progressiveDeliveries": 297,
+      "passes": 898,
+      "keyPasses": 11,
+      "interceptions": 16
     },
     "performance": {
       "attack": 15.26,
@@ -4635,18 +4828,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 94,
       "passCompletionPct": 78.862,
       "progressiveDeliveriesPer90": 13.776,
-      "progressiveDeliveries": 319
+      "progressiveDeliveries": 319,
+      "passes": 738,
+      "keyPasses": 16,
+      "interceptions": 40
     },
     "performance": {
-      "attack": 0.74,
+      "attack": 0.61,
       "creation": 7.08,
       "control": 7.65,
       "defense": 11.13,
       "goalkeeping": 10,
-      "observedScore": 10.19,
+      "observedScore": 9.98,
       "dataConfidence": 1,
-      "roleScore": 10.19,
-      "domesticQuality": 10.19
+      "roleScore": 9.98,
+      "domesticQuality": 9.98
     },
     "teamSuccess": -1.58,
     "sourcePositionLabels": [
@@ -4710,7 +4906,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 98,
       "passCompletionPct": 87.34,
       "progressiveDeliveriesPer90": 13.473,
-      "progressiveDeliveries": 272
+      "progressiveDeliveries": 272,
+      "passes": 782,
+      "keyPasses": 4,
+      "interceptions": 17
     },
     "performance": {
       "attack": 3.03,
@@ -4787,18 +4986,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 46.667,
       "progressiveDeliveriesPer90": 21.25,
-      "progressiveDeliveries": 425
+      "progressiveDeliveries": 425,
+      "claimsPer90": 0.75,
+      "claims": 15,
+      "passes": 540,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 0,
       "defense": 16,
-      "goalkeeping": 4.94,
-      "observedScore": 9.3,
+      "goalkeeping": 5.58,
+      "observedScore": 9.55,
       "dataConfidence": 1,
-      "roleScore": 9.3,
-      "domesticQuality": 9.3
+      "roleScore": 9.55,
+      "domesticQuality": 9.55
     },
     "teamSuccess": -1.58,
     "sourcePositionLabels": [
@@ -4862,7 +5066,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 77.947,
       "progressiveDeliveriesPer90": 17.456,
-      "progressiveDeliveries": 295
+      "progressiveDeliveries": 295,
+      "passes": 789,
+      "keyPasses": 22,
+      "interceptions": 8
     },
     "performance": {
       "attack": 8.51,
@@ -4939,18 +5146,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 58.179,
       "progressiveDeliveriesPer90": 19.611,
-      "progressiveDeliveries": 353
+      "progressiveDeliveries": 353,
+      "claimsPer90": 1.111,
+      "claims": 20,
+      "passes": 593,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 4.6,
       "defense": 7.3,
-      "goalkeeping": 8.73,
-      "observedScore": 10.72,
+      "goalkeeping": 9.43,
+      "observedScore": 11.07,
       "dataConfidence": 0.9,
-      "roleScore": 10.72,
-      "domesticQuality": 10.72
+      "roleScore": 11.07,
+      "domesticQuality": 11.07
     },
     "teamSuccess": -1.58,
     "sourcePositionLabels": [
@@ -5016,18 +5228,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 64.803,
       "progressiveDeliveriesPer90": 19.811,
-      "progressiveDeliveries": 733
+      "progressiveDeliveries": 733,
+      "claimsPer90": 0.892,
+      "claims": 33,
+      "passes": 1091,
+      "keyPasses": 3,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 12,
       "defense": 5,
-      "goalkeeping": 17.18,
-      "observedScore": 14.87,
+      "goalkeeping": 16.74,
+      "observedScore": 14.79,
       "dataConfidence": 1,
-      "roleScore": 14.87,
-      "domesticQuality": 14.87
+      "roleScore": 14.79,
+      "domesticQuality": 14.79
     },
     "teamSuccess": 2,
     "honors": {
@@ -5097,10 +5314,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 78,
       "passCompletionPct": 89.513,
       "progressiveDeliveriesPer90": 17.222,
-      "progressiveDeliveries": 593
+      "progressiveDeliveries": 593,
+      "passes": 2136,
+      "keyPasses": 58,
+      "interceptions": 37
     },
     "performance": {
-      "attack": 9.81,
+      "attack": 9.83,
       "creation": 16.3,
       "control": 17.78,
       "defense": 12.3,
@@ -5176,10 +5396,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 78,
       "passCompletionPct": 87.5,
       "progressiveDeliveriesPer90": 16.345,
-      "progressiveDeliveries": 545
+      "progressiveDeliveries": 545,
+      "passes": 1928,
+      "keyPasses": 18,
+      "interceptions": 39
     },
     "performance": {
-      "attack": 10.03,
+      "attack": 10.06,
       "creation": 2.77,
       "control": 16.05,
       "defense": 11.11,
@@ -5255,7 +5478,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 182,
       "passCompletionPct": 88.229,
       "progressiveDeliveriesPer90": 17.568,
-      "progressiveDeliveries": 537
+      "progressiveDeliveries": 537,
+      "passes": 1733,
+      "keyPasses": 3,
+      "interceptions": 23
     },
     "performance": {
       "attack": 17.37,
@@ -5334,7 +5560,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 133,
       "passCompletionPct": 93.061,
       "progressiveDeliveriesPer90": 20.168,
-      "progressiveDeliveries": 586
+      "progressiveDeliveries": 586,
+      "passes": 2104,
+      "keyPasses": 10,
+      "interceptions": 17
     },
     "performance": {
       "attack": 10.26,
@@ -5413,7 +5642,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 53,
       "passCompletionPct": 85.806,
       "progressiveDeliveriesPer90": 14.432,
-      "progressiveDeliveries": 394
+      "progressiveDeliveries": 394,
+      "passes": 1085,
+      "keyPasses": 22,
+      "interceptions": 24
     },
     "performance": {
       "attack": 18.42,
@@ -5492,7 +5724,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 63.323,
       "progressiveDeliveriesPer90": 2.422,
-      "progressiveDeliveries": 60
+      "progressiveDeliveries": 60,
+      "passes": 319,
+      "keyPasses": 19,
+      "interceptions": 1
     },
     "performance": {
       "attack": 14.36,
@@ -5571,7 +5806,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 11,
       "passCompletionPct": 81.889,
       "progressiveDeliveriesPer90": 7.24,
-      "progressiveDeliveries": 179
+      "progressiveDeliveries": 179,
+      "passes": 773,
+      "keyPasses": 56,
+      "interceptions": 16
     },
     "performance": {
       "attack": 11.28,
@@ -5650,7 +5888,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 50,
       "passCompletionPct": 85.979,
       "progressiveDeliveriesPer90": 11.494,
-      "progressiveDeliveries": 218
+      "progressiveDeliveries": 218,
+      "passes": 756,
+      "keyPasses": 7,
+      "interceptions": 15
     },
     "performance": {
       "attack": 12.5,
@@ -5729,7 +5970,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 14,
       "passCompletionPct": 78.864,
       "progressiveDeliveriesPer90": 8.48,
-      "progressiveDeliveries": 189
+      "progressiveDeliveries": 189,
+      "passes": 757,
+      "keyPasses": 30,
+      "interceptions": 9
     },
     "performance": {
       "attack": 6.67,
@@ -5808,7 +6052,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 10,
       "passCompletionPct": 85.135,
       "progressiveDeliveriesPer90": 8.384,
-      "progressiveDeliveries": 177
+      "progressiveDeliveries": 177,
+      "passes": 666,
+      "keyPasses": 14,
+      "interceptions": 11
     },
     "performance": {
       "attack": 10.4,
@@ -5889,18 +6136,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 54,
       "passCompletionPct": 53.722,
       "progressiveDeliveriesPer90": 19.892,
-      "progressiveDeliveries": 736
+      "progressiveDeliveries": 736,
+      "claimsPer90": 0.595,
+      "claims": 22,
+      "passes": 1115,
+      "keyPasses": 1,
+      "interceptions": 2
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 1,
       "defense": 17,
-      "goalkeeping": 10.59,
-      "observedScore": 11.88,
+      "goalkeeping": 9.79,
+      "observedScore": 11.56,
       "dataConfidence": 1,
-      "roleScore": 11.88,
-      "domesticQuality": 11.88
+      "roleScore": 11.56,
+      "domesticQuality": 11.56
     },
     "teamSuccess": -0.95,
     "sourcePositionLabels": [
@@ -5964,10 +6216,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 100,
       "passCompletionPct": 75.068,
       "progressiveDeliveriesPer90": 9.573,
-      "progressiveDeliveries": 346
+      "progressiveDeliveries": 346,
+      "passes": 1107,
+      "keyPasses": 27,
+      "interceptions": 34
     },
     "performance": {
-      "attack": 4.49,
+      "attack": 4.51,
       "creation": 6.04,
       "control": 3.95,
       "defense": 14.88,
@@ -6039,7 +6294,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 252,
       "passCompletionPct": 88.285,
       "progressiveDeliveriesPer90": 12.245,
-      "progressiveDeliveries": 420
+      "progressiveDeliveries": 420,
+      "passes": 1656,
+      "keyPasses": 5,
+      "interceptions": 45
     },
     "performance": {
       "attack": 7.89,
@@ -6114,7 +6372,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 196,
       "passCompletionPct": 84.314,
       "progressiveDeliveriesPer90": 16.369,
-      "progressiveDeliveries": 514
+      "progressiveDeliveries": 514,
+      "passes": 1479,
+      "keyPasses": 9,
+      "interceptions": 43
     },
     "performance": {
       "attack": 8.95,
@@ -6189,7 +6450,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 97,
       "passCompletionPct": 80.947,
       "progressiveDeliveriesPer90": 8.839,
-      "progressiveDeliveries": 236
+      "progressiveDeliveries": 236,
+      "passes": 824,
+      "keyPasses": 24,
+      "interceptions": 26
     },
     "performance": {
       "attack": 13.11,
@@ -6264,18 +6528,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 42,
       "passCompletionPct": 81.575,
       "progressiveDeliveriesPer90": 15.948,
-      "progressiveDeliveries": 454
+      "progressiveDeliveries": 454,
+      "passes": 1232,
+      "keyPasses": 39,
+      "interceptions": 27
     },
     "performance": {
-      "attack": 3.82,
+      "attack": 3.86,
       "creation": 15.83,
       "control": 10.74,
       "defense": 14.07,
       "goalkeeping": 10,
-      "observedScore": 12.59,
+      "observedScore": 12.6,
       "dataConfidence": 1,
-      "roleScore": 12.59,
-      "domesticQuality": 12.59
+      "roleScore": 12.6,
+      "domesticQuality": 12.6
     },
     "teamSuccess": -0.95,
     "sourcePositionLabels": [
@@ -6339,7 +6606,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 76.534,
       "progressiveDeliveriesPer90": 10.717,
-      "progressiveDeliveries": 249
+      "progressiveDeliveries": 249,
+      "passes": 831,
+      "keyPasses": 46,
+      "interceptions": 9
     },
     "performance": {
       "attack": 1.96,
@@ -6414,7 +6684,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 46,
       "passCompletionPct": 63.81,
       "progressiveDeliveriesPer90": 4.05,
-      "progressiveDeliveries": 100
+      "progressiveDeliveries": 100,
+      "passes": 315,
+      "keyPasses": 9,
+      "interceptions": 6
     },
     "performance": {
       "attack": 15.52,
@@ -6489,7 +6762,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 71.941,
       "progressiveDeliveriesPer90": 5.129,
-      "progressiveDeliveries": 124
+      "progressiveDeliveries": 124,
+      "passes": 474,
+      "keyPasses": 18,
+      "interceptions": 8
     },
     "performance": {
       "attack": 11.79,
@@ -6564,7 +6840,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 23,
       "passCompletionPct": 85.333,
       "progressiveDeliveriesPer90": 12.217,
-      "progressiveDeliveries": 259
+      "progressiveDeliveries": 259,
+      "passes": 825,
+      "keyPasses": 20,
+      "interceptions": 14
     },
     "performance": {
       "attack": 0.09,
@@ -6639,7 +6918,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 164,
       "passCompletionPct": 89.779,
       "progressiveDeliveriesPer90": 23.971,
-      "progressiveDeliveries": 839
+      "progressiveDeliveries": 839,
+      "passes": 2309,
+      "keyPasses": 15,
+      "interceptions": 50
     },
     "performance": {
       "attack": 15.53,
@@ -6716,18 +6998,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 76.049,
       "progressiveDeliveriesPer90": 20.263,
-      "progressiveDeliveries": 770
+      "progressiveDeliveries": 770,
+      "claimsPer90": 0.632,
+      "claims": 24,
+      "passes": 1549,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 17,
       "defense": 2,
-      "goalkeeping": 13.35,
-      "observedScore": 13.53,
+      "goalkeeping": 12.58,
+      "observedScore": 13.22,
       "dataConfidence": 1,
-      "roleScore": 13.53,
-      "domesticQuality": 13.53
+      "roleScore": 13.22,
+      "domesticQuality": 13.22
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -6791,7 +7078,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 189,
       "passCompletionPct": 87.584,
       "progressiveDeliveriesPer90": 26.851,
-      "progressiveDeliveries": 958
+      "progressiveDeliveries": 958,
+      "passes": 2521,
+      "keyPasses": 10,
+      "interceptions": 47
     },
     "performance": {
       "attack": 15,
@@ -6866,7 +7156,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 81,
       "passCompletionPct": 87.271,
       "progressiveDeliveriesPer90": 12.234,
-      "progressiveDeliveries": 426
+      "progressiveDeliveries": 426,
+      "passes": 1367,
+      "keyPasses": 21,
+      "interceptions": 26
     },
     "performance": {
       "attack": 7.11,
@@ -6941,7 +7234,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 142,
       "passCompletionPct": 92.376,
       "progressiveDeliveriesPer90": 22.936,
-      "progressiveDeliveries": 723
+      "progressiveDeliveries": 723,
+      "passes": 2492,
+      "keyPasses": 7,
+      "interceptions": 30
     },
     "performance": {
       "attack": 8.68,
@@ -7016,7 +7312,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 30,
       "passCompletionPct": 79.424,
       "progressiveDeliveriesPer90": 2.824,
-      "progressiveDeliveries": 71
+      "progressiveDeliveries": 71,
+      "passes": 486,
+      "keyPasses": 19,
+      "interceptions": 9
     },
     "performance": {
       "attack": 16.13,
@@ -7091,10 +7390,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 78.752,
       "progressiveDeliveriesPer90": 7.416,
-      "progressiveDeliveries": 176
+      "progressiveDeliveries": 176,
+      "passes": 753,
+      "keyPasses": 20,
+      "interceptions": 18
     },
     "performance": {
-      "attack": 13.73,
+      "attack": 13.76,
       "creation": 6.23,
       "control": 2.72,
       "defense": 13.93,
@@ -7166,18 +7468,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 16,
       "passCompletionPct": 73.81,
       "progressiveDeliveriesPer90": 4.917,
-      "progressiveDeliveries": 131
+      "progressiveDeliveries": 131,
+      "passes": 630,
+      "keyPasses": 40,
+      "interceptions": 17
     },
     "performance": {
-      "attack": 9.2,
+      "attack": 9.23,
       "creation": 15.67,
       "control": 0.25,
       "defense": 9.44,
       "goalkeeping": 10,
-      "observedScore": 11.36,
+      "observedScore": 11.37,
       "dataConfidence": 1,
-      "roleScore": 11.36,
-      "domesticQuality": 11.36
+      "roleScore": 11.37,
+      "domesticQuality": 11.37
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -7241,7 +7546,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 71,
       "passCompletionPct": 83.541,
       "progressiveDeliveriesPer90": 13.066,
-      "progressiveDeliveries": 277
+      "progressiveDeliveries": 277,
+      "passes": 881,
+      "keyPasses": 17,
+      "interceptions": 25
     },
     "performance": {
       "attack": 16.32,
@@ -7316,18 +7624,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 86.096,
       "progressiveDeliveriesPer90": 8.231,
-      "progressiveDeliveries": 152
+      "progressiveDeliveries": 152,
+      "passes": 748,
+      "keyPasses": 9,
+      "interceptions": 29
     },
     "performance": {
-      "attack": 0.94,
+      "attack": 0.99,
       "creation": 1.8,
       "control": 7.65,
       "defense": 15.21,
       "goalkeeping": 10,
-      "observedScore": 10.05,
+      "observedScore": 10.06,
       "dataConfidence": 1,
-      "roleScore": 10.05,
-      "domesticQuality": 10.05
+      "roleScore": 10.06,
+      "domesticQuality": 10.06
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -7391,7 +7702,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 70.183,
       "progressiveDeliveriesPer90": 8.246,
-      "progressiveDeliveries": 164
+      "progressiveDeliveries": 164,
+      "passes": 436,
+      "keyPasses": 22,
+      "interceptions": 11
     },
     "performance": {
       "attack": 4.94,
@@ -7466,10 +7780,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 24,
       "passCompletionPct": 86.604,
       "progressiveDeliveriesPer90": 9.917,
-      "progressiveDeliveries": 212
+      "progressiveDeliveries": 212,
+      "passes": 963,
+      "keyPasses": 12,
+      "interceptions": 26
     },
     "performance": {
-      "attack": 9.5,
+      "attack": 9.54,
       "creation": 10.23,
       "control": 10.12,
       "defense": 14.69,
@@ -7541,18 +7858,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 45,
       "passCompletionPct": 86.323,
       "progressiveDeliveriesPer90": 11.532,
-      "progressiveDeliveries": 363
+      "progressiveDeliveries": 363,
+      "passes": 1455,
+      "keyPasses": 15,
+      "interceptions": 36
     },
     "performance": {
-      "attack": 5.67,
+      "attack": 5.68,
       "creation": 2.99,
       "control": 10.62,
       "defense": 17.84,
       "goalkeeping": 10,
-      "observedScore": 11.82,
+      "observedScore": 11.83,
       "dataConfidence": 1,
-      "roleScore": 11.82,
-      "domesticQuality": 11.82
+      "roleScore": 11.83,
+      "domesticQuality": 11.83
     },
     "teamSuccess": -2,
     "sourcePositionLabels": [
@@ -7616,18 +7936,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 50,
       "passCompletionPct": 92.143,
       "progressiveDeliveriesPer90": 10.868,
-      "progressiveDeliveries": 334
+      "progressiveDeliveries": 334,
+      "passes": 1311,
+      "keyPasses": 18,
+      "interceptions": 30
     },
     "performance": {
-      "attack": 2.02,
+      "attack": 2.07,
       "creation": 2.46,
       "control": 14.32,
       "defense": 15.45,
       "goalkeeping": 10,
-      "observedScore": 11.16,
+      "observedScore": 11.17,
       "dataConfidence": 1,
-      "roleScore": 11.16,
-      "domesticQuality": 11.16
+      "roleScore": 11.17,
+      "domesticQuality": 11.17
     },
     "teamSuccess": -2,
     "sourcePositionLabels": [
@@ -7691,7 +8014,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 116,
       "passCompletionPct": 86.636,
       "progressiveDeliveriesPer90": 12.127,
-      "progressiveDeliveries": 344
+      "progressiveDeliveries": 344,
+      "passes": 1085,
+      "keyPasses": 9,
+      "interceptions": 27
     },
     "performance": {
       "attack": 17.89,
@@ -7766,10 +8092,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 117,
       "passCompletionPct": 82.84,
       "progressiveDeliveriesPer90": 19.898,
-      "progressiveDeliveries": 522
+      "progressiveDeliveries": 522,
+      "passes": 1317,
+      "keyPasses": 8,
+      "interceptions": 32
     },
     "performance": {
-      "attack": 9.15,
+      "attack": 9.16,
       "creation": 2.28,
       "control": 12.59,
       "defense": 7.9,
@@ -7841,10 +8170,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 67,
       "passCompletionPct": 87.382,
       "progressiveDeliveriesPer90": 10.698,
-      "progressiveDeliveries": 281
+      "progressiveDeliveries": 281,
+      "passes": 848,
+      "keyPasses": 36,
+      "interceptions": 38
     },
     "performance": {
-      "attack": 6.11,
+      "attack": 6.13,
       "creation": 10.59,
       "control": 11.48,
       "defense": 15,
@@ -7916,7 +8248,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 114,
       "passCompletionPct": 80.779,
       "progressiveDeliveriesPer90": 14.328,
-      "progressiveDeliveries": 341
+      "progressiveDeliveries": 341,
+      "passes": 796,
+      "keyPasses": 11,
+      "interceptions": 30
     },
     "performance": {
       "attack": 3.03,
@@ -7993,18 +8328,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 47,
       "passCompletionPct": 59.942,
       "progressiveDeliveriesPer90": 20.348,
-      "progressiveDeliveries": 468
+      "progressiveDeliveries": 468,
+      "claimsPer90": 1.304,
+      "claims": 30,
+      "passes": 694,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 7,
       "defense": 20,
-      "goalkeeping": 1.76,
-      "observedScore": 8.95,
+      "goalkeeping": 3.58,
+      "observedScore": 9.6,
       "dataConfidence": 1,
-      "roleScore": 8.95,
-      "domesticQuality": 8.95
+      "roleScore": 9.6,
+      "domesticQuality": 9.6
     },
     "teamSuccess": -2,
     "sourcePositionLabels": [
@@ -8068,18 +8408,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 57,
       "passCompletionPct": 80.258,
       "progressiveDeliveriesPer90": 7.3,
-      "progressiveDeliveries": 149
+      "progressiveDeliveries": 149,
+      "passes": 542,
+      "keyPasses": 20,
+      "interceptions": 15
     },
     "performance": {
-      "attack": 3.36,
+      "attack": 3.38,
       "creation": 7.77,
       "control": 3.55,
       "defense": 5.19,
       "goalkeeping": 10,
-      "observedScore": 8.96,
+      "observedScore": 8.97,
       "dataConfidence": 0.95,
-      "roleScore": 8.96,
-      "domesticQuality": 8.96
+      "roleScore": 8.97,
+      "domesticQuality": 8.97
     },
     "teamSuccess": -2,
     "sourcePositionLabels": [
@@ -8143,7 +8486,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 85.333,
       "progressiveDeliveriesPer90": 6.939,
-      "progressiveDeliveries": 138
+      "progressiveDeliveries": 138,
+      "passes": 375,
+      "keyPasses": 29,
+      "interceptions": 5
     },
     "performance": {
       "attack": 6.12,
@@ -8218,7 +8564,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 16,
       "passCompletionPct": 76.19,
       "progressiveDeliveriesPer90": 7.314,
-      "progressiveDeliveries": 118
+      "progressiveDeliveries": 118,
+      "passes": 378,
+      "keyPasses": 13,
+      "interceptions": 13
     },
     "performance": {
       "attack": 3.1,
@@ -8293,7 +8642,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 95,
       "passCompletionPct": 86.275,
       "progressiveDeliveriesPer90": 18.858,
-      "progressiveDeliveries": 299
+      "progressiveDeliveries": 299,
+      "passes": 816,
+      "keyPasses": 6,
+      "interceptions": 14
     },
     "performance": {
       "attack": 4.07,
@@ -8368,7 +8720,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 184,
       "passCompletionPct": 89.676,
       "progressiveDeliveriesPer90": 18.583,
-      "progressiveDeliveries": 612
+      "progressiveDeliveries": 612,
+      "passes": 1695,
+      "keyPasses": 6,
+      "interceptions": 31
     },
     "performance": {
       "attack": 18.95,
@@ -8443,18 +8798,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 85.669,
       "progressiveDeliveriesPer90": 16.811,
-      "progressiveDeliveries": 475
+      "progressiveDeliveries": 475,
+      "passes": 1563,
+      "keyPasses": 30,
+      "interceptions": 31
     },
     "performance": {
-      "attack": 3.43,
+      "attack": 3.46,
       "creation": 9,
       "control": 13.7,
       "defense": 11.77,
       "goalkeeping": 10,
-      "observedScore": 11.54,
+      "observedScore": 11.55,
       "dataConfidence": 1,
-      "roleScore": 11.54,
-      "domesticQuality": 11.54
+      "roleScore": 11.55,
+      "domesticQuality": 11.55
     },
     "teamSuccess": -0.42,
     "sourcePositionLabels": [
@@ -8518,7 +8876,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 87.595,
       "progressiveDeliveriesPer90": 16.9,
-      "progressiveDeliveries": 461
+      "progressiveDeliveries": 461,
+      "passes": 1451,
+      "keyPasses": 40,
+      "interceptions": 15
     },
     "performance": {
       "attack": 18.72,
@@ -8595,18 +8956,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 35,
       "passCompletionPct": 60.328,
       "progressiveDeliveriesPer90": 13.74,
-      "progressiveDeliveries": 369
+      "progressiveDeliveries": 369,
+      "claimsPer90": 1.08,
+      "claims": 29,
+      "passes": 610,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 8,
       "defense": 12,
-      "goalkeeping": 11.88,
-      "observedScore": 12.75,
+      "goalkeeping": 12.21,
+      "observedScore": 12.92,
       "dataConfidence": 1,
-      "roleScore": 12.75,
-      "domesticQuality": 12.75
+      "roleScore": 12.92,
+      "domesticQuality": 12.92
     },
     "teamSuccess": -0.42,
     "sourcePositionLabels": [
@@ -8670,7 +9036,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 152,
       "passCompletionPct": 79.412,
       "progressiveDeliveriesPer90": 18.049,
-      "progressiveDeliveries": 441
+      "progressiveDeliveries": 441,
+      "passes": 1054,
+      "keyPasses": 5,
+      "interceptions": 21
     },
     "performance": {
       "attack": 11.05,
@@ -8745,7 +9114,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 84.72,
       "progressiveDeliveriesPer90": 6.698,
-      "progressiveDeliveries": 135
+      "progressiveDeliveries": 135,
+      "passes": 517,
+      "keyPasses": 24,
+      "interceptions": 3
     },
     "performance": {
       "attack": 10.44,
@@ -8820,7 +9192,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 21,
       "passCompletionPct": 76.302,
       "progressiveDeliveriesPer90": 3.766,
-      "progressiveDeliveries": 80
+      "progressiveDeliveries": 80,
+      "passes": 384,
+      "keyPasses": 19,
+      "interceptions": 5
     },
     "performance": {
       "attack": 9.84,
@@ -8895,18 +9270,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 77,
       "passCompletionPct": 86.836,
       "progressiveDeliveriesPer90": 19.123,
-      "progressiveDeliveries": 463
+      "progressiveDeliveries": 463,
+      "passes": 1261,
+      "keyPasses": 24,
+      "interceptions": 28
     },
     "performance": {
-      "attack": 5.34,
+      "attack": 5.36,
       "creation": 7.3,
       "control": 16.05,
       "defense": 14.73,
       "goalkeeping": 10,
-      "observedScore": 12.44,
+      "observedScore": 12.45,
       "dataConfidence": 1,
-      "roleScore": 12.44,
-      "domesticQuality": 12.44
+      "roleScore": 12.45,
+      "domesticQuality": 12.45
     },
     "teamSuccess": -0.42,
     "sourcePositionLabels": [
@@ -8970,10 +9348,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 40,
       "passCompletionPct": 82.956,
       "progressiveDeliveriesPer90": 8.756,
-      "progressiveDeliveries": 190
+      "progressiveDeliveries": 190,
+      "passes": 839,
+      "keyPasses": 16,
+      "interceptions": 30
     },
     "performance": {
-      "attack": 9.56,
+      "attack": 9.58,
       "creation": 5.51,
       "control": 5.56,
       "defense": 14.59,
@@ -9045,7 +9426,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 141,
       "passCompletionPct": 87.143,
       "progressiveDeliveriesPer90": 22.329,
-      "progressiveDeliveries": 456
+      "progressiveDeliveries": 456,
+      "passes": 1190,
+      "keyPasses": 7,
+      "interceptions": 27
     },
     "performance": {
       "attack": 11.84,
@@ -9120,7 +9504,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 17,
       "passCompletionPct": 78.156,
       "progressiveDeliveriesPer90": 7.954,
-      "progressiveDeliveries": 143
+      "progressiveDeliveries": 143,
+      "passes": 499,
+      "keyPasses": 21,
+      "interceptions": 6
     },
     "performance": {
       "attack": 5.9,
@@ -9195,18 +9582,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 34,
       "passCompletionPct": 91.066,
       "progressiveDeliveriesPer90": 14.875,
-      "progressiveDeliveries": 477
+      "progressiveDeliveries": 477,
+      "passes": 2205,
+      "keyPasses": 43,
+      "interceptions": 22
     },
     "performance": {
-      "attack": 5.29,
+      "attack": 5.32,
       "creation": 13.58,
       "control": 16.91,
       "defense": 7.55,
       "goalkeeping": 10,
-      "observedScore": 12.09,
+      "observedScore": 12.1,
       "dataConfidence": 1,
-      "roleScore": 12.09,
-      "domesticQuality": 12.09
+      "roleScore": 12.1,
+      "domesticQuality": 12.1
     },
     "teamSuccess": 1.79,
     "sourcePositionLabels": [
@@ -9273,18 +9663,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 43,
       "passCompletionPct": 80.319,
       "progressiveDeliveriesPer90": 12.676,
-      "progressiveDeliveries": 431
+      "progressiveDeliveries": 431,
+      "claimsPer90": 0.412,
+      "claims": 14,
+      "passes": 879,
+      "keyPasses": 1,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 20,
       "defense": 10,
-      "goalkeeping": 19.47,
-      "observedScore": 17.02,
+      "goalkeeping": 17.53,
+      "observedScore": 16.22,
       "dataConfidence": 1,
-      "roleScore": 17.02,
-      "domesticQuality": 17.02
+      "roleScore": 16.22,
+      "domesticQuality": 16.22
     },
     "teamSuccess": 1.79,
     "sourcePositionLabels": [
@@ -9348,7 +9743,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 42,
       "passCompletionPct": 65.885,
       "progressiveDeliveriesPer90": 2.282,
-      "progressiveDeliveries": 75
+      "progressiveDeliveries": 75,
+      "passes": 384,
+      "keyPasses": 17,
+      "interceptions": 5
     },
     "performance": {
       "attack": 18.93,
@@ -9428,7 +9826,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 100,
       "passCompletionPct": 89.847,
       "progressiveDeliveriesPer90": 19.319,
-      "progressiveDeliveries": 615
+      "progressiveDeliveries": 615,
+      "passes": 2157,
+      "keyPasses": 23,
+      "interceptions": 30
     },
     "performance": {
       "attack": 8.42,
@@ -9503,7 +9904,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 72,
       "passCompletionPct": 86.854,
       "progressiveDeliveriesPer90": 11.76,
-      "progressiveDeliveries": 346
+      "progressiveDeliveries": 346,
+      "passes": 1354,
+      "keyPasses": 20,
+      "interceptions": 20
     },
     "performance": {
       "attack": 19.74,
@@ -9582,7 +9986,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 117,
       "passCompletionPct": 93.151,
       "progressiveDeliveriesPer90": 22.71,
-      "progressiveDeliveries": 540
+      "progressiveDeliveries": 540,
+      "passes": 1752,
+      "keyPasses": 7,
+      "interceptions": 23
     },
     "performance": {
       "attack": 15.26,
@@ -9658,10 +10065,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 91.488,
       "progressiveDeliveriesPer90": 9.285,
-      "progressiveDeliveries": 215
+      "progressiveDeliveries": 215,
+      "passes": 1210,
+      "keyPasses": 49,
+      "interceptions": 9
     },
     "performance": {
-      "attack": 17.31,
+      "attack": 17.33,
       "creation": 18.88,
       "control": 12.59,
       "defense": 4.18,
@@ -9734,7 +10144,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 2,
       "passCompletionPct": 84.974,
       "progressiveDeliveriesPer90": 5.701,
-      "progressiveDeliveries": 113
+      "progressiveDeliveries": 113,
+      "passes": 772,
+      "keyPasses": 54,
+      "interceptions": 13
     },
     "performance": {
       "attack": 9.62,
@@ -9809,18 +10222,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 90.351,
       "progressiveDeliveriesPer90": 9.462,
-      "progressiveDeliveries": 172
+      "progressiveDeliveries": 172,
+      "passes": 798,
+      "keyPasses": 15,
+      "interceptions": 10
     },
     "performance": {
-      "attack": 15.66,
+      "attack": 15.68,
       "creation": 9.34,
       "control": 12.23,
       "defense": 2.51,
       "goalkeeping": 10,
-      "observedScore": 11.76,
+      "observedScore": 11.77,
       "dataConfidence": 0.95,
-      "roleScore": 11.76,
-      "domesticQuality": 11.76
+      "roleScore": 11.77,
+      "domesticQuality": 11.77
     },
     "teamSuccess": 1.79,
     "sourcePositionLabels": [
@@ -9884,10 +10300,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 7,
       "passCompletionPct": 88.332,
       "progressiveDeliveriesPer90": 14.916,
-      "progressiveDeliveries": 296
+      "progressiveDeliveries": 296,
+      "passes": 1277,
+      "keyPasses": 48,
+      "interceptions": 7
     },
     "performance": {
-      "attack": 12.69,
+      "attack": 12.72,
       "creation": 19.27,
       "control": 15.75,
       "defense": 6.07,
@@ -9959,18 +10378,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 90.173,
       "progressiveDeliveriesPer90": 23.913,
-      "progressiveDeliveries": 402
+      "progressiveDeliveries": 402,
+      "passes": 1618,
+      "keyPasses": 25,
+      "interceptions": 14
     },
     "performance": {
-      "attack": 4.86,
+      "attack": 4.9,
       "creation": 7.78,
       "control": 17.56,
       "defense": 13.29,
       "goalkeeping": 10,
-      "observedScore": 12.35,
+      "observedScore": 12.36,
       "dataConfidence": 0.85,
-      "roleScore": 12.35,
-      "domesticQuality": 12.35
+      "roleScore": 12.36,
+      "domesticQuality": 12.36
     },
     "teamSuccess": 1.79,
     "sourcePositionLabels": [
@@ -10037,18 +10459,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 45,
       "passCompletionPct": 77.331,
       "progressiveDeliveriesPer90": 18.237,
-      "progressiveDeliveries": 693
+      "progressiveDeliveries": 693,
+      "claimsPer90": 0.737,
+      "claims": 28,
+      "passes": 1394,
+      "keyPasses": 0,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 18,
       "defense": 8,
-      "goalkeeping": 6.06,
-      "observedScore": 10.98,
+      "goalkeeping": 6.47,
+      "observedScore": 11.05,
       "dataConfidence": 1,
-      "roleScore": 10.98,
-      "domesticQuality": 10.98
+      "roleScore": 11.05,
+      "domesticQuality": 11.05
     },
     "teamSuccess": 0,
     "sourcePositionLabels": [
@@ -10112,18 +10539,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 50,
       "passCompletionPct": 89.994,
       "progressiveDeliveriesPer90": 12.552,
-      "progressiveDeliveries": 406
+      "progressiveDeliveries": 406,
+      "passes": 1729,
+      "keyPasses": 20,
+      "interceptions": 25
     },
     "performance": {
-      "attack": 1.49,
+      "attack": 1.53,
       "creation": 3.57,
       "control": 14.69,
       "defense": 10.25,
       "goalkeeping": 10,
-      "observedScore": 10.33,
+      "observedScore": 10.34,
       "dataConfidence": 1,
-      "roleScore": 10.33,
-      "domesticQuality": 10.33
+      "roleScore": 10.34,
+      "domesticQuality": 10.34
     },
     "teamSuccess": 0,
     "sourcePositionLabels": [
@@ -10187,7 +10617,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 229,
       "passCompletionPct": 86.242,
       "progressiveDeliveriesPer90": 24.494,
-      "progressiveDeliveries": 783
+      "progressiveDeliveries": 783,
+      "passes": 2275,
+      "keyPasses": 6,
+      "interceptions": 36
     },
     "performance": {
       "attack": 3.03,
@@ -10262,10 +10695,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 48,
       "passCompletionPct": 85.328,
       "progressiveDeliveriesPer90": 6.254,
-      "progressiveDeliveries": 187
+      "progressiveDeliveries": 187,
+      "passes": 777,
+      "keyPasses": 32,
+      "interceptions": 15
     },
     "performance": {
-      "attack": 17.51,
+      "attack": 17.53,
       "creation": 15.83,
       "control": 5.68,
       "defense": 2.22,
@@ -10337,7 +10773,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 87.36,
       "progressiveDeliveriesPer90": 12.461,
-      "progressiveDeliveries": 337
+      "progressiveDeliveries": 337,
+      "passes": 1432,
+      "keyPasses": 41,
+      "interceptions": 14
     },
     "performance": {
       "attack": 13.4,
@@ -10412,7 +10851,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 99,
       "passCompletionPct": 87.925,
       "progressiveDeliveriesPer90": 20.758,
-      "progressiveDeliveries": 584
+      "progressiveDeliveries": 584,
+      "passes": 1706,
+      "keyPasses": 10,
+      "interceptions": 22
     },
     "performance": {
       "attack": 10.53,
@@ -10487,7 +10929,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 30,
       "passCompletionPct": 63.9,
       "progressiveDeliveriesPer90": 6.262,
-      "progressiveDeliveries": 153
+      "progressiveDeliveries": 153,
+      "passes": 518,
+      "keyPasses": 22,
+      "interceptions": 8
     },
     "performance": {
       "attack": 8.72,
@@ -10562,18 +11007,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 91.196,
       "progressiveDeliveriesPer90": 8.823,
-      "progressiveDeliveries": 189
+      "progressiveDeliveries": 189,
+      "passes": 920,
+      "keyPasses": 18,
+      "interceptions": 22
     },
     "performance": {
-      "attack": 10.86,
+      "attack": 10.89,
       "creation": 3.99,
       "control": 12.1,
       "defense": 8.66,
       "goalkeeping": 10,
-      "observedScore": 11.34,
+      "observedScore": 11.35,
       "dataConfidence": 1,
-      "roleScore": 11.34,
-      "domesticQuality": 11.34
+      "roleScore": 11.35,
+      "domesticQuality": 11.35
     },
     "teamSuccess": 0,
     "sourcePositionLabels": [
@@ -10637,7 +11085,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 68,
       "passCompletionPct": 85.892,
       "progressiveDeliveriesPer90": 17.709,
-      "progressiveDeliveries": 353
+      "progressiveDeliveries": 353,
+      "passes": 886,
+      "keyPasses": 11,
+      "interceptions": 27
     },
     "performance": {
       "attack": 12.11,
@@ -10712,7 +11163,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 65,
       "passCompletionPct": 88.191,
       "progressiveDeliveriesPer90": 12.068,
-      "progressiveDeliveries": 247
+      "progressiveDeliveries": 247,
+      "passes": 796,
+      "keyPasses": 18,
+      "interceptions": 31
     },
     "performance": {
       "attack": 5.9,
@@ -10787,7 +11241,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 64,
       "passCompletionPct": 77.32,
       "progressiveDeliveriesPer90": 13.041,
-      "progressiveDeliveries": 264
+      "progressiveDeliveries": 264,
+      "passes": 679,
+      "keyPasses": 13,
+      "interceptions": 25
     },
     "performance": {
       "attack": 19.21,
@@ -10864,18 +11321,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 63.664,
       "progressiveDeliveriesPer90": 24.171,
-      "progressiveDeliveries": 846
+      "progressiveDeliveries": 846,
+      "claimsPer90": 1.286,
+      "claims": 45,
+      "passes": 1321,
+      "keyPasses": 5,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 10,
       "defense": 6,
-      "goalkeeping": 14.65,
-      "observedScore": 13.68,
+      "goalkeeping": 15,
+      "observedScore": 13.92,
       "dataConfidence": 1,
-      "roleScore": 13.68,
-      "domesticQuality": 13.68
+      "roleScore": 13.92,
+      "domesticQuality": 13.92
     },
     "teamSuccess": 0.74,
     "sourcePositionLabels": [
@@ -10939,7 +11401,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 99,
       "passCompletionPct": 76.622,
       "progressiveDeliveriesPer90": 12.595,
-      "progressiveDeliveries": 425
+      "progressiveDeliveries": 425,
+      "passes": 1048,
+      "keyPasses": 28,
+      "interceptions": 25
     },
     "performance": {
       "attack": 13.68,
@@ -11014,7 +11479,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 36,
       "passCompletionPct": 83.648,
       "progressiveDeliveriesPer90": 9.724,
-      "progressiveDeliveries": 317
+      "progressiveDeliveries": 317,
+      "passes": 1113,
+      "keyPasses": 47,
+      "interceptions": 29
     },
     "performance": {
       "attack": 3.96,
@@ -11089,10 +11557,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 44,
       "passCompletionPct": 85.714,
       "progressiveDeliveriesPer90": 9.392,
-      "progressiveDeliveries": 302
+      "progressiveDeliveries": 302,
+      "passes": 1106,
+      "keyPasses": 18,
+      "interceptions": 34
     },
     "performance": {
-      "attack": 4.14,
+      "attack": 4.15,
       "creation": 3.26,
       "control": 8.27,
       "defense": 7.28,
@@ -11164,7 +11635,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 156,
       "passCompletionPct": 79.815,
       "progressiveDeliveriesPer90": 16.695,
-      "progressiveDeliveries": 517
+      "progressiveDeliveries": 517,
+      "passes": 1189,
+      "keyPasses": 20,
+      "interceptions": 40
     },
     "performance": {
       "attack": 16.84,
@@ -11239,7 +11713,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 217,
       "passCompletionPct": 81.288,
       "progressiveDeliveriesPer90": 17.602,
-      "progressiveDeliveries": 548
+      "progressiveDeliveries": 548,
+      "passes": 1304,
+      "keyPasses": 8,
+      "interceptions": 36
     },
     "performance": {
       "attack": 9.34,
@@ -11314,10 +11791,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 85,
       "passCompletionPct": 84.947,
       "progressiveDeliveriesPer90": 20.307,
-      "progressiveDeliveries": 655
+      "progressiveDeliveries": 655,
+      "passes": 1807,
+      "keyPasses": 28,
+      "interceptions": 29
     },
     "performance": {
-      "attack": 2.56,
+      "attack": 2.6,
       "creation": 13.47,
       "control": 13.83,
       "defense": 11.81,
@@ -11389,7 +11869,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 185,
       "passCompletionPct": 82.14,
       "progressiveDeliveriesPer90": 17.304,
-      "progressiveDeliveries": 413
+      "progressiveDeliveries": 413,
+      "passes": 1103,
+      "keyPasses": 15,
+      "interceptions": 20
     },
     "performance": {
       "attack": 14.74,
@@ -11464,7 +11947,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 81,
       "passCompletionPct": 86.364,
       "progressiveDeliveriesPer90": 13.987,
-      "progressiveDeliveries": 306
+      "progressiveDeliveries": 306,
+      "passes": 814,
+      "keyPasses": 5,
+      "interceptions": 31
     },
     "performance": {
       "attack": 3.03,
@@ -11539,7 +12025,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 72,
       "progressiveDeliveriesPer90": 2.097,
-      "progressiveDeliveries": 45
+      "progressiveDeliveries": 45,
+      "passes": 275,
+      "keyPasses": 14,
+      "interceptions": 0
     },
     "performance": {
       "attack": 11.05,
@@ -11614,7 +12103,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 47,
       "passCompletionPct": 86.406,
       "progressiveDeliveriesPer90": 14.047,
-      "progressiveDeliveries": 263
+      "progressiveDeliveries": 263,
+      "passes": 743,
+      "keyPasses": 8,
+      "interceptions": 19
     },
     "performance": {
       "attack": 4.07,
@@ -11689,7 +12181,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 131,
       "passCompletionPct": 90.452,
       "progressiveDeliveriesPer90": 15.912,
-      "progressiveDeliveries": 538
+      "progressiveDeliveries": 538,
+      "passes": 1770,
+      "keyPasses": 5,
+      "interceptions": 22
     },
     "performance": {
       "attack": 18.68,
@@ -11764,7 +12259,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 102,
       "passCompletionPct": 79.116,
       "progressiveDeliveriesPer90": 22.87,
-      "progressiveDeliveries": 711
+      "progressiveDeliveries": 711,
+      "passes": 1470,
+      "keyPasses": 51,
+      "interceptions": 31
     },
     "performance": {
       "attack": 9.74,
@@ -11841,18 +12339,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 67.04,
       "progressiveDeliveriesPer90": 18.968,
-      "progressiveDeliveries": 588
+      "progressiveDeliveries": 588,
+      "claimsPer90": 0.677,
+      "claims": 21,
+      "passes": 1071,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 15,
       "defense": 9,
-      "goalkeeping": 1.79,
-      "observedScore": 8.94,
+      "goalkeeping": 2.45,
+      "observedScore": 9.08,
       "dataConfidence": 1,
-      "roleScore": 8.94,
-      "domesticQuality": 8.94
+      "roleScore": 9.08,
+      "domesticQuality": 9.08
     },
     "teamSuccess": -1.37,
     "sourcePositionLabels": [
@@ -11916,18 +12419,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 58,
       "passCompletionPct": 81.992,
       "progressiveDeliveriesPer90": 12.863,
-      "progressiveDeliveries": 314
+      "progressiveDeliveries": 314,
+      "passes": 1044,
+      "keyPasses": 6,
+      "interceptions": 30
     },
     "performance": {
-      "attack": 12.26,
+      "attack": 12.28,
       "creation": 4.39,
       "control": 9.01,
       "defense": 15.21,
       "goalkeeping": 10,
-      "observedScore": 12.43,
+      "observedScore": 12.44,
       "dataConfidence": 1,
-      "roleScore": 12.43,
-      "domesticQuality": 12.43
+      "roleScore": 12.44,
+      "domesticQuality": 12.44
     },
     "teamSuccess": -1.37,
     "sourcePositionLabels": [
@@ -11991,18 +12497,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 48,
       "passCompletionPct": 85.855,
       "progressiveDeliveriesPer90": 11.702,
-      "progressiveDeliveries": 246
+      "progressiveDeliveries": 246,
+      "passes": 1018,
+      "keyPasses": 9,
+      "interceptions": 35
     },
     "performance": {
-      "attack": 3.57,
+      "attack": 3.61,
       "creation": 3.68,
       "control": 10.12,
       "defense": 18.5,
       "goalkeeping": 10,
-      "observedScore": 11.63,
+      "observedScore": 11.64,
       "dataConfidence": 1,
-      "roleScore": 11.63,
-      "domesticQuality": 11.63
+      "roleScore": 11.64,
+      "domesticQuality": 11.64
     },
     "teamSuccess": -1.37,
     "sourcePositionLabels": [
@@ -12066,7 +12575,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 52,
       "passCompletionPct": 81.973,
       "progressiveDeliveriesPer90": 12.957,
-      "progressiveDeliveries": 296
+      "progressiveDeliveries": 296,
+      "passes": 882,
+      "keyPasses": 10,
+      "interceptions": 18
     },
     "performance": {
       "attack": 3.03,
@@ -12141,7 +12653,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 94,
       "passCompletionPct": 87.323,
       "progressiveDeliveriesPer90": 19.231,
-      "progressiveDeliveries": 400
+      "progressiveDeliveries": 400,
+      "passes": 1128,
+      "keyPasses": 10,
+      "interceptions": 30
     },
     "performance": {
       "attack": 20,
@@ -12216,7 +12731,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 18,
       "passCompletionPct": 72.561,
       "progressiveDeliveriesPer90": 3.557,
-      "progressiveDeliveries": 66
+      "progressiveDeliveries": 66,
+      "passes": 328,
+      "keyPasses": 18,
+      "interceptions": 3
     },
     "performance": {
       "attack": 0.42,
@@ -12291,7 +12809,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 51,
       "passCompletionPct": 62.145,
       "progressiveDeliveriesPer90": 3.955,
-      "progressiveDeliveries": 86
+      "progressiveDeliveries": 86,
+      "passes": 317,
+      "keyPasses": 16,
+      "interceptions": 5
     },
     "performance": {
       "attack": 15.57,
@@ -12366,7 +12887,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 6,
       "passCompletionPct": 91.892,
       "progressiveDeliveriesPer90": 4.369,
-      "progressiveDeliveries": 75
+      "progressiveDeliveries": 75,
+      "passes": 444,
+      "keyPasses": 18,
+      "interceptions": 3
     },
     "performance": {
       "attack": 4.57,
@@ -12441,7 +12965,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 84.663,
       "progressiveDeliveriesPer90": 11.73,
-      "progressiveDeliveries": 229
+      "progressiveDeliveries": 229,
+      "passes": 802,
+      "keyPasses": 29,
+      "interceptions": 15
     },
     "performance": {
       "attack": 2.45,
@@ -12516,10 +13043,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 32,
       "passCompletionPct": 74.906,
       "progressiveDeliveriesPer90": 7.89,
-      "progressiveDeliveries": 288
+      "progressiveDeliveries": 288,
+      "passes": 1068,
+      "keyPasses": 41,
+      "interceptions": 13
     },
     "performance": {
-      "attack": 17.16,
+      "attack": 17.17,
       "creation": 14.29,
       "control": 2.35,
       "defense": 2.61,
@@ -12591,7 +13121,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 84,
       "passCompletionPct": 87.365,
       "progressiveDeliveriesPer90": 15.348,
-      "progressiveDeliveries": 515
+      "progressiveDeliveries": 515,
+      "passes": 1393,
+      "keyPasses": 27,
+      "interceptions": 22
     },
     "performance": {
       "attack": 15.79,
@@ -12666,7 +13199,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 122,
       "passCompletionPct": 95.52,
       "progressiveDeliveriesPer90": 17.223,
-      "progressiveDeliveries": 581
+      "progressiveDeliveries": 581,
+      "passes": 2098,
+      "keyPasses": 5,
+      "interceptions": 23
     },
     "performance": {
       "attack": 3.03,
@@ -12741,7 +13277,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 73.109,
       "progressiveDeliveriesPer90": 2.335,
-      "progressiveDeliveries": 74
+      "progressiveDeliveries": 74,
+      "passes": 476,
+      "keyPasses": 20,
+      "interceptions": 6
     },
     "performance": {
       "attack": 16.55,
@@ -12818,18 +13357,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 73.741,
       "progressiveDeliveriesPer90": 18.603,
-      "progressiveDeliveries": 586
+      "progressiveDeliveries": 586,
+      "claimsPer90": 1.365,
+      "claims": 43,
+      "passes": 1211,
+      "keyPasses": 1,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 16,
       "defense": 3,
-      "goalkeeping": 13.24,
-      "observedScore": 13.45,
+      "goalkeeping": 13.95,
+      "observedScore": 13.8,
       "dataConfidence": 1,
-      "roleScore": 13.45,
-      "domesticQuality": 13.45
+      "roleScore": 13.8,
+      "domesticQuality": 13.8
     },
     "teamSuccess": 1.37,
     "sourcePositionLabels": [
@@ -12893,10 +13437,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 15,
       "passCompletionPct": 85.146,
       "progressiveDeliveriesPer90": 8.554,
-      "progressiveDeliveries": 205
+      "progressiveDeliveries": 205,
+      "passes": 754,
+      "keyPasses": 37,
+      "interceptions": 12
     },
     "performance": {
-      "attack": 14.58,
+      "attack": 14.59,
       "creation": 16.43,
       "control": 6.67,
       "defense": 3.83,
@@ -12968,7 +13515,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 61,
       "passCompletionPct": 85.363,
       "progressiveDeliveriesPer90": 12.489,
-      "progressiveDeliveries": 257
+      "progressiveDeliveries": 257,
+      "passes": 731,
+      "keyPasses": 20,
+      "interceptions": 15
     },
     "performance": {
       "attack": 3.03,
@@ -13043,18 +13593,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 19,
       "passCompletionPct": 86.182,
       "progressiveDeliveriesPer90": 16.917,
-      "progressiveDeliveries": 350
+      "progressiveDeliveries": 350,
+      "passes": 1129,
+      "keyPasses": 28,
+      "interceptions": 18
     },
     "performance": {
-      "attack": 3.74,
+      "attack": 3.77,
       "creation": 16.13,
       "control": 14.69,
       "defense": 13.42,
       "goalkeeping": 10,
-      "observedScore": 12.97,
+      "observedScore": 12.98,
       "dataConfidence": 1,
-      "roleScore": 12.97,
-      "domesticQuality": 12.97
+      "roleScore": 12.98,
+      "domesticQuality": 12.98
     },
     "teamSuccess": 1.37,
     "sourcePositionLabels": [
@@ -13118,18 +13671,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 20,
       "passCompletionPct": 81.459,
       "progressiveDeliveriesPer90": 9.824,
-      "progressiveDeliveries": 192
+      "progressiveDeliveries": 192,
+      "passes": 658,
+      "keyPasses": 28,
+      "interceptions": 15
     },
     "performance": {
-      "attack": 14.82,
+      "attack": 14.86,
       "creation": 12.07,
       "control": 5.56,
       "defense": 13.33,
       "goalkeeping": 10,
-      "observedScore": 13.14,
+      "observedScore": 13.15,
       "dataConfidence": 1,
-      "roleScore": 13.14,
-      "domesticQuality": 13.14
+      "roleScore": 13.15,
+      "domesticQuality": 13.15
     },
     "teamSuccess": 1.37,
     "sourcePositionLabels": [
@@ -13193,10 +13749,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 59,
       "passCompletionPct": 87.397,
       "progressiveDeliveriesPer90": 12.5,
-      "progressiveDeliveries": 245
+      "progressiveDeliveries": 245,
+      "passes": 849,
+      "keyPasses": 7,
+      "interceptions": 25
     },
     "performance": {
-      "attack": 8.64,
+      "attack": 8.66,
       "creation": 0.92,
       "control": 13.21,
       "defense": 13.72,
@@ -13268,7 +13827,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 61,
       "passCompletionPct": 89.041,
       "progressiveDeliveriesPer90": 24.004,
-      "progressiveDeliveries": 447
+      "progressiveDeliveries": 447,
+      "passes": 1168,
+      "keyPasses": 1,
+      "interceptions": 11
     },
     "performance": {
       "attack": 3.72,
@@ -13345,18 +13907,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 26,
       "passCompletionPct": 66.743,
       "progressiveDeliveriesPer90": 22.404,
-      "progressiveDeliveries": 757
+      "progressiveDeliveries": 757,
+      "claimsPer90": 1.154,
+      "claims": 39,
+      "passes": 1305,
+      "keyPasses": 4,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 14,
       "defense": 0,
-      "goalkeeping": 9.71,
-      "observedScore": 11.52,
+      "goalkeeping": 10.47,
+      "observedScore": 11.88,
       "dataConfidence": 1,
-      "roleScore": 11.52,
-      "domesticQuality": 11.52
+      "roleScore": 11.88,
+      "domesticQuality": 11.88
     },
     "teamSuccess": 0,
     "sourcePositionLabels": [
@@ -13420,7 +13987,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 86.814,
       "progressiveDeliveriesPer90": 16.178,
-      "progressiveDeliveries": 561
+      "progressiveDeliveries": 561,
+      "passes": 2040,
+      "keyPasses": 64,
+      "interceptions": 21
     },
     "performance": {
       "attack": 18.18,
@@ -13495,18 +14065,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 28,
       "passCompletionPct": 91.817,
       "progressiveDeliveriesPer90": 14.775,
-      "progressiveDeliveries": 460
+      "progressiveDeliveries": 460,
+      "passes": 2053,
+      "keyPasses": 17,
+      "interceptions": 59
     },
     "performance": {
-      "attack": 8.06,
+      "attack": 8.08,
       "creation": 3.57,
       "control": 17.41,
       "defense": 17.51,
       "goalkeeping": 10,
-      "observedScore": 13.05,
+      "observedScore": 13.06,
       "dataConfidence": 1,
-      "roleScore": 13.05,
-      "domesticQuality": 13.05
+      "roleScore": 13.06,
+      "domesticQuality": 13.06
     },
     "teamSuccess": 0,
     "sourcePositionLabels": [
@@ -13570,7 +14143,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 87,
       "passCompletionPct": 88.651,
       "progressiveDeliveriesPer90": 15.576,
-      "progressiveDeliveries": 469
+      "progressiveDeliveries": 469,
+      "passes": 1445,
+      "keyPasses": 35,
+      "interceptions": 32
     },
     "performance": {
       "attack": 10,
@@ -13645,7 +14221,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 178,
       "passCompletionPct": 93.079,
       "progressiveDeliveriesPer90": 16.37,
-      "progressiveDeliveries": 506
+      "progressiveDeliveries": 506,
+      "passes": 2283,
+      "keyPasses": 5,
+      "interceptions": 35
     },
     "performance": {
       "attack": 17.11,
@@ -13720,7 +14299,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 75.469,
       "progressiveDeliveriesPer90": 5.856,
-      "progressiveDeliveries": 174
+      "progressiveDeliveries": 174,
+      "passes": 693,
+      "keyPasses": 24,
+      "interceptions": 7
     },
     "performance": {
       "attack": 12.96,
@@ -13795,10 +14377,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 13,
       "passCompletionPct": 91.407,
       "progressiveDeliveriesPer90": 5.516,
-      "progressiveDeliveries": 162
+      "progressiveDeliveries": 162,
+      "passes": 931,
+      "keyPasses": 47,
+      "interceptions": 6
     },
     "performance": {
-      "attack": 12.72,
+      "attack": 12.73,
       "creation": 17.64,
       "control": 9.88,
       "defense": 0.53,
@@ -13870,7 +14455,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 39,
       "passCompletionPct": 87.737,
       "progressiveDeliveriesPer90": 14.014,
-      "progressiveDeliveries": 353
+      "progressiveDeliveries": 353,
+      "passes": 1264,
+      "keyPasses": 24,
+      "interceptions": 31
     },
     "performance": {
       "attack": 14.21,
@@ -13945,10 +14533,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 12,
       "passCompletionPct": 86.341,
       "progressiveDeliveriesPer90": 9.389,
-      "progressiveDeliveries": 205
+      "progressiveDeliveries": 205,
+      "passes": 820,
+      "keyPasses": 23,
+      "interceptions": 15
     },
     "performance": {
-      "attack": 19.25,
+      "attack": 19.26,
       "creation": 7.79,
       "control": 9.14,
       "defense": 4.67,
@@ -14020,7 +14611,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 91.239,
       "progressiveDeliveriesPer90": 15.926,
-      "progressiveDeliveries": 347
+      "progressiveDeliveries": 347,
+      "passes": 1324,
+      "keyPasses": 23,
+      "interceptions": 33
     },
     "performance": {
       "attack": 16.05,
@@ -14095,7 +14689,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 129,
       "passCompletionPct": 92.179,
       "progressiveDeliveriesPer90": 20.388,
-      "progressiveDeliveries": 391
+      "progressiveDeliveries": 391,
+      "passes": 1253,
+      "keyPasses": 2,
+      "interceptions": 40
     },
     "performance": {
       "attack": 3.03,
@@ -14170,7 +14767,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 102,
       "passCompletionPct": 77.863,
       "progressiveDeliveriesPer90": 15.402,
-      "progressiveDeliveries": 530
+      "progressiveDeliveries": 530,
+      "passes": 1441,
+      "keyPasses": 11,
+      "interceptions": 45
     },
     "performance": {
       "attack": 3.03,
@@ -14252,18 +14852,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 59,
       "passCompletionPct": 58.223,
       "progressiveDeliveriesPer90": 23.171,
-      "progressiveDeliveries": 811
+      "progressiveDeliveries": 811,
+      "claimsPer90": 0.686,
+      "claims": 24,
+      "passes": 1204,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 5,
       "defense": 19,
-      "goalkeeping": 1.24,
-      "observedScore": 8.45,
+      "goalkeeping": 2.05,
+      "observedScore": 8.68,
       "dataConfidence": 1,
-      "roleScore": 8.45,
-      "domesticQuality": 8.45
+      "roleScore": 8.68,
+      "domesticQuality": 8.68
     },
     "teamSuccess": -1.79,
     "sourcePositionLabels": [
@@ -14327,7 +14932,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 221,
       "passCompletionPct": 87.008,
       "progressiveDeliveriesPer90": 14.157,
-      "progressiveDeliveries": 462
+      "progressiveDeliveries": 462,
+      "passes": 1347,
+      "keyPasses": 7,
+      "interceptions": 37
     },
     "performance": {
       "attack": 3.03,
@@ -14402,10 +15010,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 27,
       "passCompletionPct": 81.494,
       "progressiveDeliveriesPer90": 6.878,
-      "progressiveDeliveries": 209
+      "progressiveDeliveries": 209,
+      "passes": 897,
+      "keyPasses": 35,
+      "interceptions": 15
     },
     "performance": {
-      "attack": 16.17,
+      "attack": 16.18,
       "creation": 9.03,
       "control": 3.46,
       "defense": 5.43,
@@ -14477,18 +15088,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 24,
       "passCompletionPct": 83.503,
       "progressiveDeliveriesPer90": 9.306,
-      "progressiveDeliveries": 243
+      "progressiveDeliveries": 243,
+      "passes": 788,
+      "keyPasses": 9,
+      "interceptions": 18
     },
     "performance": {
-      "attack": 10.27,
+      "attack": 10.28,
       "creation": 2.52,
       "control": 6.17,
       "defense": 7.65,
       "goalkeeping": 10,
-      "observedScore": 10.15,
+      "observedScore": 10.16,
       "dataConfidence": 1,
-      "roleScore": 10.15,
-      "domesticQuality": 10.15
+      "roleScore": 10.16,
+      "domesticQuality": 10.16
     },
     "teamSuccess": -1.79,
     "sourcePositionLabels": [
@@ -14552,18 +15166,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 56,
       "passCompletionPct": 85.605,
       "progressiveDeliveriesPer90": 11.506,
-      "progressiveDeliveries": 270
+      "progressiveDeliveries": 270,
+      "passes": 1042,
+      "keyPasses": 11,
+      "interceptions": 41
     },
     "performance": {
-      "attack": 0.88,
+      "attack": 0.92,
       "creation": 5.62,
       "control": 9.38,
       "defense": 17.72,
       "goalkeeping": 10,
-      "observedScore": 11.22,
+      "observedScore": 11.23,
       "dataConfidence": 1,
-      "roleScore": 11.22,
-      "domesticQuality": 11.22
+      "roleScore": 11.23,
+      "domesticQuality": 11.23
     },
     "teamSuccess": -1.79,
     "sourcePositionLabels": [
@@ -14627,7 +15244,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 65.343,
       "progressiveDeliveriesPer90": 3.345,
-      "progressiveDeliveries": 66
+      "progressiveDeliveries": 66,
+      "passes": 277,
+      "keyPasses": 10,
+      "interceptions": 7
     },
     "performance": {
       "attack": 15.34,
@@ -14702,7 +15322,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 66,
       "passCompletionPct": 77.174,
       "progressiveDeliveriesPer90": 12.492,
-      "progressiveDeliveries": 254
+      "progressiveDeliveries": 254,
+      "passes": 736,
+      "keyPasses": 15,
+      "interceptions": 31
     },
     "performance": {
       "attack": 3.03,
@@ -14777,18 +15400,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 39,
       "passCompletionPct": 78.694,
       "progressiveDeliveriesPer90": 12.177,
-      "progressiveDeliveries": 238
+      "progressiveDeliveries": 238,
+      "passes": 643,
+      "keyPasses": 12,
+      "interceptions": 27
     },
     "performance": {
-      "attack": 5.15,
+      "attack": 5.18,
       "creation": 3.31,
       "control": 6.56,
       "defense": 11.7,
       "goalkeeping": 10,
-      "observedScore": 10.19,
+      "observedScore": 10.2,
       "dataConfidence": 0.9,
-      "roleScore": 10.19,
-      "domesticQuality": 10.19
+      "roleScore": 10.2,
+      "domesticQuality": 10.2
     },
     "teamSuccess": -1.79,
     "sourcePositionLabels": [
@@ -14852,7 +15478,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 35,
       "passCompletionPct": 84.18,
       "progressiveDeliveriesPer90": 14.516,
-      "progressiveDeliveries": 245
+      "progressiveDeliveries": 245,
+      "passes": 866,
+      "keyPasses": 11,
+      "interceptions": 22
     },
     "performance": {
       "attack": 11.24,
@@ -14927,7 +15556,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 84,
       "passCompletionPct": 82.256,
       "progressiveDeliveriesPer90": 21.16,
-      "progressiveDeliveries": 371
+      "progressiveDeliveries": 371,
+      "passes": 851,
+      "keyPasses": 9,
+      "interceptions": 11
     },
     "performance": {
       "attack": 4.07,
@@ -15004,18 +15636,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 62,
       "passCompletionPct": 64.373,
       "progressiveDeliveriesPer90": 13.289,
-      "progressiveDeliveries": 505
+      "progressiveDeliveries": 505,
+      "claimsPer90": 0.816,
+      "claims": 31,
+      "passes": 901,
+      "keyPasses": 0,
+      "interceptions": 0
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 11,
       "defense": 18,
-      "goalkeeping": 8.74,
-      "observedScore": 12.16,
+      "goalkeeping": 9.08,
+      "observedScore": 12.24,
       "dataConfidence": 1,
-      "roleScore": 12.16,
-      "domesticQuality": 12.16
+      "roleScore": 12.24,
+      "domesticQuality": 12.24
     },
     "teamSuccess": 0.95,
     "sourcePositionLabels": [
@@ -15079,7 +15716,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 143,
       "passCompletionPct": 85.641,
       "progressiveDeliveriesPer90": 16.083,
-      "progressiveDeliveries": 604
+      "progressiveDeliveries": 604,
+      "passes": 1560,
+      "keyPasses": 27,
+      "interceptions": 48
     },
     "performance": {
       "attack": 6.32,
@@ -15154,7 +15794,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 253,
       "passCompletionPct": 78.008,
       "progressiveDeliveriesPer90": 32.526,
-      "progressiveDeliveries": 1189
+      "progressiveDeliveries": 1189,
+      "passes": 2319,
+      "keyPasses": 19,
+      "interceptions": 56
     },
     "performance": {
       "attack": 3.03,
@@ -15229,18 +15872,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 81,
       "passCompletionPct": 85.858,
       "progressiveDeliveriesPer90": 11.081,
-      "progressiveDeliveries": 352
+      "progressiveDeliveries": 352,
+      "passes": 1393,
+      "keyPasses": 26,
+      "interceptions": 36
     },
     "performance": {
-      "attack": 8.34,
+      "attack": 8.37,
       "creation": 4.94,
       "control": 9.75,
       "defense": 14.81,
       "goalkeeping": 10,
-      "observedScore": 11.88,
+      "observedScore": 11.89,
       "dataConfidence": 1,
-      "roleScore": 11.88,
-      "domesticQuality": 11.88
+      "roleScore": 11.89,
+      "domesticQuality": 11.89
     },
     "teamSuccess": 0.95,
     "sourcePositionLabels": [
@@ -15304,7 +15950,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 76.559,
       "progressiveDeliveriesPer90": 2.251,
-      "progressiveDeliveries": 69
+      "progressiveDeliveries": 69,
+      "passes": 465,
+      "keyPasses": 30,
+      "interceptions": 8
     },
     "performance": {
       "attack": 5.17,
@@ -15379,18 +16028,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 39,
       "passCompletionPct": 85.284,
       "progressiveDeliveriesPer90": 10.42,
-      "progressiveDeliveries": 317
+      "progressiveDeliveries": 317,
+      "passes": 1128,
+      "keyPasses": 50,
+      "interceptions": 17
     },
     "performance": {
-      "attack": 14.97,
+      "attack": 14.99,
       "creation": 15.39,
       "control": 8.52,
       "defense": 6.75,
       "goalkeeping": 10,
-      "observedScore": 12.78,
+      "observedScore": 12.79,
       "dataConfidence": 1,
-      "roleScore": 12.78,
-      "domesticQuality": 12.78
+      "roleScore": 12.79,
+      "domesticQuality": 12.79
     },
     "teamSuccess": 0.95,
     "sourcePositionLabels": [
@@ -15454,7 +16106,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 81.452,
       "progressiveDeliveriesPer90": 13.095,
-      "progressiveDeliveries": 338
+      "progressiveDeliveries": 338,
+      "passes": 868,
+      "keyPasses": 14,
+      "interceptions": 27
     },
     "performance": {
       "attack": 10.79,
@@ -15529,7 +16184,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 168,
       "passCompletionPct": 77.917,
       "progressiveDeliveriesPer90": 19.335,
-      "progressiveDeliveries": 452
+      "progressiveDeliveries": 452,
+      "passes": 1037,
+      "keyPasses": 10,
+      "interceptions": 39
     },
     "performance": {
       "attack": 3.03,
@@ -15604,7 +16262,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 42,
       "passCompletionPct": 87.327,
       "progressiveDeliveriesPer90": 14.072,
-      "progressiveDeliveries": 278
+      "progressiveDeliveries": 278,
+      "passes": 1010,
+      "keyPasses": 5,
+      "interceptions": 33
     },
     "performance": {
       "attack": 10.12,
@@ -15679,7 +16340,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 33,
       "passCompletionPct": 76.231,
       "progressiveDeliveriesPer90": 5.829,
-      "progressiveDeliveries": 109
+      "progressiveDeliveries": 109,
+      "passes": 467,
+      "keyPasses": 22,
+      "interceptions": 9
     },
     "performance": {
       "attack": 18.69,
@@ -15754,7 +16418,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 29,
       "passCompletionPct": 80.876,
       "progressiveDeliveriesPer90": 5.934,
-      "progressiveDeliveries": 211
+      "progressiveDeliveries": 211,
+      "passes": 936,
+      "keyPasses": 35,
+      "interceptions": 13
     },
     "performance": {
       "attack": 19.55,
@@ -15831,18 +16498,23 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 47,
       "passCompletionPct": 65.251,
       "progressiveDeliveriesPer90": 21.486,
-      "progressiveDeliveries": 795
+      "progressiveDeliveries": 795,
+      "claimsPer90": 0.622,
+      "claims": 23,
+      "passes": 1295,
+      "keyPasses": 2,
+      "interceptions": 1
     },
     "performance": {
       "attack": 10,
       "creation": 10,
       "control": 13,
       "defense": 11,
-      "goalkeeping": 11.53,
-      "observedScore": 13.02,
+      "goalkeeping": 10.84,
+      "observedScore": 12.72,
       "dataConfidence": 1,
-      "roleScore": 13.02,
-      "domesticQuality": 13.02
+      "roleScore": 12.72,
+      "domesticQuality": 12.72
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -15906,7 +16578,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 64,
       "passCompletionPct": 70.317,
       "progressiveDeliveriesPer90": 3.892,
-      "progressiveDeliveries": 142
+      "progressiveDeliveries": 142,
+      "passes": 630,
+      "keyPasses": 23,
+      "interceptions": 12
     },
     "performance": {
       "attack": 18.04,
@@ -15981,7 +16656,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 99,
       "passCompletionPct": 86.24,
       "progressiveDeliveriesPer90": 9.182,
-      "progressiveDeliveries": 333
+      "progressiveDeliveries": 333,
+      "passes": 1141,
+      "keyPasses": 33,
+      "interceptions": 38
     },
     "performance": {
       "attack": 6.58,
@@ -16056,7 +16734,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 209,
       "passCompletionPct": 83.172,
       "progressiveDeliveriesPer90": 19.684,
-      "progressiveDeliveries": 650
+      "progressiveDeliveries": 650,
+      "passes": 1753,
+      "keyPasses": 9,
+      "interceptions": 37
     },
     "performance": {
       "attack": 8.16,
@@ -16131,10 +16812,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 31,
       "passCompletionPct": 68.691,
       "progressiveDeliveriesPer90": 5.778,
-      "progressiveDeliveries": 177
+      "progressiveDeliveries": 177,
+      "passes": 527,
+      "keyPasses": 25,
+      "interceptions": 18
     },
     "performance": {
-      "attack": 15.88,
+      "attack": 15.89,
       "creation": 8.4,
       "control": 0.49,
       "defense": 4.38,
@@ -16206,7 +16890,10 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 195,
       "passCompletionPct": 88.537,
       "progressiveDeliveriesPer90": 14.473,
-      "progressiveDeliveries": 444
+      "progressiveDeliveries": 444,
+      "passes": 1422,
+      "keyPasses": 5,
+      "interceptions": 29
     },
     "performance": {
       "attack": 3.03,
@@ -16281,18 +16968,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 41,
       "passCompletionPct": 84.929,
       "progressiveDeliveriesPer90": 12.495,
-      "progressiveDeliveries": 370
+      "progressiveDeliveries": 370,
+      "passes": 1347,
+      "keyPasses": 12,
+      "interceptions": 28
     },
     "performance": {
-      "attack": 2.83,
+      "attack": 2.87,
       "creation": 4.12,
       "control": 9.63,
       "defense": 15.31,
       "goalkeeping": 10,
-      "observedScore": 10.93,
+      "observedScore": 10.94,
       "dataConfidence": 1,
-      "roleScore": 10.93,
-      "domesticQuality": 10.93
+      "roleScore": 10.94,
+      "domesticQuality": 10.94
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -16356,10 +17046,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 84.225,
       "progressiveDeliveriesPer90": 15.826,
-      "progressiveDeliveries": 396
+      "progressiveDeliveries": 396,
+      "passes": 1122,
+      "keyPasses": 32,
+      "interceptions": 21
     },
     "performance": {
-      "attack": 8.81,
+      "attack": 8.84,
       "creation": 8.15,
       "control": 11.6,
       "defense": 9.38,
@@ -16431,18 +17124,21 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 52,
       "passCompletionPct": 67.01,
       "progressiveDeliveriesPer90": 5.884,
-      "progressiveDeliveries": 149
+      "progressiveDeliveries": 149,
+      "passes": 485,
+      "keyPasses": 24,
+      "interceptions": 24
     },
     "performance": {
-      "attack": 16.19,
+      "attack": 16.21,
       "creation": 11.52,
       "control": 0.49,
       "defense": 5.27,
       "goalkeeping": 10,
-      "observedScore": 11.23,
+      "observedScore": 11.24,
       "dataConfidence": 1,
-      "roleScore": 11.23,
-      "domesticQuality": 11.23
+      "roleScore": 11.24,
+      "domesticQuality": 11.24
     },
     "teamSuccess": 0.42,
     "sourcePositionLabels": [
@@ -16506,10 +17202,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 16,
       "passCompletionPct": 79.285,
       "progressiveDeliveriesPer90": 16.364,
-      "progressiveDeliveries": 374
+      "progressiveDeliveries": 374,
+      "passes": 951,
+      "keyPasses": 38,
+      "interceptions": 25
     },
     "performance": {
-      "attack": 11.89,
+      "attack": 11.92,
       "creation": 17.01,
       "control": 9.88,
       "defense": 16.17,
@@ -16581,10 +17280,13 @@ export const PREMIER_LEAGUE_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "clearances": 37,
       "passCompletionPct": 81.514,
       "progressiveDeliveriesPer90": 10.518,
-      "progressiveDeliveries": 230
+      "progressiveDeliveries": 230,
+      "passes": 568,
+      "keyPasses": 16,
+      "interceptions": 12
     },
     "performance": {
-      "attack": 10.44,
+      "attack": 10.46,
       "creation": 10.75,
       "control": 6.3,
       "defense": 4.81,

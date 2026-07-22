@@ -228,13 +228,23 @@ export function validateSnapshot(snapshot: LeagueSnapshot): void {
     for (const [key, value] of Object.entries(player.metrics)) {
       if (value !== undefined && !Number.isFinite(value)) throw new Error(`${config.label}: non-finite ${key} for ${player.name}`);
     }
+    const missingScoringMetrics = config.metrics
+      .filter((definition) => definition.roles.includes(player.role))
+      .filter((definition) => !Number.isFinite(player.metrics[definition.key]));
+    if (missingScoringMetrics.length > 0) {
+      throw new Error(`${config.label}: ${player.name} is missing formula inputs ${missingScoringMetrics.map((definition) => definition.key).join(", ")}`);
+    }
     const goals = finite(player.totals.goals ?? player.totals.totalGoals ?? player.totals.shotsAtGoalSuccessful);
     const shotsOnTarget = finite(player.totals.shotsOnTarget ?? player.totals.totalShotsOnTarget);
+    const shots = finite(player.totals.shots ?? player.totals.totalShots);
     if ((goals ?? 0) > 0 && shotsOnTarget === undefined) {
       throw new Error(`${config.label}: missing shots on target for goal scorer ${player.name}`);
     }
     if (goals !== undefined && shotsOnTarget !== undefined && shotsOnTarget < goals) {
       throw new Error(`${config.label}: shots on target (${shotsOnTarget}) are lower than goals (${goals}) for ${player.name}`);
+    }
+    if (shots !== undefined && shotsOnTarget !== undefined && shotsOnTarget > shots) {
+      throw new Error(`${config.label}: shots on target (${shotsOnTarget}) exceed total shots (${shots}) for ${player.name}`);
     }
   }
   const roleCounts = Object.fromEntries(["GK", "DEF", "MID", "ATT"].map((role) => [role, players.filter((player) => player.role === role).length]));

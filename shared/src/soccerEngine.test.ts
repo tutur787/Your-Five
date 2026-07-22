@@ -34,7 +34,7 @@ assert(SOCCER_PLAYER_DATABASE.length === 298, "database contains all 298 officia
 assert(new Set(SOCCER_PLAYER_DATABASE.map((player) => player.id)).size === 298, "all soccer card IDs are unique");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.team && !player.team.startsWith("Team ") && /^[A-Z]{3}$/.test(player.teamCode ?? "")), "every football card has a sourced club name and three-letter UEFA code");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.sourceRevision === SOCCER_SOURCE_REVISION), "every card uses the pinned source revision");
-assert(SOCCER_PLAYER_DATABASE.every((player) => player.stats.minutes > 0 && player.stats.appearances > 0), "every card has verified UEFA playing time");
+assert(SOCCER_PLAYER_DATABASE.every((player) => (player.stats.minutes ?? 0) > 0 && player.stats.appearances > 0), "every card has verified UEFA playing time");
 assert(SOCCER_PLAYER_DATABASE.every((player) => [player.stats.goals, player.stats.assists, player.stats.shotsOnTarget, player.stats.cleanSheets, player.stats.goalsConceded].every((value) => Number.isFinite(value) && value >= 0)), "every card has non-negative sourced counting totals");
 assert(SOCCER_PLAYER_DATABASE.every((player) => Object.values(player.stats).every(Number.isFinite)), "every sourced metric is finite");
 assert(SOCCER_PLAYER_DATABASE.every((player) => player.teamSuccess >= -1 && player.teamSuccess <= 1), "team success is a modest cross-edition adjustment");

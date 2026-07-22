@@ -59,6 +59,7 @@ for (const runtime of runtimes) {
     && card.stats.cleanSheets !== undefined
     && card.stats.goalsConceded !== undefined
   )), `${runtime.competition} goalkeepers have saves, clean sheets, and goals conceded`);
+  assert.ok(cards.every((card) => card.stats.cleanSheets <= card.stats.appearances), `${runtime.competition} clean sheets do not exceed appearances`);
   assert.ok(cards.every((card) => soccerPlayerQuality(card) >= 6 && soccerPlayerQuality(card) <= 18), `${runtime.competition} quality stays on the 6-18 scale`);
   assert.ok(cards.every((card) => card.teamSuccess >= -2 && card.teamSuccess <= 2), `${runtime.competition} team success stays within its cap`);
 
@@ -101,22 +102,91 @@ for (const runtime of runtimes) {
   assert.ok(provenance.sources.every((source: any) => /^https:\/\//.test(source.url) && /^[a-f0-9]{64}$/.test(source.contentHash) && source.retrievedAt), `${runtime.competition} source records include URL, timestamp, and SHA-256 hash`);
 }
 
+const ligueOneCards = LIGUE_1_RUNTIME.database as readonly SoccerPlayerCard[];
+for (const role of roles) {
+  assert.ok(
+    ligueOneCards.some((card) => card.role === role && card.stats.cleanSheets > 0),
+    `Ligue 1 derives nonzero clean sheets from match results for ${role} starters`
+  );
+}
+
+const premierLeagueCards = PREMIER_LEAGUE_RUNTIME.database as readonly SoccerPlayerCard[];
+const laligaCards = LALIGA_RUNTIME.database as readonly SoccerPlayerCard[];
+const serieACards = SERIE_A_RUNTIME.database as readonly SoccerPlayerCard[];
+const bundesligaCards = BUNDESLIGA_RUNTIME.database as readonly SoccerPlayerCard[];
+const minutePublishingLeagues = [premierLeagueCards, laligaCards, serieACards, ligueOneCards];
+assert.ok(
+  minutePublishingLeagues.every((cards) => cards.every((card) => (card.stats.minutes ?? 0) > 0)),
+  "leagues publishing official minutes never emit a missing or zero minute total"
+);
+assert.ok(
+  bundesligaCards.every((card) => card.stats.minutes === undefined),
+  "Bundesliga omits unavailable minutes instead of displaying a fabricated zero"
+);
+
+for (const cards of minutePublishingLeagues) {
+  assert.ok(
+    cards.filter((card) => card.role === "MID").every((card) => (
+      (card.stats.passes ?? 0) > 0
+      && (card.stats.progressiveDeliveries ?? 0) > 0
+      && card.stats.passCompletionPct !== undefined
+      && card.stats.keyPasses !== undefined
+    )),
+    "midfield cards expose sourced passing, progression, completion, and creation totals"
+  );
+}
+assert.ok(
+  bundesligaCards.filter((card) => card.role === "MID").every((card) => (
+    card.stats.passes === undefined
+    && (card.stats.ballActions ?? 0) > 0
+    && (card.stats.aerialDuelsWon ?? 0) >= 0
+  )),
+  "Bundesliga midfielders use official ball actions and do not relabel them as passes"
+);
+assert.ok(
+  bundesligaCards.some((card) => card.role === "MID" && card.stats.passCompletionPct !== undefined),
+  "Bundesliga retains official pass-completion data where the source publishes it"
+);
+
+for (const cards of [premierLeagueCards, laligaCards, serieACards, ligueOneCards]) {
+  const goalkeepers = cards.filter((card) => card.role === "GK");
+  assert.ok(goalkeepers.every((card) => card.stats.goalsConceded > 0), "goalkeepers retain sourced goals conceded");
+  assert.ok(goalkeepers.every((card) => card.stats.claims !== undefined), "goalkeepers retain sourced claims or catches");
+  assert.ok(goalkeepers.some((card) => (card.stats.claims ?? 0) > 0), "goalkeeper claim totals are not uniformly zero");
+}
+
+const serieADefenders = serieACards.filter((card) => card.role === "DEF");
+assert.ok(
+  serieADefenders.every((card) => card.stats.cleanSheets > 0 && card.stats.goalsConceded > 0),
+  "Serie A defenders derive clean sheets and goals conceded from their verified starts"
+);
+for (const runtime of runtimes) {
+  const defenders = (runtime.database as readonly SoccerPlayerCard[]).filter((card) => card.role === "DEF");
+  if (runtime.competition === "bundesliga-2025-26") {
+    assert.ok(defenders.every((card) => (
+      card.stats.tacklesWon === undefined
+      && card.stats.clearances === undefined
+      && card.stats.duelsWon !== undefined
+      && card.stats.aerialDuelsWon !== undefined
+    )), "Bundesliga keeps official duels distinct from unavailable tackle and clearance totals");
+  } else {
+    assert.ok(defenders.every((card) => card.stats.tacklesWon !== undefined), `${runtime.competition} defenders retain tackle totals`);
+    assert.ok(defenders.every((card) => card.stats.clearances !== undefined), `${runtime.competition} defenders retain clearance totals`);
+  }
+}
+
 const randomBoundaryResults = FOOTBALL_COMPETITIONS.map((_, index) =>
   resolveFootballCompetition("random", () => (index + 0.5) / FOOTBALL_COMPETITIONS.length)
 );
 assert.deepEqual(randomBoundaryResults, FOOTBALL_COMPETITIONS, "Random maps equal-width probability bands to all six competitions");
 
-const missingMetricResults = scoreDomesticLeague([
-  { id: "low-sample", role: "ATT", starts: 5, metrics: { goals: 10 } },
-  { id: "full-sample", role: "ATT", starts: 20, metrics: { goals: 10, assists: 8 } },
-  { id: "median", role: "ATT", starts: 20, metrics: { goals: 5, assists: 4 } },
+assert.throws(() => scoreDomesticLeague([
+  { id: "incomplete", role: "ATT", starts: 20, metrics: { goals: 10 } },
+  { id: "complete", role: "ATT", starts: 20, metrics: { goals: 5, assists: 4 } },
 ], [
   { key: "goals", category: "attack", direction: "higher", roles: ["ATT"], weight: 1 },
   { key: "assists", category: "creation", direction: "higher", roles: ["ATT"], weight: 1 },
-]);
-assert.equal(missingMetricResults.get("low-sample")?.reliability, 0.25, "five-start samples shrink to 25% reliability");
-assert.ok(Number.isFinite(missingMetricResults.get("low-sample")?.quality), "missing optional metrics are reweighted instead of becoming zero");
-assert.ok(Math.abs((missingMetricResults.get("low-sample")?.quality ?? 0) - 12) < Math.abs((missingMetricResults.get("full-sample")?.quality ?? 0) - 12), "low-start quality is pulled more strongly toward the role median");
+]), /incomplete: missing scoring metrics assists/, "scoring rejects a card with an incomplete role metric set");
 
 function lineup(cards: readonly SoccerPlayerCard[], strongest: boolean): TeamState {
   const sorted = (role: SoccerRole) => cards

@@ -39,11 +39,11 @@ export const FOOTBALL_COMPETITION_LABELS: Record<FootballCompetitionChoice, stri
 
 export const FOOTBALL_POOL_VERSIONS: Record<FootballCompetition, string> = {
   "uefa-all-time": "uefa-v6",
-  "premier-league-2025-26": "premier-league-2025-26-v1",
-  "laliga-2025-26": "laliga-2025-26-v1",
-  "serie-a-2025-26": "serie-a-2025-26-v1",
-  "bundesliga-2025-26": "bundesliga-2025-26-v1",
-  "ligue-1-2025-26": "ligue-1-2025-26-v1",
+  "premier-league-2025-26": "premier-league-2025-26-v3",
+  "laliga-2025-26": "laliga-2025-26-v3",
+  "serie-a-2025-26": "serie-a-2025-26-v2",
+  "bundesliga-2025-26": "bundesliga-2025-26-v3",
+  "ligue-1-2025-26": "ligue-1-2025-26-v2",
 };
 
 export function footballCompetitionForPoolVersion(value: unknown): FootballCompetition | null {

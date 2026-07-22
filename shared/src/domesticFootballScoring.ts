@@ -43,10 +43,7 @@ function weightedMean(values: Array<{ value: number; weight: number }>, fallback
   return weight > 0 ? values.reduce((sum, entry) => sum + entry.value * entry.weight, 0) / weight : fallback;
 }
 
-/**
- * Scores one completed domestic league using only metrics published for that league. Optional
- * metrics disappear from the numerator and denominator; they are never substituted with zero.
- */
+/** Scores one completed domestic league on one complete, league-and-role-specific metric set. */
 export function scoreDomesticLeague(
   cards: readonly DomesticScoringCard[],
   definitions: readonly DomesticMetricDefinition[]
@@ -54,12 +51,15 @@ export function scoreDomesticLeague(
   const results = new Map<string, DomesticScoringResult>();
   for (const card of cards) {
     const applicable = definitions.filter((definition) => definition.roles.includes(card.role));
+    const missing = applicable.filter((definition) => !Number.isFinite(card.metrics[definition.key]));
+    if (missing.length > 0) {
+      throw new Error(`${card.id}: missing scoring metrics ${missing.map((definition) => definition.key).join(", ")}`);
+    }
     const reliability = clamp(card.starts / 20, 0, 1);
     const metricPercentiles: Record<string, number> = {};
 
     for (const definition of applicable) {
-      const value = card.metrics[definition.key];
-      if (value === undefined || !Number.isFinite(value)) continue;
+      const value = card.metrics[definition.key]!;
       const population = cards
         .filter((candidate) => candidate.role === card.role)
         .map((candidate) => candidate.metrics[definition.key])
@@ -76,7 +76,6 @@ export function scoreDomesticLeague(
     })) as DomesticScoringResult["performance"];
 
     const qualityPercentile = weightedMean(applicable
-      .filter((definition) => metricPercentiles[definition.key] !== undefined)
       .map((definition) => ({ value: metricPercentiles[definition.key], weight: definition.weight })));
 
     results.set(card.id, {

@@ -26,40 +26,44 @@ const BUNDESLIGA_METRICS = [
   { key: "goalsPerAppearance", category: "attack", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 3 },
   { key: "shotsPerAppearance", category: "attack", direction: "higher", roles: ["MID", "ATT"], weight: 1.5 },
   { key: "assistsPerAppearance", category: "creation", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 2.5 },
-  // The official ranking only publishes pass completion for a qualifying subset. Using it would
-  // make missingness depend on performance, so it remains display-only and is excluded from scoring.
+  // Pass completion is retained for display where the official profile publishes it, but its
+  // role coverage is below 70%, so scoring uses the universally available ball-action volume.
   { key: "ballActionsPerAppearance", category: "control", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 1.5 },
-  { key: "tacklesWonPerAppearance", category: "defense", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 2.5 },
+  { key: "duelsWonPerAppearance", category: "defense", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 2.5 },
   { key: "aerialDuelsWonPerAppearance", category: "defense", direction: "higher", roles: ["DEF", "MID", "ATT"], weight: 1.5 },
   { key: "savesPerAppearance", category: "goalkeeping", direction: "higher", roles: ["GK"], weight: 4 },
   { key: "cleanSheetPct", category: "goalkeeping", direction: "higher", roles: ["GK"], weight: 2.5 },
   { key: "goalsConcededPerMatch", category: "goalkeeping", direction: "lower", roles: ["GK"], weight: 2 },
 ] as const satisfies LeagueConfig["metrics"];
 
+// LaLiga's official rankings publish tackles and interceptions but no recovery total. Excluding
+// that unavailable field keeps every LaLiga player on one identical, fully sourced weight set.
+const LALIGA_METRICS = COMMON_METRICS.filter((definition) => definition.key !== "recoveriesPer90");
+
 const CONFIGS = {
   premierLeague: {
     competition: "premier-league-2025-26", exportName: "PREMIER_LEAGUE_PLAYER_DATABASE", runtimeName: "PREMIER_LEAGUE_RUNTIME",
-    label: "Premier League 2025-26", poolVersion: "premier-league-2025-26-v1", clubs: 20, matches: 380,
+    label: "Premier League 2025-26", poolVersion: "premier-league-2025-26-v3", clubs: 20, matches: 380,
     sourceHome: "https://www.premierleague.com/stats/top/players/appearances", metrics: COMMON_METRICS,
   },
   laliga: {
     competition: "laliga-2025-26", exportName: "LALIGA_PLAYER_DATABASE", runtimeName: "LALIGA_RUNTIME",
-    label: "LaLiga 2025-26", poolVersion: "laliga-2025-26-v1", clubs: 20, matches: 380,
-    sourceHome: "https://www.laliga.com/en-GB/stats/laliga-easports/scorers", metrics: COMMON_METRICS,
+    label: "LaLiga 2025-26", poolVersion: "laliga-2025-26-v3", clubs: 20, matches: 380,
+    sourceHome: "https://www.laliga.com/en-GB/stats/laliga-easports/scorers", metrics: LALIGA_METRICS,
   },
   serieA: {
     competition: "serie-a-2025-26", exportName: "SERIE_A_PLAYER_DATABASE", runtimeName: "SERIE_A_RUNTIME",
-    label: "Serie A 2025-26", poolVersion: "serie-a-2025-26-v1", clubs: 20, matches: 380,
+    label: "Serie A 2025-26", poolVersion: "serie-a-2025-26-v2", clubs: 20, matches: 380,
     sourceHome: "https://www.legaseriea.it/serie-a/statistiche/index", metrics: COMMON_METRICS,
   },
   bundesliga: {
     competition: "bundesliga-2025-26", exportName: "BUNDESLIGA_PLAYER_DATABASE", runtimeName: "BUNDESLIGA_RUNTIME",
-    label: "Bundesliga 2025-26", poolVersion: "bundesliga-2025-26-v1", clubs: 18, matches: 306,
+    label: "Bundesliga 2025-26", poolVersion: "bundesliga-2025-26-v3", clubs: 18, matches: 306,
     sourceHome: "https://www.bundesliga.com/en/bundesliga/stats/players", metrics: BUNDESLIGA_METRICS,
   },
   ligue1: {
     competition: "ligue-1-2025-26", exportName: "LIGUE_1_PLAYER_DATABASE", runtimeName: "LIGUE_1_RUNTIME",
-    label: "Ligue 1 2025-26", poolVersion: "ligue-1-2025-26-v1", clubs: 18, matches: 306,
+    label: "Ligue 1 2025-26", poolVersion: "ligue-1-2025-26-v2", clubs: 18, matches: 306,
     sourceHome: "https://ligue1.com/en/articles/l1_article_5183-ligue-1-mcdonald-s-2025-26-the-key-player-stats", metrics: COMMON_METRICS,
   },
 } as const satisfies Record<string, LeagueConfig>;
@@ -151,12 +155,15 @@ function metricsFromTotals(stats: Record<string, number>, minutes: number, appea
     shotsPerAppearance: appearances > 0 && shots !== undefined ? shots / appearances : undefined,
     ballActionsPerAppearance: appearances > 0 && stats.ballActions !== undefined ? stats.ballActions / appearances : undefined,
     tacklesWonPerAppearance: appearances > 0 && stats.tacklesWon !== undefined ? stats.tacklesWon / appearances : undefined,
+    duelsWonPerAppearance: appearances > 0 && stats.duelsWon !== undefined ? stats.duelsWon / appearances : undefined,
     aerialDuelsWonPerAppearance: appearances > 0 && stats.aerialDuelsWon !== undefined ? stats.aerialDuelsWon / appearances : undefined,
     savesPerAppearance: appearances > 0 && saves !== undefined ? saves / appearances : undefined,
     goalsPer90: per90(goals, minutes),
     assistsPer90: per90(assists, minutes),
     shotsOnTargetPer90: per90(shotsOnTarget, minutes),
-    shotAccuracyPct: percentage(shotsOnTarget, shots),
+    // A player with no attempts has produced zero shooting value. Keeping this explicit prevents
+    // that card from dropping the metric and being scored on a different weight set.
+    shotAccuracyPct: shots === 0 && (shotsOnTarget ?? 0) === 0 ? 0 : percentage(shotsOnTarget, shots),
     keyPassesPer90: per90(stats.keyPasses, minutes),
     passCompletionPct: stats.passCompletionPct ?? percentage(accuratePasses, passes),
     progressiveActionsPer90: per90(stats.progressiveActions, minutes),
@@ -260,7 +267,7 @@ export async function loadPremierLeague(offline: boolean): Promise<LeagueSnapsho
       saves: stats.savesMade ?? stats.saves,
       goalsConceded: stats.goalsConceded,
       cleanSheets: finite(stats.cleanSheets) ?? 0,
-      claims: stats.goodHighClaim,
+      claims: stats.catches,
     };
     return playerFromStart(record, totals, [...record.sourceUrls, ...statPages.sources.map((source) => source.url)]);
   });
@@ -393,16 +400,23 @@ export async function loadSerieA(offline: boolean): Promise<LeagueSnapshot> {
     const url = `${SERIE_BASE}/seasons/${season}/matches/${encodeURIComponent(matchId)}/lineups`;
     const fetched = await cachedFetch("serie-a", `lineup-${index}-${matchId.split("::").at(-1)}`, url, { headers: SERIE_HEADERS }, offline);
     const lineup = json(fetched.body, `Serie A lineup ${matchId}`);
+    const homeScore = finite(match.providerHomeScore ?? match.homeScore ?? match.homeScorePush ?? match.score?.home?.fulltime);
+    const awayScore = finite(match.providerAwayScore ?? match.awayScore ?? match.awayScorePush ?? match.score?.away?.fulltime);
+    if (homeScore === undefined || awayScore === undefined) throw new Error(`Serie A ${matchId}: final score missing`);
     for (const side of ["home", "away"] as const) {
       const team = lineup[side];
       const club = clubs.get(String(team.teamId)) ?? { id: String(team.teamId), name: team.shortName, code: team.acronymName, points: 0, matches: 0, goalsFor: 0, goalsAgainst: 0 };
       clubs.set(club.id, club);
       if (!Array.isArray(team.fielded) || team.fielded.length !== 11) throw new Error(`Serie A ${matchId}: ${club.name} has ${team.fielded?.length ?? 0} starters`);
-      for (const player of team.fielded) addStart(starts, { sourceId: String(player.playerId), identity: player.providerId ? `opta:${String(player.providerId).split(":").at(-1)}` : `serie-a:${player.playerId}`, name: player.shortName ?? player.shirtName, officialPosition: player.roleLabel, clubId: club.id, clubName: club.name, clubCode: club.code, sourceUrl: url });
+      const goalsConceded = side === "home" ? awayScore : homeScore;
+      for (const player of team.fielded) addStart(starts, {
+        sourceId: String(player.playerId), identity: player.providerId ? `opta:${String(player.providerId).split(":").at(-1)}` : `serie-a:${player.playerId}`,
+        name: player.shortName ?? player.shirtName, officialPosition: player.roleLabel,
+        clubId: club.id, clubName: club.name, clubCode: club.code, sourceUrl: url,
+        aggregate: { goalsConceded, cleanSheets: goalsConceded === 0 ? 1 : 0 },
+      });
     }
-    const homeScore = finite(match.providerHomeScore ?? match.homeScore ?? match.homeScorePush);
-    const awayScore = finite(match.providerAwayScore ?? match.awayScore ?? match.awayScorePush);
-    if (lineup.home && lineup.away && homeScore !== undefined && awayScore !== undefined) tallyResult(clubs, String(lineup.home.teamId), String(lineup.away.teamId), homeScore, awayScore);
+    if (lineup.home && lineup.away) tallyResult(clubs, String(lineup.home.teamId), String(lineup.away.teamId), homeScore, awayScore);
     return fetched.source;
   });
   if ([...clubs.values()].every((club) => club.matches === 0)) {
@@ -421,6 +435,8 @@ export async function loadSerieA(offline: boolean): Promise<LeagueSnapshot> {
       const value = finite(entry.statsValue);
       return value === undefined ? [] : [[entry.statsId, value]];
     }));
+    const officialPosition = row?.roleLabel ?? record.officialPosition;
+    const role = roleFromOfficial(officialPosition);
     const totals = {
       minutes: stats["minutes-played"], appearances: stats["games-played"], goals: stats.goals ?? stats.Goals ?? 0,
       assists: stats.assists ?? stats["Goal Assists"] ?? 0,
@@ -435,12 +451,12 @@ export async function loadSerieA(offline: boolean): Promise<LeagueSnapshot> {
       clearances: stats["Total Clearances"] ?? 0,
       forwardPasses: stats["Forward Passes"] ?? 0,
       saves: stats["Saves Made"],
-      goalsConceded: stats["goals-conceded"] ?? stats["Goals Conceded"],
-      cleanSheets: stats["Clean sheets"],
+      goalsConceded: role === "GK" ? finite(stats["goals-conceded"] ?? stats["Goals Conceded"]) ?? record.aggregate?.goalsConceded : record.aggregate?.goalsConceded,
+      cleanSheets: role === "GK" ? finite(stats["Clean sheets"]) ?? record.aggregate?.cleanSheets : record.aggregate?.cleanSheets,
       savePct: stats.totalSavePerc,
-      claims: stats.highClaim ?? stats.Catches,
+      claims: stats.Catches,
     };
-    return playerFromStart({ ...record, officialPosition: row?.roleLabel ?? record.officialPosition }, totals, [...record.sourceUrls, statsFetch.source.url]);
+    return playerFromStart({ ...record, officialPosition }, totals, [...record.sourceUrls, statsFetch.source.url]);
   });
   return { config, clubs: [...clubs.values()], players, matchIds: matchesPayload.matches.map((match: any) => String(match.matchId ?? match.id)), sources: [matchesFetch.source, statsFetch.source, ...lineupSources] };
 }
@@ -529,9 +545,8 @@ export async function loadBundesliga(offline: boolean): Promise<LeagueSnapshot> 
       assists: finite(stats.assists) ?? 0,
       shots: finite(stats.shotsAtGoal) ?? 0,
       shotsOnTarget: finite(stats.shotsOnTarget) ?? 0,
-      tacklesWon: finite(stats.tacklingGamesWon) ?? 0,
+      duelsWon: finite(stats.tacklingGamesWon) ?? 0,
       aerialDuelsWon: finite(stats.tacklingGamesAirWon) ?? 0,
-      passes: stats.ballActions,
       ballActions: stats.ballActions,
       passCompletionPct: stats.passesFromPlayRatio ?? stats.passingEfficiency,
       saves: stats.goalkeeperSaves ?? stats.shotsSaved,
@@ -576,6 +591,9 @@ export async function loadLigue1(offline: boolean): Promise<LeagueSnapshot> {
     tallyResult(clubs, match.home.clubId, match.away.clubId, Number(match.home.score), Number(match.away.score));
     for (const side of ["home", "away"] as const) {
       const team = match[side];
+      const opponent = match[side === "home" ? "away" : "home"];
+      const goalsConceded = finite(opponent.score);
+      if (goalsConceded === undefined) throw new Error(`Ligue 1 ${matchId}: opponent score missing for ${team.clubIdentity.shortName}`);
       const starters = Object.values(team.players).filter((player: any) => player.startedMatch) as any[];
       if (starters.length !== 11) throw new Error(`Ligue 1 ${matchId}: ${team.clubIdentity.shortName} has ${starters.length} starters`);
       for (const player of starters) {
@@ -588,7 +606,7 @@ export async function loadLigue1(offline: boolean): Promise<LeagueSnapshot> {
           ["shotsOnTarget", s.ontarget_scoring_att], ["passes", s.total_pass], ["accuratePasses", s.accurate_pass],
           ["keyPasses", s.total_att_assist], ["tacklesWon", s.won_tackle], ["interceptions", s.interception],
           ["recoveries", s.ball_recovery], ["clearances", s.total_clearance], ["saves", s.saves],
-          ["goalsConceded", s.goals_conceded], ["cleanSheets", s.clean_sheet], ["claims", s.good_high_claim],
+          ["goalsConceded", s.goals_conceded], ["cleanSheets", goalsConceded === 0 ? 1 : 0], ["claims", s.good_high_claim],
           ["forwardPasses", s.fwd_pass],
         ].map(([key, rawValue]) => [key, finite(rawValue) ?? 0]));
         addStart(starts, {
@@ -601,8 +619,19 @@ export async function loadLigue1(offline: boolean): Promise<LeagueSnapshot> {
     }
     return fetched.source;
   });
-  const players = selectTopEleven(starts.values()).map((record) => playerFromStart(record, { ...(record.aggregate ?? {}), minutes: record.minutes, appearances: record.appearances }, [...record.sourceUrls]));
-  return { config, clubs: [...clubs.values()], players, matchIds, sources: [calendarFetch.source, ...matchSources] };
+  const players = selectTopEleven(starts.values())
+    .map((record) => playerFromStart(
+      record,
+      { ...(record.aggregate ?? {}), minutes: record.minutes, appearances: record.appearances },
+      [...record.sourceUrls].sort(),
+    ))
+    .sort((left, right) => left.clubName.localeCompare(right.clubName)
+      || right.starts - left.starts
+      || right.minutes - left.minutes
+      || left.name.localeCompare(right.name)
+      || left.id.localeCompare(right.id));
+  const orderedClubs = [...clubs.values()].sort((left, right) => left.name.localeCompare(right.name) || left.id.localeCompare(right.id));
+  return { config, clubs: orderedClubs, players, matchIds, sources: [calendarFetch.source, ...matchSources] };
 }
 
 export const SOURCE_LOADERS: Record<SourceKey, (offline: boolean) => Promise<LeagueSnapshot>> = {

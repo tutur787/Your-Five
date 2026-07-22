@@ -73,7 +73,8 @@ export interface BasketballPlayerCard {
 }
 
 export interface SoccerStats {
-  minutes: number;
+  /** Omitted when the official source does not publish playing time. */
+  minutes?: number;
   appearances: number;
   /** Official starts counted from published starting lineups. */
   starts?: number;
@@ -99,6 +100,8 @@ export interface SoccerStats {
   nonPenaltyGoals?: number;
   tacklesWonPer90?: number;
   tacklesWon?: number;
+  /** Bundesliga's official all-duels-won total; distinct from event-provider tackle totals. */
+  duelsWon?: number;
   recoveriesPer90?: number;
   recoveries?: number;
   clearancesPer90?: number;
@@ -110,6 +113,11 @@ export interface SoccerStats {
   dribbles?: number;
   claimsPer90?: number;
   claims?: number;
+  passes?: number;
+  keyPasses?: number;
+  interceptions?: number;
+  aerialDuelsWon?: number;
+  ballActions?: number;
 }
 
 export interface SoccerPerformance {

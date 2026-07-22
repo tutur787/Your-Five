@@ -88,7 +88,7 @@ function cardStats(player: NormalizedPlayer, pointsPerMatch: number, goalDiffere
   const cleanSheets = totals.cleanSheets ?? 0;
   const goalsConceded = totals.goalsConceded ?? 0;
   return {
-    minutes: round(player.minutes, 0) ?? 0,
+    minutes: player.minutes > 0 ? round(player.minutes, 0) : undefined,
     appearances: round(player.appearances, 0) ?? 0,
     starts: player.starts,
     goals: round(goals, 0) ?? 0,
@@ -108,6 +108,7 @@ function cardStats(player: NormalizedPlayer, pointsPerMatch: number, goalDiffere
     goalDifferencePerMatch: round(goalDifferencePerMatch) ?? 0,
     tacklesWonPer90: round(player.metrics.tacklesWonPer90),
     tacklesWon: round(totals.tacklesWon, 0),
+    duelsWon: round(totals.duelsWon, 0),
     recoveriesPer90: round(player.metrics.recoveriesPer90),
     recoveries: round(totals.recoveries, 0),
     clearancesPer90: round(player.metrics.clearancesPer90),
@@ -117,6 +118,11 @@ function cardStats(player: NormalizedPlayer, pointsPerMatch: number, goalDiffere
     progressiveDeliveries: round(totals.progressiveActions ?? totals.forwardPasses, 0),
     claimsPer90: round(player.metrics.claimsPer90),
     claims: round(totals.claims, 0),
+    passes: round(totals.passes, 0),
+    keyPasses: round(totals.keyPasses, 0),
+    interceptions: round(totals.interceptions, 0),
+    aerialDuelsWon: round(totals.aerialDuelsWon, 0),
+    ballActions: round(totals.ballActions, 0),
   };
 }
 

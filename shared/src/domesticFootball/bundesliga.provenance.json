@@ -1,8 +1,8 @@
 {
   "competition": "bundesliga-2025-26",
   "label": "Bundesliga 2025-26",
-  "poolVersion": "bundesliga-2025-26-v1",
-  "generatedAt": "2026-07-22T04:36:09.582Z",
+  "poolVersion": "bundesliga-2025-26-v3",
+  "generatedAt": "2026-07-22T05:48:54.559Z",
   "sourceRevision": "96792a61fac6218ad7319fc72a6a679fdcdb8cebe5f42103b7dbcd03772f8360",
   "expectedMatches": 306,
   "matchIds": [
@@ -5202,8 +5202,8 @@
           "appearances": 33,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/4/hamburger-sv-vs-1-fc-heidenheim-1846/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/5/1-fc-union-berlin-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/6/hamburger-sv-vs-1-fsv-mainz-05/lineup",
@@ -5249,8 +5249,8 @@
           "appearances": 32,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/4/hamburger-sv-vs-1-fc-heidenheim-1846/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/5/1-fc-union-berlin-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/6/hamburger-sv-vs-1-fsv-mainz-05/lineup",
@@ -5295,8 +5295,8 @@
           "appearances": 33,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/4/hamburger-sv-vs-1-fc-heidenheim-1846/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/5/1-fc-union-berlin-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/6/hamburger-sv-vs-1-fsv-mainz-05/lineup",
@@ -5379,8 +5379,8 @@
           "appearances": 29,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/4/hamburger-sv-vs-1-fc-heidenheim-1846/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/5/1-fc-union-berlin-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/6/hamburger-sv-vs-1-fsv-mainz-05/lineup",
@@ -5459,8 +5459,8 @@
           "appearances": 26,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/6/hamburger-sv-vs-1-fsv-mainz-05/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/7/rb-leipzig-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/8/hamburger-sv-vs-vfl-wolfsburg/lineup",
@@ -5566,8 +5566,8 @@
           "appearances": 20,
           "sourceUrls": [
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/1/borussia-moenchengladbach-vs-hamburger-sv/lineup",
-            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/3/fc-bayern-muenchen-vs-hamburger-sv/lineup",
+            "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/2/hamburger-sv-vs-fc-st-pauli/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/4/hamburger-sv-vs-1-fc-heidenheim-1846/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/5/1-fc-union-berlin-vs-hamburger-sv/lineup",
             "https://www.bundesliga.com/en/bundesliga/matchday/2025-2026/17/hamburger-sv-vs-bayer-04-leverkusen/lineup",

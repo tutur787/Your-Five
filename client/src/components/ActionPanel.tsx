@@ -14,6 +14,7 @@ import {
 } from "@fiveaside/shared/core";
 import { formatLineupSlot, formatPosition } from "../utils/position";
 import { subjectVerb } from "../utils/grammar";
+import { footballBiddingStats } from "../utils/footballBiddingStats";
 
 interface Props {
   state: MatchState;
@@ -28,33 +29,10 @@ const TIMER_SECONDS = 15;
 
 function StatLine({ player }: { player: PlayerCard }) {
   if (player.sport === "soccer") {
-    const { stats } = player;
-    type FootballStat = [string, number];
-    const available = (...values: Array<[string, number | undefined]>): FootballStat[] =>
-      values.filter((value): value is FootballStat => value[1] !== undefined);
-    const byRole: Record<typeof player.role, FootballStat[]> = {
-      GK: available(
-        ["APPS", stats.appearances], ["SAVES", stats.saves], ["CLEAN SHEETS", stats.cleanSheets],
-        ["GOALS ALLOWED", stats.goalsConceded], ["CLAIMS", stats.claims], ["MIN", stats.minutes]
-      ).slice(0, 5),
-      DEF: available(
-        ["APPS", stats.appearances], ["CLEAN SHEETS", stats.cleanSheets],
-        ["GOALS CONCEDED", stats.goalsConceded], ["TACKLES", stats.tacklesWon],
-        ["RECOVERIES", stats.recoveries], ["CLEARANCES", stats.clearances], ["MIN", stats.minutes]
-      ).slice(0, 5),
-      MID: available(
-        ["APPS", stats.appearances], ["GOALS", stats.goals], ["ASSISTS", stats.assists],
-        ["RECOVERIES", stats.recoveries], ["PROGRESSIONS", stats.progressiveDeliveries],
-        ["DRIBBLES", stats.dribbles], ["SOT", stats.shotsOnTarget], ["MIN", stats.minutes]
-      ).slice(0, 5),
-      ATT: available(
-        ["APPS", stats.appearances], ["GOALS", stats.goals], ["ASSISTS", stats.assists],
-        ["SOT", stats.shotsOnTarget], ["DRIBBLES", stats.dribbles], ["MIN", stats.minutes]
-      ).slice(0, 5),
-    };
+    const stats = footballBiddingStats(player);
     return (
       <div className="player-stat-grid soccer-stats">
-        {byRole[player.role].map(([label, value]) => (
+        {stats.map(([label, value]) => (
           <span className="player-stat" key={label}>
             <strong>{Number.isInteger(value) ? value : value.toFixed(1)}</strong>
             <small>{label}</small>

@@ -1,8 +1,8 @@
 {
   "competition": "premier-league-2025-26",
   "label": "Premier League 2025-26",
-  "poolVersion": "premier-league-2025-26-v1",
-  "generatedAt": "2026-07-22T04:33:49.418Z",
+  "poolVersion": "premier-league-2025-26-v3",
+  "generatedAt": "2026-07-22T05:45:09.555Z",
   "sourceRevision": "6b1f6cd570eabdcda08edf8bdeeb45e99e138cb511ad043353202f140919757b",
   "expectedMatches": 380,
   "matchIds": [

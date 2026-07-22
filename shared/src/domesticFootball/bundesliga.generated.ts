@@ -22,7 +22,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -40,7 +39,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 101,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1635
     },
     "performance": {
       "attack": 10,
@@ -91,7 +92,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 1,
@@ -107,8 +107,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.529,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 323,
-      "passCompletionPct": 79.3
+      "duelsWon": 323,
+      "passCompletionPct": 79.3,
+      "aerialDuelsWon": 59,
+      "ballActions": 2447
     },
     "performance": {
       "attack": 6.94,
@@ -159,7 +161,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 32,
       "goals": 0,
@@ -175,8 +176,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.364,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 237,
-      "passCompletionPct": 91.3
+      "duelsWon": 237,
+      "passCompletionPct": 91.3,
+      "aerialDuelsWon": 35,
+      "ballActions": 2458
     },
     "performance": {
       "attack": 1.6,
@@ -227,7 +230,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 31,
       "goals": 10,
@@ -243,8 +245,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.515,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 221,
-      "passCompletionPct": 69.5
+      "duelsWon": 221,
+      "passCompletionPct": 69.5,
+      "aerialDuelsWon": 26,
+      "ballActions": 1001
     },
     "performance": {
       "attack": 14.67,
@@ -295,7 +299,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 30,
       "goals": 4,
@@ -311,8 +314,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.367,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 298,
-      "passCompletionPct": 79.2
+      "duelsWon": 298,
+      "passCompletionPct": 79.2,
+      "aerialDuelsWon": 78,
+      "ballActions": 1867
     },
     "performance": {
       "attack": 13.6,
@@ -363,7 +368,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 29,
       "goals": 5,
@@ -379,8 +383,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.667,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 270,
-      "passCompletionPct": 76.9
+      "duelsWon": 270,
+      "passCompletionPct": 76.9,
+      "aerialDuelsWon": 29,
+      "ballActions": 1229
     },
     "performance": {
       "attack": 7.11,
@@ -431,7 +437,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 28,
       "goals": 1,
@@ -447,8 +452,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 274,
-      "passCompletionPct": 83.6
+      "duelsWon": 274,
+      "passCompletionPct": 83.6,
+      "aerialDuelsWon": 74,
+      "ballActions": 2136
     },
     "performance": {
       "attack": 7.36,
@@ -499,7 +506,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 26,
       "goals": 14,
@@ -515,8 +521,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.059,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 114,
-      "passCompletionPct": 84.3
+      "duelsWon": 114,
+      "passCompletionPct": 84.3,
+      "aerialDuelsWon": 7,
+      "ballActions": 1340
     },
     "performance": {
       "attack": 19.11,
@@ -567,7 +575,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 26,
       "goals": 0,
@@ -583,8 +590,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.345,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 347,
-      "passCompletionPct": 82.5
+      "duelsWon": 347,
+      "passCompletionPct": 82.5,
+      "aerialDuelsWon": 117,
+      "ballActions": 1929
     },
     "performance": {
       "attack": 3.33,
@@ -635,7 +644,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 26,
       "goals": 1,
@@ -651,8 +659,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.172,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 200,
-      "passCompletionPct": 87.8
+      "duelsWon": 200,
+      "passCompletionPct": 87.8,
+      "aerialDuelsWon": 94,
+      "ballActions": 1620
     },
     "performance": {
       "attack": 8.19,
@@ -703,7 +713,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 24,
       "goals": 8,
@@ -719,7 +728,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.172,
       "pointsPerMatch": 1.794,
       "goalDifferencePerMatch": 0.382,
-      "tacklesWon": 217
+      "duelsWon": 217,
+      "aerialDuelsWon": 37,
+      "ballActions": 888
     },
     "performance": {
       "attack": 11.56,
@@ -770,7 +781,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -788,7 +798,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 135,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1544
     },
     "performance": {
       "attack": 10,
@@ -839,7 +851,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 27,
       "goals": 3,
@@ -855,8 +866,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.806,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 175,
-      "passCompletionPct": 79.4
+      "duelsWon": 175,
+      "passCompletionPct": 79.4,
+      "aerialDuelsWon": 14,
+      "ballActions": 1633
     },
     "performance": {
       "attack": 12.27,
@@ -907,7 +920,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 27,
       "goals": 4,
@@ -923,8 +935,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.828,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 236,
-      "passCompletionPct": 85.2
+      "duelsWon": 236,
+      "passCompletionPct": 85.2,
+      "aerialDuelsWon": 79,
+      "ballActions": 1977
     },
     "performance": {
       "attack": 17.78,
@@ -975,7 +989,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 23,
       "goals": 8,
@@ -991,7 +1004,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 179
+      "duelsWon": 179,
+      "aerialDuelsWon": 28,
+      "ballActions": 859
     },
     "performance": {
       "attack": 11.33,
@@ -1042,7 +1057,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 22,
       "goals": 0,
@@ -1058,7 +1072,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.583,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 256
+      "duelsWon": 256,
+      "aerialDuelsWon": 65,
+      "ballActions": 982
     },
     "performance": {
       "attack": 1.33,
@@ -1109,7 +1125,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 21,
       "goals": 4,
@@ -1125,7 +1140,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.68,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 293
+      "duelsWon": 293,
+      "aerialDuelsWon": 42,
+      "ballActions": 903
     },
     "performance": {
       "attack": 13.56,
@@ -1176,7 +1193,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 20,
       "goals": 1,
@@ -1192,7 +1208,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.6,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 121
+      "duelsWon": 121,
+      "aerialDuelsWon": 20,
+      "ballActions": 1387
     },
     "performance": {
       "attack": 4.89,
@@ -1243,7 +1261,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 22,
       "starts": 20,
       "goals": 1,
@@ -1259,7 +1276,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 167
+      "duelsWon": 167,
+      "aerialDuelsWon": 65,
+      "ballActions": 1324
     },
     "performance": {
       "attack": 11.94,
@@ -1310,7 +1329,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 20,
       "goals": 0,
@@ -1326,7 +1344,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.958,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 161
+      "duelsWon": 161,
+      "aerialDuelsWon": 12,
+      "ballActions": 1173
     },
     "performance": {
       "attack": 3.33,
@@ -1377,7 +1397,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 20,
       "starts": 17,
       "goals": 2,
@@ -1393,7 +1412,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.4,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 81
+      "duelsWon": 81,
+      "aerialDuelsWon": 13,
+      "ballActions": 912
     },
     "performance": {
       "attack": 8.9,
@@ -1444,7 +1465,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 16,
       "goals": 8,
@@ -1460,7 +1480,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.067,
       "pointsPerMatch": 0.853,
       "goalDifferencePerMatch": -0.706,
-      "tacklesWon": 123
+      "duelsWon": 123,
+      "aerialDuelsWon": 50,
+      "ballActions": 594
     },
     "performance": {
       "attack": 10,
@@ -1511,7 +1533,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -1529,7 +1550,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 143,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1517
     },
     "performance": {
       "attack": 10,
@@ -1580,7 +1603,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 33,
       "goals": 0,
@@ -1596,8 +1618,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.515,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 279,
-      "passCompletionPct": 92.5
+      "duelsWon": 279,
+      "passCompletionPct": 92.5,
+      "aerialDuelsWon": 112,
+      "ballActions": 2340
     },
     "performance": {
       "attack": 3.33,
@@ -1648,7 +1672,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 31,
       "goals": 0,
@@ -1664,8 +1687,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.645,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 308,
-      "passCompletionPct": 77.7
+      "duelsWon": 308,
+      "passCompletionPct": 77.7,
+      "aerialDuelsWon": 34,
+      "ballActions": 1883
     },
     "performance": {
       "attack": 6.49,
@@ -1716,7 +1741,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 29,
       "goals": 2,
@@ -1732,8 +1756,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.219,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 278,
-      "passCompletionPct": 81.7
+      "duelsWon": 278,
+      "passCompletionPct": 81.7,
+      "aerialDuelsWon": 41,
+      "ballActions": 1524
     },
     "performance": {
       "attack": 13.47,
@@ -1784,7 +1810,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 29,
       "goals": 2,
@@ -1800,8 +1825,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.533,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 266,
-      "passCompletionPct": 87.4
+      "duelsWon": 266,
+      "passCompletionPct": 87.4,
+      "aerialDuelsWon": 69,
+      "ballActions": 1981
     },
     "performance": {
       "attack": 8.36,
@@ -1852,7 +1879,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 29,
       "goals": 2,
@@ -1868,8 +1894,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.323,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 271,
-      "passCompletionPct": 88
+      "duelsWon": 271,
+      "passCompletionPct": 88,
+      "aerialDuelsWon": 48,
+      "ballActions": 1688
     },
     "performance": {
       "attack": 6.98,
@@ -1920,7 +1948,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 28,
       "goals": 13,
@@ -1936,8 +1963,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.125,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 269,
-      "passCompletionPct": 72
+      "duelsWon": 269,
+      "passCompletionPct": 72,
+      "aerialDuelsWon": 119,
+      "ballActions": 794
     },
     "performance": {
       "attack": 15.11,
@@ -1988,7 +2017,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 28,
       "goals": 5,
@@ -2004,8 +2032,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.533,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 190,
-      "passCompletionPct": 89.9
+      "duelsWon": 190,
+      "passCompletionPct": 89.9,
+      "aerialDuelsWon": 58,
+      "ballActions": 2028
     },
     "performance": {
       "attack": 18.61,
@@ -2056,7 +2086,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 24,
       "goals": 2,
@@ -2072,7 +2101,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.321,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 126
+      "duelsWon": 126,
+      "aerialDuelsWon": 13,
+      "ballActions": 953
     },
     "performance": {
       "attack": 8.09,
@@ -2123,7 +2154,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 20,
       "goals": 3,
@@ -2139,7 +2169,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.385,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 240
+      "duelsWon": 240,
+      "aerialDuelsWon": 10,
+      "ballActions": 903
     },
     "performance": {
       "attack": 12.62,
@@ -2190,7 +2222,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 15,
       "goals": 1,
@@ -2206,7 +2237,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.897,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.324,
-      "tacklesWon": 140
+      "duelsWon": 140,
+      "aerialDuelsWon": 2,
+      "ballActions": 1099
     },
     "performance": {
       "attack": 6.97,
@@ -2257,7 +2290,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 1,
@@ -2273,8 +2305,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.559,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 362,
-      "passCompletionPct": 82.7
+      "duelsWon": 362,
+      "passCompletionPct": 82.7,
+      "aerialDuelsWon": 78,
+      "ballActions": 1795
     },
     "performance": {
       "attack": 4.89,
@@ -2325,7 +2359,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 30,
       "goals": 2,
@@ -2341,8 +2374,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.471,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 256,
-      "passCompletionPct": 76.9
+      "duelsWon": 256,
+      "passCompletionPct": 76.9,
+      "aerialDuelsWon": 68,
+      "ballActions": 1775
     },
     "performance": {
       "attack": 12.36,
@@ -2393,7 +2428,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 28,
       "goals": 2,
@@ -2409,8 +2443,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.448,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 257,
-      "passCompletionPct": 84.7
+      "duelsWon": 257,
+      "passCompletionPct": 84.7,
+      "aerialDuelsWon": 54,
+      "ballActions": 1616
     },
     "performance": {
       "attack": 14.17,
@@ -2461,7 +2497,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 26,
       "goals": 4,
@@ -2477,8 +2512,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.464,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 212,
-      "passCompletionPct": 80
+      "duelsWon": 212,
+      "passCompletionPct": 80,
+      "aerialDuelsWon": 39,
+      "ballActions": 1031
     },
     "performance": {
       "attack": 13.02,
@@ -2529,7 +2566,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 24,
       "goals": 12,
@@ -2545,8 +2581,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.462,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 179,
-      "passCompletionPct": 81.8
+      "duelsWon": 179,
+      "passCompletionPct": 81.8,
+      "aerialDuelsWon": 9,
+      "ballActions": 1607
     },
     "performance": {
       "attack": 19.82,
@@ -2597,7 +2635,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 24,
       "goals": 5,
@@ -2613,8 +2650,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.3,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 217,
-      "passCompletionPct": 79.3
+      "duelsWon": 217,
+      "passCompletionPct": 79.3,
+      "aerialDuelsWon": 16,
+      "ballActions": 1255
     },
     "performance": {
       "attack": 14.67,
@@ -2665,7 +2704,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 24,
       "goals": 1,
@@ -2681,8 +2719,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.345,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 182,
-      "passCompletionPct": 77.2
+      "duelsWon": 182,
+      "passCompletionPct": 77.2,
+      "aerialDuelsWon": 17,
+      "ballActions": 1145
     },
     "performance": {
       "attack": 8.19,
@@ -2733,7 +2773,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 22,
       "goals": 2,
@@ -2749,7 +2788,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.074,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 156
+      "duelsWon": 156,
+      "aerialDuelsWon": 39,
+      "ballActions": 1056
     },
     "performance": {
       "attack": 15,
@@ -2800,7 +2841,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 21,
       "starts": 21,
       "goals": 0,
@@ -2818,7 +2858,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 70,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 907
     },
     "performance": {
       "attack": 10,
@@ -2869,7 +2911,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 19,
       "goals": 6,
@@ -2885,7 +2926,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.931,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 250
+      "duelsWon": 250,
+      "aerialDuelsWon": 94,
+      "ballActions": 785
     },
     "performance": {
       "attack": 8.94,
@@ -2936,7 +2979,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 16,
       "starts": 16,
       "goals": 0,
@@ -2952,7 +2994,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 1.176,
       "goalDifferencePerMatch": -0.265,
-      "tacklesWon": 187
+      "duelsWon": 187,
+      "aerialDuelsWon": 46,
+      "ballActions": 1002
     },
     "performance": {
       "attack": 4.67,
@@ -3003,7 +3047,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -3021,7 +3064,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 92,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1414
     },
     "performance": {
       "attack": 10,
@@ -3072,7 +3117,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 2,
@@ -3088,8 +3132,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.031,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 298,
-      "passCompletionPct": 91.2
+      "duelsWon": 298,
+      "passCompletionPct": 91.2,
+      "aerialDuelsWon": 96,
+      "ballActions": 2902
     },
     "performance": {
       "attack": 13.47,
@@ -3140,7 +3186,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 28,
       "goals": 5,
@@ -3156,8 +3201,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.036,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 293,
-      "passCompletionPct": 88.5
+      "duelsWon": 293,
+      "passCompletionPct": 88.5,
+      "aerialDuelsWon": 76,
+      "ballActions": 2565
     },
     "performance": {
       "attack": 19.17,
@@ -3208,7 +3255,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 27,
       "goals": 2,
@@ -3224,8 +3270,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.818,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 194,
-      "passCompletionPct": 84
+      "duelsWon": 194,
+      "passCompletionPct": 84,
+      "aerialDuelsWon": 26,
+      "ballActions": 1403
     },
     "performance": {
       "attack": 12.92,
@@ -3276,7 +3324,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 27,
       "goals": 17,
@@ -3292,8 +3339,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.758,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 236,
-      "passCompletionPct": 79.7
+      "duelsWon": 236,
+      "passCompletionPct": 79.7,
+      "aerialDuelsWon": 90,
+      "ballActions": 918
     },
     "performance": {
       "attack": 17.56,
@@ -3344,7 +3393,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 26,
       "goals": 0,
@@ -3360,8 +3408,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.806,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 207,
-      "passCompletionPct": 80.6
+      "duelsWon": 207,
+      "passCompletionPct": 80.6,
+      "aerialDuelsWon": 12,
+      "ballActions": 1678
     },
     "performance": {
       "attack": 3.33,
@@ -3412,7 +3462,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 25,
       "goals": 2,
@@ -3428,8 +3477,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.828,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 237,
-      "passCompletionPct": 88
+      "duelsWon": 237,
+      "passCompletionPct": 88,
+      "aerialDuelsWon": 27,
+      "ballActions": 1428
     },
     "performance": {
       "attack": 9.96,
@@ -3480,7 +3531,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 24,
       "goals": 9,
@@ -3496,7 +3546,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.688,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 207
+      "duelsWon": 207,
+      "aerialDuelsWon": 21,
+      "ballActions": 996
     },
     "performance": {
       "attack": 10.22,
@@ -3547,7 +3599,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 21,
       "goals": 1,
@@ -3563,7 +3614,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.923,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 142
+      "duelsWon": 142,
+      "aerialDuelsWon": 19,
+      "ballActions": 1069
     },
     "performance": {
       "attack": 6.18,
@@ -3616,7 +3669,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 20,
       "goals": 0,
@@ -3632,7 +3684,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.719,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 235
+      "duelsWon": 235,
+      "aerialDuelsWon": 29,
+      "ballActions": 1355
     },
     "performance": {
       "attack": 2.76,
@@ -3683,7 +3737,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 17,
       "goals": 7,
@@ -3699,7 +3752,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.586,
       "pointsPerMatch": 2.147,
       "goalDifferencePerMatch": 1.059,
-      "tacklesWon": 124
+      "duelsWon": 124,
+      "aerialDuelsWon": 18,
+      "ballActions": 996
     },
     "performance": {
       "attack": 16.23,
@@ -3750,7 +3805,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 7,
@@ -3766,8 +3820,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.853,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 253,
-      "passCompletionPct": 81.3
+      "duelsWon": 253,
+      "passCompletionPct": 81.3,
+      "aerialDuelsWon": 15,
+      "ballActions": 1611
     },
     "performance": {
       "attack": 17.42,
@@ -3818,7 +3874,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -3836,7 +3891,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 101,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1953
     },
     "performance": {
       "attack": 10,
@@ -3887,7 +3944,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 30,
       "goals": 2,
@@ -3903,8 +3959,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.71,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 306,
-      "passCompletionPct": 88.7
+      "duelsWon": 306,
+      "passCompletionPct": 88.7,
+      "aerialDuelsWon": 104,
+      "ballActions": 1871
     },
     "performance": {
       "attack": 6.98,
@@ -3955,7 +4013,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 28,
       "goals": 0,
@@ -3971,8 +4028,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.645,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 230,
-      "passCompletionPct": 76.6
+      "duelsWon": 230,
+      "passCompletionPct": 76.6,
+      "aerialDuelsWon": 42,
+      "ballActions": 1424
     },
     "performance": {
       "attack": 3.33,
@@ -4023,7 +4082,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 26,
       "goals": 0,
@@ -4039,8 +4097,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.515,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 245,
-      "passCompletionPct": 77.8
+      "duelsWon": 245,
+      "passCompletionPct": 77.8,
+      "aerialDuelsWon": 38,
+      "ballActions": 1538
     },
     "performance": {
       "attack": 3.33,
@@ -4091,7 +4151,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 21,
       "goals": 1,
@@ -4107,7 +4166,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.097,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 118
+      "duelsWon": 118,
+      "aerialDuelsWon": 16,
+      "ballActions": 1149
     },
     "performance": {
       "attack": 3.38,
@@ -4158,7 +4219,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 20,
       "goals": 0,
@@ -4174,7 +4234,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.56,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 181
+      "duelsWon": 181,
+      "aerialDuelsWon": 68,
+      "ballActions": 1415
     },
     "performance": {
       "attack": 3.33,
@@ -4225,7 +4287,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 20,
       "goals": 3,
@@ -4241,7 +4302,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.346,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 124
+      "duelsWon": 124,
+      "aerialDuelsWon": 20,
+      "ballActions": 725
     },
     "performance": {
       "attack": 12.44,
@@ -4292,7 +4355,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 20,
       "goals": 13,
@@ -4308,7 +4370,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.118,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 202
+      "duelsWon": 202,
+      "aerialDuelsWon": 17,
+      "ballActions": 826
     },
     "performance": {
       "attack": 19.2,
@@ -4359,7 +4423,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 19,
       "goals": 0,
@@ -4375,7 +4438,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.346,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 230
+      "duelsWon": 230,
+      "aerialDuelsWon": 27,
+      "ballActions": 1212
     },
     "performance": {
       "attack": 1.85,
@@ -4426,7 +4491,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 18,
       "goals": 5,
@@ -4442,7 +4506,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.094,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 160
+      "duelsWon": 160,
+      "aerialDuelsWon": 46,
+      "ballActions": 694
     },
     "performance": {
       "attack": 5.4,
@@ -4493,7 +4559,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 3,
@@ -4509,8 +4574,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.676,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 290,
-      "passCompletionPct": 84.7
+      "duelsWon": 290,
+      "passCompletionPct": 84.7,
+      "aerialDuelsWon": 63,
+      "ballActions": 1949
     },
     "performance": {
       "attack": 11.47,
@@ -4561,7 +4628,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -4579,7 +4645,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 111,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1744
     },
     "performance": {
       "attack": 10,
@@ -4630,7 +4698,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 3,
@@ -4646,8 +4713,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.594,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 230,
-      "passCompletionPct": 87.9
+      "duelsWon": 230,
+      "passCompletionPct": 87.9,
+      "aerialDuelsWon": 118,
+      "ballActions": 2216
     },
     "performance": {
       "attack": 16.53,
@@ -4698,7 +4767,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 26,
       "goals": 5,
@@ -4714,7 +4782,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.667,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 294
+      "duelsWon": 294,
+      "aerialDuelsWon": 39,
+      "ballActions": 1492
     },
     "performance": {
       "attack": 16.71,
@@ -4765,7 +4835,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 25,
       "goals": 3,
@@ -4781,7 +4850,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.424,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 231
+      "duelsWon": 231,
+      "aerialDuelsWon": 71,
+      "ballActions": 877
     },
     "performance": {
       "attack": 1.11,
@@ -4832,7 +4903,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 24,
       "goals": 1,
@@ -4848,8 +4918,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.464,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 182,
-      "passCompletionPct": 86.7
+      "duelsWon": 182,
+      "passCompletionPct": 86.7,
+      "aerialDuelsWon": 20,
+      "ballActions": 1294
     },
     "performance": {
       "attack": 8.89,
@@ -4900,7 +4972,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 21,
       "goals": 7,
@@ -4916,7 +4987,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.939,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 88
+      "duelsWon": 88,
+      "aerialDuelsWon": 7,
+      "ballActions": 1125
     },
     "performance": {
       "attack": 15.73,
@@ -4967,7 +5040,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 20,
       "goals": 2,
@@ -4983,7 +5055,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 176
+      "duelsWon": 176,
+      "aerialDuelsWon": 5,
+      "ballActions": 901
     },
     "performance": {
       "attack": 9.51,
@@ -5034,7 +5108,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 19,
       "goals": 2,
@@ -5050,7 +5123,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.435,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 181
+      "duelsWon": 181,
+      "aerialDuelsWon": 51,
+      "ballActions": 1078
     },
     "performance": {
       "attack": 15.54,
@@ -5101,7 +5176,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 18,
       "goals": 0,
@@ -5117,7 +5191,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 82
+      "duelsWon": 82,
+      "aerialDuelsWon": 9,
+      "ballActions": 855
     },
     "performance": {
       "attack": 4,
@@ -5168,7 +5244,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 18,
       "goals": 4,
@@ -5184,7 +5259,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.48,
       "pointsPerMatch": 1.382,
       "goalDifferencePerMatch": -0.176,
-      "tacklesWon": 142
+      "duelsWon": 142,
+      "aerialDuelsWon": 9,
+      "ballActions": 654
     },
     "performance": {
       "attack": 14.68,
@@ -5235,7 +5312,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 31,
       "goals": 3,
@@ -5251,8 +5327,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.273,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 203,
-      "passCompletionPct": 93.4
+      "duelsWon": 203,
+      "passCompletionPct": 93.4,
+      "aerialDuelsWon": 17,
+      "ballActions": 3475
     },
     "performance": {
       "attack": 10.49,
@@ -5303,7 +5381,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 29,
       "goals": 8,
@@ -5319,8 +5396,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.379,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 281,
-      "passCompletionPct": 87.3
+      "duelsWon": 281,
+      "passCompletionPct": 87.3,
+      "aerialDuelsWon": 15,
+      "ballActions": 2590
     },
     "performance": {
       "attack": 20,
@@ -5371,7 +5450,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 29,
       "goals": 5,
@@ -5387,8 +5465,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.31,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 279,
-      "passCompletionPct": 92.2
+      "duelsWon": 279,
+      "passCompletionPct": 92.2,
+      "aerialDuelsWon": 85,
+      "ballActions": 2868
     },
     "performance": {
       "attack": 18.89,
@@ -5439,7 +5519,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 29,
       "goals": 2,
@@ -5455,8 +5534,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.344,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 225,
-      "passCompletionPct": 91.1
+      "duelsWon": 225,
+      "passCompletionPct": 91.1,
+      "aerialDuelsWon": 51,
+      "ballActions": 2230
     },
     "performance": {
       "attack": 5.24,
@@ -5507,7 +5588,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 25,
       "goals": 4,
@@ -5523,8 +5603,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.214,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 228,
-      "passCompletionPct": 90.1
+      "duelsWon": 228,
+      "passCompletionPct": 90.1,
+      "aerialDuelsWon": 61,
+      "ballActions": 2040
     },
     "performance": {
       "attack": 18.06,
@@ -5575,7 +5657,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 24,
       "goals": 0,
@@ -5593,7 +5674,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 80,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 988
     },
     "performance": {
       "attack": 10,
@@ -5644,7 +5727,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 23,
       "goals": 16,
@@ -5660,7 +5742,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.143,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 197
+      "duelsWon": 197,
+      "aerialDuelsWon": 71,
+      "ballActions": 667
     },
     "performance": {
       "attack": 18.22,
@@ -5711,7 +5795,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 20,
       "goals": 3,
@@ -5727,7 +5810,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.929,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 283
+      "duelsWon": 283,
+      "aerialDuelsWon": 11,
+      "ballActions": 1362
     },
     "performance": {
       "attack": 14.18,
@@ -5778,7 +5863,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 19,
       "goals": 0,
@@ -5794,7 +5878,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 206
+      "duelsWon": 206,
+      "aerialDuelsWon": 73,
+      "ballActions": 1735
     },
     "performance": {
       "attack": 3.67,
@@ -5845,7 +5931,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 18,
       "goals": 6,
@@ -5861,7 +5946,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.862,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 237
+      "duelsWon": 237,
+      "aerialDuelsWon": 25,
+      "ballActions": 1158
     },
     "performance": {
       "attack": 15.4,
@@ -5912,7 +5999,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 16,
       "goals": 5,
@@ -5928,7 +6014,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.69,
       "pointsPerMatch": 1.735,
       "goalDifferencePerMatch": 0.618,
-      "tacklesWon": 154
+      "duelsWon": 154,
+      "aerialDuelsWon": 4,
+      "ballActions": 845
     },
     "performance": {
       "attack": 6.27,
@@ -5979,7 +6067,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 33,
       "goals": 0,
@@ -5997,7 +6084,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 106,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1962
     },
     "performance": {
       "attack": 10,
@@ -6048,7 +6137,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 0,
@@ -6064,8 +6152,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.531,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 296,
-      "passCompletionPct": 90.8
+      "duelsWon": 296,
+      "passCompletionPct": 90.8,
+      "aerialDuelsWon": 62,
+      "ballActions": 1773
     },
     "performance": {
       "attack": 2.04,
@@ -6116,7 +6206,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 29,
       "goals": 5,
@@ -6132,8 +6221,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.424,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 207,
-      "passCompletionPct": 69.4
+      "duelsWon": 207,
+      "passCompletionPct": 69.4,
+      "aerialDuelsWon": 48,
+      "ballActions": 781
     },
     "performance": {
       "attack": 6.44,
@@ -6184,7 +6275,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 27,
       "goals": 6,
@@ -6200,8 +6290,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.464,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 316,
-      "passCompletionPct": 84.3
+      "duelsWon": 316,
+      "passCompletionPct": 84.3,
+      "aerialDuelsWon": 153,
+      "ballActions": 2106
     },
     "performance": {
       "attack": 19.72,
@@ -6252,7 +6344,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 27,
       "goals": 0,
@@ -6268,8 +6359,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.414,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 289,
-      "passCompletionPct": 74.2
+      "duelsWon": 289,
+      "passCompletionPct": 74.2,
+      "aerialDuelsWon": 29,
+      "ballActions": 1862
     },
     "performance": {
       "attack": 3.33,
@@ -6320,7 +6413,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 25,
       "goals": 7,
@@ -6336,8 +6428,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.552,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 172,
-      "passCompletionPct": 83.1
+      "duelsWon": 172,
+      "passCompletionPct": 83.1,
+      "aerialDuelsWon": 9,
+      "ballActions": 1247
     },
     "performance": {
       "attack": 18.67,
@@ -6388,7 +6482,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 24,
       "goals": 1,
@@ -6404,7 +6497,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.462,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 254
+      "duelsWon": 254,
+      "aerialDuelsWon": 37,
+      "ballActions": 1152
     },
     "performance": {
       "attack": 5.78,
@@ -6455,7 +6550,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 21,
       "goals": 0,
@@ -6471,7 +6565,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 208
+      "duelsWon": 208,
+      "aerialDuelsWon": 61,
+      "ballActions": 1480
     },
     "performance": {
       "attack": 3.33,
@@ -6522,7 +6618,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 20,
       "goals": 5,
@@ -6538,7 +6633,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.192,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 156
+      "duelsWon": 156,
+      "aerialDuelsWon": 24,
+      "ballActions": 1015
     },
     "performance": {
       "attack": 13.33,
@@ -6589,7 +6686,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 20,
       "starts": 17,
       "goals": 0,
@@ -6605,7 +6701,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.4,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 133
+      "duelsWon": 133,
+      "aerialDuelsWon": 26,
+      "ballActions": 988
     },
     "performance": {
       "attack": 4.33,
@@ -6656,7 +6754,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 21,
       "starts": 15,
       "goals": 0,
@@ -6672,7 +6769,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.118,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 104
+      "duelsWon": 104,
+      "aerialDuelsWon": 20,
+      "ballActions": 866
     },
     "performance": {
       "attack": 3.37,
@@ -6723,7 +6822,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -6741,7 +6839,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 112,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1643
     },
     "performance": {
       "attack": 10,
@@ -6792,7 +6892,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 30,
       "goals": 2,
@@ -6808,8 +6907,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.324,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 252,
-      "passCompletionPct": 89.1
+      "duelsWon": 252,
+      "passCompletionPct": 89.1,
+      "aerialDuelsWon": 38,
+      "ballActions": 2851
     },
     "performance": {
       "attack": 5.6,
@@ -6860,7 +6961,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 26,
       "goals": 7,
@@ -6876,8 +6976,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.063,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 234,
-      "passCompletionPct": 76.8
+      "duelsWon": 234,
+      "passCompletionPct": 76.8,
+      "aerialDuelsWon": 18,
+      "ballActions": 1350
     },
     "performance": {
       "attack": 9.78,
@@ -6928,7 +7030,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 26,
       "goals": 0,
@@ -6944,8 +7045,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.407,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 289,
-      "passCompletionPct": 90.3
+      "duelsWon": 289,
+      "passCompletionPct": 90.3,
+      "aerialDuelsWon": 137,
+      "ballActions": 2202
     },
     "performance": {
       "attack": 3.33,
@@ -6996,7 +7099,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 25,
       "goals": 19,
@@ -7012,8 +7114,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.241,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 196,
-      "passCompletionPct": 73.2
+      "duelsWon": 196,
+      "passCompletionPct": 73.2,
+      "aerialDuelsWon": 36,
+      "ballActions": 989
     },
     "performance": {
       "attack": 19.56,
@@ -7064,7 +7168,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 24,
       "goals": 6,
@@ -7080,8 +7183,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.188,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 286,
-      "passCompletionPct": 85.6
+      "duelsWon": 286,
+      "passCompletionPct": 85.6,
+      "aerialDuelsWon": 44,
+      "ballActions": 2006
     },
     "performance": {
       "attack": 19.44,
@@ -7132,7 +7237,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 22,
       "goals": 0,
@@ -7148,7 +7252,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.036,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 214
+      "duelsWon": 214,
+      "aerialDuelsWon": 50,
+      "ballActions": 1361
     },
     "performance": {
       "attack": 1.24,
@@ -7199,7 +7305,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 22,
       "goals": 0,
@@ -7215,8 +7320,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.032,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 197,
-      "passCompletionPct": 92.4
+      "duelsWon": 197,
+      "passCompletionPct": 92.4,
+      "aerialDuelsWon": 44,
+      "ballActions": 1652
     },
     "performance": {
       "attack": 3.33,
@@ -7267,7 +7374,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 20,
       "goals": 7,
@@ -7283,7 +7389,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 157
+      "duelsWon": 157,
+      "aerialDuelsWon": 5,
+      "ballActions": 1201
     },
     "performance": {
       "attack": 16.98,
@@ -7334,7 +7442,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 19,
       "goals": 4,
@@ -7350,7 +7457,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.28,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 177
+      "duelsWon": 177,
+      "aerialDuelsWon": 15,
+      "ballActions": 1255
     },
     "performance": {
       "attack": 15.19,
@@ -7401,7 +7510,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 18,
       "goals": 1,
@@ -7417,7 +7525,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.111,
       "pointsPerMatch": 1.824,
       "goalDifferencePerMatch": 0.647,
-      "tacklesWon": 153
+      "duelsWon": 153,
+      "aerialDuelsWon": 21,
+      "ballActions": 1009
     },
     "performance": {
       "attack": 9.5,
@@ -7468,7 +7578,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 4,
@@ -7484,8 +7593,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.765,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 350,
-      "passCompletionPct": 76.7
+      "duelsWon": 350,
+      "passCompletionPct": 76.7,
+      "aerialDuelsWon": 20,
+      "ballActions": 2120
     },
     "performance": {
       "attack": 14.49,
@@ -7536,7 +7647,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 0,
@@ -7554,7 +7664,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 104,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1469
     },
     "performance": {
       "attack": 10,
@@ -7605,7 +7717,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 31,
       "goals": 0,
@@ -7621,8 +7732,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.806,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 256,
-      "passCompletionPct": 88.2
+      "duelsWon": 256,
+      "passCompletionPct": 88.2,
+      "aerialDuelsWon": 41,
+      "ballActions": 2176
     },
     "performance": {
       "attack": 4.27,
@@ -7673,7 +7786,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 29,
       "goals": 10,
@@ -7689,8 +7801,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.655,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 273,
-      "passCompletionPct": 78
+      "duelsWon": 273,
+      "passCompletionPct": 78,
+      "aerialDuelsWon": 66,
+      "ballActions": 1481
     },
     "performance": {
       "attack": 18.8,
@@ -7741,7 +7855,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 29,
       "goals": 1,
@@ -7757,8 +7870,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.7,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 219,
-      "passCompletionPct": 89.7
+      "duelsWon": 219,
+      "passCompletionPct": 89.7,
+      "aerialDuelsWon": 64,
+      "ballActions": 2330
     },
     "performance": {
       "attack": 7.36,
@@ -7809,7 +7924,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 29,
       "goals": 0,
@@ -7825,8 +7939,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.516,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 144,
-      "passCompletionPct": 79.9
+      "duelsWon": 144,
+      "passCompletionPct": 79.9,
+      "aerialDuelsWon": 14,
+      "ballActions": 1698
     },
     "performance": {
       "attack": 3.33,
@@ -7877,7 +7993,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 24,
       "goals": 1,
@@ -7893,8 +8008,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.667,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 180,
-      "passCompletionPct": 86.9
+      "duelsWon": 180,
+      "passCompletionPct": 86.9,
+      "aerialDuelsWon": 43,
+      "ballActions": 1779
     },
     "performance": {
       "attack": 9.44,
@@ -7945,7 +8062,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 23,
       "goals": 3,
@@ -7961,7 +8077,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 214
+      "duelsWon": 214,
+      "aerialDuelsWon": 8,
+      "ballActions": 1080
     },
     "performance": {
       "attack": 2,
@@ -8012,7 +8130,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 22,
       "goals": 1,
@@ -8028,7 +8145,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.25,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 254
+      "duelsWon": 254,
+      "aerialDuelsWon": 14,
+      "ballActions": 1355
     },
     "performance": {
       "attack": 8.44,
@@ -8079,7 +8198,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 22,
       "goals": 5,
@@ -8095,7 +8213,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.333,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 161
+      "duelsWon": 161,
+      "aerialDuelsWon": 14,
+      "ballActions": 776
     },
     "performance": {
       "attack": 6.89,
@@ -8146,7 +8266,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 19,
       "starts": 19,
       "goals": 0,
@@ -8162,7 +8281,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.789,
       "pointsPerMatch": 0.941,
       "goalDifferencePerMatch": -0.676,
-      "tacklesWon": 164
+      "duelsWon": 164,
+      "aerialDuelsWon": 78,
+      "ballActions": 1305
     },
     "performance": {
       "attack": 3.67,
@@ -8213,7 +8334,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 3,
@@ -8229,8 +8349,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.875,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 280,
-      "passCompletionPct": 91.6
+      "duelsWon": 280,
+      "passCompletionPct": 91.6,
+      "aerialDuelsWon": 115,
+      "ballActions": 2637
     },
     "performance": {
       "attack": 16.53,
@@ -8281,7 +8403,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 29,
       "goals": 4,
@@ -8297,8 +8418,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.727,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 303,
-      "passCompletionPct": 84.9
+      "duelsWon": 303,
+      "passCompletionPct": 84.9,
+      "aerialDuelsWon": 15,
+      "ballActions": 1760
     },
     "performance": {
       "attack": 17.5,
@@ -8349,7 +8472,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 28,
       "goals": 5,
@@ -8365,8 +8487,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.871,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 298,
-      "passCompletionPct": 79.2
+      "duelsWon": 298,
+      "passCompletionPct": 79.2,
+      "aerialDuelsWon": 23,
+      "ballActions": 1401
     },
     "performance": {
       "attack": 15.29,
@@ -8417,7 +8541,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 24,
       "goals": 1,
@@ -8433,8 +8556,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2.208,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 190,
-      "passCompletionPct": 88.7
+      "duelsWon": 190,
+      "passCompletionPct": 88.7,
+      "aerialDuelsWon": 53,
+      "ballActions": 2100
     },
     "performance": {
       "attack": 10.69,
@@ -8485,7 +8610,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 21,
       "goals": 2,
@@ -8501,7 +8625,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.464,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 199
+      "duelsWon": 199,
+      "aerialDuelsWon": 30,
+      "ballActions": 1189
     },
     "performance": {
       "attack": 10.76,
@@ -8552,7 +8678,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 21,
       "goals": 2,
@@ -8568,7 +8693,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.36,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 117
+      "duelsWon": 117,
+      "aerialDuelsWon": 14,
+      "ballActions": 1266
     },
     "performance": {
       "attack": 7.38,
@@ -8619,7 +8746,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 22,
       "starts": 21,
       "goals": 0,
@@ -8637,7 +8763,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 68,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1057
     },
     "performance": {
       "attack": 10,
@@ -8688,7 +8816,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 22,
       "starts": 19,
       "goals": 2,
@@ -8704,7 +8831,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.545,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 197
+      "duelsWon": 197,
+      "aerialDuelsWon": 45,
+      "ballActions": 1506
     },
     "performance": {
       "attack": 15.81,
@@ -8755,7 +8884,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 18,
       "goals": 0,
@@ -8771,7 +8899,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.292,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 209
+      "duelsWon": 209,
+      "aerialDuelsWon": 80,
+      "ballActions": 1724
     },
     "performance": {
       "attack": 4,
@@ -8822,7 +8952,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 19,
       "starts": 17,
       "goals": 6,
@@ -8838,7 +8967,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.526,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 122
+      "duelsWon": 122,
+      "aerialDuelsWon": 10,
+      "ballActions": 502
     },
     "performance": {
       "attack": 11.13,
@@ -8889,7 +9020,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 16,
       "goals": 0,
@@ -8905,7 +9035,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.28,
       "pointsPerMatch": 1.294,
       "goalDifferencePerMatch": -0.118,
-      "tacklesWon": 154
+      "duelsWon": 154,
+      "aerialDuelsWon": 22,
+      "ballActions": 1113
     },
     "performance": {
       "attack": 3.21,
@@ -8956,7 +9088,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 27,
       "goals": 15,
@@ -8972,8 +9103,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.906,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 288,
-      "passCompletionPct": 85.7
+      "duelsWon": 288,
+      "passCompletionPct": 85.7,
+      "aerialDuelsWon": 13,
+      "ballActions": 1867
     },
     "performance": {
       "attack": 17.33,
@@ -9028,7 +9161,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 25,
       "goals": 36,
@@ -9044,8 +9176,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.774,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 259,
-      "passCompletionPct": 80.7
+      "duelsWon": 259,
+      "passCompletionPct": 80.7,
+      "aerialDuelsWon": 41,
+      "ballActions": 1128
     },
     "performance": {
       "attack": 19.78,
@@ -9100,7 +9234,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 25,
       "goals": 5,
@@ -9116,7 +9249,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.806,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 205
+      "duelsWon": 205,
+      "aerialDuelsWon": 34,
+      "ballActions": 1901
     },
     "performance": {
       "attack": 14.22,
@@ -9171,7 +9306,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 24,
       "goals": 2,
@@ -9187,8 +9321,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.759,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 169,
-      "passCompletionPct": 92.3
+      "duelsWon": 169,
+      "passCompletionPct": 92.3,
+      "aerialDuelsWon": 15,
+      "ballActions": 3102
     },
     "performance": {
       "attack": 9.16,
@@ -9244,7 +9380,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 23,
       "goals": 2,
@@ -9260,7 +9395,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.857,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 176
+      "duelsWon": 176,
+      "aerialDuelsWon": 52,
+      "ballActions": 2217
     },
     "performance": {
       "attack": 14.44,
@@ -9315,7 +9452,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 23,
       "goals": 15,
@@ -9331,8 +9467,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.656,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 316,
-      "passCompletionPct": 82.8
+      "duelsWon": 316,
+      "passCompletionPct": 82.8,
+      "aerialDuelsWon": 6,
+      "ballActions": 2329
     },
     "performance": {
       "attack": 17.56,
@@ -9389,7 +9527,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 22,
       "goals": 3,
@@ -9405,7 +9542,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.69,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 204
+      "duelsWon": 204,
+      "aerialDuelsWon": 22,
+      "ballActions": 1852
     },
     "performance": {
       "attack": 9.24,
@@ -9460,7 +9599,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 22,
       "starts": 22,
       "goals": 0,
@@ -9478,7 +9616,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 34,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 906
     },
     "performance": {
       "attack": 10,
@@ -9534,7 +9674,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 21,
       "goals": 1,
@@ -9550,7 +9689,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.792,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 172
+      "duelsWon": 172,
+      "aerialDuelsWon": 36,
+      "ballActions": 1906
     },
     "performance": {
       "attack": 10.69,
@@ -9605,7 +9746,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 19,
       "goals": 2,
@@ -9621,7 +9761,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.923,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 174
+      "duelsWon": 174,
+      "aerialDuelsWon": 29,
+      "ballActions": 1682
     },
     "performance": {
       "attack": 15.28,
@@ -9676,7 +9818,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 25,
       "starts": 19,
       "goals": 1,
@@ -9692,7 +9833,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.88,
       "pointsPerMatch": 2.618,
       "goalDifferencePerMatch": 2.529,
-      "tacklesWon": 166
+      "duelsWon": 166,
+      "aerialDuelsWon": 53,
+      "ballActions": 1866
     },
     "performance": {
       "attack": 10.26,
@@ -9747,7 +9890,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -9765,7 +9907,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 121,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1481
     },
     "performance": {
       "attack": 10,
@@ -9816,7 +9960,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 31,
       "goals": 1,
@@ -9832,8 +9975,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.688,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 300,
-      "passCompletionPct": 77.9
+      "duelsWon": 300,
+      "passCompletionPct": 77.9,
+      "aerialDuelsWon": 19,
+      "ballActions": 1643
     },
     "performance": {
       "attack": 6.31,
@@ -9884,7 +10029,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 30,
       "goals": 0,
@@ -9900,8 +10044,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.613,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 210,
-      "passCompletionPct": 73.4
+      "duelsWon": 210,
+      "passCompletionPct": 73.4,
+      "aerialDuelsWon": 20,
+      "ballActions": 1648
     },
     "performance": {
       "attack": 3.33,
@@ -9952,7 +10098,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 29,
       "goals": 2,
@@ -9968,8 +10113,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.6,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 233,
-      "passCompletionPct": 86.8
+      "duelsWon": 233,
+      "passCompletionPct": 86.8,
+      "aerialDuelsWon": 82,
+      "ballActions": 2044
     },
     "performance": {
       "attack": 13.89,
@@ -10020,7 +10167,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 26,
       "goals": 2,
@@ -10036,8 +10182,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.593,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 218,
-      "passCompletionPct": 85.4
+      "duelsWon": 218,
+      "passCompletionPct": 85.4,
+      "aerialDuelsWon": 44,
+      "ballActions": 1910
     },
     "performance": {
       "attack": 15,
@@ -10088,7 +10236,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 25,
       "goals": 2,
@@ -10104,7 +10251,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.5,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 231
+      "duelsWon": 231,
+      "aerialDuelsWon": 55,
+      "ballActions": 902
     },
     "performance": {
       "attack": 2,
@@ -10155,7 +10304,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 23,
       "goals": 5,
@@ -10171,8 +10319,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.4,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 188,
-      "passCompletionPct": 75.6
+      "duelsWon": 188,
+      "passCompletionPct": 75.6,
+      "aerialDuelsWon": 15,
+      "ballActions": 1423
     },
     "performance": {
       "attack": 8,
@@ -10223,7 +10373,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 23,
       "goals": 1,
@@ -10239,7 +10388,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.542,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 223
+      "duelsWon": 223,
+      "aerialDuelsWon": 69,
+      "ballActions": 1184
     },
     "performance": {
       "attack": 5.24,
@@ -10290,7 +10441,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 22,
       "goals": 1,
@@ -10306,7 +10456,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.696,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 148
+      "duelsWon": 148,
+      "aerialDuelsWon": 53,
+      "ballActions": 1520
     },
     "performance": {
       "attack": 11.39,
@@ -10357,7 +10509,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 18,
       "goals": 0,
@@ -10373,7 +10524,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.125,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 184
+      "duelsWon": 184,
+      "aerialDuelsWon": 48,
+      "ballActions": 958
     },
     "performance": {
       "attack": 4.04,
@@ -10424,7 +10577,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 17,
       "goals": 1,
@@ -10440,7 +10592,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.217,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 121
+      "duelsWon": 121,
+      "aerialDuelsWon": 13,
+      "ballActions": 1041
     },
     "performance": {
       "attack": 11.18,
@@ -10491,7 +10645,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 5,
@@ -10507,8 +10660,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.706,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 341,
-      "passCompletionPct": 78.6
+      "duelsWon": 341,
+      "passCompletionPct": 78.6,
+      "aerialDuelsWon": 160,
+      "ballActions": 1749
     },
     "performance": {
       "attack": 18.33,
@@ -10559,7 +10714,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 32,
       "goals": 5,
@@ -10575,8 +10729,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.719,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 235,
-      "passCompletionPct": 68.5
+      "duelsWon": 235,
+      "passCompletionPct": 68.5,
+      "aerialDuelsWon": 43,
+      "ballActions": 1062
     },
     "performance": {
       "attack": 12,
@@ -10627,7 +10783,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 30,
       "goals": 0,
@@ -10645,7 +10800,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 78,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1259
     },
     "performance": {
       "attack": 10,
@@ -10696,7 +10853,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 30,
       "goals": 3,
@@ -10712,8 +10868,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.774,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 333,
-      "passCompletionPct": 82.6
+      "duelsWon": 333,
+      "passCompletionPct": 82.6,
+      "aerialDuelsWon": 153,
+      "ballActions": 1742
     },
     "performance": {
       "attack": 16.94,
@@ -10764,7 +10922,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 24,
       "goals": 5,
@@ -10780,8 +10937,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.281,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 302,
-      "passCompletionPct": 57.4
+      "duelsWon": 302,
+      "passCompletionPct": 57.4,
+      "aerialDuelsWon": 165,
+      "ballActions": 767
     },
     "performance": {
       "attack": 8.44,
@@ -10832,7 +10991,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 23,
       "goals": 0,
@@ -10848,7 +11006,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.233,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 177
+      "duelsWon": 177,
+      "aerialDuelsWon": 37,
+      "ballActions": 1220
     },
     "performance": {
       "attack": 2.4,
@@ -10899,7 +11059,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 23,
       "goals": 0,
@@ -10915,7 +11074,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.478,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 216
+      "duelsWon": 216,
+      "aerialDuelsWon": 77,
+      "ballActions": 1450
     },
     "performance": {
       "attack": 3.33,
@@ -10966,7 +11127,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 23,
       "goals": 5,
@@ -10982,7 +11142,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.152,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 211
+      "duelsWon": 211,
+      "aerialDuelsWon": 19,
+      "ballActions": 737
     },
     "performance": {
       "attack": 2.89,
@@ -11033,7 +11195,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 22,
       "goals": 0,
@@ -11049,7 +11210,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.241,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 104
+      "duelsWon": 104,
+      "aerialDuelsWon": 19,
+      "ballActions": 1262
     },
     "performance": {
       "attack": 3.33,
@@ -11100,7 +11263,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 21,
       "goals": 1,
@@ -11116,7 +11278,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.138,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 146
+      "duelsWon": 146,
+      "aerialDuelsWon": 9,
+      "ballActions": 1137
     },
     "performance": {
       "attack": 8.19,
@@ -11167,7 +11331,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 21,
       "goals": 6,
@@ -11183,7 +11346,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.172,
       "pointsPerMatch": 1.147,
       "goalDifferencePerMatch": -0.412,
-      "tacklesWon": 119
+      "duelsWon": 119,
+      "aerialDuelsWon": 24,
+      "ballActions": 597
     },
     "performance": {
       "attack": 6.67,
@@ -11234,7 +11399,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 0,
@@ -11252,7 +11416,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 116,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1806
     },
     "performance": {
       "attack": 10,
@@ -11303,7 +11469,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 31,
       "goals": 3,
@@ -11319,8 +11484,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.588,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 262,
-      "passCompletionPct": 76.1
+      "duelsWon": 262,
+      "passCompletionPct": 76.1,
+      "aerialDuelsWon": 46,
+      "ballActions": 1589
     },
     "performance": {
       "attack": 10.13,
@@ -11371,7 +11538,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 29,
       "goals": 2,
@@ -11387,8 +11553,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.576,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 250,
-      "passCompletionPct": 86.1
+      "duelsWon": 250,
+      "passCompletionPct": 86.1,
+      "aerialDuelsWon": 22,
+      "ballActions": 1499
     },
     "performance": {
       "attack": 6.04,
@@ -11439,7 +11607,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 28,
       "goals": 6,
@@ -11455,8 +11622,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.625,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 257,
-      "passCompletionPct": 76.6
+      "duelsWon": 257,
+      "passCompletionPct": 76.6,
+      "aerialDuelsWon": 24,
+      "ballActions": 1329
     },
     "performance": {
       "attack": 15.82,
@@ -11507,7 +11676,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 25,
       "goals": 5,
@@ -11523,8 +11691,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.483,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 270,
-      "passCompletionPct": 86
+      "duelsWon": 270,
+      "passCompletionPct": 86,
+      "aerialDuelsWon": 17,
+      "ballActions": 1244
     },
     "performance": {
       "attack": 17.24,
@@ -11575,7 +11745,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 25,
       "goals": 2,
@@ -11591,7 +11760,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.556,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 187
+      "duelsWon": 187,
+      "aerialDuelsWon": 19,
+      "ballActions": 1232
     },
     "performance": {
       "attack": 15,
@@ -11642,7 +11813,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 22,
       "goals": 0,
@@ -11658,8 +11828,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.417,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 229,
-      "passCompletionPct": 86.5
+      "duelsWon": 229,
+      "passCompletionPct": 86.5,
+      "aerialDuelsWon": 85,
+      "ballActions": 1591
     },
     "performance": {
       "attack": 3.33,
@@ -11710,7 +11882,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 20,
       "goals": 0,
@@ -11726,7 +11897,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.37,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 180
+      "duelsWon": 180,
+      "aerialDuelsWon": 54,
+      "ballActions": 1312
     },
     "performance": {
       "attack": 3.33,
@@ -11777,7 +11950,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 20,
       "goals": 1,
@@ -11793,7 +11965,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.522,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 193
+      "duelsWon": 193,
+      "aerialDuelsWon": 39,
+      "ballActions": 1175
     },
     "performance": {
       "attack": 11.39,
@@ -11844,7 +12018,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 28,
       "starts": 18,
       "goals": 6,
@@ -11860,7 +12033,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.107,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 234
+      "duelsWon": 234,
+      "aerialDuelsWon": 43,
+      "ballActions": 833
     },
     "performance": {
       "attack": 16.84,
@@ -11911,7 +12086,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 18,
       "goals": 2,
@@ -11927,7 +12101,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.038,
       "pointsPerMatch": 1.265,
       "goalDifferencePerMatch": -0.471,
-      "tacklesWon": 166
+      "duelsWon": 166,
+      "aerialDuelsWon": 26,
+      "ballActions": 988
     },
     "performance": {
       "attack": 8.28,
@@ -11978,7 +12154,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 33,
       "goals": 2,
@@ -11994,8 +12169,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.394,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 362,
-      "passCompletionPct": 91.1
+      "duelsWon": 362,
+      "passCompletionPct": 91.1,
+      "aerialDuelsWon": 163,
+      "ballActions": 2868
     },
     "performance": {
       "attack": 12.92,
@@ -12046,7 +12223,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 32,
       "goals": 13,
@@ -12062,8 +12238,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.182,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 329,
-      "passCompletionPct": 77.6
+      "duelsWon": 329,
+      "passCompletionPct": 77.6,
+      "aerialDuelsWon": 66,
+      "ballActions": 1612
     },
     "performance": {
       "attack": 19.64,
@@ -12114,7 +12292,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 31,
       "goals": 0,
@@ -12130,8 +12307,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.364,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 248,
-      "passCompletionPct": 90.4
+      "duelsWon": 248,
+      "passCompletionPct": 90.4,
+      "aerialDuelsWon": 35,
+      "ballActions": 1814
     },
     "performance": {
       "attack": 2.13,
@@ -12182,7 +12361,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 29,
       "goals": 3,
@@ -12198,8 +12376,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.167,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 218,
-      "passCompletionPct": 80.8
+      "duelsWon": 218,
+      "passCompletionPct": 80.8,
+      "aerialDuelsWon": 23,
+      "ballActions": 2622
     },
     "performance": {
       "attack": 17.22,
@@ -12250,7 +12430,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 28,
       "goals": 2,
@@ -12266,8 +12445,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.063,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 232,
-      "passCompletionPct": 84.9
+      "duelsWon": 232,
+      "passCompletionPct": 84.9,
+      "aerialDuelsWon": 16,
+      "ballActions": 2359
     },
     "performance": {
       "attack": 7.82,
@@ -12318,7 +12499,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 33,
       "starts": 28,
       "goals": 12,
@@ -12334,8 +12514,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.273,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 437,
-      "passCompletionPct": 83.9
+      "duelsWon": 437,
+      "passCompletionPct": 83.9,
+      "aerialDuelsWon": 7,
+      "ballActions": 1697
     },
     "performance": {
       "attack": 12.44,
@@ -12386,7 +12568,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 30,
       "starts": 27,
       "goals": 9,
@@ -12402,8 +12583,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.067,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 245,
-      "passCompletionPct": 77.3
+      "duelsWon": 245,
+      "passCompletionPct": 77.3,
+      "aerialDuelsWon": 55,
+      "ballActions": 924
     },
     "performance": {
       "attack": 14,
@@ -12454,7 +12637,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 24,
       "goals": 4,
@@ -12470,7 +12652,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 0.871,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 310
+      "duelsWon": 310,
+      "aerialDuelsWon": 8,
+      "ballActions": 1129
     },
     "performance": {
       "attack": 6.22,
@@ -12521,7 +12705,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 24,
       "goals": 1,
@@ -12537,8 +12720,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.231,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 206,
-      "passCompletionPct": 90.4
+      "duelsWon": 206,
+      "passCompletionPct": 90.4,
+      "aerialDuelsWon": 41,
+      "ballActions": 2097
     },
     "performance": {
       "attack": 10,
@@ -12589,7 +12774,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 23,
       "starts": 23,
       "goals": 0,
@@ -12607,7 +12791,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 58,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 948
     },
     "performance": {
       "attack": 10,
@@ -12658,7 +12844,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 21,
       "goals": 3,
@@ -12674,7 +12859,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.231,
       "pointsPerMatch": 1.912,
       "goalDifferencePerMatch": 0.559,
-      "tacklesWon": 224
+      "duelsWon": 224,
+      "aerialDuelsWon": 26,
+      "ballActions": 1353
     },
     "performance": {
       "attack": 11.07,
@@ -12725,7 +12912,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 34,
       "starts": 34,
       "goals": 2,
@@ -12741,8 +12927,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2.118,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 345,
-      "passCompletionPct": 88.7
+      "duelsWon": 345,
+      "passCompletionPct": 88.7,
+      "aerialDuelsWon": 165,
+      "ballActions": 1937
     },
     "performance": {
       "attack": 12.36,
@@ -12793,7 +12981,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 31,
       "goals": 0,
@@ -12811,7 +12998,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "saves": 100,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 0
+      "duelsWon": 0,
+      "aerialDuelsWon": 0,
+      "ballActions": 1935
     },
     "performance": {
       "attack": 10,
@@ -12862,7 +13051,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 31,
       "starts": 29,
       "goals": 3,
@@ -12878,8 +13066,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 2,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 246,
-      "passCompletionPct": 71.3
+      "duelsWon": 246,
+      "passCompletionPct": 71.3,
+      "aerialDuelsWon": 59,
+      "ballActions": 1107
     },
     "performance": {
       "attack": 9.87,
@@ -12930,7 +13120,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 27,
       "goals": 0,
@@ -12946,8 +13135,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.75,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 221,
-      "passCompletionPct": 89.9
+      "duelsWon": 221,
+      "passCompletionPct": 89.9,
+      "aerialDuelsWon": 17,
+      "ballActions": 1358
     },
     "performance": {
       "attack": 1.87,
@@ -12998,7 +13189,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 32,
       "starts": 25,
       "goals": 2,
@@ -13014,8 +13204,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.656,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 240,
-      "passCompletionPct": 72
+      "duelsWon": 240,
+      "passCompletionPct": 72,
+      "aerialDuelsWon": 24,
+      "ballActions": 1345
     },
     "performance": {
       "attack": 10.22,
@@ -13066,7 +13258,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 25,
       "goals": 1,
@@ -13082,8 +13273,10 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.889,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 165,
-      "passCompletionPct": 79.4
+      "duelsWon": 165,
+      "passCompletionPct": 79.4,
+      "aerialDuelsWon": 30,
+      "ballActions": 1333
     },
     "performance": {
       "attack": 9.44,
@@ -13134,7 +13327,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 29,
       "starts": 20,
       "goals": 1,
@@ -13150,7 +13342,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.414,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 139
+      "duelsWon": 139,
+      "aerialDuelsWon": 31,
+      "ballActions": 1178
     },
     "performance": {
       "attack": 8.19,
@@ -13201,7 +13395,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 27,
       "starts": 20,
       "goals": 4,
@@ -13217,7 +13410,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.556,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 204
+      "duelsWon": 204,
+      "aerialDuelsWon": 63,
+      "ballActions": 658
     },
     "performance": {
       "attack": 2.67,
@@ -13268,7 +13463,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 21,
       "starts": 18,
       "goals": 0,
@@ -13284,7 +13478,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.905,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 168
+      "duelsWon": 168,
+      "aerialDuelsWon": 27,
+      "ballActions": 929
     },
     "performance": {
       "attack": 4,
@@ -13335,7 +13531,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 24,
       "starts": 17,
       "goals": 3,
@@ -13351,7 +13546,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.375,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 126
+      "duelsWon": 126,
+      "aerialDuelsWon": 24,
+      "ballActions": 837
     },
     "performance": {
       "attack": 11.47,
@@ -13402,7 +13599,6 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
     "edition": "Bundesliga 2025-26",
     "editionKind": "season",
     "stats": {
-      "minutes": 0,
       "appearances": 26,
       "starts": 16,
       "goals": 0,
@@ -13418,7 +13614,9 @@ export const BUNDESLIGA_PLAYER_DATABASE: readonly SoccerPlayerCard[] = [
       "goalsConcededPerMatch": 1.538,
       "pointsPerMatch": 0.765,
       "goalDifferencePerMatch": -0.912,
-      "tacklesWon": 134
+      "duelsWon": 134,
+      "aerialDuelsWon": 15,
+      "ballActions": 975
     },
     "performance": {
       "attack": 4.67,
