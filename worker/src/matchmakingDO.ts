@@ -1,9 +1,17 @@
 import { DurableObject } from "cloudflare:workers";
-import { MatchmakingServerMessage, Sport } from "@fiveaside/shared";
+import {
+  DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+  isFootballCompetitionChoice,
+  resolveFootballCompetition,
+  type FootballCompetition,
+  type FootballCompetitionChoice,
+  MatchmakingServerMessage,
+  Sport,
+} from "@fiveaside/shared";
 import { Env } from "./env";
 import { generateClaimToken, generateRoomCode } from "./ids";
 
-type WaitAttachment = { status: "waiting" | "matched" };
+type WaitAttachment = { status: "waiting" | "matched"; sport?: Sport; competitionChoice?: FootballCompetitionChoice };
 const ROOM_ALLOCATION_ATTEMPTS = 12;
 const WS_OPEN = 1;
 
@@ -22,6 +30,9 @@ export class MatchmakingDO extends DurableObject<Env> {
     const requested = new URL(request.url).searchParams.get("sport") ?? "basketball";
     if (requested !== "basketball" && requested !== "soccer") return new Response("Invalid sport.", { status: 400 });
     const sport: Sport = requested;
+    const requestedCompetition = new URL(request.url).searchParams.get("competition") ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+    if (sport === "soccer" && !isFootballCompetitionChoice(requestedCompetition)) return new Response("Invalid football competition.", { status: 400 });
+    const competitionChoice: FootballCompetitionChoice = sport === "soccer" ? requestedCompetition as FootballCompetitionChoice : DEFAULT_FOOTBALL_COMPETITION_CHOICE;
 
     const pair = new WebSocketPair();
     const [client, server] = [pair[0], pair[1]];
@@ -31,19 +42,25 @@ export class MatchmakingDO extends DurableObject<Env> {
       .find(
         (ws) =>
           ws.readyState === WS_OPEN &&
-          (ws.deserializeAttachment() as WaitAttachment | null)?.status === "waiting"
+          this.compatible(ws.deserializeAttachment() as WaitAttachment | null, sport)
       );
 
     if (waiting) {
       // Claim both sides before the first await so a third connection arriving mid-pairing can't
       // also see `waiting` as up for grabs.
-      waiting.serializeAttachment({ status: "matched" } satisfies WaitAttachment);
+      const legacyAttachment = waiting.deserializeAttachment() as WaitAttachment;
+      const waitingAttachment: Required<WaitAttachment> = {
+        status: "matched",
+        sport: legacyAttachment.sport ?? sport,
+        competitionChoice: legacyAttachment.competitionChoice ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+      };
+      waiting.serializeAttachment(waitingAttachment satisfies WaitAttachment);
       this.ctx.acceptWebSocket(server);
-      server.serializeAttachment({ status: "matched" } satisfies WaitAttachment);
-      await this.pair(waiting, server, sport);
+      server.serializeAttachment({ status: "matched", sport, competitionChoice } satisfies WaitAttachment);
+      await this.pair(waiting, server, sport, waitingAttachment.competitionChoice, competitionChoice);
     } else {
       this.ctx.acceptWebSocket(server);
-      server.serializeAttachment({ status: "waiting" } satisfies WaitAttachment);
+      server.serializeAttachment({ status: "waiting", sport, competitionChoice } satisfies WaitAttachment);
       this.send(server, { type: "waiting" });
     }
 
@@ -62,14 +79,31 @@ export class MatchmakingDO extends DurableObject<Env> {
     // Same as close — no explicit cleanup needed.
   }
 
-  private async pair(a: WebSocket, b: WebSocket, sport: Sport): Promise<void> {
+  private compatible(attachment: WaitAttachment | null, sport: Sport): boolean {
+    return Boolean(attachment && attachment.status === "waiting" && (attachment.sport ?? sport) === sport);
+  }
+
+  private async pair(a: WebSocket, b: WebSocket, sport: Sport, choiceA: FootballCompetitionChoice, choiceB: FootballCompetitionChoice): Promise<void> {
     const tokenA = generateClaimToken();
     const tokenB = generateClaimToken();
+    const candidateA = sport === "soccer" ? resolveFootballCompetition(choiceA) : undefined;
+    const candidateB = sport === "soccer" ? resolveFootballCompetition(choiceB) : undefined;
+    const competition: FootballCompetition | undefined = candidateA && candidateB
+      ? candidateA === candidateB || Math.random() < 0.5 ? candidateA : candidateB
+      : undefined;
+    const competitionDraw = candidateA && candidateB && candidateA !== candidateB && competition
+      ? { choices: [candidateA, candidateB] as [FootballCompetition, FootballCompetition], selected: competition, durationMs: 5_000 }
+      : undefined;
+    const roomChoice: FootballCompetitionChoice = sport !== "soccer"
+      ? DEFAULT_FOOTBALL_COMPETITION_CHOICE
+      : choiceA === choiceB
+        ? choiceA
+        : competition ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
     let code: string | null = null;
 
     for (let attempt = 0; attempt < ROOM_ALLOCATION_ATTEMPTS; attempt += 1) {
       const candidate = generateRoomCode();
-      if (await this.env.ROOMS.getByName(candidate).initMatchedRoom(tokenA, tokenB, sport)) {
+      if (await this.env.ROOMS.getByName(candidate).initMatchedRoom(tokenA, tokenB, sport, roomChoice, competition)) {
         code = candidate;
         break;
       }
@@ -88,14 +122,15 @@ export class MatchmakingDO extends DurableObject<Env> {
     if (a.readyState !== WS_OPEN || b.readyState !== WS_OPEN) {
       for (const ws of [a, b]) {
         if (ws.readyState !== WS_OPEN) continue;
-        ws.serializeAttachment({ status: "waiting" } satisfies WaitAttachment);
+        const previous = ws.deserializeAttachment() as WaitAttachment;
+        ws.serializeAttachment({ ...previous, status: "waiting" } satisfies WaitAttachment);
         this.send(ws, { type: "waiting" });
       }
       return;
     }
 
-    this.send(a, { type: "matchFound", code, seat: "A", token: tokenA, sport });
-    this.send(b, { type: "matchFound", code, seat: "B", token: tokenB, sport });
+    this.send(a, { type: "matchFound", code, seat: "A", token: tokenA, sport, competition, competitionDraw });
+    this.send(b, { type: "matchFound", code, seat: "B", token: tokenB, sport, competition, competitionDraw });
 
     this.closeSoon(a);
     this.closeSoon(b);

@@ -1,6 +1,13 @@
-import { AiDifficulty, todayUtcDateString } from "@fiveaside/shared/core";
+import {
+  AiDifficulty,
+  footballCompetitionLabel,
+  resolveFootballCompetition,
+  seededRng,
+  todayUtcDateString,
+} from "@fiveaside/shared/core";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
+import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
 import { useAiDifficulty } from "../hooks/useAiDifficulty";
 import { useSport } from "../hooks/useSport";
 import { loadDailyBestScore, loadDailyCompleted } from "../utils/aiStorage";
@@ -14,11 +21,14 @@ function difficultyLabel(difficulty: AiDifficulty): string {
 
 export function AiLanding() {
   const navigate = useNavigate();
-  const { sport } = useSport();
+  const { sport, footballCompetition } = useSport();
   const { difficulty, setDifficulty } = useAiDifficulty();
   const today = todayUtcDateString();
-  const dailyComplete = loadDailyCompleted(sport, today) !== null;
-  const dailyBest = loadDailyBestScore(sport);
+  const dailyCompetition = sport === "soccer"
+    ? resolveFootballCompetition(footballCompetition, seededRng(`football-competition:daily:${today}`))
+    : undefined;
+  const dailyComplete = loadDailyCompleted(sport, today, undefined, dailyCompetition) !== null;
+  const dailyBest = loadDailyBestScore(sport, undefined, dailyCompetition);
 
   return (
     <div className="game-page ai-landing">
@@ -28,6 +38,8 @@ export function AiLanding() {
         detail="Choose a challenge"
         sportLocked={false}
       />
+
+      <FootballCompetitionSelect />
 
       <section className="ai-difficulty-section" aria-labelledby="difficulty-title">
         <div className="ai-section-heading">
@@ -71,6 +83,7 @@ export function AiLanding() {
             <span className="mode-label">Daily Challenge</span>
             <span className="mode-meta">
               {dailyComplete ? "Completed today" : "Today's shared board"} · Competitive AI
+              {dailyCompetition ? ` · ${footballCompetitionLabel(dailyCompetition)}` : ""}
               {dailyBest !== null ? ` · Best ${dailyBest.toFixed(1)}` : ""}
             </span>
           </span>

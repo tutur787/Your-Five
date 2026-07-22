@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { footballCompetitionLabel } from "@fiveaside/shared/core";
 import { AppHeader } from "../components/AppHeader";
 import { useOnlineMatch } from "../hooks/useOnlineMatch";
 import { useRecordProgress } from "../hooks/useRecordProgress";
@@ -55,13 +56,18 @@ export function RoomPage() {
   const myRematchReady = seat ? metadata.rematchReady[seat] : false;
   const otherSeat = seat === "A" ? "B" : "A";
   const otherRematchReady = metadata.rematchReady[otherSeat];
+  const competitionDetail = metadata.competition
+    ? footballCompetitionLabel(metadata.competition)
+    : null;
 
   const header = (
     <>
       <AppHeader
         eyebrow={roomKind === "matched" ? "ONLINE MATCH" : "PRIVATE ROOM"}
         title={code}
-        detail={connectionStatus === "reconnecting" ? "Reconnecting" : `Playing as ${myLabel}`}
+        detail={connectionStatus === "reconnecting"
+          ? `Reconnecting${competitionDetail ? ` · ${competitionDetail}` : ""}`
+          : `Playing as ${myLabel}${competitionDetail ? ` · ${competitionDetail}` : ""}`}
         actions={roomKind === "private" ? <button className="secondary-button" onClick={copyLink}>{copied ? "Copied" : "Copy invite"}</button> : undefined}
       />
       {connectionStatus === "reconnecting" && <div className="error-banner">Reconnecting to your seat...</div>}
@@ -111,7 +117,7 @@ export function RoomPage() {
         seatNames={labels}
         turnDeadlineAt={metadata.turnDeadlineAt}
         resultsExtra={resultActions}
-        resultsSubtitle={roomKind === "matched" ? "Online Quick Match" : "Private Match"}
+        resultsSubtitle={`${roomKind === "matched" ? "Online Quick Match" : "Private Match"}${state.sport === "soccer" ? ` · ${footballCompetitionLabel(state.competition)}` : ""}`}
       />
     </div>
   );

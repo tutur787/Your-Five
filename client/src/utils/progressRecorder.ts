@@ -59,6 +59,7 @@ export function recordCompletedMatch(
     matchId: state.matchId,
     completedAt: new Date().toISOString(),
     sport: state.sport,
+    competition: state.competition,
     mode,
     result,
     scoreFor,

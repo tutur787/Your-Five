@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ACHIEVEMENT_DEFINITIONS, type AchievementId } from "@fiveaside/shared/core";
+import { ACHIEVEMENT_DEFINITIONS, footballCompetitionLabel, type AchievementId } from "@fiveaside/shared/core";
 import { FaCheck, FaLock, FaMedal, FaTrophy } from "react-icons/fa6";
 import {
   ACHIEVEMENT_UNLOCKED_EVENT,
@@ -25,7 +25,7 @@ function HistoryRow({ entry }: { entry: ProgressHistoryEntry }) {
   return (
     <div className="progress-history-row">
       <span className={`history-result ${entry.result}`}>{entry.result === "neutral" ? "LOCAL" : entry.result.toUpperCase()}</span>
-      <span><strong>{MODE_LABELS[entry.mode]}</strong><small>{entry.sport === "soccer" ? "Football" : "Basketball"} · {new Date(entry.completedAt).toLocaleDateString()}</small></span>
+      <span><strong>{MODE_LABELS[entry.mode]}</strong><small>{entry.sport === "soccer" ? `Football · ${footballCompetitionLabel(entry.competition)}` : "Basketball"} · {new Date(entry.completedAt).toLocaleDateString()}</small></span>
       <span>{entry.scoreFor.toFixed(1)}<small>{entry.result === "neutral" ? ` vs ${entry.scoreAgainst.toFixed(1)}` : " score"}</small></span>
     </div>
   );

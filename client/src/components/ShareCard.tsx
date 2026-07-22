@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MatchState, playerScoreContributions, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
+import { footballCompetitionLabel, MatchState, playerScoreContributions, SeatId, slotsForSport, teamScore } from "@fiveaside/shared/core";
 import { formatLineupSlot } from "../utils/position";
 
 interface Props {
@@ -44,17 +44,22 @@ function draw(ctx: CanvasRenderingContext2D, state: MatchState, seat: SeatId, la
   ctx.font = "bold 30px -apple-system, Helvetica, Arial, sans-serif";
   ctx.fillText(`YOUR FIVE / $20 ${state.sport === "soccer" ? "FOOTBALL" : "BASKETBALL"} DRAFT`, 36, 60);
 
-  if (subtitle) {
+  const competitionLabel = state.sport === "soccer" ? footballCompetitionLabel(state.competition) : null;
+  const resolvedSubtitle = [
+    subtitle,
+    competitionLabel && !subtitle?.includes(competitionLabel) ? competitionLabel : null,
+  ].filter(Boolean).join(" · ");
+  if (resolvedSubtitle) {
     ctx.fillStyle = COLORS.muted;
     ctx.font = "18px -apple-system, Helvetica, Arial, sans-serif";
-    ctx.fillText(subtitle, 36, 90);
+    ctx.fillText(fittedText(ctx, resolvedSubtitle, CARD_WIDTH - 72), 36, 90);
   }
 
   ctx.fillStyle = COLORS.accent;
   ctx.font = "bold 22px -apple-system, Helvetica, Arial, sans-serif";
-  ctx.fillText(label, 36, subtitle ? 132 : 110);
+  ctx.fillText(label, 36, resolvedSubtitle ? 132 : 110);
 
-  const scoreY = subtitle ? 200 : 178;
+  const scoreY = resolvedSubtitle ? 200 : 178;
   ctx.fillStyle = COLORS.accent2;
   ctx.font = "bold 56px -apple-system, Helvetica, Arial, sans-serif";
   ctx.fillText(score.toFixed(1), 36, scoreY);

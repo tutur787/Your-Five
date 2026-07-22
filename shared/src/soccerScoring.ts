@@ -7,6 +7,7 @@ import type {
   SoccerSlot,
   TeamState,
 } from "./types";
+import { normalizeFootballCompetition } from "./footballCompetitions";
 
 export const SOCCER_POSITION_MISMATCH: Record<SoccerRole, Record<SoccerRole, number>> = {
   GK: { GK: 0, DEF: 30, MID: 30, ATT: 30 },
@@ -202,6 +203,9 @@ function clamp(value: number, min: number, max: number): number {
  * tie-break so a famous name cannot erase a poor card window. Exact accolades remain separate.
  */
 export function soccerPlayerQuality(player: SoccerPlayerCard): number {
+  if (normalizeFootballCompetition(player.competition) !== "uefa-all-time") {
+    return clamp(player.performance.domesticQuality ?? player.performance.roleScore, 6, 18);
+  }
   const achievementScore = player.performance.achievementScore;
   if (achievementScore !== undefined) {
     return Math.max(0, Math.min(20, (player.performance.roleScore - achievementScore * 0.15) / 0.85));
@@ -226,6 +230,9 @@ export function soccerPlayerQuality(player: SoccerPlayerCard): number {
 }
 
 export function soccerTeamSuccessValue(player: SoccerPlayerCard): number {
+  if (normalizeFootballCompetition(player.competition) !== "uefa-all-time") {
+    return clamp(player.teamSuccess, -2, 2);
+  }
   return player.teamSuccess * SOCCER_TEAM_SUCCESS_WEIGHT;
 }
 

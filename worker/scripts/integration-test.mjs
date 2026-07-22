@@ -3,6 +3,14 @@ import assert from "node:assert/strict";
 const HTTP_BASE = (process.env.WORKER_URL ?? "http://127.0.0.1:8787").replace(/\/$/, "");
 const WS_BASE = HTTP_BASE.replace(/^http/, "ws");
 const TIMEOUT_MS = 5000;
+const FOOTBALL_COMPETITIONS = [
+  "uefa-all-time",
+  "premier-league-2025-26",
+  "laliga-2025-26",
+  "serie-a-2025-26",
+  "bundesliga-2025-26",
+  "ligue-1-2025-26",
+];
 
 class TestSocket {
   constructor(path) {
@@ -79,19 +87,25 @@ async function expectRejectedRoom(code, token = null) {
   });
 }
 
-async function createPrivateRoom(sport = "basketball") {
-  const response = await fetch(`${HTTP_BASE}/rooms/new?sport=${sport}`);
+async function createPrivateRoom(sport = "basketball", competition) {
+  const query = new URLSearchParams({ sport });
+  if (competition) query.set("competition", competition);
+  const response = await fetch(`${HTTP_BASE}/rooms/new?${query}`);
   assert.equal(response.status, 200);
   const room = await response.json();
   assert.match(room.code, /^[A-HJ-NP-Z2-9]{6}$/);
   assert.equal(typeof room.token, "string");
   assert.ok(room.token.length > 0);
   assert.equal(room.sport, sport);
+  if (sport === "soccer") {
+    assert.ok(FOOTBALL_COMPETITIONS.includes(room.competition));
+    if (competition && competition !== "random") assert.equal(room.competition, competition);
+  }
   return room;
 }
 
-async function testPrivateRoom(sport = "basketball") {
-  const room = await createPrivateRoom(sport);
+async function testPrivateRoom(sport = "basketball", competition) {
+  const room = await createPrivateRoom(sport, competition);
   const a = await connectRoom(room.code, room.token);
   const b = await connectRoom(room.code);
   assert.equal(a.joined.seat, "A");
@@ -99,6 +113,11 @@ async function testPrivateRoom(sport = "basketball") {
   assert.equal(a.joined.roomKind, "private");
   assert.equal(a.joined.sport, sport);
   assert.equal(b.joined.sport, sport);
+  if (sport === "soccer") {
+    assert.equal(a.joined.competition, room.competition);
+    assert.equal(b.joined.competition, room.competition);
+    assert.equal(a.joined.metadata.competition, room.competition);
+  }
   assert.notEqual(a.joined.token, b.joined.token);
 
   await expectRejectedRoom(room.code);
@@ -116,6 +135,7 @@ async function testPrivateRoom(sport = "basketball") {
   assert.equal(ack.ok, true);
   const started = await aAgain.socket.waitFor((message) => message.type === "state");
   assert.equal(started.state.sport, sport);
+  if (sport === "soccer") assert.equal(started.state.competition, room.competition);
   await Promise.all([aAgain.socket.close(), bAgain.socket.close()]);
 }
 
@@ -283,12 +303,63 @@ async function testIsolatedQueues() {
   await Promise.all([soccerFirst.close(), soccerSecond.close(), basketballFirst.close(), basketballSecond.close()]);
 }
 
+async function testFootballCompetitionQueues() {
+  const premier = new TestSocket("/matchmaking?sport=soccer&competition=premier-league-2025-26");
+  await premier.waitFor((message) => message.type === "waiting");
+  const laliga = new TestSocket("/matchmaking?sport=soccer&competition=laliga-2025-26");
+  const [differentA, differentB] = await Promise.all([
+    premier.waitFor((message) => message.type === "matchFound"),
+    laliga.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(differentA.code, differentB.code, "different explicit leagues enter the same match");
+  assert.deepEqual(
+    differentA.competitionDraw.choices,
+    ["premier-league-2025-26", "laliga-2025-26"],
+    "the draw presents both requested pools"
+  );
+  assert.equal(differentA.competitionDraw.durationMs, 5_000, "different pools use the five-second draw");
+  assert.equal(differentA.competitionDraw.selected, differentA.competition, "the draw reveals the room competition");
+  assert.deepEqual(differentA.competitionDraw, differentB.competitionDraw, "both players receive the same draw result");
+  assert.ok(differentA.competitionDraw.choices.includes(differentA.competition), "one of the two requested pools wins");
+
+  const explicit = new TestSocket("/matchmaking?sport=soccer&competition=premier-league-2025-26");
+  await explicit.waitFor((message) => message.type === "waiting");
+  const randomA = new TestSocket("/matchmaking?sport=soccer&competition=random");
+  const [firstExplicit, firstRandom] = await Promise.all([
+    explicit.waitFor((message) => message.type === "matchFound"),
+    randomA.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(firstExplicit.competition, firstRandom.competition, "both players receive the same resolved pool");
+  assert.ok(FOOTBALL_COMPETITIONS.includes(firstRandom.competition), "Random resolves to a supported pool before pairing");
+  if (firstExplicit.competitionDraw) {
+    assert.ok(firstExplicit.competitionDraw.choices.includes("premier-league-2025-26"), "the explicit preference is one draw option");
+    assert.deepEqual(firstExplicit.competitionDraw, firstRandom.competitionDraw, "explicit versus Random shares one draw result");
+  } else {
+    assert.equal(firstRandom.competition, "premier-league-2025-26", "no draw is needed when Random resolves to the explicit pool");
+  }
+
+  const randomFirst = new TestSocket("/matchmaking?sport=soccer&competition=random");
+  await randomFirst.waitFor((message) => message.type === "waiting");
+  const randomSecond = new TestSocket("/matchmaking?sport=soccer&competition=random");
+  const [randomMatchA, randomMatchB] = await Promise.all([
+    randomFirst.waitFor((message) => message.type === "matchFound"),
+    randomSecond.waitFor((message) => message.type === "matchFound"),
+  ]);
+  assert.equal(randomMatchA.competition, randomMatchB.competition, "Random versus Random resolves one shared league");
+  assert.ok(FOOTBALL_COMPETITIONS.includes(randomMatchA.competition), "Random versus Random resolves one of the six supported leagues");
+  assert.deepEqual(randomMatchA.competitionDraw, randomMatchB.competitionDraw, "Random versus Random shares any required draw");
+
+  await Promise.all([premier.close(), laliga.close(), explicit.close(), randomA.close(), randomFirst.close(), randomSecond.close()]);
+}
+
 async function testInvalidSport() {
   const response = await fetch(`${HTTP_BASE}/rooms/new?sport=tennis`);
   assert.equal(response.status, 400);
   const legacy = await fetch(`${HTTP_BASE}/rooms/new`);
   assert.equal(legacy.status, 200);
   assert.equal((await legacy.json()).sport, "basketball");
+  const invalidCompetition = await fetch(`${HTTP_BASE}/rooms/new?sport=soccer&competition=mls`);
+  assert.equal(invalidCompetition.status, 400);
 }
 
 async function testGuestAccountState() {
@@ -323,9 +394,12 @@ async function testRateLimits() {
 
 await testPrivateRoom("basketball");
 await testPrivateRoom("soccer");
+await testPrivateRoom("soccer", "random");
+await testPrivateRoom("soccer", "premier-league-2025-26");
 await testMatchmaking("basketball");
 await testMatchmaking("soccer");
 await testIsolatedQueues();
+await testFootballCompetitionQueues();
 await testInvalidSport();
 await testGuestAccountState();
 await testRateLimits();

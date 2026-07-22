@@ -1,4 +1,6 @@
 export * from "./types";
+export * from "./footballCompetitions";
+export * from "./domesticFootballScoring";
 export * from "./soccerScoring";
 export * from "./gameEngine";
 export * from "./dailySeed";

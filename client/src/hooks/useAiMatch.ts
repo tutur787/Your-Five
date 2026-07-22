@@ -60,17 +60,17 @@ export function useAiMatch({
   const today = todayUtcDateString();
   const completedAtMount = useRef<MatchState | null | undefined>(undefined);
   if (completedAtMount.current === undefined) {
-    completedAtMount.current = mode === "daily" ? loadDailyCompleted(sport, today) : null;
+    completedAtMount.current = mode === "daily" ? loadDailyCompleted(sport, today, undefined, runtime.competition) : null;
   }
 
   const makeInitialMatch = () => {
-    if (mode === "daily") return createMatchWithRuntime(runtime, `daily:${today}:${sport}`, `daily:${today}:${sport}`);
+    if (mode === "daily") return createMatchWithRuntime(runtime, `daily:${today}:${sport}:${runtime.competition ?? "default"}`, `daily:${today}:${sport}:${runtime.competition ?? "default"}`);
     if (mode === "challenge" && challengeSeed) return createMatchWithRuntime(runtime, challengeSeed);
     return createMatchWithRuntime(runtime);
   };
   const [state, setState] = useState<MatchState>(() => completedAtMount.current ?? makeInitialMatch());
   const [error, setError] = useState<string | null>(null);
-  const [bestScore, setBestScore] = useState<number | null>(() => loadDailyBestScore(sport));
+  const [bestScore, setBestScore] = useState<number | null>(() => loadDailyBestScore(sport, undefined, runtime.competition));
   const [record, setRecord] = useState<AiRecord>(() => progressRecordFor(sport, `ai-${difficulty}`));
   const sessionSeedRef = useRef("");
   if (!sessionSeedRef.current) {
@@ -131,7 +131,7 @@ export function useAiMatch({
     if (state.phase !== "complete" || resultSavedRef.current) return;
     resultSavedRef.current = true;
     if (mode === "daily") {
-      setBestScore(saveDailyResult(sport, today, state, HUMAN_SEAT));
+      setBestScore(saveDailyResult(sport, today, state, HUMAN_SEAT, undefined, runtime.competition));
       recordCompletedMatch(state, "daily", HUMAN_SEAT);
     } else if (mode === "quick") {
       recordCompletedMatch(state, `ai-${difficulty}`, HUMAN_SEAT);

@@ -521,7 +521,7 @@ export function playerCompositeValue(player: PlayerCard): number {
 export function createMatchFromPool(
   sport: Sport,
   pool: PlayerCard[],
-  metadata: { matchId?: string; poolSeed?: string; poolVersion?: string } = {}
+  metadata: Pick<MatchState, "matchId" | "poolSeed" | "poolVersion" | "competition"> = {}
 ): MatchState {
   return {
     sport,

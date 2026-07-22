@@ -33,7 +33,7 @@ function localizeMetadata(metadata: RoomMetadata): RoomMetadata {
 }
 
 export function useOnlineMatch(code: string, initialToken: string | null = null) {
-  const { setSport } = useSport();
+  const { setSport, setFootballCompetition } = useSport();
   const socketRef = useRef<RoomSocket | null>(null);
   const tokenRef = useRef(initialToken);
   const seatRef = useRef<SeatId | null>(null);
@@ -80,6 +80,9 @@ export function useOnlineMatch(code: string, initialToken: string | null = null)
             case "joined":
               attempt = 0;
               setSport(message.sport);
+              if (message.sport === "soccer" && message.competition) {
+                setFootballCompetition(message.metadata?.competitionChoice ?? message.competition);
+              }
               tokenRef.current = message.token;
               storeRoomToken(code, message.token);
               seatRef.current = message.seat;
@@ -132,7 +135,7 @@ export function useOnlineMatch(code: string, initialToken: string | null = null)
       socketRef.current = null;
       socket?.close();
     };
-  }, [code, initialToken, setSport]);
+  }, [code, initialToken, setSport, setFootballCompetition]);
 
   const dispatch = useCallback((action: MatchAction) => {
     socketRef.current?.action(action).catch((err: Error) => setError(err.message));

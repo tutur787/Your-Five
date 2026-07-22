@@ -5,6 +5,7 @@ import { SportSwitch } from "../components/SportSwitch";
 import { useSport } from "../hooks/useSport";
 import { ProgressButton } from "../components/ProgressModal";
 import { AccountButton } from "../components/AccountButton";
+import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export function Landing() {
     <main className="home-screen">
       <header className="home-header">
         <BrandLockup />
-        <SportSwitch />
+        <div className="home-sport-controls"><SportSwitch /></div>
         <div className="home-header-tools">
           <AccountButton />
           <ProgressButton />
@@ -33,6 +34,8 @@ export function Landing() {
           <span><strong>1</strong> free skip</span>
         </div>
       </section>
+
+      <FootballCompetitionSelect />
 
       <section className="mode-select" aria-label="Choose a game mode">
         <button className="mode-option featured" onClick={() => navigate("/ai")}>

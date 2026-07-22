@@ -4,6 +4,7 @@ import {
   PlayerAccolades,
   playerScoreContributions,
   positionPenaltyForSlot,
+  normalizeFootballCompetition,
   rawStatTotal,
   RosterPick,
   scoreComponents,
@@ -202,6 +203,9 @@ function SoccerScoreBreakdown({ team }: { team: TeamState }) {
   );
   const coreScores = soccerPicks.map((pick) => soccerPlayerQuality(pick.player));
   const honoredPicks = soccerPicks.filter((pick) => soccerHonorPoints(pick.player.honors) > 0);
+  const isDomesticCompetition = soccerPicks.some(
+    (pick) => normalizeFootballCompetition(pick.player.competition) !== "uefa-all-time"
+  );
   return (
     <details className="score-breakdown-details">
       <summary>Score details ({components.total.toFixed(1)})</summary>
@@ -218,7 +222,7 @@ function SoccerScoreBreakdown({ team }: { team: TeamState }) {
           {coreScores.map((score) => score.toFixed(1)).join(" + ")} = {components.performance.total.toFixed(1)}
         </div>
         <div className="breakdown-row">
-          <span>Team success (60% weighted)</span>
+          <span>{isDomesticCompetition ? "Team success (league PPM percentile)" : "Team success (60% weighted)"}</span>
           <span>{components.teamSuccess >= 0 ? "+" : ""}{components.teamSuccess.toFixed(1)}</span>
         </div>
         {honoredPicks.length > 0 ? (

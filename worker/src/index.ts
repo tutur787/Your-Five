@@ -4,7 +4,13 @@ import { AccountDO } from "./accountDO";
 import { handleAuthRequest } from "./auth";
 import { MatchmakingDO } from "./matchmakingDO";
 import { RoomDO } from "./roomDO";
-import type { Sport } from "@fiveaside/shared";
+import {
+  DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+  isFootballCompetitionChoice,
+  resolveFootballCompetition,
+  type FootballCompetitionChoice,
+  type Sport,
+} from "@fiveaside/shared";
 
 // wrangler.jsonc's durable_objects.bindings reference these class names, so the module that's
 // `main` must re-export both classes even though nothing in this file calls them directly.
@@ -39,6 +45,12 @@ function json(body: unknown, cors: Record<string, string>, status = 200): Respon
 function requestedSport(url: URL): Sport | null {
   const value = url.searchParams.get("sport") ?? "basketball";
   return value === "basketball" || value === "soccer" ? value : null;
+}
+
+function requestedCompetition(url: URL, sport: Sport): FootballCompetitionChoice | null {
+  if (sport !== "soccer") return DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+  const value = url.searchParams.get("competition") ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+  return isFootballCompetitionChoice(value) ? value : null;
 }
 
 function rateLimitKey(request: Request, url: URL): string {
@@ -79,11 +91,14 @@ export default {
 
       const sport = requestedSport(url);
       if (!sport) return json({ error: "Invalid sport." }, cors, 400);
+      const competitionChoice = requestedCompetition(url, sport);
+      if (!competitionChoice) return json({ error: "Invalid football competition." }, cors, 400);
+      const competition = sport === "soccer" ? resolveFootballCompetition(competitionChoice) : undefined;
       const token = generateClaimToken();
       for (let attempt = 0; attempt < ROOM_ALLOCATION_ATTEMPTS; attempt += 1) {
         const code = generateRoomCode();
-        const reserved = await env.ROOMS.getByName(code).reservePrivateRoom(token, sport);
-        if (reserved) return json({ code, token, sport }, cors);
+        const reserved = await env.ROOMS.getByName(code).reservePrivateRoom(token, sport, competitionChoice, competition);
+        if (reserved) return json({ code, token, sport, competition }, cors);
       }
       return json({ error: "Could not allocate a room. Please try again." }, cors, 503);
     }
@@ -93,6 +108,8 @@ export default {
       if (!limit.success) return rateLimited(cors);
       const sport = requestedSport(url);
       if (!sport) return json({ error: "Invalid sport." }, cors, 400);
+      const competition = requestedCompetition(url, sport);
+      if (!competition) return json({ error: "Invalid football competition." }, cors, 400);
       const stub = env.MATCHMAKING.getByName(sport);
       return stub.fetch(request);
     }

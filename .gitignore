@@ -7,5 +7,6 @@ dist/
 .DS_Store
 .wrangler/
 .cache/soccer-data/
+.cache/football-data/
 deployment.txt
 GOOGLE_AUTH_SETUP.md

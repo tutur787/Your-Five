@@ -2,8 +2,10 @@ import { createMatch } from "@fiveaside/shared";
 import {
   aiRecordKey,
   dailyCompletedKey,
+  dailyBestScoreKey,
   loadAiDifficulty,
   loadAiRecord,
+  loadDailyBestScore,
   loadDailyCompleted,
   recordAiResult,
   saveAiDifficulty,
@@ -44,6 +46,18 @@ const daily = createMatch("basketball", () => 0.2);
 saveDailyResult("basketball", "2026-07-15", daily, "A", storage);
 assert(loadDailyCompleted("basketball", "2026-07-15", storage) !== null, "Daily completion remains loadable");
 assert(storage.getItem(dailyCompletedKey("basketball", "2026-07-15")) !== null, "Daily completion keeps its existing storage key");
+
+const footballDaily = createMatch("soccer", () => 0.2);
+footballDaily.competition = "premier-league-2025-26";
+saveDailyResult("soccer", "2026-07-15", footballDaily, "A", storage, footballDaily.competition);
+assert(loadDailyCompleted("soccer", "2026-07-15", storage, "premier-league-2025-26") !== null, "football daily completion is stored for the resolved competition");
+assert(loadDailyCompleted("soccer", "2026-07-15", storage, "laliga-2025-26") === null, "football daily boards are isolated by competition");
+assert(storage.getItem(dailyBestScoreKey("soccer", "premier-league-2025-26")) !== null, "football daily best score uses the competition namespace");
+assert(loadDailyBestScore("soccer", storage, "laliga-2025-26") === null, "one league's daily best does not leak into another league");
+
+const legacyFootballDaily = createMatch("soccer", () => 0.3);
+storage.setItem(dailyCompletedKey("soccer", "2026-07-14"), JSON.stringify(legacyFootballDaily));
+assert(loadDailyCompleted("soccer", "2026-07-14", storage, "uefa-all-time") !== null, "legacy UEFA daily completion remains compatible");
 
 if (failures > 0) {
   console.error(`\n${failures} AI storage test(s) failed.`);

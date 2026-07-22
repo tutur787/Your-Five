@@ -4,6 +4,7 @@ import {
   type AchievementId,
   type AchievementUnlock,
   type AiDifficulty,
+  type FootballCompetition,
   type Sport,
 } from "@fiveaside/shared/core";
 
@@ -25,6 +26,7 @@ export interface ProgressHistoryEntry {
   matchId: string;
   completedAt: string;
   sport: Sport;
+  competition?: FootballCompetition;
   mode: ProgressMode;
   result: "win" | "loss" | "tie" | "neutral";
   scoreFor: number;

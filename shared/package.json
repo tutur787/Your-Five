@@ -9,6 +9,11 @@
     ".": "./src/index.ts",
     "./core": "./src/core.ts",
     "./basketball-runtime": "./src/basketballRuntime.ts",
-    "./soccer-runtime": "./src/soccerRuntime.ts"
+    "./soccer-runtime": "./src/soccerRuntime.ts",
+    "./football-premier-league-runtime": "./src/domesticFootball/premierLeagueRuntime.ts",
+    "./football-laliga-runtime": "./src/domesticFootball/laligaRuntime.ts",
+    "./football-serie-a-runtime": "./src/domesticFootball/serieARuntime.ts",
+    "./football-bundesliga-runtime": "./src/domesticFootball/bundesligaRuntime.ts",
+    "./football-ligue-1-runtime": "./src/domesticFootball/ligue1Runtime.ts"
   }
 }

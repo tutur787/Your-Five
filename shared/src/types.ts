@@ -1,5 +1,7 @@
 export type Sport = "basketball" | "soccer";
 
+import type { FootballCompetition } from "./footballCompetitions";
+
 export type AiDifficulty = "casual" | "competitive" | "expert";
 
 export interface AiDecisionContext {
@@ -73,6 +75,8 @@ export interface BasketballPlayerCard {
 export interface SoccerStats {
   minutes: number;
   appearances: number;
+  /** Official starts counted from published starting lineups. */
+  starts?: number;
   /** Exact counting totals from this card's sourced UEFA scoring window. */
   goals: number;
   assists: number;
@@ -124,6 +128,8 @@ export interface SoccerPerformance {
   achievementScore?: number;
   /** Generated legacy blend retained for persisted-room compatibility and data auditing. */
   roleScore: number;
+  /** Domestic league-and-role percentile quality mapped to the shared 6-18 scale. */
+  domesticQuality?: number;
 }
 
 export interface SoccerHonors {
@@ -148,6 +154,8 @@ export interface SoccerHonors {
 
 export interface SoccerPlayerCard {
   sport: "soccer";
+  /** Competition database this card belongs to. Missing legacy cards are UEFA all-time. */
+  competition?: FootballCompetition;
   id: string;
   sourcePlayerId: string;
   /** All UEFA provider IDs verified as the same canonical player record. */
@@ -238,6 +246,8 @@ export const STARTING_BUDGET = 20;
 
 export interface MatchState {
   sport: Sport;
+  /** Resolved football competition. Missing legacy football matches are UEFA all-time. */
+  competition?: FootballCompetition;
   /** Stable identity used to record a completed match exactly once on a device. */
   matchId?: string;
   /** Seed that reproduces the initial reveal pool for shareable challenges. */

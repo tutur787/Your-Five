@@ -69,7 +69,9 @@ function completedMatch(sport: Sport, matchId: string, winner: "A" | "B" | "tie"
 {
   const storage = new MemoryStorage();
   recordCompletedMatch(completedMatch("soccer", "local-only", "A"), "local", null, { storage });
-  assert(loadProgress(storage).achievements.length === 0, "couch drafts do not unlock competitive achievements");
+  const progress = loadProgress(storage);
+  assert(progress.achievements.length === 0, "couch drafts do not unlock competitive achievements");
+  assert(progress.recent[0].competition === "uefa-all-time", "football history retains the resolved competition");
 }
 
 {

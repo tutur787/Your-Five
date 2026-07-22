@@ -1,19 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppHeader } from "../components/AppHeader";
+import { FootballCompetitionSelect } from "../components/FootballCompetitionSelect";
 import { connectMatchmaking, createRoomCode, getOnlineNickname, normalizeOnlineNickname, storeOnlineNickname } from "../utils/socket";
 import { useSport } from "../hooks/useSport";
 import { useAuth } from "../hooks/useAuth";
+import { footballCompetitionLabel, type FootballCompetition } from "@fiveaside/shared";
+
+interface CompetitionDrawState {
+  choices: [FootballCompetition, FootballCompetition];
+  selected: FootballCompetition;
+  active: FootballCompetition;
+  revealed: boolean;
+}
 
 export function OnlineLanding() {
   const navigate = useNavigate();
   const matchSocketRef = useRef<WebSocket | null>(null);
+  const drawIntervalRef = useRef<number | null>(null);
+  const drawRevealRef = useRef<number | null>(null);
+  const drawNavigateRef = useRef<number | null>(null);
   const [joinCode, setJoinCode] = useState("");
   const [creating, setCreating] = useState(false);
   const [matchmaking, setMatchmaking] = useState(false);
+  const [competitionDraw, setCompetitionDraw] = useState<CompetitionDrawState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [nickname, setNickname] = useState(getOnlineNickname);
-  const { sport } = useSport();
+  const { sport, footballCompetition } = useSport();
   const { user } = useAuth();
   const normalizedNickname = normalizeOnlineNickname(nickname);
   const nicknameInvalid = normalizedNickname === null;
@@ -21,6 +34,9 @@ export function OnlineLanding() {
   useEffect(() => {
     return () => {
       matchSocketRef.current?.close();
+      if (drawIntervalRef.current !== null) window.clearInterval(drawIntervalRef.current);
+      if (drawRevealRef.current !== null) window.clearTimeout(drawRevealRef.current);
+      if (drawNavigateRef.current !== null) window.clearTimeout(drawNavigateRef.current);
     };
   }, []);
 
@@ -42,7 +58,7 @@ export function OnlineLanding() {
     setCreating(true);
     setError(null);
     try {
-      const { code, token } = await createRoomCode(sport);
+      const { code, token } = await createRoomCode(sport, footballCompetition);
       navigate(`/room/${code}?token=${encodeURIComponent(token)}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not reach the server.");
@@ -56,12 +72,31 @@ export function OnlineLanding() {
     storeOnlineNickname(normalizedNickname);
     setError(null);
     setMatchmaking(true);
+    setCompetitionDraw(null);
 
     matchSocketRef.current?.close();
-    const socket = connectMatchmaking(sport, (message) => {
+    const socket = connectMatchmaking(sport, footballCompetition, (message) => {
       if (message.type === "matchFound") {
         matchSocketRef.current = null;
-        navigate(`/room/${message.code}?token=${encodeURIComponent(message.token)}`);
+        const destination = `/room/${message.code}?token=${encodeURIComponent(message.token)}`;
+        if (!message.competitionDraw) {
+          navigate(destination);
+          return;
+        }
+
+        const draw = message.competitionDraw;
+        let activeIndex = 0;
+        setCompetitionDraw({ ...draw, active: draw.choices[activeIndex], revealed: false });
+        drawIntervalRef.current = window.setInterval(() => {
+          activeIndex = activeIndex === 0 ? 1 : 0;
+          setCompetitionDraw((current) => current ? { ...current, active: draw.choices[activeIndex] } : current);
+        }, 360);
+        drawRevealRef.current = window.setTimeout(() => {
+          if (drawIntervalRef.current !== null) window.clearInterval(drawIntervalRef.current);
+          drawIntervalRef.current = null;
+          setCompetitionDraw({ ...draw, active: draw.selected, revealed: true });
+          drawNavigateRef.current = window.setTimeout(() => navigate(destination), 900);
+        }, draw.durationMs);
       } else if (message.type === "error") {
         matchSocketRef.current = null;
         setMatchmaking(false);
@@ -83,6 +118,7 @@ export function OnlineLanding() {
     matchSocketRef.current?.close();
     matchSocketRef.current = null;
     setMatchmaking(false);
+    setCompetitionDraw(null);
   };
 
   const joinRoom = () => {
@@ -93,6 +129,7 @@ export function OnlineLanding() {
   return (
     <div className="game-page online-page">
       <AppHeader eyebrow="MATCHMAKING" title="Play online" detail={`Choose your ${sport === "soccer" ? "football" : "basketball"} matchup`} sportLocked={creating || matchmaking} />
+      <FootballCompetitionSelect disabled={creating || matchmaking} />
       <div className="online-identity">
         <label htmlFor="online-nickname">Playing as</label>
         <input
@@ -141,11 +178,25 @@ export function OnlineLanding() {
         </form>
       </section>
       {matchmaking && (
-        <div className="matchmaking-strip">
-          <span className="search-pulse" />
-          <span>Looking for an opponent</span>
-          <button className="text-button" onClick={cancelMatchmaking}>Cancel</button>
-        </div>
+        competitionDraw ? (
+          <section className={`competition-draw${competitionDraw.revealed ? " revealed" : ""}`} aria-live="polite">
+            <span className="competition-draw-kicker">{competitionDraw.revealed ? "Pool selected" : "Choosing the match pool"}</span>
+            <div className="competition-draw-options">
+              {competitionDraw.choices.map((choice) => (
+                <div className={`competition-draw-option${competitionDraw.active === choice ? " active" : ""}`} key={choice}>
+                  {footballCompetitionLabel(choice)}
+                </div>
+              ))}
+            </div>
+            <small>{competitionDraw.revealed ? "Loading your matchup" : "Both pool choices have an equal shot"}</small>
+          </section>
+        ) : (
+          <div className="matchmaking-strip">
+            <span className="search-pulse" />
+            <span>Looking for an opponent</span>
+            <button className="text-button" onClick={cancelMatchmaking}>Cancel</button>
+          </div>
+        )
       )}
       {error && <div className="error-banner">{error}</div>}
     </div>

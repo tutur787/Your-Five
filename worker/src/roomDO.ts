@@ -2,7 +2,11 @@ import { DurableObject } from "cloudflare:workers";
 import {
   applyAction,
   completeByForfeit,
-  createSeededMatch,
+  createMatchWithRuntime,
+  DEFAULT_FOOTBALL_COMPETITION,
+  DEFAULT_FOOTBALL_COMPETITION_CHOICE,
+  FootballCompetition,
+  FootballCompetitionChoice,
   MatchState,
   POSITIONS,
   RoomKind,
@@ -17,7 +21,16 @@ import {
   Sport,
   timeoutActionFor,
   POOL_VERSIONS,
+  resolveFootballCompetition,
+  SportRuntime,
 } from "@fiveaside/shared";
+import { BASKETBALL_RUNTIME } from "@fiveaside/shared/basketball-runtime";
+import { SOCCER_RUNTIME } from "@fiveaside/shared/soccer-runtime";
+import { PREMIER_LEAGUE_RUNTIME } from "@fiveaside/shared/football-premier-league-runtime";
+import { LALIGA_RUNTIME } from "@fiveaside/shared/football-laliga-runtime";
+import { SERIE_A_RUNTIME } from "@fiveaside/shared/football-serie-a-runtime";
+import { BUNDESLIGA_RUNTIME } from "@fiveaside/shared/football-bundesliga-runtime";
+import { LIGUE_1_RUNTIME } from "@fiveaside/shared/football-ligue-1-runtime";
 import { Env } from "./env";
 import { generateClaimToken } from "./ids";
 
@@ -46,6 +59,8 @@ export class RoomDO extends DurableObject<Env> {
   private claimTokens: Partial<Record<SeatId, string>> | null = null;
   private roomKind: RoomKind | null = null;
   private sport: Sport = "basketball";
+  private competitionChoice: FootballCompetitionChoice = DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+  private competition: FootballCompetition = DEFAULT_FOOTBALL_COMPETITION;
   private runtime: PersistedRuntime = {
     seatNames: {},
     rematchReady: { ...EMPTY_FILLED },
@@ -64,6 +79,8 @@ export class RoomDO extends DurableObject<Env> {
       this.claimTokens = (await ctx.storage.get<Partial<Record<SeatId, string>>>("claimTokens")) ?? null;
       this.roomKind = (await ctx.storage.get<RoomKind>("roomKind")) ?? null;
       this.sport = (await ctx.storage.get<Sport>("sport")) ?? this.state?.sport ?? "basketball";
+      this.competitionChoice = (await ctx.storage.get<FootballCompetitionChoice>("competitionChoice")) ?? this.state?.competition ?? DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+      this.competition = (await ctx.storage.get<FootballCompetition>("competition")) ?? this.state?.competition ?? DEFAULT_FOOTBALL_COMPETITION;
       const runtime = await ctx.storage.get<Partial<PersistedRuntime>>("runtime");
       this.runtime = {
         ...this.runtime,
@@ -81,20 +98,24 @@ export class RoomDO extends DurableObject<Env> {
     });
   }
 
-  async reservePrivateRoom(tokenA: string, sport: Sport = "basketball"): Promise<boolean> {
+  async reservePrivateRoom(tokenA: string, sport: Sport = "basketball", competitionChoice: FootballCompetitionChoice = DEFAULT_FOOTBALL_COMPETITION_CHOICE, competition: FootballCompetition = DEFAULT_FOOTBALL_COMPETITION): Promise<boolean> {
     if (this.roomKind || this.state || this.claimTokens) return false;
     this.roomKind = "private";
     this.claimTokens = { A: tokenA };
     this.sport = sport;
+    this.competitionChoice = competitionChoice;
+    this.competition = competition;
     this.runtime.idleDeleteAt = Date.now() + ROOM_IDLE_TTL_MS;
     await this.persistBase();
     await this.persistRuntime();
     return true;
   }
 
-  async initMatchedRoom(tokenA: string, tokenB: string, sport: Sport = "basketball"): Promise<boolean> {
+  async initMatchedRoom(tokenA: string, tokenB: string, sport: Sport = "basketball", competitionChoice: FootballCompetitionChoice = DEFAULT_FOOTBALL_COMPETITION_CHOICE, competition: FootballCompetition = DEFAULT_FOOTBALL_COMPETITION): Promise<boolean> {
     if (this.roomKind || this.state || this.claimTokens) return false;
     this.sport = sport;
+    this.competitionChoice = competitionChoice;
+    this.competition = competition;
     this.claimTokens = { A: tokenA, B: tokenB };
     this.roomKind = "matched";
     this.runtime.idleDeleteAt = Date.now() + ROOM_IDLE_TTL_MS;
@@ -126,6 +147,7 @@ export class RoomDO extends DurableObject<Env> {
       seat: assignment.seat,
       token: assignment.token,
       sport: this.sport,
+      competition: this.sport === "soccer" ? this.competition : undefined,
       roomKind: this.roomKind,
       state: this.state,
       seatsFilled,
@@ -176,6 +198,10 @@ export class RoomDO extends DurableObject<Env> {
       this.runtime.rematchReady = { ...this.runtime.rematchReady, [seat]: raw.ready };
       this.sendAck(ws, id, true);
       if (this.runtime.rematchReady.A && this.runtime.rematchReady.B && this.bothSeatsFilled()) {
+        if (this.sport === "soccer" && this.competitionChoice === "random") {
+          this.competition = resolveFootballCompetition("random");
+          await this.ctx.storage.put("competition", this.competition);
+        }
         this.state = this.freshMatch();
         this.runtime.rematchReady = { ...EMPTY_FILLED };
         this.runtime.turnDeadlineAt = Date.now() + TURN_TIMEOUT_MS;
@@ -298,7 +324,20 @@ export class RoomDO extends DurableObject<Env> {
   }
 
   private freshMatch(): MatchState {
-    return createSeededMatch(this.sport, crypto.randomUUID(), crypto.randomUUID());
+    const runtime = this.runtimeForRoom();
+    return createMatchWithRuntime(runtime, crypto.randomUUID(), crypto.randomUUID());
+  }
+
+  private runtimeForRoom(): SportRuntime {
+    if (this.sport === "basketball") return BASKETBALL_RUNTIME;
+    switch (this.competition) {
+      case "premier-league-2025-26": return PREMIER_LEAGUE_RUNTIME;
+      case "laliga-2025-26": return LALIGA_RUNTIME;
+      case "serie-a-2025-26": return SERIE_A_RUNTIME;
+      case "bundesliga-2025-26": return BUNDESLIGA_RUNTIME;
+      case "ligue-1-2025-26": return LIGUE_1_RUNTIME;
+      default: return SOCCER_RUNTIME;
+    }
   }
 
   private async handleDisconnect(ws: WebSocket): Promise<void> {
@@ -389,6 +428,8 @@ export class RoomDO extends DurableObject<Env> {
 
   private metadata(): RoomMetadata {
     return {
+      competition: this.sport === "soccer" ? this.competition : undefined,
+      competitionChoice: this.sport === "soccer" ? this.competitionChoice : undefined,
       seatsFilled: this.computeSeatsFilled(),
       seatNames: this.runtime.seatNames,
       rematchReady: this.runtime.rematchReady,
@@ -423,6 +464,8 @@ export class RoomDO extends DurableObject<Env> {
       roomKind: this.roomKind,
       claimTokens: this.claimTokens,
       sport: this.sport,
+      competitionChoice: this.competitionChoice,
+      competition: this.competition,
     });
   }
 
@@ -451,6 +494,8 @@ export class RoomDO extends DurableObject<Env> {
     this.claimTokens = null;
     this.roomKind = null;
     this.sport = "basketball";
+    this.competitionChoice = DEFAULT_FOOTBALL_COMPETITION_CHOICE;
+    this.competition = DEFAULT_FOOTBALL_COMPETITION;
     this.runtime = {
       seatNames: {},
       rematchReady: { ...EMPTY_FILLED },
@@ -572,6 +617,7 @@ function normalizeLegacyState(state: MatchState | null): MatchState | null {
   return {
     ...state,
     sport,
+    competition: sport === "soccer" ? state.competition ?? DEFAULT_FOOTBALL_COMPETITION : undefined,
     matchId: state.matchId ?? crypto.randomUUID(),
     poolVersion: state.poolVersion ?? POOL_VERSIONS[sport],
     completionReason: state.phase === "complete" ? state.completionReason ?? "score" : state.completionReason,

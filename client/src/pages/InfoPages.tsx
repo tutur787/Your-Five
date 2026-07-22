@@ -78,6 +78,12 @@ export function AboutPage() {
             Roles come directly from those selections. Card statistics are generated from the corresponding
             UEFA club-competition match records, with the source selection and match IDs retained in the project database.
           </p>
+          <p>
+            The domestic 2025-26 pools use official league lineups and statistics from the Premier League, LaLiga,
+            Serie A, Bundesliga, and Ligue 1. Each club contributes its 11 most frequent starters, ranked by starts
+            with published minutes, appearances, and stable source IDs as deterministic tie-breakers. Raw source
+            pages are validated during generation and production games use only the committed databases.
+          </p>
           <p className="info-muted">
             Your Five is an independent fan-made project. It is not affiliated with, endorsed by, or sponsored
             by the NBA, WNBA, FIFA, UEFA, CAF, any football association, league, club, national team, their players, Take-Two Interactive, 2K, Wikipedia, or Sports Reference.
@@ -190,7 +196,7 @@ export function ScoringPage() {
         <div>
           <h2>Football card quality</h2>
           <p>
-            Every football card has an 8-20 role-adjusted quality score. Official selection establishes an elite
+            Every all-time Champions League card has an 8-20 role-adjusted quality score. Official selection establishes an elite
             baseline of 13 for the smaller UEFA.com Team of the Year and 12 for the larger Champions League season
             squads. The observed edition score then ranks verified match metrics against cards with the same role.
             Goalkeepers use saves, goals conceded, clean sheets, claims, and passing. Defenders emphasize tackles,
@@ -205,6 +211,12 @@ export function ScoringPage() {
             tie-break. Exact-year accolades are scored separately, so reputation is never counted twice.
           </p>
           <div className="formula-block"><code>card quality = selection baseline + confidence-weighted edition form + bounded pedigree bonus</code></div>
+          <p>
+            Domestic 2025-26 cards are compared only with players in the same league and role. Each available
+            official metric becomes a role percentile, and players with fewer starts are pulled toward the role
+            median. Missing optional metrics are omitted and the remaining weights are normalized. The resulting
+            role quality uses a shared 6-18 scale so one league's raw stat definitions do not distort another's.
+          </p>
         </div>
       </section>
       <section className="info-section">
@@ -212,18 +224,19 @@ export function ScoringPage() {
         <div>
           <h2>Football team score</h2>
           <p>
-            The five card-quality ratings form the base. A small team-success adjustment compares points per match
-            and goal difference in the card's scoring window, with the raw adjustment reduced to 60%. Verified
-            accolades then add 2 points for winning the relevant UEFA competition, 4 for one major individual award,
-            2 for top scorer, 1.5 for a positional award, and 1 for Young Player of the Season. Accolades are capped
-            at 12 points per lineup.
+            The five card-quality ratings form the base. For all-time UEFA cards, a small team-success adjustment
+            compares points per match and goal difference in the card's scoring window, with the raw adjustment
+            reduced to 60%. For domestic cards, team success is the club's final league points-per-match percentile,
+            mapped from -2 to +2 within that league. Verified accolades then reward only awards tied to the card's
+            exact season: the relevant competition title and official competition or league-season awards. Accolades
+            remain capped at 12 points per lineup.
           </p>
           <p>
             Lineup fit can reward a creator, defensive anchor, scorer, and secure goalkeeper, while too many
-            attack-dominant players can reduce the bonus. Verified historical club teammates add 1 point per pair,
-            capped at 4. A teammate link requires both players to have appeared for the same club in the same sourced
-            UEFA match, regardless of which card editions are drafted. Position penalties are 5 between MID and ATT,
-            6 between DEF and MID, 16 between DEF and ATT, and 30 between GK and any outfield role.
+            attack-dominant players can reduce the bonus. Verified teammates add 1 point per pair, capped at 4.
+            Domestic teammates link when their cards represent the same 2025-26 club, and any pair may also link
+            through the existing verified UEFA teammate ledger. Position penalties are 5 between MID and ATT, 6
+            between DEF and MID, 16 between DEF and ATT, and 30 between GK and any outfield role.
           </p>
           <div className="formula-block"><code>score = five card qualities + team success + accolades + lineup fit + chemistry - wrong-position penalties</code></div>
         </div>
@@ -274,6 +287,13 @@ export function DataSourcesPage() {
             2020/21 onward. The role attached to a card comes from its official selection rather than an inferred
             statistical profile.
           </p>
+          <p>
+            The domestic options contain the 11 players with the most official league starts for every club in the
+            completed 2025-26 Premier League, LaLiga, Serie A, Bundesliga, and Ligue 1 seasons. Starts come from
+            official match lineups, with minutes, appearances, and stable source IDs used as deterministic
+            tie-breakers. A transferred player may have one card per club, but duplicate player identities cannot
+            enter the same draft pool.
+          </p>
         </div>
       </section>
       <section className="info-section">
@@ -287,6 +307,17 @@ export function DataSourcesPage() {
             are used only when their tracked coverage passes the configured threshold, and generation fails on
             missing matches, duplicate cards, unsupported roles, or non-finite values.
           </p>
+          <p>
+            Domestic cards are generated from the official public statistics and lineup records published by
+            {" "}<a href="https://www.premierleague.com/stats/top/players/appearances" target="_blank" rel="noreferrer">Premier League</a>,
+            {" "}<a href="https://www.laliga.com/en-GB/stats/laliga-easports/scorers" target="_blank" rel="noreferrer">LaLiga</a>,
+            {" "}<a href="https://www.legaseriea.it/serie-a/statistiche/index" target="_blank" rel="noreferrer">Serie A</a>,
+            {" "}<a href="https://www.bundesliga.com/en/bundesliga/stats/players" target="_blank" rel="noreferrer">Bundesliga</a>, and
+            {" "}<a href="https://ligue1.com/en/articles/l1_article_5183-ligue-1-mcdonald-s-2025-26-the-key-player-stats" target="_blank" rel="noreferrer">Ligue 1</a>.
+            Each committed provenance manifest records the contributing URLs, retrieval time, content hashes,
+            fixtures, source player IDs, starts ranking, and field-level metric sources. Production serves the
+            committed data and does not scrape these sites during a game.
+          </p>
         </div>
       </section>
       <section className="info-section">
@@ -298,7 +329,8 @@ export function DataSourcesPage() {
             season. The ledger covers relevant UEFA competition wins, UEFA overall player awards, Ballon d'Or,
             Champions League top scorer, UEFA positional awards, and Champions League Young Player of the Season.
             Multiple major individual awards on one card share a single 4-point major-award contribution so the same
-            achievement level is not counted twice.
+            achievement level is not counted twice. Domestic cards use only the verified 2025-26 league champion and
+            awards officially published by that card's league.
           </p>
         </div>
       </section>
@@ -333,6 +365,7 @@ export function PrivacyPage() {
           <ul>
             <li>whether you have already seen the rules introduction;</li>
             <li>your selected basketball or football mode preference;</li>
+            <li>your selected football competition preference;</li>
             <li>your selected AI difficulty and local win-loss-tie records;</li>
             <li>daily challenge completion data and your best daily score; and</li>
             <li>your optional online nickname, recent draft history, streaks, mode records, achievements, and challenge results;</li>

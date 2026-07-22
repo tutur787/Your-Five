@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { POOL_VERSIONS, Sport, SportRuntime, teamScore } from "@fiveaside/shared/core";
+import { footballCompetitionForPoolVersion, footballCompetitionLabel, POOL_VERSIONS, Sport, SportRuntime, teamScore } from "@fiveaside/shared/core";
 import { AppHeader } from "../components/AppHeader";
 import { useAiMatch } from "../hooks/useAiMatch";
 import { useSport } from "../hooks/useSport";
@@ -21,7 +21,8 @@ export function ChallengeDraft() {
   const version = params.version ?? "";
   const targetValue = Number(searchParams.get("target"));
   const target = Number.isFinite(targetValue) && targetValue >= 0 && targetValue <= 999.9 ? targetValue : 0;
-  const valid = Boolean(sport && seed && version === POOL_VERSIONS[sport]);
+  const competition = sport === "soccer" ? footballCompetitionForPoolVersion(version) : null;
+  const valid = Boolean(sport && seed && (sport === "soccer" ? competition : version === POOL_VERSIONS[sport]));
 
   useEffect(() => {
     if (sport) setSport(sport);
@@ -39,11 +40,11 @@ export function ChallengeDraft() {
     );
   }
 
-  return <ChallengeRuntimeGate sport={sport} seed={seed} target={target} />;
+  return <ChallengeRuntimeGate sport={sport} seed={seed} target={target} competition={competition ?? undefined} />;
 }
 
-function ChallengeRuntimeGate({ sport, seed, target }: { sport: Sport; seed: string; target: number }) {
-  const runtime = useSportRuntime(sport);
+function ChallengeRuntimeGate({ sport, seed, target, competition }: { sport: Sport; seed: string; target: number; competition?: Parameters<typeof useSportRuntime>[1] }) {
+  const runtime = useSportRuntime(sport, competition, `challenge:${seed}`);
   if (!runtime) return <RuntimeLoading />;
   return <ActiveChallenge sport={sport} seed={seed} target={target} runtime={runtime} />;
 }
@@ -65,7 +66,7 @@ function ActiveChallenge({ sport, seed, target, runtime }: { sport: Sport; seed:
       <AppHeader
         eyebrow="SCORE CHALLENGE"
         title={`Beat ${target.toFixed(1)}`}
-        detail="Same pool · Competitive AI"
+        detail={`Same pool · Competitive AI${runtime.competition ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
         actions={<button className="secondary-button" onClick={reset}>Restart</button>}
       />
       {completed && (
@@ -80,7 +81,7 @@ function ActiveChallenge({ sport, seed, target, runtime }: { sport: Sport; seed:
         mySeat={humanSeat}
         seatNames={{ A: "You", B: "Competitive AI" }}
         onRematch={reset}
-        resultsSubtitle={`Score Challenge · Target ${target.toFixed(1)}`}
+        resultsSubtitle={`Score Challenge · Target ${target.toFixed(1)}${runtime.competition ? ` · ${footballCompetitionLabel(runtime.competition)}` : ""}`}
       />
     </div>
   );

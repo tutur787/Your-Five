@@ -8,7 +8,7 @@ Your Five is a head-to-head sports auction draft game. Two GMs share a `$20` cap
 
 ## Features
 
-- Basketball and football player pools with sport-specific scoring and lineup rules.
+- Basketball and six selectable football competition pools with sport-specific scoring and lineup rules.
 - Head-to-head auctions with a hard cap, roster reserve, and escalating skip costs.
 - Unlimited AI drafts with Casual, Competitive, and Expert opponents.
 - A deterministic daily challenge and reproducible challenge links.
@@ -44,7 +44,7 @@ flowchart LR
 | `worker/` | WebSocket rooms, matchmaking, reconnects, timers, rate limits, and Google accounts |
 | `scripts/` | Football data generation and offline provenance validation |
 
-The basketball and football runtimes are loaded separately so a session does not download the other sport's database unnecessarily.
+Basketball and every football competition have separate lazy-loaded runtimes, so a session downloads only the database used by its draft.
 
 ## Local Development
 
@@ -123,6 +123,7 @@ npm run test:ai-storage
 npm run test:progress
 npm run test:accounts
 npm run test:soccer
+npm run test:football-domestic
 ```
 
 The Cloudflare integration suite expects the local Worker to be running on port `8787`:
@@ -143,7 +144,9 @@ VITE_SERVER_URL=https://api.your-five.com npm run build -w client
 Production games use committed static databases and make no live requests to sports data providers.
 
 - Basketball season statistics are sourced from NBA.com through the open-source `nba_api` client. Positions and historical achievements are stored explicitly.
-- Football cards use official UEFA selections and UEFA club-competition match records. The repository retains source identities, match IDs, position labels, coverage checks, and honor provenance.
+- The all-time football pool uses official UEFA selections and UEFA club-competition match records.
+- The five 2025-26 domestic pools use the 11 players with the most official league starts for every Premier League, LaLiga, Serie A, Bundesliga, and Ligue 1 club. Official starting lineups determine the ranking.
+- Football provenance records source URLs, retrieval times, content hashes, source identities, fixtures, position labels, rankings, field-level metric sources, coverage checks, and accolade sources.
 - Missing football metrics are omitted rather than guessed, and the generator fails on incomplete or non-finite source data.
 
 Regenerate or verify the football database with:
@@ -151,6 +154,8 @@ Regenerate or verify the football database with:
 ```bash
 npm run data:soccer
 npm run verify:soccer-data
+npm run data:football-domestic
+npm run verify:football-domestic
 ```
 
 ## Deployment

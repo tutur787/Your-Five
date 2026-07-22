@@ -1,4 +1,6 @@
 export * from "./types";
+export * from "./footballCompetitions";
+export * from "./domesticFootballScoring";
 export * from "./players";
 export * from "./soccerPlayers";
 export * from "./soccerTeams";

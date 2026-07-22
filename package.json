@@ -12,7 +12,7 @@
     "dev:client": "npm run dev -w client",
     "deploy:worker": "npm run deploy -w worker",
     "build:web": "npm run build -w client",
-    "deploy:web": "npm run build:web && npx wrangler pages deploy client/dist --project-name your-five --branch main",
+    "deploy:web": "VITE_SERVER_URL=${VITE_SERVER_URL:-https://api.your-five.com} npm run build:web && npx wrangler pages deploy client/dist --project-name your-five --branch main",
     "test:cloudflare": "npm run test:integration -w worker",
     "test:engine": "tsx shared/src/engine.test.ts",
     "test:reliability": "tsx shared/src/reliability.test.ts",
@@ -21,9 +21,12 @@
     "test:progress": "tsx client/src/utils/progressStorage.test.ts",
     "test:accounts": "tsx worker/src/accountProgress.test.ts",
     "test:soccer": "tsx shared/src/soccerEngine.test.ts",
+    "test:football-domestic": "tsx shared/src/domesticFootball.test.ts",
     "data:soccer": "node scripts/generate-soccer-data.mjs && node scripts/generate-soccer-teammates.mjs",
     "data:soccer-teammates": "node scripts/generate-soccer-teammates.mjs",
-    "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify && node scripts/generate-soccer-teammates.mjs --verify"
+    "verify:soccer-data": "node scripts/generate-soccer-data.mjs --verify && node scripts/generate-soccer-teammates.mjs --verify",
+    "data:football-domestic": "tsx scripts/football-data/generate.ts",
+    "verify:football-domestic": "tsx scripts/football-data/generate.ts --verify --offline"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

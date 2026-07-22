@@ -9,12 +9,12 @@ import { AccountButton } from "./AccountButton";
 export function BrandLockup({ compact = false }: { compact?: boolean }) {
   const { sport } = useSport();
   return (
-    <div className={`brand-lockup${compact ? " compact" : ""}`} aria-label={`Your Five, the $20 all-time ${sport === "soccer" ? "football" : "basketball"} draft`}>
+    <div className={`brand-lockup${compact ? " compact" : ""}`} aria-label={`Your Five, the $20 ${sport === "soccer" ? "football" : "all-time basketball"} draft`}>
       <span className={`brand-logo sport-brand-logo ${sport}`} aria-hidden="true">
         {sport === "soccer" ? <FaFutbol /> : <FaBasketball />}
       </span>
       <span className="brand-name">YOUR FIVE</span>
-      {!compact && <span className="brand-edition">$20 ALL-TIME {sport === "soccer" ? "FOOTBALL" : "BASKETBALL"} DRAFT</span>}
+      {!compact && <span className="brand-edition">$20 {sport === "soccer" ? "FOOTBALL" : "ALL-TIME BASKETBALL"} DRAFT</span>}
     </div>
   );
 }

@@ -17,5 +17,6 @@ export function createMatchWithRuntime(
     matchId,
     poolSeed,
     poolVersion: runtime.poolVersion,
+    competition: runtime.competition,
   });
 }
