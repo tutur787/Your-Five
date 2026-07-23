@@ -390,7 +390,10 @@ export function PrivacyPage() {
             You may continue as a guest or sign in with Google. When you sign in, Google provides a stable account
             identifier, your email address, and your Google profile name. Your Five stores those values, your chosen
             display name, account creation time, revocable session records, and your synced game progress and achievements in Cloudflare
-            Durable Objects. Your Five does not receive or store your Google password and does not retain Google's access token.
+            Durable Objects. A private administrative directory in Cloudflare D1 also stores your email address, display name,
+            signup and recent-activity times, and aggregate completed-game counts by sport, player pool, and mode. This directory
+            is visible only to the site owner and is used to understand adoption and game activity. Your Five does not receive or
+            store your Google password and does not retain Google's access token.
             Google's handling of sign-in information is governed by the
             {" "}<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy Policy</a>.
           </p>

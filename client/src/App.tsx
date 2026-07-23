@@ -24,6 +24,7 @@ const OnlineLanding = lazyRoute(() => import("./pages/OnlineLanding").then((modu
 const QuickAiDraft = lazyRoute(() => import("./pages/QuickAiDraft").then((module) => ({ default: module.QuickAiDraft })));
 const RoomPage = lazyRoute(() => import("./pages/RoomPage").then((module) => ({ default: module.RoomPage })));
 const ChallengeDraft = lazyRoute(() => import("./pages/ChallengeDraft").then((module) => ({ default: module.ChallengeDraft })));
+const AdminPage = lazyRoute(() => import("./pages/AdminPage").then((module) => ({ default: module.AdminPage })));
 
 export default function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="/online" element={<OnlineLanding />} />
             <Route path="/room/:code" element={<RoomPage />} />
             <Route path="/challenge/:sport/:version/:seed" element={<ChallengeDraft />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/how-to-play" element={<HowToPlayPage />} />
             <Route path="/scoring" element={<ScoringPage />} />

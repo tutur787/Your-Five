@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { FaGoogle, FaUser } from "react-icons/fa6";
+import { FaChartColumn, FaGoogle, FaUser } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 
 function initials(name: string): string {
@@ -8,6 +9,7 @@ function initials(name: string): string {
 
 export function AccountButton() {
   const auth = useAuth();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [displayName, setDisplayName] = useState(auth.user?.displayName ?? "");
   const [saving, setSaving] = useState(false);
@@ -94,6 +96,19 @@ export function AccountButton() {
                   <div><input id="account-display-name" value={displayName} maxLength={24} onChange={(event) => setDisplayName(event.target.value)} /><button className="primary" disabled={saving || displayName.trim() === auth.user.displayName}>{saving ? "Saving" : "Save"}</button></div>
                 </form>
                 {error && <div className="account-error">{error}</div>}
+                {auth.user.isAdmin && (
+                  <button
+                    className="account-admin-link"
+                    onClick={() => {
+                      setOpen(false);
+                      navigate("/admin");
+                    }}
+                  >
+                    <FaChartColumn aria-hidden="true" />
+                    <span><strong>Owner dashboard</strong><small>Accounts and game activity</small></span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </button>
+                )}
                 <div className="account-actions">
                   <button className="secondary" disabled={saving} onClick={() => void signOut()}>Sign out</button>
                   <button className="text-button danger" disabled={saving} onClick={() => void removeAccount()}>Delete account</button>

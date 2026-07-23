@@ -20,7 +20,7 @@
     "test:ai": "tsx shared/src/aiOpponent.test.ts",
     "test:ai-storage": "tsx client/src/utils/aiStorage.test.ts",
     "test:progress": "tsx client/src/utils/progressStorage.test.ts",
-    "test:accounts": "tsx worker/src/accountProgress.test.ts",
+    "test:accounts": "tsx worker/src/accountProgress.test.ts && tsx worker/src/adminAnalytics.test.ts",
     "test:soccer": "tsx shared/src/soccerEngine.test.ts",
     "test:football-domestic": "tsx shared/src/domesticFootball.test.ts",
     "test:football-bidding-stats": "tsx client/src/utils/footballBiddingStats.test.ts",

@@ -4,6 +4,7 @@ import type { RoomDO } from "./roomDO";
 
 export interface Env {
   ACCOUNTS: DurableObjectNamespace<AccountDO>;
+  ANALYTICS: D1Database;
   ROOMS: DurableObjectNamespace<RoomDO>;
   MATCHMAKING: DurableObjectNamespace<MatchmakingDO>;
   ROOM_CREATE_LIMITER: RateLimit;
@@ -12,4 +13,5 @@ export interface Env {
   GOOGLE_CLIENT_ID: string;
   GOOGLE_CLIENT_SECRET: string;
   SESSION_SECRET: string;
+  ADMIN_EMAILS?: string;
 }

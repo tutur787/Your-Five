@@ -25,12 +25,14 @@ export function AppHeader({
   detail,
   actions,
   sportLocked = true,
+  showSportSwitch = true,
 }: {
   eyebrow?: string;
   title: string;
   detail?: ReactNode;
   actions?: ReactNode;
   sportLocked?: boolean;
+  showSportSwitch?: boolean;
 }) {
   const navigate = useNavigate();
 
@@ -47,7 +49,7 @@ export function AppHeader({
         <h1>{title}</h1>
         {detail && <div className="page-detail">{detail}</div>}
       </div>
-      <div className="app-header-actions"><AccountButton /><ProgressButton /><SportSwitch disabled={sportLocked} />{actions}</div>
+      <div className="app-header-actions"><AccountButton /><ProgressButton />{showSportSwitch && <SportSwitch disabled={sportLocked} />}{actions}</div>
     </header>
   );
 }

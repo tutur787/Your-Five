@@ -10,6 +10,14 @@
   "vars": {
     "FRONTEND_ORIGIN": "https://your-five.com"
   },
+  "d1_databases": [
+    {
+      "binding": "ANALYTICS",
+      "database_name": "your-five-analytics",
+      "database_id": "cf73291b-ed72-4163-b9d2-b7d7e266f8ab",
+      "migrations_dir": "migrations"
+    }
+  ],
   "durable_objects": {
     "bindings": [
       { "name": "ACCOUNTS", "class_name": "AccountDO" },

@@ -1,5 +1,13 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import type { PublicAccount } from "./accountDO";
+import {
+  deleteAnalyticsUser,
+  getAdminDashboard,
+  isAdminEmail,
+  recordAccountLogin,
+  recordAccountSeen,
+  recordProgressSnapshot,
+} from "./adminAnalytics";
 import type { Env } from "./env";
 
 const GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
@@ -121,6 +129,18 @@ function json(body: unknown, status: number, cors: CorsHeaders): Response {
     status,
     headers: { "Content-Type": "application/json", ...cors },
   });
+}
+
+function publicUser(account: PublicAccount, env: Env): PublicAccount & { isAdmin: boolean } {
+  return { ...account, isAdmin: isAdminEmail(account.email, env.ADMIN_EMAILS) };
+}
+
+async function bestEffortAnalytics(operation: string, write: () => Promise<void>): Promise<void> {
+  try {
+    await write();
+  } catch {
+    console.error(JSON.stringify({ event: "analytics_write_failed", operation }));
+  }
 }
 
 function safeReturnPath(value: string | null): string {
@@ -256,12 +276,13 @@ async function finishGoogleAuth(request: Request, env: Env): Promise<Response> {
 
     const accountId = await sha256(`google:${payload.sub}`);
     const account = env.ACCOUNTS.getByName(accountId);
-    await account.upsertGoogleAccount({
+    const user = await account.upsertGoogleAccount({
       id: accountId,
       googleSub: payload.sub,
       email: payload.email,
       googleName: normalizeGoogleName(payload.name, payload.email),
     });
+    await bestEffortAnalytics("login", () => recordAccountLogin(env.ANALYTICS, user));
     const sessionToken = randomToken(32);
     await account.createSession(await sha256(sessionToken), Date.now() + SESSION_MAX_AGE_SECONDS * 1000);
     const sessionValue = `${accountId}.${sessionToken}`;
@@ -279,11 +300,21 @@ export async function handleAuthRequest(request: Request, env: Env, cors: CorsHe
   const url = new URL(request.url);
   if (url.pathname === "/auth/google/start" && request.method === "GET") return beginGoogleAuth(request, env, cors);
   if (url.pathname === "/auth/google/callback" && request.method === "GET") return finishGoogleAuth(request, env);
-  if (!["/auth/me", "/auth/logout", "/account/profile", "/account/progress", "/account"].includes(url.pathname)) return null;
+  if (!["/auth/me", "/auth/logout", "/account/profile", "/account/progress", "/account", "/admin/summary"].includes(url.pathname)) return null;
 
   const auth = await authenticate(request, env);
-  if (url.pathname === "/auth/me" && request.method === "GET") return json({ user: auth?.user ?? null }, 200, cors);
+  if (url.pathname === "/auth/me" && request.method === "GET") {
+    if (auth) await bestEffortAnalytics("session", () => recordAccountSeen(env.ANALYTICS, auth.user));
+    return json({ user: auth ? publicUser(auth.user, env) : null }, 200, cors);
+  }
   if (!auth) return json({ error: "Sign in required." }, 401, cors);
+
+  if (url.pathname === "/admin/summary" && request.method === "GET") {
+    if (!isAdminEmail(auth.user.email, env.ADMIN_EMAILS)) return json({ error: "Admin access required." }, 403, cors);
+    const response = json(await getAdminDashboard(env.ANALYTICS), 200, cors);
+    response.headers.set("Cache-Control", "private, no-store");
+    return response;
+  }
 
   if (url.pathname === "/auth/logout" && request.method === "POST") {
     if (!trustedMutation(request, env)) return json({ error: "Invalid request origin." }, 403, cors);
@@ -301,7 +332,9 @@ export async function handleAuthRequest(request: Request, env: Env, cors: CorsHe
       const displayName = normalizeDisplayName(body.displayName);
       if (!displayName) return json({ error: "Use 2-24 letters, numbers, spaces, apostrophes, underscores, or hyphens." }, 400, cors);
       const user = await env.ACCOUNTS.getByName(auth.accountId).updateDisplayName(displayName);
-      return json({ user }, 200, cors);
+      if (!user) return json({ error: "Account not found." }, 404, cors);
+      await bestEffortAnalytics("profile", () => recordAccountSeen(env.ANALYTICS, user));
+      return json({ user: publicUser(user, env) }, 200, cors);
     } catch (error) {
       return json({ error: error instanceof Error ? error.message : "Invalid request." }, 400, cors);
     }
@@ -317,6 +350,7 @@ export async function handleAuthRequest(request: Request, env: Env, cors: CorsHe
     try {
       const body = await requestJson(request) as { progress?: unknown };
       const progress = await env.ACCOUNTS.getByName(auth.accountId).mergeProgress(body.progress);
+      await bestEffortAnalytics("progress", () => recordProgressSnapshot(env.ANALYTICS, auth.user, progress));
       return json({ progress }, 200, cors);
     } catch (error) {
       return json({ error: error instanceof Error ? error.message : "Invalid request." }, 400, cors);
@@ -325,6 +359,7 @@ export async function handleAuthRequest(request: Request, env: Env, cors: CorsHe
 
   if (url.pathname === "/account" && request.method === "DELETE") {
     if (!trustedMutation(request, env)) return json({ error: "Invalid request origin." }, 403, cors);
+    await deleteAnalyticsUser(env.ANALYTICS, auth.accountId);
     await env.ACCOUNTS.getByName(auth.accountId).deleteAccount();
     const names = cookieNames(request);
     const response = json({ ok: true }, 200, cors);

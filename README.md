@@ -33,6 +33,7 @@ flowchart LR
   Worker --> Rooms["Room Durable Objects"]
   Worker --> Queue["Matchmaking Durable Objects"]
   Worker --> Accounts["Account Durable Objects"]
+  Worker --> Analytics["Private D1 admin analytics"]
   Browser --> Shared["Shared TypeScript engine"]
   Worker --> Shared
 ```
@@ -79,6 +80,16 @@ Guest mode works without credentials. Google sign-in requires the optional setup
 ## Google Sign-In
 
 Your Five uses Google's authorization-code flow with PKCE. The Worker verifies Google's signed ID token, creates a signed HttpOnly session cookie, and stores account progress in a dedicated Durable Object. It requests only `openid`, `email`, and `profile`.
+
+The private owner dashboard at `/admin` uses a D1 directory containing account signup/activity times and aggregate completed-game counts. Access is enforced by the Worker with the comma-separated `ADMIN_EMAILS` secret:
+
+```bash
+cd worker
+npx wrangler secret put ADMIN_EMAILS
+npx wrangler d1 migrations apply your-five-analytics --remote
+```
+
+Enter the Google account email that should have owner access. Multiple addresses may be separated with commas. Deploy the Worker before the frontend after changing this contract.
 
 Create a Google OAuth **Web application** with:
 

@@ -5,6 +5,39 @@ export interface AccountUser {
   email: string;
   displayName: string;
   createdAt: number;
+  isAdmin?: boolean;
+}
+
+export interface AdminUserSummary {
+  accountId: string;
+  email: string;
+  displayName: string;
+  createdAt: number;
+  lastLoginAt: number;
+  lastActiveAt: number;
+  gamesCompleted: number;
+  basketballGames: number;
+  footballGames: number;
+}
+
+export interface AdminUsageRow {
+  key: string;
+  count: number;
+}
+
+export interface AdminDashboardData {
+  generatedAt: number;
+  totals: {
+    users: number;
+    signups7d: number;
+    signups30d: number;
+    active7d: number;
+    active30d: number;
+    gamesCompleted: number;
+  };
+  poolUsage: AdminUsageRow[];
+  modeUsage: AdminUsageRow[];
+  users: AdminUserSummary[];
 }
 
 function apiBase(): string {
@@ -54,4 +87,8 @@ export async function syncAccountProgress(progress: ProgressState): Promise<Prog
 
 export async function deleteAccount(): Promise<void> {
   await apiRequest<{ ok: true }>("/account", { method: "DELETE" });
+}
+
+export async function getAdminDashboard(): Promise<AdminDashboardData> {
+  return await apiRequest<AdminDashboardData>("/admin/summary");
 }

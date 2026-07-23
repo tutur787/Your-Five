@@ -29,7 +29,7 @@ interface ProgressRecord {
   ties: number;
 }
 
-interface HistoryEntry {
+export interface HistoryEntry {
   matchId: string;
   completedAt: string;
   sport: Sport;
